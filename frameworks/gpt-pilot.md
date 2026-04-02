@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # GPT Pilot (Pythagora)
 
 ## Overview

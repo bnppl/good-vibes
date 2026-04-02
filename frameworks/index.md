@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # Spec-Driven Development Frameworks
 
 A curated guide to the top tools where structured specifications drive code generation -- not general AI coding assistants, but frameworks where the spec is the primary artifact. The SDD space has grown to [30+ frameworks](https://medium.com/@visrow/spec-driven-development-is-eating-software-engineering-a-map-of-30-agentic-coding-frameworks-6ac0b5e2b484) as of early 2026; this guide covers the nine most significant.

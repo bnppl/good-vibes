@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # The Orchestration Layer: Context Window Management
 
 The orchestration layer is the part of your system that decides what lives in the context window at any given moment — and what doesn't. It handles compaction, sub-agent delegation, and cache-friendly design. Get it right and long-running agents stay coherent and affordable. Get it wrong and you hit token limits at the worst moments, pay to recompute the same context repeatedly, or watch agents drift off-task as their history grows noisy.
@@ -68,6 +74,8 @@ The key requirement: the subtasks must not share state. If they need to read eac
 - You want to parallelize work and have subtasks that can run concurrently
 
 See [GPT Pilot](../frameworks/gpt-pilot.md) for a different approach to the same problem. GPT Pilot uses "context rewinding" — resetting the LLM context after each completed task — rather than delegation. It's a sequential approach to the same constraint: long development sessions accumulate too much context to manage in one continuous window.
+
+**Production case study: Claude Code's architecture.** When Anthropic's Claude Code internals were exposed in April 2026 (covered in TL;DR AI), analysis confirmed these patterns in production. Claude Code uses forked subagents for parallel processing "without contaminating the main execution loop" — a clean implementation of the coordinator pattern. It also employs file-read deduplication to reduce context bloat (a form of observation masking) and structured session memory management. These aren't novel patterns, but seeing them validated in one of the most widely-used coding agents confirms the theory.
 
 ---
 

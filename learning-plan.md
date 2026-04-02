@@ -4,14 +4,16 @@
 
 **Reading order matters.** The context engineering guide builds on itself — foundations first, then layers, then the deep dive. The frameworks section is modular and can be read in any order after Session 6.
 
+**What's new (April 2, 2026):** The guide now includes community debate from Hacker News (90-day lookback), TL;DR newsletter coverage, and production case studies (Stripe Minions, Cursor's dynamic context discovery, Claude Code's leaked architecture). The agentic dev page has nearly doubled in size with the SDD debate, SDD Triangle framework, and practitioner experience reports.
+
 ---
 
 ## Phase 1: Foundations (Sessions 1-3)
 
 ### Session 1: What Is Context Engineering?
 **Read:** [[context-engineering/index]] then [[context-engineering/foundations]]
-**Time:** ~12 min (~1,600 words)
-**Key takeaway:** The three mental models — Karpathy's CPU/RAM metaphor, LangChain's Write/Select/Compress/Isolate, and Schmid's 7-component checklist.
+**Time:** ~12 min (~1,650 words)
+**Key takeaway:** The three mental models — Karpathy's CPU/RAM metaphor, LangChain's Write/Select/Compress/Isolate, and Schmid's 7-component checklist. Plus: context engineering went mainstream in 2026 (QCon London, Agentic Conf Hamburg, multiple "state of" reports). The "8 Levels of Agentic Engineering" framework shows where context engineering sits in the progression — it's foundational, not the ceiling.
 
 **Action:** Pick one AI tool you use regularly (Claude Code, Cursor, ChatGPT, etc.). Mentally map what's in its context window using Schmid's 7 components: which of the 7 does it use? Which are missing? Make a quick note.
 
@@ -28,10 +30,10 @@
 
 ### Session 3: The Knowledge Layer
 **Read:** [[context-engineering/knowledge-layer]]
-**Time:** ~11 min (~1,400 words)
-**Key takeaway:** Just-in-time loading beats frontloading. Hybrid search is the right default.
+**Time:** ~12 min (~1,500 words)
+**Key takeaway:** Just-in-time loading beats frontloading. Hybrid search is the right default. **New:** Cursor's "dynamic context discovery" is the most detailed production implementation — MCP tool descriptions loaded on demand (46.9% token reduction), long outputs written to files for progressive retrieval.
 
-**Action:** Think about the last time an AI tool gave you a wrong answer about your codebase or domain. Was it a retrieval problem (didn't have the info), a context pollution problem (had too much info), or a grounding problem (hallucinated instead of citing)? Knowing which failure mode you hit most tells you where to focus.
+**Action:** Think about the last time an AI tool gave you a wrong answer about your codebase or domain. Was it a retrieval problem (didn't have the info), a context pollution problem (had too much info), or a grounding problem (hallucinated instead of citing)? Then consider: could just-in-time loading (like Cursor's approach) have helped?
 
 ---
 
@@ -39,17 +41,17 @@
 
 ### Session 4: The Tool Layer
 **Read:** [[context-engineering/tool-layer]]
-**Time:** ~10 min (~1,250 words)
-**Key takeaway:** Tool descriptions are instructions. Mask, don't remove.
+**Time:** ~11 min (~1,350 words)
+**Key takeaway:** Tool descriptions are instructions. Mask, don't remove. **New:** MCP servers can consume tens of thousands of tokens just for tool schemas before any work begins (Apideck's analysis, TL;DR Dev March 2026). Stripe's Toolshed (500+ tools) shows the solution at scale is dynamic tool loading, not exposing everything.
 
-**Action:** List the MCP servers or tools you have configured in your coding agent. Are any overlapping? Are any returning large outputs that could be truncated? Identify one tool that could be improved.
+**Action:** List the MCP servers or tools you have configured in your coding agent. Are any overlapping? Are any returning large outputs that could be truncated? Roughly estimate how many tokens your tool definitions alone consume.
 
 ---
 
 ### Session 5: The Memory Layer
 **Read:** [[context-engineering/memory-layer]]
-**Time:** ~11 min (~1,350 words)
-**Key takeaway:** Structured belief-updates beat append-only logs. Memory is a claim about the past, not the present.
+**Time:** ~11 min (~1,400 words)
+**Key takeaway:** Structured belief-updates beat append-only logs. Memory is a claim about the past, not the present. **New:** Self-improving agents use episodic memory as a feedback loop — recording what worked and what didn't, then modifying their own instruction files based on those episodes.
 
 **Action:** Check the memory system in a tool you use (e.g., Claude Code's MEMORY.md, ChatGPT's memory). Is it storing things it shouldn't? Is anything stale? Clean up one thing.
 
@@ -57,19 +59,19 @@
 
 ### Session 6: The Orchestration Layer
 **Read:** [[context-engineering/orchestration-layer]]
-**Time:** ~12 min (~1,425 words)
-**Key takeaway:** Observation masking beats LLM summarization. The 35-minute degradation curve means you should break work into sub-tasks.
+**Time:** ~12 min (~1,500 words)
+**Key takeaway:** Observation masking beats LLM summarization. The 35-minute degradation curve means you should break work into sub-tasks. **New:** Claude Code's leaked architecture confirmed these patterns in production — forked subagents "without contaminating the main execution loop," file-read deduplication, structured session memory.
 
 **Action:** Think about your last long coding session with an AI agent. Did quality degrade toward the end? Estimate how long the session was. Next time, plan a compaction break or fresh agent at the 30-minute mark.
 
 ---
 
-## Phase 3: Putting It Together (Session 7)
+## Phase 3: Putting It Together (Session 7-8)
 
-### Session 7: Agentic Development Deep Dive
-**Read:** [[context-engineering/agentic-dev]]
-**Time:** ~15 min (~2,250 words — the longest session, but the payoff page)
-**Key takeaway:** The 6-step practical playbook for setting up context engineering on any project.
+### Session 7: Agentic Development Deep Dive — Patterns
+**Read:** [[context-engineering/agentic-dev]] — through "Sub-Agent Patterns for Development" (first half)
+**Time:** ~15 min (~1,500 words)
+**Key takeaway:** The 6-step practical playbook, instruction file design, sub-agent patterns. **New:** Stripe's "Minions" system uses blueprints mixing deterministic nodes with agent loops. Cursor Bugbot's shift to agentic architecture produced the largest performance gains. LogRocket confirmed multi-agent setups work when tasks genuinely parallelize.
 
 **Action:** Pick a real project you're working on. Walk through the 6-step playbook mentally:
 1. Do you have an instruction file? Is it lean?
@@ -83,57 +85,71 @@ Identify the weakest link. That's your first improvement.
 
 ---
 
-## Phase 4: Frameworks Survey (Sessions 8-11)
+### Session 8: Agentic Development Deep Dive — The SDD Debate
+**Read:** [[context-engineering/agentic-dev]] — from "Spec-Driven Development" through the end (second half)
+**Time:** ~15 min (~1,600 words)
+**Key takeaway:** The SDD debate is the most active discussion in the space right now. Key positions: the **SDD Triangle** (spec/test/code must stay synchronized — dbreunig), **"code IS spec"** counterargument (HN, 211-pt thread), **"too confused to write the spec"** boundary condition, **stale spec failure mode** (Augment Code), and the **community reality check** — most practitioners use SDD selectively, not religiously.
+
+**Action:** Where do you fall in the debate? Think about your last three projects:
+- Would a spec have helped or been overhead for each?
+- Did you hit the "too confused" problem where you couldn't specify upfront?
+- Have you experienced the stale spec failure mode (agent executing outdated assumptions)?
+
+This tells you your personal SDD sweet spot.
+
+---
+
+## Phase 4: Frameworks Survey (Sessions 9-12)
 
 These sessions survey spec-driven development tools. Read the index first, then the framework pages are grouped by theme. Each group fits in one session.
 
-### Session 8: The SDD Landscape
+### Session 9: The SDD Landscape
 **Read:** [[frameworks/index]]
-**Time:** ~4 min (~435 words)
-**Key takeaway:** The three maturity levels (spec-first, spec-anchored, spec-as-source) and the rankings table.
+**Time:** ~4 min (~440 words)
+**Key takeaway:** The three maturity levels (spec-first, spec-anchored, spec-as-source), the rankings table, and the fact that the space has grown to 30+ frameworks — this guide covers the nine most significant.
 
 **Action:** Look at the rankings table. Based on your own priorities (cost, ease of adoption, effectiveness), which 2-3 frameworks would you shortlist? Note them for the next sessions.
 
 ---
 
-### Session 9: Purpose-Built SDD Tools (Part 1)
+### Session 10: Purpose-Built SDD Tools (Part 1)
 **Read:** [[frameworks/kiro]] then [[frameworks/github-spec-kit]]
-**Time:** ~8 min (~975 words)
-**Key takeaway:** Kiro uses a three-phase pipeline (requirements/design/tasks) with EARS notation. Spec Kit is agent-agnostic and open source with a Constitution pattern.
+**Time:** ~8 min (~1,000 words)
+**Key takeaway:** Kiro uses a three-phase pipeline (requirements/design/tasks) with EARS notation. Spec Kit is agent-agnostic and open source with a Constitution pattern. GSD (473 points on HN — the highest-scoring post in this space in Q1 2026) bridges context engineering and SDD in a single system.
 
 **Action:** Both tools structure requirements differently. Which approach appeals more to you — Kiro's formal EARS notation or Spec Kit's interconnected file approach? Consider which would fit your team's workflow.
 
 ---
 
-### Session 10: Purpose-Built SDD Tools (Part 2)
+### Session 11: Purpose-Built SDD Tools (Part 2)
 **Read:** [[frameworks/tessl]] then [[frameworks/openspec]] then [[frameworks/augment-intent]]
-**Time:** ~11 min (~1,335 words)
-**Key takeaway:** Tessl is spec-as-source (most ambitious). OpenSpec is a universal standard. Augment Intent uses living specs with multi-agent orchestration.
+**Time:** ~11 min (~1,350 words)
+**Key takeaway:** Tessl is spec-as-source (most ambitious). OpenSpec is a universal standard. Augment Intent uses living specs with multi-agent orchestration. The HN community debate showed Augment's analysis of "what SDD gets wrong" (stale specs, agent blindness) is the most actionable critique — their bidirectional spec maintenance proposal directly addresses it.
 
 **Action:** These three represent increasing ambition: universal standard, living docs, and full spec-as-source. Which maturity level is realistic for your current projects? What would need to change to move up one level?
 
 ---
 
-### Session 11: Multi-Agent Frameworks & Others
+### Session 12: Multi-Agent Frameworks & Others
 **Read:** [[frameworks/metagpt]] then [[frameworks/gpt-pilot]] then [[frameworks/smol-developer]] then [[frameworks/factory-droids]]
-**Time:** ~13 min (~2,000 words)
+**Time:** ~13 min (~2,050 words)
 **Key takeaway:** MetaGPT simulates a full software company. GPT Pilot adds TDD and context rewinding. Smol Developer is a learning starting point. Factory Droids is enterprise-grade.
 
 **Action:** If you wanted to experiment with one multi-agent framework this month, which would it be? MetaGPT and GPT Pilot are open source and free to try. Smol Developer is the simplest starting point if you want to understand the mechanics before committing.
 
 ---
 
-## Phase 5: Sources & Review (Session 12)
+## Phase 5: Sources & Review (Session 13)
 
-### Session 12: Deep Reading Selection
+### Session 13: Deep Reading Selection
 **Read:** [[context-engineering/sources]]
-**Time:** ~7 min (~890 words)
-**Key takeaway:** The three tiers of sources — pick your next reads based on what you want to go deeper on.
+**Time:** ~10 min (~1,500 words)
+**Key takeaway:** Four tiers of sources now — Essential Reading, Strong References, 2026 Updates (GitHub Blog, Towards AI, SwirlAI), TL;DR Newsletter Coverage (7 articles), and Hacker News Discussions (8 high-signal threads). The HN threads are especially worth reading for the community debate — the comments often have sharper insights than the linked articles.
 
-**Action:** Pick one Tier 1 source to read in full this week. Recommendation:
-- If you're building agents → Anthropic's guide
-- If you want a framework to think with → LangChain's Write/Select/Compress/Isolate post
-- If you're optimizing an existing system → Manus's production lessons
+**Action:** Pick one source from each tier to read this week:
+- **Essential:** Anthropic's guide (if building agents), LangChain's framework (if wanting a mental model), Manus's lessons (if optimizing systems)
+- **HN thread:** The VSDD thread (211 pts, 118 comments) is the richest single discussion on SDD's strengths and weaknesses
+- **2026 Update:** Towards AI's "6 Techniques That Actually Matter" is the most concise practitioner checklist
 
 ---
 
@@ -141,11 +157,17 @@ These sessions survey spec-driven development tools. Read the index first, then 
 
 | Phase | Sessions | Total Time | Focus |
 |---|---|---|---|
-| Foundations | 1-3 | ~33 min | Mental models, instructions, knowledge |
-| Remaining Layers | 4-6 | ~33 min | Tools, memory, orchestration |
-| Putting It Together | 7 | ~15 min | Agentic dev playbook |
-| Frameworks Survey | 8-11 | ~36 min | 9 SDD tools compared |
-| Sources & Review | 12 | ~7 min | Pick your next deep reads |
-| **Total** | **12 sessions** | **~2 hours** | |
+| Foundations | 1-3 | ~34 min | Mental models, instructions, knowledge |
+| Remaining Layers | 4-6 | ~34 min | Tools, memory, orchestration |
+| Putting It Together | 7-8 | ~30 min | Agentic dev playbook + SDD debate |
+| Frameworks Survey | 9-12 | ~36 min | 9 SDD tools compared |
+| Sources & Review | 13 | ~10 min | Pick your next deep reads |
+| **Total** | **13 sessions** | **~2.5 hours** | |
 
 At one session per day, you'll finish in under two weeks. At two per day, one week.
+
+---
+
+## Keeping It Fresh
+
+Run `/study` in Claude Code to see what's unread or updated since your last session. Run `/study update` to pull in new developments from TL;DR, Hacker News, and the web. The guide's frontmatter tracks your reading progress automatically.

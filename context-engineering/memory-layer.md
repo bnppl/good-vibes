@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # The Memory Layer: Short-Term, Long-Term, and Episodic Memory Systems
 
 Memory in context engineering means deciding what information persists across turns and sessions, what gets retrieved and when, and what gets discarded. Get this wrong and your agent either drowns in accumulated noise or repeatedly forgets what it learned. This document covers the three distinct memory types, how to retrieve from them effectively, and the anti-patterns that undermine each.
@@ -33,6 +39,8 @@ This kind of memory is underused and underappreciated in agent design. Manus's i
 Episodic memory is useful for avoiding repeated mistakes, learning from past debugging sessions, remembering which approaches the user preferred or rejected, and building a history of what worked and what didn't in a given codebase or workflow. An agent that can say "we tried parallelizing this step last week and it caused race conditions" is more useful than one that treats every session as the first.
 
 The challenge is that episodic memories are inherently larger and noisier than factual memories. A fact is a key-value pair. An episode is a sequence of events with context. Retrieval needs to be more aggressive about filtering — you want the relevant past attempt, not every session in the log.
+
+**Self-improving agents.** An emerging pattern (covered in TL;DR Dev, January 2026) extends episodic memory into a feedback loop: agents can improve through environmental modification rather than static weight adjustments. By recording what worked and what didn't, then modifying their own instruction files or tool configurations based on those episodes, agents turn episodic memory into a self-improvement mechanism. This goes beyond passive recall — the memory actively changes future behavior.
 
 ## Memory Retrieval
 

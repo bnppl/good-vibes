@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # Agentic Development: Patterns That Work
 
 This is the payoff page. If you've read the layer pages, you understand the theory — system prompts, knowledge retrieval, memory, orchestration. This page is about applying that theory to real development work. Concrete patterns, concrete tradeoffs, concrete steps.
@@ -44,11 +50,19 @@ A spec is the most information-dense artifact you can put in an agent's context 
 - **Spec-anchored**: the spec evolves alongside the code as living documentation. Changes to behavior update the spec; the spec informs future changes. More discipline required, but the spec stays useful throughout the project.
 - **Spec-as-source**: the spec IS the source. Humans maintain specs and never directly edit generated code. The implementation is derived from the spec on demand. The most powerful form — and the most demanding.
 
+One tool that explicitly bridges both concepts: GSD (Get Shit Done), described as "a meta-prompting and context engineering system for AI coding assistants that enables reliable, spec-driven development by managing context and streamlining complex project workflows." GSD hit 473 points on Hacker News (March 2026) — the highest-scoring story in the context engineering / SDD space in three months, with 255 comments. The community response validated that developers want structured workflows that manage context, not just better prompts.
+
 See [Spec-Driven Development Frameworks](../frameworks/index.md) for a comparative guide to the top tools implementing these patterns, from GitHub Spec Kit to Kiro to Tessl.
+
+### The SDD Triangle
+
+Dan Breunig proposed a useful framework: the **SDD Triangle** — spec, test, and code as three nodes that must stay synchronized (HN, March 2026). Rather than a one-directional flow (spec → code), it's a feedback loop where each element informs the others. "The act of writing code improves the spec" because implementation surfaces decisions and dependencies that abstract documentation misses.
+
+His companion tool **Plumb** captures decisions made during implementation via agent traces and code diffs, blocking commits until decisions are reviewed. This treats decision documentation as a commit-blocking checkpoint rather than optional metadata — a practical mechanism for keeping the triangle in sync.
 
 ### The "SDD Is Just Waterfall" Debate
 
-The most common criticism of spec-driven development is that it reintroduces waterfall process — write a big spec upfront, throw it over the wall, hope for the best. Agentic Conf Hamburg 2026 featured a session called "Beyond the Vibes" dedicated to this tension, and it surfaces constantly in community discussions.
+The most common criticism of spec-driven development is that it reintroduces waterfall process — write a big spec upfront, throw it over the wall, hope for the best. Agentic Conf Hamburg 2026 featured a session called "Beyond the Vibes" dedicated to this tension. On HN, "Ask HN: Why spec-driven development when code IS spec?" (February 2026) crystallized the counterargument: "Code is a detailed, verifiable spec that a machine can execute. LLMs are already great at translating code to natural language. Why do we need a second, less detailed and less verifiable copy?" (HN user kikkupico).
 
 The criticism has merit when SDD is applied indiscriminately. Writing 16 acceptance criteria for a minor bug fix (a real example from Martin Fowler's team evaluating Kiro) is ceremony that slows you down without improving outcomes. Not every task benefits from a spec.
 
@@ -64,7 +78,15 @@ The criticism has merit when SDD is applied indiscriminately. Writing 16 accepta
 - Exploratory work where you don't yet know what you're building
 - Prototyping and throwaway code
 
+**The "too confused" boundary.** A complementary critique: "Spec driven development doesn't work if you're too confused to write the spec" (32 points on HN, February 2026). When you don't yet understand the problem space well enough to specify what you want, writing a spec is premature formalization. The fix is exploratory work first — spikes, prototypes, conversations — until your understanding crystallizes enough to specify.
+
+A sharper version of the core criticism came from Gabriel Gonzalez (covered in TL;DR Dev, March 2026): "a sufficiently detailed spec is code." His argument is that truly precise specifications become as complex as the code itself, making the spec layer redundant. This holds for algorithmic or logic-heavy work where the spec and the implementation converge. It's weaker for integration-heavy work where the spec captures *intent and constraints* that multiple agents or humans need to coordinate around — information that doesn't naturally live in any single code file.
+
+**The stale spec failure mode.** Augment Code's analysis ("What spec-driven development gets wrong," HN, February 2026) identifies the core engineering problem: specs are documents, and documents become stale. Unlike humans who notice inconsistencies, agents will "execute a plan that no longer matches reality, confidently, and they won't flag that anything is wrong." Their proposed fix is bidirectional spec maintenance — developers write requirements, agents update specs as they implement, surfacing decisions that changed the original plan. This is the same insight behind the SDD Triangle: one-directional spec-to-code breaks; the triangle must stay synchronized.
+
 The distinction isn't "use SDD or don't" — it's about matching the level of specification to the complexity of the task. A one-paragraph spec for a small feature is still spec-driven development. A 50-page requirements document for a two-hour task is waterfall cosplaying as modern practice.
+
+**Community reality check.** "Ask HN: Are you still using spec-driven development?" (February 2026) showed a pragmatic middle ground: most respondents use SDD selectively. One developer described maintaining structured documentation (README, ARCHITECTURE, research docs) at ~750 lines per file rather than formal specs (HN user waldopat). Another noted that "tools like spec kit give reliably good results in brownfield codebases" but improved prompting skills have made direct approaches viable for simpler tasks. The consensus: SDD is a tool, not a religion.
 
 ---
 
@@ -96,6 +118,8 @@ See [Orchestration Layer](orchestration-layer.md) for compaction patterns and su
 
 **The quality multiplier.** The quality of sub-agent work is directly proportional to the quality of context you give them. A vague task description ("implement the user auth stuff") produces vague, incomplete work. A precise task with exact file paths, expected behavior, edge cases to handle, and test criteria produces precise work. The effort you invest in writing clear task descriptions pays back in fewer iteration loops.
 
+**Industry validation.** Stripe's "Minions" system (covered in TL;DR Dev, March 2026) uses "blueprints" — hybrid workflows that mix deterministic nodes (lint, push) with free-running agent loops — and a centralized MCP server called Toolshed with 500+ shared tools across agents. A LogRocket experiment found that multi-agent setups succeed when tasks genuinely parallelize and agents agree on interfaces beforehand — validating the independence requirement. Cursor's Bugbot evolution showed that shifting to an agentic architecture produced the largest performance gains, more than model improvements or prompt tuning.
+
 ---
 
 ## Filesystem as Context
@@ -105,6 +129,8 @@ Manus (the autonomous agent platform) documented a key insight from production: 
 The pattern is simple: write decisions, progress, and architectural choices to files on disk. When starting a new session or after compaction, read those files back into context. You don't lose anything because it was never only in the context window.
 
 This is why spec-driven development works at a fundamental level. The spec file is the context, persisted on disk, loadable by any agent at any time. It doesn't degrade with session length. It doesn't get compacted away. It doesn't accumulate conversational noise. It just sits on disk, always available, always up to date if you maintain it.
+
+The pattern is gaining traction beyond agent frameworks. "Personal Brain OS" (covered in TL;DR AI, February 2026) is a file-based personal operating system living inside a Git repository, designed to stop agents from forgetting important context. It preserves voice, brand, goals, and research pipelines across sessions — filesystem-as-context applied to personal knowledge management.
 
 **CLAUDE.md vs. specs: two filesystem-as-context strategies.** CLAUDE.md is always-loaded context — it's read automatically before every task. Specs are on-demand context — loaded when the agent needs them, or when you tell it to read them. Both are filesystem-as-context, just with different loading strategies. The always-loaded file should be small and universal; the on-demand files can be large and specific.
 
@@ -131,6 +157,10 @@ Most teams running agentic development workflows have no idea whether their cont
 - **Time to completion**: how long does each task take? Rising times can signal context degradation — the agent is spending more cycles on confusion and recovery than on the actual work.
 
 **The Augment finding.** When Augment Code ran benchmark evaluations on coding tools, identical models (Claude Opus 4.5) scored 17 problems apart across different tools. Same model. Different results. The gap wasn't capability — it was context engineering. How each tool assembled the context window, what it included, how it structured the task — that's what drove the 17-point spread. This is the most direct evidence that context engineering matters as much as model selection for practical development work.
+
+**The Claude Code leak.** In April 2026, Anthropic inadvertently exposed Claude Code's internal architecture (covered in TL;DR AI). Analysis revealed a three-layer memory architecture as their solution to context entropy, along with specialized utilities (Grep, Glob, LSP) for efficient repository navigation, file-read deduplication to reduce context bloat, structured session memory management, and forked subagents for parallel processing "without contaminating the main execution loop." This confirmed in practice what the field was converging on in theory: the engineering around the model matters as much as the model itself.
+
+**The "coding agent is dead" counterpoint.** Amp (formerly Amphion) argued in February 2026 that modern models perform well with minimal tooling — often just bash — and that the actual bottleneck is codebase organization, not agent sophistication (covered in TL;DR AI). They discontinued their IDE extensions in favor of a lightweight CLI. This is a useful corrective: if your codebase is well-organized and your context is clean, you may need less agent infrastructure than you think. The context engineering still matters — it just moves from the agent framework into your project structure.
 
 ---
 

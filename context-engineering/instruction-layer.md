@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # The Instruction Layer
 
 The instruction layer is the static scaffolding that's always in context: system prompts, rules files, and the behavioral guidelines that shape how an agent operates before any user message arrives. Getting this layer right has an outsized effect on everything downstream.

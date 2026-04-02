@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # Foundations of Context Engineering
 
 Context engineering is the discipline of designing systems that assemble the right information, at the right time, for a language model to do useful work. This page covers the mental models and principles that everything else in this guide builds on.
@@ -17,6 +23,8 @@ Tobi Lutke (Shopify CEO) described it as "the art of providing all the context f
 Simon Willison noted that the term stuck partly because its inferred meaning is much closer to the actual discipline than "prompt engineering" — a phrase that people frequently dismiss as "a laughably pretentious term for typing things into a chatbot." Context engineering signals that there's real engineering work involved in deciding what information goes into a model's working memory.
 
 The practical implication: a production system isn't a prompt. It's a dynamic assembly of system prompts, conversation history, tool definitions, tool results, retrieved documents, memory, and examples — all curated for the specific task at hand.
+
+A useful framework for where context engineering sits in the broader progression: "The 8 Levels of Agentic Engineering" (covered in TL;DR Dev, March 2026) maps a trajectory from basic AI assistance (tab-completion, AI-focused IDEs) through context engineering and compounding engineering to autonomous agents with automated feedback. Context engineering isn't the final level — it's the foundational discipline that makes the higher levels possible.
 
 ---
 

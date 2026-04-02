@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # Sources
 
 An annotated bibliography of key sources on context engineering, organized by how essential they are to understanding the field.
@@ -142,3 +148,45 @@ Vishal Mysore, Medium
 The most comprehensive mapping of the SDD framework ecosystem, cataloguing 30+ tools powering spec-driven development in 2026. Useful as a landscape overview when the nine frameworks covered in this guide aren't enough.
 
 Most useful for: understanding the full breadth of the SDD tooling ecosystem.
+
+---
+
+## TL;DR Newsletter Coverage (March–April 2026)
+
+The following articles were covered in TL;DR newsletters and are referenced throughout this guide:
+
+**[The 8 Levels of Agentic Engineering](https://bassimeledath.com)** — Progression framework from tab-completion through context engineering to autonomous agents. Positions context engineering as a foundational level, not the ceiling. *(TL;DR Dev, March 11)*
+
+**[Your MCP Server Is Eating Your Context Window](https://www.apideck.com/blog/mcp-server-eating-context-window-cli-alternative)** — Apideck's analysis of MCP token bloat: extensive tool definitions consuming tens of thousands of tokens. Proposes CLI-based progressive discovery as a lighter alternative. *(TL;DR Dev, March 17)*
+
+**[A Sufficiently Detailed Spec Is Code](https://haskellforall.com/2026/03/a-sufficiently-detailed-spec-is-code)** — Gabriel Gonzalez's counterargument to SDD: truly precise specifications become as complex as the code itself. A useful boundary condition for when specs add value vs. when they're redundant. *(TL;DR Dev, March 19)*
+
+**[Minions: Stripe's One-Shot End-to-End Coding Agents](https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2)** — Stripe's blueprint system mixing deterministic nodes with agent loops, plus their Toolshed MCP server (500+ shared tools). Production-scale sub-agent patterns. *(TL;DR Dev, March 18)*
+
+**[Data Teams Should Become Context Teams](https://thenewaiorder.substack.com/p/data-teams-should-become-context)** — Argues context engineering extends beyond developer tooling into data governance: building versioned, governed "context layers" for AI with quantitative KPIs. *(TL;DR Data, February 12)*
+
+**[How to Build Self-Improving Coding Agents](https://ericmjl.github.io/blog/2026/1/17/how-to-build-self-improving-coding-agents-part-1/)** — Agents improving through environmental modification rather than weight changes — episodic memory as a self-improvement mechanism. *(TL;DR Dev, January 19)*
+
+**[Claude Code's Real Secret Sauce (Probably) Isn't the Model](https://x.com/rasbt/status/2038980345316413862)** — Analysis of Claude Code's exposed internals: three-layer memory architecture, file-read deduplication, forked subagents, structured session memory. Confirms that engineering around the model drives real-world performance. *(TL;DR AI, April 1)*
+
+---
+
+## Hacker News Discussions (January–April 2026)
+
+The following HN threads surfaced high-signal community debate on context engineering and SDD. Comments often have sharper insights than the linked articles.
+
+**[GSD: A meta-prompting, context engineering and spec-driven dev system](https://news.ycombinator.com/item?id=47417804)** — 473 points, 255 comments. The highest-scoring HN story in the context engineering / SDD space in Q1 2026. Validates community demand for structured context management workflows. *(March 2026)*
+
+**[Verified Spec-Driven Development (VSDD)](https://news.ycombinator.com/item?id=47197595)** — 211 points, 118 comments. Proposes formal verification of specs before agent execution. Community split between those seeing promise in externalized verification and those calling it "expensive process theater." Key concern: specs that force premature design choices become costly to change. *(February 2026)*
+
+**[Spec driven development doesn't work if you're too confused to write the spec](https://news.ycombinator.com/item?id=46955747)** — 32 points. Identifies the prerequisite problem: SDD requires sufficient understanding to specify. When you don't understand the problem space yet, writing a spec is premature formalization. *(February 2026)*
+
+**[Ask HN: Why spec-driven development when code IS spec?](https://news.ycombinator.com/item?id=47194035)** — The sharpest counterargument: "Code is a detailed, verifiable spec that a machine can execute. LLMs are already great at translating code to natural language. Why do we need a second, less detailed and less verifiable copy?" Counter-counter: specs capture intent and coordination context that doesn't live in any single code file. *(February 2026)*
+
+**[Ask HN: Are you still using spec-driven development?](https://news.ycombinator.com/item?id=46864948)** — Pragmatic experience reports. Key insight from HN user waldopat: structured documentation at ~750 lines per file (README, ARCHITECTURE, research docs) works better than formal spec frameworks. Most respondents use SDD selectively. *(February 2026)*
+
+**[The Spec-Driven Development Triangle](https://news.ycombinator.com/item?id=47251886)** — Dan Breunig's framework: spec, test, and code as three nodes that must stay synchronized. Companion tool **Plumb** blocks commits until implementation decisions are reviewed. *(March 2026)*
+
+**[What spec-driven development gets wrong](https://news.ycombinator.com/item?id=47141366)** — Augment Code's analysis: specs become stale, and agents will "execute a plan that no longer matches reality, confidently." Fix: bidirectional spec maintenance where agents update specs as they implement. *(February 2026)*
+
+**[Cursor's Dynamic Context Discovery](https://news.ycombinator.com/item?id=46520986)** — Cursor's production implementation of just-in-time loading: MCP tool descriptions loaded on demand (46.9% token reduction in A/B tests), long outputs written to files for progressive retrieval. *(January 2026)*

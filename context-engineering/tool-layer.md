@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # The Tool Layer
 
 Tools are how your agent acts on the world. They're also a significant source of context overhead, decision friction, and subtle failure modes. Getting the tool layer right means thinking about tool design, output management, and availability — not just which tools exist.
@@ -48,6 +54,8 @@ The Model Context Protocol (MCP) is a standardized way to expose tools and data 
 - Prototypes where the overhead of an MCP server isn't justified yet.
 
 MCP provides both tools (actions the model can take) and resources (data the model can read). This maps naturally onto two distinct layers: tools belong to the action layer, resources belong to the knowledge layer. Keeping that distinction clear helps when designing what an MCP server should expose.
+
+**The MCP context cost.** A practical warning from Apideck (covered in TL;DR Dev, March 2026): MCP servers with extensive tool definitions can consume tens of thousands of tokens just for the tool schemas, before any actual work begins. Their analysis found that agents using heavy MCP configurations suffered from token bloat that crowded out working context. The alternative they propose — CLI-based tools with progressive discovery through `--help` commands — trades organization-wide authentication for dramatically lower context overhead. This is a real engineering tradeoff: MCP's portability and authentication benefits come at a token cost that scales with the number of tools exposed. Stripe's approach with their "Toolshed" MCP server (500+ tools across agents) suggests the answer at scale is dynamic tool loading rather than exposing everything at once.
 
 ---
 

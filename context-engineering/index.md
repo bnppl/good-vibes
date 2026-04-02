@@ -1,3 +1,9 @@
+---
+last_updated: 2026-04-02
+last_read: null
+status: unread
+---
+
 # Context Engineering
 
 Context engineering is the art and science of filling the context window with the right information at the right time. Andrej Karpathy's framing (June 2025): the LLM is a CPU, the context window is RAM, and the engineer's job is to be the operating system — loading the right code, data, and instructions into working memory for each step. This replaced "prompt engineering" because prompt engineering is crafting one input; context engineering is designing the system that assembles the right information dynamically.
