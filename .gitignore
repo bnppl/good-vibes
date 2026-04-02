@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+
+# Obsidian - sync workspace but not cache
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/plugins/*/data.json
+
+# Claude
+.claude/
+
+# Docs (specs/plans are working files, not reading material)
+docs/
