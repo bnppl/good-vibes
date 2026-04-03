@@ -153,18 +153,73 @@ These sessions survey spec-driven development tools. Read the index first, then 
 
 ---
 
+## Module 2: Agent Architecture Patterns (Sessions 14-18)
+
+### Session 14: The Agent Patterns Landscape
+**Read:** [[agent-patterns/index]] then [[agent-patterns/single-agent]]
+**Time:** ~15 min (~1,750 words)
+**Key takeaway:** The four core single-agent patterns — ReAct (reason-act-observe loop), plan-and-execute (separate planning from doing), reflection (self-critique before returning), and tool-use loops. ReAct is the default in most coding agents. Plan-and-execute is the pattern behind SDD. They combine: plan-and-execute + ReAct is the most common production stack.
+
+**Action:** Think about your last 3 interactions with an AI coding agent. Which pattern was the agent running? Was it ReAct (exploring step by step), plan-and-execute (following a structured plan), or something else? Knowing which pattern you're working with changes how you prompt.
+
+---
+
+### Session 15: Multi-Agent Coordination
+**Read:** [[agent-patterns/multi-agent]]
+**Time:** ~15 min (~1,800 words)
+**Key takeaway:** Orchestrator-worker accounts for ~70% of production multi-agent deployments. Anthropic's system outperformed single-agent by 90.2% using this pattern. The independence requirement for parallel agents is strict — hidden dependencies between "parallel" agents are the most common multi-agent failure. Osmani's key warning: "if you lose understanding of your own system, you have lost the ability to fix it."
+
+**Action:** If you've used multi-agent features (Claude Code subagents, Cursor's parallel edits, or similar), did the agents work on truly independent tasks? If you haven't, identify one task from your current project that could be split into 2-3 genuinely independent subtasks.
+
+---
+
+### Session 16: The Autonomy Spectrum
+**Read:** [[agent-patterns/autonomy]]
+**Time:** ~12 min (~1,450 words)
+**Key takeaway:** Five levels from inline assistance to fully autonomous. Most enterprise deployments in 2026 are at Level 2 (plan-level approval). Level 5 isn't appropriate for production yet. "Bounded autonomy" is the leading pattern — clear limits, mandatory escalation, comprehensive audit trails. The error blast radius scales with autonomy level.
+
+**Action:** What autonomy level are you personally operating at? Most developers are at Level 1-2 even when their tools support Level 3. Pick one low-risk task type (test generation, documentation, simple refactors) and try it at one level higher than your default this week.
+
+---
+
+### Session 17: Production Lessons
+**Read:** [[agent-patterns/production]]
+**Time:** ~13 min (~1,500 words)
+**Key takeaway:** Production case studies from Anthropic (multi-agent research), Stripe (hybrid blueprints + Toolshed), Cursor (dynamic context discovery), and Claude Code (leaked architecture). The common thread: the best agent systems are hybrids — deterministic steps for predictable work, agents for reasoning. Not everything needs to be agentic.
+
+**Action:** Review the production engineering checklist at the end of the page. How many items would you check off for your current AI setup? Which gaps are the most concerning?
+
+---
+
+### Session 18: Agent Patterns Sources
+**Read:** [[agent-patterns/sources]]
+**Time:** ~8 min (~900 words)
+**Key takeaway:** Three tiers of sources. Essential reading: Anthropic's "Building Effective Agents" (composable patterns), their multi-agent research system writeup, and Osmani's coding-specific analysis.
+
+**Action:** Pick one essential source to read this week:
+- **If building agents:** Anthropic's multi-agent research system writeup — the most detailed production account available
+- **If using agents:** Osmani's "Code Agent Orchestra" — focused on what makes multi-agent coding work vs. fail
+- **If evaluating tools:** Google Cloud's design pattern chooser — decision framework for matching patterns to tasks
+
+---
+
 ## Summary
 
-| Phase | Sessions | Total Time | Focus |
+| Module | Sessions | Total Time | Focus |
 |---|---|---|---|
+| **1: Context Engineering** | | | |
 | Foundations | 1-3 | ~34 min | Mental models, instructions, knowledge |
 | Remaining Layers | 4-6 | ~34 min | Tools, memory, orchestration |
 | Putting It Together | 7-8 | ~30 min | Agentic dev playbook + SDD debate |
 | Frameworks Survey | 9-12 | ~36 min | 9 SDD tools compared |
-| Sources & Review | 13 | ~10 min | Pick your next deep reads |
-| **Total** | **13 sessions** | **~2.5 hours** | |
+| CE Sources & Review | 13 | ~10 min | Pick your next deep reads |
+| **2: Agent Patterns** | | | |
+| Single & Multi-Agent | 14-15 | ~30 min | Core reasoning loops + coordination |
+| Autonomy & Production | 16-17 | ~25 min | Choosing the right level + real-world lessons |
+| AP Sources & Review | 18 | ~8 min | Pick your next deep reads |
+| **Total** | **18 sessions** | **~3.5 hours** | |
 
-At one session per day, you'll finish in under two weeks. At two per day, one week.
+At one session per day, you'll finish in about 2.5 weeks. At two per day, under 10 days.
 
 ---
 

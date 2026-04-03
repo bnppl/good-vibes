@@ -85,6 +85,15 @@ Research recent developments and propose updates to the guide.
      - For each high-scoring story (50+ points), also fetch its comments: `https://hn.algolia.com/api/v1/items/[STORY_ID]`
      - **Time window:** Check `context-engineering/sources.md` frontmatter for `last_updated`. If this is the FIRST research run (no HN content exists in sources.md yet — search for "Hacker News" in that file), use a 90-day lookback. On subsequent runs, use 30 days. Calculate the UNIX timestamp accordingly: `date -d "[N] days ago" +%s` on Linux or `date -v-[N]d +%s` on macOS.
      - HN comments are often higher-signal than the linked articles themselves. When a comment has significant engagement, quote it directly and attribute as `(HN user [username])`.
+   - **Key blogs and newsletters** — Check the latest posts from these consistently high-signal sources:
+     - WebFetch `https://www.anthropic.com/engineering` — Anthropic's engineering blog (the single most important source for agent patterns and context engineering)
+     - WebFetch `https://simonwillison.net/` — Simon Willison's blog (tracks every meaningful AI development, strong on tooling and practical implications)
+     - WebFetch `https://www.latent.space/` — Latent Space podcast/newsletter (AI engineering community, interviews with practitioners)
+     - WebFetch `https://addyosmani.com/blog/` — Addy Osmani's blog (engineering leadership perspective on AI coding)
+     - WebFetch `https://martinfowler.com/articles/exploring-gen-ai/` — Martin Fowler's AI series (Thoughtworks perspective, strong on methodology critique)
+     - WebSearch for: `site:blog.langchain.com agent OR context [current year]` — LangChain's blog (framework-level patterns)
+     - WebSearch for: `site:openai.com/index OR site:openai.com/research agent architecture [current year]` — OpenAI's research (competing perspectives on agent design)
+     - For each source, extract only posts from the last 30 days that are relevant to context engineering, agent patterns, SDD, or AI-assisted development. Skip product announcements unless they reveal architectural insights.
 
 3. **Diff against existing content.** For each finding, classify it:
    - **Already covered** — the guide already says this. Skip.

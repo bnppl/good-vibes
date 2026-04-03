@@ -29,4 +29,6 @@ Context engineering is the art and science of filling the context window with th
 
 ## Related
 
+[Agent Architecture Patterns](../agent-patterns/index.md) — how agents use context: reasoning loops, multi-agent coordination, autonomy levels, and production lessons.
+
 [Spec-Driven Development Frameworks](../frameworks/index.md) — comparative guide to 9 tools where structured specifications drive code generation.
