@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-04-06
 last_read: null
 status: unread
 ---
@@ -21,6 +21,17 @@ Two primary strategies for keeping context lean:
 **Observation masking** replaces verbose tool outputs with short summaries. Instead of keeping 500 lines of test output in context, you store "tests passed: 47/47." JetBrains Research tested three approaches — raw/unbounded context, observation masking, and LLM summarization — and found that observation masking produced 2.6% better solve rates at 52% lower cost than LLM summarization. It's simpler, cheaper, and works better as a default.
 
 **LLM summarization** uses the model to compress old context before the window fills. You preserve architectural decisions and key facts, discard redundant output. Anthropic recommends this as a complement to masking, not a replacement. It becomes useful in long-running tasks where even masked output accumulates over time — but it shouldn't be your first move.
+
+**Tiered compression** is the production-grade approach. LangChain's Deep Agents SDK (January 2026) implements three progressive tiers: (1) offload tool results exceeding 20,000 tokens to the filesystem, substituting a file path and 10-line preview; (2) at 85% of context window capacity, truncate older file write/edit operations to filesystem pointers; (3) as a final fallback, generate structured summaries capturing session intent, artifacts created, and next steps. Testing on terminal-bench showed dramatic token drops when compression triggers — the key insight is that each tier activates only when the cheaper option is exhausted.
+
+**Autonomous compression** takes this further. LangChain's March 2026 addition lets agents decide when to compress their own context — at task transitions, after extracting results from large inputs, or before complex multi-step processes. The agent retains recent messages (10% of available context) while summarizing older exchanges. Testing showed agents are naturally conservative about triggering compression, but when they do, the timing meaningfully improves workflow efficiency. The principle: "giving models more control over their own working memory and fewer rigid, hand-tuned rules."
+
+### Context Caching
+Reducing costs by up to 90%, context caching allows frequently used but static context (like a large codebase's structural map, legal frameworks, or complex tool schemas) to be processed once and reused across millions of tokens of conversation. This is the primary mechanism for making 1M+ token windows affordable for iterative development.
+
+### Context Resets vs. Compaction
+
+Anthropic's harness design research (March 2026) found that for some models, complete context resets outperform compaction. Sonnet 4.5 exhibited "context anxiety" — prematurely wrapping up work as the context window filled, rushing to finish rather than doing the work properly. A clean slate eliminated this behavior entirely. Opus 4.5 largely didn't exhibit context anxiety, suggesting the need for resets is model-dependent. The broader lesson: harnesses should "continuously shed outdated scaffolding as model capabilities advance." A compaction strategy that works for today's models may be unnecessary overhead for tomorrow's.
 
 ### When to Compact
 
@@ -66,6 +77,18 @@ For parallel subtasks, dispatch multiple agents simultaneously. Each processes i
 
 The key requirement: the subtasks must not share state. If they need to read each other's outputs or coordinate mid-task, they're not truly independent and the pattern breaks down.
 
+### Osmani's Three-Pattern Taxonomy
+
+Addy Osmani published a useful taxonomy (March 2026) that maps to increasing scale:
+
+**Subagents (focused delegation).** A parent agent decomposes work and spawns child agents, each with focused scope and file ownership. Minimal token overhead, manual dependency management. This is the coordinator pattern above at its simplest.
+
+**Agent Teams (true parallelism).** Multiple autonomous agents with shared task lists, automatic dependency resolution, and peer-to-peer messaging. "Three focused agents consistently outperform one generalist agent working three times as long" through specialization, isolation, and compound learning.
+
+**Orchestration at Scale.** Three tiers: in-process teams (Tier 1), local orchestrators (Tier 2), and cloud async agents (Tier 3). Most teams should start at Tier 1 and scale up only when they hit coordination bottlenecks.
+
+The key finding: the bottleneck has shifted from code generation to verification and architectural oversight. Quality gates are non-negotiable — plan approval catches bad architecture early, hooks enforce automated checks, and human review remains the actual bottleneck.
+
 ### When to Use Sub-Agents
 
 - The task has independent subtasks that don't share state
@@ -76,6 +99,25 @@ The key requirement: the subtasks must not share state. If they need to read eac
 See [GPT Pilot](../frameworks/gpt-pilot.md) for a different approach to the same problem. GPT Pilot uses "context rewinding" — resetting the LLM context after each completed task — rather than delegation. It's a sequential approach to the same constraint: long development sessions accumulate too much context to manage in one continuous window.
 
 **Production case study: Claude Code's architecture.** When Anthropic's Claude Code internals were exposed in April 2026 (covered in TL;DR AI), analysis confirmed these patterns in production. Claude Code uses forked subagents for parallel processing "without contaminating the main execution loop" — a clean implementation of the coordinator pattern. It also employs file-read deduplication to reduce context bloat (a form of observation masking) and structured session memory management. These aren't novel patterns, but seeing them validated in one of the most widely-used coding agents confirms the theory.
+
+---
+
+## Harness Engineering
+
+"Harness engineering" emerged in early 2026 as the name for the discipline of designing the constraints, tools, feedback loops, and verification systems that guide AI agents. The term gained traction after OpenAI published their experience building a 1M+ line production system with zero manually-written code under a Codex harness, and Anthropic published their Generator-Evaluator architecture for long-running application development. Martin Fowler's series also adopted the framing.
+
+The core insight from OpenAI: "from the agent's point of view, anything it can't access in-context while running effectively doesn't exist, and repository-local, versioned artifacts are all it can see." This means the harness — the agent loop, tool access, documentation, and verification — determines what the agent can accomplish as much as the model does.
+
+**Anthropic's Generator-Evaluator pattern.** Inspired by GANs, Anthropic's harness separates work generation from evaluation across specialized agents: a Planner expands brief prompts into ambitious feature specs, a Generator implements features iteratively with self-evaluation, and an Evaluator tests functionality via Playwright and validates against contracts. The critical insight: "tuning a standalone evaluator to be skeptical turns out to be far more tractable than making a generator critical of its own work."
+
+### The Agentic Harness: Guides vs. Sensors
+The "Harness" is the software scaffold that manages the agent's environment. Modern orchestration splits the harness into two roles:
+1.  **Guides (Feedforward):** Anticipating behavior to steer the agent *before* it acts (e.g., pre-loading a specific documentation file because the agent is about to touch a specific module).
+2.  **Sensors (Feedback):** Observing actions *after* they occur (e.g., via custom linters or test runners) to help the agent self-correct without human intervention.
+
+**OpenAI's structural constraints approach.** Their Codex harness enforces a rigid architectural model with each business domain divided into fixed layers, with strictly validated dependency directions. Custom linters and structural tests enforce these constraints mechanically, not through prompting. The approach was depth-first: break larger goals into smaller building blocks, prompt agents to construct those blocks, and use them to unlock more complex tasks.
+
+The harness engineering discipline is still crystallizing, but the consensus is clear: the engineering around the model matters as much as the model itself.
 
 ---
 

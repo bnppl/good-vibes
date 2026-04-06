@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-04-06
 last_read: null
 status: unread
 ---
@@ -190,3 +190,116 @@ The following HN threads surfaced high-signal community debate on context engine
 **[What spec-driven development gets wrong](https://news.ycombinator.com/item?id=47141366)** — Augment Code's analysis: specs become stale, and agents will "execute a plan that no longer matches reality, confidently." Fix: bidirectional spec maintenance where agents update specs as they implement. *(February 2026)*
 
 **[Cursor's Dynamic Context Discovery](https://news.ycombinator.com/item?id=46520986)** — Cursor's production implementation of just-in-time loading: MCP tool descriptions loaded on demand (46.9% token reduction in A/B tests), long outputs written to files for progressive retrieval. *(January 2026)*
+
+---
+
+## April 2026 Updates
+
+**[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)**
+Prithvi Rajasekaran, Anthropic (March 24, 2026)
+
+Generator-Evaluator architecture separating work generation from evaluation. Key findings: context resets outperform compaction for some models (Sonnet 4.5 exhibits "context anxiety"), Planner/Generator/Evaluator as a three-agent production pattern, and harnesses should shed scaffolding as model capabilities advance.
+
+Most useful for: designing agent architectures for long-running tasks.
+
+---
+
+**[Building Effective Agents](https://www.anthropic.com/news/building-effective-agents)**
+Anthropic (March 2026)
+
+A foundational guide distinguishing between **Workflows** (predefined paths) and **Agents** (dynamic direction). It identifies five core patterns: Prompt Chaining, Routing, Parallelization, Orchestrator-Workers, and Evaluator-Optimizer. It also introduces the concept of the **Agent-Computer Interface (ACI)**—mistake-proofing tools for AI models.
+
+Most useful for: anyone architecting multi-agent systems.
+
+---
+
+**[Claude Code Auto Mode: A Safer Way to Skip Permissions](https://www.anthropic.com/engineering/claude-code-auto-mode)**
+Anthropic (March 25, 2026)
+
+Two-stage permission classification for agent autonomy: fast single-token filtering (8.5% FPR) escalating to chain-of-thought review (0.4% FPR). Classifier strips agent reasoning to prevent self-justification. 93% auto-approval rate matches human manual approval patterns.
+
+Most useful for: understanding the trust/autonomy frontier for coding agents.
+
+---
+
+**[Context Management for Deep Agents](https://blog.langchain.com/context-management-for-deepagents/)**
+LangChain (January 2026)
+
+Three-tier progressive compression for long-running agents: offload tool results >20K tokens, truncate tool inputs at 85% capacity, LLM summarization as fallback. Testing on terminal-bench validated dramatic token savings.
+
+Most useful for: concrete implementation of context compression.
+
+---
+
+**[Autonomous Context Compression](https://blog.langchain.com/autonomous-context-compression/)**
+LangChain (March 2026)
+
+Agent-controlled compression where models decide when to compress their own context. Agents are naturally conservative — they rarely trigger unnecessarily, but timing improves workflow efficiency. Retains 10% of context (recent messages) while summarizing older exchanges.
+
+Most useful for: giving agents control over their own working memory.
+
+---
+
+**[The Code Agent Orchestra](https://addyosmani.com/blog/code-agent-orchestra/)**
+Addy Osmani (March 26, 2026)
+
+Taxonomy of multi-agent coordination: subagents (focused delegation), agent teams (true parallelism with shared task lists), and orchestration at scale (three tiers). Key finding: "Three focused agents consistently outperform one generalist agent working three times as long." Bottleneck has shifted from generation to verification.
+
+Most useful for: designing multi-agent coding workflows.
+
+---
+
+**[Comprehension Debt: The Hidden Cost of AI-Generated Code](https://addyosmani.com/blog/comprehension-debt/)**
+Addy Osmani (March 14, 2026)
+
+The growing gap between code volume and human understanding. Anthropic study: developers using AI scored 17% lower on comprehension (50% vs. 67%). Speed asymmetry breaks the review quality gate. Important counter-narrative to pure productivity metrics.
+
+Most useful for: understanding the human cost of agentic development.
+
+---
+
+**[Agentic Coding at ClickHouse](https://clickhouse.com/blog/agentic-coding)**
+Alexey Milovidov, ClickHouse (April 2, 2026)
+
+The most detailed production case study of agentic coding to date. 700 PRs for flaky tests in 2 months, CI findings reduced from ~200 to 3-5. Key findings: CLI > IDE for agent work, over-specifying tasks produces better results, "skill amplification" — experienced engineers extract disproportionate value.
+
+Most useful for: understanding real-world agentic development at scale.
+
+---
+
+**[Context Engineering for Coding Agents](https://martinfowler.com/articles/exploring-gen-ai/context-engineering-coding-agents.html)**
+Birgitta Boeckeler, Martin Fowler series (March 2026)
+
+Taxonomy of context types (reusable prompts, context interfaces) and decision control (LLM-triggered, human-triggered, software-triggered). The important caution: "ultimately this is not really engineering" — context engineering is probabilistic, not mechanical.
+
+Most useful for: a clear taxonomy of how coding agents use context.
+
+---
+
+**[Understanding Spec-Driven Development: Kiro, spec-kit, and Tessl](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)**
+Birgitta Boeckeler, Martin Fowler series (March 2026)
+
+Comparative analysis of three SDD tools across three maturity levels. Warning from Model-Driven Development (MDD) history: spec-as-source risks combining MDD's inflexibility with LLM non-determinism. Documents the "control illusion" — agents frequently ignore elaborate instructions.
+
+Most useful for: evaluating SDD tool maturity and understanding historical parallels.
+
+---
+
+**[Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/)**
+OpenAI (early 2026)
+
+Built a 1M+ line production system with zero manual code under a Codex harness. Rigid architectural model with validated dependency directions enforced by custom linters. Key principle: repository-local, versioned artifacts are all the agent can see.
+
+Most useful for: understanding how structural constraints substitute for prompting at scale.
+
+---
+
+## Hacker News Discussions — April 2026 Update
+
+**["Spec-driven development for AI is a form of technical masturbation"](https://www.reddit.com/r/ChatGPTCoding/comments/1o6j1yr/)** — 85 comments on r/ChatGPTCoding. The sharpest backlash against SDD frameworks, arguing the ceremony of generated markdown files adds overhead without proportional benefit. Useful counterpoint to the HN threads above. *(March 2026)*
+
+**[Agentic Coding at ClickHouse](https://news.ycombinator.com/item?id=47621368)** — 5 points. Discussion of the most detailed production agentic coding case study, covering 700 PRs, CLI-over-IDE preference, and the "skill amplification" finding. *(April 2026)*
+
+**[Show HN: Anvil – Desktop App for Spec Driven Development](https://news.ycombinator.com/item?id=47546925)** — 10 points. A desktop GUI approach to SDD, suggesting the space is diversifying beyond CLI tools. *(March 2026)*
+
+**[How do you cope with the broken rhythm of agentic coding?](https://news.ycombinator.com/item?id=47356614)** — 15 points. Human factors discussion about the cognitive cost of context-switching between directing agents and reviewing output. ClickHouse's case study echoes this: "intensive agent sessions are mentally exhausting." *(March 2026)*

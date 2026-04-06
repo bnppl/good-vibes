@@ -4,13 +4,13 @@
 
 **Reading order matters.** The context engineering guide builds on itself — foundations first, then layers, then the deep dive. The frameworks section is modular and can be read in any order after Session 6.
 
-**What's new (April 2, 2026):** The guide now includes community debate from Hacker News (90-day lookback), TL;DR newsletter coverage, and production case studies (Stripe Minions, Cursor's dynamic context discovery, Claude Code's leaked architecture). The agentic dev page has nearly doubled in size with the SDD debate, SDD Triangle framework, and practitioner experience reports.
+**What's new (April 4, 2026):** Major updates across 5 files. New: harness engineering as a discipline (OpenAI 1M-line zero-manual-code system, Anthropic's Generator-Evaluator architecture), LangChain's three-tier compression and autonomous context compression, Addy Osmani's multi-agent taxonomy and "comprehension debt" concept, ClickHouse's production case study (700 PRs, skill amplification), Claude Code auto mode, MDD parallel warning for SDD, and the SDD backlash thread (85 comments). 10 new annotated sources added.
 
 ---
 
 ## Phase 1: Foundations (Sessions 1-3)
 
-### Session 1: What Is Context Engineering?
+### Session 1: What Is Context Engineering? ✅
 **Read:** [[context-engineering/index]] then [[context-engineering/foundations]]
 **Time:** ~12 min (~1,650 words)
 **Key takeaway:** The three mental models — Karpathy's CPU/RAM metaphor, LangChain's Write/Select/Compress/Isolate, and Schmid's 7-component checklist. Plus: context engineering went mainstream in 2026 (QCon London, Agentic Conf Hamburg, multiple "state of" reports). The "8 Levels of Agentic Engineering" framework shows where context engineering sits in the progression — it's foundational, not the ceiling.
@@ -19,16 +19,16 @@
 
 ---
 
-### Session 2: The Instruction Layer
+### Session 2: The Instruction Layer ✅
 **Read:** [[context-engineering/instruction-layer]]
-**Time:** ~10 min (~1,200 words)
-**Key takeaway:** The ~50 instruction ceiling, and why examples beat rules.
+**Time:** ~12 min (~1,500 words)
+**Key takeaway:** The ~50 instruction ceiling, and why examples beat rules. **New:** Boeckeler's taxonomy of context types (reusable prompts vs. context interfaces) and decision control (who decides what context to load). The important caution: context engineering is probabilistic, "not really engineering" — it increases odds but can't guarantee outcomes.
 
 **Action:** If you have a CLAUDE.md, .cursorrules, or AGENTS.md file in any project, open it and count the instructions. Are you over 50? Flag 3 that could be cut or moved to progressive disclosure. If you don't have one yet, draft 5 rules you'd want in one for your main project.
 
 ---
 
-### Session 3: The Knowledge Layer
+### Session 3: The Knowledge Layer ✅
 **Read:** [[context-engineering/knowledge-layer]]
 **Time:** ~12 min (~1,500 words)
 **Key takeaway:** Just-in-time loading beats frontloading. Hybrid search is the right default. **New:** Cursor's "dynamic context discovery" is the most detailed production implementation — MCP tool descriptions loaded on demand (46.9% token reduction), long outputs written to files for progressive retrieval.
@@ -59,8 +59,8 @@
 
 ### Session 6: The Orchestration Layer
 **Read:** [[context-engineering/orchestration-layer]]
-**Time:** ~12 min (~1,500 words)
-**Key takeaway:** Observation masking beats LLM summarization. The 35-minute degradation curve means you should break work into sub-tasks. **New:** Claude Code's leaked architecture confirmed these patterns in production — forked subagents "without contaminating the main execution loop," file-read deduplication, structured session memory.
+**Time:** ~18 min (~2,200 words)
+**Key takeaway:** Observation masking beats LLM summarization. The 35-minute degradation curve means you should break work into sub-tasks. **New (April 4):** Harness engineering as a formal discipline (OpenAI's 1M-line zero-manual-code system, Anthropic's Generator-Evaluator pattern). LangChain's three-tier compression and autonomous context compression. "Context anxiety" — some models prematurely wrap up work as context fills; context resets fix this. Osmani's three-pattern taxonomy for multi-agent coordination: subagents, agent teams, orchestration at scale.
 
 **Action:** Think about your last long coding session with an AI agent. Did quality degrade toward the end? Estimate how long the session was. Next time, plan a compaction break or fresh agent at the 30-minute mark.
 
@@ -85,15 +85,16 @@ Identify the weakest link. That's your first improvement.
 
 ---
 
-### Session 8: Agentic Development Deep Dive — The SDD Debate
+### Session 8: Agentic Development Deep Dive — The SDD Debate & Production Reality
 **Read:** [[context-engineering/agentic-dev]] — from "Spec-Driven Development" through the end (second half)
-**Time:** ~15 min (~1,600 words)
-**Key takeaway:** The SDD debate is the most active discussion in the space right now. Key positions: the **SDD Triangle** (spec/test/code must stay synchronized — dbreunig), **"code IS spec"** counterargument (HN, 211-pt thread), **"too confused to write the spec"** boundary condition, **stale spec failure mode** (Augment Code), and the **community reality check** — most practitioners use SDD selectively, not religiously.
+**Time:** ~20 min (~2,400 words)
+**Key takeaway:** The SDD debate is the most active discussion in the space right now, and the backlash is crystallizing. Key positions: the **SDD Triangle**, **"code IS spec"** counterargument, **MDD parallel warning** (Boeckeler: spec-as-source risks combining MDD's inflexibility with LLM non-determinism), and the **85-comment backlash thread** calling SDD frameworks "technical masturbation." **New (April 4):** ClickHouse's production case study (700 PRs, skill amplification), comprehension debt (Anthropic: 17% lower comprehension with AI), and Claude Code auto mode (93% auto-approval, two-stage classification).
 
 **Action:** Where do you fall in the debate? Think about your last three projects:
 - Would a spec have helped or been overhead for each?
 - Did you hit the "too confused" problem where you couldn't specify upfront?
 - Have you experienced the stale spec failure mode (agent executing outdated assumptions)?
+- Are you noticing comprehension debt — code you generated but don't fully understand?
 
 This tells you your personal SDD sweet spot.
 
@@ -143,13 +144,13 @@ These sessions survey spec-driven development tools. Read the index first, then 
 
 ### Session 13: Deep Reading Selection
 **Read:** [[context-engineering/sources]]
-**Time:** ~10 min (~1,500 words)
-**Key takeaway:** Four tiers of sources now — Essential Reading, Strong References, 2026 Updates (GitHub Blog, Towards AI, SwirlAI), TL;DR Newsletter Coverage (7 articles), and Hacker News Discussions (8 high-signal threads). The HN threads are especially worth reading for the community debate — the comments often have sharper insights than the linked articles.
+**Time:** ~15 min (~2,500 words)
+**Key takeaway:** Sources now include April 2026 updates — 10 new annotated entries covering harness engineering (OpenAI, Anthropic), context compression (LangChain), multi-agent patterns and comprehension debt (Osmani), ClickHouse production case study, and the SDD tools comparative analysis (Boeckeler/Fowler). The HN threads section now includes the SDD backlash discussion and the "broken rhythm of agentic coding" human factors thread.
 
 **Action:** Pick one source from each tier to read this week:
 - **Essential:** Anthropic's guide (if building agents), LangChain's framework (if wanting a mental model), Manus's lessons (if optimizing systems)
-- **HN thread:** The VSDD thread (211 pts, 118 comments) is the richest single discussion on SDD's strengths and weaknesses
-- **2026 Update:** Towards AI's "6 Techniques That Actually Matter" is the most concise practitioner checklist
+- **April 2026:** ClickHouse's agentic coding post (strongest production case study), or Osmani's comprehension debt (most important counter-narrative)
+- **HN thread:** The VSDD thread (211 pts, 118 comments) for SDD's strengths and weaknesses, or the "broken rhythm" thread for human factors
 
 ---
 
@@ -203,6 +204,35 @@ These sessions survey spec-driven development tools. Read the index first, then 
 
 ---
 
+## Module 3: Verification & Governance (Sessions 19-21)
+
+### Session 19: Agentic TDD (Verification-First Development)
+**Read:** [[verification/agentic-tdd]]
+**Time:** ~15 min
+**Key takeaway:** Tests are the new prompts. By 2026, professional AI-assisted development is defined by "Verification over Execution." If an agent generates code without a failing test, it's creating "Technical Debt at Industrial Speed."
+
+**Action:** Pick a small feature. Write the test first (or have the agent write the test based on your spec), verify it fails, then command the agent: "Make this test pass." Do not provide any other implementation details.
+
+---
+
+### Session 20: Comprehension Debt & Cognitive Sustainability
+**Read:** [[verification/comprehension-debt]]
+**Time:** ~15 min
+**Key takeaway:** The "17% Decline" in human understanding. Comprehension debt is invisible — tests stay green but the system becomes a black box. Master the **1-5 Rule** and the **"Explain the PR" Protocol**.
+
+**Action:** Open your most recent AI-generated PR. Try to explain the "why" behind three specific architectural choices without looking at the code. If you can't, you have accumulated debt. Practice "Active Inquiry" by asking the agent to explain its reasoning for those choices.
+
+---
+
+### Session 21: ACI & Tool Engineering
+**Read:** [[context-engineering/tool-engineering]]
+**Time:** ~12 min
+**Key takeaway:** Poka-yoke tool design. You are no longer just a user of tools; you are an engineer of Agent-Computer Interfaces (ACI). Absolute paths, structured schemas, and deterministic feedback loops reduce agent errors by 40%+.
+
+**Action:** Audit one MCP server or tool you use. Is the schema overly complex? Are paths relative? Draft a "Poka-yoke" version of one tool definition that makes it structurally impossible for the agent to use it incorrectly.
+
+---
+
 ## Summary
 
 | Module | Sessions | Total Time | Focus |
@@ -217,9 +247,12 @@ These sessions survey spec-driven development tools. Read the index first, then 
 | Single & Multi-Agent | 14-15 | ~30 min | Core reasoning loops + coordination |
 | Autonomy & Production | 16-17 | ~25 min | Choosing the right level + real-world lessons |
 | AP Sources & Review | 18 | ~8 min | Pick your next deep reads |
-| **Total** | **18 sessions** | **~3.5 hours** | |
+| **3: Verification & Gov** | | | |
+| TDD & Comprehension | 19-20 | ~30 min | Verification-first + Cognitive debt |
+| ACI & Tool Eng | 21 | ~12 min | Mistake-proofing agent tools |
+| **Total** | **21 sessions** | **~4.2 hours** | |
 
-At one session per day, you'll finish in about 2.5 weeks. At two per day, under 10 days.
+At one session per day, you'll finish in about 3 weeks. At two per day, under 11 days.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
-last_updated: 2026-04-02
-last_read: null
-status: unread
+last_updated: 2026-04-06
+last_read: 2026-04-06
+status: read
 ---
 
 # The Instruction Layer
@@ -77,6 +77,30 @@ The key principle: context should be loaded when it's relevant, not pre-loaded b
 Anthropic's documentation notes that system prompts already contain around 50 instructions by the time you account for tool descriptions, formatting guidance, and core behavioral rules. Models can reliably follow approximately this many instructions before degradation sets in.
 
 Every instruction you add competes for attention with every other instruction. This isn't a theoretical concern — at high instruction counts, models start dropping rules inconsistently. The ceiling forces prioritization: if you're writing instruction 51, something else should come out.
+
+---
+
+## A Taxonomy of Context Types
+
+Birgitta Boeckeler's expanded analysis on Martin Fowler's site (March 2026) introduced a useful taxonomy for context in coding agents:
+
+**Reusable prompts** come in two forms: *instructions* (directives for specific tasks, like "Write E2E tests following X pattern") and *guidance* (general conventions, like "Keep tests independent"). Instructions are task-scoped; guidance is project-scoped.
+
+**Context interfaces** describe how agents access additional information beyond what's always loaded: built-in tools (bash, file search), MCP Servers (custom programs providing API access), and skills (on-demand resources loaded when relevant).
+
+**Decision control** varies across these types. The LLM decides when to load context (skills), humans trigger it manually (slash commands), or software triggers it deterministically (hooks). Understanding who decides what context to load is as important as the content itself.
+
+Boeckeler adds an important caution: despite the word "engineering," context engineering is probabilistic. "Ultimately this is not really engineering" — it increases the odds of useful results but cannot guarantee specific outcomes. This isn't a reason to avoid rigor, but it sets appropriate expectations: context engineering is more like experimental design than mechanical engineering.
+
+---
+
+## April 2026 Addendum
+
+### The `CONSTITUTION.md` Standard
+Popularized by GitHub Spec Kit, this file has become the industry standard for the "highest tier" of the instruction hierarchy. It defines non-negotiable project rules (e.g., "Always use TypeScript," "Security must follow OWASP") that AI agents must enforce across all implementation tasks. It acts as the immutable "governance layer" for the project.
+
+### Security: Token Democracy
+At RSA 2026, industry leaders identified the **context window** as the true security perimeter. The problem of "Token Democracy"—where LLMs treat system prompts, user input, and untrusted retrieved data with equal weight—makes every token a potential attack vector. Modern instruction layers now include explicit "boundary enforcement" rules to prevent agents from being "talked into" ignoring core safety or architectural constraints by malicious data in the context.
 
 ---
 

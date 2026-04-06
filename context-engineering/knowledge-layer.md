@@ -1,7 +1,7 @@
 ---
-last_updated: 2026-04-02
-last_read: null
-status: unread
+last_updated: 2026-04-06
+last_read: 2026-04-06
+status: read
 ---
 
 # The Knowledge Layer: RAG, Retrieval, and Just-in-Time Loading
@@ -73,6 +73,14 @@ This is progressive disclosure applied to knowledge — the same principle that 
 The practical implication: design your tool interfaces so retrieval is cheap and fast. If calling a search tool is slow or unreliable, the model will hit friction every time it needs to look something up, and you'll be tempted to fall back to front-loading context to compensate.
 
 **Cursor's dynamic context discovery.** Cursor published their implementation of this pattern in detail (January 2026, discussed on HN). Their approach uses five techniques: (1) long tool outputs are written to files rather than truncated, letting agents use `tail` or `grep` to retrieve what they need progressively; (2) when context windows fill and summarization occurs, agents reference saved chat history files to recover lost details; (3) skill descriptions are listed minimally, with agents discovering full details via search when relevant; (4) MCP tool descriptions sync to folders by server, with agents seeing only names initially — this reduced token usage by 46.9% in A/B tests; (5) terminal outputs are written to the filesystem so agents can grep specific results rather than consuming raw output. The common thread: write everything to disk, load only what's needed. This is just-in-time loading as a fully implemented product feature, not a theoretical pattern.
+
+## April 2026 Addendum
+
+### Agentic RAG and Autonomous Retrieval
+Traditional RAG has evolved into **Agentic RAG**. Instead of a fixed search triggered by software, the AI agent now assesses whether it has enough information to proceed and autonomously decides *when* and *where* to retrieve more data. This reduces context pollution by only fetching information when the model confirms a knowledge gap.
+
+### Dynamic Context Injection (DCI)
+DCI is the pattern of automatically injecting real-time environmental signals (e.g., a customer's current subscription status, current server load, or the latest API schema version) into the context window just before a critical reasoning step. This ensures the model is grounded in the most current reality, rather than relying on potentially stale information from the start of the session.
 
 ## Anti-Patterns
 

@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-04-06
 last_read: null
 status: unread
 ---
@@ -33,8 +33,8 @@ Martin Fowler's team (Thoughtworks) identifies three levels of spec-driven matur
 
 | Level | Description | Tools at this level |
 |-------|-------------|---------------------|
-| **Spec-first** | Spec written upfront, guides AI, then often becomes stale | Kiro, Spec Kit, OpenSpec, MetaGPT, GPT Pilot, Smol Developer, Factory Droids |
-| **Spec-anchored** | Spec persists and evolves alongside code as living documentation | Augment Intent |
+| **Spec-first** | Spec written upfront, guides AI, then often becomes stale | Kiro, Spec Kit, OpenSpec, MetaGPT, GPT Pilot, Smol Developer, Factory Droids, Traycer |
+| **Spec-anchored** | Spec persists and evolves alongside code as living documentation | Augment Intent, Intent |
 | **Spec-as-source** | Spec IS the source -- humans maintain specs, never edit generated code | Tessl |
 
 ## Categories
@@ -45,6 +45,8 @@ Martin Fowler's team (Thoughtworks) identifies three levels of spec-driven matur
 - [Tessl](tessl.md) -- Bidirectional spec-code sync with a 10k+ library Spec Registry
 - [OpenSpec](openspec.md) -- Universal standard across 21+ AI tools, brownfield-first
 - [Augment Intent](augment-intent.md) -- Living specs with multi-agent orchestration (Coordinator/Implementor/Verifier)
+- **Intent** -- Standalone desktop workspace featuring bidirectional sync to prevent spec drift.
+- **Traycer** -- VS Code extension that manage "mini-specs" and conducts agent interviews for edge cases.
 
 ### Multi-Agent Spec Frameworks
 - [MetaGPT / MGX](metagpt.md) -- Simulates a software company with PM, Architect, and Engineer agents

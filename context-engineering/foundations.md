@@ -1,7 +1,7 @@
 ---
-last_updated: 2026-04-02
-last_read: null
-status: unread
+last_updated: 2026-04-06
+last_read: 2026-04-06
+status: read
 ---
 
 # Foundations of Context Engineering
@@ -20,7 +20,7 @@ Andrej Karpathy put it cleanly in a June 2025 post: the LLM is a CPU, the contex
 
 Tobi Lutke (Shopify CEO) described it as "the art of providing all the context for the task to be plausibly solvable by the LLM." That's a useful definition: your job is not to write clever instructions, it's to make the task solvable in the first place.
 
-Simon Willison noted that the term stuck partly because its inferred meaning is much closer to the actual discipline than "prompt engineering" — a phrase that people frequently dismiss as "a laughably pretentious term for typing things into a chatbot." Context engineering signals that there's real engineering work involved in deciding what information goes into a model's working memory.
+Simon Willison noted that the term stuck partly because its inferred meaning is much closer to the intended meaning than "prompt engineering" ever was. Context engineering signals that there's real engineering work involved in deciding what information goes into a model's working memory.
 
 The practical implication: a production system isn't a prompt. It's a dynamic assembly of system prompts, conversation history, tool definitions, tool results, retrieved documents, memory, and examples — all curated for the specific task at hand.
 
@@ -111,5 +111,13 @@ Context engineering is the foundational discipline for building production AI sy
 **The 2026 inflection point.** Context engineering went from a niche concern to the core discipline of AI engineering in under a year. QCon London 2026 featured a dedicated talk on "Building the Knowledge Engine AI Agents Need." Agentic Conf Hamburg ran sessions on applying these principles to real codebases. Multiple "state of" reports (SwirlAI, Towards AI, BrightCoding) published 2026 retrospectives documenting how teams adopted these patterns in production. The foundational concepts laid out in mid-2025 by Karpathy, Anthropic, and others are now mainstream engineering practice — not emerging theory.
 
 ---
+
+## April 2026 Addendum
+
+### The Rise of the "Context Architect"
+By early 2026, the industry shifted from "prompt whispering" to **Context Architecture**. The role is no longer about how to phrase a single request, but how to design the end-to-end information environment—the "briefing document"—that an AI uses to reason. This involves managing five distinct context types: system instructions, tool definitions, retrieved documents (RAG), conversation history, and real-time environmental signals.
+
+### The "Grep Tax" and Efficiency
+Research in 2026 (notably by Damon McMillan) highlighted the **"Grep Tax"**—the finding that compacting context doesn't always mean faster processing. Frontier models often perform better with structured, file-native context (using Markdown headers and semantic tagging) rather than heavily compressed or "flattened" text.
 
 For sources and further reading, see [sources.md](./sources.md).

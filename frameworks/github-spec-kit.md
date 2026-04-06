@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-04-04
 last_read: null
 status: unread
 ---
@@ -24,7 +24,7 @@ The workflow follows a cycle: **Constitution -> Specify -> Plan -> Tasks**. Each
 ## Pros
 
 - **Agent-agnostic** -- Works with Copilot, Claude Code, Gemini CLI, Cursor, or any AI tool that can read markdown
-- **Massively popular** -- 72k+ GitHub stars, 110+ releases, strong community
+- **Massively popular** -- 84.7k+ GitHub stars, 136+ releases, supports 14+ AI agent platforms, strong community
 - **Open source** -- Full transparency, community contributions, no vendor lock-in
 - **Constitution concept** -- Immutable project principles that specs can't violate is a powerful governance mechanism
 - **Git-native** -- Each spec gets its own branch, making spec evolution trackable and reviewable
