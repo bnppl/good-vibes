@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-04-12
 last_read: null
 status: unread
 ---
@@ -61,7 +61,11 @@ MCP provides both tools (actions the model can take) and resources (data the mod
 
 ## The Tool Selection Problem
 
-Models struggle with large tool sets. Once you have 20 or more tools, you start seeing predictable failure modes:
+Models struggle with large tool sets. Once you have 20 or more tools, you start seeing predictable failure modes.
+
+**(New — April 12 research)** The numbers are now more concrete. The SwirlAI "State of Context Engineering in 2026" report cites OpenAI's recommendation: **fewer than 20 tools per agent, with accuracy degrading past 10.** The token cost alone is significant — a single complex JSON schema consumes 500+ tokens, so 90 tools burn 50,000+ tokens before any user interaction even begins. This reframes the tool selection problem as partly a context budget problem: large tool sets don't just confuse the model, they consume the context window that should be available for actual work.
+
+Predictable failure modes:
 
 - **Misrouting**: the model picks a plausible-sounding tool instead of the right one.
 - **Hallucination**: the model invents a tool name that doesn't exist.

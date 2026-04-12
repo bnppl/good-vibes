@@ -4,7 +4,9 @@
 
 **Reading order matters.** The context engineering guide builds on itself — foundations first, then layers, then the deep dive. The frameworks section is modular and can be read in any order after Session 6.
 
-**What's new (April 4, 2026):** Major updates across 5 files. New: harness engineering as a discipline (OpenAI 1M-line zero-manual-code system, Anthropic's Generator-Evaluator architecture), LangChain's three-tier compression and autonomous context compression, Addy Osmani's multi-agent taxonomy and "comprehension debt" concept, ClickHouse's production case study (700 PRs, skill amplification), Claude Code auto mode, MDD parallel warning for SDD, and the SDD backlash thread (85 comments). 10 new annotated sources added.
+**What's new (April 12, 2026):** Research update across 7 files. New content marked with **(New — April 12 research)** throughout. Key additions: Agentic Engine Optimization / AEO (Osmani — structuring docs for AI agents), LangChain's four multi-agent architecture patterns with context trade-offs, parallel agent limit (>5 agents = diminishing returns), LangChain's continual learning framework (model/harness/context layers), Agent Skills format as industry standard (adopted by OpenAI, Google, GitHub, Cursor), Marc Brooker's "SDD Isn't Waterfall" rebuttal, tool count constraints (OpenAI: <20 tools, accuracy degrades past 10), JetBrains Central as first IDE-vendor agent orchestration layer. 9 new annotated sources + 5 new HN threads added.
+
+**Previous update (April 4, 2026):** Harness engineering as a discipline, LangChain's three-tier compression and autonomous context compression, Osmani's multi-agent taxonomy and "comprehension debt," ClickHouse's production case study (700 PRs, skill amplification), Claude Code auto mode, MDD parallel warning for SDD, and the SDD backlash thread. 10 annotated sources added.
 
 ---
 
@@ -22,7 +24,7 @@
 ### Session 2: The Instruction Layer ✅
 **Read:** [[context-engineering/instruction-layer]]
 **Time:** ~12 min (~1,500 words)
-**Key takeaway:** The ~50 instruction ceiling, and why examples beat rules. **New:** Boeckeler's taxonomy of context types (reusable prompts vs. context interfaces) and decision control (who decides what context to load). The important caution: context engineering is probabilistic, "not really engineering" — it increases odds but can't guarantee outcomes.
+**Key takeaway:** The ~50 instruction ceiling, and why examples beat rules. **New:** Boeckeler's taxonomy of context types (reusable prompts vs. context interfaces) and decision control (who decides what context to load). The important caution: context engineering is probabilistic, "not really engineering" — it increases odds but can't guarantee outcomes. **New (April 12):** Agent Skills format (Anthropic, Dec 2025) has become the industry standard for progressive disclosure — adopted by OpenAI, Google, GitHub, and Cursor within weeks. ~80 tokens at discovery, 275-8K on activation. Worth re-reading the new section.
 
 **Action:** If you have a CLAUDE.md, .cursorrules, or AGENTS.md file in any project, open it and count the instructions. Are you over 50? Flag 3 that could be cut or moved to progressive disclosure. If you don't have one yet, draft 5 rules you'd want in one for your main project.
 
@@ -41,8 +43,8 @@
 
 ### Session 4: The Tool Layer
 **Read:** [[context-engineering/tool-layer]]
-**Time:** ~11 min (~1,350 words)
-**Key takeaway:** Tool descriptions are instructions. Mask, don't remove. **New:** MCP servers can consume tens of thousands of tokens just for tool schemas before any work begins (Apideck's analysis, TL;DR Dev March 2026). Stripe's Toolshed (500+ tools) shows the solution at scale is dynamic tool loading, not exposing everything.
+**Time:** ~12 min (~1,500 words)
+**Key takeaway:** Tool descriptions are instructions. Mask, don't remove. **New:** MCP servers can consume tens of thousands of tokens just for tool schemas before any work begins (Apideck's analysis, TL;DR Dev March 2026). Stripe's Toolshed (500+ tools) shows the solution at scale is dynamic tool loading, not exposing everything. **New (April 12):** Hard numbers on tool count constraints — OpenAI recommends <20 tools per agent, accuracy degrades past 10, and a single complex JSON schema consumes 500+ tokens (90 tools = 50K tokens before any work begins).
 
 **Action:** List the MCP servers or tools you have configured in your coding agent. Are any overlapping? Are any returning large outputs that could be truncated? Roughly estimate how many tokens your tool definitions alone consume.
 
@@ -50,17 +52,17 @@
 
 ### Session 5: The Memory Layer
 **Read:** [[context-engineering/memory-layer]]
-**Time:** ~11 min (~1,400 words)
-**Key takeaway:** Structured belief-updates beat append-only logs. Memory is a claim about the past, not the present. **New:** Self-improving agents use episodic memory as a feedback loop — recording what worked and what didn't, then modifying their own instruction files based on those episodes.
+**Time:** ~14 min (~1,700 words)
+**Key takeaway:** Structured belief-updates beat append-only logs. Memory is a claim about the past, not the present. **New:** Self-improving agents use episodic memory as a feedback loop. **New (April 12):** LangChain's continual learning framework — three layers of agent improvement (model, harness, context), all powered by traces. The harness layer (optimizing tools and orchestration via execution logs) is the most underutilized and immediately actionable.
 
 **Action:** Check the memory system in a tool you use (e.g., Claude Code's MEMORY.md, ChatGPT's memory). Is it storing things it shouldn't? Is anything stale? Clean up one thing.
 
 ---
 
-### Session 6: The Orchestration Layer
+### Session 6: The Orchestration Layer ✅
 **Read:** [[context-engineering/orchestration-layer]]
-**Time:** ~18 min (~2,200 words)
-**Key takeaway:** Observation masking beats LLM summarization. The 35-minute degradation curve means you should break work into sub-tasks. **New (April 4):** Harness engineering as a formal discipline (OpenAI's 1M-line zero-manual-code system, Anthropic's Generator-Evaluator pattern). LangChain's three-tier compression and autonomous context compression. "Context anxiety" — some models prematurely wrap up work as context fills; context resets fix this. Osmani's three-pattern taxonomy for multi-agent coordination: subagents, agent teams, orchestration at scale.
+**Time:** ~22 min (~2,700 words)
+**Key takeaway:** Observation masking beats LLM summarization. The 35-minute degradation curve means you should break work into sub-tasks. **New (April 4):** Harness engineering as a formal discipline (OpenAI's 1M-line zero-manual-code system, Anthropic's Generator-Evaluator pattern). LangChain's three-tier compression and autonomous context compression. "Context anxiety" — some models prematurely wrap up work as context fills; context resets fix this. Osmani's three-pattern taxonomy for multi-agent coordination: subagents, agent teams, orchestration at scale. **New (April 12):** LangChain's four-pattern multi-agent taxonomy (Subagents/Skills/Handoffs/Router) with explicit context management trade-offs per pattern. Parallel agent limit: beyond 5, coordination costs exceed benefits. Human-curated AGENTS.md outperforms LLM-generated. LangChain formalizes "Agent = Model + Harness" with 5-component taxonomy and the Ralph Loop Pattern.
 
 **Action:** Think about your last long coding session with an AI agent. Did quality degrade toward the end? Estimate how long the session was. Next time, plan a compaction break or fresh agent at the 30-minute mark.
 
@@ -88,7 +90,7 @@ Identify the weakest link. That's your first improvement.
 ### Session 8: Agentic Development Deep Dive — The SDD Debate & Production Reality
 **Read:** [[context-engineering/agentic-dev]] — from "Spec-Driven Development" through the end (second half)
 **Time:** ~20 min (~2,400 words)
-**Key takeaway:** The SDD debate is the most active discussion in the space right now, and the backlash is crystallizing. Key positions: the **SDD Triangle**, **"code IS spec"** counterargument, **MDD parallel warning** (Boeckeler: spec-as-source risks combining MDD's inflexibility with LLM non-determinism), and the **85-comment backlash thread** calling SDD frameworks "technical masturbation." **New (April 4):** ClickHouse's production case study (700 PRs, skill amplification), comprehension debt (Anthropic: 17% lower comprehension with AI), and Claude Code auto mode (93% auto-approval, two-stage classification).
+**Key takeaway:** The SDD debate is the most active discussion in the space right now, and the backlash is crystallizing. Key positions: the **SDD Triangle**, **"code IS spec"** counterargument, **MDD parallel warning** (Boeckeler: spec-as-source risks combining MDD's inflexibility with LLM non-determinism), and the **85-comment backlash thread** calling SDD frameworks "technical masturbation." **New (April 4):** ClickHouse's production case study (700 PRs, skill amplification), comprehension debt (Anthropic: 17% lower comprehension with AI), and Claude Code auto mode (93% auto-approval, two-stage classification). **New (April 12):** Marc Brooker's "SDD Isn't Waterfall" rebuttal — specs aren't pulled "up-front" but pulled "up," living artifacts upstream of implementation. The strongest counterargument to the waterfall critique to date.
 
 **Action:** Where do you fall in the debate? Think about your last three projects:
 - Would a spec have helped or been overhead for each?
@@ -226,8 +228,8 @@ These sessions survey spec-driven development tools. Read the index first, then 
 
 ### Session 21: ACI & Tool Engineering
 **Read:** [[context-engineering/tool-engineering]]
-**Time:** ~12 min
-**Key takeaway:** Poka-yoke tool design. You are no longer just a user of tools; you are an engineer of Agent-Computer Interfaces (ACI). Absolute paths, structured schemas, and deterministic feedback loops reduce agent errors by 40%+.
+**Time:** ~15 min
+**Key takeaway:** Poka-yoke tool design. You are no longer just a user of tools; you are an engineer of Agent-Computer Interfaces (ACI). Absolute paths, structured schemas, and deterministic feedback loops reduce agent errors by 40%+. **New (April 12):** Agentic Engine Optimization (AEO) — Osmani's framework for structuring documentation so AI agents can consume it efficiently. Five techniques: llms.txt, skill.md, token-efficient pages (15K-25K), clean Markdown. Identified 9 distinct agent HTTP fingerprints. Upstream context engineering for the docs your agents read.
 
 **Action:** Audit one MCP server or tool you use. Is the schema overly complex? Are paths relative? Draft a "Poka-yoke" version of one tool definition that makes it structurally impossible for the agent to use it incorrectly.
 

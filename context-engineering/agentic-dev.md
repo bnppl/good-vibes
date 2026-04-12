@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-12
 last_read: null
 status: unread
 ---
@@ -87,6 +87,8 @@ A sharper version of the core criticism came from Gabriel Gonzalez (covered in T
 **The MDD parallel.** Birgitta Boeckeler's analysis on Martin Fowler's site (March 2026) draws an important warning from Model-Driven Development (MDD) — a previous attempt to make specifications the source of truth. MDD failed because models were inflexible and the abstraction layer couldn't handle edge cases. Boeckeler warns that spec-as-source approaches risk combining MDD's inflexibility with LLM non-determinism — "a potentially worse outcome than either alone." She also documents the "control illusion": despite elaborate prompts and checklists, agents frequently ignore instructions or over-interpret requirements. This doesn't invalidate SDD, but it sets the bar for what spec-as-source tools like Tessl need to overcome.
 
 **The SDD backlash.** By March 2026, the criticism sharpened. An r/ChatGPTCoding thread titled "Spec-driven development for AI is a form of technical masturbation" (85 comments) captured growing frustration with over-engineered SDD frameworks, arguing that the ceremony of generating 8+ markdown files adds overhead without proportional benefit for most tasks. A parallel thread debated whether SDD should use a procedural orchestrator or an LLM — the meta-question of how much structure is too much.
+
+**(New — April 12 research)** Marc Brooker (VP/Distinguished Engineer, AWS) published a direct rebuttal: "Spec Driven Development Isn't Waterfall" (April 9, 2026). His key distinction: SDD isn't about pulling designs *up-front*, it's about pulling designs *up* — raising the abstraction from code to words. Specs are living artifacts *upstream* of implementation that remain synchronized through iterative refinement, not static documents thrown over a wall. The practical advantage: specs let agents operate independently for extended periods with clear direction, producing higher-quality code because they understand the bigger picture rather than individual prompts. Humans retain the **outer loop** — refining specs and resolving internally conflicting requirements through expertise. This framing directly addresses the waterfall criticism by positioning specs as iterative steering tools, not comprehensive upfront plans.
 
 The distinction isn't "use SDD or don't" — it's about matching the level of specification to the complexity of the task. A one-paragraph spec for a small feature is still spec-driven development. A 50-page requirements document for a two-hour task is waterfall cosplaying as modern practice.
 

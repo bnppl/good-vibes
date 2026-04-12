@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-12
 last_read: null
 status: unread
 ---
@@ -35,11 +35,28 @@ The **Model Context Protocol (MCP)**, governed by the Linux Foundation, has beco
 - **Discovery over Definition:** Agents should "discover" tools dynamically via an MCP server rather than having every tool defined in a static system prompt. This saves thousands of tokens and prevents "tool confusion."
 - **Context Caching for Tools:** Standardizing tool schemas allows providers to cache the tool-calling logic, reducing latency by 40%+.
 
+## Agentic Engine Optimization (AEO) **(New — April 12 research)**
+
+Addy Osmani introduced AEO (April 2026): the practice of structuring and serving technical content so AI coding agents can effectively consume it — analogous to how SEO optimizes for search engines. The key insight: "AI coding agents consume documentation fundamentally differently from how humans do." Unlike developers who browse pages over minutes, agents compress multi-page navigation into single HTTP requests. Traditional analytics (scroll depth, time-on-page) become invisible.
+
+**Five AEO techniques:**
+
+1. **Access Control** — Configure `robots.txt` to permit AI agent traffic
+2. **Discovery via `llms.txt`** — Create structured directories describing documentation, so agents know what's available without reading everything
+3. **Capability Signaling** — Use `skill.md` to declare what APIs actually accomplish (intent, not just interface)
+4. **Token Efficiency** — Keep pages under 15K–25K tokens. A single oversized document can consume an agent's entire usable context window, forcing truncation or fallback to hallucination
+5. **Content Formatting** — Serve clean Markdown with consistent heading hierarchies. Agents parse structure, not visual layout
+
+Osmani identified distinct HTTP fingerprints for nine major agents (Claude Code, Cursor, Cline, and others), revealing they operate with measurable behavioral signatures. This means documentation teams can track agent consumption patterns alongside human usage — and optimize for both audiences.
+
+AEO connects directly to context engineering: if the documentation your agent retrieves is token-bloated or poorly structured, you're wasting context budget before the agent even starts working. Optimizing the source material is upstream context engineering.
+
 ## Actionable Steps
 
 1. **Audit your ACI:** List every tool your coding agent uses. Which one fails most often?
 2. **Schema Lockdown:** Refine the JSON schema for that failing tool. Add `enum`s, `pattern`s, and `description`s that explicitly state "DO NOT use this tool for X."
 3. **Observation Masking:** Implement a wrapper that automatically summarizes large tool outputs before the agent sees them.
+4. **(New)** **Check your documentation's AEO readiness:** Does your project have an `llms.txt`? Are your docs under 25K tokens per page? Would an agent fetching your docs waste half its context window on boilerplate?
 
 ---
 

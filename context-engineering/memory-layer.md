@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-04-12
 last_read: null
 status: unread
 ---
@@ -55,6 +55,22 @@ Having memory is useless if you retrieve the wrong piece at the wrong time. Four
 **Always-loaded versus on-demand** is a design decision, not a retrieval strategy. Some memory belongs in context unconditionally — user preferences, project goals, active constraints. Other memory (past debugging sessions, prior feature work) should only enter context when relevant to the current task. Deciding which category each memory type falls into is part of schema design, not something to resolve at retrieval time.
 
 The staleness problem applies to all of it: memory is a claim about the past, not the present. "The API uses REST" was true when you recorded it. It may not be now. Before acting on a remembered fact, verify it against the current state. Treat memory as a starting point for investigation, not a substitute for it.
+
+## Continual Learning: The Three-Layer Framework **(New — April 12 research)**
+
+LangChain published a framework (early 2026) that reframes memory as part of a broader continual learning system. Rather than thinking about memory in isolation, they identify three layers where agents can improve over time:
+
+1. **Model layer** — updating weights through fine-tuning or reinforcement learning. The main risk is catastrophic forgetting: models degrade on previously learned tasks when trained on new ones. Expensive, slow, but high ceiling.
+
+2. **Harness layer** — optimizing the code, tools, and instructions that power the agent. Systems can analyze execution logs and use coding agents to suggest harness improvements (as demonstrated by "Meta-Harness" research). This is where context engineering improvements live — better prompts, better tool schemas, better compaction strategies.
+
+3. **Context layer** — updating external configuration (instructions, skills, memory files) that customizes the harness without changing its core code. Updates can happen offline (analyzing past traces) or in real-time as the agent works. This is what Claude Code's MEMORY.md and self-improving agents are already doing.
+
+The enabling infrastructure is **traces** — the full execution path of what an agent did. Traces power improvement at all three layers without requiring architectural changes.
+
+The practical insight: most teams focus exclusively on the model layer (waiting for better models) or the context layer (tweaking prompts). The harness layer — systematically analyzing execution logs to improve tooling and orchestration — is underutilized and immediately actionable. Different scaling levels apply: agent-level memory, user-level personalization, and organization-wide improvements can all operate simultaneously.
+
+---
 
 ## Anti-Patterns
 

@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-12
 last_read: 2026-04-06
 status: read
 ---
@@ -71,6 +71,12 @@ Birgitta Boeckeler's analysis on Martin Fowler's site documents how Claude Code 
 - **MCP Servers** — tool integrations that extend what the model can do
 
 The key principle: context should be loaded when it's relevant, not pre-loaded because it might be relevant.
+
+### Agent Skills: Progressive Disclosure as Industry Standard **(New — April 12 research)**
+
+Anthropic's Agent Skills format (released December 2025) has become the de facto standard for progressive disclosure in instruction design. The format uses tiered information loading: ~80 tokens at discovery (just the skill name and description), 275–8,000 tokens on activation (full instructions), and supporting reference materials loaded only during execution. This means a set of 17 skills costs only ~1,700 tokens in the always-on context — the full content loads only when relevant.
+
+The adoption signal is strong: OpenAI, Google, GitHub, and Cursor all adopted similar progressive disclosure patterns within weeks of the Skills format shipping (per SwirlAI "State of Context Engineering in 2026"). This convergence validates the core principle — instruction context should be loaded when relevant, not pre-loaded because it might be relevant — at an industry-wide scale.
 
 ### The ~50 Instruction Ceiling
 

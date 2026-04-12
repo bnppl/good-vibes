@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-12
 last_read: null
 status: unread
 ---
@@ -303,3 +303,100 @@ Most useful for: understanding how structural constraints substitute for prompti
 **[Show HN: Anvil – Desktop App for Spec Driven Development](https://news.ycombinator.com/item?id=47546925)** — 10 points. A desktop GUI approach to SDD, suggesting the space is diversifying beyond CLI tools. *(March 2026)*
 
 **[How do you cope with the broken rhythm of agentic coding?](https://news.ycombinator.com/item?id=47356614)** — 15 points. Human factors discussion about the cognitive cost of context-switching between directing agents and reviewing output. ClickHouse's case study echoes this: "intensive agent sessions are mentally exhausting." *(March 2026)*
+
+---
+
+## April 12 Research Update — New Sources
+
+**[Spec Driven Development Isn't Waterfall](https://brooker.co.za/blog/2026/04/09/waterfall-vs-spec.html)**
+Marc Brooker, AWS (April 9, 2026)
+
+Direct rebuttal to the "SDD is waterfall" criticism. Key distinction: specs aren't pulled "up-front" but pulled "up" — living artifacts upstream of implementation, synchronized through iterative refinement. Humans retain the outer loop of refining specs and resolving conflicts.
+
+Most useful for: the strongest counterargument to the waterfall critique.
+
+---
+
+**[Agentic Engine Optimization (AEO)](https://addyosmani.com/blog/agentic-engine-optimization/)**
+Addy Osmani (April 11, 2026)
+
+Introduces AEO: structuring documentation for AI agent consumption. Five techniques: robots.txt, llms.txt, skill.md, token-efficient pages (15K-25K), clean Markdown. Identified distinct HTTP fingerprints for 9 major coding agents. Upstream context engineering — fixing the source material.
+
+Most useful for: anyone maintaining documentation that agents consume.
+
+---
+
+**[Your Parallel Agent Limit](https://addyosmani.com/blog/parallel-agent-limit/)**
+Addy Osmani (April 7, 2026)
+
+Beyond 5 parallel agents, coordination costs exceed benefits. Human-curated AGENTS.md outperforms LLM-generated versions. The principle: "Delegate the tasks, not the judgment."
+
+Most useful for: calibrating multi-agent workflows.
+
+---
+
+**[How Coding Agents Work](https://simonwillison.net/guides/agentic-engineering-patterns/how-coding-agents-work/)**
+Simon Willison, Agentic Engineering Patterns Guide (2026)
+
+A comprehensive guide to coding agent architecture. Covers the fundamental loop (LLM + system prompt + tools), token caching strategies, and tool implementation patterns. Clear, accessible treatment of concepts the rest of the field discusses in more academic terms.
+
+Most useful for: newcomers to agent architecture who want a clear, practical explanation.
+
+---
+
+**[Choosing the Right Multi-Agent Architecture](https://blog.langchain.com/choosing-the-right-multi-agent-architecture/)**
+LangChain (January 2026)
+
+Four-pattern taxonomy — Subagents, Skills, Handoffs, Router — each with explicit context management trade-offs. Includes a selection framework for matching requirements to patterns.
+
+Most useful for: choosing between multi-agent architectures based on context constraints.
+
+---
+
+**[Continual Learning for AI Agents](https://blog.langchain.com/continual-learning-for-ai-agents/)**
+LangChain (early 2026)
+
+Three-layer learning framework: model (fine-tuning), harness (code/tools optimization via execution logs), context (instructions/skills/memory). Traces power all three. The harness layer is the most underutilized opportunity.
+
+Most useful for: understanding where to invest in agent improvement beyond better prompts.
+
+---
+
+**[The Anatomy of an Agent Harness](https://blog.langchain.com/the-anatomy-of-an-agent-harness/)**
+LangChain (2026)
+
+Formalizes "Agent = Model + Harness." Identifies five components: system prompts, tools/skills, infrastructure, orchestration logic, and hooks/middleware. Documents the Ralph Loop Pattern and warns about harness overfitting. Key claim: "Harnesses today are largely delivery mechanisms for good context engineering."
+
+Most useful for: understanding what "harness engineering" actually means in practice.
+
+---
+
+**[JetBrains Central: An Open System for Agentic Software Development](https://blog.jetbrains.com/blog/2026/03/24/introducing-jetbrains-central-an-open-system-for-agentic-software-development/)**
+JetBrains (March 24, 2026)
+
+First major IDE vendor shipping a centralized agent orchestration layer. Semantic layer aggregates information from code, architecture, runtime behavior, and organizational knowledge. Includes Air App (workspace organization) and Air Team (human-agent coordination across Slack/Atlassian). Only 13% of developers currently use AI across the entire development lifecycle.
+
+Most useful for: understanding where IDE-level agent orchestration is heading.
+
+---
+
+**[Building a C Compiler with a Team of Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler-parallel-claudes)**
+Anthropic (February 5, 2026)
+
+Assigned Opus 4.6 agent teams to build a C compiler with minimal oversight. Insights about autonomous software development, parallel agent coordination, and the limits of unsupervised multi-agent work.
+
+Most useful for: understanding what's possible (and what breaks) with fully autonomous agent teams.
+
+---
+
+### Hacker News — April 12 Update
+
+**[Spec Driven Development Isn't Waterfall](https://news.ycombinator.com/item?id=47709171)** — 3 points, 3 comments. Marc Brooker's rebuttal. Early discussion. *(April 2026)*
+
+**[The Landscape of Agentic Coding](https://news.ycombinator.com/item?id=47691012)** — 4 points. "The middle agentic path" — argues against both the vibe coding extreme and the heavy-SDD extreme. *(April 2026)*
+
+**[Three Months of Agentic Coding – My Experience](https://news.ycombinator.com/item?id=47641618)** — 4 points. Practitioner experience report covering the learning curve and practical patterns. *(April 2026)*
+
+**[Steergen: Single-Source Steering Docs for Spec-Driven Development](https://news.ycombinator.com/item?id=47683453)** — 1 point. New tool for generating steering docs from a single source. *(April 2026)*
+
+**[Using Spec-Driven Development with Claude Code](https://news.ycombinator.com/item?id=47703039)** — 3 points. Practical guide to SDD workflows in Claude Code specifically. *(April 2026)*

@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-04-12
 last_read: null
 status: unread
 ---
@@ -89,6 +89,31 @@ Addy Osmani published a useful taxonomy (March 2026) that maps to increasing sca
 
 The key finding: the bottleneck has shifted from code generation to verification and architectural oversight. Quality gates are non-negotiable — plan approval catches bad architecture early, hooks enforce automated checks, and human review remains the actual bottleneck.
 
+### LangChain's Four-Pattern Taxonomy **(New — April 12 research)**
+
+LangChain published a complementary taxonomy to Osmani's that maps multi-agent patterns to their specific **context management trade-offs**:
+
+1. **Subagents (centralized orchestration)** — A supervisor coordinates specialized subagents as tools. Subagents remain stateless, providing strong context isolation. Trade-off: isolation prevents context bloat but adds latency — results must flow back through the main agent for synthesis.
+
+2. **Skills (progressive disclosure)** — A single agent dynamically loads specialized prompts and knowledge on-demand. Trade-off: context accumulates in conversation history as skills are loaded, creating 40% efficiency gains on repeat requests but increasing token consumption over time.
+
+3. **Handoffs (state-driven transitions)** — The active agent changes based on conversation state via tool calling. More stateful than other patterns. Trade-off: context persists naturally across turns but requires careful state management to prevent drift.
+
+4. **Router (parallel dispatch)** — A routing layer classifies input, dispatches to specialized agents in parallel, and synthesizes results. Stateless design. Trade-off: consistent per-request performance but repeated routing overhead if conversation history is needed.
+
+| Requirement | Best pattern |
+|---|---|
+| Parallel execution + large context domains | Subagents |
+| Single agent, many specializations | Skills |
+| Sequential workflows with state | Handoffs |
+| Multi-source parallel queries | Router |
+
+### Parallel Agent Limits **(New — April 12 research)**
+
+Osmani's follow-up research (April 7, 2026) identified a practical ceiling: **beyond 5 parallel agents, coordination costs exceed benefits.** Key anti-patterns that compound at scale: vague specifications multiply errors across parallel runs (each agent independently misinterprets the same ambiguity), oversized teams lose more time to coordination than they gain from parallelism, and skipping verification treats impressive output as correct.
+
+A notable finding: **human-curated `AGENTS.md` files outperform LLM-generated versions.** Research showed LLM-generated instruction files marginally *reduced* agent success rates — likely because models produce plausible but imprecise guidance that subtly misdirects. The principle: "Delegate the tasks, not the judgment."
+
 ### When to Use Sub-Agents
 
 - The task has independent subtasks that don't share state
@@ -116,6 +141,8 @@ The "Harness" is the software scaffold that manages the agent's environment. Mod
 2.  **Sensors (Feedback):** Observing actions *after* they occur (e.g., via custom linters or test runners) to help the agent self-correct without human intervention.
 
 **OpenAI's structural constraints approach.** Their Codex harness enforces a rigid architectural model with each business domain divided into fixed layers, with strictly validated dependency directions. Custom linters and structural tests enforce these constraints mechanically, not through prompting. The approach was depth-first: break larger goals into smaller building blocks, prompt agents to construct those blocks, and use them to unlock more complex tasks.
+
+**(New — April 12 research)** LangChain formalized the equation: **Agent = Model + Harness.** Their anatomy identifies five harness components: (1) system prompts, (2) tools and skills (including MCPs), (3) infrastructure (filesystem, sandbox, browser), (4) orchestration logic (subagent spawning, handoffs, routing), and (5) hooks/middleware (compaction, continuation). They also documented the **Ralph Loop Pattern** — intercepting agent exit attempts and reinjecting prompts in clean context windows to force task continuation — and warned about **harness overfitting**: models post-trained with specific harnesses can struggle when tool logic changes, suggesting excessive coupling between training data and harness design.
 
 The harness engineering discipline is still crystallizing, but the consensus is clear: the engineering around the model matters as much as the model itself.
 
