@@ -4,7 +4,9 @@
 
 **Reading order matters.** The context engineering guide builds on itself — foundations first, then layers, then the deep dive. The frameworks section is modular and can be read in any order after Session 6.
 
-**What's new (April 12, 2026):** Research update across 7 files. New content marked with **(New — April 12 research)** throughout. Key additions: Agentic Engine Optimization / AEO (Osmani — structuring docs for AI agents), LangChain's four multi-agent architecture patterns with context trade-offs, parallel agent limit (>5 agents = diminishing returns), LangChain's continual learning framework (model/harness/context layers), Agent Skills format as industry standard (adopted by OpenAI, Google, GitHub, Cursor), Marc Brooker's "SDD Isn't Waterfall" rebuttal, tool count constraints (OpenAI: <20 tools, accuracy degrades past 10), JetBrains Central as first IDE-vendor agent orchestration layer. 9 new annotated sources + 5 new HN threads added.
+**What's new (April 27, 2026):** Module 4 added — **Cross-Session Verification** (8 sessions, S22–S29). Direct response to the cross-session regression problem: how to gain confidence AI-generated code is correct *without reading all of it*, and how to prevent a feature added in one agent session from silently breaking something built in a previous session. Covers BDD as the agent's contract surface, DDD bounded contexts as session boundaries, consumer-driven contracts (Pact + ACL), architectural fitness functions, mutation/property-based testing, and characterization tests + the verification handoff problem.
+
+**Previous update (April 12, 2026):** Research update across 7 files. New content marked with **(New — April 12 research)** throughout. Key additions: Agentic Engine Optimization / AEO (Osmani — structuring docs for AI agents), LangChain's four multi-agent architecture patterns with context trade-offs, parallel agent limit (>5 agents = diminishing returns), LangChain's continual learning framework (model/harness/context layers), Agent Skills format as industry standard (adopted by OpenAI, Google, GitHub, Cursor), Marc Brooker's "SDD Isn't Waterfall" rebuttal, tool count constraints (OpenAI: <20 tools, accuracy degrades past 10), JetBrains Central as first IDE-vendor agent orchestration layer. 9 new annotated sources + 5 new HN threads added.
 
 **Previous update (April 4, 2026):** Harness engineering as a discipline, LangChain's three-tier compression and autonomous context compression, Osmani's multi-agent taxonomy and "comprehension debt," ClickHouse's production case study (700 PRs, skill amplification), Claude Code auto mode, MDD parallel warning for SDD, and the SDD backlash thread. 10 annotated sources added.
 
@@ -235,6 +237,82 @@ These sessions survey spec-driven development tools. Read the index first, then 
 
 ---
 
+## Module 4: Cross-Session Verification (Sessions 22-29)
+
+Module 3 covered verification *within* a session — TDD, comprehension, ACI. Module 4 covers verification *across* sessions: the artifacts, contracts, and automated checks that catch regressions when one agent session breaks something a previous session built. The unifying claim: when reading the diff is no longer the load-bearing check, you need verification artifacts that fail loudly on their own.
+
+### Session 22: The Cross-Session Regression Problem
+**Read:** [[verification/cross-session-regression]]
+**Time:** ~13 min (~1,500 words)
+**Key takeaway:** Three failure shapes — **silent contract break** (interface compiles, behavior changes), **parallel re-implementation** (Session B doesn't find the existing utility, builds another), **invariant violation** (rule held in human memory, not in code). Reading the code doesn't scale because the broken caller, the duplicate utility, and the invariant are not in the diff. Context engineering raises the floor; verification installs the ceiling.
+
+**Action:** Pick a feature you built across multiple agent sessions in the last month. List three specific places where a future session could silently break it. Tag each with which failure shape applies, and whether your current test suite would catch it.
+
+---
+
+### Session 23: BDD for Agents
+**Read:** [[verification/bdd-for-agents]]
+**Time:** ~15 min (~1,800 words)
+**Key takeaway:** A Gherkin scenario does two jobs at once — the spec the *current* session writes against, and the regression net the *next* session can't break. BDD pins behavior at the **feature boundary** (where cross-session damage actually accrues), not the unit boundary. Living documentation amortized across sessions is the lowest-cost form of cross-session memory available in 2026.
+
+**Action:** Pick a recently-agent-built feature. After the fact, write 3 Gherkin scenarios capturing the intended behavior. Open a fresh agent session, give it only the scenarios, ask it to extend the feature. Note where the agent's interpretation diverges from yours.
+
+---
+
+### Session 24: DDD Bounded Contexts as Session Boundaries
+**Read:** [[verification/ddd-boundaries]]
+**Time:** ~17 min (~2,000 words)
+**Key takeaway:** **One bounded context, one agent session, one blast radius.** Context maps are what survives between sessions. Aggregates encode invariants the agent literally cannot violate. Ubiquitous language is the highest-ROI context-engineering primitive — when the domain model, code, scenarios, and human conversation all use the same words, the agent has no room to invent synonyms. Conway's law for agent topology: codebases mirror the session boundaries used to build them, whether you choose them or not.
+
+**Action:** Sketch a context map for a real codebase (even informally). Identify two places where different agent sessions touched the same area. Were those areas in the same context (good) or crossing contexts (where you now want an ACL or contract)?
+
+---
+
+### Session 25: Anti-Corruption Layers & Consumer-Driven Contracts
+**Read:** [[verification/contract-testing]]
+**Time:** ~16 min (~1,900 words)
+**Key takeaway:** The most direct mechanical answer to the cross-session regression problem. Session A built the provider on Monday; Session B builds a new consumer on Friday; Session B's contract is the trip-wire that catches whatever Session A assumed but never enforced. Pact for services; OpenAPI/schema-first as the lighter-weight version. PactFlow's MCP server (2026) makes this loop agent-native. Contracts are the only technique that fails the *consumer's* CI when the *provider* drifts.
+
+**Action:** Pick two modules in your project that one agent built and another touched later. Write one consumer-driven contract test (or generate an OpenAPI schema and add a CI check). Wire it into CI.
+
+---
+
+### Session 26: Architectural Fitness Functions
+**Read:** [[verification/fitness-functions]]
+**Time:** ~17 min (~2,000 words)
+**Key takeaway:** Neal Ford's *Building Evolutionary Architectures* is the primary citation. Fitness functions are the only technique that catches the **invariant violation** failure shape directly: they move human-memory rules into CI, where the agent bounces off them. Three principles: agents will silently violate rules you hold in your head; fitness functions are codified institutional memory; humans author the rules, agents enforce them. Run them in pre-commit / pre-tool hooks where possible — CI is too late.
+
+**Action:** Write one ArchUnit-style rule for your project (or the equivalent in your language). Pick one you're tired of catching in PR review. Add a `WHY` comment linking to the ADR. Watch the next agent session bounce off it.
+
+---
+
+### Session 27: Test-the-Tests — Mutation & Property-Based Testing
+**Read:** [[verification/test-the-tests]]
+**Time:** ~15 min (~1,800 words)
+**Key takeaway:** When the agent says "I added tests," do they catch anything? **Mutation testing** measures kill rate — the actual coverage metric, not line coverage. **Property-based testing** covers the input spaces the agent didn't enumerate. Both matter more in agentic dev because the test author and the code author are the same untrusted party. Anthropic's Red Team writeup (2026) shows agents now write surprisingly strong property tests *when asked specifically*; the arXiv NeurIPS paper found 56% of agent-generated bug reports valid across 100 Python packages.
+
+**Action:** Run a mutation tester on a file an agent recently touched. The surviving mutants are the gaps the agent left. Then write one property-based test for a pure function — note the inputs Hypothesis generates that you'd never have enumerated.
+
+---
+
+### Session 28: Characterization Tests & The Handoff Problem
+**Read:** [[verification/characterization-and-handoff]]
+**Time:** ~17 min (~2,100 words)
+**Key takeaway:** Two problems, same answer. Feathers-style characterization tests pin behavior before agents touch legacy: the agent's first task is "write tests until you can describe what this code does," only then modify. The handoff problem: verification artifacts are useless if the next session doesn't discover them — co-locate, point at them from `AGENTS.md`/`CLAUDE.md`, and use CI as backstop. Vercel's Jan 2026 eval: an 8KB AGENTS.md hit 100% pass on Next.js 16 API tasks vs. 79% for skills. Verification and context engineering are two halves of the same problem.
+
+**Action:** Identify a legacy file you'd be afraid to let an agent touch. In one session, generate characterization tests with the agent. In a *fresh* session, give the agent only the tests and `AGENTS.md` and ask it to refactor. Each gap the second session reveals is a fitness function, contract, or scenario you should add.
+
+---
+
+### Session 29: Module 4 Sources & Deep Reads
+**Read:** [[verification/sources]]
+**Time:** ~10 min (~2,800 words — reference, skim)
+**Key takeaway:** Tiered bibliography. **Foundational books:** Ford *Building Evolutionary Architectures*, Adzic *Specification by Example*, Evans / Vernon DDD, Feathers *Working Effectively with Legacy Code*, Pact docs. **Essential 2025–2026:** Vercel's AGENTS.md eval, Golovko's DDD-for-agentic-codebases talk, Anthropic's PBT writeup, the arXiv NeurIPS PBT paper, PactFlow's MCP server, Castro's ADR-to-fitness-function pipeline. Plus Strong References, April 2026 Updates, and high-signal HN threads.
+
+**Action:** Pick one Essential entry to read this week. If you only read one: Vercel's AGENTS.md eval — empirical, short, and the strongest argument for the verification handoff pattern.
+
+---
+
 ## Summary
 
 | Module | Sessions | Total Time | Focus |
@@ -249,12 +327,17 @@ These sessions survey spec-driven development tools. Read the index first, then 
 | Single & Multi-Agent | 14-15 | ~30 min | Core reasoning loops + coordination |
 | Autonomy & Production | 16-17 | ~25 min | Choosing the right level + real-world lessons |
 | AP Sources & Review | 18 | ~8 min | Pick your next deep reads |
-| **3: Verification & Gov** | | | |
+| **3: Per-Session Verification** | | | |
 | TDD & Comprehension | 19-20 | ~30 min | Verification-first + Cognitive debt |
 | ACI & Tool Eng | 21 | ~12 min | Mistake-proofing agent tools |
-| **Total** | **21 sessions** | **~4.2 hours** | |
+| **4: Cross-Session Verification** | | | |
+| The problem + BDD + DDD | 22-24 | ~45 min | Failure shapes, scenarios as contracts, contexts as boundaries |
+| Contracts + Fitness Functions | 25-26 | ~33 min | Catching breaks at module boundaries; codifying invariants in CI |
+| Test-the-tests + Handoff | 27-28 | ~32 min | Verifying the safety net is real; making it discoverable to the next session |
+| M4 Sources | 29 | ~10 min | Bibliography |
+| **Total** | **29 sessions** | **~6.2 hours** | |
 
-At one session per day, you'll finish in about 3 weeks. At two per day, under 11 days.
+At one session per day, you'll finish in about 4 weeks. At two per day, about 2 weeks.
 
 ---
 
