@@ -1,4 +1,6 @@
 ---
+title: Agent Architecture Patterns
+nav_order: 3
 last_updated: 2026-04-03
 last_read: null
 status: unread

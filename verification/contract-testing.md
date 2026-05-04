@@ -4,13 +4,13 @@ last_read: null
 status: unread
 ---
 
-**Contract testing** is the most direct mechanical answer to the cross-session regression problem from [[cross-session-regression]]. When two sessions touch opposite sides of a module or service boundary — Session A on the provider, Session B on the consumer — the only artifact that can catch a silent break before merge is a contract that *both sides verify against*. Type checks pass. Unit tests pass. Each session's CI pipeline lights up green. And then production breaks because the consumer expected a `userId` and the provider started returning `user_id`.
+**Contract testing** is the most direct mechanical answer to the cross-session regression problem from [cross-session-regression](cross-session-regression.md). When two sessions touch opposite sides of a module or service boundary — Session A on the provider, Session B on the consumer — the only artifact that can catch a silent break before merge is a contract that *both sides verify against*. Type checks pass. Unit tests pass. Each session's CI pipeline lights up green. And then production breaks because the consumer expected a `userId` and the provider started returning `user_id`.
 
 Without contracts, that failure is invisible to both sessions and to CI. The provider's tests don't know about the consumer. The consumer's tests mock the provider. Code review assumes a human read both sides — and in agentic dev, no one has. Contracts are the trip-wire that fires when a change on one side violates an expectation on the other, and they fire *in CI*, not in production. If you do nothing else from this module, add contract tests at the boundaries your sessions actually cross.
 
 ## Anti-Corruption Layers as Verification Gates
 
-You just read [[ddd-boundaries]], so the **anti-corruption layer** is fresh: a translation layer at the seam between two bounded contexts whose job is to keep one side's vocabulary from corrupting the other. Reframed for agents, the ACL is *the* place where you assert "this is what we expect from the other side." Tests written against the ACL — even plain unit tests with no Pact, no OpenAPI, no contract framework — are tests on the cross-context contract. Every assertion in an ACL test is a contract clause: *we expect a 200 with this shape; we expect this error code to map to this domain exception; we expect dates as ISO-8601.*
+You just read [ddd-boundaries](ddd-boundaries.md), so the **anti-corruption layer** is fresh: a translation layer at the seam between two bounded contexts whose job is to keep one side's vocabulary from corrupting the other. Reframed for agents, the ACL is *the* place where you assert "this is what we expect from the other side." Tests written against the ACL — even plain unit tests with no Pact, no OpenAPI, no contract framework — are tests on the cross-context contract. Every assertion in an ACL test is a contract clause: *we expect a 200 with this shape; we expect this error code to map to this domain exception; we expect dates as ISO-8601.*
 
 Jesse Warden's [*You May Need an Anti-Corruption Layer*](https://jessewarden.com/2025/09/you-may-need-an-anti-corruption-layer.html) (Sep 2025) walks through the recurring pattern: teams adopt hexagonal architecture, draw the ports and adapters diagram, and then skip the ACL because "the upstream team's API is already clean enough." Six months later, the upstream API quietly changes a field's nullability and three downstream services start throwing nulls into business logic that was never written to handle them. The ACL would have failed loudly, in a single place, with a useful message. Without it, the failure scatters across every callsite.
 
@@ -27,7 +27,7 @@ The Pact-style **consumer-driven contract** workflow is four steps:
 
 Now map that to sessions. **Session A built the provider on Monday. Session B builds a new consumer on Friday.** Session B writes its consumer-driven contract as part of normal development. The contract gets published. The next time *anyone* — Session C, Session A's older sibling, a human — opens a PR against the provider, that PR's CI replays Session B's expectations against the new provider code. If Session A made an undocumented assumption ("the field will always be present"), and that assumption gets violated by a later edit, Session B's contract is the trip-wire that catches whatever Session A assumed but never enforced.
 
-This is the most direct mechanical answer to the silent contract break described in [[cross-session-regression]]. No human has to remember Session A's assumptions. The contract remembers.
+This is the most direct mechanical answer to the silent contract break described in [cross-session-regression](cross-session-regression.md). No human has to remember Session A's assumptions. The contract remembers.
 
 ## Schema-First as the Lighter-Weight Version
 
@@ -39,8 +39,8 @@ The complementary research direction is the arXiv paper [*Making REST APIs Agent
 
 ## What This Catches That Other Techniques Miss
 
-- **BDD scenarios** ([[bdd-for-agents]]) cover behavior *within* a context — they describe what the system does in domain language, not what it promises across a boundary.
-- **Fitness functions** ([[fitness-functions]]) cover architecture and global properties — coupling, layering, performance budgets — not the specific shape of a message between two specific services.
+- **BDD scenarios** ([bdd-for-agents](bdd-for-agents.md)) cover behavior *within* a context — they describe what the system does in domain language, not what it promises across a boundary.
+- **Fitness functions** ([fitness-functions](fitness-functions.md)) cover architecture and global properties — coupling, layering, performance budgets — not the specific shape of a message between two specific services.
 - **Type systems** cover compile-time shape inside one process. They evaporate at the network edge, at the serialization boundary, and across async/queue-based handoffs. Two services that share TypeScript types via a monorepo still drift the moment one of them deploys before the other.
 - **Code review** assumes a reviewer has read both sides of the boundary and held them in their head simultaneously. In agentic dev, no one has.
 
@@ -61,7 +61,7 @@ The cleanest articulation of *why this is now non-optional* is the PactFlow [**B
 - **Provider verification skipped in CI.** The broker collects contracts, no pipeline replays them, and `can-i-deploy` is never called. The broker is decorative. A contract that nobody verifies is a comment.
 - **Schema as truth.** An OpenAPI doc that drifts from the implementation is *worse than no doc* — the next session, human or agent, will trust it and code against it. The drift only surfaces at runtime, far from the change that caused it. Tools like Drift exist specifically to close this gap; if you publish a schema, gate on it.
 
-A meta-trap, mentioned often enough in [[../context-engineering/instruction-layer]] and [[../context-engineering/orchestration-layer]] to repeat here: contracts must live where the agent will *find* them. A Pact broker URL buried in a wiki is invisible to Session C. Contract files committed next to the code they govern, referenced from CLAUDE.md, surface in retrieval and get used.
+A meta-trap, mentioned often enough in [instruction-layer](../context-engineering/instruction-layer.md) and [orchestration-layer](../context-engineering/orchestration-layer.md) to repeat here: contracts must live where the agent will *find* them. A Pact broker URL buried in a wiki is invisible to Session C. Contract files committed next to the code they govern, referenced from CLAUDE.md, surface in retrieval and get used.
 
 ## Action Step
 
@@ -69,10 +69,10 @@ Pick two modules in your project that one agent session built and another touche
 
 Wire it into CI on both sides. Pre-merge. Not "we'll watch it for a week." This is an upfront investment that pays back the *next* time a session touches the provider — and given the cadence agentic teams ship at, the next time is usually within days. The first contract feels like overhead. The third one prevents the regression that would have cost a day to debug, and the math flips for good.
 
-If your team is allergic to Pact-the-tool but not to the *idea*, start with [[ddd-boundaries]]-style ACL unit tests. They're contract tests in everything but name, and they're the cheapest possible on-ramp to the discipline. The OneUptime [*How to Build the Anti-Corruption Layer Pattern*](https://oneuptime.com/blog/post/2026-01-30-anti-corruption-layer-pattern/view) post (Jan 2026) is a clean walkthrough of the structure if you need a reference.
+If your team is allergic to Pact-the-tool but not to the *idea*, start with [ddd-boundaries](ddd-boundaries.md)-style ACL unit tests. They're contract tests in everything but name, and they're the cheapest possible on-ramp to the discipline. The OneUptime [*How to Build the Anti-Corruption Layer Pattern*](https://oneuptime.com/blog/post/2026-01-30-anti-corruption-layer-pattern/view) post (Jan 2026) is a clean walkthrough of the structure if you need a reference.
 
-Reading list and full citations: [[sources]]. Related: [[agentic-tdd]], [[comprehension-debt]].
+Reading list and full citations: [sources](sources.md). Related: [agentic-tdd](agentic-tdd.md), [comprehension-debt](comprehension-debt.md).
 
 ---
 
-**Next Session:** [[fitness-functions]]
+**Next Session:** [fitness-functions](fitness-functions.md)

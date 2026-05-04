@@ -40,4 +40,4 @@ A study by Martin Fowler's team found that simply adding "do TDD" to a system pr
 
 ---
 
-**Next Session:** [[comprehension-debt]]
+**Next Session:** [comprehension-debt](comprehension-debt.md)

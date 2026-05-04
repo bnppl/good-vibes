@@ -26,7 +26,7 @@ The relationship vocabulary from Evans is still the right vocabulary, even with 
 
 Store the map somewhere the next session will actually find it. `docs/context-map.md` or a context-map section inside `ARCHITECTURE.md` works. Then reference it from `AGENTS.md` / `CLAUDE.md` so it loads at session start. Bardia Khosravi's 2026 piece on backend coding rules for AI agents is concrete about this: the rules file should pin the agent to specific contexts, name the layers it's allowed to touch, and call out the integrations that require an ACL. Without that pin, the agent treats the whole repo as one context — which is exactly the failure mode the map exists to prevent.
 
-This is the structural fix for the handoff problem [[characterization-and-handoff]] will pick up later: the next session inherits a map, not a memory. And it sets up [[contract-testing]] directly — every relationship on the map (especially ACLs and Published Languages) needs a test that fails when the contract drifts. The map declares the seam; the contract test enforces it.
+This is the structural fix for the handoff problem [characterization-and-handoff](characterization-and-handoff.md) will pick up later: the next session inherits a map, not a memory. And it sets up [contract-testing](contract-testing.md) directly — every relationship on the map (especially ACLs and Published Languages) needs a test that fails when the contract drifts. The map declares the seam; the contract test enforces it.
 
 ## Aggregates and Invariants as Testable Constraints
 
@@ -34,19 +34,19 @@ An **aggregate** is the unit of consistency: a cluster of objects treated as a s
 
 If `LineItem` raises in its constructor when `quantity <= 0`, then "negative quantity slipped into the order" is no longer a bug an agent could introduce. It's an unrepresentable state across every session that touches the order domain. The same goes for `Order.addLineItem` rejecting items from a different currency, or `Shipment.markDelivered` refusing to fire if the shipment has no carrier assigned. The invariants live in the code that constructs and mutates the aggregate; they do not live in PR-review discipline, in a checklist somewhere, or in the hope that the next session will read the same scenarios you read.
 
-Contrast this with the alternative: invariants enforced socially. Reviewer notices the violation, asks for a change, agent fixes it, ships. This works exactly as long as the reviewer is paying attention. Across many sessions and many reviewers, the failure rate compounds. An aggregate-level invariant has a failure rate of zero — it is a deterministic gate, the same kind of gate [[cross-session-regression]] argued the entire verification stack needs more of.
+Contrast this with the alternative: invariants enforced socially. Reviewer notices the violation, asks for a change, agent fixes it, ships. This works exactly as long as the reviewer is paying attention. Across many sessions and many reviewers, the failure rate compounds. An aggregate-level invariant has a failure rate of zero — it is a deterministic gate, the same kind of gate [cross-session-regression](cross-session-regression.md) argued the entire verification stack needs more of.
 
 A useful rule: if you find yourself writing a comment like "// must be positive" or a docstring saying "callers must ensure X before calling Y," promote the constraint into the aggregate. Comments don't survive sessions. Constructors do. The aggregate is the most durable place in the codebase to put a rule, because the type system and the runtime both enforce it without anyone — human or agent — having to remember.
 
 ## Ubiquitous Language as a Context-Engineering Primitive
 
-The single highest-ROI artifact a team can produce in 2026 is a **glossary**. Not a wiki page nobody reads — a glossary that lives next to the code, gets loaded by the instruction layer ([[../context-engineering/instruction-layer]]) at session start, and is the source of truth for the domain vocabulary the agent and the humans both use.
+The single highest-ROI artifact a team can produce in 2026 is a **glossary**. Not a wiki page nobody reads — a glossary that lives next to the code, gets loaded by the instruction layer ([instruction-layer](../context-engineering/instruction-layer.md)) at session start, and is the source of truth for the domain vocabulary the agent and the humans both use.
 
-Ubiquitous language was always Evans's deepest idea: the words the domain expert uses, the words the code uses, and the words the conversation uses should be the same words. With agents in the loop, this stops being a quality-of-life nicety and becomes a hard constraint on session coherence. When the domain model, code identifiers, Gherkin scenarios ([[bdd-for-agents]]), and human conversation all use the same terms, the agent has no room to invent synonyms. When they diverge, the agent will paper over the divergence by guessing — and its guesses are plausible, locally consistent, and wrong.
+Ubiquitous language was always Evans's deepest idea: the words the domain expert uses, the words the code uses, and the words the conversation uses should be the same words. With agents in the loop, this stops being a quality-of-life nicety and becomes a hard constraint on session coherence. When the domain model, code identifiers, Gherkin scenarios ([bdd-for-agents](bdd-for-agents.md)), and human conversation all use the same terms, the agent has no room to invent synonyms. When they diverge, the agent will paper over the divergence by guessing — and its guesses are plausible, locally consistent, and wrong.
 
 The dev.to "DDD in the AI-Driven Era" post (2025, AWS Heroes) puts the case bluntly: DDD vocabulary is *more* valuable in the AI era because agents need explicit ubiquitous-language anchors to stay on the rails. The DDD Academy's 2025 piece on strategic design with LLMs goes a step further and uses the agent itself to *discover* the language during event-storming workshops, then locks the result into the glossary. Either direction works; what doesn't work is leaving the language implicit.
 
-This ties directly to the knowledge layer ([[../context-engineering/knowledge-layer]]). The glossary is not just documentation — it is the index. When the agent is looking for "the thing that handles refunds," the term it searches for had better be the term in the code. Otherwise it finds nothing and confidently writes a parallel implementation.
+This ties directly to the knowledge layer ([knowledge-layer](../context-engineering/knowledge-layer.md)). The glossary is not just documentation — it is the index. When the agent is looking for "the thing that handles refunds," the term it searches for had better be the term in the code. Otherwise it finds nothing and confidently writes a parallel implementation.
 
 ## Conway's Law for Agent Topology
 
@@ -67,10 +67,10 @@ If you don't choose, the codebase will reveal your sessions anyway. It will show
 
 Pick a real codebase you've been working in with agents. Sketch a context map, even informally — sticky notes, a whiteboard photo, a half-page in `docs/context-map.md`. Don't aim for completeness; aim for the three or four contexts that actually matter and the relationships between them.
 
-Now identify two places where you've previously had different agent sessions touch the same area of code. Were those areas inside the same context? If so, the failure was probably scoping — you needed a clearer definition of what each session owned. Were they crossing contexts? If so, that crossing is exactly where you now want either an Anti-Corruption Layer in the code or a contract test at the boundary — see [[contract-testing]] next session for how to make that contract executable.
+Now identify two places where you've previously had different agent sessions touch the same area of code. Were those areas inside the same context? If so, the failure was probably scoping — you needed a clearer definition of what each session owned. Were they crossing contexts? If so, that crossing is exactly where you now want either an Anti-Corruption Layer in the code or a contract test at the boundary — see [contract-testing](contract-testing.md) next session for how to make that contract executable.
 
 The point of the exercise isn't to produce a polished diagram. It's to make the seams visible to you, so you can make them visible to the next session before it starts work.
 
 ---
 
-**Next Session:** [[contract-testing]]
+**Next Session:** [contract-testing](contract-testing.md)

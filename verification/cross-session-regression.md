@@ -40,7 +40,7 @@ Session B is asked to add a "last login" field to the user list endpoint. It wri
 
 The traditional answer to "how do we catch regressions across authors" is code review. A human reads the diff, holds the rest of the system in their head, notices the contract break or the duplicate utility or the N+1, and blocks the merge. This worked when the diff arrived once a day and the reviewer had built half the surrounding code themselves. It does not work when an agent produces a clean, well-formatted, locally-correct PR every twelve minutes and the reviewer has not personally written any of the surrounding code in months.
 
-This is the speed asymmetry from [[comprehension-debt]]: AI generates code 5–7x faster than humans can comprehend it, and the Anthropic study (Jan 2026) found developers using AI for passive delegation scored **17% lower** on debugging and comprehension tests. The implication for cross-session regression is brutal. The reviewer cannot detect the silent contract break by reading the diff, because the broken caller is not in the diff. They cannot detect the parallel re-implementation, because the existing utility is not in the diff. They cannot detect the invariant violation, because the invariant is not written down anywhere in the diff's blast radius. Reading the code only catches the bugs that are visible in the code being read—and the cross-session regressions, by definition, live in the code that isn't.
+This is the speed asymmetry from [comprehension-debt](comprehension-debt.md): AI generates code 5–7x faster than humans can comprehend it, and the Anthropic study (Jan 2026) found developers using AI for passive delegation scored **17% lower** on debugging and comprehension tests. The implication for cross-session regression is brutal. The reviewer cannot detect the silent contract break by reading the diff, because the broken caller is not in the diff. They cannot detect the parallel re-implementation, because the existing utility is not in the diff. They cannot detect the invariant violation, because the invariant is not written down anywhere in the diff's blast radius. Reading the code only catches the bugs that are visible in the code being read—and the cross-session regressions, by definition, live in the code that isn't.
 
 ## Why Context Engineering Alone Is Insufficient
 
@@ -50,12 +50,12 @@ Context engineering—the discipline of loading the right facts into the next se
 
 The remaining sessions of Module 4 each address one or more of the three failure shapes above:
 
-- [[bdd-for-agents]] (S23) — Behavior-driven specs written before the code give the agent a runnable definition of intent. Prevents **silent contract breaks** by encoding the behavior contract, and reduces **parallel re-implementation** by making existing behaviors discoverable as scenarios.
-- [[ddd-boundaries]] (S24) — Domain-driven design surfaces the bounded contexts and ubiquitous language. Prevents **parallel re-implementation** by giving the agent a map of where things belong, and reduces **silent contract breaks** by making aggregate boundaries explicit.
-- [[contract-testing]] (S25) — Anti-corruption layers and consumer-driven contracts (Pact, OpenAPI) catch **silent contract breaks** at the exact layer where they manifest. The contract is enforced by code, not by reviewer attention.
-- [[fitness-functions]] (S26) — Executable architecture rules (cyclomatic limits, layer dependency checks, "no DB calls in this directory") encode the **invariants** that previously lived in senior engineers' heads. The build fails when the rule is violated, no matter who wrote the code.
-- [[test-the-tests]] (S27) — Mutation testing and property-based testing verify the safety net is real. A green test suite that doesn't catch a reverted line is theater, and example-based tests miss the corner cases agents reliably skip.
-- [[characterization-and-handoff]] (S28) — Lock down legacy behavior before letting an agent touch it, and make the verification surface discoverable so the next session actually uses it.
+- [bdd-for-agents](bdd-for-agents.md) (S23) — Behavior-driven specs written before the code give the agent a runnable definition of intent. Prevents **silent contract breaks** by encoding the behavior contract, and reduces **parallel re-implementation** by making existing behaviors discoverable as scenarios.
+- [ddd-boundaries](ddd-boundaries.md) (S24) — Domain-driven design surfaces the bounded contexts and ubiquitous language. Prevents **parallel re-implementation** by giving the agent a map of where things belong, and reduces **silent contract breaks** by making aggregate boundaries explicit.
+- [contract-testing](contract-testing.md) (S25) — Anti-corruption layers and consumer-driven contracts (Pact, OpenAPI) catch **silent contract breaks** at the exact layer where they manifest. The contract is enforced by code, not by reviewer attention.
+- [fitness-functions](fitness-functions.md) (S26) — Executable architecture rules (cyclomatic limits, layer dependency checks, "no DB calls in this directory") encode the **invariants** that previously lived in senior engineers' heads. The build fails when the rule is violated, no matter who wrote the code.
+- [test-the-tests](test-the-tests.md) (S27) — Mutation testing and property-based testing verify the safety net is real. A green test suite that doesn't catch a reverted line is theater, and example-based tests miss the corner cases agents reliably skip.
+- [characterization-and-handoff](characterization-and-handoff.md) (S28) — Lock down legacy behavior before letting an agent touch it, and make the verification surface discoverable so the next session actually uses it.
 
 The pattern across all six: move the constraint out of human discipline and into a test, a contract, or a build rule that survives the next session boundary.
 
@@ -71,4 +71,4 @@ Keep the list. The next six sessions will give you the techniques to close each 
 
 ---
 
-**Next Session:** [[bdd-for-agents]]
+**Next Session:** [bdd-for-agents](bdd-for-agents.md)

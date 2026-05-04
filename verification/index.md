@@ -1,4 +1,6 @@
 ---
+title: Verification
+nav_order: 5
 last_updated: 2026-04-27
 last_read: null
 status: unread
@@ -12,17 +14,17 @@ The wiki splits verification into two modules. **Module 3** covers verification 
 
 ## Module 3: Per-Session Verification
 
-- [[agentic-tdd]] — Using tests as the primary specification and success criterion for agents.
-- [[comprehension-debt]] — Strategies for maintaining cognitive sustainability and system understanding.
-- [[../context-engineering/tool-engineering]] — Designing robust Agent-Computer Interfaces (ACI).
+- [agentic-tdd](agentic-tdd.md) — Using tests as the primary specification and success criterion for agents.
+- [comprehension-debt](comprehension-debt.md) — Strategies for maintaining cognitive sustainability and system understanding.
+- [tool-engineering](../context-engineering/tool-engineering.md) — Designing robust Agent-Computer Interfaces (ACI).
 
 ## Module 4: Cross-Session Verification
 
-- [[cross-session-regression]] — The cross-session regression problem; why classical regression thinking falls short.
-- [[bdd-for-agents]] — Gherkin scenarios as agent contracts and living documentation.
-- [[ddd-boundaries]] — Bounded contexts as agent session boundaries.
-- [[contract-testing]] — Anti-corruption layers and consumer-driven contracts.
-- [[fitness-functions]] — Architectural fitness functions as codified institutional memory.
-- [[test-the-tests]] — Mutation and property-based testing for agent-written tests.
-- [[characterization-and-handoff]] — Characterization tests for legacy plus the verification handoff problem.
-- [[sources]] — Annotated bibliography for the module.
+- [cross-session-regression](cross-session-regression.md) — The cross-session regression problem; why classical regression thinking falls short.
+- [bdd-for-agents](bdd-for-agents.md) — Gherkin scenarios as agent contracts and living documentation.
+- [ddd-boundaries](ddd-boundaries.md) — Bounded contexts as agent session boundaries.
+- [contract-testing](contract-testing.md) — Anti-corruption layers and consumer-driven contracts.
+- [fitness-functions](fitness-functions.md) — Architectural fitness functions as codified institutional memory.
+- [test-the-tests](test-the-tests.md) — Mutation and property-based testing for agent-written tests.
+- [characterization-and-handoff](characterization-and-handoff.md) — Characterization tests for legacy plus the verification handoff problem.
+- [sources](sources.md) — Annotated bibliography for the module.

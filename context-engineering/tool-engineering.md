@@ -60,4 +60,4 @@ AEO connects directly to context engineering: if the documentation your agent re
 
 ---
 
-**Next Module:** [[../agent-patterns/index]]
+**Next Module:** [index](../agent-patterns/index.md)

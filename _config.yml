@@ -1,0 +1,34 @@
+title: Good Vibes
+description: A learning wiki on context engineering and spec-driven development.
+
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+  - jekyll-seo-tag
+
+relative_links:
+  enabled: true
+  collections: true
+
+# Navigation
+nav_sort: case_insensitive
+search_enabled: true
+
+# Exclude non-content directories and tooling files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CLAUDE.md
+  - sync-to-android.sh
+  - agentic-alignment.skill
+  - docs/
+  - skills/
+  - claude-config/
+  - audio-bundles/
+  - memory/
+  - .obsidian/
+  - .claude/
+  - "*.sh"
+  - "*.skill"

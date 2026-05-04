@@ -39,4 +39,4 @@ Teams should conduct "temporal audits" to identify modules that have become "bla
 
 ---
 
-**Next Session:** [[../context-engineering/tool-engineering]]
+**Next Session:** [tool-engineering](../context-engineering/tool-engineering.md)

@@ -15,7 +15,7 @@ These are the canonical pre-AI references this module rests on. They don't need 
 **[Building Evolutionary Architectures](https://www.thoughtworks.com/insights/books/building-evolutionary-architectures-2nd-edition)** (2nd edition)
 Neal Ford, Rebecca Parsons, Patrick Kua, Pramod Sadalage
 
-The primary citation for [[fitness-functions]]. Defines fitness functions as automated checks on architectural characteristics — coupling, layer dependencies, performance budgets — that fail the build when a change drifts outside the agreed envelope. The mechanism by which architectural decisions survive contact with subsequent agent sessions. The 2nd edition adds a chapter on automating ADRs that lines up with the 2026 dev.to "Stop Architecture Drift" piece below.
+The primary citation for [fitness-functions](fitness-functions.md). Defines fitness functions as automated checks on architectural characteristics — coupling, layer dependencies, performance budgets — that fail the build when a change drifts outside the agreed envelope. The mechanism by which architectural decisions survive contact with subsequent agent sessions. The 2nd edition adds a chapter on automating ADRs that lines up with the 2026 dev.to "Stop Architecture Drift" piece below.
 
 Most useful for: anyone trying to encode architecture as something an agent can fail against, not something a human has to remember.
 
@@ -33,7 +33,7 @@ Most useful for: BDD as a context-engineering tool, not just a test-writing one.
 **[Domain-Driven Design](https://www.domainlanguage.com/ddd/)**
 Eric Evans
 
-The original. Bounded contexts, ubiquitous language, aggregates, context maps — every primitive used in [[ddd-boundaries]] traces here. The bounded-context idea is the conceptual underpinning for why an `AGENTS.md` per directory works better than a single root file: each context has its own ubiquitous language, and agents need to know which one they're in.
+The original. Bounded contexts, ubiquitous language, aggregates, context maps — every primitive used in [ddd-boundaries](ddd-boundaries.md) traces here. The bounded-context idea is the conceptual underpinning for why an `AGENTS.md` per directory works better than a single root file: each context has its own ubiquitous language, and agents need to know which one they're in.
 
 Most useful for: understanding the conceptual foundation before reading anything more recent.
 
@@ -221,7 +221,7 @@ Most useful for: anyone whose stack doesn't have a working mutation-testing tool
 **[The Pitfalls of Test Coverage: Introducing Mutation Testing with Stryker and Cosmic Ray](https://prodsens.live/2026/02/01/the-pitfalls-of-test-coverage-introducing-mutation-testing-with-stryker-and-cosmic-ray/)**
 prodsens.live, 2026-02
 
-A clean introduction with two specific tools (Stryker for JS/TS, Cosmic Ray for Python). The central argument — coverage measures which lines ran, mutation testing measures whether the tests would notice if those lines were wrong — is the foundation for [[test-the-tests]].
+A clean introduction with two specific tools (Stryker for JS/TS, Cosmic Ray for Python). The central argument — coverage measures which lines ran, mutation testing measures whether the tests would notice if those lines were wrong — is the foundation for [test-the-tests](test-the-tests.md).
 
 Most useful for: anyone new to mutation testing as a concept.
 

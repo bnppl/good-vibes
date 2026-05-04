@@ -6,7 +6,7 @@ status: unread
 
 When the agent says "I added tests," do they catch anything? In classical development that question still matters, but you usually have a separation between the engineer who wrote the production code and the engineer (or at least the moment) who wrote the tests. In agentic development that separation collapses: the **test author and the code author are the same untrusted party**, working from the same misunderstanding, in the same turn. A green suite means the agent's code agrees with the agent's tests. It does not mean the tests would notice if the code were wrong.
 
-The Fowler "TDD Paradox" finding from [[agentic-tdd]] — that agents writing their own tests can *inflate* regressions rather than reduce them — was the warning shot. This session is the answer. Two techniques, both decades old, both newly load-bearing in the agent era: **mutation testing** measures whether your tests would catch bugs that don't yet exist, and **property-based testing** generates the inputs your agent never thought to enumerate. Together they shift the question from "are there tests?" to "is the safety net real?"
+The Fowler "TDD Paradox" finding from [agentic-tdd](agentic-tdd.md) — that agents writing their own tests can *inflate* regressions rather than reduce them — was the warning shot. This session is the answer. Two techniques, both decades old, both newly load-bearing in the agent era: **mutation testing** measures whether your tests would catch bugs that don't yet exist, and **property-based testing** generates the inputs your agent never thought to enumerate. Together they shift the question from "are there tests?" to "is the safety net real?"
 
 ## Mutation Testing: Measuring Kill Rate
 
@@ -22,7 +22,7 @@ Where example-based tests enumerate cases — `add(2, 3) == 5`, `add(0, 0) == 0`
 
 The canonical tools are **Hypothesis** (Python, by David MacIver), **fast-check** (JavaScript/TypeScript), the original **QuickCheck** (Haskell, with ports to nearly every language), and **PropEr** (Erlang). New entrants worth tracking include the **Hegel** universal PBT protocol (133 HN points on its April 2026 launch) and Antithesis's **Bombadil**, which extends the property-based approach to web UIs.
 
-Why this matters specifically with agents: agents enumerate the obvious examples. They write three or four cases — happy path, one edge, maybe a null check — drawn from the typical distribution of code they were trained on. Properties cover the input spaces the agent did not think of, because the framework, not the agent, generates the inputs. This connects directly to [[bdd-for-agents]]: a Gherkin scenario is one example dressed up in narrative; a property is the universal-quantifier version of the same intent. "Given a non-empty cart, when the user checks out, the total equals the sum of line items" is not a scenario — it is a property, and it should be tested with a generator producing thousands of carts.
+Why this matters specifically with agents: agents enumerate the obvious examples. They write three or four cases — happy path, one edge, maybe a null check — drawn from the typical distribution of code they were trained on. Properties cover the input spaces the agent did not think of, because the framework, not the agent, generates the inputs. This connects directly to [bdd-for-agents](bdd-for-agents.md): a Gherkin scenario is one example dressed up in narrative; a property is the universal-quantifier version of the same intent. "Given a non-empty cart, when the user checks out, the total equals the sum of line items" is not a scenario — it is a property, and it should be tested with a generator producing thousands of carts.
 
 ## Why This Matters More with Agents
 
@@ -36,7 +36,7 @@ Third, mutation testing is the **lie detector** for "I added tests" claims. A gr
 
 ## Workflow Integration
 
-Mutation testing is slow. A full mutation run on a non-trivial codebase can take an hour, because the suite is rerun once per mutant. **Do not gate every PR on it.** Run it nightly, or on a cron, or only on changed files; fail the build only if the kill rate drops below an established baseline for the module. Set a **kill-rate floor** per module that reflects the actual stakes — 80% on a payment processor, 60% on UI utilities, perhaps not at all on generated code or thin glue. The floor is a [[fitness-functions|fitness function]]; it lives in CI and it stays out of the agent's everyday loop.
+Mutation testing is slow. A full mutation run on a non-trivial codebase can take an hour, because the suite is rerun once per mutant. **Do not gate every PR on it.** Run it nightly, or on a cron, or only on changed files; fail the build only if the kill rate drops below an established baseline for the module. Set a **kill-rate floor** per module that reflects the actual stakes — 80% on a payment processor, 60% on UI utilities, perhaps not at all on generated code or thin glue. The floor is a [fitness function](fitness-functions.md); it lives in CI and it stays out of the agent's everyday loop.
 
 For property-based tests the cost profile is friendlier. A property-based test runs in seconds, generates hundreds of inputs each run, and slots into the regular suite without ceremony. Add them at the same time as example-based tests — agents can write both if asked explicitly, and the right prompt is "write three example-based tests and one property-based test for this function, naming the invariant." Without the explicit ask, you get four examples and no properties.
 
@@ -44,7 +44,7 @@ For the mutation-survivor loop, Alex Op's "Mutation Testing with AI Agents" piec
 
 ## 2026 Findings
 
-The empirical picture as of early 2026 is clearer than it was a year ago. The arXiv NeurIPS 2025 data shows agent-generated property-based tests are credible — 56% valid bug reports across 100 packages is not noise, and the Anthropic Red Team writeup confirms the workflow is now baked into internal agent harnesses rather than living in research demos. The honest read of the same evidence: agents do **not** reliably generate mutation-surviving tests *without explicit prompting* about what the mutations would be, but they will write surprisingly strong property tests when asked specifically to name an invariant. The implication is that **prompt design — and a fitness function on kill rate — is the difference between a theatrical safety net and a real one**. The tooling no longer limits you. The instruction layer ([[../context-engineering/instruction-layer]]) and the orchestration layer ([[../context-engineering/orchestration-layer]]) do.
+The empirical picture as of early 2026 is clearer than it was a year ago. The arXiv NeurIPS 2025 data shows agent-generated property-based tests are credible — 56% valid bug reports across 100 packages is not noise, and the Anthropic Red Team writeup confirms the workflow is now baked into internal agent harnesses rather than living in research demos. The honest read of the same evidence: agents do **not** reliably generate mutation-surviving tests *without explicit prompting* about what the mutations would be, but they will write surprisingly strong property tests when asked specifically to name an invariant. The implication is that **prompt design — and a fitness function on kill rate — is the difference between a theatrical safety net and a real one**. The tooling no longer limits you. The instruction layer ([instruction-layer](../context-engineering/instruction-layer.md)) and the orchestration layer ([orchestration-layer](../context-engineering/orchestration-layer.md)) do.
 
 ## Traps
 
@@ -59,8 +59,8 @@ Pick a file an agent recently touched in a project you care about. Run a mutatio
 
 Then, separately and on a different file: pick one pure function — something with a clear input/output contract, no I/O — and write a single property-based test for it. Just one property. Note the inputs the framework generates that you would never have thought to enumerate. That moment, the first time Hypothesis hands you a Unicode surrogate pair or a zero-length list that breaks code you would have sworn was correct, is the entire pedagogical point. The agent did not generate that input either. That is why the property exists.
 
-See [[sources]] for full citations.
+See [sources](sources.md) for full citations.
 
 ---
 
-**Next Session:** [[characterization-and-handoff]]
+**Next Session:** [characterization-and-handoff](characterization-and-handoff.md)
