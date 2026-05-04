@@ -1,3 +1,11 @@
+---
+title: Learning Plan
+nav_order: 6
+last_updated: 2026-04-27
+last_read: null
+status: unread
+---
+
 # Learning Plan: Context Engineering & Spec-Driven Development
 
 **How to use this:** Open this vault in Obsidian mobile. Work through one session per sitting — each is designed for ~15 minutes of reading plus a quick action step you can do from your phone. Check off sessions as you complete them.

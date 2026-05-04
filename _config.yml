@@ -27,6 +27,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - CLAUDE.md
+  - README.md
   - sync-to-android.sh
   - agentic-alignment.skill
   - docs/
