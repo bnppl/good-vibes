@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-12
+last_updated: 2026-05-04
 last_read: null
 status: unread
 ---
@@ -56,6 +56,18 @@ For any task that runs longer than a few minutes, the context window alone isn't
 This pattern comes from Manus's production framework. They call it "attention through recitation": a dynamic task summary is kept on disk and refreshed in context periodically. Even as older context gets compacted or pushed out, the model is reminded of its current objectives and what it has already done. This prevents the drift that accumulates in long sessions when an agent is working only from its own history.
 
 The operational pattern: write state to a file after completing meaningful work, then read that file back into context when resuming after a break or after compaction. The file persists even if the context window is fully reset. This is how you bridge the memory layer (persistence) and the orchestration layer (active window management). An agent that loses its context window doesn't lose its work if that work was written down.
+
+### Session Logs vs. Note Files
+
+Both patterns solve the same problem: durable state that outlives any single context window. They serve different roles.
+
+**Note files** (`todo.md`, `progress.md`, `decisions.md`) are human-readable, agent-maintained summaries. The agent decides what's important enough to write down. They're cheap to produce and easy to read back into context. The cost: information that wasn't captured is gone.
+
+**Session event logs** (Anthropic's Managed Agents model) are append-only records of every event in the run — every thought, tool call, result, and observation — stored outside the process. The agent doesn't decide what to record; everything is recorded. Recovery means replaying the log: `getEvents()` lets the harness slice any portion of the stream before injecting it into a fresh context window. `wake(sessionId)` reconstitutes a crashed run with no information loss.
+
+The practical difference: note files work well for tasks where an agent can determine what matters in advance. Session logs matter for long-running runs where you can't predict what context a future session will need — and where a container or harness crash shouldn't mean starting over.
+
+Most production systems benefit from both: session logs for recovery, note files for orientation when the agent wakes up in a fresh context.
 
 ---
 
@@ -129,6 +141,8 @@ See [GPT Pilot](../frameworks/gpt-pilot.md) for a different approach to the same
 
 ## Harness Engineering
 
+**The capability curve that makes this urgent.** METR's time horizon metric tracks the task length that frontier models can complete at 50% reliability. Their data shows this metric has doubled roughly every seven months since 2019, with the TH1.1 update (January 2026) doubling the count of 8-hour-plus tasks in the eval set. Extrapolating the curve suggests day-scale task completion by ~2028, year-scale by ~2034 — though projections at this horizon should be treated as directional, not precise. The practical implication today: agents already routinely run for hours, and the harness is what determines whether those runs succeed or fail. Better models don't close this gap on their own; harness design does.
+
 "Harness engineering" emerged in early 2026 as the name for the discipline of designing the constraints, tools, feedback loops, and verification systems that guide AI agents. The term gained traction after OpenAI published their experience building a 1M+ line production system with zero manually-written code under a Codex harness, and Anthropic published their Generator-Evaluator architecture for long-running application development. Martin Fowler's series also adopted the framing.
 
 The core insight from OpenAI: "from the agent's point of view, anything it can't access in-context while running effectively doesn't exist, and repository-local, versioned artifacts are all it can see." This means the harness — the agent loop, tool access, documentation, and verification — determines what the agent can accomplish as much as the model does.
@@ -145,6 +159,21 @@ The "Harness" is the software scaffold that manages the agent's environment. Mod
 **(New — April 12 research)** LangChain formalized the equation: **Agent = Model + Harness.** Their anatomy identifies five harness components: (1) system prompts, (2) tools and skills (including MCPs), (3) infrastructure (filesystem, sandbox, browser), (4) orchestration logic (subagent spawning, handoffs, routing), and (5) hooks/middleware (compaction, continuation). They also documented the **Ralph Loop Pattern** — intercepting agent exit attempts and reinjecting prompts in clean context windows to force task continuation — and warned about **harness overfitting**: models post-trained with specific harnesses can struggle when tool logic changes, suggesting excessive coupling between training data and harness design.
 
 The harness engineering discipline is still crystallizing, but the consensus is clear: the engineering around the model matters as much as the model itself.
+
+### Anthropic's Brain/Hands/Session Architecture (April 2026)
+
+Anthropic's Managed Agents architecture formalizes a decomposition that makes harnesses resilient by separating three concerns: the **Brain** (the model and the harness loop that calls it), the **Hands** (sandboxed execution environments where tools actually run), and the **Session** (an append-only event log of every thought, tool call, and observation, stored outside any process). Each component can fail or be replaced independently.
+
+The motivating principle: every component in a harness encodes an assumption about what the model can't do on its own. Coupled components mean a stale assumption requires changing the whole system. Decoupled components mean the assumption lives in one place.
+
+Concrete benefits from decoupling:
+
+- **TTFT dropped ~60% at p50, >90% at p95** by letting inference start before the sandbox was provisioned. The brain no longer waited for the hands.
+- **Containers became cattle.** When a sandbox fails, the harness catches it as a tool-call error and provisions a fresh one. No more nursing crashed environments.
+- **Security boundary**: credentials never live in the sandbox alongside the agent's generated code. Auth tokens live in a vault; a proxy fetches them on demand.
+- **VPC isolation**: because the harness is no longer inside the container, teams can run sandboxes in their own networks without peering.
+
+The session event log is the recovery primitive: `wake(sessionId)` boots a fresh harness, `getSession()` replays the event stream, and the run resumes from the last event. Nothing in the harness needs to survive a crash because nothing important is stored there.
 
 ---
 
