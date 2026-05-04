@@ -1,16 +1,22 @@
 title: Good Vibes
 description: A learning wiki on context engineering and spec-driven development.
 
-remote_theme: just-the-docs/just-the-docs@v0.10.0
+theme: just-the-docs
 
 plugins:
-  - jekyll-remote-theme
   - jekyll-relative-links
   - jekyll-seo-tag
 
 relative_links:
   enabled: true
   collections: true
+
+# Apply the theme layout to all pages by default
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
 
 # Navigation
 nav_sort: case_insensitive
