@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-12
+last_updated: 2026-05-04
 last_read: 2026-04-06
 status: read
 ---
@@ -78,6 +78,8 @@ Anthropic's Agent Skills format (released December 2025) has become the de facto
 
 The adoption signal is strong: OpenAI, Google, GitHub, and Cursor all adopted similar progressive disclosure patterns within weeks of the Skills format shipping (per SwirlAI "State of Context Engineering in 2026"). This convergence validates the core principle — instruction context should be loaded when relevant, not pre-loaded because it might be relevant — at an industry-wide scale.
 
+**The SKILL.md format.** A SKILL.md file has three layers: YAML frontmatter (`name`, `description`, trigger conditions — the ~80 tokens the agent sees at discovery), a brief activation summary (~200–500 tokens loaded when the skill activates), and optional reference sections loaded only during execution. The format enforces the tier structure by design: you cannot accidentally pre-load a reference section because it only loads when the agent explicitly requests it. The practical math: 17 skills × 80 tokens = 1,360 tokens always-on vs. an average of 3,000–8,000 tokens per skill if pre-loaded — a 3–5× reduction in baseline context cost for the same capability surface.
+
 ### The ~50 Instruction Ceiling
 
 Anthropic's documentation notes that system prompts already contain around 50 instructions by the time you account for tool descriptions, formatting guidance, and core behavioral rules. Models can reliably follow approximately this many instructions before degradation sets in.
@@ -119,6 +121,18 @@ At RSA 2026, industry leaders identified the **context window** as the true secu
 **Over-specifying format when behavior matters more.** Spending effort on output structure when the real problem is decision-making. If the model is making wrong choices, fixing the markdown formatting of its responses won't help.
 
 **Duplicating derivable information.** Putting file structure, function signatures, or coding conventions into the system prompt when they already exist in the codebase. The model can read the code — use progressive disclosure to point it there rather than duplicating content that will fall out of sync.
+
+**Rationalizing away skill usage.** A documented failure mode in progressive-disclosure systems: the agent (or developer) invents reasons to skip loading a relevant skill. Common rationalizations and why they're red flags:
+
+| Thought | Why it's wrong |
+|---------|----------------|
+| "This is just a simple question" | Questions trigger behavior. Skills govern behavior. Check anyway. |
+| "I need more context first" | Skills tell you *how* to gather context. Invoke before exploring. |
+| "This doesn't need a formal skill" | If a skill exists, "formal" is already decided. The question is only relevance. |
+| "Let me do this one thing first" | One-thing-first is how skills get permanently skipped. |
+| "The skill is overkill for this" | Simple tasks become complex. The skill exists because someone learned this. |
+
+The pattern: every rationalization sounds like good judgment in the moment. The purpose of a skill is precisely to handle cases the agent would otherwise handle inconsistently. If the thought "this doesn't apply" arises, that's the moment to load and check — not to skip.
 
 ---
 

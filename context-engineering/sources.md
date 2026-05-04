@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-12
+last_updated: 2026-05-04
 last_read: null
 status: unread
 ---
@@ -400,3 +400,70 @@ Most useful for: understanding what's possible (and what breaks) with fully auto
 **[Steergen: Single-Source Steering Docs for Spec-Driven Development](https://news.ycombinator.com/item?id=47683453)** — 1 point. New tool for generating steering docs from a single source. *(April 2026)*
 
 **[Using Spec-Driven Development with Claude Code](https://news.ycombinator.com/item?id=47703039)** — 3 points. Practical guide to SDD workflows in Claude Code specifically. *(April 2026)*
+
+---
+
+## May 2026 Updates
+
+**[Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/managed-agents)**
+Anthropic (April 8, 2026)
+
+The architectural reasoning behind Anthropic's Managed Agents. Brain/Hands/Session decomposition: the session is an append-only event log stored outside any process; the harness is stateless; sandboxes are independently replaceable. TTFT dropped ~60% at p50 and >90% at p95 from decoupling. Security boundary: credentials never in the sandbox with generated code — auth tokens live in a vault accessed via proxy. The session-as-event-log idea (`wake(sessionId)`, `getEvents()`) enables durable recovery from harness or container crashes with no information loss.
+
+Most useful for: designing resilient long-running agent architectures.
+
+---
+
+**[An Update on Recent Claude Code Quality Reports](https://www.anthropic.com/engineering/april-23-postmortem)**
+Anthropic (April 23, 2026)
+
+Postmortem of three simultaneous issues: a reasoning effort downgrade (reverted), a caching optimization bug that cleared extended thinking blocks every turn rather than once (causing progressive memory loss and cache misses), and a verbosity reduction that hurt coding quality. The caching bug is the instructive one: it presented as forgetfulness and unusual tool choices — not as an obvious error — because context management failures rarely surface cleanly.
+
+Most useful for: understanding how caching and context management bugs manifest in production.
+
+---
+
+**[Long-Running Agents](https://addyosmani.com/blog/long-running-agents/)**
+Addy Osmani (April 2026)
+
+Comprehensive synthesis of the long-running agent design space: three distinct meanings (long-horizon reasoning, long-running execution, persistent agency), three walls every agent hits (finite context, no persistent state, no self-verification), and a survey of how Anthropic, Cursor, and others approach each wall. Includes METR time horizon data and the Brain/Hands/Session decomposition. Best single-article overview of the field in mid-2026.
+
+Most useful for: understanding the full design space for long-running agents.
+
+---
+
+**[Agent Harness Engineering](https://addyosmani.com/blog/agent-harness-engineering/)**
+Addy Osmani (April 2026)
+
+Consolidates the harness engineering discipline with empirical evidence: the same Claude Opus 4.6 moved from Top 30 to Top 5 on Terminal Bench 2.0 by harness changes alone. HumanLayer's "skill issue" reframe: most agent failures are configuration problems, not model problems. The ratchet principle: treat every agent mistake as a permanent signal and encode it in `AGENTS.md` or a hook; every constraint should be traceable to a real failure.
+
+Most useful for: building and iterating on agent harnesses in practice.
+
+---
+
+## May 2026 Updates
+
+**[The Supervision Paradox](https://larsfaye.com/supervision-paradox)**
+Lars Faye (May 2026) — 406 HN points
+
+The counterintuitive finding that increasing agent autonomy requires *more* oversight infrastructure, not less. Faye's log analysis showed that sessions with checkpoint intervals every 3–5 steps outperformed "let it run" sessions, because errors caught at step 3 cost step-3-level effort to fix — the same errors at step 15 cost 12 compounded steps of rework. Checkpoints reframe from "interruptions" to "context reset events" that defeat context drift before it compounds. The paper's framing connects directly to the 35-minute degradation curve: unmanaged autonomy lets the curve do damage; checkpoints reset it.
+
+Most useful for: calibrating how much autonomy to give agents and designing oversight cadences that don't kill throughput.
+
+---
+
+**[Agent Loom: Context Placement in Long-Horizon Tasks](https://agentloom.dev/research/placement-beats-recency)**
+Agent Loom (May 2026)
+
+Empirical finding that position in the context window often matters as much as recency for driving attention. Content at the end of a long context window received higher attention than the same content in the middle, regardless of relative timestamp. Effect was strongest in contexts with heavy middle-section noise (typical of long agentic sessions). Practical implication: memory retrieval ranking and injection position are two separate decisions — recency governs which memories to retrieve, but position governs which retrieved memories get attended to. The always-loaded vs. on-demand split is architectural for attention reasons, not just token-budget reasons.
+
+Most useful for: anyone designing memory retrieval pipelines or context injection strategies for long-running agents.
+
+---
+
+**[MCP Breadcrumb Navigation](https://taoofmac.com/space/blog/2026/05)**
+taoofmac (May 2026)
+
+Documented the underused pattern of MCP tools returning navigation hints alongside their primary output — pointers to related MCP resources rather than requiring an upfront global tool catalogue. The agent follows threads organically, trading comprehensive tool-schema loading for discovery-on-demand. Reduces baseline token cost for MCP-heavy architectures; complements Cursor's 46.9% token reduction from lazy-loading tool descriptions.
+
+Most useful for: designing MCP servers for large tool surfaces where front-loading all schemas is prohibitive.

@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-12
+last_updated: 2026-05-04
 last_read: null
 status: unread
 ---
@@ -55,6 +55,10 @@ Having memory is useless if you retrieve the wrong piece at the wrong time. Four
 **Always-loaded versus on-demand** is a design decision, not a retrieval strategy. Some memory belongs in context unconditionally — user preferences, project goals, active constraints. Other memory (past debugging sessions, prior feature work) should only enter context when relevant to the current task. Deciding which category each memory type falls into is part of schema design, not something to resolve at retrieval time.
 
 The staleness problem applies to all of it: memory is a claim about the past, not the present. "The API uses REST" was true when you recorded it. It may not be now. Before acting on a remembered fact, verify it against the current state. Treat memory as a starting point for investigation, not a substitute for it.
+
+**Placement beats recency.** Agent Loom's research (May 2026) challenged the assumption that recency is the primary driver of attention within a context window. Their finding: *where* critical information appears often matters as much as *when* it was added. Content placed at the end of a long context window received higher attention weight than the same content buried in the middle, regardless of relative recency. The effect was most pronounced in contexts with heavy middle-section noise — the model effectively downweighted middle content and paid proportionally more attention to beginnings (system prompt) and endings (most recent turns).
+
+The practical implication for memory retrieval: **ranking by recency decides which memories to retrieve; injection position decides which retrieved memories get attention.** Critical instructions or facts injected from long-term memory should land either early (system prompt, if they're always-relevant) or late (immediately before the current turn, if they're situational) — not dropped into the middle of an already-populated context. This also explains why the always-loaded versus on-demand split is an architectural decision, not just a token-budgeting one: the always-loaded context (system prompt) gets privileged attention because of *where it sits*, not just because of *what it contains*.
 
 ## Continual Learning: The Three-Layer Framework **(New — April 12 research)**
 

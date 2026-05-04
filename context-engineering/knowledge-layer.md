@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-06
+last_updated: 2026-05-04
 last_read: 2026-04-06
 status: read
 ---
@@ -81,6 +81,28 @@ Traditional RAG has evolved into **Agentic RAG**. Instead of a fixed search trig
 
 ### Dynamic Context Injection (DCI)
 DCI is the pattern of automatically injecting real-time environmental signals (e.g., a customer's current subscription status, current server load, or the latest API schema version) into the context window just before a critical reasoning step. This ensures the model is grounded in the most current reality, rather than relying on potentially stale information from the start of the session.
+
+## Intent Debt
+
+Technical debt captures code that's hard to maintain. **Intent debt** captures something different: the accumulation of design decisions that were never written down and that neither agents nor future engineers can reason about.
+
+When an agent makes a change — locally correct, tests passing, code clean — but violates an unstated design principle, it doesn't fail. It succeeds in a way that creates invisible technical debt. The next agent has no signal that anything went wrong. The problem compounds.
+
+Intent debt grows faster with agents than with humans for two reasons. First, agents make more changes per session than individual engineers, accelerating the accumulation rate. Second, agents are less likely to pause and ask "why does this pattern exist?" — a human reviewer might notice an architectural anomaly and dig; an agent treats the existing code as normative.
+
+The knowledge layer is where intent debt surfaces. A knowledge base that captures *what* is true (API shapes, data models, code structure) but not *why* those decisions were made (what they protect against, what tradeoffs they encode) leaves agents operating on code they can read but not fully reason about. The result: locally-correct changes that slowly violate the reasoning behind the code.
+
+**The mitigation is explicit intent documentation:**
+- Architecture Decision Records (ADRs) that capture the decision, context, and consequences — not just the outcome
+- Annotated specs that explain constraints alongside requirements
+- Decision logs written during implementation, not retrospectively
+- Comments that document the "why" for non-obvious patterns — specifically the kind of decision an agent would most plausibly get wrong seeing only the code
+
+Intent documentation doesn't need to be comprehensive. It needs to cover the decisions where "locally correct but globally wrong" is a plausible failure mode. A one-paragraph ADR preventing a class of agentic errors is worth more than fifty lines of code comments on behavior that's already obvious from reading the code.
+
+See [Agentic Development](agentic-dev.md) for the "filesystem as context" pattern — keeping intent documentation in version-controlled files that agents can load when relevant, rather than relying on institutional memory that doesn't survive context resets.
+
+---
 
 ## Anti-Patterns
 

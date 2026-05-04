@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-27
+last_updated: 2026-05-04
 last_read: null
 status: unread
 ---
@@ -305,6 +305,23 @@ aipatternbook.com, 2026
 A short catalog entry that frames fitness functions specifically as the mechanism for "agents bouncing off rules" — the cleanest one-page articulation of the agent angle on the technique. Useful as the link to send a colleague who hasn't read Ford yet.
 
 Most useful for: a quick pointer when introducing the concept to teammates new to fitness functions.
+
+---
+
+## May 2026 Updates
+
+**[DataPRM: Process Reward Modeling for Silent Error Detection](https://arxiv.org/abs/2504.20015)**
+arXiv (2025–2026)
+
+A dataset and training methodology for teaching agents to detect "plausible-looking but wrong" outputs — the silent error pattern that dominates the Columbia DAPLab failure taxonomy above. DataPRM pairs agent outputs with human-labeled correctness signals at each *intermediate reasoning step*, not just final answers, enabling process reward models (PRMs) that assess step-level correctness. Agents fine-tuned on DataPRM are better at catching reasoning errors in their own chain-of-thought before they propagate to confidently-incorrect outputs. The key insight: fluency and correctness are decorrelated — the most dangerous agent outputs are wrong answers that sound exactly right. PRMs interrupt the fluency-without-accuracy failure mode.
+
+Most useful for: anyone building agents that need to self-verify, or evaluating whether agent output trustworthiness can be improved beyond instruction-tuning alone.
+
+---
+
+**Observability as evaluation.** An emerging pattern (discussed at Agentic Conf Hamburg 2026 and in multiple practitioner posts): treating **production traces as continuous eval signals**, not just debugging artifacts. Rather than running offline evals periodically, teams instrument their agent pipelines to emit structured trace events — tool calls, context snapshots, output quality scores — and run anomaly detection on those streams. When a regression appears (a drop in task completion rate, an uptick in retry loops, a shift in tool usage patterns), the observability layer catches it before it accumulates into a significant quality degradation. The Claude Code postmortem above is the canonical negative case: the regression ran undetected for a month because the team lacked continuous outcome-level monitoring. Observability-as-evaluation closes that gap by making "is my agent getting worse?" a continuously answered question, not a periodic audit.
+
+Most useful for: teams running agents in production who want regression detection faster than weekly eval runs.
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-12
+last_updated: 2026-05-04
 last_read: null
 status: unread
 ---
@@ -33,6 +33,8 @@ Your CLAUDE.md, `.cursorrules`, or AGENTS.md is the one piece of context that lo
 **The 50-instruction ceiling.** Anthropic's own research notes that models can reliably follow around 50 discrete instructions. Past that, instructions start competing for attention and less prominent ones get dropped. This isn't a soft guideline — it's a practical ceiling. If your instruction file has 80 rules, you're probably getting 50 of them followed inconsistently. Audit ruthlessly. Cut anything that's redundant with the linter, derivable from the code, or hasn't been violated in the last month.
 
 **Progressive disclosure over exhaustive lists.** Instead of enumerating every API convention in CLAUDE.md, write one line: "Read `docs/api-conventions.md` before making API changes." The agent loads the detailed guidance when it needs it, and it doesn't crowd out other instructions the rest of the time. This pattern scales — you can have deep reference material without overwhelming the always-on context.
+
+**The ratchet: every mistake becomes a rule.** Instruction files grow by accumulation of actual failures. When an agent ships broken code, deletes a test to make it pass, or misunderstands a project convention, that failure is a permanent signal. The next version of `AGENTS.md` encodes what went wrong; the next version of a hook checks for it automatically. Every line in a good instruction file should be traceable back to a specific thing that went wrong without it. The ratchet works in both directions: only add constraints when you've seen a real failure, only remove them when you're confident a capable model has made them redundant.
 
 See [Instruction Layer](instruction-layer.md) for the theory behind system prompt and rules file design.
 
@@ -166,6 +168,8 @@ Most teams running agentic development workflows have no idea whether their cont
 
 **The Augment finding.** When Augment Code ran benchmark evaluations on coding tools, identical models (Claude Opus 4.5) scored 17 problems apart across different tools. Same model. Different results. The gap wasn't capability — it was context engineering. How each tool assembled the context window, what it included, how it structured the task — that's what drove the 17-point spread. This is the most direct evidence that context engineering matters as much as model selection for practical development work.
 
+**The harness gap.** Terminal Bench 2.0 data (reported by Viv Trivedy and HumanLayer) shows Claude Opus 4.6 moving from Top 30 to Top 5 on the benchmark with no model change — only the harness changed. HumanLayer's framing: most agent failures are "skill issues" — configuration problems, not capability problems. The implication: if your agents are underperforming, look at the harness before waiting for the next model release. What's in the instruction files, how tools are scoped, what hooks are running, how tasks are sized — these drive the gap between what a model is capable of and what you actually observe.
+
 **The Claude Code leak.** In April 2026, Anthropic inadvertently exposed Claude Code's internal architecture (covered in TL;DR AI). Analysis revealed a three-layer memory architecture as their solution to context entropy, along with specialized utilities (Grep, Glob, LSP) for efficient repository navigation, file-read deduplication to reduce context bloat, structured session memory management, and forked subagents for parallel processing "without contaminating the main execution loop." This confirmed in practice what the field was converging on in theory: the engineering around the model matters as much as the model itself.
 
 **Production case study: ClickHouse.** ClickHouse published the most detailed production case study of agentic coding to date (April 2026). Key numbers: 700 pull requests for flaky test fixes in January–February alone, reducing daily CI findings from ~200 to 3-5 per 10 million tests. They use Claude Code CLI as the primary tool with Codex CLI as backup, preferring CLI agents over IDE integration because they offer broader capabilities — context management, subagent launching, web search, and build integration.
@@ -177,6 +181,20 @@ Their findings reinforce several patterns: over-specifying task requirements (ex
 **Comprehension debt.** Addy Osmani coined the term "comprehension debt" (March 2026) for the growing gap between how much code exists and how much any human genuinely understands. Unlike technical debt, it accumulates invisibly — code looks clean, tests pass, but no one truly grasps the design decisions. An Anthropic study found developers using AI for code generation scored 17% lower on comprehension (50% vs. 67%), with the largest declines in debugging and conceptual understanding. The speed asymmetry is the core problem: AI generates code far faster than humans can meaningfully review it, removing the quality gate that review traditionally provided. Mitigation: question-driven AI use outperforms pure delegation, specifications document intent that code alone can't capture, and engineers who genuinely understand systems become *more* valuable as AI volume increases, not less.
 
 **The "coding agent is dead" counterpoint.** Amp (formerly Amphion) argued in February 2026 that modern models perform well with minimal tooling — often just bash — and that the actual bottleneck is codebase organization, not agent sophistication (covered in TL;DR AI). They discontinued their IDE extensions in favor of a lightweight CLI. This is a useful corrective: if your codebase is well-organized and your context is clean, you may need less agent infrastructure than you think. The context engineering still matters — it just moves from the agent framework into your project structure.
+
+---
+
+## The Supervision Paradox
+
+Lars Faye's "The Supervision Paradox" (406 points on Hacker News, May 2026) identified a counterintuitive finding: increasing agent autonomy — letting agents execute longer chains of actions without interruption — requires *more* oversight infrastructure, not less.
+
+The instinct when adopting autonomous agents is to step back and let them run. The data says this is wrong. Faye's analysis of agent run logs showed that sessions with checkpoint intervals every 3–5 steps produced better outcomes than "let it run" sessions, even though the former required more human touch points. The reason: errors caught at step 3 cost step-3-level effort to fix. The same errors caught at step 15 cost the entire preceding 12 steps of compounded work. Failure compounds; catching it early is exponentially cheaper.
+
+The design implication: **checkpoints are context events, not interruptions.** Each checkpoint is an opportunity to reinitialize the agent's understanding of what it's doing and why — correcting context drift before it compounds. The best oversight systems don't slow agents down; they reset context efficiently enough that the agent benefits from a clean state rather than fighting accumulated noise.
+
+This connects directly to the 35-minute degradation curve: the curve exists precisely because unchecked sessions let context drift and noise accumulate. Structured checkpoints are the mechanism for defeating the curve, not a concession that agents need hand-holding.
+
+The practical question is what a 3–5 step checkpoint looks like: structured progress reports written to files (which the agent reads back to reinitialize), human review gates at task boundaries, or automated harness checks that verify invariants before the next task starts. The overhead of each checkpoint is real; the alternative — catching compounded errors at step 20 — is worse.
 
 ---
 

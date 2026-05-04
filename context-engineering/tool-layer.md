@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-12
+last_updated: 2026-05-04
 last_read: null
 status: unread
 ---
@@ -57,6 +57,8 @@ MCP provides both tools (actions the model can take) and resources (data the mod
 
 **The MCP context cost.** A practical warning from Apideck (covered in TL;DR Dev, March 2026): MCP servers with extensive tool definitions can consume tens of thousands of tokens just for the tool schemas, before any actual work begins. Their analysis found that agents using heavy MCP configurations suffered from token bloat that crowded out working context. The alternative they propose — CLI-based tools with progressive discovery through `--help` commands — trades organization-wide authentication for dramatically lower context overhead. This is a real engineering tradeoff: MCP's portability and authentication benefits come at a token cost that scales with the number of tools exposed. Stripe's approach with their "Toolshed" MCP server (500+ tools across agents) suggests the answer at scale is dynamic tool loading rather than exposing everything at once.
 
+**MCP breadcrumb navigation.** An underused MCP pattern: tools returning navigation hints alongside their primary output. Instead of requiring an agent to hold a global map of all available tools upfront, individual tool calls return pointers to related MCP resources — `"See also: resource://docs/api-reference"` or `"Related tool: analyze_schema"`. The agent follows threads organically rather than front-loading a complete tool catalogue. This trades the token cost of comprehensive tool schemas for a discovery-on-demand model that scales better as MCP server complexity grows (taoofmac, May 2026).
+
 ---
 
 ## The Tool Selection Problem
@@ -78,6 +80,7 @@ Strategies for managing large tool sets:
 - **Dynamic tool loading**: only expose tools relevant to the current task or phase of work. If you're in a planning phase, planning tools are available. Execution tools come later.
 - **Tool categories**: group related tools so the model navigates a hierarchy rather than a flat list. Finding the right category first narrows the decision space before any individual tool selection.
 - **Scoped availability**: explicitly different tools at different lifecycle stages. Birgitta Boeckeler's observation about coding agents captures this well: tool availability is a steering mechanism. Which tools are available communicates what's appropriate right now, without requiring explicit instructions about it.
+- **Context routing**: SwirlAI's "State of Context Engineering in 2026" identifies this as a distinct pattern — injecting different subsets of available context depending on which agent in a pipeline is receiving it. A planning agent gets high-level specs and constraints; an implementation agent gets code details and task descriptions; a review agent gets both plus execution history. Context routing controls *what knowledge* each agent role receives, distinct from dynamic tool loading (which controls capability). Each agent's context stays optimized for its specific job rather than front-loading everything to everyone.
 
 ---
 
@@ -92,6 +95,18 @@ Manus's solution is to define all tools in the schema upfront and use a state ma
 The schema is stable (cache-friendly). The behavior is dynamic (tools are contextually scoped). You get both benefits without paying the reprocessing cost.
 
 This is the kind of optimization that matters at scale. In early development you probably won't notice. Once you're running long multi-turn agentic sessions with large tool sets, cache efficiency becomes a real performance variable.
+
+---
+
+## Code Mode: Read/Write Phase Declarations
+
+LeanIX's engineering blog (May 2026) documented a pattern that complements the masking approach: **code mode declarations**, where an agent explicitly announces its current phase — analysis or implementation — at the start of each turn.
+
+The mechanism: a tool (`set_mode(mode: "read" | "write")`) that marks agent intent. When in read mode, write tools are soft-blocked — still callable, but the system prompt emits a warning before any mutation occurs. LeanIX found this reduced unintended writes by ~60% in their agentic pipeline, because agents were accidentally triggering file edits during what were intended as exploratory tool calls.
+
+The deeper value is legibility. When an agent declares its mode, the human reviewer immediately knows whether to expect mutations. A read-mode turn that returns a file diff is a red flag worth investigating; a write-mode turn that returns no changes might signal a problem too. Mode declarations make intent auditable without requiring the reviewer to trace every tool call.
+
+Implement using the Manus masking pattern: define both read and write tools upfront (keeping the KV-cache stable), then use a system prompt flag to soft-block write tools when the agent is in analysis mode. The schema stays constant; the behavioral constraint changes.
 
 ---
 
