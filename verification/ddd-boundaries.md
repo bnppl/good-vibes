@@ -1,4 +1,7 @@
 ---
+title: "DDD Boundaries"
+parent: "Verification"
+nav_order: 5
 last_updated: 2026-04-27
 last_read: null
 status: unread

@@ -1,4 +1,7 @@
 ---
+title: "Augment Intent"
+parent: "SDD Frameworks"
+nav_order: 5
 last_updated: 2026-04-02
 last_read: null
 status: unread

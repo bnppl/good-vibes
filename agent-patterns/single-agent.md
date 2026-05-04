@@ -1,4 +1,7 @@
 ---
+title: "Single-Agent Patterns"
+parent: "Agent Architecture Patterns"
+nav_order: 1
 last_updated: 2026-04-03
 last_read: null
 status: unread

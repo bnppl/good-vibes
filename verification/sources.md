@@ -1,4 +1,7 @@
 ---
+title: "Sources"
+parent: "Verification"
+nav_order: 10
 last_updated: 2026-05-04
 last_read: null
 status: unread

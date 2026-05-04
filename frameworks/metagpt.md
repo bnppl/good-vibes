@@ -1,4 +1,7 @@
 ---
+title: "MetaGPT / MGX"
+parent: "SDD Frameworks"
+nav_order: 6
 last_updated: 2026-04-02
 last_read: null
 status: unread

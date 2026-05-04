@@ -1,4 +1,7 @@
 ---
+title: "Production Patterns"
+parent: "Agent Architecture Patterns"
+nav_order: 4
 last_updated: 2026-04-03
 last_read: null
 status: unread

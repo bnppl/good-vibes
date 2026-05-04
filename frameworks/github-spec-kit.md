@@ -1,4 +1,7 @@
 ---
+title: "GitHub Spec Kit"
+parent: "SDD Frameworks"
+nav_order: 2
 last_updated: 2026-04-04
 last_read: null
 status: unread

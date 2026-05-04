@@ -1,4 +1,7 @@
 ---
+title: "Tool Engineering"
+parent: "Context Engineering"
+nav_order: 7
 last_updated: 2026-04-12
 last_read: null
 status: unread

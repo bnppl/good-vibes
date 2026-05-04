@@ -1,4 +1,7 @@
 ---
+title: "Tool Layer"
+parent: "Context Engineering"
+nav_order: 4
 last_updated: 2026-05-04
 last_read: null
 status: unread

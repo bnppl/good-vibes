@@ -1,4 +1,7 @@
 ---
+title: "Foundations"
+parent: "Context Engineering"
+nav_order: 1
 last_updated: 2026-04-06
 last_read: 2026-04-06
 status: read

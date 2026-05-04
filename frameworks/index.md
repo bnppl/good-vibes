@@ -1,4 +1,5 @@
 ---
+has_children: true
 title: SDD Frameworks
 nav_order: 4
 last_updated: 2026-05-04

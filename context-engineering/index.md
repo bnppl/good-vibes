@@ -1,4 +1,5 @@
 ---
+has_children: true
 title: Context Engineering
 nav_order: 2
 last_updated: 2026-04-02

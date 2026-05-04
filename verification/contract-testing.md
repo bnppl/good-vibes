@@ -1,4 +1,7 @@
 ---
+title: "Contract Testing"
+parent: "Verification"
+nav_order: 6
 last_updated: 2026-04-27
 last_read: null
 status: unread

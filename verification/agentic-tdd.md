@@ -1,4 +1,7 @@
 ---
+title: "Agentic TDD"
+parent: "Verification"
+nav_order: 1
 last_updated: 2026-04-06
 last_read: null
 status: unread

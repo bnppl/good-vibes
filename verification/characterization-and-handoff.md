@@ -1,4 +1,7 @@
 ---
+title: "Characterization & Handoff"
+parent: "Verification"
+nav_order: 9
 last_updated: 2026-04-27
 last_read: null
 status: unread

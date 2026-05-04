@@ -1,4 +1,5 @@
 ---
+has_children: true
 title: Verification
 nav_order: 5
 last_updated: 2026-04-27

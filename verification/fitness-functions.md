@@ -1,4 +1,7 @@
 ---
+title: "Fitness Functions"
+parent: "Verification"
+nav_order: 7
 last_updated: 2026-04-27
 last_read: null
 status: unread
