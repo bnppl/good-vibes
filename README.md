@@ -1,3 +1,8 @@
+---
+title: About
+nav_order: 7
+---
+
 # good-vibes
 
 A personal learning wiki on **context engineering** and **spec-driven development**, plus the Claude Code tooling used to maintain it.
@@ -35,7 +40,7 @@ status: unread             # unread | in-progress | read
 
 ## The `/study` command
 
-`/study` is a Claude Code slash command defined in [`claude-config/commands/study.md`](claude-config/commands/study.md). It turns the wiki into an active study partner rather than a passive pile of markdown. Run it inside Claude Code with optional arguments:
+`/study` is a Claude Code slash command defined in [`claude-config/commands/study.md`](https://github.com/bnppl/good-vibes/blob/main/claude-config/commands/study.md). It turns the wiki into an active study partner rather than a passive pile of markdown. Run it inside Claude Code with optional arguments:
 
 | Command | Mode | What it does |
 |---|---|---|
@@ -70,7 +75,7 @@ ln -s ../../claude-config/commands/study.md .claude/commands/study.md
 
 ## The `agentic-alignment` skill
 
-A Claude Code skill defined in [`skills/agentic-alignment/SKILL.md`](skills/agentic-alignment/SKILL.md). It's **brownfield-focused**: the job is to take a codebase that already exists, already has conventions, and already has history, and make it work better with AI coding agents.
+A Claude Code skill defined in [`skills/agentic-alignment/SKILL.md`](https://github.com/bnppl/good-vibes/blob/main/skills/agentic-alignment/SKILL.md). It's **brownfield-focused**: the job is to take a codebase that already exists, already has conventions, and already has history, and make it work better with AI coding agents.
 
 ### When to use it
 
