@@ -2,7 +2,7 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-04-27
+last_updated: 2026-05-06
 last_read: null
 status: unread
 ---
@@ -23,7 +23,11 @@ Tooling exists in every major language now: **PIT** for Java, **Stryker** for Ja
 
 Where example-based tests enumerate cases — `add(2, 3) == 5`, `add(0, 0) == 0`, `add(-1, 1) == 0` — **property-based testing** specifies the rule that must hold across an entire input space, then asks the framework to generate inputs trying to break it. The property `for all integers a, b: add(a, b) == add(b, a)` does not name any specific inputs; the framework generates hundreds, including the pathological ones — `MAX_INT`, empty strings, NaN, surrogate pairs, the integer that triggers your overflow.
 
-The canonical tools are **Hypothesis** (Python, by David MacIver), **fast-check** (JavaScript/TypeScript), the original **QuickCheck** (Haskell, with ports to nearly every language), and **PropEr** (Erlang). New entrants worth tracking include the **Hegel** universal PBT protocol (133 HN points on its April 2026 launch) and Antithesis's **Bombadil**, which extends the property-based approach to web UIs.
+The canonical tools are **Hypothesis** (Python, by David MacIver), **fast-check** (JavaScript/TypeScript), the original **QuickCheck** (Haskell, with ports to nearly every language), and **PropEr** (Erlang). New entrants worth tracking include the **[Hegel](https://hegel.dev) universal PBT protocol** (133 HN points on its April 2026 launch) and Antithesis's **[Bombadil](https://github.com/antithesishq/bombadil)**, which extends the property-based approach to web UIs.
+
+**Hegel** addresses a structural problem in polyglot codebases: each language has its own PBT tools (Hypothesis, fast-check, QuickCheck), each with its own API and output format. An agent working across a JavaScript frontend and a Python backend has to context-switch between two completely different PBT idioms. Hegel defines a language-agnostic wire protocol for property descriptions, counterexample reporting, and shrinking results, so agents can reason about PBT uniformly across the stack. For teams running multi-language codebases with agents that span services, this collapses what would otherwise be a two-toolchain problem into one.
+
+**Bombadil** uses a *specification language* for defining UI invariants — you write assertions about how the UI should behave (e.g., "after submitting a valid order, the confirmation page always displays an order ID"), and Bombadil explores the UI autonomously to find inputs that violate them. The key difference from scripted automation: you do not write test scripts, you write behavioral specifications. Bombadil finds the counterexample; you did not have to enumerate the path to reach it. The HN thread on its launch surfaced the main skepticism: browsers are nondeterministic, and properties on stateful UIs are hard to write in a way that's stable across renders. Both objections are real; the Antithesis team's responses in-thread are worth reading. The use case it's strongest for today is stateless UI components with clear invariants, not full multi-step user flows.
 
 Why this matters specifically with agents: agents enumerate the obvious examples. They write three or four cases — happy path, one edge, maybe a null check — drawn from the typical distribution of code they were trained on. Properties cover the input spaces the agent did not think of, because the framework, not the agent, generates the inputs. This connects directly to [bdd-for-agents](bdd-for-agents.md): a Gherkin scenario is one example dressed up in narrative; a property is the universal-quantifier version of the same intent. "Given a non-empty cart, when the user checks out, the total equals the sum of line items" is not a scenario — it is a property, and it should be tested with a generator producing thousands of carts.
 
@@ -48,6 +52,8 @@ For the mutation-survivor loop, Alex Op's "Mutation Testing with AI Agents" piec
 ## 2026 Findings
 
 The empirical picture as of early 2026 is clearer than it was a year ago. The arXiv NeurIPS 2025 data shows agent-generated property-based tests are credible — 56% valid bug reports across 100 packages is not noise, and the Anthropic Red Team writeup confirms the workflow is now baked into internal agent harnesses rather than living in research demos. The honest read of the same evidence: agents do **not** reliably generate mutation-surviving tests *without explicit prompting* about what the mutations would be, but they will write surprisingly strong property tests when asked specifically to name an invariant. The implication is that **prompt design — and a fitness function on kill rate — is the difference between a theatrical safety net and a real one**. The tooling no longer limits you. The instruction layer ([instruction-layer](../context-engineering/instruction-layer.md)) and the orchestration layer ([orchestration-layer](../context-engineering/orchestration-layer.md)) do.
+
+The **[DataPRM paper](https://arxiv.org/abs/2504.20015)** (2025–2026) adds a relevant finding from a different angle: it trains process reward models (PRMs) on agent outputs labeled at each *reasoning step*, not just final answers. The key insight is that fluency and correctness are decorrelated — the most dangerous agent outputs are wrong answers that sound exactly right, because they passed every surface-level check while encoding a subtle error in reasoning. Applied to test quality: an agent can write a test that reads cleanly, uses correct syntax, and follows naming conventions while asserting something that is trivially true and would survive any mutation. PRMs trained on DataPRM-style signals catch this by evaluating intermediate reasoning steps, not just final output. For teams building agent evaluation infrastructure, DataPRM signals a direction: assess *how* the agent reasoned about what to test, not just whether the test compiles and passes.
 
 ## Traps
 

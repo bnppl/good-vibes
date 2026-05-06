@@ -2,7 +2,7 @@
 title: "Comprehension Debt"
 parent: "Verification"
 nav_order: 2
-last_updated: 2026-04-06
+last_updated: 2026-05-06
 last_read: null
 status: unread
 ---
@@ -15,7 +15,9 @@ Unlike traditional technical debt, which manifests as friction (slow builds, mes
 
 ## The 2026 Crisis: The Speed Asymmetry
 
-AI generates code 5–7x faster than humans can comprehend it. This creates a "review bottleneck" where traditional peer review fails because the volume of code outpaces the human ability to audit it. An Anthropic study (Jan 2026) found that developers using AI for passive delegation scored **17% lower** on debugging and comprehension tests.
+AI generates code 5–7x faster than humans can comprehend it. This creates a "review bottleneck" where traditional peer review fails because the volume of code outpaces the human ability to audit it. An Anthropic study (Jan 2026) found that developers using AI for passive delegation scored **17% lower** on debugging and comprehension tests compared to developers who remained actively engaged in reviewing agent reasoning, not just accepting outputs.
+
+Comprehension debt also **compounds across sessions** in a way technical debt does not. When Session B cannot understand code Session A produced, it works around it or duplicates it — adding more code nobody understands on top of code nobody understands. Session C inherits both. The codebase grows; the shared theory shrinks. This spiral is the real crisis, not any single session's output quality.
 
 ## Mitigation Strategies: Active Inquiry
 
@@ -34,7 +36,10 @@ Senior engineers or reviewers require the author to walk through the logic of AI
 For large agentic sessions, developers are required to fully read (not skim) the three files with the largest diffs, tracing complex execution paths end-to-end to rebuild the mental model.
 
 ### 4. Declarative Orchestration
-Shifting the developer's role from "line-by-line coder" to "architectural supervisor." This involves writing rigorous specifications and interfaces *first*, then using AI only to fill in the implementation details.
+Shifting the developer's role from "line-by-line coder" to "architectural supervisor." This involves writing rigorous specifications and interfaces *first*, then using AI only to fill in the implementation details. Birgitta Böckeler's Thoughtworks piece on spec-driven development (2025) frames this as the structural complement to comprehension management: when the spec exists before the code, the human's comprehension obligation is concentrated on the spec — which is short, intentional, and written in human terms — rather than on the generated implementation.
+
+### 5. Frequent Intentional Compaction
+Dexter Horthy's [Advanced Context Engineering](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md) (ACE-FCA) writeup describes a workflow that counteracts comprehension debt by structuring *how* the agent uses its context window: split work into **Research → Plan → Implement** cycles, deliberately compacting between each phase. Keeping context utilization in the 40–60% range preserves room for the agent to reason, rather than pattern-matching under token pressure. The key comprehension benefit: the human reviews and approves the *plan* artifact before implementation begins — the plan is the comprehension surface, not the diff. Implementation surprises are caught early because the human signed off on the intended approach, and any deviation from that plan is visible as a delta.
 
 ## Quarterly Cognitive Audits
 

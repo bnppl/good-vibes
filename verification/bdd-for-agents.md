@@ -2,7 +2,7 @@
 title: "BDD for Agents"
 parent: "Verification"
 nav_order: 4
-last_updated: 2026-04-27
+last_updated: 2026-05-06
 last_read: null
 status: unread
 ---
@@ -27,7 +27,9 @@ The next session does not read your code first. It reads what you tell it to rea
 
 They are cheap because they are short — a typical scenario fits in 15 lines and conveys what 200 lines of source obscure. They are high-signal because they are written in domain language, which is exactly what the agent needs to disambiguate intent before it touches code. And they are honest in a way that markdown docs are not: a stale scenario fails CI, while a stale README just sits there lying. This is the discipline [instruction-layer](../context-engineering/instruction-layer.md) keeps pointing at — instructions that cannot rot silently are worth more than instructions that can.
 
-There is a second-order effect worth naming. Scenarios pay for themselves twice: once when they drive the original implementation, and again when they are loaded as context for the next session. Most documentation only ever pays once, if at all. Living documentation amortized across sessions is the lowest-cost form of cross-session memory available to a team in 2026. The TestQuality practitioner write-up on Gherkin in 2026 frames this as the main reason the format has outlived several waves of "Gherkin is dead" commentary — the LLM-readability of `.feature` files turned out to be the killer feature, not the human-readability that originally sold it.
+There is also a structural reason Gherkin is more LLM-readable than prose documentation: it has a fixed grammar (`Given/When/Then`), a consistent vocabulary (the ubiquitous language of the domain), and produces structured assertions an agent can compare against its own planned behavior. Unstructured prose requires interpretation; Gherkin does not. The TestQuality practitioner write-up on Gherkin in 2026 frames this as the main reason the format has outlived several waves of "Gherkin is dead" commentary — the LLM-readability of `.feature` files turned out to be the killer feature, not the human-readability that originally sold it.
+
+There is a second-order effect worth naming. Scenarios pay for themselves twice: once when they drive the original implementation, and again when they are loaded as context for the next session. Most documentation only ever pays once, if at all. Living documentation amortized across sessions is the lowest-cost form of cross-session memory available to a team in 2026.
 
 A practical note: keep feature files near the code they describe, not in a sibling `docs/` tree. The agent's file-discovery heuristics weight proximity heavily, and so do humans skimming a PR. A scenario that lives next to its module gets read; one buried under `docs/specs/v3/legacy/` does not.
 
@@ -64,7 +66,7 @@ The classic stack still anchors the ecosystem: **Cucumber** (Ruby, JavaScript, J
 
 - **Cucumber + Playwright + agent loop.** The Levi9 piece (2026) walks through a hybrid pipeline where an agent authors Playwright-backed step definitions from natural-language scenarios, runs them inside an Azure DevOps pipeline, and self-heals broken locators when the UI shifts. The interesting part is not the locator-healing (every test framework now ships some flavor of that) but the boundary it draws: the agent owns step definitions and locators; humans own scenarios. That boundary maps cleanly onto the outside-in workflow above.
 
-- **`touring_test`.** A Cucumber extension (worksonmymachine.ai, 2026) where an agent reads screenshots and tries to satisfy Gherkin steps from outside the test runner, the way a human exploratory tester would. This is AI-native BDD: the scenario stays declarative, but the executor is a vision-capable agent rather than a Selenium driver. The use case is usability and "does this actually work end-to-end" coverage that scripted automation routinely misses. Worth tracking even if you do not adopt it — it signals where the executable-spec layer is heading.
+- **`touring_test`.** A Cucumber extension (worksonmymachine.ai, 2026) where an agent reads screenshots and tries to satisfy Gherkin steps from outside the test runner, the way a human exploratory tester would. This is AI-native BDD: the scenario stays declarative, but the executor is a vision-capable agent rather than a Selenium driver. The key property that distinguishes it from scripted automation: when `touring_test` fails a step, it can explain *why* in natural language — "the submit button was visible but non-interactive because the form was still loading" — rather than throwing a locator exception. That explanation is more useful to the next session than a stack trace. The use case is usability and "does this actually work end-to-end" coverage that scripted automation routinely misses. Worth tracking even if you do not adopt it — it signals where the executable-spec layer is heading.
 
 - **In-IDE scenario authoring.** Most agent-aware IDEs in 2026 will offer to draft scenarios from a ticket title and the surrounding code. Treat these drafts as starting points, not commits — they tend toward over-specification and imperative phrasing because the LLM is pattern-matching from training data that is mostly bad Gherkin.
 

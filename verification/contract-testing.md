@@ -2,7 +2,7 @@
 title: "Contract Testing"
 parent: "Verification"
 nav_order: 6
-last_updated: 2026-04-27
+last_updated: 2026-05-06
 last_read: null
 status: unread
 ---
@@ -36,7 +36,7 @@ This is the most direct mechanical answer to the silent contract break described
 
 Pact is heavy. For a lot of boundaries — especially internal HTTP between two services your team owns — you want the schema-first version: **OpenAPI** for REST, **GraphQL schemas**, **Protobuf** for gRPC, or just **shared TypeScript types** at the package boundary. Less ceremony than Pact, weaker guarantees (you cover *shape*, not *behavior*; you confirm `userId` is a string, not that it's the *right* string), but the right starting point for most teams and most boundaries.
 
-The 2026 tool worth knowing here is [**PactFlow Drift**](https://pactflow.io/blog/schemas-can-be-contracts/) (Mar 2026), which validates live API behavior against an OpenAPI spec in CI. It treats the spec as the contract and the running API as the implementation under test, and fails the build when they drift. It's the operational answer to the perennial "the OpenAPI doc is out of date" problem — by gating on it, you make the doc *true*.
+The 2026 tool worth knowing here is [**PactFlow Drift**](https://pactflow.io/blog/schemas-can-be-contracts/) (Mar 2026), which validates live API behavior against an OpenAPI spec in CI. It treats the spec as the contract and the running API as the implementation under test, and fails the build when they drift. It's the operational answer to the perennial "the OpenAPI doc is out of date" problem — by gating on it, you make the doc *true*. [**Spectral**](https://stoplight.io/open-source/spectral) is the complementary open-source tool for the authoring side: it lints OpenAPI and AsyncAPI documents against configurable rulesets in CI, catching malformed schemas, missing descriptions, or violated naming conventions before the spec ships. Drift detects runtime divergence; Spectral enforces spec quality upstream. Both are worth wiring into CI if you publish an OpenAPI document.
 
 The complementary research direction is the arXiv paper [*Making REST APIs Agent-Ready: From OpenAPI to Model Context Protocol Servers*](https://arxiv.org/html/2507.16044v1) (Jul 2025), which bridges OpenAPI specs to MCP tool surfaces. The implication for agentic dev is sharper than it looks: when an agent generates a client by reading your OpenAPI spec — directly, or via an MCP server derived from it — that spec is *immediately* the contract that future agent sessions will rely on. If it drifts, every downstream agent session inherits the drift. Schema-first contracts stop being "documentation hygiene" and start being load-bearing infrastructure.
 
@@ -51,11 +51,11 @@ Contracts are the only technique that **fails the consumer's CI when the provide
 
 ## Pact Broker Workflow at Team Scale
 
-The Pact broker is the piece that makes consumer-driven contracts work at scale. It stores published contracts, tracks which consumer versions expect which provider versions, and exposes a `can-i-deploy` check that PRs and deploy pipelines query before shipping. If deploying provider v3 would break consumer v7's expectations, `can-i-deploy` returns false and the deploy is blocked. The broker is the gate; without it, contracts are decorative.
+The Pact broker is the piece that makes consumer-driven contracts work at scale. It stores published contracts, tracks which consumer versions expect which provider versions, and exposes a `can-i-deploy` check that PRs and deploy pipelines query before shipping. The check takes three inputs: the participant name (e.g., `billing-service`), the version being deployed, and the target environment (e.g., `production`). It returns a boolean and, on failure, a precise explanation: "consumer `invoice-ui` v4.2.1 expects `billing-service` to return a `taxRate` field that your candidate version no longer emits." If deploying provider v3 would break consumer v7's expectations, `can-i-deploy` returns false and the deploy is blocked. The broker is the gate; without it, contracts are decorative.
 
 The 2026 piece worth flagging is the [**PactFlow MCP Server**](https://pactflow.io/blog/pactflow-mcp-server/) — the most concrete agent-aware contract tooling shipped to date. It exposes Pact operations as MCP tools so agents in Claude Code, Cursor, or VS Code can generate Pact tests, review them, and maintain the broker state inside the dev loop. The point isn't that agents now write Pact tests for free; it's that the *contract artifact* — the consumer's published expectation — becomes a first-class thing the agent can read, write, and reason about. Session B's agent can ask the broker, "what does the current consumer expect from this provider?" before touching the provider, instead of inferring it from the code.
 
-The cleanest articulation of *why this is now non-optional* is the PactFlow [**Bridging Development Gaps with AI-Augmented Contract Testing**](https://pactflow.io/blog/ai-automation-part-3/) series. The argument: agents generate APIs and clients independently and at machine speed; the human-mediated coordination that used to keep both sides in sync (standups, design docs, "did you tell the iOS team?") doesn't scale to that velocity. Contracts are now mandatory because contracts are the only coordination mechanism that runs at machine speed too.
+The cleanest articulation of *why this is now non-optional* is PactFlow's three-part **[Bridging Development Gaps with AI-Augmented Contract Testing](https://pactflow.io/blog/ai-automation-part-3/)** series. Part 1 covers agents authoring contracts from OpenAPI specs. Part 2 covers contract lifecycle management (who owns the contract, how it evolves, what triggers a re-verification). Part 3, the most recent, addresses multi-team coordination: agents generate APIs and clients independently and at machine speed; the human-mediated coordination that used to keep both sides in sync (standups, design docs, "did you tell the iOS team?") doesn't scale to that velocity. Contracts are now mandatory because contracts are the only coordination mechanism that runs at machine speed too.
 
 ## Traps
 

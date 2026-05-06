@@ -2,7 +2,7 @@
 title: "Agentic TDD"
 parent: "Verification"
 nav_order: 1
-last_updated: 2026-04-06
+last_updated: 2026-05-06
 last_read: null
 status: unread
 ---
@@ -20,9 +20,9 @@ The most significant shift in professional agentic workflows is treating tests n
 
 ## Key Trends in 2026
 
-- **TDAD (Test-Driven Agentic Development):** A formalized protocol that uses graph-based impact analysis to improve issue resolution. Research shows that providing specific test context to agents is 40% more effective than general instruction.
-- **Autonomous Quality Assurance (AQA):** Independent QA agents that observe application updates and modify test coverage on the fly, handling up to 60% of regression testing without human intervention.
-- **Self-Healing Test Suites:** 2026 agents can automatically update test selectors and assertions when UI changes or minor refactors occur, significantly reducing the "maintenance tax."
+- **TDAD (Test-Driven Agentic Development):** A formalized protocol that uses graph-based impact analysis to improve issue resolution. The core mechanism: rather than asking an agent to "fix issue #123," you surface the specific tests that currently fail due to that issue, and the agent targets those directly. Research shows that providing specific test context to agents is 40% more effective than general instruction — because the agent has an unambiguous success criterion rather than a prose description it must interpret.
+- **Autonomous Quality Assurance (AQA):** Independent QA agents that observe application updates and modify test coverage on the fly, handling up to 60% of regression testing without human intervention. These agents watch for behavior drift rather than just green/red test status.
+- **Self-Healing Test Suites:** 2026 agents can automatically update test selectors and assertions when UI changes or minor refactors occur, significantly reducing the "maintenance tax." Note the narrow scope: self-healing is appropriate for *structural* changes (a renamed CSS class, a moved DOM element) but not *behavioral* ones (a changed button label that signals a changed user flow). Agents that heal behavioral changes without human review are concealing regressions, not fixing them.
 
 ## The "TDD Paradox" (March 2026 Finding)
 
@@ -39,7 +39,11 @@ A study by Martin Fowler's team found that simply adding "do TDD" to a system pr
     2. Dispatch agent with the command: "Make this test pass."
     3. Verify the pass and refactor using a fresh agent context.
 - **Negative Testing as a Priority:** Agents are naturally "optimistic." Explicitly requiring tests for error states, null values, and security boundaries is the only way to ensure robust output.
-- **Agentic Hooks:** Use pre-tool hooks (like those in Gemini CLI or Claude Code) to physically block agents from writing to `src/` unless they have successfully executed a failing test in the current session.
+- **Agentic Hooks:** Claude Code's `PreToolUse` hook fires before any tool call, including file writes. A hook configured to check for at least one failing test in the session before allowing writes to `src/` is a hard gate — the agent physically cannot produce untested code. Gemini CLI offers equivalent `before_tool` hooks. The pattern works best when the hook outputs a clear error message pointing the agent back to the test-first requirement, rather than silently blocking.
+
+## A Green Suite Is Not a Safe Suite
+
+The "TDD Paradox" is partly a test-quality problem: an agent that writes shallow tests — ones that execute a function but assert almost nothing meaningful about its behavior — can reach green with very little verification value. The kill rate metric from mutation testing (see [test-the-tests](test-the-tests.md)) is the honest measure of whether the suite would catch bugs. Line coverage tells you the test *ran* the code; kill rate tells you the test *would notice* if the code changed. A 90% line-coverage suite with a 35% kill rate is theater. Asking the agent to write tests that cover specific invariants, error conditions, and boundary values — and then running mutation testing on the result — is the only reliable way to confirm the safety net is real.
 
 ---
 
