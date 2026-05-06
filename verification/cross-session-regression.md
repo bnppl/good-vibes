@@ -2,7 +2,7 @@
 title: "Cross-Session Regression"
 parent: "Verification"
 nav_order: 3
-last_updated: 2026-04-27
+last_updated: 2026-05-06
 last_read: null
 status: unread
 ---
@@ -29,7 +29,7 @@ Session B is asked for a feature that needs a utility. It does not find the exis
 
 Session A wrote `formatRelativeTime(date)` in `lib/time.ts` four months ago—handles timezones, pluralization, the "just now" threshold. Session B is building a notification panel and needs to render "3 minutes ago." It searches `notifications/` and the top of `lib/`, sees nothing obvious, and writes `timeAgo(date)` inline in the component. The two functions agree for the first six months. Then a daylight-saving edge case is fixed in `formatRelativeTime` and not in `timeAgo`, because no one knows `timeAgo` exists. The notification panel starts showing "in 1 hour" for events that just happened, twice a year, in two timezones.
 
-Dexter Horthy's [Advanced Context Engineering](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md) writeup describes this as the predictable cost of "frequent intentional compaction"—every compaction is a chance for the agent to forget that something already exists, and the larger the codebase the more likely re-implementation becomes. Two implementations of the same concept are worse than one bad one, because divergence is now invisible.
+Dexter Horthy's [Advanced Context Engineering](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/ace-fca.md) writeup describes this as the predictable cost of "frequent intentional compaction"—every compaction is a chance for the agent to forget that something already exists, and the larger the codebase the more likely re-implementation becomes. The same discipline that keeps context windows from overflowing (keeping utilization in the 40–60% range, compacting between research and implementation) is structurally the same discipline that drops knowledge of existing utilities from the window. Two implementations of the same concept are worse than one bad one, because divergence is now invisible.
 
 ### 3. Invariant Violation
 
@@ -47,7 +47,7 @@ This is the speed asymmetry from [comprehension-debt](comprehension-debt.md): AI
 
 ## Why Context Engineering Alone Is Insufficient
 
-Context engineering—the discipline of loading the right facts into the next session's window—reduces the probability of cross-session regression by making it more likely the agent sees the existing utility, knows the contract shape, or reads the invariant rule. But it is a probabilistic input, not a guarantee. A retrieval system can miss. A CLAUDE.md can grow stale. A skill file can be loaded but ignored under token pressure. Context engineering raises the floor; it does not install a ceiling. Verification is the deterministic gate: a property-based test, a contract assertion, a fitness function, or an architecture rule that fails the build when the invariant is violated, regardless of whether the agent "knew" about it. Both layers are needed, and they fail in different ways—context engineering fails open (the agent proceeds without the fact), verification fails closed (the build refuses the change). Module 4 is about the second layer.
+Context engineering—the discipline of loading the right facts into the next session's window—reduces the probability of cross-session regression by making it more likely the agent sees the existing utility, knows the contract shape, or reads the invariant rule. But it is a probabilistic input, not a guarantee. A retrieval system can miss. A CLAUDE.md can grow stale. A skill file can be loaded but ignored under token pressure. And optimizing context utilization (the 40–60% range Horthy recommends) means compressing content out of the window — which creates a systematic blind spot for facts the agent *did* know earlier in a session but can no longer reference. Context engineering raises the floor; it does not install a ceiling. Verification is the deterministic gate: a property-based test, a contract assertion, a fitness function, or an architecture rule that fails the build when the invariant is violated, regardless of whether the agent "knew" about it. Both layers are needed, and they fail in different ways—context engineering fails open (the agent proceeds without the fact), verification fails closed (the build refuses the change). Module 4 is about the second layer.
 
 ## What This Module Covers
 

@@ -2,7 +2,7 @@
 title: "DDD Boundaries"
 parent: "Verification"
 nav_order: 5
-last_updated: 2026-04-27
+last_updated: 2026-05-06
 last_read: null
 status: unread
 ---
@@ -49,6 +49,8 @@ Ubiquitous language was always Evans's deepest idea: the words the domain expert
 
 The dev.to "DDD in the AI-Driven Era" post (2025, AWS Heroes) puts the case bluntly: DDD vocabulary is *more* valuable in the AI era because agents need explicit ubiquitous-language anchors to stay on the rails. The DDD Academy's 2025 piece on strategic design with LLMs goes a step further and uses the agent itself to *discover* the language during event-storming workshops, then locks the result into the glossary. Either direction works; what doesn't work is leaving the language implicit.
 
+The [Bardia Khosravi piece on backend coding rules for AI agents](https://medium.com/@bardia.khosravi/backend-coding-rules-for-ai-coding-agents-ddd-and-hexagonal-architecture-ecafe91c753f) (2026) gives a concrete example of what a DDD-flavored AGENTS.md-style document looks like: each entry ties a domain term to its code location and the layer constraints that apply to it. Entries like "Order (aggregate): `domain/orders/Order.ts`, no infrastructure imports" and "PaymentGateway (port): `domain/payments/PaymentGateway.ts`, implemented only in `infrastructure/`" give the agent the vocabulary and the layer rules in a single line. Worth lifting the format directly for your own codebase.
+
 This ties directly to the knowledge layer ([knowledge-layer](../context-engineering/knowledge-layer.md)). The glossary is not just documentation — it is the index. When the agent is looking for "the thing that handles refunds," the term it searches for had better be the term in the code. Otherwise it finds nothing and confidently writes a parallel implementation.
 
 ## Conway's Law for Agent Topology
@@ -56,6 +58,8 @@ This ties directly to the knowledge layer ([knowledge-layer](../context-engineer
 Conway's Law: systems mirror the communication structures of the organizations that build them. The agent corollary is a single sentence worth tattooing on the inside of your monitor: **codebases mirror the session boundaries used to build them.**
 
 Every session is a communication structure of one. Each session has its own loaded context, its own working set of files, its own implicit theory of what the system is about. The code that comes out of a session is shaped by that boundary whether you chose it or not. Bounded contexts are the deliberate version of choosing your session boundaries; ad-hoc session splits ("let's just have it do this real quick") are the accidental version.
+
+The **inverse Conway maneuver** — deliberately choosing an organizational structure to produce a target architecture — has a direct agent analog: choose your session boundaries to produce your target bounded-context decomposition. If you want `billing` and `identity` to be separate bounded contexts with a clean anti-corruption layer between them, never run a session that spans both. The session boundary enforces the architectural boundary. A session that "just grabs the user's email from the identity service while we're here" is how the ACL collapses and the vocabulary pollutes.
 
 If you don't choose, the codebase will reveal your sessions anyway. It will show up as inconsistency between modules that should look the same, duplication where one session didn't know the other had already solved a problem, and uncoordinated rewrites where two sessions independently decided the existing approach was wrong. The DZone piece on *Designing Scalable Multi-Agent AI Systems with DDD + Event Storming* (2026) makes the multi-agent version of this argument: bounded-context decomposition is the only thing that lets agents be parallelized without their work colliding. The single-developer-many-sessions case is the same problem at a smaller scale.
 
