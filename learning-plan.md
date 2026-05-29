@@ -1,7 +1,7 @@
 ---
 title: Learning Plan
 nav_order: 6
-last_updated: 2026-04-27
+last_updated: 2026-05-29
 last_read: null
 status: unread
 ---
@@ -12,7 +12,9 @@ status: unread
 
 **Reading order matters.** The context engineering guide builds on itself — foundations first, then layers, then the deep dive. The frameworks section is modular and can be read in any order after Session 6.
 
-**What's new (April 27, 2026):** Module 4 added — **Cross-Session Verification** (8 sessions, S22–S29). Direct response to the cross-session regression problem: how to gain confidence AI-generated code is correct *without reading all of it*, and how to prevent a feature added in one agent session from silently breaking something built in a previous session. Covers BDD as the agent's contract surface, DDD bounded contexts as session boundaries, consumer-driven contracts (Pact + ACL), architectural fitness functions, mutation/property-based testing, and characterization tests + the verification handoff problem.
+**What's new (May 29, 2026):** Research update across 11 files. 16 new additions from the last 30 days. Key additions: **Orchestration Tax** (Osmani — "you are the GIL of your agents," structural gap between production and review capacity); **compaction amnesia** as a named failure mode; **80% problem** (Sourcegraph — agents miss cross-cutting work, context infrastructure sets the ceiling); **Cognitive Surrender vs. Cognitive Offloading** (Osmani/Wharton — 73% accepted wrong AI answers with increased confidence); **harness convergence** (Osmani — leading coding agents now architecturally similar, harness is the differentiator); **HuggingFace agent glossary** (71 contributors standardizing Harness/Scaffolding/Agent terminology); **Parallel Claudes C Compiler** (Anthropic — 100K-line compiler, $20K, Git as sync primitive); **Drew Breunig's 10 Lessons** ("code is cheap; maintenance isn't"); **agentic burnout** (Evil Martians — three simultaneous pressures); **Agentic/Graph/Self-RAG taxonomy** (SwirlAI); **Formal Evals framework** (Anthropic — pass@k vs pass^k, grader types); **compilable specs** as a potential fourth SDD maturity level (Pipelex); **GSD Redux** (63.8k stars, active fork); **AGENTS.md empirics** (arXiv — security specs in only 14.5% of files); **CE practitioner methodology** (arXiv — 3.8→2.0 avg iterations with structured context). Affected sessions: 4, 6, 7, 8, 14, 15, 16, 17, 19, 20, 21.
+
+**Previous update (April 27, 2026):** Module 4 added — **Cross-Session Verification** (8 sessions, S22–S29). Direct response to the cross-session regression problem: how to gain confidence AI-generated code is correct *without reading all of it*, and how to prevent a feature added in one agent session from silently breaking something built in a previous session. Covers BDD as the agent's contract surface, DDD bounded contexts as session boundaries, consumer-driven contracts (Pact + ACL), architectural fitness functions, mutation/property-based testing, and characterization tests + the verification handoff problem.
 
 **Previous update (April 12, 2026):** Research update across 7 files. New content marked with **(New — April 12 research)** throughout. Key additions: Agentic Engine Optimization / AEO (Osmani — structuring docs for AI agents), LangChain's four multi-agent architecture patterns with context trade-offs, parallel agent limit (>5 agents = diminishing returns), LangChain's continual learning framework (model/harness/context layers), Agent Skills format as industry standard (adopted by OpenAI, Google, GitHub, Cursor), Marc Brooker's "SDD Isn't Waterfall" rebuttal, tool count constraints (OpenAI: <20 tools, accuracy degrades past 10), JetBrains Central as first IDE-vendor agent orchestration layer. 9 new annotated sources + 5 new HN threads added.
 

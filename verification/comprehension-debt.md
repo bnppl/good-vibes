@@ -2,7 +2,7 @@
 title: "Comprehension Debt"
 parent: "Verification"
 nav_order: 2
-last_updated: 2026-05-06
+last_updated: 2026-05-29
 last_read: null
 status: unread
 ---
@@ -18,6 +18,18 @@ Unlike traditional technical debt, which manifests as friction (slow builds, mes
 AI generates code 5–7x faster than humans can comprehend it. This creates a "review bottleneck" where traditional peer review fails because the volume of code outpaces the human ability to audit it. An Anthropic study (Jan 2026) found that developers using AI for passive delegation scored **17% lower** on debugging and comprehension tests compared to developers who remained actively engaged in reviewing agent reasoning, not just accepting outputs.
 
 Comprehension debt also **compounds across sessions** in a way technical debt does not. When Session B cannot understand code Session A produced, it works around it or duplicates it — adding more code nobody understands on top of code nobody understands. Session C inherits both. The codebase grows; the shared theory shrinks. This spiral is the real crisis, not any single session's output quality.
+
+## Cognitive Offloading vs. Cognitive Surrender
+
+A sharper distinction emerged in May 2026 (Addy Osmani, "Cognitive Surrender"): **cognitive offloading** — delegating the "how" while you own and can independently verify the answer — is healthy and sustainable. **Cognitive surrender** — accepting AI output without applying independent judgment — is the actual crisis.
+
+The distinction matters because both look identical from the outside (the AI does work, you accept it), but only one degrades your ability to maintain and extend the system over time. Offloading builds on your judgment; surrender replaces it.
+
+**The data is worse than the 17% decline suggests.** A Wharton study found that 73% of participants accepted wrong answers from AI when the AI was available, with *increased confidence* despite deliberate errors being planted. The effect compounds: developers who habitually accept AI output become progressively worse at noticing when to be skeptical, precisely when they're most confident.
+
+**Usage pattern determines outcome.** The Anthropic study reveals the mechanism: developers who used AI for **conceptual inquiry** — asking the agent to explain its reasoning, exploring alternatives, probing tradeoffs — maintained their comprehension performance. Those who used AI for **passive generation** — accepting code without engagement — showed the 17% decline. Same tool, same agent, different usage pattern; radically different cognitive outcomes.
+
+Active inquiry preserves capability. Passive delegation degrades it. The difference isn't how much the AI does — it's whether you're engaging your own judgment or handing it off.
 
 ## Mitigation Strategies: Active Inquiry
 

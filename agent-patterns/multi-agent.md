@@ -2,7 +2,7 @@
 title: "Multi-Agent Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 2
-last_updated: 2026-04-03
+last_updated: 2026-05-29
 last_read: null
 status: unread
 ---
@@ -127,6 +127,25 @@ Agents operate autonomously with no central coordinator, communicating peer-to-p
 - Tasks where agents need to dynamically self-organize based on emerging requirements
 
 For now, orchestrator-worker with parallel execution handles most production needs better than swarm.
+
+---
+
+## Production Case Study: Parallel Agents at Scale
+
+Anthropic published the most detailed account of massively parallel multi-agent coding in February 2026: a team of parallel Claude Code instances built a working C compiler from scratch, producing 100,000 lines of code that compiles Linux 6.9 on x86, ARM, and RISC-V.
+
+The architecture used the parallel (fan-out) pattern at industrial scale: multiple Claude Code instances running in Docker containers in infinite task loops, claiming work by writing to a `current_tasks/` directory, with **Git conflict resolution as the synchronization primitive**. Specialized agents handled documentation, deduplication, and performance optimization in parallel with the main compiler work. No central orchestrator — just agents and Git.
+
+**The economics:** ~2,000 Claude Code sessions, ~$20,000 total cost for a 100,000-line compiler. A number that will only decrease as model prices fall.
+
+**What made it work:**
+- The task verifier had to be "nearly perfect" — autonomous code at this scale poses genuine security risks without reliable verification
+- Git conflict resolution replaced explicit agent coordination for shared state — the cheapest possible synchronization primitive for concurrent writes
+- Infinite loops with task claiming prevented agents from blocking on each other
+
+**The lesson:** The independence requirement for parallel agents isn't just about preventing output conflicts — it's about choosing the cheapest possible coordination mechanism. When agents can synchronize through Git rather than message-passing, coordination cost approaches zero. Design your parallel agent topology around the synchronization primitive, not the other way around.
+
+Source: Nicholas Carlini, [Building a C Compiler with a Team of Parallel Claudes](https://www.anthropic.com/engineering/building-c-compiler) (Anthropic Engineering, February 2026).
 
 ---
 

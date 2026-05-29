@@ -2,7 +2,7 @@
 title: "Orchestration Layer"
 parent: "Context Engineering"
 nav_order: 6
-last_updated: 2026-05-04
+last_updated: 2026-05-29
 last_read: null
 status: unread
 ---
@@ -28,6 +28,8 @@ Two primary strategies for keeping context lean:
 **Tiered compression** is the production-grade approach. LangChain's Deep Agents SDK (January 2026) implements three progressive tiers: (1) offload tool results exceeding 20,000 tokens to the filesystem, substituting a file path and 10-line preview; (2) at 85% of context window capacity, truncate older file write/edit operations to filesystem pointers; (3) as a final fallback, generate structured summaries capturing session intent, artifacts created, and next steps. Testing on terminal-bench showed dramatic token drops when compression triggers — the key insight is that each tier activates only when the cheaper option is exhausted.
 
 **Autonomous compression** takes this further. LangChain's March 2026 addition lets agents decide when to compress their own context — at task transitions, after extracting results from large inputs, or before complex multi-step processes. The agent retains recent messages (10% of available context) while summarizing older exchanges. Testing showed agents are naturally conservative about triggering compression, but when they do, the timing meaningfully improves workflow efficiency. The principle: "giving models more control over their own working memory and fewer rigid, hand-tuned rules."
+
+**Compaction amnesia** is an emerging failure mode (coined on HN, May 2026): context compaction silently drops critical state — a variable, a constraint, a mid-task decision — that the agent continues to reference as if it were still present. The agent behaves as though the information exists; it just can't find it, and doesn't know it's missing. SwirlAI's "State of Context Engineering in 2026" (March 2026) adds a related nuance: preserve the raw formatting of recent tool calls, not just their semantic content or error traces. Flattening the structure of recent tool results — reducing JSON or structured output to prose summaries — can break the model's reasoning rhythm even when the content survives intact. The practical rule: compress older content aggressively; be conservative about reformatting anything from the last 3–5 turns.
 
 ### Context Caching
 Reducing costs by up to 90%, context caching allows frequently used but static context (like a large codebase's structural map, legal frameworks, or complex tool schemas) to be processed once and reused across millions of tokens of conversation. This is the primary mechanism for making 1M+ token windows affordable for iterative development.
@@ -122,6 +124,14 @@ LangChain published a complementary taxonomy to Osmani's that maps multi-agent p
 | Single agent, many specializations | Skills |
 | Sequential workflows with state | Handoffs |
 | Multi-source parallel queries | Router |
+
+### The Orchestration Tax
+
+Addy Osmani identified a structural constraint that limits how many parallel agents are genuinely useful in practice (May 2026): "You are the GIL of your AI agents." When agent work requires genuine human understanding before it can be merged — architecture decisions, security-sensitive changes, complex logic — those threads must acquire your attention sequentially regardless of how many agents ran in parallel.
+
+The **orchestration tax** is the structural gap between agent production rate and what you can actually review and merge. Scaling fleet size beyond your realistic review bandwidth creates a pile of unreviewed diffs, not faster delivery. The practical implications: scale fleet to match your actual review capacity (typically single digits for judgment-intensive work); segregate isolated low-stakes tasks (dependency updates, boilerplate, documentation) from judgment-intensive ones that need human review; batch review sessions to reduce context-switching overhead; protect focused thinking time from parallel agent spawning.
+
+This is why the 5-agent ceiling isn't arbitrary — beyond that count, coordination and review overhead reliably exceed the parallelism gains. More agents is only faster when you're not the bottleneck, and for complex changes, you usually are.
 
 ### Parallel Agent Limits **(New — April 12 research)**
 
