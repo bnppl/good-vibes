@@ -2,7 +2,7 @@
 title: "Production Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 4
-last_updated: 2026-04-03
+last_updated: 2026-05-29
 last_read: null
 status: unread
 ---
@@ -74,6 +74,18 @@ When Anthropic's Claude Code internals were accidentally exposed in April 2026 (
 
 ---
 
+## Osmani: Harness Engineering Is the Differentiator
+
+Addy Osmani's "Agent Harness Engineering" (April 2026) offers the clearest practitioner framing of what actually determines production agent performance: "A decent model with a great harness beats a great model with a bad harness." At production scale, agent failures are predominantly configuration problems, not model capability problems.
+
+**The ratchet principle.** "Every line in a good AGENTS.md should be traceable back to a specific thing that went wrong." Instruction files built from actual production incidents encode genuine institutional memory; ones that accumulate without being anchored to failures are noise. The same principle applies to the harness: every hook, tool constraint, and verification gate should exist because something went wrong without it.
+
+**The convergence finding.** Leading coding agents (Cursor, Claude Code, Copilot, Windsurf) are increasingly similar architecturally despite running different models. The differentiator between them is harness engineering, not model capability. "Success is silent; failures are verbose."
+
+**Where harnesses are heading.** Osmani argues harnesses are moving from static config (rules files, hook scripts) toward something closer to a compiler — a system that takes developer intent, codebase context, and task description and dynamically generates the optimal agent configuration for that specific run. Static harnesses are the intermediate state, not the destination.
+
+---
+
 ## Common Production Failure Modes
 
 These failures appear across organizations, regardless of which agent framework they use:
@@ -88,7 +100,9 @@ These failures appear across organizations, regardless of which agent framework 
 
 **5. Loss of system comprehension.** As Osmani warns: when humans can't understand what agents built, they can't maintain it. High-autonomy systems that make architectural decisions without human review create technical debt that's invisible until something breaks. Fix: mandatory human review of architectural decisions, regardless of autonomy level.
 
-**6. The "AI coding is gambling" trap.** Without structure, using agents becomes a slot machine — keep re-rolling until you get output that looks right. The fix is the subject of this entire learning program: context engineering, specs, plans, patterns, and verification.
+**6. The "80% problem."** Agents reliably complete the visible, self-contained 80% of work. They systematically miss the other 20%: cross-cutting changes that affect multiple systems, downstream services that depend on what was just changed, and hidden technical debt invisible without codebase-wide context. Sourcegraph's analysis (May 2026) frames this as a context infrastructure problem, not a model capability problem: "The agent didn't get smarter. It got more eyes." When agents miss the 20%, it's almost always because their context infrastructure lacked visibility into affected systems — not because the model couldn't reason about them given access. Fix: invest in codebase context infrastructure (code graph, dependency maps, cross-service awareness) before adding more agents.
+
+**7. The "AI coding is gambling" trap.** Without structure, using agents becomes a slot machine — keep re-rolling until you get output that looks right. The fix is the subject of this entire learning program: context engineering, specs, plans, patterns, and verification.
 
 ---
 

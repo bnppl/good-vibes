@@ -2,7 +2,7 @@
 title: "Agentic TDD"
 parent: "Verification"
 nav_order: 1
-last_updated: 2026-05-06
+last_updated: 2026-05-29
 last_read: null
 status: unread
 ---
@@ -44,6 +44,25 @@ A study by Martin Fowler's team found that simply adding "do TDD" to a system pr
 ## A Green Suite Is Not a Safe Suite
 
 The "TDD Paradox" is partly a test-quality problem: an agent that writes shallow tests — ones that execute a function but assert almost nothing meaningful about its behavior — can reach green with very little verification value. The kill rate metric from mutation testing (see [test-the-tests](test-the-tests.md)) is the honest measure of whether the suite would catch bugs. Line coverage tells you the test *ran* the code; kill rate tells you the test *would notice* if the code changed. A 90% line-coverage suite with a 35% kill rate is theater. Asking the agent to write tests that cover specific invariants, error conditions, and boundary values — and then running mutation testing on the result — is the only reliable way to confirm the safety net is real.
+
+## Formal Evaluation: Moving Beyond "It Works on My Machine"
+
+The verification layer extends beyond individual test suites to systematic evaluation of agent behavior across a distribution of inputs. Anthropic's "Demystifying Evals for AI Agents" (January 2026) provides the operational framework.
+
+**Three grader types:**
+- **Code-based** — exact match, regex, function calls. Fast and objective, but brittle: any format variation breaks them. Best for structured, deterministic outputs.
+- **Model-based (LLM judge)** — a separate model evaluates output against a rubric. Flexible, scales to nuanced judgment, but requires calibration against known examples to prevent systematic bias. Best for natural language outputs and complex behavioral assessment.
+- **Human-based** — gold standard, expensive, slow. Best for calibrating model-based graders and for high-stakes evaluation of behaviors that are hard to encode in rules.
+
+**Two coverage metrics that measure different things:**
+- **pass@k** — probability that at least one of k attempts succeeds. Measures whether the agent *can* do the task.
+- **pass^k** — probability that *all* k attempts succeed. Measures whether the agent does the task *reliably*.
+
+For production use, pass^k matters more than pass@k. An agent that succeeds 1 in 5 times isn't production-ready even if its pass@1 looks acceptable. The ratio between the two reveals how consistent (vs. lucky) your agent's successes are.
+
+**Practical starting point:** Start with 20–50 tasks drawn from real failures in production or testing — not theoretical edge cases you invented, but the actual scenarios your system failed on. "Reading transcripts is how you verify that your eval is measuring what actually matters."
+
+The structural connection to TDD: evals are TDD at the agent-system level. Individual tests verify a function behaves correctly; evals verify the agent behaves correctly across a distribution of inputs. Both are specification-by-example; both fail loudly when behavior drifts. The difference is scope: a test covers one behavior in isolation; an eval covers the agent's behavior as a whole.
 
 ---
 

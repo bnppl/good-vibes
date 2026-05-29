@@ -2,7 +2,7 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-05-04
+last_updated: 2026-05-29
 last_read: 2026-04-06
 status: read
 ---
@@ -74,6 +74,21 @@ Birgitta Boeckeler's analysis on Martin Fowler's site documents how Claude Code 
 - **MCP Servers** — tool integrations that extend what the model can do
 
 The key principle: context should be loaded when it's relevant, not pre-loaded because it might be relevant.
+
+### The Empirical Record on Agent README Files
+
+The arXiv "Agent READMEs" study (November 2025, arXiv 2511.12884) analyzed 2,303 CLAUDE.md, AGENTS.md, and equivalent files from 1,925 repositories — the most comprehensive empirical survey of instruction files in the wild.
+
+What developers actually include:
+- Build/run commands: **62.3%** of files
+- Implementation details: **69.9%**
+- Architecture documentation: **67.7%**
+- Security specifications: **14.5%**
+- Performance specifications: **14.5%**
+
+The critical gap: security and performance constraints appear in fewer than 1 in 7 files, despite being exactly the project-specific rules that agents can't infer from reading the code. "Don't use `eval()`", "authentication required on all admin routes", "response times must stay under 200ms" — these are the instructions that matter most when an agent makes a wrong decision, and the ones least likely to be written down.
+
+The study also found that instruction files "evolve like configuration code" — revised frequently, accumulating cruft, becoming hard to parse over time. This is the same lifecycle problem that affects any configuration file: initial discipline gives way to accumulated patches. Treating your instruction file as configuration code (versioned, reviewed, periodically audited) rather than a one-time setup document is the appropriate mental model.
 
 ### Agent Skills: Progressive Disclosure as Industry Standard **(New — April 12 research)**
 

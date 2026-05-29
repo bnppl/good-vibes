@@ -2,7 +2,7 @@
 title: "Agentic Development"
 parent: "Context Engineering"
 nav_order: 8
-last_updated: 2026-05-04
+last_updated: 2026-05-29
 last_read: null
 status: unread
 ---
@@ -101,6 +101,25 @@ The distinction isn't "use SDD or don't" — it's about matching the level of sp
 
 **The "Broken Rhythm" of Agentic Coding.** A significant April 2026 discussion on Hacker News explored the cognitive cost of the "broken rhythm" inherent in agentic development. Developers noted the high mental fatigue of context-switching between "Directing" (writing specs/plans) and "Reviewing" (verifying large AI PRs). ClickHouse's case study echoed this, noting that "intensive agent sessions are more mentally exhausting than manual coding" because the human remains the primary quality gate for a much higher volume of output.
 
+### When Code Is Cheap: The Maintenance Problem
+
+Drew Breunig's "10 Lessons for Agentic Coding" (May 2026, 270 points on HN) distills a year of practical experience into a provocation: **"Code is cheap; maintenance isn't."** Agentic code is "free as in puppies" — the generation cost approaches zero, but the ongoing care and feeding is as expensive as ever, maybe more so because you generated more of it.
+
+The ten lessons cut against pure SDD enthusiasm without rejecting structured approaches:
+
+1. **Implement to learn** — don't just accept output; building reveals what specs miss
+2. **Rebuild often** — when code is cheap, rebuilding from a better understanding is better than patching
+3. **Invest in end-to-end tests** — the highest-leverage investment when generation is fast
+4. **Document intent** — the spec captures why, which the code never will
+5. **Keep specs in sync** — stale specs cause more damage when agents execute them faithfully
+6. **Find the hard stuff** — let agents handle the mechanical work; reserve your time for genuine complexity
+7. **Automate everything easy** — if an agent can do it reliably, stop doing it manually
+8. **Develop your taste** — judgment about what good looks like becomes the scarce resource
+9. **Agents amplify experience** — experienced engineers extract disproportionate value; novices see minimal gains
+10. **Code is cheap; maintenance isn't**
+
+The maintenance framing connects directly to the comprehension debt problem: generating code freely is only sustainable if your comprehension of the system keeps pace. The puppy metaphor is exact — you can adopt many puppies for free, but you still have to feed, train, and clean up after all of them.
+
 ---
 
 ## Context Strategies for Long Coding Sessions
@@ -198,6 +217,18 @@ The design implication: **checkpoints are context events, not interruptions.** E
 This connects directly to the 35-minute degradation curve: the curve exists precisely because unchecked sessions let context drift and noise accumulate. Structured checkpoints are the mechanism for defeating the curve, not a concession that agents need hand-holding.
 
 The practical question is what a 3–5 step checkpoint looks like: structured progress reports written to files (which the agent reads back to reinitialize), human review gates at task boundaries, or automated harness checks that verify invariants before the next task starts. The overhead of each checkpoint is real; the alternative — catching compounded errors at step 20 — is worse.
+
+### The Human Sustainability Problem
+
+Evil Martians documented the first major study of agentic coding burnout (May 2026): three simultaneous pressures accumulate when engineers work intensively with AI agents:
+
+1. **Reduced work fulfillment** — the generative part of coding (solving novel problems, crafting elegant solutions) gets absorbed by the agent; engineers are left with oversight and review work, which is less intrinsically rewarding
+2. **Higher cognitive intensity** — supervising agents at scale requires sustained attention that is, paradoxically, more mentally demanding than writing code directly; Harvard Business Review cited the phenomenon as "cognitive exhaustion from intensive oversight"
+3. **Greater task volume** — agents generate more work to review, not less work overall; the backlog grows faster than it can be cleared
+
+The Supervision Paradox (above) and the orchestration tax (see [orchestration layer](orchestration-layer.md)) are the structural roots of pressures 2 and 3. The mitigation patterns are the same: limit fleet size to what you can genuinely review, protect focused craft hours, and recognize that "more agents running" doesn't mean "less work for you."
+
+The practical signal: if coding sessions leave you more exhausted than they used to, and you can't point to a specific thing you learned or built, that's a sustainability warning. Agents should amplify your craft, not replace the part of the work that made you good at it.
 
 ---
 

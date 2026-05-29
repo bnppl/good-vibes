@@ -2,7 +2,7 @@
 title: "Knowledge Layer"
 parent: "Context Engineering"
 nav_order: 3
-last_updated: 2026-05-04
+last_updated: 2026-05-29
 last_read: 2026-04-06
 status: read
 ---
@@ -77,10 +77,19 @@ The practical implication: design your tool interfaces so retrieval is cheap and
 
 **Cursor's dynamic context discovery.** Cursor published their implementation of this pattern in detail (January 2026, discussed on HN). Their approach uses five techniques: (1) long tool outputs are written to files rather than truncated, letting agents use `tail` or `grep` to retrieve what they need progressively; (2) when context windows fill and summarization occurs, agents reference saved chat history files to recover lost details; (3) skill descriptions are listed minimally, with agents discovering full details via search when relevant; (4) MCP tool descriptions sync to folders by server, with agents seeing only names initially — this reduced token usage by 46.9% in A/B tests; (5) terminal outputs are written to the filesystem so agents can grep specific results rather than consuming raw output. The common thread: write everything to disk, load only what's needed. This is just-in-time loading as a fully implemented product feature, not a theoretical pattern.
 
-## April 2026 Addendum
+## May 2026 Addendum
 
-### Agentic RAG and Autonomous Retrieval
-Traditional RAG has evolved into **Agentic RAG**. Instead of a fixed search triggered by software, the AI agent now assesses whether it has enough information to proceed and autonomously decides *when* and *where* to retrieve more data. This reduces context pollution by only fetching information when the model confirms a knowledge gap.
+### Retrieval Evolution: Agentic, Graph, and Self-RAG
+
+The retrieval landscape has diversified beyond standard RAG into three distinct approaches (SwirlAI, "State of Context Engineering in 2026," March 2026):
+
+**Agentic RAG** — the agent controls its own retrieval strategy and iterates until confident it has sufficient information. Unlike triggered retrieval, the agent decides *when* it has a knowledge gap and *what* to search for. Typical workflow: 3–5 retrieval cycles per complex question, each informed by what previous retrievals revealed. High accuracy; higher latency than standard RAG. Best for research-style tasks where the cost of missing relevant information is high.
+
+**Graph RAG** — adds relationship traversal to standard vector retrieval. Rather than finding similar nodes, Graph RAG follows edges: if you're asking about a codebase bug, you can traverse from the symptom to the affected function to its callers to the modules that depend on them. Essential when your data has meaningful structure (dependency graphs, knowledge graphs, document hierarchies with explicit links) that pure similarity search would miss.
+
+**Self-RAG** — the model decides whether to retrieve at all, based on confidence in its existing knowledge. Generates a retrieve/no-retrieve decision before every response, then self-critiques retrieved passages for relevance before incorporating them. Avoids retrieval overhead when the model already has sufficient information in context. Best for mixed workloads where some queries genuinely need external grounding and others don't.
+
+**Choosing:** Standard hybrid RAG for most production workloads. Agentic RAG when query complexity varies and retrieval strategy should adapt. Graph RAG when your data has explicit structural relationships. Self-RAG when retrieval overhead is meaningful and many queries don't need external information.
 
 ### Dynamic Context Injection (DCI)
 DCI is the pattern of automatically injecting real-time environmental signals (e.g., a customer's current subscription status, current server load, or the latest API schema version) into the context window just before a critical reasoning step. This ensures the model is grounded in the most current reality, rather than relying on potentially stale information from the start of the session.
