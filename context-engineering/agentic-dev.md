@@ -236,9 +236,20 @@ A loop has five components (Osmani):
 
 Plus a sixth component: **memory outside the conversation.** A markdown file, a Linear board, anything that lives outside the context window and holds what's done and what's next. The loop itself is stateless; the memory is not. The model forgets everything between runs — the repo and the task list don't.
 
+**Two in-session loop primitives** in Claude Code (mirrored in OpenAI's Codex App — both products now ship all five components, so a loop design transfers between them):
+- `/loop` — re-runs a prompt on a cadence.
+- `/goal` — runs until a condition you specify holds ("all tests pass and lint is clean"), with a *separate small model* checking completion after every turn. The agent that wrote the code does not grade its own work. This is the maker/checker split applied to the stop condition itself.
+
+**What a loop looks like in practice**: an automation runs each morning on the repo, calls a triage skill that reads CI failures and open issues, writes findings to a state file. For each finding worth doing, it opens an isolated worktree and dispatches a sub-agent to draft the fix, and a second sub-agent to review that draft against project skills and tests. Connectors open the PR and update the ticket. Anything the loop can't handle surfaces in a triage inbox. The state file is the spine — it remembers what was tried, what passed, what's still open, so tomorrow's run picks up where today stopped. You designed it once. You didn't prompt any of those steps.
+
 Loop engineering is the natural destination of the patterns described throughout this guide. A spec is loop input. A context-managed harness is what runs each iteration. Structured note-taking is the memory layer. The difference is that in a loop, none of this requires a human at the keyboard for each step — the loop specification does that job.
 
 The key shift: when a loop fails, the bug is usually in the loop specification, not the model. Loop specs are debuggable in ways that model behavior is not. This is progress.
+
+**Three risks that sharpen as loops get better, not easier**:
+- **Verification**: a loop running unattended is also a loop making mistakes unattended. "Done" is a claim, not a proof. Your job is to ship code you confirmed works.
+- **Comprehension debt**: the faster the loop ships code you didn't write, the bigger the gap between what exists and what you understand. A smooth loop makes comprehension debt grow faster unless you read what the loop made. See [Knowledge Layer](knowledge-layer.md).
+- **Cognitive surrender**: when the loop runs itself it's tempting to stop having an opinion and take whatever it returns. Designing the loop with judgment is the cure; designing it to avoid thinking is the accelerant.
 
 **Caution**: token costs can compound unexpectedly when automations run continuously. A loop that spawns sub-agents on a schedule should have explicit token budgets and circuit breakers. The practical floor: a loop should be cheaper and more reliable than manually orchestrating the same sequence of agent calls.
 
