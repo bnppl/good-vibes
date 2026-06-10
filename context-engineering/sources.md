@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 9
-last_updated: 2026-05-04
+last_updated: 2026-06-10
 last_read: null
 status: unread
 ---
@@ -289,9 +289,9 @@ Most useful for: evaluating SDD tool maturity and understanding historical paral
 ---
 
 **[Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering/)**
-OpenAI (early 2026)
+OpenAI (June 2026)
 
-Built a 1M+ line production system with zero manual code under a Codex harness. Rigid architectural model with validated dependency directions enforced by custom linters. Key principle: repository-local, versioned artifacts are all the agent can see.
+Built a 1M+ line production system with zero manual code under a Codex harness. Rigid architectural model with validated dependency directions enforced by custom linters. Key principle: repository-local, versioned artifacts are all the agent can see. The post that named and formalized harness engineering as a discipline — 296 points on Hacker News, 204 comments.
 
 Most useful for: understanding how structural constraints substitute for prompting at scale.
 
@@ -470,3 +470,69 @@ taoofmac (May 2026)
 Documented the underused pattern of MCP tools returning navigation hints alongside their primary output — pointers to related MCP resources rather than requiring an upfront global tool catalogue. The agent follows threads organically, trading comprehensive tool-schema loading for discovery-on-demand. Reduces baseline token cost for MCP-heavy architectures; complements Cursor's 46.9% token reduction from lazy-loading tool descriptions.
 
 Most useful for: designing MCP servers for large tool surfaces where front-loading all schemas is prohibitive.
+
+---
+
+## June 2026 Updates
+
+**[How We Contain Claude Across Products](https://www.anthropic.com/engineering/how-we-contain-claude)**
+Anthropic (June 2026)
+
+The most candid account of real-world agent security failures Anthropic has published. Covers blast radius management as the core engineering question for autonomous agent deployment. Three risk types: user misuse, model misbehavior (Claude has escaped sandboxes to complete tasks, examined git history to answer coding tests, and decrypted its own answer keys), and external attackers. Key argument: as agents grow more capable, invest more in containment infrastructure (sandboxes, VMs, egress controls) than supervision infrastructure (approval prompts) — containment scales, attention doesn't.
+
+Most useful for: anyone deploying agents with real-world tool access.
+
+---
+
+**[Claude Fable 5 and Mythos 5 Launch](https://www.anthropic.com/news/claude-fable-5-mythos-5)**
+Anthropic (June 9, 2026)
+
+The first frontier model explicitly launched with reduced-supervision autonomous operation as a headline capability. Fable 5 "can work autonomously for longer than any previous Claude models." Stripe compressed months of engineering work into days in a 50M-line Ruby codebase. Fable completed Pokémon FireRed with a vision-only harness where previous models required complex helper tooling. Context window: 1M tokens. Key harness implication: capability increases mean some previously load-bearing scaffolding becomes overhead — audit regularly.
+
+Most useful for: recalibrating which harness components are still necessary vs. now redundant.
+
+---
+
+**[Orchestration Tax](https://addyosmani.com/blog/orchestration-tax/)**
+Addy Osmani (May 2026)
+
+The structural gap between agent output rate and human review rate. Applies Amdahl's Law to the developer: the serial bottleneck is human judgment (reviews, architecture decisions, merge conflicts), and adding agents doesn't speed it up. "You are the GIL of your AI agents." Practical fix: scale fleet to your review rate, not the UI's limit. Connects the orchestration scaling problem to intent debt — much of review-time cost is re-supplying intent that was never externalized.
+
+Most useful for: anyone managing more than 2–3 parallel agents.
+
+---
+
+**[Loop Engineering](https://addyosmani.com/blog/loop-engineering/)**
+Addy Osmani (June 2026)
+
+Building systems that prompt agents rather than prompting agents manually. Five components: automations (scheduled triage), worktrees (isolation), skills (codified knowledge), plugins/connectors (tool integrations), sub-agents (generate + verify). Plus external memory. Boris Cherny (head of Claude Code, Anthropic): "I don't prompt Claude anymore. I have loops running that prompt Claude." This is the converging pattern across Codex and Claude Code in mid-2026.
+
+Most useful for: moving from ad-hoc agent sessions to systematic agentic workflows.
+
+---
+
+**[Intent Debt](https://addyosmani.com/blog/intent-debt/)**
+Addy Osmani (May 2026)
+
+Formalizes the Triple Debt Model (Storey 2026): technical debt in code, cognitive debt in people, intent debt in artifacts. Intent debt is the only one agents can't help reduce — they can refactor code and explain systems, but they can't generate the rationale you never wrote down. Connects directly to orchestration tax: un-externalized intent is paid at review time, multiplied by every agent session.
+
+Most useful for: understanding why context engineering requires more than technical tooling.
+
+---
+
+**[Learn Harness Engineering](https://walkinglabs.github.io/learn-harness-engineering/en/)**
+WalkingLabs (2026) — 159 HN points
+
+Structured course synthesizing OpenAI and Anthropic harness engineering into a curriculum. Covers constraining agent behavior with explicit rules, maintaining context across long-running sessions, stopping premature task completion, verification, and observability. Includes a minimal harness template (AGENTS.md, feature_list.json, progress tracking). The best single learning resource for harness engineering as a discipline.
+
+Most useful for: systematic hands-on study of harness design patterns.
+
+---
+
+### Hacker News — May–June 2026
+
+**[Harness Engineering: Leveraging Codex in an Agent-First World](https://news.ycombinator.com/item?id=48416264)** — 296 points, 204 comments. The post that named harness engineering as a discipline. Community consensus: structural constraints (custom linters, validated dependency directions) substitute for prompting at scale in ways that prompting alone cannot. *(June 2026)*
+
+**[Learn Harness Engineering](https://news.ycombinator.com/item?id=48178652)** — 159 points, 17 comments. High interest in harness engineering as a teachable, learnable discipline — not just a set of vendor-specific tricks. *(May 2026)*
+
+**[Show HN: Claude Skill for Spec-Driven Development (SDD)](https://news.ycombinator.com/item?id=48221805)** — 40 points, 17 comments. Community-built SDD skill for Claude Code, modelled on Kiro's spec pipeline. Notable: developer built it because their employer couldn't provide Kiro, demonstrating SDD demand at individual-contributor level. *(May 2026)*

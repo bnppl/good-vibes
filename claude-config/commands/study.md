@@ -71,17 +71,20 @@ Research recent developments and propose updates to the guide.
 1. **Scan current guide state.** Read all files to understand what's already covered — key topics, sources cited, frameworks listed, claims made.
 
 2. **Research.** Run these in parallel:
-   - `/last30days context engineering spec driven development agentic coding --agent` (if the last30days skill is available)
+   - `/last30days context engineering spec driven development agentic coding harness engineering --agent` (if the last30days skill is available)
    - WebSearch for: `"context engineering" new developments [current year]`
    - WebSearch for: `"spec driven development" frameworks tools [current year]`
-   - WebSearch for: `site:tldr.tech/dev context engineering OR agentic coding OR spec driven`
-   - WebSearch for: `site:tldr.tech/ai coding agent OR context engineering`
-   - Fetch the 3 most recent TL;DR Dev issues (https://tldr.tech/dev/[YYYY-MM-DD] for the last 3 weekdays) and extract relevant articles
+   - WebSearch for: `"harness engineering" AI coding agents [current year]`
+   - WebSearch for: `"harness engineering" developer tools OR developer experience [current year]`
+   - WebSearch for: `site:tldr.tech/dev context engineering OR agentic coding OR spec driven OR "harness engineering"`
+   - WebSearch for: `site:tldr.tech/ai coding agent OR context engineering OR "harness engineering"`
+   - Fetch TL;DR Dev issues from the last 3 months (https://tldr.tech/dev/[YYYY-MM-DD] for each weekday) and extract relevant articles
    - **Hacker News** — Search HN via the Algolia API for relevant discussions:
      - WebFetch `https://hn.algolia.com/api/v1/search?query=%22context+engineering%22&tags=story&numericFilters=created_at_i>[UNIX_TIMESTAMP]` 
      - WebFetch `https://hn.algolia.com/api/v1/search?query=%22spec+driven+development%22&tags=story&numericFilters=created_at_i>[UNIX_TIMESTAMP]`
      - WebFetch `https://hn.algolia.com/api/v1/search?query=agentic+coding+agent&tags=story&numericFilters=created_at_i>[UNIX_TIMESTAMP]`
      - WebFetch `https://hn.algolia.com/api/v1/search?query=context+window+management+LLM&tags=story&numericFilters=created_at_i>[UNIX_TIMESTAMP]`
+     - WebFetch `https://hn.algolia.com/api/v1/search?query=%22harness+engineering%22&tags=story&numericFilters=created_at_i>[UNIX_TIMESTAMP]`
      - For each high-scoring story (50+ points), also fetch its comments: `https://hn.algolia.com/api/v1/items/[STORY_ID]`
      - **Time window:** Check `context-engineering/sources.md` frontmatter for `last_updated`. If this is the FIRST research run (no HN content exists in sources.md yet — search for "Hacker News" in that file), use a 90-day lookback. On subsequent runs, use 30 days. Calculate the UNIX timestamp accordingly: `date -d "[N] days ago" +%s` on Linux or `date -v-[N]d +%s` on macOS.
      - HN comments are often higher-signal than the linked articles themselves. When a comment has significant engagement, quote it directly and attribute as `(HN user [username])`.

@@ -2,7 +2,7 @@
 title: "Memory Layer"
 parent: "Context Engineering"
 nav_order: 5
-last_updated: 2026-05-04
+last_updated: 2026-06-10
 last_read: null
 status: unread
 ---
@@ -32,6 +32,8 @@ Long-term memory is information that survives beyond a single conversation. Two 
 **File-based memory** sits between the two and is worth calling out specifically. Claude Code's MEMORY.md pattern is a practical implementation: an index file pointing to categorized memory files on disk — user preferences, feedback on past work, project context, external references. The filesystem is the memory store; the index file is always loaded into context. This scales reasonably well for agent workflows where memory categories are known in advance and don't require fuzzy retrieval.
 
 The key design decision: what is worth persisting versus what is derivable from other sources? Memory should store what is NOT available elsewhere. User preferences, feedback, project context, past decisions — these aren't in any file you can read. Code structure, function signatures, git history — these are better derived fresh from source. Storing derivable information wastes memory space and creates staleness risk without adding anything that a tool call wouldn't give you more reliably.
+
+**Memory synthesis in production.** OpenAI's "ChatGPT Dreaming V3" (June 2026) is the first major product implementation of background memory synthesis — the system runs memory consolidation *offline*, outside active conversations, improving freshness, continuity, and relevance over longer time horizons. This operationalizes the self-improving agent pattern at consumer scale and signals that managed background memory consolidation is becoming a standard feature rather than a custom engineering investment. The model analogy is apt: "dreaming" as offline consolidation of what was experienced during active sessions.
 
 ## Episodic Memory — Learning from Experience
 

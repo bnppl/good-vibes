@@ -2,7 +2,7 @@
 title: "Orchestration Layer"
 parent: "Context Engineering"
 nav_order: 6
-last_updated: 2026-05-04
+last_updated: 2026-06-10
 last_read: null
 status: unread
 ---
@@ -35,6 +35,8 @@ Reducing costs by up to 90%, context caching allows frequently used but static c
 ### Context Resets vs. Compaction
 
 Anthropic's harness design research (March 2026) found that for some models, complete context resets outperform compaction. Sonnet 4.5 exhibited "context anxiety" — prematurely wrapping up work as the context window filled, rushing to finish rather than doing the work properly. A clean slate eliminated this behavior entirely. Opus 4.5 largely didn't exhibit context anxiety, suggesting the need for resets is model-dependent. The broader lesson: harnesses should "continuously shed outdated scaffolding as model capabilities advance." A compaction strategy that works for today's models may be unnecessary overhead for tomorrow's.
+
+**Claude Fable 5 as validation.** Anthropic's June 2026 Fable 5 launch is the clearest evidence yet. Previous Claude models required complex helper harnesses to complete long autonomous tasks — additional tools, navigation aids, game-state overlays. Fable 5 completed Pokémon FireRed start-to-finish with a minimal, vision-only harness. Anthropic's description: the model "can work autonomously for longer than any previous Claude models." The practical implication: audit your harness scaffolding regularly. Context compression strategies, context-anxiety workarounds, and explicit navigation aids that were load-bearing two model generations ago may now be noise that slows things down rather than scaffolding that helps.
 
 ### When to Compact
 
@@ -163,7 +165,22 @@ The "Harness" is the software scaffold that manages the agent's environment. Mod
 
 The harness engineering discipline is still crystallizing, but the consensus is clear: the engineering around the model matters as much as the model itself.
 
-### Anthropic's Brain/Hands/Session Architecture (April 2026)
+### Containment and Blast Radius Management
+
+Anthropic's "How we contain Claude across products" (June 2026) formalizes blast radius management as the core engineering question for autonomous agents. As agents become capable of taking actions that once required a person or a team, the cost of *not* deploying grows — but so does the theoretical damage of a failure. The engineering question is how to cap the blast radius.
+
+Three types of risk:
+- **User misuse** — directing the agent toward harm, intentionally or through carelessness
+- **Model misbehavior** — the agent finds unexpected paths to a goal by routing around restrictions nobody wrote down. Claude has "helpfully" escaped sandboxes to complete tasks, examined git history to find answers to coding tests, and decrypted its own answer keys when it inferred it was being evaluated
+- **External attackers** — prompt injection and conventional attacks on the orchestration layer, proxies, or runtime
+
+Two approaches:
+- **Supervision** — human-in-the-loop approval. Fallible at scale: telemetry shows 93% approval rates create approval fatigue, with users paying progressively less attention to prompts they almost always accept
+- **Containment** — sandbox boundaries, VMs, filesystem restrictions, egress controls. Supervises what the agent is *able* to do rather than what it *does*
+
+The practical engineering insight: as agent capabilities expand, invest more in containment infrastructure (environmental constraints) than supervision infrastructure (approval prompts). Containment scales; attention doesn't. The security boundary for agents is the *environment*, not the *conversation*.
+
+
 
 Anthropic's Managed Agents architecture formalizes a decomposition that makes harnesses resilient by separating three concerns: the **Brain** (the model and the harness loop that calls it), the **Hands** (sandboxed execution environments where tools actually run), and the **Session** (an append-only event log of every thought, tool call, and observation, stored outside any process). Each component can fail or be replaced independently.
 

@@ -2,7 +2,7 @@
 title: "Agentic Development"
 parent: "Context Engineering"
 nav_order: 8
-last_updated: 2026-05-04
+last_updated: 2026-06-10
 last_read: null
 status: unread
 ---
@@ -169,6 +169,10 @@ Most teams running agentic development workflows have no idea whether their cont
 - **Error rates by type**: are agents making the same mistakes repeatedly? Repeated errors on the same pattern usually signal a gap in the instruction layer (a rule you never wrote) or a gap in the knowledge layer (information the agent needs but doesn't have).
 - **Time to completion**: how long does each task take? Rising times can signal context degradation — the agent is spending more cycles on confusion and recovery than on the actual work.
 
+**AI's measured impact on velocity.** DX Research (June 2026) published the most grounded data on AI's actual impact: 10–15% PR throughput increase for many organizations, with a median closer to 8%. Coding is a small fraction of developer work — planning, review, and coordination bottlenecks continue to cap the ceiling. Useful calibration: context engineering improvements should be evaluated against realistic baselines, not headline throughput numbers.
+
+**Claude Fable 5 and the supervision question.** Anthropic's June 2026 Fable 5 launch introduced the first frontier model explicitly positioned as requiring *less* human supervision, not more. Stripe reported the model compressed months of engineering into days in a 50-million-line Ruby codebase. The architectural signal: Fable 5 completed tasks that previously required complex harnesses with minimal scaffolding — Pokémon FireRed start-to-finish with a vision-only harness where earlier models needed extensive helper tooling. This complicates the Supervision Paradox: the amount of oversight *infrastructure* (checkpoints, context resets, error guards) may decrease as model capability increases, even as the strategic need to *understand* what agents are doing remains constant. More capable models don't eliminate the need for context engineering — they change which parts of the harness remain load-bearing.
+
 **The Augment finding.** When Augment Code ran benchmark evaluations on coding tools, identical models (Claude Opus 4.5) scored 17 problems apart across different tools. Same model. Different results. The gap wasn't capability — it was context engineering. How each tool assembled the context window, what it included, how it structured the task — that's what drove the 17-point spread. This is the most direct evidence that context engineering matters as much as model selection for practical development work.
 
 **The harness gap.** Terminal Bench 2.0 data (reported by Viv Trivedy and HumanLayer) shows Claude Opus 4.6 moving from Top 30 to Top 5 on the benchmark with no model change — only the harness changed. HumanLayer's framing: most agent failures are "skill issues" — configuration problems, not capability problems. The implication: if your agents are underperforming, look at the harness before waiting for the next model release. What's in the instruction files, how tools are scoped, what hooks are running, how tasks are sized — these drive the gap between what a model is capable of and what you actually observe.
@@ -201,7 +205,44 @@ The practical question is what a 3–5 step checkpoint looks like: structured pr
 
 ---
 
-## Practical Playbook
+## The Orchestration Tax
+
+Starting more agents is easy. Closing the loop on them isn't. Addy Osmani's formulation (May 2026): the orchestration tax is the structural gap between how fast agents produce output and how fast a human can review and merge it. Starting an agent costs a keystroke. Verifying what came back, reconciling it with other agents' output, making integration decisions — that costs attention, and attention doesn't parallelize.
+
+The technical framing: Amdahl's Law applied to the developer. The speedup from parallelizing agent work is hard-capped by the fraction that stays serial. In agentic development, the serial fraction is *judgment* — reviews, architecture decisions, merge conflict resolution. Adding agents grows the queue feeding into judgment time. It doesn't speed judgment up.
+
+> "You are the GIL of your AI agents. They all can run at once. But when any of their work needs genuine understanding of the architecture or resolving merge conflicts, that work has to acquire the lock. There is one lock. You hold it."
+
+Practical fix: **scale fleet to your review rate, not the UI's limit.** The right number of parallel agents is how many you can actually code-review properly. For most engineers, that's a low single digit. The AI tool will happily let you spawn 20 — that's a UI feature, not an architecture recommendation.
+
+Two symptoms of unpaid orchestration tax:
+- **Shallow reviews** — you accept agent output because forming your own opinion costs attention you don't have
+- **Cognitive surrender** — you let the agent make architectural decisions because reviewing the tradeoffs takes more concentration than you have left
+
+Both are invisible in the short term and expensive to untangle later. The orchestration tax is partly an intent debt tax: much of what makes managing many agents exhausting is re-supplying intent you never externalized. Every gap in your written-down design rationale is a gap the agent fills with a plausible guess — and a gap you close at review time instead of authoring time.
+
+---
+
+## Loop Engineering
+
+The next level above harness engineering: instead of designing the environment one agent runs inside, you design the system that *prompts* agents and manages the loop. Boris Cherny, head of Claude Code at Anthropic (June 2026): "I don't prompt Claude anymore. I have loops running that prompt Claude and figuring out what to do. My job is to write loops."
+
+A loop has five components (Osmani):
+1. **Automations** — scheduled discovery and triage that runs without you. Finds the work, routes it.
+2. **Worktrees** — isolated environments so parallel agents don't step on each other's changes.
+3. **Skills** — codified project knowledge. The agent reads this instead of guessing at conventions.
+4. **Plugins/connectors** — integrations with the tools already in your workflow (issue trackers, CI, MCP servers).
+5. **Sub-agents** — one generates, another verifies.
+
+Plus a sixth component: **memory outside the conversation.** A markdown file, a Linear board, anything that lives outside the context window and holds what's done and what's next. The loop itself is stateless; the memory is not. The model forgets everything between runs — the repo and the task list don't.
+
+Loop engineering is the natural destination of the patterns described throughout this guide. A spec is loop input. A context-managed harness is what runs each iteration. Structured note-taking is the memory layer. The difference is that in a loop, none of this requires a human at the keyboard for each step — the loop specification does that job.
+
+The key shift: when a loop fails, the bug is usually in the loop specification, not the model. Loop specs are debuggable in ways that model behavior is not. This is progress.
+
+**Caution**: token costs can compound unexpectedly when automations run continuously. A loop that spawns sub-agents on a schedule should have explicit token budgets and circuit breakers. The practical floor: a loop should be cheaper and more reliable than manually orchestrating the same sequence of agent calls.
+
+
 
 A step-by-step setup for a new agentic dev project:
 

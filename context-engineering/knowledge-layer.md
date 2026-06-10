@@ -2,7 +2,7 @@
 title: "Knowledge Layer"
 parent: "Context Engineering"
 nav_order: 3
-last_updated: 2026-05-04
+last_updated: 2026-06-10
 last_read: 2026-04-06
 status: read
 ---
@@ -88,6 +88,10 @@ DCI is the pattern of automatically injecting real-time environmental signals (e
 ## Intent Debt
 
 Technical debt captures code that's hard to maintain. **Intent debt** captures something different: the accumulation of design decisions that were never written down and that neither agents nor future engineers can reason about.
+
+**The Triple Debt Model.** Margaret-Anne Storey's framework (2026) distinguishes three independent forms of debt: *technical debt* lives in code (tangled modules, implementation shortcuts), *cognitive debt* lives in people (the growing gap between code volume and human understanding — Osmani's "comprehension debt"), and *intent debt* lives in artifacts. The critical word is *externalized*: intent has to be written down where an agent, a new teammate, or a future you can read it. These three debts are independent of each other. You can have pristine code (low technical debt) that no one fully understands (high cognitive debt) whose design rationale has never been captured anywhere (high intent debt). Each bills you separately.
+
+Intent debt has always been expensive. Agentic development makes it compound faster: un-externalized intent used to cost you at onboarding or when someone left. Now you pay it every session, multiplied by every agent you run. An agent that starts cold fills every gap in your written intent with a confident-sounding guess — and the orchestration tax (see [Agentic Development](agentic-dev.md)) is partly an intent debt tax. Much of what makes managing many agents exhausting is re-supplying context you never externalized in the first place.
 
 When an agent makes a change — locally correct, tests passing, code clean — but violates an unstated design principle, it doesn't fail. It succeeds in a way that creates invisible technical debt. The next agent has no signal that anything went wrong. The problem compounds.
 
