@@ -9,9 +9,6 @@
 # Claude
 .claude/
 
-# Docs (specs/plans are working files, not reading material)
-docs/
-
 # Jekyll build output
 _site/
 .jekyll-cache/
