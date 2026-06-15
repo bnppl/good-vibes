@@ -2,12 +2,33 @@
 title: "Agentic Development"
 parent: "Context Engineering"
 nav_order: 8
-last_updated: 2026-06-10
+last_updated: 2026-06-15
 last_read: null
 status: unread
 ---
 
 # Agentic Development: Patterns That Work
+
+{: .hook }
+> **The 35-minute cliff: your coding agent doesn't get smarter the longer it runs — it gets worse.**
+>
+> Context strategy isn't an afterthought for long sessions. It's a development practice.
+
+**In short:**
+- **The problem:** Long agentic sessions degrade silently — accuracy and task completion drop the longer the session runs.
+- **The idea:** Everything from the layer pages — instructions, retrieval, memory, orchestration — applies directly to coding agents, with concrete tradeoffs.
+- **How it works:** Instruction file design (CLAUDE.md/AGENTS.md), specs as context artifacts, sub-agent dispatch for parallel/sequential work, and the filesystem as persistent context.
+- **The result:** A practical playbook — start a project, set up instruction files, write specs, structure agent work, manage long sessions, iterate.
+
+{: .aha }
+> **Treat each session like a sprint with a context budget** — not an open-ended conversation.
+
+{: .try-it }
+> Time your next agent session. At the 30-minute mark, checkpoint progress to a file and consider starting fresh.
+
+---
+
+## Deep dive
 
 This is the payoff page. If you've read the layer pages, you understand the theory — system prompts, knowledge retrieval, memory, orchestration. This page is about applying that theory to real development work. Concrete patterns, concrete tradeoffs, concrete steps.
 

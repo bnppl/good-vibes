@@ -2,12 +2,33 @@
 title: "Tool Engineering"
 parent: "Context Engineering"
 nav_order: 7
-last_updated: 2026-04-12
+last_updated: 2026-06-15
 last_read: null
 status: unread
 ---
 
 # ACI & Tool Engineering: Mistake-Proofing Agents
+
+{: .hook }
+> **Most "reasoning failures" in agents are actually tool design failures in disguise.**
+>
+> The plumbing between an agent and your system often matters more than the model's size.
+
+**In short:**
+- **The problem:** Agents get blamed for "bad reasoning" when the real cause is ambiguous, unforgiving, or poorly-described tools.
+- **The idea:** You're an engineer of the Agent-Computer Interface (ACI) — the plumbing between agent and system is a design surface in its own right.
+- **How it works:** Poka-yoke (mistake-proofing) — constrained outputs, input validation, and error messages that tell the model exactly what to do differently.
+- **The result:** Good ACI design prevents whole classes of errors before the model ever has a chance to make them.
+
+{: .aha }
+> **Design tools like a UI for a careless user** — because that user is your agent.
+
+{: .try-it }
+> Find one tool whose error messages are vague ("invalid input"), and rewrite it to tell the model exactly what to change.
+
+---
+
+## Deep dive
 
 In 2026, you are no longer just a user of AI tools; you are an engineer of **Agent-Computer Interfaces (ACI)**. The "plumbing" of how an agent interacts with your system determines its success rate more than the model's size.
 

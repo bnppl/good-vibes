@@ -2,12 +2,33 @@
 title: "Tool Layer"
 parent: "Context Engineering"
 nav_order: 4
-last_updated: 2026-05-04
+last_updated: 2026-06-15
 last_read: null
 status: unread
 ---
 
 # The Tool Layer
+
+{: .hook }
+> **Give an agent 50 tools and watch it get worse at all of them.**
+>
+> Tool selection is a context problem nobody designs for — until it quietly tanks accuracy.
+
+**In short:**
+- **The problem:** Too many or overlapping tools confuse the model about which one to use, even if each tool works fine on its own.
+- **The idea:** Tools are how the agent acts on the world — and a major source of context overhead, decision friction, and subtle failure modes.
+- **How it works:** Minimal non-overlapping tool sets, clear schemas and descriptions, managing tool result size, MCP servers, and Manus's "mask don't remove" pattern for controlling availability.
+- **The result:** Fewer, well-described tools consistently outperform broad, overlapping tool sets.
+
+{: .aha }
+> **Tools are part of the prompt** — every tool definition is tokens competing for the model's attention, just like instructions.
+
+{: .try-it }
+> List your agent's tools and flag any two with overlapping purposes. Merge or cut one.
+
+---
+
+## Deep dive
 
 Tools are how your agent acts on the world. They're also a significant source of context overhead, decision friction, and subtle failure modes. Getting the tool layer right means thinking about tool design, output management, and availability — not just which tools exist.
 

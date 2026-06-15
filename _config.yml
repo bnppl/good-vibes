@@ -22,6 +22,18 @@ defaults:
 nav_sort: case_insensitive
 search_enabled: true
 
+# Callouts for insta-style topic hooks
+callouts:
+  hook:
+    title: Hook
+    color: purple
+  aha:
+    title: Mental Model
+    color: blue
+  try-it:
+    title: Try This
+    color: green
+
 # Exclude non-content directories and tooling files from the build
 exclude:
   - Gemfile

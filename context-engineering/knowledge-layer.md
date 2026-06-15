@@ -2,12 +2,33 @@
 title: "Knowledge Layer"
 parent: "Context Engineering"
 nav_order: 3
-last_updated: 2026-06-10
+last_updated: 2026-06-15
 last_read: 2026-04-06
 status: read
 ---
 
 # The Knowledge Layer: RAG, Retrieval, and Just-in-Time Loading
+
+{: .hook }
+> **Your RAG pipeline might be making your agent dumber — by feeding it more, not better.**
+>
+> Retrieval isn't a silver bullet. Done wrong, it just adds noise the model has to wade through.
+
+**In short:**
+- **The problem:** RAG gets treated as a default fix, even when the real issue is bad chunking, bad indexing, or retrieving too much.
+- **The idea:** Knowledge can enter context three ways — fine-tuning, in-context examples, or runtime retrieval (RAG) — and confusing them wastes effort.
+- **How it works:** Retrieval strategies (vector, hybrid, graph-enhanced), grounding and attribution, and just-in-time loading — keeping lightweight references and fetching data only when needed.
+- **The result:** Relevance beats volume. A pointer the model can follow on demand beats a document pasted upfront.
+
+{: .aha }
+> **Retrieve a pointer, not a paragraph** — load the paragraph only when it's actually needed.
+
+{: .try-it }
+> Find one place your agent retrieves a full document upfront. Replace it with a reference (path, ID, URL) it can fetch on demand instead.
+
+---
+
+## Deep dive
 
 Getting knowledge into context is one of the central problems in context engineering. You have three broad options: train it into the model (fine-tuning), include examples directly in the prompt (in-context learning), or retrieve it at runtime (RAG). Each has its place, and confusing them is a common source of wasted effort.
 

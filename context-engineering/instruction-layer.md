@@ -2,12 +2,33 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-05-04
+last_updated: 2026-06-15
 last_read: 2026-04-06
 status: read
 ---
 
 # The Instruction Layer
+
+{: .hook }
+> **Your CLAUDE.md has a ~50-rule ceiling — and most projects blow past it without noticing.**
+>
+> Every extra rule isn't free. Past a certain point, models start dropping or contradicting instructions instead of following them better.
+
+**In short:**
+- **The problem:** Instruction bloat — rules files that accumulate edge cases until the agent can no longer reliably follow all of them.
+- **The idea:** The instruction layer is static scaffolding, always in context — it should be scaffolding, not a dumping ground.
+- **How it works:** The Goldilocks principle (not too prescriptive, not too vague), scoped rules (project- vs. path-level), and progressive disclosure — tell the model how to find information instead of pasting it all in.
+- **The result:** A handful of sharp, well-scoped rules outperforms an exhaustive list every time.
+
+{: .aha }
+> **Instructions are a budget, not a wishlist** — every rule you add spends from the same attention budget as everything else in context.
+
+{: .try-it }
+> Count the directives in your current CLAUDE.md / rules files. If you're near or over ~50, pick three to delete today.
+
+---
+
+## Deep dive
 
 The instruction layer is the static scaffolding that's always in context: system prompts, rules files, and the behavioral guidelines that shape how an agent operates before any user message arrives. Getting this layer right has an outsized effect on everything downstream.
 

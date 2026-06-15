@@ -2,12 +2,33 @@
 title: "Orchestration Layer"
 parent: "Context Engineering"
 nav_order: 6
-last_updated: 2026-06-10
+last_updated: 2026-06-15
 last_read: null
 status: unread
 ---
 
 # The Orchestration Layer: Context Window Management
+
+{: .hook }
+> **Summarizing your agent's context might be making it worse — here's what the data actually shows.**
+>
+> JetBrains found naive LLM summarization encourages longer runs with worse results. The fix isn't compression — it's isolation.
+
+**In short:**
+- **The problem:** Naive summarization as the default compaction strategy — it encourages agents to run longer while performing worse.
+- **The idea:** The orchestration layer decides what lives in the context window right now, and hands off everything else.
+- **How it works:** Compaction vs. observation masking, structured note-taking ("attention through recitation"), sub-agent delegation (coordinator/MapReduce patterns), and KV-cache-friendly, append-only context.
+- **The result:** The right isolation strategy — splitting work to a sub-agent — beats aggressive compression, and is often cheaper too.
+
+{: .aha }
+> **Don't compress the window — split the work.**
+
+{: .try-it }
+> Next time a session feels bogged down, try spawning a sub-agent for the side-task instead of summarizing the main thread.
+
+---
+
+## Deep dive
 
 The orchestration layer is the part of your system that decides what lives in the context window at any given moment — and what doesn't. It handles compaction, sub-agent delegation, and cache-friendly design. Get it right and long-running agents stay coherent and affordable. Get it wrong and you hit token limits at the worst moments, pay to recompute the same context repeatedly, or watch agents drift off-task as their history grows noisy.
 

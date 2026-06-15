@@ -2,12 +2,33 @@
 title: "Foundations"
 parent: "Context Engineering"
 nav_order: 1
-last_updated: 2026-04-06
+last_updated: 2026-06-15
 last_read: 2026-04-06
 status: read
 ---
 
 # Foundations of Context Engineering
+
+{: .hook }
+> **More context isn't a feature — it's a tax.**
+>
+> The biggest performance wins in production agents have come from *removing* context, not adding it. Here's the mental model that explains why.
+
+**In short:**
+- **The problem:** Bigger context windows create a false sense of abundance — teams assume more context always helps.
+- **The idea:** You're the OS. The LLM is the CPU, the context window is RAM, and your job is to manage what gets loaded into it (Karpathy's framing).
+- **How it works:** Write/Select/Compress/Isolate gives you four levers for managing context; the 7-component model gives you a checklist for auditing what's actually in it.
+- **The result:** The smallest set of high-signal tokens wins — Manus and Schmid both found that trimming context improved output quality.
+
+{: .aha }
+> **You're not filling RAM, you're managing it** — every token competes for the model's attention, so more context is not automatically better context.
+
+{: .try-it }
+> Run the 7-component checklist (instructions, user prompt, history, long-term memory, RAG, tools, structured output) against your current system prompt. Cut anything that doesn't earn its place.
+
+---
+
+## Deep dive
 
 Context engineering is the discipline of designing systems that assemble the right information, at the right time, for a language model to do useful work. This page covers the mental models and principles that everything else in this guide builds on.
 

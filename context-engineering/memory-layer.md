@@ -2,12 +2,33 @@
 title: "Memory Layer"
 parent: "Context Engineering"
 nav_order: 5
-last_updated: 2026-06-10
+last_updated: 2026-06-15
 last_read: null
 status: unread
 ---
 
 # The Memory Layer: Short-Term, Long-Term, and Episodic Memory Systems
+
+{: .hook }
+> **Your agent's memory isn't a record of the past — it's a claim, and claims go stale.**
+>
+> Treat memory as authoritative and you'll eventually act on something that used to be true.
+
+**In short:**
+- **The problem:** Agents either drown in accumulated noise (unbounded history) or repeatedly forget what they learned (no persistence).
+- **The idea:** Three distinct memory types — short-term (conversation), long-term (cross-session), and episodic (what happened, not just what's true) — each need different handling.
+- **How it works:** Belief-update patterns (update facts rather than accumulate them), file-based memory systems (MEMORY.md), and deliberate pruning.
+- **The result:** Memory is only useful when it's treated as fallible — verified against current reality, not trusted blindly.
+
+{: .aha }
+> **Memory is a hypothesis about the present, written in the past** — verify before trusting.
+
+{: .try-it }
+> Open one memory or notes file your agent relies on. Check whether its claims are still true right now.
+
+---
+
+## Deep dive
 
 Memory in context engineering means deciding what information persists across turns and sessions, what gets retrieved and when, and what gets discarded. Get this wrong and your agent either drowns in accumulated noise or repeatedly forgets what it learned. This document covers the three distinct memory types, how to retrieve from them effectively, and the anti-patterns that undermine each.
 
