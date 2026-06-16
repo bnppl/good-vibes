@@ -2,12 +2,33 @@
 title: "Factory Droids"
 parent: "SDD Frameworks"
 nav_order: 9
-last_updated: 2026-04-02
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Factory AI Droids
+
+{: .hook }
+> **Factory Droids show what spec-driven development looks like when it's embedded in enterprise workflows — not as a new process to adopt, but as the default path from issue to PR.**
+>
+> When spec-before-code is the default path, it gets done. When it's an extra step, it gets skipped.
+
+**In short:**
+- **The problem:** Teams struggle to adopt SDD because it feels like extra overhead on top of an already-loaded workflow — another artifact to create before the "real" work begins.
+- **The idea:** Droids receive tasks from GitHub, GitLab, Jira, or Slack → generate a spec for review → implement against the approved spec → create the PR. Spec-before-code is enforced, not optional.
+- **How it works:** Three autonomy tiers (manual approval, safe commands only, full autonomy) per task; organizational memory persists across sessions; specs stored in `.factory/docs/` as first-class repo artifacts.
+- **The result:** The spec isn't an extra step — it's the natural output of receiving a task and the natural input for implementation. It becomes the connective tissue between "what needs to be built" and "what gets shipped."
+
+{: .aha }
+> **When spec-before-code is the default path, it gets done.** When it's an extra step, it gets skipped every time there's deadline pressure.
+
+{: .try-it }
+> Look at your last five issues or tickets. How many were implemented directly from the issue description without a spec review? For each one, write one sentence describing what a mandatory pre-implementation spec would have caught or clarified.
+
+---
+
+## Deep dive
 
 ## Overview
 

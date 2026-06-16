@@ -2,12 +2,33 @@
 title: "Tessl"
 parent: "SDD Frameworks"
 nav_order: 3
-last_updated: 2026-04-02
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Tessl Framework + Spec Registry
+
+{: .hook }
+> **What if the spec was the source code — and generated code was just a build artifact you never directly edited? Tessl is making that bet, and the Spec Registry already proves it can work for a piece of the problem.**
+>
+> 10,000+ accurate library specs prevent the hallucinated APIs that make AI coding unreliable. That's the Spec Registry's value regardless of whether the full spec-as-source vision lands.
+
+**In short:**
+- **The problem:** AI agents hallucinate library APIs and guess at framework behavior because their training data is outdated — the agent confidently produces code that doesn't work.
+- **The idea:** Specs as source code (with `@generate` / `@test` tags), generated code as a `// DO NOT EDIT` artifact, and a Spec Registry of 10,000+ accurate library specs as the anti-hallucination layer.
+- **How it works:** Bidirectional sync (can reverse-engineer specs from existing code), 1:1 spec-to-file mapping enforced by the CLI, humans own specs, machines own code — with a strict boundary between them.
+- **The result:** Developers who learn to think in specs rather than code will have an advantage as the paradigm shifts — even if the timeline is longer than Tessl currently predicts.
+
+{: .aha }
+> **Specs are the source code; generated code is the build artifact.** You don't edit bytecode — you edit the program. Tessl is extending that logic up the stack.
+
+{: .try-it }
+> Pick one module. Write a spec for it in natural language — behavior, interfaces, constraints. Ask an AI agent to regenerate the code from that spec. Compare the result to what you have. The delta is your comprehension debt and your intent debt, made visible.
+
+---
+
+## Deep dive
 
 ## Overview
 

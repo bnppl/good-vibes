@@ -2,10 +2,33 @@
 title: "DDD Boundaries"
 parent: "Verification"
 nav_order: 5
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
+
+# DDD Boundaries: Session Scope as Architectural Scope
+
+{: .hook }
+> **One bounded context, one agent session, one blast radius — that's the topology design that makes every other verification problem in this module cheaper to solve.**
+>
+> DDD's primitives — bounded contexts, context maps, aggregates, ubiquitous language — turn out to be exactly the primitives needed to manage agent session boundaries. The boundary problem hasn't changed; the entities crossing it have.
+
+**In short:**
+- **The problem:** Agent sessions that span multiple domains split the model's attention across two ubiquitous languages in the same context window — and what comes out is incoherent at the seams.
+- **The idea:** DDD's strategic design patterns repurposed as agent topology design — one session per bounded context, context map as cross-session artifact, aggregates encoding invariants deterministically.
+- **How it works:** Session boundaries mirror context boundaries; context map stored where the next session will find it; aggregates raise on constraint violations in constructors; glossary loads at session start via the instruction layer.
+- **The result:** "Never run a session that spans both billing and identity" enforces the ACL through workflow discipline, not code — the session boundary IS the architectural boundary.
+
+{: .aha }
+> **Codebases mirror the session boundaries used to build them** — choose the boundaries deliberately or inherit the accident.
+
+{: .try-it }
+> Sketch a context map of your current project — even informally. Identify two places where different agent sessions touched the same area. Were those areas inside or crossing context boundaries? That tells you where the ACL belongs.
+
+---
+
+## Deep dive
 
 One bounded context, one agent session, one blast radius. That is the whole thesis of this session, and everything below is in service of it. If you align the seams of your codebase with the seams of your agent workflow, the verification problems Module 4 has been circling get dramatically cheaper to solve. If you don't, no amount of contract testing or fitness-function tooling will save you from sessions that quietly chew through each other's invariants.
 

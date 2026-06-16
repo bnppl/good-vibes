@@ -2,12 +2,33 @@
 title: "Augment Intent"
 parent: "SDD Frameworks"
 nav_order: 5
-last_updated: 2026-04-02
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Augment Code Intent
+
+{: .hook }
+> **Every other spec-driven tool generates specs upfront and then largely abandons them as the code evolves. Intent is the only tool that takes "living specs" seriously as a product feature.**
+>
+> Specs that stay in sync with code aren't documentation — they're the authoritative source of intent. That's the holy grail of spec-driven development, and Intent is the first serious attempt to ship it.
+
+**In short:**
+- **The problem:** Specs become stale documentation the moment implementation begins — the spec says one thing, the code does another, and nobody is certain which is right.
+- **The idea:** Living specs that update continuously as agents implement changes, maintained by a Coordinator/Implementor/Verifier multi-agent architecture.
+- **How it works:** Coordinator breaks specs into tasks → parallel Implementors execute → Verifier checks results against spec → spec is updated as implementation proceeds (not abandoned). Cross-repository context engine understands relationships across repos.
+- **The result:** The Coordinator/Implementor/Verifier pattern is a transferable design pattern for any multi-agent system — regardless of whether you use Intent itself.
+
+{: .aha }
+> **A spec that stays in sync with the code isn't documentation — it's the source of truth.** Every other tool treats the spec as a starting point; Intent treats it as a living contract.
+
+{: .try-it }
+> For your last feature, find one place where the original spec and the final implementation diverged. Who updated the spec? If the answer is "nobody," write down what the spec now says vs. what the code does. That delta is exactly what Intent is designed to prevent.
+
+---
+
+## Deep dive
 
 ## Overview
 

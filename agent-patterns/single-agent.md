@@ -2,12 +2,33 @@
 title: "Single-Agent Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 1
-last_updated: 2026-04-03
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Single-Agent Patterns
+
+{: .hook }
+> **Before you coordinate five agents, you need to understand how one decides what to do next — and why it sometimes loops forever.**
+>
+> Every multi-agent system is built from single-agent primitives. Get the loop wrong and every level above it inherits the failure.
+
+**In short:**
+- **The problem:** Single agents default to unbounded ReAct loops that lose track of the original goal the longer they run.
+- **The idea:** Four fundamental patterns — ReAct, Plan-and-Execute, Reflection, Tool-Use Loop — each address a different failure mode.
+- **How it works:** ReAct interleaves reasoning and acting; Plan-and-Execute separates planning from execution (up to 92% task completion, 3.6× speedup); Reflection adds a critique-and-revise loop; Tool-Use focuses on selection accuracy.
+- **The result:** Production agents combine these — plan-and-execute for the outer loop, ReAct for each subtask, reflection before committing output.
+
+{: .aha }
+> **Single-agent patterns are primitives, not options** — a multi-agent system without working single-agent loops is a broken system at scale.
+
+{: .try-it }
+> Find the longest-running ReAct loop in your agent. Set a maximum iteration count and an explicit escalation trigger. Unbounded loops degrade context and contradict earlier decisions — add the limit before you need it.
+
+---
+
+## Deep dive
 
 Before coordinating multiple agents, you need to understand how a single agent reasons and acts. These patterns define the loop an agent runs — how it decides what to do next, when to use tools, and when to stop. Every multi-agent system is built from these primitives.
 

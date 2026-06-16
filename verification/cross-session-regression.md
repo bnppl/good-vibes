@@ -2,12 +2,33 @@
 title: "Cross-Session Regression"
 parent: "Verification"
 nav_order: 3
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Cross-Session Regression
+
+{: .hook }
+> **Session B breaks what Session A built — while every test in your repository still passes. That's not a bug. That's the default.**
+>
+> Cross-session regression is a distinct failure class from "the agent wrote a bug." The agent wrote correct code against the slice of the system it could see. The bug lives in the gap between sessions.
+
+**In short:**
+- **The problem:** Three failure shapes — silent contract break (behavior changed underneath a still-compiling interface), parallel re-implementation (utility duplicated because the existing one wasn't found), and invariant violation (rule that lived only in human memory, violated by an agent that never knew it existed).
+- **The idea:** Move constraints out of human discipline and into artifacts that survive session boundaries: tests, contracts, build rules.
+- **How it works:** BDD scenarios for behavior, DDD boundaries for scope, contract tests for interface drift, fitness functions for architectural invariants, characterization tests for legacy.
+- **The result:** Context engineering raises the floor (the next session sees the right things); verification installs the ceiling (the build refuses what context engineering missed). Both layers are needed.
+
+{: .aha }
+> **Context engineering fails open. Verification fails closed.** — context engineering makes it likely the agent sees the constraint; verification makes it certain the build rejects the violation.
+
+{: .try-it }
+> Pick a feature you built across multiple agent sessions. List three specific places where a fresh session could silently break it — name the file path and the exact change you can imagine an agent making. Tag each with: silent contract break, parallel re-implementation, or invariant violation.
+
+---
+
+## Deep dive
 
 **Cross-session regression** is the failure mode where Session B of an agent breaks something Session A built, while every test in the repository still passes. Classical regression assumes a single author with continuous memory who could, in principle, have remembered the constraint they just violated; cross-session regression assumes the opposite—each session starts cold, sees only what context engineering surfaces, and has no episodic memory of why the code looks the way it does.
 

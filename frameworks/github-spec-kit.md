@@ -2,12 +2,33 @@
 title: "GitHub Spec Kit"
 parent: "SDD Frameworks"
 nav_order: 2
-last_updated: 2026-04-04
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # GitHub Spec Kit
+
+{: .hook }
+> **Your specs will outlive any individual coding assistant. GitHub Spec Kit bets on that — and 84.7k stars say the bet is paying off.**
+>
+> By being agent-agnostic, Spec Kit makes a bet that the spec format matters more than any particular AI tool. That bet is probably right.
+
+**In short:**
+- **The problem:** Spec formats tied to specific AI tools become orphaned as the tool landscape changes — your Cursor-specific workflow is obsolete when the team moves to a different agent.
+- **The idea:** A Constitution (immutable project principles that no agent can violate) plus 8+ interconnected spec files per feature, all in markdown, consumable by any AI coding agent.
+- **How it works:** Constitution → Specify → Plan → Tasks lifecycle; each spec on its own git branch; works across Copilot, Claude Code, Gemini CLI, Cursor, and 10+ others — the spec format governs behavior regardless of which tool executes.
+- **The result:** Structural thinking that separates serious engineering from vibe coding. If the AI agent can't violate your Constitution, it's working within your architecture.
+
+{: .aha }
+> **Specs outlive tools — invest in the format, not the vendor.** The Constitution pattern is the governance layer that makes this durable.
+
+{: .try-it }
+> Write a one-page Constitution for one active project. Pick three immutable principles — architectural decisions, security requirements, dependency rules — that any AI agent must respect regardless of the task. Pin it in your repo root as `CONSTITUTION.md`.
+
+---
+
+## Deep dive
 
 ## Overview
 

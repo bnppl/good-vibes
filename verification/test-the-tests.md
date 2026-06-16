@@ -2,10 +2,33 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
+
+# Test the Tests: Verifying Your Safety Net Is Real
+
+{: .hook }
+> **When the agent says "I added tests," do they catch anything? In agentic development, the test author and code author are the same untrusted party — working from the same misunderstanding, in the same turn.**
+>
+> A green suite means the agent's code agrees with the agent's tests. It does not mean the tests would notice if the code were wrong.
+
+**In short:**
+- **The problem:** Agent-written test suites hit 95% line coverage and 30% kill rate — theater that validates the agent's code agrees with the agent's tests, not that the code is actually correct.
+- **The idea:** Two techniques that shift the question from "are there tests?" to "is the safety net real?": mutation testing (kill rate) and property-based testing (adversarial input generation).
+- **How it works:** Mutation testing plants small valid bugs and checks if tests catch them; property-based testing specifies invariants and generates hundreds of inputs (including the pathological ones the agent never thought of) to find violations.
+- **The result:** 23-37% pass@1 gains from property-based testing vs. TDD-style prompting (arXiv 2025). Prompt design and a kill-rate fitness function are the difference between a theatrical safety net and a real one.
+
+{: .aha }
+> **Line coverage tells you the test ran the code. Kill rate tells you the test would notice if the code changed.** Those are different claims — only the second one matters.
+
+{: .try-it }
+> Run Stryker (TypeScript), PIT (Java), or Mutmut (Python) against a file an agent recently touched. Look at the surviving mutants — they're a literal list of the gaps the agent left behind, each one a bug that would have passed CI.
+
+---
+
+## Deep dive
 
 When the agent says "I added tests," do they catch anything? In classical development that question still matters, but you usually have a separation between the engineer who wrote the production code and the engineer (or at least the moment) who wrote the tests. In agentic development that separation collapses: the **test author and the code author are the same untrusted party**, working from the same misunderstanding, in the same turn. A green suite means the agent's code agrees with the agent's tests. It does not mean the tests would notice if the code were wrong.
 
