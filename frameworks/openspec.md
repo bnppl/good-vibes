@@ -2,12 +2,33 @@
 title: "OpenSpec"
 parent: "SDD Frameworks"
 nav_order: 4
-last_updated: 2026-05-04
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # OpenSpec (Fission AI)
+
+{: .hook }
+> **Most SDD tools are designed for greenfield demos. OpenSpec is designed for the codebase you already have — and the agent tools you're already using.**
+>
+> A three-phase state machine (proposed → approved → implementing) prevents the most common agentic failure mode: implementation beginning before the design is validated.
+
+**In short:**
+- **The problem:** Spec-driven development tools optimized for new projects fall apart when confronted with legacy code, complex dependencies, and incremental feature work — which is most real-world development.
+- **The idea:** A brownfield-first, agent-agnostic SDD framework with an enforced state machine that works across 21+ AI tools including Claude Code, Cursor, Copilot, Gemini CLI, and Kiro.
+- **How it works:** `openspec propose` generates a spec in `proposed` state → human (or gate) approves → state transitions to `approved` → only approved specs trigger the implementation task list. The CLI blocks state-machine violations.
+- **The result:** Universal compatibility and a natural audit trail — when a feature diverges from the original design, the spec history shows what was approved vs. what was built, making the divergence explicit rather than invisible.
+
+{: .aha }
+> **Proposed → Approved → Implementing: no implementation without approval.** The state is in the file — agents can read it, humans can gate on it, CI can enforce it.
+
+{: .try-it }
+> Run `openspec propose` on a feature you're planning to implement next. Before proceeding to the task list, review the generated spec and make three changes that an AI wouldn't have known to make. Those changes are the value of the human review gate — measure them.
+
+---
+
+## Deep dive
 
 ## Overview
 

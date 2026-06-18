@@ -2,12 +2,33 @@
 title: "Smol Developer"
 parent: "SDD Frameworks"
 nav_order: 8
-last_updated: 2026-04-02
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Smol Developer (smol-ai)
+
+{: .hook }
+> **Under 200 lines of Python. No pipeline, no agents, no phases — just a markdown spec in and code out. This is the entire spec-driven development space, stripped to its core mechanism.**
+>
+> Every other tool in this space is a more sophisticated version of exactly this loop.
+
+**In short:**
+- **The problem:** The mechanics of spec-to-code generation are obscured by the complexity of production tools — most developers can't explain how the loop actually works, so they can't reason about where it goes wrong.
+- **The idea:** A proof-of-concept that reveals the core mechanism in its purest form: the markdown spec IS the prompt; a file plan is derived; code is generated file-by-file following the plan.
+- **How it works:** Read spec → draft file plan → generate code per file. Three stages, under 200 lines, fully transparent. The human can take over the codebase at any point.
+- **The result:** The "markdown is the perfect way to prompt for whole program synthesis" insight that proved foundational — Kiro, Spec Kit, OpenSpec, CLAUDE.md all follow it.
+
+{: .aha }
+> **The spec is the prompt. All the complexity above this is variations on that single idea.** Understanding the variation matters; understanding the foundation matters more.
+
+{: .try-it }
+> Read the Smol Developer source code — it's under 200 lines. Write a markdown spec for a small utility, run it, and observe where the file plan matches your mental model and where it diverges. Each divergence is a design decision the more complex tools are trying to solve.
+
+---
+
+## Deep dive
 
 ## Overview
 

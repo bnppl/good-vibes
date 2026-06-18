@@ -2,12 +2,33 @@
 title: "BDD for Agents"
 parent: "Verification"
 nav_order: 4
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # BDD for Agents: Scenarios as Cross-Session Memory
+
+{: .hook }
+> **A Gherkin scenario does two jobs: it's the spec the agent writes against today, and the regression net the next session is forbidden to break. One artifact, two jobs — and the second job is free.**
+>
+> Unit tests are too small to express cross-session intent. Design docs are too inert to fail a build. Gherkin scenarios are the only form of specification that survives session boundaries and runs in CI.
+
+**In short:**
+- **The problem:** Chat logs vanish at context reset; markdown docs go stale silently; unit tests don't capture intent across a feature — and cross-session breaks happen at exactly that level.
+- **The idea:** BDD scenarios as cross-session memory — written in domain language, committed as `.feature` files next to the code, executable in CI, surviving every session reset.
+- **How it works:** Outside-in workflow: human writes/approves Given/When/Then, agent drafts step definitions, agent writes code to make scenarios green, human reviews scenarios (not code) before merge.
+- **The result:** Code review becomes spec review — scenarios are an order of magnitude smaller than the code they generate, and they're written in a language non-engineers can also review.
+
+{: .aha }
+> **The scenario is the contract. The code is the byproduct.** — review the scenarios before the diff, not after.
+
+{: .try-it }
+> Pick a feature an agent built last week. Write three Gherkin scenarios: happy path, one error case, one boundary condition. Keep them declarative — outcomes, not mechanisms. Commit them next to the code. You've just converted tacit session knowledge into durable cross-session memory.
+
+---
+
+## Deep dive
 
 A Gherkin scenario does two jobs at once. While the current session is open, it is the **specification** the agent writes against — a binary, executable success criterion in the language of the domain. After the session closes, the same scenario becomes the **regression net** the next session is forbidden to break. One artifact, two jobs, and the second job is free.
 

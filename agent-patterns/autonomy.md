@@ -2,12 +2,33 @@
 title: "Autonomy Spectrum"
 parent: "Agent Architecture Patterns"
 nav_order: 3
-last_updated: 2026-04-03
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # The Autonomy Spectrum
+
+{: .hook }
+> **Most developers are at Level 1-2 autonomy even when their tools support Level 3 — and most enterprise deployments stop at Level 2 for good reason.**
+>
+> Higher autonomy amplifies errors, erodes human understanding, and requires trust that has to be earned, not assumed.
+
+**In short:**
+- **The problem:** The instinct to push for maximum autonomy without accounting for error amplification and comprehension loss at each level up.
+- **The idea:** Five autonomy levels (inline assistance → plan-level approval → agent-led → continuous autonomous → fully autonomous), where higher is often worse.
+- **How it works:** "Bounded autonomy" — clear operational limits, mandatory escalation for high-stakes decisions, and task-type matching to the recommended level.
+- **The result:** For most professional development in 2026, Level 2 (plan-level approval) captures the productivity gains without the risk. Level 5 is not production-appropriate.
+
+{: .aha }
+> **Autonomy should expand based on demonstrated reliability, not assumed capability** — track success rates at each level before expanding scope.
+
+{: .try-it }
+> Identify one task you currently handle at Level 1 that's low-risk and easily verifiable. Try it at Level 2: let the agent propose a plan, review and approve it, then let it execute. Define one explicit escalation condition before starting.
+
+---
+
+## Deep dive
 
 Not every agent needs to be autonomous. The right level of independence depends on the task's risk, complexity, and how much trust you've built with the system. This page covers the five levels of agent autonomy, why higher isn't always better, and how to choose the right level for your work.
 

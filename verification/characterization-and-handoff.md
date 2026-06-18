@@ -2,10 +2,33 @@
 title: "Characterization & Handoff"
 parent: "Verification"
 nav_order: 9
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
+
+# Characterization & Handoff
+
+{: .hook }
+> **The verification artifacts from this entire module are useless if the next session doesn't discover them. Build the safety net — then make sure the next session runs it.**
+>
+> You can have the most rigorous verification surface in the world; if the next session doesn't see it, the agent cheerfully bypasses all of it.
+
+**In short:**
+- **The problem:** Without an answer to the handoff question, every other technique in Module 4 is decorative — the next session starts cold and reinvents reality from whatever files it happens to read first.
+- **The idea:** Characterization tests lock down legacy behavior before an agent touches it; the handoff problem is solved by co-location + instruction-layer pointers + CI as backstop.
+- **How it works:** Characterize → pin behavior in tests → human reviews tests against intent → agent modifies code with the net in place; AGENTS.md names commands, directories, thresholds, and high-risk areas; HANDOVER.md protocol for mid-task transitions.
+- **The result:** An 8KB AGENTS.md verification surface produced 100% pass rate vs. 79% for equivalent information packaged as skills (Vercel eval, Jan 2026).
+
+{: .aha }
+> **Discovery is probabilistic. CI is deterministic.** Design for both — make it likely the agent runs checks locally, certain they run in CI before merge.
+
+{: .try-it }
+> Add a "Verification surface" section to your AGENTS.md: name the exact commands to run, the directories holding artifacts, the numeric thresholds (mutation floor, coverage floor), and the high-risk areas where snapshot updates require explanation. One paragraph, four bullets, zero ambiguity.
+
+---
+
+## Deep dive
 
 Two problems share this session because they are the same problem. **Characterization tests** pin behavior in legacy code before an agent is allowed to touch it — they answer the question "what does this actually do, before I let something rewrite it?" The **handoff problem** asks the harder follow-up: where do those tests, the scenarios from [bdd-for-agents](bdd-for-agents.md), the contracts from [contract-testing](contract-testing.md), and the fitness functions from [fitness-functions](fitness-functions.md) live so that the *next* agent session — fresh context, no memory of yours — discovers them?
 

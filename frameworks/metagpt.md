@@ -2,12 +2,33 @@
 title: "MetaGPT / MGX"
 parent: "SDD Frameworks"
 nav_order: 6
-last_updated: 2026-04-02
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # MetaGPT / MGX
+
+{: .hook }
+> **MetaGPT is a compressed course in software project management, taught by watching AI agents attempt each role — and occasionally fail in instructive ways.**
+>
+> The insight that different development phases require different reasoning modes — and should therefore be separate agents with separate prompts — is a design principle that transfers to every agentic system you build.
+
+**In short:**
+- **The problem:** One-shot AI code generation conflates the different reasoning modes required for product thinking, architecture, and implementation — and each mode gets worse when combined.
+- **The idea:** A simulated software company — Product Manager, Architect, Project Manager, Engineer agents — each generating structured artifacts that feed the next phase via Standardized Operating Procedures.
+- **How it works:** One-line requirement → PRD + competitive analysis → system design + class diagrams → development tasks → code with unit tests; each agent verifies intermediate results before passing to the next.
+- **The result:** The SOPs, verification gates, and role-based prompting patterns are building blocks that transfer to any agentic workflow you design — even if you never use MetaGPT itself.
+
+{: .aha }
+> **Different phases require different reasoning modes — separate the roles, separate the prompts.** MetaGPT encodes this as SOPs; you can encode it as system prompts.
+
+{: .try-it }
+> Pick one agent you're building. Write a short SOP for it — a sequence of three to five steps it should always follow, in order. Compare the agent's output with and without the SOP on the same task. The delta is MetaGPT's core insight at its simplest.
+
+---
+
+## Deep dive
 
 ## Overview
 

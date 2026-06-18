@@ -2,10 +2,33 @@
 title: "Fitness Functions"
 parent: "Verification"
 nav_order: 7
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
+
+# Fitness Functions: Architecture Rules That Survive Every Session
+
+{: .hook }
+> **Agents do not remember the Tuesday 2024 incident that taught your team why `domain/` can't import `infrastructure/`. Fitness functions do.**
+>
+> Architectural invariants that lived in senior engineers' heads are silently violated by every new session. The agent doesn't know the rule, so it doesn't follow it.
+
+**In short:**
+- **The problem:** Rules enforced by reviewer discipline and oral tradition don't survive session boundaries — agents don't have access to human memory.
+- **The idea:** Automated checks on architectural characteristics that move human memory into CI, where the agent bounces off them the same way it bounces off a failing test.
+- **How it works:** ArchUnit (Java), ts-arch (TypeScript), import-linter (Python) — plus ESLint rules and CI scripts. Author/enforce split: humans write the rules, agents implement them. ADR → fitness function → CI pipeline.
+- **The result:** The agent attempts the disallowed import, the build fails, the agent reads the failure message and routes around the constraint. The rule becomes part of the environment, not the reviewer's discipline.
+
+{: .aha }
+> **Fitness functions are the only artifact automatically loaded every single run** — because CI runs every single run, regardless of who or what is writing the code.
+
+{: .try-it }
+> Pick one rule you're tired of catching in PR review. Write it as a fitness function (ArchUnit, import-linter, ESLint custom rule). Add a `WHY` comment linking to the ADR or postmortem. Wire it into a pre-commit hook so the agent gets feedback inside its own loop, not 10 minutes later in CI.
+
+---
+
+## Deep dive
 
 **Neal Ford, Rebecca Parsons, Patrick Kua, and Pramod Sadalage's *Building Evolutionary Architectures* (2nd ed.)** gave us the term "fitness function," and the second edition's expanded catalog of examples is still the cleanest single source on the technique. In a wiki about agentic verification, fitness functions are the most underrated entry. Of the four failure shapes catalogued in [cross-session-regression](cross-session-regression.md) — silent invariant violations, layered architectural drift, regenerated dead code, and forgotten rationale — fitness functions are the only mechanism that catches the **invariant violation** shape *directly*. Tests catch behavior. Contracts catch interface drift. Fitness functions catch architecture.
 

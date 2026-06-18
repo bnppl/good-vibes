@@ -2,12 +2,33 @@
 title: "Multi-Agent Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 2
-last_updated: 2026-04-03
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Multi-Agent Patterns
+
+{: .hook }
+> **Multi-agent systems use ~15x more tokens than single agents. The question isn't whether to use them — it's when the payoff is actually worth it.**
+>
+> Anthropic's production system outperformed single-agent by 90.2%. It also cost 15× more. Most tasks don't justify that multiplier.
+
+**In short:**
+- **The problem:** Teams add agents as a reflex for complexity, then discover coordination overhead costs more than parallelization saves.
+- **The idea:** Five patterns — Orchestrator-Worker, Pipeline, Parallel, Hierarchical, Swarm — each with a specific use case and a specific failure mode.
+- **How it works:** Orchestrator-Worker handles ~70% of production cases; Pipeline works for structured sequential workflows; Parallel requires strict task independence; Hierarchical scales decomposition; Swarm remains experimental.
+- **The result:** The production default is orchestrator-worker with parallel execution. Start there; add complexity only when the task genuinely requires it.
+
+{: .aha }
+> **Multi-agent is a cost, not a feature** — justify it by what parallelism enables (independent subtasks, context limits, specialization), not by how it sounds.
+
+{: .try-it }
+> List one task you're running with multiple agents. Could a single agent with a well-managed context window do the same job? If yes — and there's no parallelism to exploit — consolidate. The simplest system that works is the right system.
+
+---
+
+## Deep dive
 
 When a single agent isn't enough — because the task is too large for one context window, requires parallel work, or benefits from specialized expertise — you split across multiple agents. This page covers the coordination patterns that determine how those agents work together.
 

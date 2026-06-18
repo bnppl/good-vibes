@@ -2,12 +2,33 @@
 title: "GPT Pilot"
 parent: "SDD Frameworks"
 nav_order: 7
-last_updated: 2026-04-02
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # GPT Pilot (Pythagora)
+
+{: .hook }
+> **GPT Pilot pioneered context rewinding in 2023 — the insight that long-running agentic development is possible if you reset the LLM context after each completed task while keeping the implementation.**
+>
+> This is the same insight behind "treat each session like a sprint with a context budget" — GPT Pilot just built it into the architecture first.
+
+**In short:**
+- **The problem:** LLM context windows are finite, but real projects aren't — agents running in one long session drift, contradict earlier decisions, and eventually hallucinate requirements they set for themselves.
+- **The idea:** A multi-agent pipeline with specialized roles, human-in-the-loop checkpoints at each phase, TDD-driven task specs, and context rewinding after each completed task to keep each step's window clean.
+- **How it works:** Product Owner → Architect → DevOps → Tech Lead → Developer pipeline; integration tests after each task, unit tests after each step; context resets preserve the implementation but discard accumulated noise.
+- **The result:** The patterns GPT Pilot established — agent specialization, human checkpoints, TDD-driven task specs, context management per task — are now table stakes in the spec-driven development space.
+
+{: .aha }
+> **Context is a finite resource per task, not a growing log of everything** — reset after each task, preserve only the implementation and the spec.
+
+{: .try-it }
+> Think of one long agent session where the agent started contradicting its earlier decisions. Identify the moment where a context rewind would have helped. Design a checkpoint protocol for your next long task: what gets preserved, what gets discarded, what summary is handed to the next context.
+
+---
+
+## Deep dive
 
 ## Overview
 

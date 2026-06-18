@@ -2,10 +2,33 @@
 title: "Contract Testing"
 parent: "Verification"
 nav_order: 6
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
+
+# Contract Testing
+
+{: .hook }
+> **Type checks pass. Unit tests pass. CI lights up green. And then production breaks because the consumer expected `userId` and the provider started returning `user_id`.**
+>
+> Session B never opened the reporting module. Its tests mock the provider. No test fails. The contract was the connective tissue, and nothing in the codebase forced Session B to honor it.
+
+**In short:**
+- **The problem:** Silent contract breaks between sessions — the provider API changes, the consumer's tests stub the provider, nothing catches the drift until production.
+- **The idea:** Consumer-driven contracts (Pact) and Anti-Corruption Layers as the only verification mechanism that catches interface drift *on both sides of a boundary* — the consumer's CI knows the provider drifted, and vice versa.
+- **How it works:** Consumer writes a test generating a contract file → contract published to broker → provider CI replays consumer expectations against the real provider → build fails if provider breaks a consumer expectation.
+- **The result:** No human has to remember Session A's interface assumptions. The contract does. And it fires in CI, not in production.
+
+{: .aha }
+> **Contracts are the only technique that fails the consumer's CI when the provider drifts** — everything else runs on one side, or covers the wrong layer.
+
+{: .try-it }
+> Pick two modules where different agent sessions built opposite sides of an interface. Write one consumer-driven contract test (Pact) or OpenAPI schema check. Wire provider CI to verify it pre-merge. The first contract feels like overhead; the third prevents the regression that costs a day to debug.
+
+---
+
+## Deep dive
 
 **Contract testing** is the most direct mechanical answer to the cross-session regression problem from [cross-session-regression](cross-session-regression.md). When two sessions touch opposite sides of a module or service boundary — Session A on the provider, Session B on the consumer — the only artifact that can catch a silent break before merge is a contract that *both sides verify against*. Type checks pass. Unit tests pass. Each session's CI pipeline lights up green. And then production breaks because the consumer expected a `userId` and the provider started returning `user_id`.
 

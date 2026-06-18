@@ -2,12 +2,33 @@
 title: "Agentic TDD"
 parent: "Verification"
 nav_order: 1
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Agentic TDD: Verification-First Development
+
+{: .hook }
+> **Adding "do TDD" to a system prompt can actually increase regressions — because the agent writes tests that confirm its own broken logic.**
+>
+> The Fowler "TDD Paradox" (March 2026): agents writing their own tests inflate regressions rather than reduce them when there's no human review gate on the tests themselves.
+
+**In short:**
+- **The problem:** Agent-written tests validate whatever the agent happened to produce — the test author and code author are the same untrusted party.
+- **The idea:** Tests as prompts — failing tests as the specification language, giving agents an unambiguous binary success criterion before they write a line of code.
+- **How it works:** Red-Green-Agent loop (human-approved failing test → agent makes it pass → fresh agent refactors); negative test priority; PreToolUse hooks as hard gates blocking writes to `src/` without a failing test.
+- **The result:** A green suite is not a safe suite. Kill rate from mutation testing is the honest measure; line coverage tells you the test ran the code, not that it would notice if the code changed.
+
+{: .aha }
+> **Tests as prompts, not tests as validation** — the agent needs a runnable binary success criterion before it writes a line, not a vague "add tests when done" instruction.
+
+{: .try-it }
+> Pick one function an agent wrote recently. Write one test that specifies a specific invariant — a boundary condition, an error path, something non-obvious. Confirm the test would fail on a plausible wrong implementation before the agent sees it.
+
+---
+
+## Deep dive
 
 By 2026, **Agentic TDD** has emerged as the primary "safety net" for AI-driven software engineering. As AI agents generate an increasing percentage of new code, the focus has shifted from *writing* code to *verifying* it.
 

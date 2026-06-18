@@ -2,12 +2,33 @@
 title: "Comprehension Debt"
 parent: "Verification"
 nav_order: 2
-last_updated: 2026-05-06
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Comprehension Debt & Cognitive Sustainability
+
+{: .hook }
+> **AI generates code 5-7× faster than humans can comprehend it. Developers using AI for passive delegation scored 17% lower on debugging tests.**
+>
+> Comprehension debt is invisible — tests are green, velocity is high — until something breaks and nobody can fix it.
+
+**In short:**
+- **The problem:** The growing gap between code volume and genuine human understanding compounds across sessions: Session B works around Session A's code, Session C inherits both, the codebase grows while the shared theory shrinks.
+- **The idea:** Move from passive delegation to active inquiry — the difference between "accept whatever has green tests" and "understand what was built and why."
+- **How it works:** The 1-5 self-scoring rule before merge; the "explain the PR" protocol; three-file deep dives for large sessions; declarative orchestration where the plan is the comprehension surface, not the diff.
+- **The result:** When the human approves the plan before code is written, comprehension is front-loaded where it's cheapest — on a short, intentional artifact rather than 800 lines of generated implementation.
+
+{: .aha }
+> **"If you lose understanding of your own system, you have lost the ability to fix it."** — Osmani
+
+{: .try-it }
+> Before merging your next AI-generated PR, score your comprehension 1-5. If you're at a 1 ("the tests are green but I have no idea how this works"), don't merge — ask the agent to walk you through the logic first, without looking at the diff.
+
+---
+
+## Deep dive
 
 **Comprehension Debt** (also known as **Cognitive Debt**) is the primary risk in agentic software engineering in 2026. It is the growing gap between the total volume of code in a system and the amount of that code genuinely understood by human developers.
 

@@ -2,12 +2,33 @@
 title: "Kiro"
 parent: "SDD Frameworks"
 nav_order: 1
-last_updated: 2026-04-02
+last_updated: 2026-06-16
 last_read: null
 status: unread
 ---
 
 # Kiro (AWS)
+
+{: .hook }
+> **Kiro generated 16 acceptance criteria for a minor bug fix — and that's actually the point. Spec overhead that won't scale down is often a signal you're doing requirements right for the first time.**
+>
+> Every spec you write with Kiro is building a transferable skill: EARS notation and GIVEN/WHEN/THEN acceptance criteria are established software engineering practices, not AI scaffolding.
+
+**In short:**
+- **The problem:** Spec-driven development workflows that produce great artifacts but struggle when the task is small — the ceremony doesn't scale gracefully to bug fixes.
+- **The idea:** A three-phase pipeline (requirements → design → tasks) embedded in a familiar VS Code environment, making formal requirements engineering the path of least resistance.
+- **How it works:** Requirements.md (EARS/GIVEN-WHEN-THEN), design.md (architecture + tech stack), tasks.md (sequenced implementation plan) — each human-reviewable and editable before proceeding. Steering files persist project knowledge; Agent hooks automate file-event workflows.
+- **The result:** The benchmark for what spec-driven development looks like as a first-class product — every artifact is a reviewable, editable checkpoint that stops the train if wrong.
+
+{: .aha }
+> **The spec pipeline IS the product** — Kiro's value isn't code generation, it's the structured review checkpoint before any code gets written.
+
+{: .try-it }
+> Open Kiro on a feature you were about to implement with a vibe prompt. Read the generated `requirements.md` before proceeding. Count how many acceptance criteria you would have missed without it.
+
+---
+
+## Deep dive
 
 ## Overview
 
