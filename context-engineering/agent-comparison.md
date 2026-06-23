@@ -25,7 +25,7 @@ status: unread
 | **Privacy** | Full control. Run air-gapped. No data leaves your machine. | Your prompts and outputs go through a third-party API. Anthropic/OpenAI have data policies — but you're trusting them. |
 | **Reasoning quality** | Catching up fast — DeepSeek v4 is competitive on many benchmarks. Still behind on nuanced multi-step reasoning, creative writing, and long-context tasks. | State of the art. Claude leads on coding and long-context reasoning. GPT leads on breadth. |
 | **Tool use / function calling** | Improving but inconsistent. Often needs more explicit prompting to invoke tools correctly. | Mature, well-documented. Claude's tool use is particularly reliable. |
-| **Context window** | Varies widely. DeepSeek v4: 128K. Llama 4: up to 224K. Some open models have larger windows than Claude. | Claude: 200K. GPT-4o: 128K. Gemini: up to 2M. |
+| **Context window** | Varies widely. DeepSeek V4: 1M (Pro/Flash). Llama 4 Scout: 10M, Llama 4 Maverick: 1M. GLM-5.2: 1M. Windows often exceed proprietary. | Claude: 200K. GPT-4o: 128K. Gemini: up to 2M. |
 | **Fine-tuning** | Full control. Fine-tune on your codebase, your domain, your style. | Generally not available to individuals. Some enterprise options. |
 | **Latency** | Fast if you have the GPUs. Local inference on consumer hardware means seconds-per-response for large models. Hosted open models (Together, Groq) can be very fast. | Consistent and reliable. Claude Sonnet is fast; Opus is deliberately slower. |
 | **Reliability / Uptime** | On you. If you're self-hosting, you're the SRE team. Third-party providers offer SLAs. | 99.9%+ uptime SLAs. Someone else gets paged at 3am. |

@@ -1,7 +1,7 @@
 ---
 title: "Sources"
 parent: "Context Engineering"
-nav_order: 9
+nav_order: 11
 last_updated: 2026-06-23
 last_read: null
 status: unread

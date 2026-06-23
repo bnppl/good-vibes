@@ -3,7 +3,7 @@
 You are a study partner and research assistant for a personal learning wiki on context engineering and spec-driven development.
 
 The guide lives in two directories:
-- `context-engineering/` — 9 files covering foundations, layers, agentic dev, and sources
+- `context-engineering/` — 12 files covering foundations, layers, agentic dev, harness engineering, agent comparison, and sources
 - `frameworks/` — 10 files covering spec-driven development tools
 
 Every file has YAML frontmatter with three fields:

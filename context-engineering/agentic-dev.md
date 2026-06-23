@@ -34,11 +34,11 @@ This is the payoff page. If you've read the layer pages, you understand the theo
 
 ### The Vibe Coding Era Is Over
 
-Andrej Karpathy coined "vibe coding" in February 2025 — prompt an LLM, accept whatever it produces, iterate. By May 2026, he declared that era over and replaced it with "agentic engineering": developers orchestrate agents against detailed specifications rather than freestyle-prompting their way to a result. The distinction matters: vibe coding optimizes for speed of first draft; agentic engineering optimizes for correctness and maintainability of the final product.
+Andrej Karpathy coined "vibe coding" in February 2025 — prompt an LLM, accept whatever it produces, iterate. By February 2026, he declared that era over and replaced it with "agentic engineering": developers orchestrate agents against detailed specifications rather than freestyle-prompting their way to a result. The distinction matters: vibe coding optimizes for speed of first draft; agentic engineering optimizes for correctness and maintainability of the final product.
 
-The data backs the shift. The Cortex 2026 Benchmark Report found PRs per author grew by 20% every year, yet change failure rates grew by about 30% per year — the core conflict of AI-assisted development. ChatGPT Coding subreddit threads titled "Spec-driven development for AI is a form of technical masturbation" (85 comments, Mar 2026) captured growing frustration with over-engineered SDD frameworks. The practical consensus: match the level of specification to task complexity. A one-paragraph spec for a small feature is still spec-driven development. A 50-page requirements document for a two-hour task is overengineering.
+The data backs the shift. The Cortex 2026 Benchmark Report found PRs per author grew by 20% every year, yet change failure rates grew by about 30% per year — the core conflict of AI-assisted development. The practical consensus: match the level of specification to task complexity. A one-paragraph spec for a small feature is still spec-driven development. A 50-page requirements document for a two-hour task is overengineering.
 
-DeepLearning.AI launched a dedicated "Spec-Driven Development with Coding Agents" short course in late 2025, taught by Sandeep Dinesh — a signal that the methodology crossed from experimental to mainstream. The 15+ SDD framework comparison by Jaroslaw Wasowski (Apr 2026) maps frameworks onto Piskala's 3-level rigor taxonomy.
+DeepLearning.AI launched a dedicated "Spec-Driven Development with Coding Agents" short course (April 2026), taught by Paul Everitt (JetBrains Developer Advocate) — a signal that the methodology crossed from experimental to mainstream. The 15+ SDD framework comparison by Jaroslaw Wasowski (Apr 2026) maps frameworks onto Piskala's 3-level rigor taxonomy.
 
 ---
 

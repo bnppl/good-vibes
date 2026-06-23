@@ -60,7 +60,7 @@ Tracing every agent action: tool calls, model decisions, context state at decisi
 - "Harness design for long-running application development" (Mar 2026) — patterns for multi-hour agent sessions
 - "Effective harnesses for long-running agents" (Nov 2025) — the precursor that defined the category
 
-**Martin Fowler on harness engineering (Mar 2026):** Formalized the discipline at the architectural level, mixing deterministic rules (linting, module boundaries) with LLM-based checks to keep agents aligned.
+**Martin Fowler on harness engineering (Apr 2026):** Formalized the discipline at the architectural level, mixing deterministic rules (linting, module boundaries) with LLM-based checks to keep agents aligned.
 
 ## How It Connects to Context Engineering
 
