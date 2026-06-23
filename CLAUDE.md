@@ -7,8 +7,9 @@ Personal learning wiki on context engineering and spec-driven development, plus 
 - `context-engineering/` — guide files, each with YAML frontmatter (`last_updated`, `last_read`, `status`)
 - `frameworks/` — SDD framework survey files, same frontmatter
 - `agent-patterns/`, `verification/` — notes directories
-- `claude-config/commands/study.md` — the `/study` slash command definition
-- `skills/agentic-alignment/` — the agentic-alignment skill
+- `claude-config/commands/study.md` — the `/study` slash command definition (Claude Code)
+- `.opencode/commands/study.md` — the `/study` custom command (OpenCode)
+- `skills/agentic-alignment/` — the agentic-alignment skill (both Claude Code and OpenCode)
 
 ## Conventions
 
@@ -27,5 +28,6 @@ Personal learning wiki on context engineering and spec-driven development, plus 
 
 ## Context
 
-- Read `claude-config/commands/study.md` before modifying `/study` behaviour
+- Read `claude-config/commands/study.md` before modifying `/study` behaviour (Claude Code)
+- Read `.opencode/commands/study.md` before modifying `/study` behaviour (OpenCode)
 - Read `skills/agentic-alignment/SKILL.md` before modifying the skill
