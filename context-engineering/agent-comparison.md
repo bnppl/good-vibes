@@ -63,6 +63,17 @@ Claude Code itself isn't locked to Claude. It can be configured to use open mode
 {: .caution }
 > **Tool use degrades with open models.** Claude's native tool-use format is tightly coupled to the model's training. When you swap in an open model, expect more prompt engineering to get reliable tool invocations, especially on multi-tool calls.
 
+## Open Model Landscape: June 2026
+
+The open model landscape is maturing rapidly on the coding front:
+
+- **GLM-5.2** (Z.ai, June 2026): 753B MoE parameters, MIT license, 1M token context window. Simon Willison calls it "probably the most powerful text-only open weights LLM." Comparable to proprietary models on coding benchmarks.
+- **Qwen3.6-27B** (Alibaba): Georgi Gerganov (llama.cpp creator) uses it daily for coding tasks on his M2 Ultra and RTX 5090. "A very capable local model for coding tasks." Runs with a lightweight harness — `pi -nc --offline` and a short system prompt.
+- **Vicki Boykis** (Jun 2026): "Running local models is good now" — validates local models as viable for coding agent workflows. The gap between what's possible locally and what requires an API is shrinking month by month.
+
+{: .aha }
+> **Local models are now viable for real coding work.** The Qwen3.6-27B example shows the pattern: a lightweight harness + a concise system prompt + an offline-capable model = reliable daily use. The open model strategy is no longer theoretical.
+
 ## Anti-Patterns
 
 - **Benchmark shopping:** A model with the highest HumanEval score may be terrible at following instruction files or staying within a context budget. Test on your actual workload.

@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 9
-last_updated: 2026-06-10
+last_updated: 2026-06-23
 last_read: null
 status: unread
 ---
@@ -526,6 +526,96 @@ WalkingLabs (2026) — 159 HN points
 Structured course synthesizing OpenAI and Anthropic harness engineering into a curriculum. Covers constraining agent behavior with explicit rules, maintaining context across long-running sessions, stopping premature task completion, verification, and observability. Includes a minimal harness template (AGENTS.md, feature_list.json, progress tracking). The best single learning resource for harness engineering as a discipline.
 
 Most useful for: systematic hands-on study of harness design patterns.
+
+---
+
+**[Context Engineering in 2026: The Complete Developer's Guide](https://blog.getbind.co/context-engineering-in-2026-the-complete-developers-guide)**
+Bind AI (June 2026)
+
+Comprehensive production-grade guide covering all six architectural layers, CLAUDE.md configuration with production examples, RAG design for codebases, context compression strategies, and agentic workflow patterns. Cites Anthropic's 2026 Agentic Coding Trends Report: agents now complete an average of 20 autonomous actions before requiring human input, 95% of professional developers use AI tools weekly.
+
+Most useful for: a single end-to-end reference that covers context engineering from theory to production.
+
+---
+
+**[State of Context Engineering in 2026](https://www.newsletter.swirlai.com/p/state-of-context-engineering-in-2026)**
+Aurimas Griciūnas, SwirlAI (March 2026)
+
+Tracks what changed since Anthropic and Manus defined context engineering (Sept–Jul 2025). Five patterns that have matured: progressive disclosure and agent skills, compression, routing, evolved retrieval strategies, and tool management. Introduces the "finite attention budget" framing: every token competes for attention. As context grows, precision drops, reasoning weakens.
+
+Most useful for: understanding what's changed and what's stable in the discipline.
+
+---
+
+**[Context Engineering for Product Builders: The 2026 Operating Manual](https://karozieminski.substack.com/p/context-engineering-product-builders-guide-2026)**
+Karo Zieminski (May 2026)
+
+PM/product builder perspective on context engineering as a product decision. Argues context becomes "an evolving map, not a static brief" — the system learns what to keep across sessions. For PMs/teams where context decisions are made without product input: "that's not delegation, that's abdication."
+
+Most useful for: product managers and builders who need to understand why context architecture is their concern.
+
+---
+
+**[Context Engineering 2026: The Skill Replacing Prompting](https://deepfounder.ai/context-engineering-2026-beyond-prompt-engineering)**
+DeepFounder (April 2026)
+
+Practical checklist approach: 8 items to verify before shipping any LLM-powered feature. Covers anti-patterns (context recycling, output buffer neglect, static tools, re-ordering static content) with specific fixes. Argues context engineering will be automated but the underlying skill remains valuable.
+
+Most useful for: a pre-ship checklist for production context quality.
+
+---
+
+**[Harness Engineering: Leveraging Codex in an Agent-First World](https://openai.com/index/harness-engineering)**
+Ryan Lopopolo, OpenAI (February 2026)
+
+The post that named harness engineering as a formal discipline. Documents building 1M+ lines of production code with zero human-written lines over 5 months. Key insight: "Early progress was slower than expected, not because Codex was incapable, but because the environment was underspecified." Defines the harness as tools, guardrails, documentation, and verification systems — not prompts.
+
+Most useful for: understanding the origin and motivation of harness engineering as a discipline.
+
+---
+
+**[Improving Deep Agents with Harness Engineering](https://www.langchain.com/blog/improving-deep-agents-with-harness-engineering)**
+Vivek Trivedy, LangChain (February 2026)
+
+Hands-on harness optimization case study. 26% improvement on Terminal Bench 2.0 (52.8% → 66.5%) by changing only system prompt, tools, and middleware — no model changes. Introduces the Trace Analyzer Skill for systematic failure mode analysis. Three knobs: System Prompt, Tools, Middleware.
+
+Most useful for: the most concrete, metrics-backed demonstration that harness engineering works.
+
+---
+
+**[Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)**
+Anthropic (November 2025)
+
+The precursor that defined harness engineering before the term existed. Covers context management across multi-hour sessions, checkpoint strategies, and architectural patterns for sustained agent reliability. The foundation Anthropic's later harness work (containment, auto mode, long-running app design) builds on.
+
+Most useful for: the Anthropic perspective on harness design before it became a named discipline.
+
+---
+
+**[Harness Design for Long-Running Application Development](https://www.anthropic.com/engineering/harness-design-long-running-apps)**
+Anthropic (March 2026)
+
+Patterns for multi-hour agent sessions in application development. Specific strategies for checkpoint design, state management, and failure recovery when sessions span hours not minutes. Direct follow-up to the Nov 2025 effective harnesses post.
+
+Most useful for: teams managing agent sessions longer than 35 minutes.
+
+---
+
+**[How We Contain Claude Across Products](https://www.anthropic.com/engineering/how-we-contain-claude)**
+Anthropic (June 2026)
+
+Blast radius containment as a harness design problem. As agents grow more capable, their potential blast radius grows — the engineering question is how to cap it. Documents containment approaches across claude.ai, Claude Code, and Cowork. Relevant to any team deploying agents in production.
+
+Most useful for: understanding blast radius containment — a core harness engineering concern.
+
+---
+
+**[GLM-5.2: Probably the Most Powerful Text-Only Open Weights LLM](https://simonwillison.net/2026/Jun/17/glm-52/)**
+Simon Willison (June 2026)
+
+Covers the Z.ai GLM-5.2 release: 753B MoE parameters (40 active), MIT license, 1M token context window. Evaluates open model viability for coding work, noting Qwen3.6-27B is "a very capable local model for coding tasks" (per Georgi Gerganov, llama.cpp creator).
+
+Most useful for: tracking the open model landscape for agentic coding.
 
 ---
 

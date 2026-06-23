@@ -2,7 +2,7 @@
 has_children: true
 title: Context Engineering
 nav_order: 2
-last_updated: 2026-04-02
+last_updated: 2026-06-23
 last_read: null
 status: unread
 ---
@@ -25,6 +25,8 @@ Context engineering is the art and science of filling the context window with th
 ## Deep Dive
 
 [Agentic Software Development](agentic-dev.md) — actionable patterns for coding agents: instruction files, spec-driven development, long session strategies, sub-agent patterns, and a step-by-step playbook. This is where the guide goes from conceptual to concrete.
+
+[Harness Engineering](harness-engineering.md) — the third phase of AI engineering maturity (Prompt → Context → Harness). Agent = Model + Harness. Covers OpenAI's 1M-line codebase, LangChain's harness-only 26% improvement, Anthropic's containment design, and the 5 layers of a production harness.
 
 ## Sources
 
