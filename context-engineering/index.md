@@ -34,4 +34,6 @@ Context engineering is the art and science of filling the context window with th
 
 [Agent Architecture Patterns](../agent-patterns/index.md) — how agents use context: reasoning loops, multi-agent coordination, autonomy levels, and production lessons.
 
+[Agent Comparison](agent-comparison.md) — open models vs proprietary (Claude, GPT): cost, privacy, quality, and when to use which.
+
 [Spec-Driven Development Frameworks](../frameworks/index.md) — comparative guide to 9 tools where structured specifications drive code generation.
