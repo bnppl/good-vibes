@@ -2,7 +2,7 @@
 title: "Tessl"
 parent: "SDD Frameworks"
 nav_order: 3
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -59,9 +59,20 @@ The Spec Registry provides pre-built specs for popular libraries, giving AI agen
 - **Dependency risk** -- If Tessl fails as a company, the workflow is hard to replicate
 - **Learning new conventions** -- Tags like `@generate` and `@test` are Tessl-specific syntax
 
+## January 2026 Repositioning
+
+{: .aha }
+> **Unverified — single secondary source.** This repositioning was reported in community coverage but not confirmed by Tessl's official communications as of mid-2026. Treat as directional.
+
+On January 29, 2026, Tessl reportedly repositioned its Framework product away from "spec-as-source for all code" toward a more targeted framing: **spec-as-source for the 20–30% of your codebase that should never be directly edited** — the core domain logic, the architectural boundaries, the generated adapters. The remainder of the codebase (glue code, migrations, thin controllers) would remain directly editable, with the Framework applying only to the portions where spec control is worth the overhead.
+
+If accurate, this repositioning is significant: it responds directly to the "radical paradigm shift" criticism in the Cons section above. Asking developers to *never* directly edit generated code is a cultural hard sell; asking them to use spec control for the high-value core is more adoptable. It also aligns with where spec-as-source adds the most value — the parts of the codebase where human intent and machine execution most need to stay synchronized, because the blast radius of a misalignment is highest.
+
+The Spec Registry, by contrast, is unambiguously positioned for broad adoption and shows no signs of narrowing scope.
+
 ## Motivational Argument
 
-Tessl is making the boldest bet in the spec-driven development space: that within a few years, developers won't look at generated code most of the time. If that prediction is even partially correct, the developers who learned to think in specs rather than code will have a massive advantage. Tessl is where you go to practice that future now.
+Tessl is making the boldest bet in the spec-driven development space: that within a few years, developers won't look at generated code most of the time for the highest-value parts of their codebase. If that prediction is even partially correct, the developers who learned to think in specs rather than code will have a massive advantage. Tessl is where you go to practice that future now.
 
 The Spec Registry is quietly one of the most important innovations in the space. Every AI coding tool struggles with hallucinated APIs and outdated library knowledge. Tessl's approach of curating accurate, structured specs for 10,000+ libraries is a force multiplier that benefits the entire ecosystem, and understanding how it works gives you insight into the fundamental reliability challenges of AI-assisted development.
 

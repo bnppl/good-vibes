@@ -2,7 +2,7 @@
 title: "Contract Testing"
 parent: "Verification"
 nav_order: 6
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -62,6 +62,16 @@ Pact is heavy. For a lot of boundaries — especially internal HTTP between two 
 The 2026 tool worth knowing here is [**PactFlow Drift**](https://pactflow.io/blog/schemas-can-be-contracts/) (Mar 2026), which validates live API behavior against an OpenAPI spec in CI. It treats the spec as the contract and the running API as the implementation under test, and fails the build when they drift. It's the operational answer to the perennial "the OpenAPI doc is out of date" problem — by gating on it, you make the doc *true*. [**Spectral**](https://stoplight.io/open-source/spectral) is the complementary open-source tool for the authoring side: it lints OpenAPI and AsyncAPI documents against configurable rulesets in CI, catching malformed schemas, missing descriptions, or violated naming conventions before the spec ships. Drift detects runtime divergence; Spectral enforces spec quality upstream. Both are worth wiring into CI if you publish an OpenAPI document.
 
 The complementary research direction is the arXiv paper [*Making REST APIs Agent-Ready: From OpenAPI to Model Context Protocol Servers*](https://arxiv.org/html/2507.16044v1) (Jul 2025), which bridges OpenAPI specs to MCP tool surfaces. The implication for agentic dev is sharper than it looks: when an agent generates a client by reading your OpenAPI spec — directly, or via an MCP server derived from it — that spec is *immediately* the contract that future agent sessions will rely on. If it drifts, every downstream agent session inherits the drift. Schema-first contracts stop being "documentation hygiene" and start being load-bearing infrastructure.
+
+## Session-Level Behavioral Contracts
+
+A distinct use case that the Pact-and-OpenAPI framing misses: contracts at the *development session level*, not just the production service level.
+
+When Session A implements a module and Session B later modifies it, the question isn't just "did the interface break?" — it's "did the behavioral contract the module fulfilled change in ways Session B didn't know about?" Session-level behavioral contracts are snapshots of the behavioral promises a module was making when it was last touched by a session that understood it.
+
+The mechanism: as part of characterization testing (covered in [characterization-and-handoff](characterization-and-handoff.md)), generate a contract file alongside the characterization tests that formally states: "at Session A's completion, this module fulfilled these behavioral promises to these callers." It's a consumer-driven contract authored retroactively — but it captures what Session A knew that Session B won't discover from reading the code.
+
+**TestSprite** (2026) operationalizes this pattern: it generates behavioral contract tests from observed API traffic and agent execution traces, producing machine-readable contracts that describe what a module *actually does* in production rather than what its interface *claims to do*. The tests fail when observed behavior drifts from the contract — the same signal Pact gives at the interface layer, applied to the behavioral layer underneath. Most useful at module boundaries that are stable enough to have real production traffic, not for in-development code. The output format is compatible with standard contract brokers.
 
 ## What This Catches That Other Techniques Miss
 

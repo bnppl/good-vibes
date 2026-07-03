@@ -2,7 +2,7 @@
 title: "Augment Intent"
 parent: "SDD Frameworks"
 nav_order: 5
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -32,7 +32,7 @@ status: unread
 
 ## Overview
 
-Intent is Augment Code's desktop workspace for spec-driven development with multi-agent orchestration. Its key innovation is "living specs" -- specifications that update continuously as agents implement changes, maintaining real-time sync between documentation and code.
+Intent is Augment Code's desktop workspace for spec-driven development with multi-agent orchestration, launched in Q2 2026. Its key innovation is "living specs" -- specifications that update continuously as agents implement changes, maintaining real-time sync between documentation and code.
 
 ## How It Works
 
@@ -42,7 +42,9 @@ Intent uses a multi-agent architecture:
 - **Implementor** agents execute tasks in parallel
 - **Verifier** agent checks results against the spec
 
-Powered by a "Context Engine" with cross-repository understanding, Intent maintains living specs that evolve alongside the implementation rather than becoming stale artifacts.
+Powered by a **Context Engine** that builds a **dependency graph** across repositories — tracking which functions call which, how types flow between services, and how domain concepts span codebases — Intent maintains living specs that evolve alongside the implementation. The dependency graph is the key architectural differentiator: rather than retrieving semantically similar text, the Context Engine understands the structural relationships between code artifacts, which means a spec change in one service propagates correctly to dependent specs in other services.
+
+**Pricing (as of mid-2026):** Intent is priced as an enterprise product, requiring a conversation with Augment's sales team rather than self-serve sign-up. Individual developers and small teams without enterprise procurement are largely locked out — this is an explicit product decision to focus on the team-coordination use case where the multi-agent architecture and cross-repo context provide disproportionate value.
 
 ## Pros
 

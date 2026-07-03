@@ -2,7 +2,7 @@
 title: "GitHub Spec Kit"
 parent: "SDD Frameworks"
 nav_order: 2
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -10,7 +10,7 @@ status: unread
 # GitHub Spec Kit
 
 {: .hook }
-> **Your specs will outlive any individual coding assistant. GitHub Spec Kit bets on that — and 84.7k stars say the bet is paying off.**
+> **Your specs will outlive any individual coding assistant. GitHub Spec Kit bets on that — and 93k+ stars say the bet is paying off.**
 >
 > By being agent-agnostic, Spec Kit makes a bet that the spec format matters more than any particular AI tool. That bet is probably right.
 
@@ -47,8 +47,8 @@ The workflow follows a cycle: **Constitution -> Specify -> Plan -> Tasks**. Each
 
 ## Pros
 
-- **Agent-agnostic** -- Works with Copilot, Claude Code, Gemini CLI, Cursor, or any AI tool that can read markdown
-- **Massively popular** -- 84.7k+ GitHub stars, 136+ releases, supports 14+ AI agent platforms, strong community
+- **Agent-agnostic** -- Works with Copilot, Claude Code, Gemini CLI, Cursor, and 30+ other AI coding tools
+- **Massively popular** -- 93k+ GitHub stars (as of mid-2026), 136+ releases, supports 30+ AI agent platforms, strong community
 - **Open source** -- Full transparency, community contributions, no vendor lock-in
 - **Constitution concept** -- Immutable project principles that specs can't violate is a powerful governance mechanism
 - **Git-native** -- Each spec gets its own branch, making spec evolution trackable and reviewable

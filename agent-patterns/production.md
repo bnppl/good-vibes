@@ -2,7 +2,7 @@
 title: "Production Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 4
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -125,6 +125,22 @@ Before deploying an agent system:
 - [ ] **Observability deployed** — tracing for agent decisions, not just tool calls
 - [ ] **Human escalation paths defined** — when should the agent stop and ask?
 - [ ] **Deployment strategy handles long-running agents** — rainbow/canary, not hard cutover
+
+---
+
+## Enterprise Context: Thoughtworks Analysis, June 2026
+
+Birgitta Boeckeler's Thoughtworks report (Martin Fowler's site, June 16, 2026) documents how large regulated organizations differ from cloud-native teams when adopting agentic development — and where the patterns converge.
+
+**What the analysis found:**
+
+The core patterns described above (orchestrator-worker, verification gates, context management) all apply in enterprise settings, but with one structural difference: the human-in-the-loop cadence is higher and non-negotiable. Regulatory, compliance, and IP constraints mean enterprise teams cannot simply "let it run." This turns out not to be a constraint but a discipline — the kind the rest of the field is discovering independently through the Supervision Paradox.
+
+Teams that front-loaded context engineering — AGENTS.md files, architectural fitness functions, domain-specific instruction schemas — saw larger gains than those relying on ad-hoc prompting. The gap was steeper than in cloud-native environments, likely because enterprise codebases carry more implicit domain knowledge that has never been written down. Agents amplified that gap: well-documented codebases got significantly better results; underdocumented ones saw agents confident and wrong.
+
+**The orchestration tax is steeper in enterprises.** More reviewers, more approval gates, more stakeholders each holding the GIL on architectural decisions. The same fix applies — scale fleet to your review rate — but the review rate ceiling is lower in regulated environments.
+
+**The "broken rhythm" finding.** Intensive agent sessions are more mentally exhausting than manual coding because the human remains the primary quality gate for a higher volume of output. ClickHouse found this; Boeckeler's enterprise analysis found the same pattern. The solution isn't to reduce autonomy — it's to invest in the artifacts (specs, ADRs, fitness functions) that make review faster without making it shallower.
 
 ---
 

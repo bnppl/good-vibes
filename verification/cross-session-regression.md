@@ -2,7 +2,7 @@
 title: "Cross-Session Regression"
 parent: "Verification"
 nav_order: 3
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -82,6 +82,20 @@ The remaining sessions of Module 4 each address one or more of the three failure
 - [characterization-and-handoff](characterization-and-handoff.md) (S28) — Lock down legacy behavior before letting an agent touch it, and make the verification surface discoverable so the next session actually uses it.
 
 The pattern across all six: move the constraint out of human discipline and into a test, a contract, or a build rule that survives the next session boundary.
+
+## Appendix: Fourth Failure Shape — Correlated Drift
+
+As agentic codebases scale and more sessions run in parallel, a fourth failure shape has become distinct enough to name: **correlated drift**.
+
+Unlike the original three shapes — which each have a clean cause (contract not honored, utility not found, rule not known) — correlated drift is a systems-level failure. Multiple sessions each make locally correct changes that, in combination, produce a behavior the original design never anticipated. No individual session made a mistake. No single PR breaks anything. The failure emerges from the *composition* of individually correct changes.
+
+A concrete shape: Session A refactors `formatCurrency()` to handle negative values correctly; Session B updates the cart total calculation to return negative values for credits; Session C adds a display component that calls `formatCurrency()` on cart totals. Each change is independently sensible. Together, credits now display as "−$5.00" on the checkout page — technically correct but visually alarming and UX-breaking. No existing contract test catches this because no existing contract specified what `formatCurrency(-5)` should look like on a checkout summary.
+
+What makes this a distinct failure shape: **the bug lives at an integration boundary that no session defined**. The three original shapes fail because a session violated something explicit. Correlated drift fails because no one made the integration contract explicit in the first place.
+
+Detection mechanism: holistic integration tests — end-to-end scenarios that verify system-level behaviors across the full stack, not just individual module contracts. The [bdd-for-agents](bdd-for-agents.md) approach at its most expansive: feature scenarios that span contexts rather than staying within one. The [fitness-functions](fitness-functions.md) approach for the behavioral domain: "a cart with a credit always shows a non-negative display value" as a property, verified by a synthetic integration test on every deploy.
+
+This shape doesn't invalidate the original three — those remain more common and more mechanically addressable. Correlated drift is harder to catch because it requires the kind of holistic thinking across sessions that agents don't have by default and humans struggle to maintain at scale.
 
 ## Action Step
 

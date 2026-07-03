@@ -2,7 +2,7 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -77,6 +77,21 @@ For the mutation-survivor loop, Alex Op's "Mutation Testing with AI Agents" piec
 The empirical picture as of early 2026 is clearer than it was a year ago. The arXiv NeurIPS 2025 data shows agent-generated property-based tests are credible — 56% valid bug reports across 100 packages is not noise, and the Anthropic Red Team writeup confirms the workflow is now baked into internal agent harnesses rather than living in research demos. The honest read of the same evidence: agents do **not** reliably generate mutation-surviving tests *without explicit prompting* about what the mutations would be, but they will write surprisingly strong property tests when asked specifically to name an invariant. The implication is that **prompt design — and a fitness function on kill rate — is the difference between a theatrical safety net and a real one**. The tooling no longer limits you. The instruction layer ([instruction-layer](../context-engineering/instruction-layer.md)) and the orchestration layer ([orchestration-layer](../context-engineering/orchestration-layer.md)) do.
 
 The **[DataPRM paper](https://arxiv.org/abs/2504.20015)** (2025–2026) adds a relevant finding from a different angle: it trains process reward models (PRMs) on agent outputs labeled at each *reasoning step*, not just final answers. The key insight is that fluency and correctness are decorrelated — the most dangerous agent outputs are wrong answers that sound exactly right, because they passed every surface-level check while encoding a subtle error in reasoning. Applied to test quality: an agent can write a test that reads cleanly, uses correct syntax, and follows naming conventions while asserting something that is trivially true and would survive any mutation. PRMs trained on DataPRM-style signals catch this by evaluating intermediate reasoning steps, not just final output. For teams building agent evaluation infrastructure, DataPRM signals a direction: assess *how* the agent reasoned about what to test, not just whether the test compiles and passes.
+
+## Kill Rate Thresholds in Practice
+
+The question "what floor should I set?" has a more concrete answer in 2026 than it did a year ago, from teams that have run mutation testing under agent authorship for multiple release cycles:
+
+- **Payment/financial logic: 85%+.** Money calculations, rounding, edge cases in currency handling, tax logic. Agents are confidently wrong in subtle ways here — they produce code that handles the happy path beautifully and fails on edge cases the tests never enumerated.
+- **Auth and security: 80%+.** The intersection of comprehension debt and security failure modes. A surviving mutant in an auth check is a potential bypass.
+- **Domain/business logic: 75%.** Core behavioral rules that define what the product does. Lower than payment because the failure cost of each mutant varies more.
+- **Application layer / orchestration: 60%.** Glue code, controller logic, service coordination. Valuable to check, but the blast radius of any single mutation is usually bounded.
+- **Generated code, thin adapters, migrations: skip.** The floor for generated code is zero — the generator is the source of truth, not the tests.
+- **UI components (non-behavioral): 50% or skip.** Snapshot tests cover the right concern here; mutation testing snapshots is theater.
+
+The floor is a fitness function: commit it to CI, set it per-module in the mutation tool config, and treat a declining floor as a signal that test quality is degrading in parallel with agent output volume. A floor that grows or holds steady is the mutation equivalent of a rising code coverage — directionally positive, not proof of correctness.
+
+**Surviving mutant categories to watch specifically under agent authorship:** off-by-one errors in range checks (agents pattern-match to `< n` when `<= n` is correct), missing null checks in newly added code paths (agents add the happy-path path and skip the defensive path), and inverted conditionals in error handling (the agent writes `if (isValid())` where the original had `if (!isValid())`). These categories survive more often in agent-written code than human-written code because agents don't have the debugging scar tissue that makes humans paranoid about these specific mistakes.
 
 ## Traps
 
