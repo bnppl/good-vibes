@@ -2,7 +2,7 @@
 title: "Orchestration Layer"
 parent: "Context Engineering"
 nav_order: 6
-last_updated: 2026-06-15
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -183,6 +183,10 @@ The "Harness" is the software scaffold that manages the agent's environment. Mod
 **OpenAI's structural constraints approach.** Their Codex harness enforces a rigid architectural model with each business domain divided into fixed layers, with strictly validated dependency directions. Custom linters and structural tests enforce these constraints mechanically, not through prompting. The approach was depth-first: break larger goals into smaller building blocks, prompt agents to construct those blocks, and use them to unlock more complex tasks.
 
 **(New — April 12 research)** LangChain formalized the equation: **Agent = Model + Harness.** Their anatomy identifies five harness components: (1) system prompts, (2) tools and skills (including MCPs), (3) infrastructure (filesystem, sandbox, browser), (4) orchestration logic (subagent spawning, handoffs, routing), and (5) hooks/middleware (compaction, continuation). They also documented the **Ralph Loop Pattern** — intercepting agent exit attempts and reinjecting prompts in clean context windows to force task continuation — and warned about **harness overfitting**: models post-trained with specific harnesses can struggle when tool logic changes, suggesting excessive coupling between training data and harness design.
+
+**arXiv 2604.25850** ("Harness Engineering for Long-Horizon Coding Agents," April 2026) provides the first systematic taxonomy of harness components and their failure modes across 50+ production agent deployments. Key finding: harness failures account for a larger share of production agent failures than model capability failures — the distribution was roughly 60% harness (misconfigured tools, wrong context scope, missing verification gates), 25% task specification (ambiguous or underspecified tasks), and 15% genuine model limitations. The paper's implication: before concluding an agent isn't capable of a task, audit the harness. The harness is the more tractable variable.
+
+**Fowler's Maintainability Sensors framing** (Martin Fowler's site, June 2026) introduces the concept of automated sensors that track whether codebase maintainability is *improving or degrading* over time as agents make changes — analogous to fitness functions, but measuring trajectory rather than threshold. Where a fitness function asks "is this rule currently violated?", a maintainability sensor asks "is the architecture getting harder or easier to maintain over the last N PRs?" The sensor tracks metrics like: cyclomatic complexity trend, test-to-code ratio trend, duplicate code density trend, and coupling coefficient trend. Each is cheap to compute; the trend is what's informative. Agents that are making a codebase harder to maintain show up in the sensors before they show up in production incidents. Pair these sensors with the fitness functions from [fitness-functions](../verification/fitness-functions.md): fitness functions are the hard stops; maintainability sensors are the leading indicators.
 
 The harness engineering discipline is still crystallizing, but the consensus is clear: the engineering around the model matters as much as the model itself.
 

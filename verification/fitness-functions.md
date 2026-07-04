@@ -2,7 +2,7 @@
 title: "Fitness Functions"
 parent: "Verification"
 nav_order: 7
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -30,7 +30,7 @@ status: unread
 
 ## Deep dive
 
-**Neal Ford, Rebecca Parsons, Patrick Kua, and Pramod Sadalage's *Building Evolutionary Architectures* (2nd ed.)** gave us the term "fitness function," and the second edition's expanded catalog of examples is still the cleanest single source on the technique. In a wiki about agentic verification, fitness functions are the most underrated entry. Of the four failure shapes catalogued in [cross-session-regression](cross-session-regression.md) — silent invariant violations, layered architectural drift, regenerated dead code, and forgotten rationale — fitness functions are the only mechanism that catches the **invariant violation** shape *directly*. Tests catch behavior. Contracts catch interface drift. Fitness functions catch architecture.
+**Neal Ford, Rebecca Parsons, Patrick Kua, and Pramod Sadalage's *Building Evolutionary Architectures* (2nd ed.)** gave us the term "fitness function," and the second edition's expanded catalog of examples is still the cleanest single source on the technique. In a wiki about agentic verification, fitness functions are the most underrated entry. Of the three failure shapes catalogued in [cross-session-regression](cross-session-regression.md) — silent contract breaks, parallel re-implementation, and invariant violations — fitness functions are the only mechanism that catches the **invariant violation** shape *directly*. Tests catch behavior. Contracts catch interface drift. Fitness functions catch architecture.
 
 Make the case sharply: agents do not have access to your memory. They do not remember the Tuesday 2024 incident that taught the team why `domain/` cannot import `infrastructure/`. They do not know that the senior engineer who would have caught it in PR review left the company eight months ago. **Fitness functions move human memory into CI.** They are the cheapest verification mechanism per regression caught for any rule that you can state precisely but currently enforce with vibes.
 
@@ -93,6 +93,7 @@ The split matters because agents are excellent at *implementing* a fitness funct
 - **Disabled instead of fixed.** The agent learns very quickly that adding `// archunit:ignore` makes the failure go away. Treat ignore annotations as explicit code-review surface — grep for them in CI, require justification comments, and cap their total count. A growing population of ignores is a fitness-function failure of its own.
 - **Coverage without depth.** Every layer has one rule, none of them check the architectural invariants that actually matter. The naming-convention check is green; the layering invariant is unenforced. Audit your fitness function suite the same way you audit test coverage: not by count, but by *what would break in production if this check disappeared*.
 - **Rules in CI but not in the agent's loop.** This is the techdebt.best point and it deserves its own bullet. If the agent only learns about a rule after a 10-minute CI cycle, it has built five layers of code on top of the violation by the time the failure reports back, and unwinding is expensive enough that the agent will try to patch around the rule rather than respect it. Run fitness functions in **pre-commit hooks**, **pre-tool-use hooks**, and ideally as a `bash` command the agent runs itself between edits. For Claude Code specifically: the `PreToolUse` hook fires before any tool call; a hook that runs `import-linter check` or `dependency-cruiser` before allowing a file write in `domain/` gives the agent immediate feedback in its own loop, before the violation is baked into a diff. The shorter the loop, the more the rule shapes the agent's behavior rather than punishing it after the fact. Pair this with [contract-testing](contract-testing.md) and [bdd-for-agents](bdd-for-agents.md) for the full feedback envelope; pair it with [ddd-boundaries](ddd-boundaries.md) when the rule itself is a domain boundary.
+- **MCP-as-governance gap.** Fitness functions running only in CI catch violations after 10 minutes; the same rules surfaced as MCP tools answer governance queries *before* the agent writes the violating code. Neal Ford's 2026 *Building Evolutionary Architectures* materials identify this as the next layer: an MCP tool that answers "is this import allowed under the dependency rules?" lets the agent consult governance during planning, not just after committing. For teams already running MCP servers in their dev environment, exposing fitness-function queries as lightweight MCP tools is the minimal step beyond pre-commit hooks. **Hybrid evaluation counterpoint:** for architectural properties that resist deterministic rules — "does this design align with our ADR on caching strategy?" — pair a mechanical fitness function with a lightweight LLM evaluation step in pre-commit. The deterministic rule catches what can be stated precisely; the LLM step handles judgment-requiring cases. Don't use the hybrid as a reason to skip writing the deterministic rules. Those remain the load-bearing artifact — the LLM step is a complement for the long tail, not a replacement for the foundation.
 
 ## Action Step
 
@@ -101,6 +102,13 @@ Write **one** ArchUnit-style rule for your project this week (or the equivalent 
 Then start the next agent session and watch it bounce off the rule. The agent will try the disallowed import, the build will fail, the agent will read the failure message, follow the link, and route around the constraint. That bounce is the entire point. You have just moved one piece of architectural knowledge out of your head and into the system, where every future session — yours, your teammate's, an agent's at 3am — will respect it without you being there.
 
 Then write a second one. The first fitness function is the hardest; the tenth is muscle memory. The compound effect of ten cheap rules is that the agent's environment becomes a stronger teacher than any CLAUDE.md file you can write. See [agentic-tdd](agentic-tdd.md) for how this composes with behavioral testing, [comprehension-debt](comprehension-debt.md) for what fitness functions cost (and save) over time, and [sources](sources.md) for the full citation list.
+
+## Learn on the go
+
+- **Video:** [The Intersection of Fitness Function–Driven Architecture and Agentic AI — Neal Ford](https://www.youtube.com/watch?v=x4ZLSvVki3I) — DevCon Fall 2025. The co-author of *Building Evolutionary Architectures* on exactly this page's thesis: fitness functions as the governance layer for agent-written code.
+- **Video:** [The Intersection of Architecture Fitness Functions and Metrics — Neal Ford](https://www.youtube.com/watch?v=qT-MPqd7Ioo) — GSAS 2023. How fitness functions relate to the metrics you already collect.
+- **Video:** [Building Evolutionary Architectures — Neal Ford](https://www.youtube.com/watch?v=DloJCWdB7_o) — YOW! 2018. The original conference treatment of the book; the atomic/holistic/triggered/continual taxonomy this page uses.
+- **Video:** [Unit Test Your Java Architecture With ArchUnit — Roland Weisleder](https://www.youtube.com/watch?v=ef0lUToWxI8) — Devoxx. The reference-implementation tool from this page's tooling section, demonstrated live.
 
 ---
 

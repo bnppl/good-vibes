@@ -2,7 +2,7 @@
 title: "Contract Testing"
 parent: "Verification"
 nav_order: 6
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -63,6 +63,16 @@ The 2026 tool worth knowing here is [**PactFlow Drift**](https://pactflow.io/blo
 
 The complementary research direction is the arXiv paper [*Making REST APIs Agent-Ready: From OpenAPI to Model Context Protocol Servers*](https://arxiv.org/html/2507.16044v1) (Jul 2025), which bridges OpenAPI specs to MCP tool surfaces. The implication for agentic dev is sharper than it looks: when an agent generates a client by reading your OpenAPI spec — directly, or via an MCP server derived from it — that spec is *immediately* the contract that future agent sessions will rely on. If it drifts, every downstream agent session inherits the drift. Schema-first contracts stop being "documentation hygiene" and start being load-bearing infrastructure.
 
+## Session-Level Behavioral Contracts
+
+A distinct use case that the Pact-and-OpenAPI framing misses: contracts at the *development session level*, not just the production service level.
+
+When Session A implements a module and Session B later modifies it, the question isn't just "did the interface break?" — it's "did the behavioral contract the module fulfilled change in ways Session B didn't know about?" Session-level behavioral contracts are snapshots of the behavioral promises a module was making when it was last touched by a session that understood it.
+
+The mechanism: as part of characterization testing (covered in [characterization-and-handoff](characterization-and-handoff.md)), generate a contract file alongside the characterization tests that formally states: "at Session A's completion, this module fulfilled these behavioral promises to these callers." It's a consumer-driven contract authored retroactively — but it captures what Session A knew that Session B won't discover from reading the code.
+
+**TestSprite** (2026) operationalizes this pattern: it generates behavioral contract tests from observed API traffic and agent execution traces, producing machine-readable contracts that describe what a module *actually does* in production rather than what its interface *claims to do*. The tests fail when observed behavior drifts from the contract — the same signal Pact gives at the interface layer, applied to the behavioral layer underneath. Most useful at module boundaries that are stable enough to have real production traffic, not for in-development code. The output format is compatible with standard contract brokers.
+
 ## What This Catches That Other Techniques Miss
 
 - **BDD scenarios** ([bdd-for-agents](bdd-for-agents.md)) cover behavior *within* a context — they describe what the system does in domain language, not what it promises across a boundary.
@@ -98,6 +108,12 @@ Wire it into CI on both sides. Pre-merge. Not "we'll watch it for a week." This 
 If your team is allergic to Pact-the-tool but not to the *idea*, start with [ddd-boundaries](ddd-boundaries.md)-style ACL unit tests. They're contract tests in everything but name, and they're the cheapest possible on-ramp to the discipline. The OneUptime [*How to Build the Anti-Corruption Layer Pattern*](https://oneuptime.com/blog/post/2026-01-30-anti-corruption-layer-pattern/view) post (Jan 2026) is a clean walkthrough of the structure if you need a reference.
 
 Reading list and full citations: [sources](sources.md). Related: [agentic-tdd](agentic-tdd.md), [comprehension-debt](comprehension-debt.md).
+
+## Learn on the go
+
+- **Course:** [Microservices Contract Testing with Pact](https://www.udemy.com/course/microservices-contract-testing-with-pact/) — Udemy. Consumer- and provider-driven contract tests end to end, including broker orchestration with Pactflow — the full workflow from this page's four-step pattern.
+- **Video playlist:** [Introduction to contract testing with Pactflow](https://www.youtube.com/playlist?list=PLwy9Bnco-IpfZ72VQ7hce8GicVZs7nm0i) — the official short-video series from the Pact team; the fastest visual explanation of how contracts, brokers, and `can-i-deploy` fit together.
+- **Hands-on:** [Pact workshops](https://docs.pact.io/implementation_guides/workshops) — official guided workshops in JS, Java, Go, .NET, and more. Not passive listening, but the fastest route from theory to a running contract test.
 
 ---
 

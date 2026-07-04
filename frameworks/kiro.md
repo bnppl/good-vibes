@@ -2,7 +2,7 @@
 title: "Kiro"
 parent: "SDD Frameworks"
 nav_order: 1
-last_updated: 2026-06-16
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -37,6 +37,10 @@ Kiro is a VS Code fork / AI-native IDE built on Amazon Bedrock. It's the most pr
 ## How It Works
 
 Kiro generates three markdown files that form the spec pipeline:
+
+**Reportedly**, Kiro uses a **dual-model architecture** internally: Claude Sonnet (via Amazon Bedrock) for the requirements reasoning and design phases, and an AWS Nova model for code generation tasks. This separation mirrors the separation at the spec layer — reasoning-heavy work (what to build, how to structure acceptance criteria) goes to the model optimized for judgment; mechanical generation (translating the approved design into code) goes to the faster model. This is an inference from community analysis of Kiro's API traffic patterns, not official AWS documentation; treat as directional, not confirmed.
+
+As of mid-2026, Kiro has moved to **GA pricing** ($19/mo for individuals, $39/mo for teams) after its preview period. The "Free during preview" entry in Pros below is no longer current.
 
 1. **`requirements.md`** -- Generates requirements and acceptance criteria using EARS notation (Easy Approach to Requirements Syntax) with "GIVEN...WHEN...THEN..." format
 2. **`design.md`** -- Analyzes the codebase and produces architecture, system design, and tech stack decisions

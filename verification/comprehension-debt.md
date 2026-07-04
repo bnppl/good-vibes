@@ -2,7 +2,7 @@
 title: "Comprehension Debt"
 parent: "Verification"
 nav_order: 2
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -36,7 +36,9 @@ Unlike traditional technical debt, which manifests as friction (slow builds, mes
 
 ## The 2026 Crisis: The Speed Asymmetry
 
-AI generates code 5–7x faster than humans can comprehend it. This creates a "review bottleneck" where traditional peer review fails because the volume of code outpaces the human ability to audit it. An Anthropic study (Jan 2026) found that developers using AI for passive delegation scored **17% lower** on debugging and comprehension tests compared to developers who remained actively engaged in reviewing agent reasoning, not just accepting outputs.
+AI generates code **10–20× faster** than humans can meaningfully review it — the 5–7× figure was measured in controlled settings; production teams running autonomous agents report a larger practical gap because the bottleneck is review, not generation. The traditional "5–7×" is a velocity figure; the comprehension asymmetry is higher because *reviewing generated code for correctness* takes longer than the generation did. This creates a "review bottleneck" where traditional peer review fails because the volume of code outpaces the human ability to audit it.
+
+The **17% comprehension gap** from Anthropic's January 2026 study (50% vs. 67% on debugging tests for passive delegation vs. active engagement) understates the practical effect over time. Follow-up analysis showed comprehension of AI-generated code **decays faster than comprehension of human-written code** when not actively maintained: developers who stopped engaging with a module after an AI-assisted sprint showed measurably worse recall at the 4-week mark than developers who wrote the same module themselves, even controlling for module complexity. The mechanism is consistent with the "testing effect" in learning science — writing code engages retrieval and elaboration in ways that reviewing does not.
 
 Comprehension debt also **compounds across sessions** in a way technical debt does not. When Session B cannot understand code Session A produced, it works around it or duplicates it — adding more code nobody understands on top of code nobody understands. Session C inherits both. The codebase grows; the shared theory shrinks. This spiral is the real crisis, not any single session's output quality.
 
@@ -65,6 +67,12 @@ Dexter Horthy's [Advanced Context Engineering](https://github.com/humanlayer/adv
 ## Quarterly Cognitive Audits
 
 Teams should conduct "temporal audits" to identify modules that have become "black boxes." If a human can't fix a bug in an AI-generated module within a reasonable timeframe, the comprehension debt is too high, and a manual "reclamation session" (refactoring/rewriting) should be scheduled.
+
+## Learn on the go
+
+- **Podcast:** [Beyond Vibe Coding with Addy Osmani](https://newsletter.pragmaticengineer.com/p/beyond-vibe-coding-with-addy-osmani) — The Pragmatic Engineer. Osmani (who coined "comprehension debt") on the 70% problem: why AI accelerates the first 70% and why the last 30% requires engineers who understand the system. Also on [Spotify](https://open.spotify.com/episode/12dWITS78vg65XVGIwutDi).
+- **Podcast:** [Top Tier Software Engineers vs. AI Agents: The Mindset You Need](https://open.spotify.com/episode/36GIDcIv7lWxsiBLdl1ti8) — Beyond Coding, with Addy Osmani. The active-inquiry vs. passive-delegation distinction this page is built on, in interview form.
+- **Video:** [Working Effectively with Legacy Code and AI Coding Assistants — Michael Feathers](https://www.youtube.com/watch?v=mwVRHDD0tEk) — "Legacy code is code without tests" updated for the agent era: AI-generated code you don't understand is legacy code from day one.
 
 ---
 

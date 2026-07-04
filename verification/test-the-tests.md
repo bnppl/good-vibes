@@ -2,7 +2,7 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -78,6 +78,21 @@ The empirical picture as of early 2026 is clearer than it was a year ago. The ar
 
 The **[DataPRM paper](https://arxiv.org/abs/2504.20015)** (2025–2026) adds a relevant finding from a different angle: it trains process reward models (PRMs) on agent outputs labeled at each *reasoning step*, not just final answers. The key insight is that fluency and correctness are decorrelated — the most dangerous agent outputs are wrong answers that sound exactly right, because they passed every surface-level check while encoding a subtle error in reasoning. Applied to test quality: an agent can write a test that reads cleanly, uses correct syntax, and follows naming conventions while asserting something that is trivially true and would survive any mutation. PRMs trained on DataPRM-style signals catch this by evaluating intermediate reasoning steps, not just final output. For teams building agent evaluation infrastructure, DataPRM signals a direction: assess *how* the agent reasoned about what to test, not just whether the test compiles and passes.
 
+## Kill Rate Thresholds in Practice
+
+The question "what floor should I set?" has a more concrete answer in 2026 than it did a year ago, from teams that have run mutation testing under agent authorship for multiple release cycles:
+
+- **Payment/financial logic: 85%+.** Money calculations, rounding, edge cases in currency handling, tax logic. Agents are confidently wrong in subtle ways here — they produce code that handles the happy path beautifully and fails on edge cases the tests never enumerated.
+- **Auth and security: 80%+.** The intersection of comprehension debt and security failure modes. A surviving mutant in an auth check is a potential bypass.
+- **Domain/business logic: 75%.** Core behavioral rules that define what the product does. Lower than payment because the failure cost of each mutant varies more.
+- **Application layer / orchestration: 60%.** Glue code, controller logic, service coordination. Valuable to check, but the blast radius of any single mutation is usually bounded.
+- **Generated code, thin adapters, migrations: skip.** The floor for generated code is zero — the generator is the source of truth, not the tests.
+- **UI components (non-behavioral): 50% or skip.** Snapshot tests cover the right concern here; mutation testing snapshots is theater.
+
+The floor is a fitness function: commit it to CI, set it per-module in the mutation tool config, and treat a declining floor as a signal that test quality is degrading in parallel with agent output volume. A floor that grows or holds steady is the mutation equivalent of a rising code coverage — directionally positive, not proof of correctness.
+
+**Surviving mutant categories to watch specifically under agent authorship:** off-by-one errors in range checks (agents pattern-match to `< n` when `<= n` is correct), missing null checks in newly added code paths (agents add the happy-path path and skip the defensive path), and inverted conditionals in error handling (the agent writes `if (isValid())` where the original had `if (!isValid())`). These categories survive more often in agent-written code than human-written code because agents don't have the debugging scar tissue that makes humans paranoid about these specific mistakes.
+
 ## Traps
 
 - **Mutation testing run too often.** The suite times out, the team gets annoyed, someone disables the gate, and the project is back to line coverage within a sprint. Schedule it; do not gate every PR on it; report drift, not absolute scores.
@@ -92,6 +107,13 @@ Pick a file an agent recently touched in a project you care about. Run a mutatio
 Then, separately and on a different file: pick one pure function — something with a clear input/output contract, no I/O — and write a single property-based test for it. Just one property. Note the inputs the framework generates that you would never have thought to enumerate. That moment, the first time Hypothesis hands you a Unicode surrogate pair or a zero-length list that breaks code you would have sworn was correct, is the entire pedagogical point. The agent did not generate that input either. That is why the property exists.
 
 See [sources](sources.md) for full citations.
+
+## Learn on the go
+
+- **Video:** [Mutation Testing with Stryker — Adrianne Mallett on Some Antics](https://www.youtube.com/watch?v=w2VI8YAFMcw) — a live-coded walkthrough of Stryker: planting mutants, reading the survivor report, improving assertions. The practical companion to this page's kill-rate section.
+- **Video:** [Hypothesis: Property-Based Testing for Python — Rae Knowler](https://www.youtube.com/watch?v=hNlredWSQ0U) — conference introduction to Hypothesis: writing properties, generators, and shrinking.
+- **Podcast:** [Talk Python To Me #67 — Property-based Testing with Hypothesis](https://talkpython.fm/episodes/show/67/property-based-testing-with-hypothesis) — David MacIver, Hypothesis's author, on the philosophy behind the tool.
+- **Podcast:** [Test & Code — Property-Based Testing in Python with Hypothesis](https://podcasts.apple.com/us/podcast/property-based-testing-in-python-hypothesis-alexander/id1029487211?i=1000469798182) — Alexander Hultnér on practical PBT adoption: where to start, which invariants to name first.
 
 ---
 

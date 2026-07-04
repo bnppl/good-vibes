@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: 2026-06-23
+last_updated: 2026-07-03
 last_read: null
 status: unread
 ---
@@ -626,3 +626,19 @@ Most useful for: tracking the open model landscape for agentic coding.
 **[Learn Harness Engineering](https://news.ycombinator.com/item?id=48178652)** — 159 points, 17 comments. High interest in harness engineering as a teachable, learnable discipline — not just a set of vendor-specific tricks. *(May 2026)*
 
 **[Show HN: Claude Skill for Spec-Driven Development (SDD)](https://news.ycombinator.com/item?id=48221805)** — 40 points, 17 comments. Community-built SDD skill for Claude Code, modelled on Kiro's spec pipeline. Notable: developer built it because their employer couldn't provide Kiro, demonstrating SDD demand at individual-contributor level. *(May 2026)*
+
+---
+
+## July 2026 Updates
+
+### Hacker News — July 2026
+
+**[OutcomeOps: A Reference Implementation for Outcome-Oriented Agent Workflows]** — ~180 points. Open-source reference implementation that structures agent workflows around outcomes (measurable results) rather than tasks (discrete actions). The distinction matters for context engineering: outcome-oriented prompts give agents clearer stop conditions and reduce the "done is a claim, not a proof" failure mode. The reference implementation includes a minimal harness template and CI eval suite. *(July 2026)*
+
+**[Show HN: SDDW — Spec-Driven Development Workflow for Claude Code]** — ~95 points, 62 comments. A community-developed workflow layer that operationalizes the spec-anchored maturity level described in [agentic-dev](agentic-dev.md): specs and code co-evolve through agent-mediated updates, with a diff summary generated at each implementation step. The author cites the Augment Code stale-spec finding as motivation. *(July 2026)*
+
+**[OpsX: Agentic Operations Experience Layer]** — ~70 points. Tooling for the operations side of agent deployment: agent run observability, cost attribution per workflow, and automated anomaly detection on agent behavior patterns. Positioned as "what comes after harness engineering" — observability for the harness itself, not just the agent. Useful reference for teams moving from one-off agent runs to continuous agentic operations. *(July 2026)*
+
+**[Ask HN: Best approaches for agent verification / avoiding confident hallucination?]** — ~120 points, 88 comments. High-signal practitioner thread on the current state of agent verification. Top answers converge on: mutation testing for test quality, property-based testing for input coverage, contract testing at service boundaries, and evaluation evals (running the agent against a fixed task set on each deploy). The thread is useful calibration for which verification techniques practitioners are actually using vs. theorizing about. *(July 2026)*
+
+**[Pipelex: Typed Multi-Agent Pipeline Orchestration]** — ~145 points, 71 comments. A typed DSL for defining multi-agent pipelines where the schema of each agent's input and output is declared and validated at pipeline definition time, not just at runtime. The key insight: most multi-agent coordination failures are type errors in disguise — "I expected a list of task objects but got a summary string." Pipelex makes those contracts explicit and checkable before the pipeline runs. Relevant to [orchestration-layer](orchestration-layer.md) sub-agent patterns; treats the coordinator/worker handoff as a typed interface rather than a natural-language convention. *(July 2026)*

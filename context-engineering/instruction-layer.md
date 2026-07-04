@@ -2,7 +2,7 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-06-15
+last_updated: 2026-07-03
 last_read: 2026-04-06
 status: read
 ---
@@ -80,7 +80,9 @@ Modern AI coding tools load persistent instruction files into every session:
 - **.cursorrules** (Cursor) — the original; still widely used but Cursor has since moved toward project rules in settings
 - **AGENTS.md** — an emerging cross-tool standard that works across Claude Code, Cursor, GitHub Copilot, and others
 
-AGENTS.md is worth adopting if you're working across tools. A single file that governs agent behavior everywhere reduces duplication and drift between tool-specific versions of the same guidance.
+AGENTS.md is worth adopting if you're working across tools. A single file that governs agent behavior everywhere reduces duplication and drift between tool-specific versions of the same guidance. As of mid-2026, AGENTS.md has become the de facto cross-tool standard: it ships with first-class support in Claude Code, GitHub Copilot Workspace, Cursor, and Gemini CLI, and the format has converged enough that an AGENTS.md written for one tool works in the others without modification.
+
+**The `@import` pattern.** AGENTS.md (and CLAUDE.md) support an `@<filename>` directive that pulls in referenced files inline — `@api/conventions.md` loads that file's content as if written directly. This enables hierarchical instruction organization: a root AGENTS.md imports domain-specific files (`@verification/rules.md`, `@contracts/pact-setup.md`) rather than accumulating all rules in one growing omnibus. Each domain area owns its instructions in a co-located file; the root file is a manifest. The practical benefit: domain rules stay close to what they govern and get updated by whoever works in that area, rather than accumulating in a root file that nobody fully owns and nobody fully trims.
 
 ### Scoped Rules
 
@@ -109,6 +111,8 @@ The adoption signal is strong: OpenAI, Google, GitHub, and Cursor all adopted si
 Anthropic's documentation notes that system prompts already contain around 50 instructions by the time you account for tool descriptions, formatting guidance, and core behavioral rules. Models can reliably follow approximately this many instructions before degradation sets in.
 
 Every instruction you add competes for attention with every other instruction. This isn't a theoretical concern — at high instruction counts, models start dropping rules inconsistently. The ceiling forces prioritization: if you're writing instruction 51, something else should come out.
+
+**Model-generation caveat.** The ~50 figure applies to Sonnet-class models. More capable models in the Fable-5 class can reliably follow 150–200 discrete instructions before degradation appears — the ceiling scales with model capability. This doesn't mean you should write 200 rules: the 50-instruction discipline forces a prioritization exercise that produces better instruction files regardless of the model's ceiling. But it does mean the "if you're over 50, something is wrong" heuristic should be recalibrated per model generation. If your team is running Fable 5 exclusively, the practical ceiling is higher; if you're running a mix of models, calibrate to the least capable one your instruction file will see.
 
 ---
 

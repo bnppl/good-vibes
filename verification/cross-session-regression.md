@@ -2,7 +2,7 @@
 title: "Cross-Session Regression"
 parent: "Verification"
 nav_order: 3
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -83,6 +83,20 @@ The remaining sessions of Module 4 each address one or more of the three failure
 
 The pattern across all six: move the constraint out of human discipline and into a test, a contract, or a build rule that survives the next session boundary.
 
+## Appendix: Fourth Failure Shape — Correlated Drift
+
+As agentic codebases scale and more sessions run in parallel, a fourth failure shape has become distinct enough to name: **correlated drift**.
+
+Unlike the original three shapes — which each have a clean cause (contract not honored, utility not found, rule not known) — correlated drift is a systems-level failure. Multiple sessions each make locally correct changes that, in combination, produce a behavior the original design never anticipated. No individual session made a mistake. No single PR breaks anything. The failure emerges from the *composition* of individually correct changes.
+
+A concrete shape: Session A refactors `formatCurrency()` to handle negative values correctly; Session B updates the cart total calculation to return negative values for credits; Session C adds a display component that calls `formatCurrency()` on cart totals. Each change is independently sensible. Together, credits now display as "−$5.00" on the checkout page — technically correct but visually alarming and UX-breaking. No existing contract test catches this because no existing contract specified what `formatCurrency(-5)` should look like on a checkout summary.
+
+What makes this a distinct failure shape: **the bug lives at an integration boundary that no session defined**. The three original shapes fail because a session violated something explicit. Correlated drift fails because no one made the integration contract explicit in the first place.
+
+Detection mechanism: holistic integration tests — end-to-end scenarios that verify system-level behaviors across the full stack, not just individual module contracts. The [bdd-for-agents](bdd-for-agents.md) approach at its most expansive: feature scenarios that span contexts rather than staying within one. The [fitness-functions](fitness-functions.md) approach for the behavioral domain: "a cart with a credit always shows a non-negative display value" as a property, verified by a synthetic integration test on every deploy.
+
+This shape doesn't invalidate the original three — those remain more common and more mechanically addressable. Correlated drift is harder to catch because it requires the kind of holistic thinking across sessions that agents don't have by default and humans struggle to maintain at scale.
+
 ## Action Step
 
 Pick a feature you built across multiple agent sessions in the last month. Open the PRs side by side. List three specific places where a future agent session, working only from a fresh context window and the current state of the repo, could silently break it. For each:
@@ -92,6 +106,13 @@ Pick a feature you built across multiple agent sessions in the last month. Open 
 3. Note whether your current test suite would catch it. If you're honest, most won't.
 
 Keep the list. The next six sessions will give you the techniques to close each one. By the end of the module, every item on your list should map to a verification artifact you can add—not a habit you have to remember.
+
+## Learn on the go
+
+- **Video:** [Acceptance Testing for Continuous Delivery — Dave Farley](https://www.youtube.com/watch?v=SBhgteA2szg) — GOTO 2016. The pre-agent version of this page's core argument: automated acceptance tests as the deterministic gate that catches regressions no reviewer will. Everything here transfers directly to the cross-session case.
+- **Podcast/Video:** [TDD, AI agents and coding with Kent Beck](https://www.youtube.com/watch?v=aSXaxOdVtAQ) — The Pragmatic Engineer. Beck on why verification artifacts matter more, not less, as agents write more of the code.
+
+Each technique page in this module has its own resource list — see [bdd-for-agents](bdd-for-agents.md), [ddd-boundaries](ddd-boundaries.md), [contract-testing](contract-testing.md), [fitness-functions](fitness-functions.md), [test-the-tests](test-the-tests.md), and [characterization-and-handoff](characterization-and-handoff.md).
 
 ---
 
