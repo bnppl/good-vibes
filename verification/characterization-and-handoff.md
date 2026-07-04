@@ -123,10 +123,9 @@ The exercise produces two artifacts: a hardened legacy module, and a calibrated 
 
 ## Learn on the go
 
-- **Video:** [Working Effectively with Legacy Code and AI Coding Assistants — Michael Feathers](https://www.youtube.com/watch?v=mwVRHDD0tEk) — the author of the canonical book, updating it for the agent era. The single most relevant watch for this page.
-- **Video:** [Working Effectively with Legacy Code — Michael Feathers & Christian Clausen](https://www.youtube.com/watch?v=P_6eDL1aqtA) — GOTO Book Club 2023. Feathers revisiting the book twenty years on: what held up, what he'd change.
-- **Podcast:** [SE Radio 595 — Llewellyn Falco on Approval Testing](https://se-radio.net/2023/12/se-radio-595-llewelyn-falco-on-approval-testing/) — the creator of ApprovalTests on golden-master testing: when to use it, the one-keystroke-approval trap, and how it differs from assertions.
-- **Podcast:** [Tech Lead Journal #195 — Working Effectively with Legacy Code and AI Coding Assistants](https://techleadjournal.dev/episodes/195/) — Feathers in interview form, covering characterization-first workflows with agents.
+- **Podcast:** [Craft 2026 — Legacy code in the AI era with Michael Feathers](https://www.avkpodcast.hu/p/craft-2026-legacy-code-michael-feathers) *(June 2026)*. The author of the canonical characterization-testing book on the current question: is AI generating legacy code faster than ever, and what does "characterize before you touch" mean when the toucher is an agent?
+- **Course:** [The Complete Claude Code & Claude Cowork Masterclass](https://www.udemy.com/course/claude-aiagents-cowork-masterclass/) — Udemy *(2026, live course — new lessons added as Anthropic ships features)*. The most current hands-on coverage of the handoff surface this page describes: CLAUDE.md, skills, and session workflows.
+- **Podcast/Video:** [The AI Native Dev](https://ainativedev.io/podcast) *(ongoing, 2026)* — the podcast most consistently covering AGENTS.md, skills, and cross-session knowledge patterns as they evolve; the AI Native DevCon London 2026 episodes are the current state of the handoff conversation.
 
 ---
 

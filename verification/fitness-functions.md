@@ -105,10 +105,9 @@ Then write a second one. The first fitness function is the hardest; the tenth is
 
 ## Learn on the go
 
-- **Video:** [The Intersection of Fitness Function–Driven Architecture and Agentic AI — Neal Ford](https://www.youtube.com/watch?v=x4ZLSvVki3I) — DevCon Fall 2025. The co-author of *Building Evolutionary Architectures* on exactly this page's thesis: fitness functions as the governance layer for agent-written code.
-- **Video:** [The Intersection of Architecture Fitness Functions and Metrics — Neal Ford](https://www.youtube.com/watch?v=qT-MPqd7Ioo) — GSAS 2023. How fitness functions relate to the metrics you already collect.
-- **Video:** [Building Evolutionary Architectures — Neal Ford](https://www.youtube.com/watch?v=DloJCWdB7_o) — YOW! 2018. The original conference treatment of the book; the atomic/holistic/triggered/continual taxonomy this page uses.
-- **Video:** [Unit Test Your Java Architecture With ArchUnit — Roland Weisleder](https://www.youtube.com/watch?v=ef0lUToWxI8) — Devoxx. The reference-implementation tool from this page's tooling section, demonstrated live.
+- **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. OpenAI's approach to structural constraints enforced by custom linters and validated dependency directions — fitness functions doing the governance work this page describes, at a-billion-tokens-a-day scale.
+- **Webinar:** [Use AI Mutation Testing to Improve Software Quality](https://www.gartner.com/en/webinar/830638/1839333-use-ai-mutation-testing-to-improve-software-quality) — Gartner *(recorded April 1, 2026)*. A kill-rate floor wired into PR workflows is a fitness function on test quality — this is the concrete build-out of that idea.
+- **Read (short):** [Mutation Testing for AI-Generated Code: A Practical Guide](https://www.augmentcode.com/guides/mutation-testing-ai-generated-code) — Augment Code *(2026)*. Covers the enforcement side: turning quality thresholds into gates agents bounce off, this page's core move applied to test suites.
 
 ---
 

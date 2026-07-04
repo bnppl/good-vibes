@@ -103,9 +103,9 @@ The point of the exercise isn't to produce a polished diagram. It's to make the 
 
 ## Learn on the go
 
-- **Video:** [Bounded Contexts — Eric Evans](https://www.youtube.com/watch?v=am-HXycfalo) — DDD Europe 2020. The pattern this entire page repurposes, explained by the person who invented it. Watch this before anything else here.
-- **Course:** [Domain-Driven Design Fundamentals](https://www.pluralsight.com/courses/fundamentals-domain-driven-design) — Julie Lerman & Steve Smith, Pluralsight. The standard on-ramp: bounded contexts, aggregates, ubiquitous language, with a worked demo application and interviews with DDD experts.
-- **Course:** [Domain-Driven Design (DDD) for Beginners: Core Principles](https://www.udemy.com/course/domain-driven-design-fundamentals/) — Udemy. A lighter-weight crash course if you want the strategic-design vocabulary (contexts, maps, aggregates) without the full modeling depth.
+- **Video:** [From Prompt Spaghetti to Bounded Contexts: DDD for Agentic Codebases — Nikita Golovko](https://gitnation.com/contents/from-prompt-spaghetti-to-bounded-contexts-ddd-for-agentic-codebases) — AI Coding Summit 2026 *(March 2026)*. The talk this page's central recommendation comes from: bounded contexts as agent responsibility scopes, context maps as the explicit cross-agent integration surface.
+- **Read (short):** [Context Maps in the Age of AI — Michael Plöd](https://www.michael-ploed.com/blog/context-maps-in-the-age-of-ai) *(2026)*. One of the leading DDD practitioners on how context mapping changes when agents are the ones crossing the boundaries — the cross-session artifact argument from a strategic-design authority.
+- **Read (short):** [Domain Driven Agent Design — Russ Miles](https://engineeringagents.substack.com/p/domain-driven-agent-design) *(2026)*. DDD primitives applied directly to agent system design rather than retrofitted; useful for the multi-agent version of this page's argument.
 
 ---
 

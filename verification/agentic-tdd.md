@@ -68,10 +68,9 @@ The "TDD Paradox" is partly a test-quality problem: an agent that writes shallow
 
 ## Learn on the go
 
-- **Podcast/Video:** [TDD, AI agents and coding with Kent Beck](https://www.youtube.com/watch?v=aSXaxOdVtAQ) — The Pragmatic Engineer. The inventor of TDD on how the discipline changes with AI agents in the loop — the single most relevant listen for this page. Also on [Spotify](https://open.spotify.com/episode/1S28nbYSgRoFwvRrC8w0QI).
-- **Course:** [Unit Testing and Test Driven Development in Python](https://www.udemy.com/course/unit-testing-and-tdd-in-python/) — Udemy. TDD fundamentals with pytest; the red-green-refactor loop this page's Red-Green-Agent pattern builds on.
-- **Course:** [Practical Test Driven Development for Java Programmers](https://www.udemy.com/course/practical-test-driven-development-for-java-programmers/) — Udemy. Real-world TDD with JUnit and Mockito.
-- **Course:** [TDD & BDD: Design Through Testing](https://courses.cd.training/courses/tdd-bdd-design-through-testing) — Dave Farley (Continuous Delivery). Tests as design tools, from the author of *Modern Software Engineering*.
+- **Podcast:** [Tech League #17 — Alan Richardson on testing in the AI era](https://techleaguepodcast.com/episodes/) *(April 3, 2026)*. Directly on this page's questions: how to test AI-generated code, whether TDD still makes sense with agents, and why self-healing tests are a red flag — the same behavioral-vs-structural distinction this page draws.
+- **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Ryan Lopopolo (OpenAI) on going from 3.5 to 70 PRs per engineer per week — with tests and linters as the feedback loop that closes the agent's loop. The tests-as-hard-gates argument at production scale.
+- **Course:** [Claude Code 2026: Subagents, MCP, Skills and Plugins Bootcamp](https://www.udemy.com/course/claude-code-for-agentic-ai-build-ai-agents-10x-faster/) — Udemy *(2026, actively updated)*. Covers the hooks system hands-on — including the `PreToolUse` gate pattern this page describes for blocking untested writes.
 
 ---
 

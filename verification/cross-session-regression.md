@@ -109,8 +109,8 @@ Keep the list. The next six sessions will give you the techniques to close each 
 
 ## Learn on the go
 
-- **Video:** [Acceptance Testing for Continuous Delivery — Dave Farley](https://www.youtube.com/watch?v=SBhgteA2szg) — GOTO 2016. The pre-agent version of this page's core argument: automated acceptance tests as the deterministic gate that catches regressions no reviewer will. Everything here transfers directly to the cross-session case.
-- **Podcast/Video:** [TDD, AI agents and coding with Kent Beck](https://www.youtube.com/watch?v=aSXaxOdVtAQ) — The Pragmatic Engineer. Beck on why verification artifacts matter more, not less, as agents write more of the code.
+- **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Ryan Lopopolo (OpenAI) on "the asynchronous CI jobs that catch slop before it compounds" — the deterministic-gate argument of this page, from a team running agents at a billion tokens a day.
+- **Course:** [Claude Code Beginner to Pro: Agentic Coding for Developers](https://www.udemy.com/course/learn-claude-code/) — Udemy *(updated June 2026)*. Building custom workflows and automations around Claude Code — the practical scaffolding for making verification artifacts run in every session.
 
 Each technique page in this module has its own resource list — see [bdd-for-agents](bdd-for-agents.md), [ddd-boundaries](ddd-boundaries.md), [contract-testing](contract-testing.md), [fitness-functions](fitness-functions.md), [test-the-tests](test-the-tests.md), and [characterization-and-handoff](characterization-and-handoff.md).
 

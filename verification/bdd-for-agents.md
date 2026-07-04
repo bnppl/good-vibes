@@ -103,10 +103,9 @@ Watch where the agent's interpretation diverges from yours. It will diverge — 
 
 ## Learn on the go
 
-- **Course:** [ATDD: From Stories to Executable Specifications](https://courses.cd.training/courses/atdd-from-stories-to-executable-specifications) — Dave Farley (Continuous Delivery). Turning user stories into executable specs — the exact outside-in workflow this page describes.
-- **Video:** [Acceptance Testing for Continuous Delivery — Dave Farley](https://www.youtube.com/watch?v=SBhgteA2szg) — GOTO 2016. The declarative-over-imperative scenario discipline, and why the executable spec layer belongs in the deployment pipeline.
-- **Course:** [Master Cucumber BDD with Selenium: Frameworks from Scratch](https://www.udemy.com/course/cucumber-bdd/) — Udemy. Gherkin syntax, step definitions, and framework structure with Java/Selenium; recently updated with AI-assisted automation concepts.
-- **Course:** [Cucumber BDD with Python Behave and Selenium WebDriver](https://www.udemy.com/course/bdd-testing-with-python/) — Udemy. The same discipline in Python using Behave, the tooling named in this page's 2026 stack.
+- **Read (short):** [BDD Gherkin Guidelines for AI Coding and Testing](https://automationpanda.com/2026/04/27/bdd-gherkin-guidelines-for-ai-coding-and-testing/) — Andy Knight, Automation Panda *(April 27, 2026)*. The most current practical guide to exactly this page's workflow: the rules that make agents write good Gherkin instead of the imperative sprawl they default to.
+- **Podcast/Video:** [The AI Native Dev](https://ainativedev.io/podcast) *(ongoing, 2026)* — recurring coverage of specs-as-contracts and tests-as-the-review-surface; the "developers are increasingly test writers — if the tests are good enough, you don't need to look at the code" thesis is this page's outside-in argument in podcast form.
+- **Course:** [Master Cucumber BDD with Selenium: Frameworks from Scratch](https://www.udemy.com/course/cucumber-bdd/) — Udemy *(updated 2026 with AI-assisted automation content)*. The only major Cucumber course that has been refreshed for agent-driven workflows; skip the older Cucumber courses, which predate the AI tooling entirely.
 
 ---
 

@@ -110,10 +110,10 @@ See [sources](sources.md) for full citations.
 
 ## Learn on the go
 
-- **Video:** [Mutation Testing with Stryker — Adrianne Mallett on Some Antics](https://www.youtube.com/watch?v=w2VI8YAFMcw) — a live-coded walkthrough of Stryker: planting mutants, reading the survivor report, improving assertions. The practical companion to this page's kill-rate section.
-- **Video:** [Hypothesis: Property-Based Testing for Python — Rae Knowler](https://www.youtube.com/watch?v=hNlredWSQ0U) — conference introduction to Hypothesis: writing properties, generators, and shrinking.
-- **Podcast:** [Talk Python To Me #67 — Property-based Testing with Hypothesis](https://talkpython.fm/episodes/show/67/property-based-testing-with-hypothesis) — David MacIver, Hypothesis's author, on the philosophy behind the tool.
-- **Podcast:** [Test & Code — Property-Based Testing in Python with Hypothesis](https://podcasts.apple.com/us/podcast/property-based-testing-in-python-hypothesis-alexander/id1029487211?i=1000469798182) — Alexander Hultnér on practical PBT adoption: where to start, which invariants to name first.
+- **Podcast:** [Signals and Threads — Why Testing is Hard and How to Fix It](https://signalsandthreads.com/why-testing-is-hard-and-how-to-fix-it/) *(March 2026)*. Will Wilson (Antithesis founder — the company behind Bombadil from this page) on property-based testing, fuzzing, and why deterministic verification matters more as generation gets cheaper.
+- **Webinar:** [Use AI Mutation Testing to Improve Software Quality](https://www.gartner.com/en/webinar/830638/1839333-use-ai-mutation-testing-to-improve-software-quality) — Gartner *(recorded April 1, 2026)*. Building an AI-powered, mutation-guided test-hardening system wired into PR workflows — the operational version of this page's survivor-loop pattern.
+- **Read (short):** [Meta Reports 4× Higher Bug Detection with Just-in-Time Testing](https://www.infoq.com/news/2026/04/meta-jit-testing-ai-detection/) — InfoQ *(April 2026)*. Meta generating tests during code review using LLMs + mutation testing — kill-rate thinking deployed at the largest scale reported to date.
+- **Read (short):** [Finding bugs with Claude and property-based testing](https://red.anthropic.com/2026/property-based-testing/) — Anthropic Red Team *(2026)*. The writeup cited in this page's Deep dive: an agent that infers properties from docstrings and writes Hypothesis tests, gated by mutation score.
 
 ---
 
