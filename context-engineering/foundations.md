@@ -2,7 +2,7 @@
 title: "Foundations"
 parent: "Context Engineering"
 nav_order: 1
-last_updated: 2026-06-15
+last_updated: 2026-07-04
 last_read: 2026-04-06
 status: read
 ---
@@ -145,3 +145,10 @@ By early 2026, the industry shifted from "prompt whispering" to **Context Archit
 Research in 2026 (notably by Damon McMillan) highlighted the **"Grep Tax"**—the finding that compacting context doesn't always mean faster processing. Frontier models often perform better with structured, file-native context (using Markdown headers and semantic tagging) rather than heavily compressed or "flattened" text.
 
 For sources and further reading, see [sources.md](./sources.md).
+
+---
+
+## Learn on the go
+
+- **Podcast:** [Context Engineering with Adi Polak — The InfoQ Podcast](https://www.infoq.com/podcasts/context-engineering-large-language-models/) *(April 6, 2026)*. A current from-first-principles interview on exactly this page's shift: prompt engineering is stateless, context engineering makes systems stateful.
+- **Read (short):** [Context Engineering AI: How To Build Smarter LLM Agents In 2026](https://mem0.ai/blog/context-engineering-ai-agents-guide) — Mem0 *(2026)*. A practitioner walkthrough of the selection/compression/ordering levers this page introduces, with current tooling examples.

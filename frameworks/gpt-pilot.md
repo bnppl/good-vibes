@@ -2,7 +2,7 @@
 title: "GPT Pilot"
 parent: "SDD Frameworks"
 nav_order: 7
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -73,3 +73,13 @@ GPT Pilot pioneered the idea that AI-assisted development should look like a str
 The context rewinding innovation deserves special attention. It's an elegant solution to a fundamental constraint of LLM-based development: context windows are finite, but real projects aren't. By resetting context after each completed task while preserving the implementation, GPT Pilot demonstrated that long-running agentic development is possible without sacrificing coherence.
 
 Learning GPT Pilot teaches you the fundamentals of multi-agent development pipelines in a transparent, open-source environment. The patterns it established -- agent specialization, human checkpoints, TDD-driven task specs, context management -- are now table stakes in the spec-driven development space. Understanding where these patterns originated gives you a deeper grasp of why modern tools work the way they do.
+
+---
+
+## Learn on the go
+
+{: .hook }
+> **Security warning before anything else (June 2026):** the GPT Pilot repository carried a hidden supply-chain credential stealer from August 2025 until its removal on **June 11, 2026**. If you cloned and ran GPT Pilot from source in that window, rotate every credential the machine held — GitHub/npm tokens, cloud keys, SSH keys, API keys.
+
+- **Status update *(June 2026)*:** the [open-source repo](https://github.com/Pythagora-io/gpt-pilot) is now **archived and unmaintained**; development moved to the commercial [Pythagora platform](https://www.pythagora.ai/) (Y Combinator W24, now at v1 with 14 specialized agents). Treat this page as the history of the patterns, not a recommendation to run the tool.
+- No current courses or podcasts cover GPT Pilot itself. Its context-rewinding idea lives on in modern form — see [orchestration-layer](../context-engineering/orchestration-layer.md) for context resets and the current resources listed there.

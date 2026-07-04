@@ -2,7 +2,7 @@
 title: "Tessl"
 parent: "SDD Frameworks"
 nav_order: 3
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -77,3 +77,11 @@ Tessl is making the boldest bet in the spec-driven development space: that withi
 The Spec Registry is quietly one of the most important innovations in the space. Every AI coding tool struggles with hallucinated APIs and outdated library knowledge. Tessl's approach of curating accurate, structured specs for 10,000+ libraries is a force multiplier that benefits the entire ecosystem, and understanding how it works gives you insight into the fundamental reliability challenges of AI-assisted development.
 
 Learning Tessl means learning to think at a higher level of abstraction than any other tool demands. Even if the spec-as-source vision takes longer to materialize than predicted, the skill of writing precise, machine-executable specifications is the most transferable skill in this entire space.
+
+---
+
+## Learn on the go
+
+- **Podcast/Video:** [The AI Native Dev](https://ainativedev.io/podcast) *(ongoing, 2026)*. Tessl's own podcast, hosted by founder Guy Podjarny and Simon Maple — the primary source for where the Framework and Spec Registry are heading, updated weekly.
+- **Read (short):** [Tessl Review (2026): The Spec-as-Source Bet](https://codemyspec.com/blog/tessl-review) — CodeMySpec *(2026)*. An independent current-state assessment of exactly the bet this page describes — useful because most Tessl coverage comes from Tessl.
+- **Read (short):** [AI Native DevCon Day 1: Making AI Agents Ready for Enterprise](https://dev.to/tessl/ai-native-devcon-day-1-making-ai-agents-ready-for-enterprise-1e50) *(June 2026)*. Recap of Tessl's own conference — signals which parts of the spec-as-source vision are shipping vs. aspirational.

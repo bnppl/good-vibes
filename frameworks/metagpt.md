@@ -2,7 +2,7 @@
 title: "MetaGPT / MGX"
 parent: "SDD Frameworks"
 nav_order: 6
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -72,3 +72,10 @@ MetaGPT is the most intellectually ambitious framework in the spec-driven space.
 The multi-agent architecture is genuinely innovative. The insight that different development phases require different reasoning modes -- creative for product thinking, analytical for architecture, systematic for implementation -- and that these should be separate agents with separate prompts, is a design principle that transfers to any agentic system you build or work with.
 
 Even if you use a simpler tool for daily work, understanding MetaGPT's approach gives you a mental model for how complex AI systems decompose problems. The SOPs, verification gates, and role-based prompting patterns are building blocks you'll use in every agentic workflow you design.
+
+---
+
+## Learn on the go
+
+- **Read (short):** [MGX (Now Atoms) Reviews](https://www.producthunt.com/products/metagpt-x/reviews) — Product Hunt *(2026)*. Note the load-bearing fact in the title: MGX rebranded to **Atoms** in 2026. Current user reviews are the best freshness signal available — most tutorial coverage predates the rebrand and describes a product that has since changed.
+- **Freshness note:** No AI-focused video or course coverage of MetaGPT/MGX from the last four months surfaced in research for this section. The framework's *ideas* (role separation, SOPs, verification gates) are best studied through the current multi-agent material on [orchestration-layer](../context-engineering/orchestration-layer.md) — the patterns outlived the tool's mindshare.

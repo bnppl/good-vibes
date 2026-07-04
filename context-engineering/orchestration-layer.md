@@ -2,7 +2,7 @@
 title: "Orchestration Layer"
 parent: "Context Engineering"
 nav_order: 6
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -267,3 +267,10 @@ Recomputing the cache for a 100K+ token context is expensive in both time and mo
 ---
 
 For sources and further reading, see [sources.md](./sources.md).
+
+---
+
+## Learn on the go
+
+- **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Ryan Lopopolo (OpenAI) on orchestrating agents at a billion tokens a day — subagent spawning, feedback loops, and the constraints that keep parallel work coherent.
+- **Course:** [Learn Harness Engineering — WalkingLabs](https://walkinglabs.github.io/learn-harness-engineering/en/) *(2026, free)*. Hands-on curriculum for this page's harness section: constraining agent behavior, maintaining context across long sessions, stopping premature completion, and observability.

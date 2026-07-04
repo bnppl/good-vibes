@@ -2,7 +2,7 @@
 title: "Agent Comparison"
 parent: "Context Engineering"
 nav_order: 9
-last_updated: 2026-06-23
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -87,3 +87,9 @@ The open model landscape is maturing rapidly on the coding front:
 - [Agentic Development](agentic-dev.md) — patterns that work regardless of model choice
 - [Tool Layer](tool-layer.md) — tool design gets twice as important when you're using open models with weaker tool-use capabilities
 - [Orchestration Layer](orchestration-layer.md) — multi-model orchestration patterns
+
+---
+
+## Learn on the go
+
+- **Podcast/Video:** [How I AI — Sonnet 5 review: I ran 64 generations to find out if it's worth it](https://www.lennysnewsletter.com/p/sonnet-5-review-i-ran-64-generations) *(June 30, 2026)*. Claire Vo builds a repeatable eval harness live with Claude Code and runs Sonnet 5 blind against Sonnet 4.6, Opus 4.8, GPT-5.5, and Gemini 3 Pro — the do-it-yourself version of this page's comparison methodology, days old.

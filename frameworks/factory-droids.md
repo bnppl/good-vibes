@@ -2,7 +2,7 @@
 title: "Factory Droids"
 parent: "SDD Frameworks"
 nav_order: 9
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -72,3 +72,11 @@ Factory Droids represent what spec-driven development looks like when it's embed
 The organizational memory feature addresses a critical gap in other tools. When a Droid learns that your team prefers certain patterns, avoids certain dependencies, or has specific compliance requirements, that knowledge persists and applies to future specs. Over time, the quality of generated specs improves as the system builds an understanding of your organization's standards and preferences.
 
 If you work in an enterprise environment where development is deeply integrated with project management and communication tools, Factory Droids show how spec-driven development can be the connective tissue between "what needs to be built" and "what gets shipped" without requiring developers to change their workflow.
+
+---
+
+## Learn on the go
+
+- **Video/Tutorial:** [The Most Underrated AI Agent for Coding and Product Work — Eno Reyes (Factory)](https://creatoreconomy.so/p/full-tutorial-the-most-underrated-ai-agent-for-coding-and-product-eno-reyes) — Peter Yang *(February 15, 2026)*. Factory's co-founder demonstrating Droids end to end, including a PRD-writing skill — the freshest hands-on walkthrough available.
+- **Read (short):** [Code smells for AI agents: Q&A with Eno Reyes](https://stackoverflow.blog/2026/02/04/code-smells-for-ai-agents-q-and-a-with-eno-reyes-of-factory/) — Stack Overflow *(February 4, 2026)*. What "bad code" looks like when agents write it, from Factory's CTO.
+- **Freshness note:** Both items are ~5 months old — slightly past this wiki's 4-month freshness bar, kept because nothing newer with comparable depth has surfaced. Factory raised a $150M Series C in 2026, so expect fresher coverage soon.

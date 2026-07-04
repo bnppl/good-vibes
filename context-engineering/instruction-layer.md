@@ -2,7 +2,7 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: 2026-04-06
 status: read
 ---
@@ -183,3 +183,11 @@ The pattern: every rationalization sounds like good judgment in the moment. The 
 - [../frameworks/kiro.md](../frameworks/kiro.md) — Kiro uses EARS notation for structured requirements, a formal approach to writing unambiguous instructions. The GIVEN/WHEN/THEN format is a useful model for behavioral rules that need to be precise.
 
 - [../frameworks/github-spec-kit.md](../frameworks/github-spec-kit.md) — GitHub Spec Kit uses a Constitution pattern — a master file of immutable project principles that governs agent behavior across the project. A practical model for the highest tier of your instruction hierarchy.
+
+---
+
+## Learn on the go
+
+- **Podcast/Video:** [Building AI Agents (Clearly Explained) — The Startup Ideas Podcast](https://podcasts.apple.com/us/podcast/building-ai-agents-clearly-explained/id1593424985?i=1000760318125) *(April 8, 2026)*. Makes the case that most AGENTS.md files are unnecessary and walks through building custom skills instead — the same test-your-rules skepticism this page's anti-patterns section teaches.
+- **Read (short):** [AI Agent Skills Guide 2026: SKILL.md, Claude Code, Codex & Security](https://www.thepromptindex.com/how-to-use-ai-agent-skills-the-complete-guide.html) *(2026)*. Current guide to the SKILL.md format and its progressive-disclosure tiers, including the security considerations newer than this page's RSA note.
+- **Hands-on:** [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) *(living repo, 2026)*. 1000+ curated skills across Claude Code, Codex, Gemini CLI, and Cursor — the fastest way to study what well-scoped, progressive-disclosure instructions look like in the wild.

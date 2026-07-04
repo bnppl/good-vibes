@@ -2,7 +2,7 @@
 title: "Smol Developer"
 parent: "SDD Frameworks"
 nav_order: 8
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -71,3 +71,10 @@ Smol Developer is the "Hello World" of spec-driven development. Its value isn't 
 The "markdown is the perfect way to prompt for whole program synthesis" insight that Smol Developer demonstrated has proven to be foundational. Kiro uses markdown. Spec Kit uses markdown. OpenSpec uses markdown. CLAUDE.md is markdown. The format won, and Smol Developer was one of the first to prove why.
 
 If you're learning spec-driven development, start here. Spend an afternoon reading the source code, writing a spec, and watching what happens. You'll understand the fundamental mechanics that every tool in this space builds upon, and you'll never be confused by the abstractions that more complex tools layer on top.
+
+---
+
+## Learn on the go
+
+- **Read (short):** [How Coding Agents Work — Simon Willison](https://simonwillison.net/guides/agentic-engineering-patterns/how-coding-agents-work/) *(2026)*. The current-day equivalent of what Smol Developer teaches: the fundamental loop (LLM + system prompt + tools), explained with 2026 tooling instead of a 2023 proof-of-concept.
+- **Freshness note:** Smol Developer is a dormant foundational project — no recent coverage exists, and none is expected. Read the source (it's still under 200 lines and still teaches the core mechanism), then study the loop as it exists today via Willison's guide and the resources on [agentic-dev](../context-engineering/agentic-dev.md).

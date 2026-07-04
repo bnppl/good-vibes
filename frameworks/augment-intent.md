@@ -2,7 +2,7 @@
 title: "Augment Intent"
 parent: "SDD Frameworks"
 nav_order: 5
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -72,3 +72,11 @@ Intent is the only tool that takes the "living spec" concept seriously as a prod
 The multi-agent architecture is worth studying even if you never use Intent itself. The Coordinator/Implementor/Verifier pattern is a design pattern for agentic systems that you'll see replicated across the industry. Understanding how to decompose specs into parallelizable tasks and verify results against requirements is a core competency for working with any multi-agent system.
 
 For developers working in enterprise environments where cross-repository context and team-scale coordination matter, Intent represents what spec-driven development looks like when it grows up beyond individual developer productivity.
+
+---
+
+## Learn on the go
+
+- **Podcast:** [How Augment Code Is Redefining Developer Velocity With AI — MindMakers](https://delight.ai/resources/mindmakers-podcast-guy-gur-ari) *(March 9, 2026)*. Augment co-founder Guy Gur-Ari on why velocity is about comprehension rather than typing speed, and how the Context Engine underpins the living-spec workflow.
+- **Hands-on:** [Intent Walkthrough: From Prompt to Merged PR](https://www.augmentcode.com/guides/intent-walkthrough-prompt-to-merge) — Augment Code *(2026, official)*. The Coordinator/Implementor/Verifier flow this page describes, step by step from prompt to merged PR.
+- **Video:** [The IDE is dead. Introducing Intent — launch event](https://dev.to/events/augment-code-intent/february-26-2026) *(February 26, 2026)*. The launch demo: Coordinator proposes a living spec, implementors run in parallel, verifier checks results — a website built from a Figma comp in about an hour.

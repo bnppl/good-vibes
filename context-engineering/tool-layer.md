@@ -2,7 +2,7 @@
 title: "Tool Layer"
 parent: "Context Engineering"
 nav_order: 4
-last_updated: 2026-06-15
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -145,3 +145,11 @@ Implement using the Manus masking pattern: define both read and write tools upfr
 4. **If you have 15+ tools**, implement dynamic tool loading or categorization. A flat list of 20 tools is harder for the model to navigate correctly than two categories of 10. Don't present all tools all the time.
 
 5. **Consider KV-cache impact before changing tool schemas between turns.** If you're dynamically controlling availability, evaluate whether Manus's masking approach would be more efficient than adding and removing tools. Stable schema, dynamic guidance — the cache stays valid, the behavior changes.
+
+---
+
+## Learn on the go
+
+- **Hands-on:** [Design MCP tools](https://www.speakeasy.com/mcp/tool-design) and [Dynamic tool discovery in MCP](https://www.speakeasy.com/mcp/tool-design/dynamic-tool-discovery) — Speakeasy *(2026)*. Current, concrete guides to this page's core moves: tool descriptions as instructions, and dynamic loading once you pass ~15 tools.
+- **Read (short):** [Everything your team needs to know about MCP in 2026](https://workos.com/blog/everything-your-team-needs-to-know-about-mcp-in-2026) — WorkOS *(2026)*. The state of the protocol this page's tool patterns increasingly run on.
+- **Podcast:** [5 podcast episodes to help you build with confidence in 2026 — GitHub Blog](https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/) *(2026)*. Includes "Unlocking the power of MCP" — how an open standard tames tool-integration chaos.

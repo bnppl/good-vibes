@@ -2,7 +2,7 @@
 title: "Knowledge Layer"
 parent: "Context Engineering"
 nav_order: 3
-last_updated: 2026-06-15
+last_updated: 2026-07-04
 last_read: 2026-04-06
 status: read
 ---
@@ -153,3 +153,10 @@ See [Agentic Development](agentic-dev.md) for the "filesystem as context" patter
 4. **Load via tools, not upfront injection.** Give the model a retrieval tool and let it pull what it needs. Reserve system prompt knowledge for things that are always relevant: core instructions, persona, constraints. Everything else should be retrievable.
 
 5. **Monitor and tune chunk sizes.** If retrieved chunks consistently lack surrounding context (too small) or consistently include irrelevant material (too large), adjust. There's no universal correct chunk size — it depends on your documents and your queries. Treat it as a tunable parameter, not a one-time decision.
+
+---
+
+## Learn on the go
+
+- **Podcast:** [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Latent Space](https://www.latent.space/p/turbopuffer) *(March 12, 2026)*. Simon Hørup Eskildsen (Turbopuffer) on how agentic workloads are changing search — agents fire many parallel queries instead of one, which reshapes this page's retrieval guidance.
+- **Podcast:** [Agentic RAG: A New Paradigm in AI Retrieval — Don't Panic! It's Just Data](https://podcasts.apple.com/us/podcast/dont-panic-its-just-data/id1229119513) *(June 2, 2026)*. The enterprise knowledge-layer angle: agent-driven retrieval strategies replacing static RAG pipelines.

@@ -2,7 +2,7 @@
 title: "Kiro"
 parent: "SDD Frameworks"
 nav_order: 1
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -75,3 +75,10 @@ Kiro is the tool that makes spec-driven development accessible to mainstream dev
 The EARS notation and GIVEN/WHEN/THEN acceptance criteria aren't just AI scaffolding -- they're established software engineering practices that have been proven in safety-critical industries for decades. Kiro is teaching developers formal requirements engineering by making it the path of least resistance. Every spec you write with Kiro is building a transferable skill.
 
 If you want to understand what spec-driven development looks like as a first-class product experience rather than a bolted-on workflow, Kiro is the clearest example. It's the benchmark that every other tool in this space is measured against.
+
+---
+
+## Learn on the go
+
+- **Course:** [Spec-Driven Development with Kiro — AWS Skill Builder](https://skillbuilder.aws/learn/3GD2CGPENW/specdriven-development-with-kiro/T2YSHSXE5T) *(2026, free, official)*. AWS's own training on the requirements → design → tasks pipeline, with hands-on labs.
+- **Course:** [AWS Kiro Masterclass: Spec-Driven Agentic AI Development](https://www.udemy.com/course/aws-kiro-masterclass-spec-driven-agentic-ai-development/) — Udemy *(updated June 2026, bestseller)*. Builds a business application end to end, covering steering files, agent hooks, and Kiro's MCP integration with Jira and Confluence — the parts of Kiro this page only names.

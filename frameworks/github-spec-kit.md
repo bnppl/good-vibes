@@ -2,7 +2,7 @@
 title: "GitHub Spec Kit"
 parent: "SDD Frameworks"
 nav_order: 2
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -72,3 +72,11 @@ GitHub Spec Kit represents the most ambitious open-source attempt to standardize
 The Constitution concept is genuinely innovative. By establishing immutable project principles that all specs must respect, Spec Kit introduces a governance layer that prevents AI agents from making architecturally incoherent decisions, no matter which agent executes the tasks. This is the kind of structural thinking that separates serious engineering from vibe coding.
 
 If you contribute to or work in open-source, Spec Kit is the natural choice. It's where the community is converging on what spec-driven development standards should look like, and being fluent in it positions you to influence that standard.
+
+---
+
+## Learn on the go
+
+- **Course:** [Implement Spec-Driven Development using the GitHub Spec Kit](https://learn.microsoft.com/en-us/training/modules/spec-driven-development-github-spec-kit-enterprise-developers/) — Microsoft Learn *(current, free, official)*. The official training module for the Constitution → Specify → Plan → Tasks lifecycle this page describes.
+- **Hands-on:** [Spec-Driven Development with GitHub Spec Kit workshop](https://tanure.github.io/spec-kit-workshop/) *(2026)*. A guided workshop from first install to a working app — the fastest route to experiencing the 8-file artifact structure firsthand.
+- **Read (short):** [GitHub Spec Kit: The 2026 Spec-Driven Development Guide](https://www.fundesk.io/spec-driven-development-github-spec-kit-guide) *(2026)*. Current-state overview including the 30+ agent integrations noted in this page's Pros.

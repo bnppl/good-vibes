@@ -2,7 +2,7 @@
 title: "OpenSpec"
 parent: "SDD Frameworks"
 nav_order: 4
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -73,3 +73,10 @@ OpenSpec solves the most practical problem in spec-driven development: most deve
 The universal compatibility story is compelling for teams that haven't committed to a single AI tool. If your team uses Cursor, your CI uses Claude Code, and your junior devs prefer Windsurf, OpenSpec specs work everywhere. That's not just convenience -- it's insurance against the rapid churn in the AI coding tool market.
 
 Learning OpenSpec teaches you to write specs that are tool-agnostic and context-rich enough for any AI agent to execute. That's the most portable version of the spec-driven development skill set.
+
+---
+
+## Learn on the go
+
+- **Hands-on:** [Spec-Driven Development with OpenSpec and OpenCode](https://intent-driven.dev/blog/2026/05/10/spec-driven-development-openspec-opencode/) — intent-driven.dev *(May 10, 2026)*. Wires OpenSpec, git discipline, C4 diagrams, and ADRs into a single SDD workflow — and pairs OpenSpec with OpenCode, which this wiki's own repo uses.
+- **Hands-on:** [Spec-Driven Development with OpenCode and OpenSpec — Nam Seob Seo](https://nsclass.github.io/2026/05/24/spec-driven-development-openspec-opencode) *(May 24, 2026)*. A second, independent walkthrough of the same pairing — the `/opsx:propose → /opsx:apply → /opsx:archive` loop that operationalizes this page's state machine.

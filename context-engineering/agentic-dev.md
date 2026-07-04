@@ -2,7 +2,7 @@
 title: "Agentic Development"
 parent: "Context Engineering"
 nav_order: 8
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -309,3 +309,11 @@ A step-by-step setup for a new agentic dev project:
 **5. Use the filesystem for persistence.** Write progress, decisions, and notes to files. These survive context resets and serve as the bridge between sessions. Update the spec and implementation plan as the project evolves — keep them as the canonical source of truth rather than letting the conversation history become the record.
 
 **6. Measure and iterate.** Track task completion rates and token usage. If agents are failing or burning excessive tokens, diagnose whether it's an instruction problem (missing or conflicting rules), a context problem (agent doesn't have the information it needs), or a task sizing problem (tasks are too large for one context window). Cut what isn't helping. Add what's missing. The context stack is a system to be maintained, not a one-time configuration.
+
+---
+
+## Learn on the go
+
+- **Podcast/Video:** [An AI state of the union — Simon Willison on Lenny's Podcast](https://www.youtube.com/watch?v=wc8FBhQtdsA) *(April 2, 2026)*. The current state of agentic engineering from the field's most careful chronicler — parallel agents, automation timelines, and where human judgment stays load-bearing.
+- **Read (short):** [Loop Engineering — Addy Osmani](https://www.oreilly.com/radar/loop-engineering/) — O'Reilly Radar *(June 2026)*. The canonical write-up of this page's Loop Engineering section — the five-component architecture, from the week it went viral.
+- **Course:** [Claude Code Beginner to Pro: Agentic Coding for Developers](https://www.udemy.com/course/learn-claude-code/) — Udemy *(updated June 2026)*. Hands-on with the workflows this page describes: instruction files, custom automations, slash commands, and session management, building a real app.

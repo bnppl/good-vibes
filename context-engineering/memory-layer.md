@@ -2,7 +2,7 @@
 title: "Memory Layer"
 parent: "Context Engineering"
 nav_order: 5
-last_updated: 2026-06-15
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -123,3 +123,10 @@ The practical insight: most teams focus exclusively on the model layer (waiting 
 4. **Separate what to remember from what to look up.** User preferences, feedback, project context, and past decisions belong in memory. Code structure, function signatures, and git history belong in tools. Mixing them degrades both.
 
 5. **Establish the always-loaded versus on-demand split explicitly.** Universal context — user role, project goals, active constraints — loads every session. Situational context — past debugging sessions, prior feature work — retrieves only when relevant. Don't leave this implicit or you'll end up front-loading everything by default.
+
+---
+
+## Learn on the go
+
+- **Read (short):** [How AI Agents Actually Remember: Inside Mem0, Supermemory, and Letta](https://kenhuangus.substack.com/p/how-ai-agents-actually-remember-inside) — Ken Huang *(2026)*. Mechanism-level comparison of the leading memory frameworks — how each one decides what to write, retrieve, and forget.
+- **Read (short):** [Agent Memory at Scale 2026: Letta, Zep, Mem0, and LangMem Compared](https://agentmarketcap.ai/blog/2026/04/10/agent-memory-vendor-landscape-2026-letta-zep-mem0-langmem) *(April 10, 2026)*. The current vendor landscape for this page's persistence patterns, with the trade-offs (bolt-on memory layer vs. memory-native runtime) mapped out.

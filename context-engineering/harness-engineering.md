@@ -2,7 +2,7 @@
 title: "Harness Engineering"
 parent: "Context Engineering"
 nav_order: 10
-last_updated: 2026-06-23
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -81,3 +81,11 @@ Progressive disclosure, compression, and instruction files (all context engineer
 - [Tool Layer](tool-layer.md) — tool design is a subset of harness design; intent-based tool selection belongs here
 - [Verification](../verification/index.md) — the verification section covers agentic TDD, contract testing, and fitness functions — all harness concepts
 - [Agent Patterns](../agent-patterns/index.md) — multi-agent coordination is a harness orchestration problem
+
+---
+
+## Learn on the go
+
+- **Course:** [Learn Harness Engineering — WalkingLabs](https://walkinglabs.github.io/learn-harness-engineering/en/) *(2026, free)*. The structured course version of this page — synthesizes the OpenAI and Anthropic material into exercises, with a minimal harness template to copy.
+- **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Lopopolo (OpenAI) on going from 3.5 to 70 PRs per engineer per week by inverting spec-driven development and engineering the harness instead — the discipline this page defines, reported from the largest deployment discussing it publicly.
+- **Read (short):** [AI Native DevCon Day 1: Making AI Agents Ready for Enterprise](https://dev.to/tessl/ai-native-devcon-day-1-making-ai-agents-ready-for-enterprise-1e50) *(June 2026)*. Conference recap covering the harness talks — useful map of who is doing what in this space right now.

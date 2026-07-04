@@ -2,7 +2,7 @@
 title: "Tool Engineering"
 parent: "Context Engineering"
 nav_order: 7
-last_updated: 2026-06-15
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -81,6 +81,13 @@ AEO connects directly to context engineering: if the documentation your agent re
 2. **Schema Lockdown:** Refine the JSON schema for that failing tool. Add `enum`s, `pattern`s, and `description`s that explicitly state "DO NOT use this tool for X."
 3. **Observation Masking:** Implement a wrapper that automatically summarizes large tool outputs before the agent sees them.
 4. **(New)** **Check your documentation's AEO readiness:** Does your project have an `llms.txt`? Are your docs under 25K tokens per page? Would an agent fetching your docs waste half its context window on boilerplate?
+
+---
+
+## Learn on the go
+
+- **Session preview:** [MCP Magic: Building Tool-Enabled AI Agents](https://visualstudiomagazine.com/articles/2026/05/07/mcp-magic-building-tool-enabled-ai-agents-with-csharp.aspx) — Visual Studio Magazine *(May 7, 2026)*. Building MCP servers and designing tool layers that are "useful, scalable, and production-ready" — this page's mistake-proofing agenda in workshop form.
+- **Hands-on:** [Design MCP tools — Speakeasy](https://www.speakeasy.com/mcp/tool-design) *(2026)*. Current guides on tool curation and dynamic discovery: narrowing toolsets to essentials improves agent performance and lowers cost, the ACI principle applied to MCP.
 
 ---
 
