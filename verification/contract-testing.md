@@ -111,9 +111,9 @@ Reading list and full citations: [sources](sources.md). Related: [agentic-tdd](a
 
 ## Learn on the go
 
-- **Course:** [Microservices Contract Testing with Pact](https://www.udemy.com/course/microservices-contract-testing-with-pact/) — Udemy. Consumer- and provider-driven contract tests end to end, including broker orchestration with Pactflow — the full workflow from this page's four-step pattern.
-- **Video playlist:** [Introduction to contract testing with Pactflow](https://www.youtube.com/playlist?list=PLwy9Bnco-IpfZ72VQ7hce8GicVZs7nm0i) — the official short-video series from the Pact team; the fastest visual explanation of how contracts, brokers, and `can-i-deploy` fit together.
-- **Hands-on:** [Pact workshops](https://docs.pact.io/implementation_guides/workshops) — official guided workshops in JS, Java, Go, .NET, and more. Not passive listening, but the fastest route from theory to a running contract test.
+- **Webinar:** [Introducing AI-Augmented Contract Testing](https://smartbear.com/resources/webinars/ai-augmented-contract-testing/) — SmartBear/PactFlow *(July 7, 2026 — live, recording after)*. Matt Fellows (PactFlow co-founder) on fully automating contract test creation and maintenance with HaloAI — the "contracts at machine speed" argument from this page's PactFlow series, presented by its author.
+- **Hands-on:** [PactFlow Agent Skills](https://docs.pact.io/ai_tools/installation) *(2026)* — install the official Pact skills into Claude Code or Cursor and have your agent generate and review contract tests against this page's patterns. The fastest current route from theory to a running contract test.
+- **Read (short):** [Introducing the PactFlow MCP Server](https://pactflow.io/blog/pactflow-mcp-server/) *(2026)*. The announcement post for the agent-aware contract tooling this page describes — what it means for Session B's agent to query the broker before touching a provider.
 
 ---
 

@@ -70,9 +70,9 @@ Teams should conduct "temporal audits" to identify modules that have become "bla
 
 ## Learn on the go
 
-- **Podcast:** [Beyond Vibe Coding with Addy Osmani](https://newsletter.pragmaticengineer.com/p/beyond-vibe-coding-with-addy-osmani) — The Pragmatic Engineer. Osmani (who coined "comprehension debt") on the 70% problem: why AI accelerates the first 70% and why the last 30% requires engineers who understand the system. Also on [Spotify](https://open.spotify.com/episode/12dWITS78vg65XVGIwutDi).
-- **Podcast:** [Top Tier Software Engineers vs. AI Agents: The Mindset You Need](https://open.spotify.com/episode/36GIDcIv7lWxsiBLdl1ti8) — Beyond Coding, with Addy Osmani. The active-inquiry vs. passive-delegation distinction this page is built on, in interview form.
-- **Video:** [Working Effectively with Legacy Code and AI Coding Assistants — Michael Feathers](https://www.youtube.com/watch?v=mwVRHDD0tEk) — "Legacy code is code without tests" updated for the agent era: AI-generated code you don't understand is legacy code from day one.
+- **Podcast/Video:** [An AI state of the union — Simon Willison on Lenny's Podcast](https://www.youtube.com/watch?v=wc8FBhQtdsA) *(April 2, 2026)*. Willison on the cognitive ceiling of agentic work: "I can fire up four agents in parallel... and by 11am I am wiped out for the day." The human side of the speed asymmetry, from one of the field's most credible practitioners. His own [highlights post](https://simonwillison.net/2026/Apr/2/lennys-podcast/) is the 5-minute version.
+- **Read (short):** [Comprehension Debt: The Hidden Cost of AI-Generated Code](https://www.oreilly.com/radar/comprehension-debt-the-hidden-cost-of-ai-generated-code/) — Addy Osmani on O'Reilly Radar *(2026)*. The canonical statement of this page's core concept, from the person who coined the term.
+- **Podcast:** [Craft 2026 — Legacy code in the AI era with Michael Feathers](https://www.avkpodcast.hu/p/craft-2026-legacy-code-michael-feathers) *(June 2026)*. Feathers on whether AI is now generating legacy code faster than ever — comprehension debt viewed through the legacy-code lens.
 
 ---
 
