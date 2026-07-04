@@ -2,7 +2,7 @@
 title: "Agentic TDD"
 parent: "Verification"
 nav_order: 1
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -65,6 +65,13 @@ A study by Martin Fowler's team found that simply adding "do TDD" to a system pr
 ## A Green Suite Is Not a Safe Suite
 
 The "TDD Paradox" is partly a test-quality problem: an agent that writes shallow tests — ones that execute a function but assert almost nothing meaningful about its behavior — can reach green with very little verification value. The kill rate metric from mutation testing (see [test-the-tests](test-the-tests.md)) is the honest measure of whether the suite would catch bugs. Line coverage tells you the test *ran* the code; kill rate tells you the test *would notice* if the code changed. A 90% line-coverage suite with a 35% kill rate is theater. Asking the agent to write tests that cover specific invariants, error conditions, and boundary values — and then running mutation testing on the result — is the only reliable way to confirm the safety net is real.
+
+## Learn on the go
+
+- **Podcast/Video:** [TDD, AI agents and coding with Kent Beck](https://www.youtube.com/watch?v=aSXaxOdVtAQ) — The Pragmatic Engineer. The inventor of TDD on how the discipline changes with AI agents in the loop — the single most relevant listen for this page. Also on [Spotify](https://open.spotify.com/episode/1S28nbYSgRoFwvRrC8w0QI).
+- **Course:** [Unit Testing and Test Driven Development in Python](https://www.udemy.com/course/unit-testing-and-tdd-in-python/) — Udemy. TDD fundamentals with pytest; the red-green-refactor loop this page's Red-Green-Agent pattern builds on.
+- **Course:** [Practical Test Driven Development for Java Programmers](https://www.udemy.com/course/practical-test-driven-development-for-java-programmers/) — Udemy. Real-world TDD with JUnit and Mockito.
+- **Course:** [TDD & BDD: Design Through Testing](https://courses.cd.training/courses/tdd-bdd-design-through-testing) — Dave Farley (Continuous Delivery). Tests as design tools, from the author of *Modern Software Engineering*.
 
 ---
 

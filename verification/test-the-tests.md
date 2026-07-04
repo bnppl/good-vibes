@@ -2,7 +2,7 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -107,6 +107,13 @@ Pick a file an agent recently touched in a project you care about. Run a mutatio
 Then, separately and on a different file: pick one pure function — something with a clear input/output contract, no I/O — and write a single property-based test for it. Just one property. Note the inputs the framework generates that you would never have thought to enumerate. That moment, the first time Hypothesis hands you a Unicode surrogate pair or a zero-length list that breaks code you would have sworn was correct, is the entire pedagogical point. The agent did not generate that input either. That is why the property exists.
 
 See [sources](sources.md) for full citations.
+
+## Learn on the go
+
+- **Video:** [Mutation Testing with Stryker — Adrianne Mallett on Some Antics](https://www.youtube.com/watch?v=w2VI8YAFMcw) — a live-coded walkthrough of Stryker: planting mutants, reading the survivor report, improving assertions. The practical companion to this page's kill-rate section.
+- **Video:** [Hypothesis: Property-Based Testing for Python — Rae Knowler](https://www.youtube.com/watch?v=hNlredWSQ0U) — conference introduction to Hypothesis: writing properties, generators, and shrinking.
+- **Podcast:** [Talk Python To Me #67 — Property-based Testing with Hypothesis](https://talkpython.fm/episodes/show/67/property-based-testing-with-hypothesis) — David MacIver, Hypothesis's author, on the philosophy behind the tool.
+- **Podcast:** [Test & Code — Property-Based Testing in Python with Hypothesis](https://podcasts.apple.com/us/podcast/property-based-testing-in-python-hypothesis-alexander/id1029487211?i=1000469798182) — Alexander Hultnér on practical PBT adoption: where to start, which invariants to name first.
 
 ---
 

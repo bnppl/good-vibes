@@ -2,7 +2,7 @@
 title: "BDD for Agents"
 parent: "Verification"
 nav_order: 4
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -100,6 +100,13 @@ Pick a feature an agent built recently — last week is fine, last month is bett
 Now open a fresh agent session with no shared context. Give it only the three scenarios and the relevant module path. Ask it to extend the feature — add a related capability, handle a new input type, whatever the next reasonable iteration would be.
 
 Watch where the agent's interpretation diverges from yours. It will diverge — that is the point of the exercise. Every divergence is a place where, in real cross-session work, Session B would have built something incompatible with Session A's assumptions and no test would have caught it. The scenarios you wrote are the cheapest fix available: tighten their phrasing, add the missing one, and commit them next to the code. You have just converted tacit session-local knowledge into durable cross-session memory, and the agent did most of the work.
+
+## Learn on the go
+
+- **Course:** [ATDD: From Stories to Executable Specifications](https://courses.cd.training/courses/atdd-from-stories-to-executable-specifications) — Dave Farley (Continuous Delivery). Turning user stories into executable specs — the exact outside-in workflow this page describes.
+- **Video:** [Acceptance Testing for Continuous Delivery — Dave Farley](https://www.youtube.com/watch?v=SBhgteA2szg) — GOTO 2016. The declarative-over-imperative scenario discipline, and why the executable spec layer belongs in the deployment pipeline.
+- **Course:** [Master Cucumber BDD with Selenium: Frameworks from Scratch](https://www.udemy.com/course/cucumber-bdd/) — Udemy. Gherkin syntax, step definitions, and framework structure with Java/Selenium; recently updated with AI-assisted automation concepts.
+- **Course:** [Cucumber BDD with Python Behave and Selenium WebDriver](https://www.udemy.com/course/bdd-testing-with-python/) — Udemy. The same discipline in Python using Behave, the tooling named in this page's 2026 stack.
 
 ---
 

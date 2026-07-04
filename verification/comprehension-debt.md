@@ -2,7 +2,7 @@
 title: "Comprehension Debt"
 parent: "Verification"
 nav_order: 2
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -67,6 +67,12 @@ Dexter Horthy's [Advanced Context Engineering](https://github.com/humanlayer/adv
 ## Quarterly Cognitive Audits
 
 Teams should conduct "temporal audits" to identify modules that have become "black boxes." If a human can't fix a bug in an AI-generated module within a reasonable timeframe, the comprehension debt is too high, and a manual "reclamation session" (refactoring/rewriting) should be scheduled.
+
+## Learn on the go
+
+- **Podcast:** [Beyond Vibe Coding with Addy Osmani](https://newsletter.pragmaticengineer.com/p/beyond-vibe-coding-with-addy-osmani) — The Pragmatic Engineer. Osmani (who coined "comprehension debt") on the 70% problem: why AI accelerates the first 70% and why the last 30% requires engineers who understand the system. Also on [Spotify](https://open.spotify.com/episode/12dWITS78vg65XVGIwutDi).
+- **Podcast:** [Top Tier Software Engineers vs. AI Agents: The Mindset You Need](https://open.spotify.com/episode/36GIDcIv7lWxsiBLdl1ti8) — Beyond Coding, with Addy Osmani. The active-inquiry vs. passive-delegation distinction this page is built on, in interview form.
+- **Video:** [Working Effectively with Legacy Code and AI Coding Assistants — Michael Feathers](https://www.youtube.com/watch?v=mwVRHDD0tEk) — "Legacy code is code without tests" updated for the agent era: AI-generated code you don't understand is legacy code from day one.
 
 ---
 

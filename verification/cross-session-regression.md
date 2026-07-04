@@ -2,7 +2,7 @@
 title: "Cross-Session Regression"
 parent: "Verification"
 nav_order: 3
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -106,6 +106,13 @@ Pick a feature you built across multiple agent sessions in the last month. Open 
 3. Note whether your current test suite would catch it. If you're honest, most won't.
 
 Keep the list. The next six sessions will give you the techniques to close each one. By the end of the module, every item on your list should map to a verification artifact you can add—not a habit you have to remember.
+
+## Learn on the go
+
+- **Video:** [Acceptance Testing for Continuous Delivery — Dave Farley](https://www.youtube.com/watch?v=SBhgteA2szg) — GOTO 2016. The pre-agent version of this page's core argument: automated acceptance tests as the deterministic gate that catches regressions no reviewer will. Everything here transfers directly to the cross-session case.
+- **Podcast/Video:** [TDD, AI agents and coding with Kent Beck](https://www.youtube.com/watch?v=aSXaxOdVtAQ) — The Pragmatic Engineer. Beck on why verification artifacts matter more, not less, as agents write more of the code.
+
+Each technique page in this module has its own resource list — see [bdd-for-agents](bdd-for-agents.md), [ddd-boundaries](ddd-boundaries.md), [contract-testing](contract-testing.md), [fitness-functions](fitness-functions.md), [test-the-tests](test-the-tests.md), and [characterization-and-handoff](characterization-and-handoff.md).
 
 ---
 

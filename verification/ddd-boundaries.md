@@ -2,7 +2,7 @@
 title: "DDD Boundaries"
 parent: "Verification"
 nav_order: 5
-last_updated: 2026-06-16
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -100,6 +100,12 @@ Pick a real codebase you've been working in with agents. Sketch a context map, e
 Now identify two places where you've previously had different agent sessions touch the same area of code. Were those areas inside the same context? If so, the failure was probably scoping — you needed a clearer definition of what each session owned. Were they crossing contexts? If so, that crossing is exactly where you now want either an Anti-Corruption Layer in the code or a contract test at the boundary — see [contract-testing](contract-testing.md) next session for how to make that contract executable.
 
 The point of the exercise isn't to produce a polished diagram. It's to make the seams visible to you, so you can make them visible to the next session before it starts work.
+
+## Learn on the go
+
+- **Video:** [Bounded Contexts — Eric Evans](https://www.youtube.com/watch?v=am-HXycfalo) — DDD Europe 2020. The pattern this entire page repurposes, explained by the person who invented it. Watch this before anything else here.
+- **Course:** [Domain-Driven Design Fundamentals](https://www.pluralsight.com/courses/fundamentals-domain-driven-design) — Julie Lerman & Steve Smith, Pluralsight. The standard on-ramp: bounded contexts, aggregates, ubiquitous language, with a worked demo application and interviews with DDD experts.
+- **Course:** [Domain-Driven Design (DDD) for Beginners: Core Principles](https://www.udemy.com/course/domain-driven-design-fundamentals/) — Udemy. A lighter-weight crash course if you want the strategic-design vocabulary (contexts, maps, aggregates) without the full modeling depth.
 
 ---
 

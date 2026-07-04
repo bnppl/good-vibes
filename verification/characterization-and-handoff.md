@@ -2,7 +2,7 @@
 title: "Characterization & Handoff"
 parent: "Verification"
 nav_order: 9
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -120,6 +120,13 @@ Identify a legacy file in your codebase that you'd be afraid to let an agent tou
 Then open a *fresh* session. Give the agent only the tests and your `AGENTS.md`, and ask it to refactor the file. Watch what happens. Note where the verification net catches the second session's misunderstandings — wrong assumption about an edge case, accidental behavior change in an error path, snapshot drift it tries to silently approve. **Each gap is a fitness function, contract, or scenario you should add.** Each catch is evidence that the handoff worked.
 
 The exercise produces two artifacts: a hardened legacy module, and a calibrated sense of how much your verification surface actually carries across the session boundary. Most teams discover both numbers were lower than they assumed.
+
+## Learn on the go
+
+- **Video:** [Working Effectively with Legacy Code and AI Coding Assistants — Michael Feathers](https://www.youtube.com/watch?v=mwVRHDD0tEk) — the author of the canonical book, updating it for the agent era. The single most relevant watch for this page.
+- **Video:** [Working Effectively with Legacy Code — Michael Feathers & Christian Clausen](https://www.youtube.com/watch?v=P_6eDL1aqtA) — GOTO Book Club 2023. Feathers revisiting the book twenty years on: what held up, what he'd change.
+- **Podcast:** [SE Radio 595 — Llewellyn Falco on Approval Testing](https://se-radio.net/2023/12/se-radio-595-llewelyn-falco-on-approval-testing/) — the creator of ApprovalTests on golden-master testing: when to use it, the one-keystroke-approval trap, and how it differs from assertions.
+- **Podcast:** [Tech Lead Journal #195 — Working Effectively with Legacy Code and AI Coding Assistants](https://techleadjournal.dev/episodes/195/) — Feathers in interview form, covering characterization-first workflows with agents.
 
 ---
 

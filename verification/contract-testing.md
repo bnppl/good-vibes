@@ -2,7 +2,7 @@
 title: "Contract Testing"
 parent: "Verification"
 nav_order: 6
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -108,6 +108,12 @@ Wire it into CI on both sides. Pre-merge. Not "we'll watch it for a week." This 
 If your team is allergic to Pact-the-tool but not to the *idea*, start with [ddd-boundaries](ddd-boundaries.md)-style ACL unit tests. They're contract tests in everything but name, and they're the cheapest possible on-ramp to the discipline. The OneUptime [*How to Build the Anti-Corruption Layer Pattern*](https://oneuptime.com/blog/post/2026-01-30-anti-corruption-layer-pattern/view) post (Jan 2026) is a clean walkthrough of the structure if you need a reference.
 
 Reading list and full citations: [sources](sources.md). Related: [agentic-tdd](agentic-tdd.md), [comprehension-debt](comprehension-debt.md).
+
+## Learn on the go
+
+- **Course:** [Microservices Contract Testing with Pact](https://www.udemy.com/course/microservices-contract-testing-with-pact/) — Udemy. Consumer- and provider-driven contract tests end to end, including broker orchestration with Pactflow — the full workflow from this page's four-step pattern.
+- **Video playlist:** [Introduction to contract testing with Pactflow](https://www.youtube.com/playlist?list=PLwy9Bnco-IpfZ72VQ7hce8GicVZs7nm0i) — the official short-video series from the Pact team; the fastest visual explanation of how contracts, brokers, and `can-i-deploy` fit together.
+- **Hands-on:** [Pact workshops](https://docs.pact.io/implementation_guides/workshops) — official guided workshops in JS, Java, Go, .NET, and more. Not passive listening, but the fastest route from theory to a running contract test.
 
 ---
 

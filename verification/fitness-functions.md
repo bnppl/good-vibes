@@ -2,7 +2,7 @@
 title: "Fitness Functions"
 parent: "Verification"
 nav_order: 7
-last_updated: 2026-07-03
+last_updated: 2026-07-04
 last_read: null
 status: unread
 ---
@@ -102,6 +102,13 @@ Write **one** ArchUnit-style rule for your project this week (or the equivalent 
 Then start the next agent session and watch it bounce off the rule. The agent will try the disallowed import, the build will fail, the agent will read the failure message, follow the link, and route around the constraint. That bounce is the entire point. You have just moved one piece of architectural knowledge out of your head and into the system, where every future session — yours, your teammate's, an agent's at 3am — will respect it without you being there.
 
 Then write a second one. The first fitness function is the hardest; the tenth is muscle memory. The compound effect of ten cheap rules is that the agent's environment becomes a stronger teacher than any CLAUDE.md file you can write. See [agentic-tdd](agentic-tdd.md) for how this composes with behavioral testing, [comprehension-debt](comprehension-debt.md) for what fitness functions cost (and save) over time, and [sources](sources.md) for the full citation list.
+
+## Learn on the go
+
+- **Video:** [The Intersection of Fitness Function–Driven Architecture and Agentic AI — Neal Ford](https://www.youtube.com/watch?v=x4ZLSvVki3I) — DevCon Fall 2025. The co-author of *Building Evolutionary Architectures* on exactly this page's thesis: fitness functions as the governance layer for agent-written code.
+- **Video:** [The Intersection of Architecture Fitness Functions and Metrics — Neal Ford](https://www.youtube.com/watch?v=qT-MPqd7Ioo) — GSAS 2023. How fitness functions relate to the metrics you already collect.
+- **Video:** [Building Evolutionary Architectures — Neal Ford](https://www.youtube.com/watch?v=DloJCWdB7_o) — YOW! 2018. The original conference treatment of the book; the atomic/holistic/triggered/continual taxonomy this page uses.
+- **Video:** [Unit Test Your Java Architecture With ArchUnit — Roland Weisleder](https://www.youtube.com/watch?v=ef0lUToWxI8) — Devoxx. The reference-implementation tool from this page's tooling section, demonstrated live.
 
 ---
 
