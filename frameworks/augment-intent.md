@@ -2,7 +2,7 @@
 title: "Augment Intent"
 parent: "SDD Frameworks"
 nav_order: 5
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -77,6 +77,10 @@ For developers working in enterprise environments where cross-repository context
 
 ## Learn on the go
 
-- **Podcast:** [How Augment Code Is Redefining Developer Velocity With AI — MindMakers](https://delight.ai/resources/mindmakers-podcast-guy-gur-ari) *(March 9, 2026)*. Augment co-founder Guy Gur-Ari on why velocity is about comprehension rather than typing speed, and how the Context Engine underpins the living-spec workflow.
 - **Hands-on:** [Intent Walkthrough: From Prompt to Merged PR](https://www.augmentcode.com/guides/intent-walkthrough-prompt-to-merge) — Augment Code *(2026, official)*. The Coordinator/Implementor/Verifier flow this page describes, step by step from prompt to merged PR.
-- **Video:** [The IDE is dead. Introducing Intent — launch event](https://dev.to/events/augment-code-intent/february-26-2026) *(February 26, 2026)*. The launch demo: Coordinator proposes a living spec, implementors run in parallel, verifier checks results — a website built from a Figma comp in about an hour.
+- **Read (short):** [Intent: A workspace for agent orchestration](https://www.augmentcode.com/blog/intent-a-workspace-for-agent-orchestration) — Augment Code *(2026)*. The design rationale for the isolated-git-worktree model: how the living spec stays shared state across parallel agents rather than drifting per-agent.
+- **Read (short):** [Moving beyond the IDE with Intent — Jeff Morhous](https://www.augmentedswe.com/p/augment-intent-ide) *(2026)*. Independent practitioner assessment, useful precisely because nearly all Intent coverage comes from Augment. Notes the honest scope limit from the launch demo — Sam Breed's own framing that Intent "really shines on tasks of the size right now of like a PR."
+- **Reference:** [Intent on the SDD landscape](https://specdriven.com/landscape/intent) *(living index, 2026)*. Current feature and pricing state alongside the rest of the SDD field — the fastest way to check whether this page's comparison still holds.
+
+{: .caution }
+> **Coverage of Intent is thin and mostly first-party.** The February 2026 launch event and the March 2026 MindMakers interview with co-founder Guy Gur-Ari are still the most substantive video material, and both are now past this wiki's four-month freshness bar. Nothing independent with comparable depth has surfaced since. Weight the vendor material accordingly.

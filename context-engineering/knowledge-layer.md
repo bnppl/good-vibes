@@ -2,7 +2,7 @@
 title: "Knowledge Layer"
 parent: "Context Engineering"
 nav_order: 3
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: 2026-04-06
 status: read
 ---
@@ -106,6 +106,25 @@ Traditional RAG has evolved into **Agentic RAG**. Instead of a fixed search trig
 ### Dynamic Context Injection (DCI)
 DCI is the pattern of automatically injecting real-time environmental signals (e.g., a customer's current subscription status, current server load, or the latest API schema version) into the context window just before a critical reasoning step. This ensures the model is grounded in the most current reality, rather than relying on potentially stale information from the start of the session.
 
+## The Context Compiler **(New — August 2026)**
+
+Just-in-time loading decides *when* to retrieve. A complementary August 2026 result argues that for code specifically, the more valuable question is *at what resolution* — and that the answer looks like a compiler pass rather than a search query.
+
+The claim from Emmimal P Alexander's "Coding Agents Don't Need Bigger Context Windows — They Need a Context Compiler" (Towards Data Science, August 1, 2026): most coding agents waste roughly 70% of their context window on code that is reachable but irrelevant at the current resolution. The proposed fix borrows compiler discipline — dead-code elimination applied to context assembly — in three passes:
+
+1. **Symbol resolution** — trace which repository files the edit target actually depends on, via explicit imports and bare-name resolution, expanding breadth-first to a configurable hop limit.
+2. **Interface extraction** — strip those dependency files down to signatures and docstrings, replacing function bodies with placeholders. The agent learns what it can call and what shape the answer takes, without the implementation.
+3. **Context assembly** — emit three tiers: full source for the edit target, skeletons for dependencies, and an explicit excluded list.
+
+Measured results: **69–74% token reduction** at **under 75ms** compile time. Two worked examples — 9,379 → 2,867 tokens (69.4%) and 13,254 → 3,404 tokens (74.3%) — from captured runs rather than estimates.
+
+{: .aha }
+> **Resolution is a retrieval parameter, and most pipelines only have one setting.** RAG asks "which documents?" and returns them whole. The compiler framing asks "which documents, and how much of each?" — and for code, the honest answer is usually *signatures for the neighbors, full text for the thing you're editing*. Nothing about this is specific to code; it's the same move as loading a table schema instead of the table.
+
+This connects directly to the context-window findings elsewhere in this guide: Chroma Research's evaluation of 18 frontier models found every one degrading as input length grew, with accuracy cliffs well before the rated limit. A 1M-token window does not reliably reason across 1M tokens. Compression that preserves interface information is therefore not just a cost optimization — it keeps the agent inside the range where its reasoning actually holds up.
+
+The third tier — the **explicit excluded list** — is the underrated part. It makes the compiler's decision auditable: when an agent gets something wrong because it never saw the relevant file, the exclusion list tells you that immediately, rather than leaving you to guess whether the model saw the code and misread it or never saw it at all.
+
 ## Intent Debt
 
 Technical debt captures code that's hard to maintain. **Intent debt** captures something different: the accumulation of design decisions that were never written down and that neither agents nor future engineers can reason about.
@@ -158,5 +177,6 @@ See [Agentic Development](agentic-dev.md) for the "filesystem as context" patter
 
 ## Learn on the go
 
-- **Podcast:** [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Latent Space](https://www.latent.space/p/turbopuffer) *(March 12, 2026)*. Simon Hørup Eskildsen (Turbopuffer) on how agentic workloads are changing search — agents fire many parallel queries instead of one, which reshapes this page's retrieval guidance.
+- **Read (short):** [Coding Agents Don't Need Bigger Context Windows — They Need a Context Compiler](https://towardsdatascience.com/coding-agents-dont-need-bigger-context-windows-they-need-a-context-compiler/) — Emmimal P Alexander, Towards Data Science *(August 1, 2026)*. The source for this page's compiler section, with the full three-pass implementation and measured numbers. The most directly actionable retrieval idea published this year.
 - **Podcast:** [Agentic RAG: A New Paradigm in AI Retrieval — Don't Panic! It's Just Data](https://podcasts.apple.com/us/podcast/dont-panic-its-just-data/id1229119513) *(June 2, 2026)*. The enterprise knowledge-layer angle: agent-driven retrieval strategies replacing static RAG pipelines.
+- **Podcast:** [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Latent Space](https://www.latent.space/p/turbopuffer) *(March 12, 2026)*. Simon Hørup Eskildsen (Turbopuffer) on how agentic workloads are changing search — agents fire many parallel queries instead of one, which reshapes this page's retrieval guidance. Older than this list's usual freshness bar, kept because the multi-query-workload argument hasn't been made better since.

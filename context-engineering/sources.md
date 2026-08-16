@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: 2026-07-03
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -642,3 +642,131 @@ Most useful for: tracking the open model landscape for agentic coding.
 **[Ask HN: Best approaches for agent verification / avoiding confident hallucination?]** — ~120 points, 88 comments. High-signal practitioner thread on the current state of agent verification. Top answers converge on: mutation testing for test quality, property-based testing for input coverage, contract testing at service boundaries, and evaluation evals (running the agent against a fixed task set on each deploy). The thread is useful calibration for which verification techniques practitioners are actually using vs. theorizing about. *(July 2026)*
 
 **[Pipelex: Typed Multi-Agent Pipeline Orchestration]** — ~145 points, 71 comments. A typed DSL for defining multi-agent pipelines where the schema of each agent's input and output is declared and validated at pipeline definition time, not just at runtime. The key insight: most multi-agent coordination failures are type errors in disguise — "I expected a list of task objects but got a summary string." Pipelex makes those contracts explicit and checkable before the pipeline runs. Relevant to [orchestration-layer](orchestration-layer.md) sub-agent patterns; treats the coordinator/worker handoff as a typed interface rather than a natural-language convention. *(July 2026)*
+
+---
+
+## August 2026 Updates
+
+**[The New Rules of Context Engineering for Claude 5 Generation Models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models)**
+Anthropic (July 24, 2026) — 463 HN points, 404 comments
+
+The most consequential revision to instruction-layer practice published this year, because it reverses defaults rather than extending them. Over **80% of Claude Code's system prompt removed** for Claude 5 models with no measurable evaluation loss. Six rule changes: delegated judgment over explicit constraints; tool interface design over usage examples; progressive disclosure over upfront guidance; tool instructions only in tool descriptions; auto-memory over manual saves; rich references (HTML artifacts, test suites, rubrics) over plain markdown specs. Also states where each kind of context belongs — system prompt for product behavior, CLAUDE.md for repository gotchas only, skills for team opinions.
+
+Most useful for: anyone maintaining an instruction file. Read before your next CLAUDE.md edit.
+
+---
+
+**[Why Software Factories Fail (or: harness engineering is not enough)](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md)**
+Dex, HumanLayer (July 23, 2026) — 394 HN points, 272 comments
+
+The strongest available counterargument to lights-off automation, and the necessary complement to the harness engineering literature above. Core claim: RL optimizes against signals evaluable in seconds while architectural cost is measured in months, so no harness can make a model care about maintainability. Cites Faros AI (+25% review comments, +242.7% incidents per PR, +54% bugs per developer) and notes that SWE-bench-family benchmarks contain no maintainability evaluation at all. Proposes four planning phases before implementation (product review, system architecture, program design, vertical slices), of which ~40% of tasks need all four. Claims 2–3× velocity that holds versus 10–100× that collapses at three to six months.
+
+Most useful for: calibrating how much of the development loop to actually automate.
+
+---
+
+**[Harness Engineering for Self-Improvement](https://lilianweng.github.io/posts/2026-07-04-harness/)**
+Lilian Weng, Lil'Log (July 4, 2026) — 333 HN points
+
+The field's most rigorous survey of self-improving agent systems. Defines the optimization ladder — prompts → structured context → workflow → harness code → optimizer code — and surveys ACE, MCE, meta-harness, AlphaEvolve, the Darwin Gödel Machine (20–50% SWE-bench Verified improvements from self-modifying harness code), and Self-Harness. The critical caveat: STOP improved GPT-4 but *degraded* GPT-3.5 and Mixtral, and Lin et al. (2026) found harness-benefit non-monotonic across model scale — self-improvement is capability-gated. Closes with seven open challenges, of which weak evaluators and reward hacking are the two that most constrain practice.
+
+Most useful for: understanding where automated harness optimization currently works and where it backfires.
+
+---
+
+**[Benchmarking Opus 5 on SlopCodeBench](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md)**
+HumanLayer (July 27, 2026) — 405 HN points
+
+Long-horizon incremental benchmark (Gabe Orlanski's lab, UW Madison) where requirements unfold across checkpoints and strict pass requires new tests plus all inherited regression tests. Opus 5 scored 24% (4/17) against 6% for Opus 4.8 and Sonnet 5 — a gap conventional benchmarks compress. Opus 5 wrote 29,065 source lines against ~9,000 for competitors, and complexity rose across all models as checkpoints accumulated. Conclusion: frontier models still can't run lights-off without steering on realistic incremental work.
+
+Most useful for: evaluating models on how they behave over a project rather than over a task.
+
+---
+
+**[Agentic Code Review](https://addyosmani.com/blog/agentic-code-review/)**
+Addy Osmani (June 15, 2026)
+
+The population-scale numbers on the review bottleneck, collected in one place. Faros AI across 22,000 developers and 4,000 teams: code churn +861%, per-developer defect rate 9%→54%, median review duration +441.5%, PRs merged with zero review +31.3%. CodeRabbit: AI changes carry ~1.7× more issues across 470 PRs. GitClear: ~4× raw output for ~12% productivity gain. The finding that most constrains the "AI reviews AI" answer: across 146 PRs, four AI review tools never once flagged the same line. Prescribes tiered review matched to blast radius.
+
+Most useful for: anyone proposing AI code review as the fix for AI code volume.
+
+---
+
+**[Agentic Coding Notes](https://danluu.com/ai-coding/)**
+Dan Luu (July 2026) — 179 HN points
+
+The most careful benchmarking skepticism published this year. Documents ±7.5% run-to-run variance for GPT-5.5 xhigh on identical tasks, with cost varying $12.45 to $40.38 on the same optimization task — enough that single benchmark numbers are close to meaningless. Finds default LLM-generated tests "between worthless and marginally useful," and fuzzing beating LLM auditing on time-to-find-a-bug. Where agents did earn a place: reviewing bug reproductions and multi-persona artifact review, both of which cut false positives. Baseline for his standards: his prior team ran 1:1 test-to-developer ratio and shipped <1 significant bug per year without default code review.
+
+Most useful for: resisting the pull of any single impressive benchmark result, including the ones in this bibliography.
+
+---
+
+**[Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618)**
+Stanford, SambaNova Systems, UC Berkeley
+
+Reframes context as an evolving playbook of itemized bullets, curated by three roles — Generator (produces trajectories), Reflector (distills lessons), Curator (integrates them as incremental edits). Names and addresses **context collapse**: wholesale summarization of accumulated context compresses specifics into generic advice, degrading over successive rewrites. Reports +10.6% on agent benchmarks and +8.6% on finance reasoning, with a smaller open model matching top production agents. [Open-sourced](https://sambanova.ai/blog/ace-open-sourced-on-github) with runnable AppWorld and finance scripts.
+
+Most useful for: anyone building memory or context-curation systems that run unattended.
+
+---
+
+**[Coding Agents Don't Need Bigger Context Windows — They Need a Context Compiler](https://towardsdatascience.com/coding-agents-dont-need-bigger-context-windows-they-need-a-context-compiler/)**
+Emmimal P Alexander, Towards Data Science (August 1, 2026)
+
+Compiler discipline applied to context assembly: symbol resolution, interface extraction (bodies replaced with placeholders, signatures and docstrings kept), then tiered assembly with an explicit exclusion list. Measured 69–74% token reduction at under 75ms compile time, from captured runs rather than estimates. The underrated contribution is the exclusion list, which makes retrieval decisions auditable after a failure.
+
+Most useful for: reducing code context cost without losing the interface information agents actually need.
+
+---
+
+**[AI Agent Memory 2026: Progress Benchmark Report](https://mem0.ai/blog/state-of-ai-agent-memory-2026)**
+Mem0 (August 14, 2026)
+
+Documents memory's transition to a benchmarked discipline: LoCoMo (1,540 multi-session recall questions), LongMemEval (500 questions, six categories), BEAM (1M and 10M token scales). Current reference scores with token cost per query reported alongside accuracy. Generational gains concentrated on the hard cases: +29.6 on temporal reasoning, +23.1 on multi-hop. Vendor-published — read the scores as a floor claim — but the benchmark descriptions and the open-problems section (temporal abstraction, cross-session identity resolution, staleness in previously accurate facts) are the best current map.
+
+Most useful for: evaluating memory systems on something other than vendor narrative.
+
+---
+
+**[SE Radio 730: Birgitta Boeckeler on Harness Engineering for AI Agents](https://se-radio.net/2026/07/se-radio-730-birgitta-boeckeler-on-harness-engineering-for-ai-agents/)**
+Birgitta Boeckeler (Thoughtworks) with Priyanka Raghavan (July 22, 2026)
+
+The cleanest decomposition of a harness available in audio: **guides** (information fed forward — markdown, constraints, conventions) versus **sensors** (feedback fed back — static analysis, test suites, LLM review). Argues prompt crafting has "become a lot less important with the big models," and recommends starting "plain vanilla" and adding constraints only in response to observed failures. Also raises the accountability problem: organizations pressuring for output while holding humans responsible without providing safeguards.
+
+Most useful for: a 60-minute grounding in harness engineering from outside the vendor blogs.
+
+---
+
+**[lopopolo/harness-engineering](https://github.com/lopopolo/harness-engineering)**
+Ryan Lopopolo (2026, CC BY 4.0) — 2.5k stars, 79 HN points
+
+The primary source behind OpenAI's Codex harness work, packaged as context bundles you can point an agent at directly — theses, playbooks, evals, and domain modeling. The premise, in the author's words: "most people do not know that they can just point their agents at my writing... and improve the output of their agents by 100x." Structurally interesting in its own right as a worked example of making organizational nonfunctional requirements discoverable to agents.
+
+Most useful for: studying how a harness practitioner encodes their own standards for agent consumption.
+
+---
+
+**[Evolving Spec-Driven Development: Conductor Now Supports Antigravity](https://developers.googleblog.com/evolving-spec-driven-development-conductor-now-supports-antigravity/)**
+Google Developers Blog (July 16, 2026)
+
+Conductor graduates from a Gemini CLI extension to a cross-tool plugin framework, built on persistent version-controlled `spec.md` and `plan.md`. Reports higher success rates than non-SDD usage on the hardest TerminalBench subset. The framing matters as much as the release: Google explicitly targets "a more fluid, conversational experience without sacrificing the procedural rigor of SDD" — the ceremony critique, addressed by a vendor.
+
+Most useful for: tracking where SDD tooling is consolidating (portable layers, not IDEs).
+
+---
+
+### Hacker News — July–August 2026
+
+**[The new rules of context engineering for Claude 5 generation models](https://news.ycombinator.com/item?id=49051361)** — 463 points, 404 comments. The largest context-engineering thread of the year. Community experience converged with Anthropic's evaluation data from the opposite direction: Simon Willison arguing for talking to the agent rather than authoring "Treaties of Westphalia-length instructions"; novaleaf on why "trying to make the agent smarter by giving it more instruction is a pipe dream" once rules contradict; anon-3988 on the maintenance burden of accumulating `.md` files. *(July 2026)*
+
+**[Why Software Factories Fail](https://news.ycombinator.com/item?id=49023019)** — 394 points, 272 comments. Unusually high signal. Author dhorthy in-thread: *"Coding well with LLMs, it's not a skill issue, it's an effort/laziness/rigor issue"* — the teams succeeding with agents were already high-discipline. danpalmer on the reviewer's side: agent PRs are bad at *authoring for review*, producing oversized changes with weak judgment about what belongs together. stellar_jay contributed a taxonomy of constraint mechanisms (generative, interpretive, elicitative) from Autodesk research. *(July 2026)*
+
+**[Benchmarking Opus 5 on SlopCodeBench](https://news.ycombinator.com/item?id=49076391)** — 405 points, 119 comments. *(July 2026)*
+
+**[Harness engineering for self-improvement](https://news.ycombinator.com/item?id=49164896)** — 333 points, 80 comments. Lilian Weng's survey. *(August 2026)*
+
+**[Agentic coding notes](https://news.ycombinator.com/item?id=48782671)** — 179 points, 83 comments. Dan Luu. *(July 2026)*
+
+**[Harness Engineering (lopopolo)](https://news.ycombinator.com/item?id=48963483)** — 79 points, 33 comments. *(July 2026)*
+
+**[Ask HN: What Happened to Spec-Driven Development?](https://news.ycombinator.com/item?id=49182353)** and **[Spec-Driven Development: The New Waterfall](https://news.ycombinator.com/item?id=49181675)** — both August 5, 2026, both low-scoring. Noted here for a negative signal rather than a positive one: SDD tooling announcements drew almost no HN engagement in July–August 2026 while "what happened to it" posts drew some. Either the methodology became unremarkable infrastructure or the hype cycle turned; the available evidence doesn't distinguish. *(August 2026)*

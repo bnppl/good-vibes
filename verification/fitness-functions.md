@@ -2,7 +2,7 @@
 title: "Fitness Functions"
 parent: "Verification"
 nav_order: 7
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -106,6 +106,8 @@ Then write a second one. The first fitness function is the hardest; the tenth is
 ## Learn on the go
 
 - **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. OpenAI's approach to structural constraints enforced by custom linters and validated dependency directions — fitness functions doing the governance work this page describes, at a-billion-tokens-a-day scale.
+- **Read (short):** [How Agentic AI Empowers Architecture Governance](https://www.oreilly.com/radar/how-agentic-ai-empowers-architecture-governance/) — O'Reilly Radar *(2026)*. The current statement of this page's thesis: fitness functions as the mechanism that lets architecture governance scale to agent-speed output. Covers ArchUnit, NetArchTest, and PyTestArch as the concrete tooling.
+- **Read (long):** [SARC: A Governance-by-Architecture Framework for Agentic AI Systems](https://arxiv.org/pdf/2605.07728) *(2026)*. Academic treatment of the same move one level up — governing agent *systems* structurally rather than by policy, on the argument that agentic systems are reaching production faster than governance infrastructure has matured.
 - **Webinar:** [Use AI Mutation Testing to Improve Software Quality](https://www.gartner.com/en/webinar/830638/1839333-use-ai-mutation-testing-to-improve-software-quality) — Gartner *(recorded April 1, 2026)*. A kill-rate floor wired into PR workflows is a fitness function on test quality — this is the concrete build-out of that idea.
 - **Read (short):** [Mutation Testing for AI-Generated Code: A Practical Guide](https://www.augmentcode.com/guides/mutation-testing-ai-generated-code) — Augment Code *(2026)*. Covers the enforcement side: turning quality thresholds into gates agents bounce off, this page's core move applied to test suites.
 

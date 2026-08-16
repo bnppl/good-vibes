@@ -2,7 +2,7 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -78,6 +78,12 @@ The empirical picture as of early 2026 is clearer than it was a year ago. The ar
 
 The **[DataPRM paper](https://arxiv.org/abs/2504.20015)** (2025–2026) adds a relevant finding from a different angle: it trains process reward models (PRMs) on agent outputs labeled at each *reasoning step*, not just final answers. The key insight is that fluency and correctness are decorrelated — the most dangerous agent outputs are wrong answers that sound exactly right, because they passed every surface-level check while encoding a subtle error in reasoning. Applied to test quality: an agent can write a test that reads cleanly, uses correct syntax, and follows naming conventions while asserting something that is trivially true and would survive any mutation. PRMs trained on DataPRM-style signals catch this by evaluating intermediate reasoning steps, not just final output. For teams building agent evaluation infrastructure, DataPRM signals a direction: assess *how* the agent reasoned about what to test, not just whether the test compiles and passes.
 
+**(New — August 2026)** Dan Luu's agentic coding notes (July 2026) sharpen the "without explicit prompting" caveat above into something blunter. Surveying his own work and several other practitioners, he reports that default LLM-generated tests are **"between worthless and marginally useful"** — Em Chu's assessment, quoted in the piece, is that they are "painfully bad" at adversarial testing specifically. This is not a contradiction of the property-based testing results; it is the same finding stated from the other end. Agents asked to *write tests* produce tests that assert the code does what it does. Agents asked to *name an invariant and test it* produce something with a real chance of failing.
+
+His comparative result is the more actionable one: **fuzzing generally wins on latency-to-find-a-bug** against asking an LLM to audit the same code. Where agents did earn their place in his pipeline was one step later — independent agents reviewing *bug reproductions*, and diverse "personas" reviewing artifacts, substantially reduced false positives. The pattern worth copying: let deterministic tooling find candidate failures, then use agents to triage and explain them. That ordering plays to what each is good at, and it is the reverse of how most teams wire it up.
+
+For calibration on his baseline: Luu's team at Centaur ran a 1:1 test-to-developer ratio (55% of effort on testing) with a three-month regression suite across 1,000 machines, and shipped fewer than one significant bug per year *without* default code review. The lesson he draws is the one this page opens with — the verification infrastructure, not the review ritual, is what caught the bugs.
+
 ## Kill Rate Thresholds in Practice
 
 The question "what floor should I set?" has a more concrete answer in 2026 than it did a year ago, from teams that have run mutation testing under agent authorship for multiple release cycles:
@@ -110,10 +116,10 @@ See [sources](sources.md) for full citations.
 
 ## Learn on the go
 
+- **Read (long):** [Agentic coding notes — Dan Luu](https://danluu.com/ai-coding/) *(July 2026)*. The source for this page's August section, and the most useful skeptical counterweight to everything else on this list: what he measured about LLM-generated tests, why fuzzing beat LLM auditing on time-to-find-a-bug, and where agents did earn a place in his pipeline. Long, and worth it.
+- **Read (short):** [Finding bugs with Claude and property-based testing](https://red.anthropic.com/2026/property-based-testing/) — Anthropic Red Team *(2026)*. The writeup cited in this page's Deep dive: an agent that infers properties from docstrings and writes Hypothesis tests, gated by mutation score. Read it against Luu's piece — the disagreement is entirely about whether you named the invariant.
 - **Podcast:** [Signals and Threads — Why Testing is Hard and How to Fix It](https://signalsandthreads.com/why-testing-is-hard-and-how-to-fix-it/) *(March 2026)*. Will Wilson (Antithesis founder — the company behind Bombadil from this page) on property-based testing, fuzzing, and why deterministic verification matters more as generation gets cheaper.
-- **Webinar:** [Use AI Mutation Testing to Improve Software Quality](https://www.gartner.com/en/webinar/830638/1839333-use-ai-mutation-testing-to-improve-software-quality) — Gartner *(recorded April 1, 2026)*. Building an AI-powered, mutation-guided test-hardening system wired into PR workflows — the operational version of this page's survivor-loop pattern.
 - **Read (short):** [Meta Reports 4× Higher Bug Detection with Just-in-Time Testing](https://www.infoq.com/news/2026/04/meta-jit-testing-ai-detection/) — InfoQ *(April 2026)*. Meta generating tests during code review using LLMs + mutation testing — kill-rate thinking deployed at the largest scale reported to date.
-- **Read (short):** [Finding bugs with Claude and property-based testing](https://red.anthropic.com/2026/property-based-testing/) — Anthropic Red Team *(2026)*. The writeup cited in this page's Deep dive: an agent that infers properties from docstrings and writes Hypothesis tests, gated by mutation score.
 
 ---
 

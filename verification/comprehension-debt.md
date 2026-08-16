@@ -2,7 +2,7 @@
 title: "Comprehension Debt"
 parent: "Verification"
 nav_order: 2
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -68,11 +68,34 @@ Dexter Horthy's [Advanced Context Engineering](https://github.com/humanlayer/adv
 
 Teams should conduct "temporal audits" to identify modules that have become "black boxes." If a human can't fix a bug in an AI-generated module within a reasonable timeframe, the comprehension debt is too high, and a manual "reclamation session" (refactoring/rewriting) should be scheduled.
 
+## The Review Gate, Measured **(New — August 2026)**
+
+This page has argued the speed asymmetry from studies and reasoning. Mid-2026 produced the population-scale numbers, and they are worse than the argument predicted.
+
+**Faros AI**, tracking 22,000 developers across 4,000 teams (reported March 2026, synthesized in Addy Osmani's "Agentic Code Review," June 15, 2026):
+
+| Metric | Change |
+|---|---|
+| Code churn | +861% |
+| Per-developer defect rate | 9% → 54% |
+| Median review duration | +441.5% |
+| PRs merged with **zero** review | +31.3% |
+
+Corroborating measurements: **CodeRabbit** found AI-authored changes carried roughly **1.7× more issues** across 470 open-source PRs (December 2025). **GitClear** found daily AI users producing about **4× the raw output** for roughly **12%** actual productivity gain. **GitHub** reports Copilot review passing 60 million reviews, with more than one in five reviews now involving agents.
+
+{: .caution }
+> **The last row is the one that matters for this page.** Churn, defects, and review duration all describe work getting harder — painful, but visible. "PRs merged with zero review, up 31.3%" describes the comprehension gate *opening*. Every one of those merges is comprehension debt taken on with no offsetting understanding anywhere on the team, and none of the mitigation strategies above ever ran.
+
+**Why AI reviewers don't close the gap.** The most striking finding in Osmani's piece: across 146 PRs, four different AI review tools **never once flagged the same line**. That is not four opinions converging on a shared quality bar — it is four independent samplers with near-zero overlap. AI review adds coverage, but it cannot be treated as a substitute gate, because there is no consistent standard behind it to substitute *for*. A January 2026 study on review effort adds the behavioral half: agents handle small well-defined changes well (~28% merging almost immediately) but **abandon PRs the moment they receive subjective feedback** — exactly the feedback that carries architectural judgment.
+
+Osmani's framing is the cleanest statement of where this page's argument has landed: *"the hard part of engineering moved from writing code to deciding whether to trust it."* His prescription is tiered review matched to blast radius rather than uniform review everywhere — which is the same shape as the 1-5 rule above, applied at the repository level rather than the pull-request level.
+
 ## Learn on the go
 
-- **Podcast/Video:** [An AI state of the union — Simon Willison on Lenny's Podcast](https://www.youtube.com/watch?v=wc8FBhQtdsA) *(April 2, 2026)*. Willison on the cognitive ceiling of agentic work: "I can fire up four agents in parallel... and by 11am I am wiped out for the day." The human side of the speed asymmetry, from one of the field's most credible practitioners. His own [highlights post](https://simonwillison.net/2026/Apr/2/lennys-podcast/) is the 5-minute version.
-- **Read (short):** [Comprehension Debt: The Hidden Cost of AI-Generated Code](https://www.oreilly.com/radar/comprehension-debt-the-hidden-cost-of-ai-generated-code/) — Addy Osmani on O'Reilly Radar *(2026)*. The canonical statement of this page's core concept, from the person who coined the term.
+- **Read (short):** [Agentic Code Review — Addy Osmani](https://addyosmani.com/blog/agentic-code-review/) *(June 15, 2026)*. The source for this page's measured-gate section: the Faros AI, CodeRabbit, GitClear, and GitHub numbers in one place, plus the tiered-review prescription. The single most useful thing to read on this page's topic right now.
+- **Read (short):** [Why Software Factories Fail — Dex, HumanLayer](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md) *(July 2026)*. Comprehension debt argued from the training side: models optimize against signals evaluable in seconds, so nothing in their objective rewards code a human can later understand. Explains *why* the numbers above look the way they do.
 - **Podcast:** [Craft 2026 — Legacy code in the AI era with Michael Feathers](https://www.avkpodcast.hu/p/craft-2026-legacy-code-michael-feathers) *(June 2026)*. Feathers on whether AI is now generating legacy code faster than ever — comprehension debt viewed through the legacy-code lens.
+- **Read (short):** [Comprehension Debt: The Hidden Cost of AI-Generated Code](https://www.oreilly.com/radar/comprehension-debt-the-hidden-cost-of-ai-generated-code/) — Addy Osmani on O'Reilly Radar *(2026)*. The canonical statement of this page's core concept, from the person who coined the term.
 
 ---
 

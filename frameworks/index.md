@@ -2,7 +2,7 @@
 has_children: true
 title: SDD Frameworks
 nav_order: 4
-last_updated: 2026-06-23
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -73,3 +73,14 @@ Three new frameworks entered the space in early 2026, each taking a distinct ang
 **SPDD** (Self-Prompting Driven Development) — A methodology where agents generate and refine their own prompts as part of the development loop. Rather than writing prompts manually, the developer writes a high-level intent statement; the SPDD framework uses an orchestrator agent to decompose that intent into concrete sub-prompts for implementation agents. The self-prompting loop runs iteratively: sub-prompts are refined based on implementation failures before retrying. Best suited for exploratory work where requirements aren't known upfront — the opposite of Kiro or Spec Kit, which require well-formed specs before work begins.
 
 **SpecD** — Emphasizes machine-executable specifications as the primary development artifact. SpecD specs are written in a structured format that can be directly validated (tests generated from them automatically), edited by agents (changes propagate back to tests), and diff'd across versions. The value proposition is spec-code bidirectionality without requiring a proprietary IDE: the spec format is plain JSON/YAML, tooling is CLI-based, and execution is framework-agnostic. Earliest-stage of the three; documentation is sparse but the format specification is stable.
+
+### August 2026 Update: Consolidation, and a Credibility Question
+
+**Google's Conductor went cross-tool (July 16, 2026).** Conductor — spec-driven development in the terminal, built on persistent version-controlled `spec.md` and `plan.md` artifacts — graduated from a Gemini CLI extension into a **plugin framework supporting multiple tools**, starting with Antigravity CLI. Google reports the Conductor plugin achieving a higher success rate than non-SDD usage on the most complex subset of TerminalBench tasks. Two things are notable. First, the framing: Google is explicitly targeting "a more fluid, conversational experience without sacrificing the procedural rigor of SDD" — an admission that the ceremony critique landed. Second, the direction of travel matches OpenSpec and Spec Kit: the winning frameworks are becoming *portable layers* over whichever agent you already run, not IDEs you switch to.
+
+**Tier structure has stabilized.** The current consensus grouping across the 2026 surveys: **Tier 1** vendor-backed (AWS Kiro, GitHub Spec Kit), **Tier 2** community-led (BMAD-METHOD, GSD, Cursor Plan Mode, Conductor), **Tier 3** niche-optimized (OpenSpec, Tessl). OpenSpec remains the most actively maintained open-source entrant at 52.1K GitHub stars as of June 2026.
+
+{: .caution }
+> **Treat framework star counts as marketing, not adoption.** Superpowers' 166K stars — cited in the intro above and in most 2026 surveys as "most in category" — is an outlier large enough to be worth skepticism, and star counts have never tracked production use well. The July–August 2026 HN threads point the other way: "Ask HN: What Happened to Spec-Driven Development?" (August 5) and "Spec-Driven Development: The New Waterfall" (August 5) both drew engagement while the SDD tooling announcements drew almost none. Two readings fit the data — the methodology has quietly become normal infrastructure that nobody posts about, or the hype cycle has turned. This guide does not yet have the evidence to say which, and neither does anyone selling a framework.
+
+The substantive counterweight to read alongside any framework evaluation is HumanLayer's "Why Software Factories Fail" (July 2026), covered in [harness-engineering](../context-engineering/harness-engineering.md#the-limits-of-the-harness). Its argument bears directly on tool selection: the planning phases that matter most — product review and system architecture — are the ones no framework can perform for you. A framework that structures those conversations is worth adopting; one that generates artifacts *instead of* having them is the ceremony the critics are describing.

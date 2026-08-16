@@ -2,7 +2,7 @@
 title: "Agent Comparison"
 parent: "Context Engineering"
 nav_order: 9
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -74,9 +74,23 @@ The open model landscape is maturing rapidly on the coding front:
 {: .aha }
 > **Local models are now viable for real coding work.** The Qwen3.6-27B example shows the pattern: a lightweight harness + a concise system prompt + an offline-capable model = reliable daily use. The open model strategy is no longer theoretical.
 
+## Long-Horizon Benchmarks and the Variance Problem **(New — August 2026)**
+
+Two July 2026 results should change how you read every number on this page.
+
+**Long-horizon benchmarks separate models that single-shot benchmarks don't.** SlopCodeBench (Gabe Orlanski's lab, UW Madison) reveals requirements incrementally across checkpoints — the model never sees the whole problem upfront and must evolve a codebase as new requirements arrive. Scoring is strict: a checkpoint passes only if all new tests *and* all inherited regression tests pass. HumanLayer's run found **Opus 5 at 24%** (4 of 17 checkpoints) against **6% for both Opus 4.8 and Sonnet 5** (1 of 17) — a four-fold gap that conventional benchmarks compress into a few points. The published paper's earlier numbers: Opus 4.6 at 17%, GPT-5.4 at 11%.
+
+Two details matter more than the ranking. Opus 5 wrote **29,065 source lines** where the other models wrote about 9,000 — 51% of it tests, against 11–24% for the others. And complexity climbed across *every* model as checkpoints accumulated. Higher scores on long-horizon work currently come bundled with substantially more code, which is a maintainability cost this benchmark measures better than most but still doesn't score.
+
+**Single benchmark runs are close to meaningless.** Dan Luu's July 2026 agentic coding notes documented **±7.5% run-to-run variation** for GPT-5.5 xhigh on the same task, with task-and-model combinations producing outright contradictory results across runs. Cost varied on the same scale — $12.45 versus $40.38 for the same optimization task depending on run. His conclusion is the one to carry into any model selection decision: variance is high enough that a single benchmark number tells you almost nothing, and "a reasonable setup around the model is at least as important as having the latest and greatest model."
+
+{: .aha }
+> **Run it more than once.** The Augment finding elsewhere in this guide — 17 problems' spread between tools running the identical model — is usually read as evidence that harness beats model. Luu's variance data adds a caveat: some of any measured spread is noise. If you're evaluating models or harnesses for your own team, run each configuration several times and look at the distribution, not the best run. A single head-to-head comparison is a coin flip dressed as evidence.
+
 ## Anti-Patterns
 
-- **Benchmark shopping:** A model with the highest HumanEval score may be terrible at following instruction files or staying within a context budget. Test on your actual workload.
+- **Benchmark shopping:** A model with the highest HumanEval score may be terrible at following instruction files or staying within a context budget. Test on your actual workload — and test it repeatedly, because run-to-run variance on identical tasks reaches ±7.5%.
+- **Trusting a single run:** Related but distinct. Benchmark shopping picks the wrong metric; single-run trust picks the right metric and measures it once. Both produce confident conclusions from noise.
 - **Gratuitous self-hosting:** Unless privacy or cost at scale demands it, running inference will cost you more in engineering time than API credits ever would.
 - **Single-model purity:** Real pipelines already use multiple models. Claude for planning, a fast open model for codegen, a small classifier for routing. Don't optimize for one-model-to-rule-them-all.
 - **Ignoring the wrapper:** When comparing open vs proprietary, people compare raw model outputs. But Claude Code, Cursor, and Copilot are products, not models — the agent loop, codebase indexing, and diffing infrastructure provide value independent of the model.
@@ -92,4 +106,6 @@ The open model landscape is maturing rapidly on the coding front:
 
 ## Learn on the go
 
-- **Podcast/Video:** [How I AI — Sonnet 5 review: I ran 64 generations to find out if it's worth it](https://www.lennysnewsletter.com/p/sonnet-5-review-i-ran-64-generations) *(June 30, 2026)*. Claire Vo builds a repeatable eval harness live with Claude Code and runs Sonnet 5 blind against Sonnet 4.6, Opus 4.8, GPT-5.5, and Gemini 3 Pro — the do-it-yourself version of this page's comparison methodology, days old.
+- **Podcast/Video:** [How I AI — Sonnet 5 review: I ran 64 generations to find out if it's worth it](https://www.lennysnewsletter.com/p/sonnet-5-review-i-ran-64-generations) *(June 30, 2026)*. Claire Vo builds a repeatable eval harness live with Claude Code and runs Sonnet 5 blind against Sonnet 4.6, Opus 4.8, GPT-5.5, and Gemini 3 Pro — the do-it-yourself version of this page's comparison methodology. The "64 generations" framing is the variance lesson above, arrived at independently.
+- **Read (long):** [Agentic coding notes — Dan Luu](https://danluu.com/ai-coding/) *(July 2026)*. The source for this page's variance section, and the most careful benchmarking skepticism published this year. Also covers what he found actually works (fuzzing, randomized testing) versus what doesn't (default LLM test generation, "caveman mode" token reduction).
+- **Hands-on:** [SlopCodeBench: benchmarking Opus 5](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md) — HumanLayer *(July 27, 2026)*. Full methodology and per-checkpoint results for the long-horizon benchmark above. Reproducible — the harness and challenge definitions are in the same repo, so you can run your own model against it.

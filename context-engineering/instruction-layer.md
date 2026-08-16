@@ -2,7 +2,7 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: 2026-04-06
 status: read
 ---
@@ -67,6 +67,9 @@ The mistake is over-indexing on behavioral rules when persona would handle it mo
 One of Anthropic's clearest findings is that diverse, canonical few-shot examples outperform instruction sprawl. Showing the model what good output looks like is often more effective than describing it.
 
 This maps to a deeper point: rules describe behavior abstractly, and models have to interpret that abstraction. Examples demonstrate behavior concretely, giving the model a direct signal about the target. When you're struggling to get consistent output with instructions, try replacing the instructions with two or three examples instead.
+
+{: .caution }
+> **This guidance is now model-dependent.** Anthropic's July 2026 revision (see the August 2026 addendum below) argues that for Claude 5–generation models, examples *constrain exploration* — a well-designed tool interface outperforms a set of usage examples. The "examples beat rules" finding still holds for shaping output format and for less capable models. It no longer holds as a blanket default for shaping agent behavior.
 
 ---
 
@@ -140,6 +143,42 @@ At RSA 2026, industry leaders identified the **context window** as the true secu
 
 ---
 
+## August 2026 Addendum: The Claude 5 Revision
+
+Anthropic published "The new rules of context engineering for Claude 5 generation models" on July 24, 2026 (463 points, 404 comments on Hacker News). It is the most consequential revision to instruction-layer practice since this page was written, because it reverses several defaults rather than extending them.
+
+**The headline result:** Anthropic removed **over 80% of Claude Code's system prompt** for Claude 5 models with no measurable loss on coding evaluations. Not a trim — most of it was load-bearing scaffolding that had stopped being load-bearing.
+
+Six changes, each stated as then-versus-now:
+
+| # | Then | Now |
+|---|---|---|
+| 1 | Explicit constraints: *"Never write multi-paragraph docstrings"* | Delegated judgment: *"Write code that reads like the surrounding code: match its comment density, naming, and idiom"* |
+| 2 | Provide usage examples for tools | Design expressive tool parameters and interfaces; examples constrain exploration |
+| 3 | All guidance upfront in the system prompt | Progressive disclosure — skills, deferred tool definitions, tiered file structures |
+| 4 | Instructions repeated in system prompt *and* tool descriptions | Tool usage guidance lives only in the tool description |
+| 5 | Manual memory saving to CLAUDE.md via hotkey | Auto-memory — the model preserves relevant work context itself |
+| 6 | Plain markdown specs | Rich references: HTML artifacts, code examples, test suites, rubrics |
+
+{: .aha }
+> **Rule 1 is the whole shift in one line.** The old instruction told the model what not to do; the new one tells the model what to look at. A constraint has to be re-specified for every case it doesn't cover. A judgment call generalizes to cases you never anticipated — but only if the model is capable enough to make it. Instruction design is now a function of model capability, not a fixed craft.
+
+**Where each kind of context belongs**, per Anthropic's own division of labor:
+
+- **System prompt** — product context and agent behavior. Rarely modified by users.
+- **CLAUDE.md** — keep lightweight. Repository *gotchas*, not obvious information. This is a sharper version of the "what doesn't belong" list above: if the agent could discover it, don't write it.
+- **Skills** — team-specific opinions and practices, with progressive disclosure for anything lengthy.
+- **References** — prefer code-based specs (tests, type signatures, rubrics) over prose descriptions. Executable references can't drift from the thing they describe the way prose can.
+
+**How this interacts with the ~50 instruction ceiling.** It doesn't raise the ceiling so much as change what you spend it on. The 80% deletion result suggests most instruction files are spending their budget on constraints the model no longer needs, crowding out the handful of genuinely project-specific gotchas that only you can supply. The audit question shifts from *"is this rule correct?"* to *"would a capable engineer new to this repo need to be told this?"*
+
+The HN thread converged on the same practical advice from the opposite direction. Simon Willison argued for just talking to the agent rather than authoring "Treaties of Westphalia-length instructions"; HN user novaleaf noted that "trying to make the agent smarter by giving it more instruction is a pipe dream" once accumulated rules start contradicting each other; anon-3988 described the maintenance burden of fifty `.md` files piling up until contradictions are inevitable. The community's lived experience and Anthropic's evaluation data point the same way: the instruction layer got too big, and the fix is deletion.
+
+{: .try-it }
+> Take your largest instruction file and delete every rule that describes generally good engineering practice rather than something specific to this repository. Run a week of real work against the trimmed version. Anthropic deleted 80% and measured nothing; your number will differ, but the direction almost certainly won't.
+
+---
+
 ## Anti-Patterns
 
 **Instruction bloat.** Adding rules for every edge case until the model can't follow any of them reliably. Each additional rule has diminishing returns and increasing interference cost. The fix is usually to delete, not refine.
@@ -188,6 +227,7 @@ The pattern: every rationalization sounds like good judgment in the moment. The 
 
 ## Learn on the go
 
-- **Podcast/Video:** [Building AI Agents (Clearly Explained) — The Startup Ideas Podcast](https://podcasts.apple.com/us/podcast/building-ai-agents-clearly-explained/id1593424985?i=1000760318125) *(April 8, 2026)*. Makes the case that most AGENTS.md files are unnecessary and walks through building custom skills instead — the same test-your-rules skepticism this page's anti-patterns section teaches.
+- **Read (short):** [The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models) — Anthropic *(July 24, 2026)*. The primary source for this page's August addendum, and the single most important thing to read on instruction design right now. Short. The [HN thread](https://news.ycombinator.com/item?id=49051361) (404 comments) is worth the time too.
+- **Podcast:** [SE Radio 730 — Birgitta Boeckeler on Harness Engineering for AI Agents](https://se-radio.net/2026/07/se-radio-730-birgitta-boeckeler-on-harness-engineering-for-ai-agents/) *(July 22, 2026)*. Boeckeler — whose context taxonomy this page already builds on — on why prompt crafting has "become a lot less important with the big models," and what to build instead of more markdown files.
 - **Read (short):** [AI Agent Skills Guide 2026: SKILL.md, Claude Code, Codex & Security](https://www.thepromptindex.com/how-to-use-ai-agent-skills-the-complete-guide.html) *(2026)*. Current guide to the SKILL.md format and its progressive-disclosure tiers, including the security considerations newer than this page's RSA note.
 - **Hands-on:** [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) *(living repo, 2026)*. 1000+ curated skills across Claude Code, Codex, Gemini CLI, and Cursor — the fastest way to study what well-scoped, progressive-disclosure instructions look like in the wild.

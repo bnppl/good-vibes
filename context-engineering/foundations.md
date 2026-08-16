@@ -2,7 +2,7 @@
 title: "Foundations"
 parent: "Context Engineering"
 nav_order: 1
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: 2026-04-06
 status: read
 ---
@@ -148,7 +148,27 @@ For sources and further reading, see [sources.md](./sources.md).
 
 ---
 
+## August 2026 Addendum: Two Corrections to "Bigger Is Better"
+
+### The window is not the reasoning range
+
+Chroma Research tested 18 frontier models and found **every one degraded as input length grew**, with accuracy cliffs appearing well before the advertised limit. A 1M-token window does not reliably reason across 1M tokens. This is the empirical backing for the Fundamental Constraint above — previously argued from Anthropic's framing and production anecdotes, now measured across the model landscape. Treat a context window as a *capacity* figure, not a *competence* figure, the same way you'd read a disk's size without assuming random access is free.
+
+The practical consequence is that compression stopped being purely a cost optimization somewhere in 2026. Keeping context small keeps the model inside the range where its reasoning actually holds — see the [context compiler](knowledge-layer.md#the-context-compiler-new--august-2026) in the knowledge layer for the 69–74% reductions this makes available on code without losing interface information.
+
+### The engineer is not always the one managing the budget
+
+The 2026 research direction that most complicates this page's framing is **agentic context engineering** — the agent managing its own context budget rather than an engineer deciding it upfront. Stanford, SambaNova, and UC Berkeley's ACE framework treats context as an evolving playbook the agent curates through Generator / Reflector / Curator roles, reporting +10.6% on agent benchmarks. The mechanism is covered in [memory-layer](memory-layer.md#context-as-an-evolving-playbook-ace-new--august-2026).
+
+This doesn't invalidate the CPU/RAM metaphor — it extends it. If the engineer is the operating system, ACE is the point where the OS gets a memory manager instead of hand-allocating every page. The principles on this page still describe what good context looks like; increasingly they describe the objective function of an automated process rather than a checklist a human runs.
+
+{: .caution }
+> **Context rot is now a tracked operational metric, not a discussion topic.** Amazon CloudWatch shipped Coding Agent Insights in July 2026 — a monitoring product for how AI coding agents are performing in production. When the hyperscalers ship dashboards for a failure mode, it has stopped being an emerging concern.
+
+---
+
 ## Learn on the go
 
-- **Podcast:** [Context Engineering with Adi Polak — The InfoQ Podcast](https://www.infoq.com/podcasts/context-engineering-large-language-models/) *(April 6, 2026)*. A current from-first-principles interview on exactly this page's shift: prompt engineering is stateless, context engineering makes systems stateful.
+- **Read (short):** [The new rules of context engineering for Claude 5 generation models](https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models) — Anthropic *(July 24, 2026)*. Start here. The clearest statement of how this discipline's defaults changed once models got capable enough to be given judgment instead of rules — including the result that over 80% of Claude Code's system prompt turned out to be removable.
+- **Read (short):** [Context Engineering: A Practical Guide for AI Agents](https://sourcegraph.com/blog/context-engineering) — Sourcegraph *(2026)*. A current from-first-principles walkthrough of the same shift this page opens with, written from the code-search side: how to feed an agent the right files, tool definitions, and retrieved facts without collapsing the window.
 - **Read (short):** [Context Engineering AI: How To Build Smarter LLM Agents In 2026](https://mem0.ai/blog/context-engineering-ai-agents-guide) — Mem0 *(2026)*. A practitioner walkthrough of the selection/compression/ordering levers this page introduces, with current tooling examples.

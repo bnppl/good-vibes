@@ -2,7 +2,7 @@
 title: "DDD Boundaries"
 parent: "Verification"
 nav_order: 5
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -103,7 +103,9 @@ The point of the exercise isn't to produce a polished diagram. It's to make the 
 
 ## Learn on the go
 
-- **Video:** [From Prompt Spaghetti to Bounded Contexts: DDD for Agentic Codebases — Nikita Golovko](https://gitnation.com/contents/from-prompt-spaghetti-to-bounded-contexts-ddd-for-agentic-codebases) — AI Coding Summit 2026 *(March 2026)*. The talk this page's central recommendation comes from: bounded contexts as agent responsibility scopes, context maps as the explicit cross-agent integration surface.
+- **Video:** [From Prompt Spaghetti to Bounded Contexts: DDD for Agentic Codebases — Nikita Golovko](https://gitnation.com/contents/from-prompt-spaghetti-to-bounded-contexts-ddd-for-agentic-codebases) *(2026)*. The talk this page's central recommendation comes from: bounded contexts as agent responsibility scopes, ubiquitous language for consistent tool inputs and outputs, context maps as the explicit cross-agent integration surface. Golovko (AI Architect, Siemens) also covers CI evaluation gates and replay-based traceability. He is presenting an updated version in November 2026 — worth watching for the refresh.
+- **Read (short):** [How Agentic AI Empowers Architecture Governance](https://www.oreilly.com/radar/how-agentic-ai-empowers-architecture-governance/) — O'Reilly Radar *(2026)*. The complement to this page: once boundaries are drawn, agents can enforce them. Connects directly to [fitness-functions](fitness-functions.md).
+- **Hands-on:** [Bounded Context Spaces for AI Agents](https://atlan.com/know/bounded-context-spaces/) — Atlan *(2026)*. Practical guide to domain isolation for agent systems, with the data-governance angle this page doesn't cover.
 - **Read (short):** [Context Maps in the Age of AI — Michael Plöd](https://www.michael-ploed.com/blog/context-maps-in-the-age-of-ai) *(2026)*. One of the leading DDD practitioners on how context mapping changes when agents are the ones crossing the boundaries — the cross-session artifact argument from a strategic-design authority.
 - **Read (short):** [Domain Driven Agent Design — Russ Miles](https://engineeringagents.substack.com/p/domain-driven-agent-design) *(2026)*. DDD primitives applied directly to agent system design rather than retrofitted; useful for the multi-agent version of this page's argument.
 

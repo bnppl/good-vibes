@@ -2,7 +2,7 @@
 title: "Agentic TDD"
 parent: "Verification"
 nav_order: 1
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -68,6 +68,8 @@ The "TDD Paradox" is partly a test-quality problem: an agent that writes shallow
 
 ## Learn on the go
 
+- **Read (long):** [Agentic coding notes — Dan Luu](https://danluu.com/ai-coding/) *(July 2026)*. The hardest available test of this page's premises. Luu found default LLM-generated tests "between worthless and marginally useful" and fuzzing beating LLM auditing on time-to-find-a-bug — but also found agents genuinely useful one step later, triaging bug reproductions. The ordering matters: deterministic tooling finds, agents explain.
+- **Podcast:** [SE Radio 730 — Birgitta Boeckeler on Harness Engineering for AI Agents](https://se-radio.net/2026/07/se-radio-730-birgitta-boeckeler-on-harness-engineering-for-ai-agents/) *(July 22, 2026)*. Tests as **sensors** — the feedback half of a harness, alongside static analysis and LLM review. The clearest current framing of why the test suite is load-bearing infrastructure for agents rather than an afterthought.
 - **Podcast:** [Tech League #17 — Alan Richardson on testing in the AI era](https://techleaguepodcast.com/episodes/) *(April 3, 2026)*. Directly on this page's questions: how to test AI-generated code, whether TDD still makes sense with agents, and why self-healing tests are a red flag — the same behavioral-vs-structural distinction this page draws.
 - **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Ryan Lopopolo (OpenAI) on going from 3.5 to 70 PRs per engineer per week — with tests and linters as the feedback loop that closes the agent's loop. The tests-as-hard-gates argument at production scale.
 - **Course:** [Claude Code 2026: Subagents, MCP, Skills and Plugins Bootcamp](https://www.udemy.com/course/claude-code-for-agentic-ai-build-ai-agents-10x-faster/) — Udemy *(2026, actively updated)*. Covers the hooks system hands-on — including the `PreToolUse` gate pattern this page describes for blocking untested writes.

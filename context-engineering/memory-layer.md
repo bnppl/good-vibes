@@ -2,7 +2,7 @@
 title: "Memory Layer"
 parent: "Context Engineering"
 nav_order: 5
-last_updated: 2026-07-04
+last_updated: 2026-08-16
 last_read: null
 status: unread
 ---
@@ -100,6 +100,41 @@ The enabling infrastructure is **traces** — the full execution path of what an
 
 The practical insight: most teams focus exclusively on the model layer (waiting for better models) or the context layer (tweaking prompts). The harness layer — systematically analyzing execution logs to improve tooling and orchestration — is underutilized and immediately actionable. Different scaling levels apply: agent-level memory, user-level personalization, and organization-wide improvements can all operate simultaneously.
 
+## Context as an Evolving Playbook: ACE **(New — August 2026)**
+
+The most cited memory-adjacent research of 2026 is **Agentic Context Engineering (ACE)** — Stanford, SambaNova, and UC Berkeley — which reframes the context itself as a structure the agent maintains rather than a buffer the engineer manages.
+
+ACE's premise is that the usual approaches to accumulated context fail in a specific way it names **context collapse**: when an agent summarizes or rewrites its own accumulated context wholesale, hard-won specifics get compressed into generic advice and the context gets *worse* over successive rewrites. The fix is structural. Context becomes a **playbook of itemized bullets** updated incrementally — you add, revise, or retire individual entries, never regenerate the whole document.
+
+Three roles divide the work:
+
+| Role | Job |
+|---|---|
+| **Generator** | Produces reasoning trajectories — does the actual task |
+| **Reflector** | Distills concrete lessons from what succeeded and what failed |
+| **Curator** | Integrates those lessons into the playbook as structured, incremental edits |
+
+Reported results: **+10.6% on agent benchmarks** and **+8.6% on domain-specific finance reasoning**, with a smaller open-source model matching top-ranked production agents. The implementation is open source, with runnable AppWorld and finance benchmark scripts.
+
+{: .aha }
+> **Incremental edits beat regeneration.** This is the same lesson as the belief-update-versus-append-only choice above, applied one level up. Append-only logs get noisy; wholesale rewrites lose detail. Itemized, individually-editable entries are the structure that survives both failure modes — which is also, not coincidentally, why a well-maintained CLAUDE.md outperforms one an agent periodically regenerates from scratch.
+
+Lilian Weng's July 2026 survey places ACE alongside **Meta Context Engineering (MCE)**, which separates the *mechanism* of context management from the *artifacts* being managed — a bi-level optimization where the strategy for curating context is itself learned. See [harness-engineering](harness-engineering.md#self-improving-harnesses) for where this sits in the broader self-improvement ladder.
+
+## Memory Has Benchmarks Now **(New — August 2026)**
+
+Memory moved from architectural opinion to measurable engineering in 2026. Three benchmarks are now standard:
+
+- **LoCoMo** — 1,540 questions on multi-session recall (single-hop, multi-hop, open-domain, temporal)
+- **LongMemEval** — 500 questions across six categories including knowledge updates
+- **BEAM** — production-scale evaluation at 1M and 10M token scales
+
+Mem0's August 2026 report gives the current reference points for their April 2026 algorithm: **92.5 on LoCoMo** (~6,956 tokens per query), **94.4 on LongMemEval** (~6,787 tokens per query), and **64.1 / 48.6 on BEAM at 1M / 10M tokens**. The generational gains were concentrated where this page predicts the hard problems are: **+29.6 points on temporal reasoning** and **+23.1 on multi-hop**.
+
+Two things worth taking from this beyond the numbers. First, **token cost per query is now reported alongside accuracy** — a memory system that answers well but re-reads 50K tokens per turn is not the same product as one that answers well on 7K, and benchmarks finally reflect that. Second, the open problems the report names are precisely the anti-patterns below: temporal abstraction at scale, cross-session identity resolution, and **staleness in facts that were previously accurate** — the "treating memory as authoritative" failure, restated as an unsolved research problem rather than a discipline issue.
+
+Production systems increasingly use **multi-signal retrieval** — semantic similarity plus keyword matching plus entity matching — rather than embedding similarity alone, which is a direct answer to the retrieval-precision problem described earlier on this page.
+
 ---
 
 ## Anti-Patterns
@@ -128,5 +163,6 @@ The practical insight: most teams focus exclusively on the model layer (waiting 
 
 ## Learn on the go
 
+- **Read (short):** [AI Agent Memory 2026: Progress Benchmark Report](https://mem0.ai/blog/state-of-ai-agent-memory-2026) — Mem0 *(August 14, 2026)*. The source for this page's benchmark section: LoCoMo, LongMemEval, and BEAM explained, with current scores and token-cost-per-query. Vendor-published, so read the numbers as a floor claim rather than an independent evaluation — but the benchmark descriptions and open-problems section are the best current map of the field.
+- **Read (long):** [Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models](https://arxiv.org/abs/2510.04618) — Stanford / SambaNova / UC Berkeley. The ACE paper behind this page's playbook section. If you only want the mechanism, the [open-source implementation](https://sambanova.ai/blog/ace-open-sourced-on-github) with runnable benchmark scripts is the faster route in.
 - **Read (short):** [How AI Agents Actually Remember: Inside Mem0, Supermemory, and Letta](https://kenhuangus.substack.com/p/how-ai-agents-actually-remember-inside) — Ken Huang *(2026)*. Mechanism-level comparison of the leading memory frameworks — how each one decides what to write, retrieve, and forget.
-- **Read (short):** [Agent Memory at Scale 2026: Letta, Zep, Mem0, and LangMem Compared](https://agentmarketcap.ai/blog/2026/04/10/agent-memory-vendor-landscape-2026-letta-zep-mem0-langmem) *(April 10, 2026)*. The current vendor landscape for this page's persistence patterns, with the trade-offs (bolt-on memory layer vs. memory-native runtime) mapped out.
