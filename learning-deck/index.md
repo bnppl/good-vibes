@@ -2,48 +2,32 @@
 title: Learning Deck
 nav_order: 2
 has_children: true
+last_updated: 2026-10-26
 ---
 
-# Small cards. Real engineering practice.
+# The good scroll
 
-**Learn one idea. Recall it. Try it on your spelling app.**
+**One swipe. One useful idea.**
 
-[Launch the slideshow →]({{ '/learn/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 }
+[Open the slideshow →]({{ '/learn/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 }
 
-The slideshow shows one card at a time, with **Learn → Recall → Try** steps. Use the arrow keys, swipe on mobile, or choose any card. It remembers your place and reviewed cards in this browser. Share the URL to link directly to a card and step.
+Sixteen bite-sized posts about AI engineering. A bold hook, a short explanation, an example, and a takeaway. Around 30 seconds each. Everything is visible at once; swipe straight to the next idea. Save the ones you want to revisit.
 
-Sixteen lesson cards and four lab cards turn the [learning plan](../learning-plan.md) into smaller bites. Each lesson takes roughly **3–5 minutes**; use the rest of your 10–15 minute session for its exercise. Labs still need 60–90 minutes and your development environment.
+## Pick a collection
 
-[Read card 01 in the notes →](week-1.md#card-01)
-
-## Pick a deck
-
-| Deck | The question you'll answer | Cards |
+| Collection | Ideas | Optional practice |
 |---|---|---|
-| [01 · Build confidence](week-1.md) | Did the agent actually help? | 01–04 + baseline lab |
-| [02 · Give the agent what it needs](week-2.md) | What's causing the mistakes? | 05–08 + comparison lab |
-| [03 · Make good work survive](week-3.md) | Will this hold up next session? | 09–12 + reliability lab |
-| [04 · Choose your workflow](week-4.md) | How much automation earns its keep? | 13–16 + decision lab |
+| [01 · Build confidence](week-1.md) | 01–04 | Baseline lab |
+| [02 · Give the agent what it needs](week-2.md) | 05–08 | Comparison lab |
+| [03 · Make good work survive](week-3.md) | 09–12 | Reliability lab |
+| [04 · Choose your workflow](week-4.md) | 13–16 | Decision lab |
 
-## Your daily loop
+## Follow your curiosity
 
-1. **Recall:** Before reading, explain yesterday's idea and one way it can fail.
-2. **Read:** Take one card. The coloured panel holds its main idea.
-3. **Reveal:** Answer the question aloud before opening the answer.
-4. **Try:** Make the small output. The spelling-app examples are illustrative; use another project if you prefer.
-5. **Return:** Revisit tricky cards at your next sitting and weekly lab.
+The slideshow's **Go down the rabbit hole** links lead to full chapters and optional practice. The four labs stay in these notes and the [learning plan](../learning-plan.md), outside the swipe sequence.
 
-**Easy / Hesitant / Again:** Give each card a quick confidence rating in your own notes. Revisit “Again” first. The slideshow records reviewed cards, but does not schedule spaced repetition.
+Swipe on mobile or use the arrow keys. Your URL points directly to an idea, and the browser remembers your place and saved ideas. Old links with `/learn`, `/recall`, or `/try` still open their original card. Old lab links open that collection's first idea; the lab itself remains in the notes.
 
-## Keep evidence, not just a streak
+Saved ideas are bookmarks, not proof of learning. They do not update chapter reading dates or exercise checkboxes, and do not sync across devices. Earlier reviewed marks are left untouched; only the last card position carries into this version.
 
-A reviewed card is reading progress. An exercise is complete when its output exists. Tick the corresponding session in the [learning plan](../learning-plan.md) once you have that evidence; `/study mark-read` continues to track the original chapters separately. Browser progress does not change the repo's reading metadata or exercise checkboxes, and does not sync between devices.
-
-A tiny personal note is enough to start:
-
-> **Card:** 01 · **Recall:** Hesitant  
-> **My takeaway:** Define success before asking the agent.  
-> **Evidence:** Link to my five tasks and acceptance criteria.  
-> **Next review:** At the next sitting.
-
-The cards summarise the repo's existing material. Follow each **Go deeper** link for explanation, sources, and caveats. Follow the **Full exercise** link before marking a session complete.
+The headlines are hooks, not permission to exaggerate: source scope and caveats stay in the chapters linked from every card. `/study update --apply` refreshes the affected posts as the guide changes.

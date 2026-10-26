@@ -1,172 +1,54 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Short lessons in reliable AI-assisted engineering. Learn, recall, and try one idea at a time."
-    />
-    <title>{{ page.title }} · {{ site.title }}</title>
-    <link
-      rel="stylesheet"
-      href="{{ '/assets/css/learning-deck.css' | relative_url }}"
-    />
-    <script
-      src="{{ '/assets/js/learning-deck.js' | relative_url }}"
-      defer
-    ></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#lesson-title">Skip to lesson</a>
-    <header class="site-header">
-      <a class="brand" href="{{ '/' | relative_url }}"
-        ><span class="brand-mark" aria-hidden="true">g<span>v</span></span> good
-        vibes <span class="brand-divider">/</span>
-        <span class="brand-section">learning deck</span></a
-      >
-      <a class="notes-link" href="{{ '/learning-deck/' | relative_url }}"
-        >Browse the notes <span aria-hidden="true">↗</span></a
-      >
-    </header>
-
-    <div id="app" class="app-shell" hidden>
-      <aside class="sidebar" aria-label="Choose a lesson">
-        <p class="eyebrow">A little, often.</p>
-        <h1>Better habits.<br /> Better AI work.</h1>
-        <p class="sidebar-intro">
-          One idea at a time.<br />Something useful every session.
-        </p>
-        <nav id="weeks" class="weeks" aria-label="Weekly decks"></nav>
-        <div class="sidebar-progress">
-          <div class="progress-label">
-            <span>Your journey</span><span id="review-count"></span>
-          </div>
-          <progress
-            id="review-progress"
-            max="20"
-            value="0"
-            aria-label="Cards reviewed"
-          ></progress>
-          <p id="storage-note">
-            Reviewed cards stay in this browser. Lab evidence stays in your
-            learning plan.
-          </p>
-        </div>
-      </aside>
-
-      <main id="main" class="main">
-        <div class="deck-heading">
-          <p id="deck-label" class="eyebrow"></p>
-          <span id="card-count" class="card-count"></span>
-        </div>
-        <nav
-          id="card-picker"
-          class="card-picker"
-          aria-label="Cards in this deck"
-        ></nav>
-        <article id="lesson" class="lesson" aria-labelledby="lesson-title">
-          <div class="lesson-topline">
-            <span id="card-label" class="eyebrow"></span
-            ><span id="time-label" class="time-label"></span>
-          </div>
-          <h2 id="lesson-title" tabindex="-1"></h2>
-          <nav id="steps" class="steps" aria-label="Lesson steps"></nav>
-          <section id="learn-panel" class="panel" aria-label="Learn">
-            <h3 id="hook" class="hook"></h3>
-            <div id="idea" class="idea"></div>
-            <div class="example">
-              <p class="eyebrow">Picture it</p>
-              <div id="example"></div>
-            </div>
-          </section>
-          <section id="recall-panel" class="panel" aria-label="Recall" hidden>
-            <p class="eyebrow">Close the notes. Give it a go.</p>
-            <h3 id="question" class="question"></h3>
-            <button
-              id="reveal"
-              class="button button-primary"
-              type="button"
-              aria-expanded="false"
-              aria-controls="answer"
-            >
-              Reveal answer <span aria-hidden="true">↓</span>
-            </button>
-            <div id="answer" class="answer" hidden></div>
-            <p class="quiet">
-              Say your answer before revealing. If it felt shaky, come back to
-              this card.
-            </p>
-          </section>
-          <section id="try-panel" class="panel" aria-label="Try" hidden>
-            <p id="try-heading" class="eyebrow">Make it real</p>
-            <div id="exercise" class="exercise"></div>
-            <div id="lab-evidence" class="example" hidden></div>
-            <p id="lab-caveat" class="quiet" hidden></p>
-            <p id="review-status" class="review-status"></p>
-            <button
-              id="mark-reviewed"
-              class="button button-primary"
-              type="button"
-            >
-              Mark reviewed &amp; continue <span aria-hidden="true">→</span>
-            </button>
-            <p class="quiet">
-              Reviewed means you studied the card. Complete the full exercise
-              and record its evidence in the learning plan.
-            </p>
-          </section>
-          <footer class="lesson-footer">
-            <a id="full-exercise"
-              >Full exercise <span aria-hidden="true">↗</span></a
-            >
-            <div id="source-links" class="source-links"></div>
-          </footer>
-        </article>
-        <div class="slideshow-controls">
-          <button id="previous" class="button button-secondary" type="button">
-            <span aria-hidden="true">←</span> Back
-          </button>
-          <p
-            id="position"
-            class="position"
-            role="status"
-            aria-live="polite"
-            aria-atomic="true"
-          ></p>
-          <button id="next" class="button button-dark" type="button">
-            Next <span aria-hidden="true">→</span>
-          </button>
-        </div>
-        <p class="keyboard-hint">
-          Use <kbd>←</kbd> <kbd>→</kbd> to navigate · swipe on mobile · pause
-          whenever you like
-        </p>
-      </main>
-    </div>
-
-    <p id="loading" class="loading" role="status">
-      Opening your learning deck…
-    </p>
-    <noscript
-      ><p class="loading">
-        This slideshow needs JavaScript.
-        <a href="{{ '/learning-deck/' | relative_url }}"
-          >Read all the cards in the notes.</a
-        >
-      </p></noscript
-    >
-    <template id="deck-source">
-      {% assign weeks = site.pages | where: 'parent', 'Learning Deck' | sort:
-      'nav_order' %} {% for week in weeks %}
-      <section
-        data-week="{{ week.nav_order }}"
-        data-url="{{ week.url | relative_url }}"
-        data-title="{{ week.title | escape }}"
-      >
-        {{ week.content | markdownify }}
-      </section>
-      {% endfor %}
-    </template>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Small ideas for better AI engineering. One swipe, one useful thing." />
+  <title>{{ page.title }} · {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/learning-deck.css' | relative_url }}" />
+  <script src="{{ '/assets/js/learning-deck.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#lesson-title">Skip to idea</a>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">gv</span>good vibes<span class="brand-section"> / the good scroll</span></a>
+    <a class="notes-link" href="{{ '/learning-deck/' | relative_url }}">All the notes ↗</a>
+  </header>
+  <div id="app" class="app-shell" hidden>
+    <aside class="sidebar" aria-label="Choose a collection">
+      <p class="eyebrow">A better rabbit hole.</p>
+      <h1>One swipe.<br />One useful idea.</h1>
+      <p class="sidebar-intro">Tiny reads for the part of your brain that was about to open Instagram.</p>
+      <nav id="weeks" class="weeks" aria-label="Collections"></nav>
+      <p id="storage-note" class="storage-note">Your place and saved ideas stay in this browser.</p>
+      <a class="saved-link" id="saved-link" href="#card-01">No saved ideas yet</a>
+    </aside>
+    <main class="main">
+      <div class="deck-heading"><p id="deck-label" class="eyebrow"></p><span id="card-count" class="card-count"></span></div>
+      <nav id="card-picker" class="card-picker" aria-label="Ideas in this collection"></nav>
+      <article id="lesson" class="lesson" aria-labelledby="lesson-title" data-theme="1">
+        <div class="lesson-topline"><span id="card-label" class="eyebrow"></span><span class="time-label">A 30-second idea</span></div>
+        <p id="topic" class="topic"></p>
+        <h2 id="lesson-title" tabindex="-1"></h2>
+        <div id="idea" class="idea"></div>
+        <div class="example"><p class="eyebrow">In the wild</p><div id="example"></div></div>
+        <div class="takeaway"><span class="takeaway-arrow" aria-hidden="true">↳</span><div id="takeaway"></div></div>
+        <div class="card-bottom"><span id="card-number" class="card-number" aria-hidden="true"></span><button id="save" class="save-button" type="button" aria-pressed="false">♡ Save idea</button></div>
+      </article>
+      <div class="slideshow-controls">
+        <button id="previous" class="button button-secondary" type="button" aria-label="Previous idea">←</button>
+        <p id="position" class="position" role="status" aria-live="polite" aria-atomic="true"></p>
+        <button id="next" class="button button-primary" type="button">Next idea →</button>
+      </div>
+      <details id="deeper" class="deeper"><summary>Go down the rabbit hole ↗</summary><div id="source-links" class="source-links"></div><a id="full-exercise">Optional hands-on practice ↗</a></details>
+      <p class="keyboard-hint">Swipe or use ← → · take what’s useful, keep moving.</p>
+    </main>
+  </div>
+  <p id="loading" class="loading" role="status">Finding your next good idea…</p>
+  <noscript><p class="loading">Read the <a href="{{ '/learning-deck/' | relative_url }}">card notes</a> with JavaScript switched off.</p></noscript>
+  <template id="deck-source">
+    {% assign weeks = site.pages | where: 'parent', 'Learning Deck' | sort: 'nav_order' %}
+    {% for week in weeks %}<section data-week="{{ week.nav_order }}" data-url="{{ week.url | relative_url }}" data-title="{{ week.title | escape }}">{{ week.content | markdownify }}</section>{% endfor %}
+  </template>
+</body>
 </html>

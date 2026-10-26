@@ -6,6 +6,13 @@ nav_exclude: false
 
 # Changelog
 
+## October 26, 2026: The Good Scroll
+
+- Rewrote sixteen cards as short information posts: hook, explanation, example, and takeaway, with optional source and practice links.
+- Replaced Learn/Recall/Try steps and review gates with direct card navigation and optional saved ideas. Labs remain in the notes.
+- Added bold collection colours and typography, retained touch/keyboard navigation, and preserved old card URLs and saved position.
+- Updated both `/study` definitions to maintain this information-first format.
+
 ## October 26, 2026: Study Updates Keep Cards in Sync
 
 - Extended both Claude Code and OpenCode `/study update` definitions to scan weekly cards, detect drift, and propose corresponding slideshow changes alongside chapter updates.

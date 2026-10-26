@@ -40,9 +40,9 @@ status: unread             # unread | in-progress | read
 
 ## The learning plan
 
-Start with the **learning slideshow** at `/learn/` on the GitHub Pages site: 16 lessons across four weeks with Learn → Recall → Try steps, plus four lab cards. It supports arrow keys, touch swipes, direct links to cards, and browser-local position and review progress. Exercise completion stays in the learning plan. The [Learning Deck notes](learning-deck/index.md) are the single source of lesson content.
+Start with the **learning slideshow** at `/learn/` on the GitHub Pages site: 16 bite-sized information cards with punchy hooks, concrete examples, and useful takeaways. Read each in around 30 seconds; swipe straight to the next, save an idea, or follow optional deeper-reading links. Four practical labs stay in the notes and learning plan. The [Learning Deck notes](learning-deck/index.md) are the single source of card content.
 
-The slideshow uses a standalone [Jekyll layout](_layouts/learning-deck.html), [CSS](assets/css/learning-deck.css), and [plain JavaScript](assets/js/learning-deck.js). Jekyll embeds the weekly Markdown pages at build time; no JavaScript build tools, external libraries, or runtime requests are needed. The existing GitHub Pages workflow builds and deploys it with the rest of the wiki. URLs respect the configured Pages base path. Browser progress does not sync between devices or modify `/study` metadata.
+The slideshow uses a standalone [Jekyll layout](_layouts/learning-deck.html), [CSS](assets/css/learning-deck.css), and [plain JavaScript](assets/js/learning-deck.js). Jekyll embeds the weekly Markdown pages at build time; no JavaScript build tools, external libraries, or runtime requests are needed. The existing GitHub Pages workflow builds and deploys it with the rest of the wiki. URLs respect the configured Pages base path. Browser position and saved ideas do not sync between devices or modify `/study` metadata.
 
 [`learning-plan.md`](learning-plan.md) brings evaluation and verification into week one, adds dedicated harness and containment work, and makes framework comparison optional. Short mobile readings lead to observable exercise outputs; four development labs provide baseline, comparison, handoff, and adoption evidence. Existing reading dates remain intact.
 

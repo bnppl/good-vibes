@@ -9,7 +9,7 @@ last_updated: 2026-10-26
 
 **What's causing the mistakes?** Diagnose a failure, then change one part of the workflow.
 
-Four lesson cards · about 3–5 minutes each before the exercise · one 60–90 minute lab.
+Four quick ideas · around 30 seconds each · optional deeper reading.
 
 [All decks](index.md) · [First card ↓](#card-05)
 
@@ -17,113 +17,65 @@ Four lesson cards · about 3–5 minutes each before the exercise · one 60–90
 
 ## Card 05
 
-### Find the missing fact
+### The context buffet
 
-> {: .aha }
-> **The agent cannot use a fact it never finds.**
+> **More context can make an agent less useful.**
 >
-> Classify context failures before adding more text: missing, irrelevant, stale, or hard to retrieve. Choose retrieval to fit the task.
+> Dumping a whole repository into context gives useful facts more noise to compete with. Search for the missing fact, read the relevant slice, and keep the full evidence accessible by path.
 
-**Picture it:** The agent changes an old scoring helper because it never discovers the current XP service.
+**In the wild:** The agent follows an obsolete scoring helper while the current XP service sits elsewhere in the repo.
 
-**Recall before revealing:** Would loading the whole repository necessarily fix this?
+**Takeaway:** Give it the right fact at the right moment.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-No. Extra irrelevant or stale material can obscure the useful information. Compare direct discovery, upfront context, or a combination.
-
-</details>
-
-**Try it:** Trace one failure to a context problem. Propose one retrieval change and predict what should improve. For a large result, compare a full dump with a saved file, preview, and targeted reads.
-
-[Full exercise: session 5](../learning-plan.md#session-5-retrieval-that-fits-the-task) · Go deeper: [Knowledge layer](../context-engineering/knowledge-layer.md) · [Tool layer](../context-engineering/tool-layer.md)
-
-[Next card →](#card-06)
+[Optional practice: session 5](../learning-plan.md#session-5-retrieval-that-fits-the-task) · Go deeper: [Knowledge layer](../context-engineering/knowledge-layer.md) · [Tool layer](../context-engineering/tool-layer.md)
 
 ---
 
 ## Card 06
 
-### Close the feedback loop
+### The missing feedback
 
-> {: .aha }
-> **Instructions alone do not run the workflow.**
+> **A test the agent never sees cannot help it fix anything.**
 >
-> The harness connects instructions, tools, verification, state, and permissions. Feedback must reach the agent while it can still correct the result.
+> A harness connects the model to tools, checks, state, and permissions. Feedback only helps the next decision when it reaches the agent in a form it can act on.
 
-**Picture it:** A failed retry test returns the expected and actual XP values, giving the agent a concrete mismatch to investigate.
+**In the wild:** “Expected 10 XP, received 20” points at a real mismatch. A buried CI failure leaves the agent guessing.
 
-**Recall before revealing:** What is missing when tests run but their failures never reach the agent?
+**Takeaway:** Close the loop between a failed check and the next action.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-A useful feedback path. A check only helps correction if its result is available and understandable.
-
-</details>
-
-**Try it:** Map instructions, tools, checks, state, permissions, and traces. Choose one missing feedback mechanism and note its limits.
-
-[Full exercise: session 6](../learning-plan.md#session-6-harness-engineering) · Go deeper: [Harness engineering](../context-engineering/harness-engineering.md)
-
-[Next card →](#card-07)
+[Optional practice: session 6](../learning-plan.md#session-6-harness-engineering) · Go deeper: [Harness engineering](../context-engineering/harness-engineering.md)
 
 ---
 
 ## Card 07
 
-### Make errors actionable
+### The dead-end error
 
-> {: .aha }
-> **“Something went wrong” is a dead end.**
+> **“Something went wrong” is an expensive tool response.**
 >
-> A useful tool response states what failed and gives enough context for the next step. Keep full evidence retrievable when shortening output.
+> Vague errors encourage retries without a new hypothesis. Useful errors identify the failed operation, what changed, and what the agent can check next. Keep sensitive details out of the message.
 
-**Picture it:** “Unknown learner ID; no record changed” is clearer than “Failed.” Synthetic IDs keep the example free of personal data.
+**In the wild:** “Unknown learner ID; no record changed” is more useful than “Failed.”
 
-**Recall before revealing:** Does a tool trace prove what the model was thinking?
+**Takeaway:** Design error messages for the next decision.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-No. It records observable calls and results. Diagnose those actions without treating them as access to internal reasoning.
-
-</details>
-
-**Try it:** Rewrite one vague tool message. Choose trace fields: tool, arguments, result, version/configuration; redact secrets and personal data.
-
-[Full exercise: session 7](../learning-plan.md#session-7-tool-interfaces-and-useful-traces) · Go deeper: [Tool engineering](../context-engineering/tool-engineering.md) · [Agent evaluation](../verification/agent-evaluation.md)
-
-[Next card →](#card-08)
+[Optional practice: session 7](../learning-plan.md#session-7-tool-interfaces-and-useful-traces) · Go deeper: [Tool engineering](../context-engineering/tool-engineering.md) · [Agent evaluation](../verification/agent-evaluation.md)
 
 ---
 
 ## Card 08
 
-### Leave a restart point
+### The handoff problem
 
-> {: .aha }
-> **A fresh session should not have to guess.**
+> **A fresh chat forgets more than your code.**
 >
-> A handoff records goal, current commit, verified state, open questions, and next action. Verify it against the repository when resuming.
+> The files survive. The reasons, unchecked assumptions, and failed approaches may not. A short handoff should record the goal, revision, verified state, open questions, and next action.
 
-**Picture it:** “Retry fix at commit abc123; scoring checks pass; offline behaviour untested; next inspect the sync queue.”
+**In the wild:** “Retry fix at abc123; scoring passes; offline sync untested” gives the next session a place to restart.
 
-**Recall before revealing:** When should you reset a session?
+**Takeaway:** Attach a source or check to important conclusions.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-Use observed drift, task boundaries, and context pressure. A fixed time limit is not a universal rule.
-
-</details>
-
-**Try it:** Draft a five-field handoff and name a concrete sign that would trigger a reset. Attach a source path and revision to one conclusion so the next session can verify it.
-
-[Full exercise: session 8](../learning-plan.md#session-8-state-across-context-windows) · Go deeper: [Memory layer](../context-engineering/memory-layer.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
-
-[Ready for the lab →](#lab-card)
+[Optional practice: session 8](../learning-plan.md#session-8-state-across-context-windows) · Go deeper: [Memory layer](../context-engineering/memory-layer.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
 
 ---
 
@@ -141,7 +93,5 @@ Use observed drift, task boundaries, and context pressure. A fixed time limit is
 **Keep in mind:** Keep versions fixed where possible, document changes, and keep the rubric stable. Report small-sample limits.
 
 [Open the full lab brief](../learning-plan.md#lab-2-change-one-variable)
-
-**Recall round:** Without looking, explain each card's main idea and one failure mode. Reopen the ones you cannot yet explain.
 
 [← All decks](index.md) · [Previous deck](week-1.md) · [Next deck →](week-3.md)

@@ -9,7 +9,7 @@ last_updated: 2026-10-26
 
 **Will this hold up next session?** Carry behaviour, intent, and access boundaries across sessions.
 
-Four lesson cards · about 3–5 minutes each before the exercise · one 60–90 minute lab.
+Four quick ideas · around 30 seconds each · optional deeper reading.
 
 [All decks](index.md) · [First card ↓](#card-09)
 
@@ -17,113 +17,65 @@ Four lesson cards · about 3–5 minutes each before the exercise · one 60–90
 
 ## Card 09
 
-### Protect yesterday’s behaviour
+### The disappearing fix
 
-> {: .aha }
-> **Today’s feature can undo yesterday’s fix.**
+> **Today’s feature can quietly undo yesterday’s fix.**
 >
-> Keep executable examples of behaviour that must survive later changes. Include edge cases as well as the new feature.
+> Agents working in fresh sessions may not know which old behaviours matter. Executable examples preserve those agreements across changes, even when the conversation has disappeared.
 
-**Picture it:** Adding a hint must not reset retry limits or award XP for an incorrect spelling.
+**In the wild:** A new hint button works beautifully. It also resets the retry limit.
 
-**Recall before revealing:** Must behavioural examples use Gherkin?
+**Takeaway:** Protect existing behaviour alongside the new feature.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-No. Use a readable executable format that communicates intent. Gherkin is useful when it improves shared understanding.
-
-</details>
-
-**Try it:** Write three examples: normal behaviour, an edge case, and an existing behaviour that must survive.
-
-[Full exercise: session 9](../learning-plan.md#session-9-behaviour-across-sessions) · Go deeper: [Cross-session regression](../verification/cross-session-regression.md) · [BDD for agents](../verification/bdd-for-agents.md)
-
-[Next card →](#card-10)
+[Optional practice: session 9](../learning-plan.md#session-9-behaviour-across-sessions) · Go deeper: [Cross-session regression](../verification/cross-session-regression.md) · [BDD for agents](../verification/bdd-for-agents.md)
 
 ---
 
 ## Card 10
 
-### Check the crossing point
+### The border problem
 
-> {: .aha }
-> **A local test can miss a broken agreement.**
+> **Two correct components can still make one broken feature.**
 >
-> Choose checks around the boundary being crossed. A contract, integration, property, or architecture check answers a different question.
+> A unit test can prove local behaviour while missing a disagreement at an interface. Contracts and integration checks help you examine the crossing point. Each check still has blind spots.
 
-**Picture it:** A scoring unit test can pass while the sync client sends XP in a format the server rejects.
+**In the wild:** Scoring calculates the right XP. Sync sends it in a format the server rejects.
 
-**Recall before revealing:** Can one boundary check establish that the whole feature works?
+**Takeaway:** Check the agreement between components.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-No. State exactly what it observes and what it cannot detect; add other checks where the risk warrants them.
-
-</details>
-
-**Try it:** Sketch the changed components and their interface. Select one appropriate check and write its blind spot.
-
-[Full exercise: session 10](../learning-plan.md#session-10-boundaries-and-the-right-checks) · Go deeper: [DDD boundaries](../verification/ddd-boundaries.md) · [Contract testing](../verification/contract-testing.md)
-
-[Next card →](#card-11)
+[Optional practice: session 10](../learning-plan.md#session-10-boundaries-and-the-right-checks) · Go deeper: [DDD boundaries](../verification/ddd-boundaries.md) · [Contract testing](../verification/contract-testing.md)
 
 ---
 
 ## Card 11
 
-### Separate permission from persuasion
+### The unlocked door
 
-> {: .aha }
-> **“Do not touch this” is not a locked door.**
+> **“Please don’t” is a prompt. A denied write is a boundary.**
 >
-> Treat retrieved instructions as untrusted content. Enforce access boundaries through the environment as well as instructions.
+> Instructions influence behaviour. Permissions limit what actions can happen. Retrieved text cannot grant authority, even when it survives in a summary or a later session.
 
-**Picture it:** A fixture README asks the agent to write outside the checkout. That text cannot grant authority or filesystem access.
+**In the wild:** A README asks the agent to write outside the checkout. The environment should reject that write if it is attempted.
 
-**Recall before revealing:** Are a refusal and a denied write the same evidence?
+**Takeaway:** Check the boundary itself, not just the agent’s promise.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-No. A refusal shows agent behaviour. A denied operation shows an enforced boundary on the path tested. Neither proves every path is safe.
-
-</details>
-
-**Try it:** Draft an access matrix for files, network, credentials, and external writes. Plan a benign negative test using disposable fixtures only. Repeat it after a summary or handoff to check that untrusted text has not gained authority.
-
-[Full exercise: session 11](../learning-plan.md#session-11-permissions-and-prompt-injection) · Go deeper: [Agent security and containment](../verification/agent-security.md)
-
-[Next card →](#card-12)
+[Optional practice: session 11](../learning-plan.md#session-11-permissions-and-prompt-injection) · Go deeper: [Agent security and containment](../verification/agent-security.md)
 
 ---
 
 ## Card 12
 
-### Test the safety net
+### The agreeable safety net
 
-> {: .aha }
-> **A test suite can agree with the same mistake.**
+> **Your AI can write a bug and a test that agrees with it.**
 >
-> Introduce a deliberate regression to check whether the relevant test rejects it. In legacy code, separate observed behaviour from intended behaviour.
+> Implementation and tests can share the same misunderstanding. A deliberate regression checks whether your safety net rejects a known defect. It does not prove the suite catches every defect.
 
-**Picture it:** Temporarily award XP twice in an isolated copy. The retry check should fail for that change.
+**In the wild:** In an isolated copy, award XP twice. Does the retry test fail?
 
-**Recall before revealing:** Does a characterization test prove the old behaviour is desirable?
+**Takeaway:** Test whether your checks can disagree with broken code.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-No. It captures what the system does. Review intent before turning an accidental behaviour into a requirement.
-
-</details>
-
-**Try it:** Choose a deliberate regression. Review the handoff for verification commands and unresolved risks.
-
-[Full exercise: session 12](../learning-plan.md#session-12-test-the-safety-net-and-the-handoff) · Go deeper: [Test the tests](../verification/test-the-tests.md) · [Characterization and handoff](../verification/characterization-and-handoff.md)
-
-[Ready for the lab →](#lab-card)
+[Optional practice: session 12](../learning-plan.md#session-12-test-the-safety-net-and-the-handoff) · Go deeper: [Test the tests](../verification/test-the-tests.md) · [Characterization and handoff](../verification/characterization-and-handoff.md)
 
 ---
 
@@ -141,7 +93,5 @@ No. It captures what the system does. Review intent before turning an accidental
 **Keep in mind:** Use disposable fixtures and synthetic data. Record which access path was tested and what remains untested; never use production systems or real secrets.
 
 [Open the full lab brief](../learning-plan.md#lab-3-resume-safely)
-
-**Recall round:** Without looking, explain each card's main idea and one failure mode. Reopen the ones you cannot yet explain.
 
 [← All decks](index.md) · [Previous deck](week-2.md) · [Next deck →](week-4.md)

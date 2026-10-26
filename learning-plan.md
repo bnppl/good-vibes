@@ -8,7 +8,7 @@ status: unread
 
 # Learning Plan: Reliable AI-Assisted Engineering
 
-**Prefer smaller bites?** [Launch the learning slideshow]({{ '/learn/' | relative_url }}) for 16 short lessons with Learn → Recall → Try steps and four lab cards. You can also [browse the card notes](learning-deck/index.md). Return here to track exercise evidence.
+**Prefer smaller bites?** [Launch the learning slideshow]({{ '/learn/' | relative_url }}) for 16 bite-sized information cards with optional deeper reading. The four labs remain in these notes. You can also [browse the card notes](learning-deck/index.md). Return here to track exercise evidence.
 
 **Goal:** Demonstrate which AI workflows improve delivery, quality, cost, and your understanding on a real project. Context engineering and proportionate specifications support that goal; framework adoption is optional.
 

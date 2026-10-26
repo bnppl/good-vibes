@@ -9,7 +9,7 @@ last_updated: 2026-10-26
 
 **How much automation earns its keep?** Use your results to choose a workflow you can defend.
 
-Four lesson cards · about 3–5 minutes each before the exercise · one 60–90 minute lab.
+Four quick ideas · around 30 seconds each · optional deeper reading.
 
 [All decks](index.md) · [First card ↓](#card-13)
 
@@ -17,113 +17,65 @@ Four lesson cards · about 3–5 minutes each before the exercise · one 60–90
 
 ## Card 13
 
-### Start with a clear loop
+### The extra-agent trap
 
-> {: .aha }
-> **A second agent cannot fix an unclear task.**
+> **A second agent can multiply an unclear task.**
 >
-> Begin with intent, investigation, implementation, checks, and review. Add orchestration only to address a specific bottleneck.
+> More agents add handoffs, coordination, and integration. First establish a clear single-agent loop. Add complexity when a specific bottleneck gives you a reason to compare it.
 
-**Picture it:** For a retry bug, one agent locates scoring, fixes the behaviour, runs checks, and presents the diff for review.
+**In the wild:** One agent can investigate a retry bug, change scoring, run checks, and present the diff.
 
-**Recall before revealing:** What should come before adding agents?
+**Takeaway:** Name the bottleneck before adding another agent.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-Name the bottleneck and explain why a more complex workflow might reduce it. Keep the simple workflow as the comparison.
-
-</details>
-
-**Try it:** Describe your simple workflow for one task. Name the bottleneck, if one exists.
-
-[Full exercise: session 13](../learning-plan.md#session-13-start-with-a-simple-workflow) · Go deeper: [Single-agent patterns](../agent-patterns/single-agent.md) · [Agentic development](../context-engineering/agentic-dev.md)
-
-[Next card →](#card-14)
+[Optional practice: session 13](../learning-plan.md#session-13-start-with-a-simple-workflow) · Go deeper: [Single-agent patterns](../agent-patterns/single-agent.md) · [Agentic development](../context-engineering/agentic-dev.md)
 
 ---
 
 ## Card 14
 
-### Give delegation a hypothesis
+### The telephone game
 
-> {: .aha }
-> **Parallel work still has to fit together.**
+> **Every agent handoff can lose part of the story.**
 >
-> Separate ownership, agree interfaces, isolate workspaces, and budget for integration and review. Compare results rather than assuming more agents are faster.
+> Tightly coupled specialists may work better as skills and tools in one shared loop. Separate agents can still help with independent work, verification, or permission boundaries. Compare outcomes on your tasks.
 
-**Picture it:** Hint UI and scoring changes may overlap. Agree their interface and who owns each file before splitting the work.
+**In the wild:** The “scoring agent” keeps asking the “retry agent” for context it already had.
 
-**Recall before revealing:** Why can parallel tasks take longer overall?
+**Takeaway:** Split work where the boundary helps. Measure the trade-off.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-Coordination, conflicts, integration, review, and duplicated work can outweigh time saved. Agent count needs evidence for your workload.
-
-</details>
-
-**Try it:** Compare a coupled specialist with a skill in one loop. Keep tasks and budget fixed; check individual regressions, integration, and review effort. Retain separate agents where they earn their cost.
-
-[Full exercise: session 14](../learning-plan.md#session-14-delegate-only-with-a-testable-reason) · Go deeper: [Multi-agent coordination](../agent-patterns/multi-agent.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
-
-[Next card →](#card-15)
+[Optional practice: session 14](../learning-plan.md#session-14-delegate-only-with-a-testable-reason) · Go deeper: [Multi-agent coordination](../agent-patterns/multi-agent.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
 
 ---
 
 ## Card 15
 
-### Define the stop conditions
+### The identity gap
 
-> {: .aha }
-> **Autonomy needs a way to stop and recover.**
+> **Your approval is not the same thing as a working credential.**
 >
-> Match allowed actions to task risk. Define escalation, retry/step limits, rollback, and review before unattended work begins.
+> An action needs both authority and an integration that can execute it. User identity, service accounts, and scheduled jobs can have different permissions. More retries do not create missing access.
 
-**Picture it:** An agent may edit a disposable feature branch, but a consequential release needs the agreed review process.
+**In the wild:** You approve a GitHub push. The connected integration still rejects the write.
 
-**Recall before revealing:** What should happen when the agent is unsure about scope?
+**Takeaway:** Know whose credentials each external action uses.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-It should surface the uncertainty and escalate according to the agreed boundary. More retries do not create authority.
-
-</details>
-
-**Try it:** Write allowed actions, escalation triggers, limits, recovery steps, and reviewers. Name whose credentials each external action uses, including scheduled runs.
-
-[Full exercise: session 15](../learning-plan.md#session-15-autonomy-recovery-and-review) · Go deeper: [Autonomy](../agent-patterns/autonomy.md) · [Production lessons](../agent-patterns/production.md)
-
-[Next card →](#card-16)
+[Optional practice: session 15](../learning-plan.md#session-15-autonomy-recovery-and-review) · Go deeper: [Autonomy](../agent-patterns/autonomy.md) · [Production lessons](../agent-patterns/production.md)
 
 ---
 
 ## Card 16
 
-### Make a recommendation you can defend
+### The moving bottleneck
 
-> {: .aha }
-> **“It felt faster” is a starting hypothesis.**
+> **When code gets cheaper, the queue moves somewhere else.**
 >
-> Separate what you measured, what a source reports, and what you still suspect. Include costs, understanding, risks, and conditions that would reverse the decision.
+> Faster generation can shift waiting time into review, CI, and integration. Count useful delivery and rework, rather than treating more code or more PRs as the result.
 
-**Picture it:** “Review time fell on these tasks; offline sync remains untested; trial again on unseen sync work before expanding.”
+**In the wild:** A team doubles its patches. Review queues double too. Users see no improvement yet.
 
-**Recall before revealing:** What makes a recommendation stronger than a tool endorsement?
+**Takeaway:** Find the slowest part of the whole system.
 
-<details markdown="1">
-<summary>Reveal the answer</summary>
-
-An explicit problem, evidence with limits, adoption conditions, and a clear reason to reconsider when new results arrive.
-
-</details>
-
-**Try it:** Draft one page: problem, results, costs, understanding, risks, adoption conditions, and reversal criteria. Include review and CI delays, not only generation speed.
-
-[Full exercise: session 16](../learning-plan.md#session-16-evidence-and-team-recommendation) · Go deeper: [Agent evaluation](../verification/agent-evaluation.md) · [Verification sources](../verification/sources.md)
-
-[Ready for the lab →](#lab-card)
+[Optional practice: session 16](../learning-plan.md#session-16-evidence-and-team-recommendation) · Go deeper: [Agent evaluation](../verification/agent-evaluation.md) · [Verification sources](../verification/sources.md)
 
 ---
 
@@ -141,7 +93,5 @@ An explicit problem, evidence with limits, adoption conditions, and a clear reas
 **Keep in mind:** Record integration/review effort, failures, and cost as well as elapsed time. Keep your claims within the evidence.
 
 [Open the full lab brief](../learning-plan.md#lab-4-compare-and-decide)
-
-**Recall round:** Without looking, explain each card's main idea and one failure mode. Reopen the ones you cannot yet explain.
 
 [← All decks](index.md) · [Previous deck](week-3.md) · [Optional framework survey](../learning-plan.md#optional-framework-survey-and-deep-reads)
