@@ -18,6 +18,8 @@ Farley's approach centres on Acceptance Test-Driven Development (ATDD), supporte
 
 **Reading routes:** [Understand the approach](#1-the-techniques-and-what-each-contributes) · [See the four layers](#2-the-four-layer-model-applied-to-spellhaven) · [Follow a worked feature](#3-a-step-by-step-session) · [Choose tools](#4-tools-what-is-official-and-what-is-a-suggested-choice) · [Try a first lab](#7-your-first-lab).
 
+[For cross-engineer comparisons, use the neutral persistent reward example](neutral-example.md). It holds submission identity, restart behaviour, and expected balances constant while leaving the starting architecture unknown.
+
 The Spellhaven examples, file structure, prompts, and adoption plan below are **this guide's proposed application**. They are not Farley's code or a description of your app's current implementation. Illustrative product rules need your agreement before becoming real requirements. Research checked on 26 October 2026; paid course lessons were not accessed.
 
 ## 1. The techniques and what each contributes

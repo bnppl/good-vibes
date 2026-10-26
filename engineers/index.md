@@ -8,7 +8,7 @@ has_children: true
 
 Detailed research first. Small ideas when you want them. Compare people against the same questions and evidence.
 
-[Open the comparison cards]({{ '/engineers/compare/' | relative_url }}){: .btn .btn-primary }
+[Start with the first five studies](first-five.md) · [Open the comparison cards]({{ '/engineers/compare/' | relative_url }}){: .btn .btn-primary }
 
 {% assign profiles = site.pages | where: 'engineer_profile', true | sort: 'canonical_name' %}
 {% for profile in profiles %}

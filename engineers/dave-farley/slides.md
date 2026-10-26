@@ -11,7 +11,7 @@ research_checked: 2026-10-26
 
 # Dave Farley — bite-sized ideas
 
-Derived from the cached research checked on 26 October 2026. Examples are suggested adaptations for Spellhaven.
+Derived from the cached research checked on 26 October 2026. Examples are suggested adaptations for Spellhaven or the [common reward task](neutral-example.md); they are not Farley demonstrations.
 
 ## Card 01
 
@@ -109,3 +109,34 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 
 ---
 
+## Card 07
+
+### Same problem, fairer comparison
+
+> **Changing the task changes what you are comparing.**
+>
+> Our common reward exercise keeps the same outcomes for every engineer: 10 points once per submission ID, persistence across restart, and a new ID as a separate event. This is a suggested application of the cached principles, not a Farley demonstration.
+
+**In the wild:** Replaying A leaves 10 points; restarting and replaying A still leaves 10; delivering B produces 20.
+
+**Takeaway:** Agree the same observable outcomes before comparing workflows.
+
+[Optional practice: common reward lab](neutral-example.md#proposed-sequence-from-inspection-to-integration) · [Shared task and assumptions](neutral-example.md#the-shared-requirement) · [Cached evidence](index.md#comparison-evidence)
+
+---
+
+## Card 08
+
+### The restart that matters
+
+> **A process-local memory can pass a replay test and still lose the rule.**
+>
+> In our suggested reward exercise, restart is part of the agreed contract. The check must observe retained application state after a real runtime restart. Clearing a test variable does not establish persistence.
+
+**In the wild:** A works once, the process restarts, and the same A must still leave the account at 10 points.
+
+**Takeaway:** Verify the boundary the requirement actually crosses.
+
+[Optional practice: common reward lab](neutral-example.md#proposed-sequence-from-inspection-to-integration) · [Layer and driver responsibilities](neutral-example.md#map-the-four-layers-without-prescribing-the-product-design) · [Detailed guide](research.md#3-a-step-by-step-session)
+
+---

@@ -42,3 +42,5 @@ Claims C01–C12 refer to the stable entries in [the comparison profile](index.m
 ## Refresh log
 
 26 October 2026: initial research migrated into the per-person cache. Original research depth retained in `research.md`; claims and consumable slides derived locally. No new external research during migration.
+
+26 October 2026: cache-only audit corrected the C12 body label to **Inferred**, clarified dimension qualifications, and derived a neutral reward mapping plus cards 07–08. No new sources were opened and research dates were preserved.
