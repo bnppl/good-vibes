@@ -51,3 +51,9 @@ The gallery lives at `/engineers/visuals/`; the eight routes are exam-ownership,
 The ownership, route, layer, tool, context and question mappings are curated editorial readings with their own dates/scope notes. The timeline has 102 dated source records whose URLs were checked against the corresponding source registers. Tool relationships reuse the 55 scoped examples from the approved map. Simulator results are illustrative local models, not engineer experiments.
 
 Integration checks used a native browser fixture at 320, 390, 768 and 1280px. All20 selection, page overflow, runtime errors, gallery navigation, primary interactions, evidence expansion, shared-tool tracing, synchronized layer selection, scenario selection, the simulator's correct/failing models, all20 microscope overview and dark-mode rendering were checked. Selected-control colour conflicts with shared CSS were corrected. The complete Jekyll build remains the GitHub Pages workflow's responsibility.
+
+## Subway map iteration
+
+The subway view now opens with all twenty routes on a shared, curved network. Four navigational families highlight check timing, context-dependent ordering, and evaluation/production feedback. These are interpretive reading aids, not measured clusters. Selecting an engineer isolates and numbers their stops; the inspector keeps dated route qualifications, source evidence and tooling inline. Software checks before/after implementation and ML/AI-product evaluation use separate stations. Operational feedback is not recast as AI evaluation.
+
+Mobile opens with the whole network visible; Expand map enables a horizontally scrollable, readable station view. The native selector, roster buttons and keyboard-operable station groups provide alternatives to selecting a thin SVG track. Reduced motion and dark mode inherit the shared view conventions.

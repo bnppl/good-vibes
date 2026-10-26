@@ -4,15 +4,6 @@
   window.EngineerVisuals['subway-routes'] = function (ctx) {
     const {root, profiles, el, link, dimension, profileUrl, evidenceLinks} = ctx;
     const shell = el('section', 'view-subway-routes');
-    const stations = [
-      {id:'intent', label:['Intent'], dimension:'D02', meaning:'What outcome or problem is being agreed?'},
-      {id:'plan', label:['Plan'], dimension:'D03', meaning:'How is the next tractable piece of work chosen?'},
-      {id:'checks', label:['Checks /', 'evaluation'], dimension:'D04', meaning:'What evidence challenges the result? Software tests and AI-product evaluation remain different targets.'},
-      {id:'implement', label:['Implement /', 'change'], dimension:'D07', meaning:'What work is delegated, and within what scope?'},
-      {id:'inspect', label:['Inspect'], dimension:'D06', meaning:'What understanding and judgment remains with people?'},
-      {id:'release', label:['Release'], dimension:'D10', meaning:'What is documented about integration, publication or deployment?'},
-      {id:'observe', label:['Observe'], dimension:'D10', meaning:'What feedback informs the next change? A production observation is not the same as a local passing check.'}
-    ];
     const routes = {
       'dave-farley': {stops:['intent','checks','implement','inspect','release'], cadence:'Acceptance-first', solid:true, loop:['implement','checks'], note:'Human-owned failing acceptance examples precede implementation. The route adapts his October 2026 proposal; it is not a recovered private session or release configuration.', ids:['D02','D03','D04','D06','D10']},
       'kent-beck': {stops:['intent','plan','checks','implement','inspect'], cadence:'Test-first project', solid:true, loop:['implement','checks'], note:'BPlusTree3 supplies a next-test and reference-check example. June 2025 instructions and April 2026 coordination experience are project-specific; a production release policy remains unknown.', ids:['D02','D03','D04','D06','D07']},
@@ -35,66 +26,102 @@
       'hamel-husain': {stops:['intent','inspect','checks','implement','release','observe'], cadence:'Inspect examples → validate evaluators', solid:true, loop:['observe','inspect'], note:'AI-product quality criteria emerge from inspected examples; objective checks and subjective judges need appropriate validation. September 2026 joint guidance distinguishes release regressions from sampled production evaluation. This is not a coding-agent TDD claim.', ids:['D02','D03','D04','D06','D08','D10']},
       'jason-liu': {stops:['intent','plan','implement','checks','inspect','observe'], cadence:'Bounded prototype + RAG feedback', solid:false, loop:['observe','intent'], note:'September 2025 bounded prototyping, component evaluation and the August 2024 product flywheel support this synthesis. January 2026 context-interface updates do not establish a complete private coding-agent lifecycle.', ids:['D02','D03','D04','D06','D07','D10']}
     };
-    const heading = el('div', 'subway-heading');
-    heading.append(el('p','visual-chip','Interpretive adaptation'), el('h2','', 'Different lines. Shared stations.'), el('p','visual-note','These are evidence-informed route sketches, not recordings of twenty engineers completing one task. A shared station can mean different work: software tests, ML evaluation, or product feedback.'));
-    shell.append(heading);
-    const controls = el('div','visual-controls subway-selectors');
-    const picks = ['dave-farley','peter-steinberger','hamel-husain'];
-    const selectors=[];
-    for(let i=0;i<3;i++) {
-      const label=el('label','visual-field'); label.append(el('span','',i===0?'First line':i===1?'Compare with':'Third line'));
-      const select=el('select','visual-select'); select.setAttribute('aria-label',i===0?'First engineer route':i===1?'Second engineer route':'Third engineer route');
-      if(i) {const option=el('option','','No comparison'); option.value='';select.append(option);}
-      profiles.forEach(p=>{const option=el('option','',p.name);option.value=p.id;select.append(option);});
-      select.value=picks[i]; select.addEventListener('change',()=>{picks[i]=select.value;render();});label.append(select);controls.append(label);selectors.push(select);
-    }
-    shell.append(controls);
-    const legend=el('div','subway-lines');const chart=el('div','subway-chart');const chartSummary=el('p','visual-note subway-chart-note','Solid lines use an explicit local check/gate cadence. Dotted lines connect documented activities whose complete order is not established. Every connecting path and return arc remains an interpretive adaptation.');
-    const detail=el('section','visual-detail subway-inspector');detail.setAttribute('aria-live','polite');
-    const routeNotes=el('div','subway-route-notes');
-    shell.append(legend,chart,chartSummary,detail,routeNotes);root.append(shell);
-    let selectedStation='checks';let focusRoute=null;let current=[];
+    const families = [
+      {id:'before', name:'Checks before code', color:'#b66642', desc:'Agree what should fail before asking for implementation.'},
+      {id:'after', name:'Build, then challenge', color:'#458b89', desc:'Implement a bounded change, then test and inspect it.'},
+      {id:'adaptive', name:'Context shapes the route', color:'#8b7bb5', desc:'Documented activities; a fixed test order is not established.'},
+      {id:'product', name:'Evaluation & feedback', color:'#b18a32', desc:'ML experiments, AI-product evaluation and production feedback.'}
+    ];
+    const groups = {
+      before:['dave-farley','kent-beck','simon-willison','gene-kim','harper-reed','matt-pocock'],
+      after:['peter-steinberger','gojko-adzic'],
+      adaptive:['birgitta-bockeler','addy-osmani','martin-fowler','armin-ronacher','steve-yegge','robert-c-martin','david-heinemeier-hansson'],
+      product:['andrej-karpathy','chip-huyen','hamel-husain','jason-liu','charity-majors']
+    };
+    // Spatial families are reading aids, not measured clusters or claims of identical practice.
+    const entries = families.flatMap(f => groups[f.id].map((id,i)=>({profile:profiles.find(p=>p.id===id),route:routes[id],family:f,lane:i-(groups[f.id].length-1)/2}))).filter(e=>e.profile);
+    const stops = {
+      intent:{x:90,y:285,label:'Intent',sub:'Agree the outcome',dim:'D02',lx:66,ly:236},
+      plan:{x:270,y:285,label:'Scope & plan',sub:'Choose the next slice',dim:'D03',lx:214,ly:236},
+      before:{x:445,y:125,label:'Checks first',sub:'Acceptance / red–green',dim:'D04',lx:384,ly:78},
+      implement:{x:620,y:285,label:'Implement',sub:'Delegate bounded work',dim:'D07',lx:563,ly:236},
+      after:{x:778,y:405,label:'Checks after',sub:'Tests / gates / challenge',dim:'D04',lx:723,ly:455},
+      inspect:{x:930,y:285,label:'Human judgment',sub:'Inspect & accept',dim:'D06',lx:868,ly:236},
+      release:{x:1090,y:285,label:'Integrate',sub:'Where documented',dim:'D10',lx:1030,ly:236},
+      evaluate:{x:550,y:565,label:'Evaluation',sub:'ML / AI-product quality',dim:'D04',lx:490,ly:615},
+      observe:{x:950,y:565,label:'Observe',sub:'Production feedback',dim:'D10',lx:904,ly:615}
+    };
+    const shellHeading=el('div','metro-heading');
+    shellHeading.append(el('p','metro-kicker','A NETWORK OF ENGINEERING PRACTICE'),el('h2','','Where do you put the checks?'),el('p','','Follow the branches to see where approaches meet—and where the work demands a different route. Select any engineer to trace their line.'));
+    shell.append(shellHeading);
+    let selected='',lens='all',activeStop=null;
+    const controls=el('div','metro-controls');
+    const lenses=el('div','metro-lenses');lenses.setAttribute('aria-label','Highlight route family');
+    const familyButtons=[];
+    [{id:'all',name:'All twenty',color:'var(--ink)'},...families].forEach(f=>{
+      const b=el('button','metro-lens',f.name);b.type='button';b.style.setProperty('--route',f.color);b.addEventListener('click',()=>{lens=f.id;selected='';activeStop=null;render();});lenses.append(b);familyButtons.push([b,f.id]);
+    });
+    const label=el('label','metro-select');label.append(el('span','visually-hidden','Trace an engineer'));
+    const select=el('select');select.setAttribute('aria-label','Trace an engineer');const all=el('option','','Trace an engineer…');all.value='';select.append(all);
+    profiles.forEach(p=>{const o=el('option','',p.name);o.value=p.id;select.append(o);});
+    select.addEventListener('change',()=>{selected=select.value;lens='all';activeStop=null;render();});label.append(select);controls.append(lenses,label);shell.append(controls);
+    const mapFrame=el('div','metro-map-frame');const map=el('div','metro-map');map.tabIndex=0;map.setAttribute('role','region');map.setAttribute('aria-label','Engineering route map. On a small screen, scroll horizontally to explore. Engineer selection is also available below.');const mapTools=el('div','metro-map-tools');const mapStatus=el('span','metro-map-status','All twenty routes');const zoom=el('button','metro-zoom','Expand map ↗');zoom.type='button';zoom.setAttribute('aria-pressed','false');zoom.addEventListener('click',()=>{const expanded=map.classList.toggle('is-expanded');zoom.textContent=expanded?'Fit whole map ↙':'Expand map ↗';zoom.setAttribute('aria-pressed',String(expanded));});mapTools.append(mapStatus,zoom);mapFrame.append(mapTools,map);shell.append(mapFrame);
+    const mapKey=el('div','metro-key');mapKey.append(el('span','','● Shared activity'),el('span','metro-dash','Dotted = complete order unknown'),el('span','','↶ Feedback returns to earlier work'),el('span','metro-mobile-hint','Expand for station labels and horizontal exploration →'));shell.append(mapKey);
+    const inspector=el('section','metro-inspector');inspector.setAttribute('aria-live','polite');shell.append(inspector);
+    const roster=el('div','metro-roster');roster.append(el('h3','','Twenty engineers. Find a line.'));
+    const nameButtons=[];
+    families.forEach(f=>{const section=el('section','metro-roster-group');section.style.setProperty('--route',f.color);section.append(el('h4','',f.name));const names=el('div','metro-names');entries.filter(e=>e.family.id===f.id).forEach(e=>{const b=el('button','metro-person',e.profile.name);b.type='button';b.addEventListener('click',()=>{selected=selected===e.profile.id?'':e.profile.id;activeStop=null;lens='all';render();});names.append(b);nameButtons.push([b,e.profile.id]);});section.append(names);roster.append(section);});shell.append(roster);
+    const caveat=el('details','metro-method');caveat.append(el('summary','','How to read this map'),el('p','','Routes are interpretive sketches assembled from dated public evidence, not recordings of a common task. Families help you navigate; they are not measured clusters. A shared station means a shared activity, not equivalent rigor. Dotted lines indicate that a complete order is unknown; solid lines reflect an explicit local cadence, not a verified end-to-end process. Omitted stops mean unestablished, not unused. AI evaluation and software tests have separate stations because they challenge different things. Charity Majors’ operational guidance appears on the feedback branch; it is not an AI-product or personal coding-agent claim.'));
+    shell.append(caveat);root.append(shell);
     const ns='http://www.w3.org/2000/svg';
-    function svg(tag,attrs,text) {const n=document.createElementNS(ns,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,v));if(text)n.textContent=text;return n;}
-    function color(i){return 'var(--series-'+(i+1)+')';}
-    function draw() {
-      chart.replaceChildren();const width=Math.max(280,chart.clientWidth);const height=458;
-      const pts={intent:[53,82],plan:[width/2,82],checks:[width-53,82],implement:[width-53,238],inspect:[width/2,238],release:[53,238],observe:[53,394]};
-      const picture=svg('svg',{viewBox:'0 0 '+width+' '+height,width:'100%',height,role:'img','aria-label':'Subway comparison of '+current.map(x=>x.profile.name).join(', ')+'. Route order is interpretive; detailed itineraries and evidence follow.'});
-      picture.append(svg('title',{},'Engineering subway routes'),svg('desc',{},'Seven shared activity stations. Solid and dotted routes distinguish explicit local cadence from activity connections with unknown complete ordering. A dashed return arc marks a proposed feedback loop.'));
-      current.forEach((entry,i)=>{
-        const {route}=entry;const offset=(i-(current.length-1)/2)*7;const coords=route.stops.map(id=>[pts[id][0]+offset,pts[id][1]+offset]);
-        let d='';coords.forEach((pt,j)=>{if(!j){d='M '+pt.join(' ');return;}const prev=coords[j-1];const bend=(i+1)*9; if(Math.abs(prev[1]-pt[1])<25) d+=' C '+prev[0]+' '+(prev[1]-bend)+' '+pt[0]+' '+(pt[1]-bend)+' '+pt.join(' ');else if(Math.abs(prev[0]-pt[0])<25) d+=' C '+(prev[0]+bend)+' '+prev[1]+' '+(pt[0]+bend)+' '+pt[1]+' '+pt.join(' ');else d+=' C '+prev[0]+' '+pt[1]+' '+pt[0]+' '+prev[1]+' '+pt.join(' ');});
-        const active=focusRoute===null||focusRoute===entry.profile.id;
-        picture.append(svg('path',{d,fill:'none',stroke:color(i),'stroke-width':4,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':route.solid?'':'3 7',opacity:active?'.85':'.15'}));
-        if(route.loop){const a=pts[route.loop[0]],b=pts[route.loop[1]];const outerX=width-18-i*9;const loop='M '+(a[0]+offset)+' '+(a[1]+offset)+' C '+outerX+' '+a[1]+' '+outerX+' '+b[1]+' '+(b[0]+offset)+' '+(b[1]+offset);picture.append(svg('path',{d:loop,fill:'none',stroke:color(i),'stroke-width':2,'stroke-dasharray':'7 5',opacity:active?'.55':'.1'}));}
-      });
-      stations.forEach(st=>{
-        const [x,y]=pts[st.id];const members=current.filter(x=>x.route.stops.includes(st.id));
-        picture.append(svg('circle',{cx:x,cy:y,r:members.length>1?13:9,fill:'var(--paper)',stroke:members.length?'var(--ink)':'var(--line)','stroke-width':members.length>1?2:1}));
-        if(members.length>1)picture.append(svg('circle',{cx:x,cy:y,r:7,fill:'none',stroke:'var(--ink)','stroke-width':1}));
-        members.forEach(entry=>{const i=current.indexOf(entry);picture.append(svg('circle',{cx:x-7+i*7,cy:y,r:2.5,fill:color(i)}));});
-        const button=el('button','subway-station');button.type='button';button.style.left=x+'px';button.style.top=(y+16)+'px';button.setAttribute('aria-pressed',String(selectedStation===st.id));button.setAttribute('aria-label',st.label.join(' ')+', '+members.length+' selected routes');st.label.forEach((line,index)=>{if(index)button.append(document.createElement('br'));button.append(document.createTextNode(line));});button.addEventListener('click',()=>{selectedStation=st.id;draw();showStation();});chart.append(button);
-      });
-      chart.prepend(picture);
+    function svg(tag,attrs,text){const n=document.createElementNS(ns,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,v));if(text)n.textContent=text;return n;}
+    function itinerary(e){
+      return e.route.stops.map((s,i)=>s==='checks'?(e.family.id==='product'&&e.profile.id!=='charity-majors'?'evaluate':i<e.route.stops.indexOf('implement')?'before':'after'):s==='release'?'release':s);
     }
-    function showStation(){
-      detail.replaceChildren();const station=stations.find(x=>x.id===selectedStation);detail.append(el('h3','',station.label.join(' ')),el('p','',station.meaning));
-      current.forEach((entry,i)=>{const row=el('div','subway-station-detail');const h=el('h4','',entry.profile.name);h.style.setProperty('--route-color',color(i));row.append(h);
-        if(!entry.route.stops.includes(station.id)){row.append(el('p','visual-note','Not included in this route sketch. That means this map does not establish the stop, not that the engineer never does it.'));}
-        const d=dimension(entry.profile,station.dimension);if(d){row.append(el('p','',d.position));const small=el('p','visual-note',(d.evidence||'Evidence')+' · checked '+(d.checked||entry.profile.checked||'date unavailable')+'. '+(d.qualification||''));row.append(small);row.append(evidenceLinks(entry.profile,[station.dimension]));}else row.append(el('p','visual-note','This dimension is not established in the available cache.'));
-        detail.append(row);
+    function pathFor(e){
+      const ids=itinerary(e),offset=e.lane*4.5;
+      const points=ids.map(id=>[stops[id].x,stops[id].y+offset]);
+      let d='M '+points[0].join(' ');
+      points.slice(1).forEach((p,i)=>{const a=points[i],mid=(a[0]+p[0])/2;d+=' C '+mid+' '+a[1]+' '+mid+' '+p[1]+' '+p.join(' ');});return d;
+    }
+    function draw(){
+      mapStatus.textContent=selected?profiles.find(p=>p.id===selected).name+' · follow the numbered stops':lens==='all'?'All twenty routes':families.find(f=>f.id===lens).name;map.replaceChildren();const s=svg('svg',{viewBox:'0 0 1180 680',role:'group','aria-label':selected?'Highlighted route for '+profiles.find(p=>p.id===selected).name:'Twenty engineer routes across shared activities'});
+      s.append(svg('title',{},'Engineering lines: checks, change and human judgment'));
+      const defs=svg('defs');const grid=svg('pattern',{id:'metro-grid',width:22,height:22,patternUnits:'userSpaceOnUse'});grid.append(svg('circle',{cx:1,cy:1,r:.8,fill:'var(--line)',opacity:.5}));defs.append(grid);s.append(defs,svg('rect',{width:1180,height:680,fill:'url(#metro-grid)'}));
+      s.append(svg('path',{d:'M 220 250 C 300 250 320 70 445 70 S 580 250 700 250',fill:'none',stroke:'var(--metro-warm)','stroke-width':98,'stroke-linecap':'round'}));
+      s.append(svg('path',{d:'M 310 330 C 430 330 400 570 550 570 S 860 580 1000 565',fill:'none',stroke:'var(--metro-gold)','stroke-width':110,'stroke-linecap':'round'}));
+      s.append(svg('text',{x:55,y:38,class:'metro-map-caption'},'ENGINEERING LINES / 20 PUBLIC-SOURCE PROFILES'));
+      s.append(svg('text',{x:55,y:650,class:'metro-map-caption'},'SCHEMATIC ROUTES · DISTANCE DOES NOT REPRESENT TIME OR RIGOR'));
+      const sorted=[...entries].sort((a,b)=>(a.profile.id===selected)-(b.profile.id===selected));
+      sorted.forEach(e=>{const focused=e.profile.id===selected;const visible=selected?focused:lens==='all'||lens===e.family.id;
+        const p=svg('path',{d:pathFor(e),fill:'none',stroke:e.family.color,'stroke-width':focused?6:2.5,opacity:visible?(selected?1:.72):.08,'stroke-linecap':'round','stroke-dasharray':e.route.solid?'':'3 7',class:'metro-track'});const title=svg('title',{},e.profile.name+' · '+e.route.cadence);p.append(title);p.style.cursor='pointer';p.style.pointerEvents='stroke';p.addEventListener('click',()=>{selected=e.profile.id;activeStop=null;render();});s.append(p);
+        if(focused){itinerary(e).forEach((id,i)=>{const point=stops[id];s.append(svg('circle',{cx:point.x,cy:point.y+e.lane*4.5,r:4,fill:e.family.color,stroke:'var(--paper)','stroke-width':1.5}));});}
       });
+      // A separate return track expresses recurrence, without inventing a measured cycle length.
+      s.append(svg('path',{d:'M 950 585 C 950 665 225 665 225 395 C 225 370 240 350 260 342',fill:'none',stroke:'var(--muted)','stroke-width':1.4,'stroke-dasharray':'4 7',opacity:.6}));
+      s.append(svg('text',{x:294,y:608,class:'metro-feedback'},'feedback → revise the next step'));
+      Object.entries(stops).forEach(([id,st])=>{
+        const g=svg('g',{class:'metro-stop',role:'button',tabindex:0,'aria-label':st.label+': show evidence','aria-pressed':String(activeStop===id)});
+        g.append(svg('circle',{cx:st.x,cy:st.y,r:23,fill:'transparent'}),svg('circle',{cx:st.x,cy:st.y,r:10,fill:'var(--paper)',stroke:activeStop===id?'var(--ink)':'var(--muted)','stroke-width':activeStop===id?4:2}),svg('circle',{cx:st.x,cy:st.y,r:3,fill:'var(--ink)'}));
+        g.append(svg('text',{x:st.lx,y:st.ly,class:'metro-stop-label'},st.label),svg('text',{x:st.lx,y:st.ly+18,class:'metro-stop-sub'},st.sub));
+        const choose=()=>{activeStop=activeStop===id?null:id;render();};g.addEventListener('click',choose);g.addEventListener('keydown',ev=>{if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();choose();}});s.append(g);
+      });
+      if(selected){const e=entries.find(e=>e.profile.id===selected);itinerary(e).forEach((id,i)=>{const st=stops[id];s.append(svg('circle',{cx:st.x+17,cy:st.y+24,r:9,fill:e.family.color}),svg('text',{x:st.x+17,y:st.y+28,'text-anchor':'middle',class:'metro-stop-number'},String(i+1)));});}
+      map.append(s);
     }
-    function render(){
-      const ids=[...new Set(picks.filter(Boolean))];current=ids.map(id=>({profile:profiles.find(p=>p.id===id),route:routes[id]})).filter(x=>x.profile&&x.route);if(!current.length)return;
-      if(focusRoute&&!ids.includes(focusRoute))focusRoute=null;
-      legend.replaceChildren();routeNotes.replaceChildren();
-      current.forEach((entry,i)=>{const button=el('button','subway-line-button');button.type='button';button.setAttribute('aria-pressed',String(focusRoute===entry.profile.id));const sw=el('span','subway-line-swatch');sw.style.background=color(i);sw.setAttribute('aria-hidden','true');button.append(sw,document.createTextNode(entry.profile.name));button.addEventListener('click',()=>{focusRoute=focusRoute===entry.profile.id?null:entry.profile.id;render();});legend.append(button);
-        const note=el('section','subway-route-card');note.style.setProperty('--route-color',color(i));note.append(el('h3','',entry.profile.name),el('p','subway-cadence',entry.route.cadence));
-        const order=el('p','subway-itinerary',entry.route.stops.map(id=>stations.find(s=>s.id===id).label.join(' ')).join(' → '));order.setAttribute('aria-label','Interpretive itinerary: '+order.textContent);note.append(order,el('p','',entry.route.note));note.append(evidenceLinks(entry.profile,entry.route.ids));routeNotes.append(note);
-      });draw();showStation();
+    function showDetails(){
+      inspector.replaceChildren();const e=entries.find(e=>e.profile.id===selected);
+      if(!e){
+        const intro=el('div','metro-overview');intro.append(el('span','metro-kicker',activeStop?'STATION INSPECTOR':'START EXPLORING'),el('h3','',activeStop?stops[activeStop].label:'Same station. Different standards.'),el('p','',activeStop?'Choose an engineer below to see the evidence behind this activity.':'Try Dave Farley → Peter Steinberger to compare checks before and after implementation. Then select Hamel Husain to see why AI-product evaluation takes a different branch.'));
+        inspector.append(intro);return;
+      }
+      inspector.style.setProperty('--route',e.family.color);
+      const head=el('div','metro-profile-heading');const title=el('div');title.append(el('p','metro-kicker',e.family.name),el('h3','',e.profile.name),el('p','metro-cadence',e.route.cadence));const reset=el('button','metro-reset','Show all lines ↗');reset.type='button';reset.addEventListener('click',()=>{selected='';activeStop=null;lens='all';render();});head.append(title,reset);inspector.append(head);
+      const cols=el('div','metro-detail-grid');const approach=el('div');approach.append(el('h4','','The route'),el('p','',e.route.note));const routeLine=el('div','metro-itinerary');itinerary(e).forEach((id,i)=>{if(i)routeLine.append(el('span','metro-arrow','→'));const b=el('button','',stops[id].label);b.type='button';b.setAttribute('aria-pressed',String(activeStop===id));b.addEventListener('click',()=>{activeStop=id;render();});routeLine.append(b);});approach.append(routeLine);
+      const evidence=el('div');const st=activeStop&&stops[activeStop];const d=dimension(e.profile,st?st.dim:'D04');evidence.append(el('h4','',st?st.label:'What counts as verification?'));if(st&&!itinerary(e).includes(activeStop))evidence.append(el('p','visual-note','This stop is not established in this route sketch. The broader profile evidence follows.'));if(d){evidence.append(el('p','',d.position));const more=el('details');more.append(el('summary','','Evidence & qualifications'),el('p','',d.qualification||e.route.note),evidenceLinks(e.profile,[d.id]));evidence.append(more);}
+      const tools=el('div');tools.append(el('h4','','Tools & project context'),el('p','',e.profile.tools||'Complete tooling is not established.'),el('p','visual-note',e.profile.focusNote||e.profile.summary));tools.append(link('Read the engineer profile ↗',profileUrl(e.profile)));const td=dimension(e.profile,'D09');if(td?.source)tools.append(link('Tooling source ↗',td.source));cols.append(approach,evidence,tools);inspector.append(cols);
     }
-    new ResizeObserver(draw).observe(chart);render();
+    function render(){select.value=selected;familyButtons.forEach(([b,id])=>b.setAttribute('aria-pressed',String(lens===id&&!selected)));nameButtons.forEach(([b,id])=>b.setAttribute('aria-pressed',String(selected===id)));draw();showDetails();}
+    render();
   };
 })();
