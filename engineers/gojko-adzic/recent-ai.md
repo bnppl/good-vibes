@@ -21,7 +21,7 @@ Publication window: **1 October 2025–26 October 2026**. Publication, practice 
 
 ## A pinned lights-on software factory
 
-The cache records an October 2026 revision of the public lights-on factory: declared-file work, structured progress, worker checks, integrated gates and command regulation. September conference slides supply the supervision argument. The repository is an inspectable artifact; no factory run or benchmark was reproduced.
+The cache records an October 2026 revision of the public lights-on factory: declared-file work, structured progress, explicitly test-first workers, integrated gates and command regulation. September conference slides supply the supervision argument. The repository is an inspectable artifact; no factory run or benchmark was reproduced.
 
 [S04](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/WORKFLOW.md) · [S05](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/ORCHESTRATOR.md) · [S06](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/REGULATOR.md)
 
@@ -42,6 +42,9 @@ The optional reward exercise in the earlier research/workflow remains our propos
 | [S07](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/LINTER-HOOK.md) | 2026-10-22 | Published artifact | Pinned repository revision; not an executed run |
 | [S09](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/GETTING-STARTED.md) | 2026-10-22 | Published artifact | Pinned repository revision; not an executed run |
 | [S03](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/README.md) | 2026-10-22 | Published artifact | Pinned repository revision; not an executed run |
+
+| [S15](sources.md#s15) | 2026-10-22 | Published worker instruction | Failing-test-first prescribed; not an executed run |
+| [S16](sources.md#s16) | 2026-10-22 | Published planning instruction | Same-step tests and source, test first |
 
 ## Comparison claims
 
@@ -91,15 +94,15 @@ Demonstrated means an inspected published artifact, not an executed session. The
 
 ### C04 · Testing and verification
 
-**Demonstrated · Published artifact.** The inspected factory artifact assigns worker-local checks, merged-work gates, and a final attempt to refute completion claims.
+**Demonstrated · Published artifact.** The published worker instructions explicitly require a failing test before implementation. Local verification, merged-work gates and a final refutation check add further layers.
 
 Source format: Repository artifact.
 
 Published: **2026-10-22**. Practice: Pinned repository revision; not an executed run. Checked: 2026-10-26.
 
-Inspected artifact; test strength and real behaviour still need independent evaluation in the target system.
+Inspected instructions, not observed execution. Test-writing order is explicit, but actual red-phase execution and agent adherence were not verified. The worker also directs running local verification once when work is done.
 
-[Primary source](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/ORCHESTRATOR.md) · [Source register](sources.md#s05)
+[Primary source](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/workspace/.claude/agents/workflow-worker.md) · [Source register](sources.md#s05)
 
 <a id="c05"></a>
 

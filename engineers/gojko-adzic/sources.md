@@ -198,3 +198,39 @@ The profile's [C01–C12 entries](index.md#comparison-evidence) link to detailed
 ## Comparability audit
 
 26 October 2026: cache-only review clarified material dates, personal versus joint or published-artifact evidence, and compact comparison wording. Claim IDs, slide IDs, source verification dates and unknowns were preserved. No fresh source research or runtime tool execution was performed.
+
+<a id="s15"></a>
+
+## S15 · Factory worker agent instructions
+
+- **Author/source:** Public factory repository and maintainers; no exclusive authorship inferred.
+- **Publication:** Pinned revision dated 2026-10-22; inspected 2026-10-26.
+- **URL:** [Factory worker agent instructions](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/workspace/.claude/agents/workflow-worker.md).
+- **Inspected scope:** Complete pinned instruction file.
+- **Cached finding:** Explicitly directs the coding agent to write the failing test before the implementation that makes it pass. Local verification is restricted to its own files and run once when work is done.
+- **Supports:** C03, C04.
+- **Limits:** Instruction artifact, not observed execution or mechanical proof of test-first adherence. A complete private Votito setup is not established.
+
+<a id="s16"></a>
+
+## S16 · Factory planning command
+
+- **Author/source:** Public factory repository and maintainers; no exclusive authorship inferred.
+- **Publication:** Pinned revision dated 2026-10-22; inspected 2026-10-26.
+- **URL:** [Factory planning command](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/workspace/.claude/commands/plan-execution.md).
+- **Inspected scope:** Complete pinned instruction file.
+- **Cached finding:** Requires a test file in the same step as its source and explicitly requires the failing test first; steps feed worker prompts.
+- **Supports:** C03, C04.
+- **Limits:** Instruction artifact, not observed execution or mechanical proof of test-first adherence. A complete private Votito setup is not established.
+
+<a id="s17"></a>
+
+## S17 · Factory project contribution rules
+
+- **Author/source:** Public factory repository and maintainers; no exclusive authorship inferred.
+- **Publication:** Pinned revision dated 2026-10-22; inspected 2026-10-26.
+- **URL:** [Factory project contribution rules](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/workspace/CONTRIBUTING.md).
+- **Inspected scope:** Complete pinned instruction file.
+- **Cached finding:** Project rules explicitly require writing a failing test before the code that makes it pass; CLAUDE.md includes this file.
+- **Supports:** C03, C04.
+- **Limits:** Instruction artifact, not observed execution or mechanical proof of test-first adherence. A complete private Votito setup is not established.

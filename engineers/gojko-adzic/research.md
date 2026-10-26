@@ -46,6 +46,10 @@ The later sample workflow turns a proposed change into impact analysis and a hum
 
 ### Testing and verification
 
+**Demonstrated instruction artifact.** The pinned factory worker definition explicitly instructs agents to write a failing test before the implementation that makes it pass. The planning command places test and source in the same step and repeats the failing-test-first rule; the project contribution rules repeat it too. This is direct evidence about the agentic workflow, independent of earlier Specification by Example writing. [S15](sources.md#s15), [S16](sources.md#s16), [S17](sources.md#s17)
+
+The worker also says to run its verification once when work is done. The inspected instructions therefore establish test-writing order, but do not demonstrate an observed failing run before code, mechanical enforcement of that order, or agent compliance. Local test-first work and later integration gates are separate layers.
+
 **Demonstrated artifact.** The orchestrator documentation separates a worker's local evidence from merged-tree gates and a later attempt to refute step claims. Fast gates support progression; the final gate should cover the wider result. These are published responsibilities, not proof that all tests or all implementations are strong. [S05](sources.md#s05)
 
 Earlier writing also distinguishes key BDD examples from other valuable testing activities. The 2020 Given-When-Then article discusses keeping additional exploration and regression data manageable instead of confusing all tests with the same documentation purpose. [S12](sources.md#s12)
@@ -123,4 +127,4 @@ The repository includes a context-specific reported token saving; the talk also 
 
 ## Sources and research gaps
 
-The [fourteen source records](sources.md) retain inspected scope, findings, dates and limits. The [author catalogue](sources.md#s14) establishes book identity without pretending to have accessed paid bodies. Full private configurations, independent security assurance and controlled comparative effectiveness remain unestablished.
+The [seventeen source records](sources.md) retain inspected scope, findings, dates and limits. The [author catalogue](sources.md#s14) establishes book identity without pretending to have accessed paid bodies. Full private configurations, independent security assurance and controlled comparative effectiveness remain unestablished.

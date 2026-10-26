@@ -74,19 +74,19 @@ dimensions:
   source_format: Repository artifact
 - id: D04
   title: Testing and verification
-  position: The inspected factory artifact assigns worker-local checks, merged-work gates, and a final attempt to
-    refute completion claims.
+  position: The published factory agent instructions require a failing test before implementation, followed by worker-local
+    verification, merged-work gates and a final refutation check.
   evidence: Demonstrated
   claim: C04
   detail: recent-ai.md#c04
-  source: https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/ORCHESTRATOR.md
+  source: https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/workspace/.claude/agents/workflow-worker.md
   checked: '2026-10-26'
-  qualification: Inspected artifact; test strength and real behaviour still need independent evaluation in the target
-    system.
+  qualification: Inspected instructions, not observed execution. Writing a failing test first is explicit; actual red-phase
+    execution and adherence were not verified. Later gates do not imply tests-after development.
   evidence_kind: Published artifact
   published: '2026-10-22'
   practice_date: Pinned repository revision; not an executed run
-  source_id: S05
+  source_id: S15
   ai_specific: true
   source_format: Repository artifact
 - id: D05
@@ -283,15 +283,15 @@ Demonstrated means an inspected published artifact, not an executed session. The
 
 ### C04 · D04 · Testing and verification
 
-**Demonstrated · Published artifact.** The inspected factory artifact assigns worker-local checks, merged-work gates, and a final attempt to refute completion claims.
+**Demonstrated · Published artifact.** The published factory agent instructions require a failing test before implementation, followed by worker-local verification, merged-work gates and a final refutation check.
 
 Source format: Repository artifact.
 
 Published: **2026-10-22**. Practice: Pinned repository revision; not an executed run.
 
-Inspected artifact; test strength and real behaviour still need independent evaluation in the target system.
+Inspected instructions, not observed execution. Writing a failing test first is explicit; actual red-phase execution and adherence were not verified. Later gates do not imply tests-after development.
 
-[Recent evidence](recent-ai.md#c04) · [Primary source](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/ORCHESTRATOR.md)
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/workspace/.claude/agents/workflow-worker.md)
 
 <a id="c05"></a>
 
