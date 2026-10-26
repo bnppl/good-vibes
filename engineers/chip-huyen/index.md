@@ -17,145 +17,221 @@ last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Build the product. Evaluate the whole system.
-summary: A product and systems view of engineering applications around models, with explicit failure analysis and
-  operational tradeoffs. Public guidance is distinct from her private development setup.
+summary: Earlier AI-system expertise remains background. No eligible recent personal-use account was established
+  in the reviewed material.
 strengths:
 - Product-level evaluation
 - Failure analysis
 - Production-system tradeoffs
-tools_summary: Public model/platform examples and a dated JAX/DistilBERT experiment; no complete current coding-agent
-  stack is established.
+tools_summary: No eligible recent first-person tooling account established in this cache; earlier JAX/DistilBERT
+  examples remain background.
 slides_url: /engineers/chip-huyen/learn/
 dimensions:
 - id: D01
   title: Goal and bottleneck
-  position: Prioritise product usefulness over model capability.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C01
-  detail: research.md#approach-in-brief
-  source: https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html
+  detail: recent-ai.md#c01
+  source: ''
   checked: '2026-10-26'
-  qualification: January 2025 product advice, not a measured universal bottleneck or a personal coding-agent workflow.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D02
   title: Requirements and specification
-  position: Establish user need before choosing generative AI.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C02
-  detail: research.md#requirements-and-scope
-  source: https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html
+  detail: recent-ai.md#c02
+  source: ''
   checked: '2026-10-26'
-  qualification: January 2025 product discovery guidance; the deterministic reward requirements in our exercise are supplied
-    independently.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D03
   title: Increment and planning
-  position: Her July 2024 platform design adds components only as needed.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C03
-  detail: research.md#increment-and-planning
-  source: https://huyenchip.com/2024/07/25/genai-platform.html
+  detail: recent-ai.md#c03
+  source: ''
   checked: '2026-10-26'
-  qualification: An illustrative AI-platform architecture, not a compulsory component order or an observed coding
-    increment cadence.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D04
   title: Testing and verification
-  position: Validate AI-product judgments using human assessment.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C04
-  detail: research.md#testing-and-verification
-  source: https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html
+  detail: recent-ai.md#c04
+  source: ''
   checked: '2026-10-26'
-  qualification: January 2025 AI-application evaluation; no complete personal TDD cadence or coding-agent acceptance-test policy
-    is established.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D05
   title: Design and refactoring
-  position: Her April 2023 production account separates composable tasks and tracks prompt changes.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C05
-  detail: research.md#design-and-refactoring
-  source: https://huyenchip.com/2023/04/11/llm-engineering.html
+  detail: recent-ai.md#c05
+  source: ''
   checked: '2026-10-26'
-  qualification: Historical AI-application engineering guidance; not a current refactoring-tool or code-review policy.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D06
   title: Human understanding and review
-  position: Retain human review of application outputs and automated evaluators.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C06
-  detail: research.md#human-understanding-and-review
-  source: https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html
+  detail: recent-ai.md#c06
+  source: ''
   checked: '2026-10-26'
-  qualification: January 2025 product-quality assessment, not evidence that she manually reads every line generated by a coding
-    agent.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D07
   title: Agent autonomy and coordination
-  position: Her January 2025 agent framework connects environment, tools, planning and failure evaluation.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C07
-  detail: research.md#agent-autonomy-and-coordination
-  source: https://huyenchip.com/2025/01/07/agents.html
+  detail: recent-ai.md#c07
+  source: ''
   checked: '2026-10-26'
-  qualification: An explicitly evolving conceptual AI-agent framework; her private coding-agent orchestration setup
-    is not established.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D08
   title: Context and durable state
-  position: Context construction supplies external information to the AI application.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C08
-  detail: research.md#context-and-durable-state
-  source: https://huyenchip.com/2024/07/25/genai-platform.html
+  detail: recent-ai.md#c08
+  source: ''
   checked: '2026-10-26'
-  qualification: July 2024 AI-product retrieval/context design, not a documented personal coding-session memory or handoff
-    system.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D09
   title: Tooling and environment
-  position: Her February 2024 preference experiment reports JAX and DistilBERT use.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C09
-  detail: research.md#tools-and-setup
-  source: https://huyenchip.com/2024/02/28/predictive-human-preference.html
+  detail: recent-ai.md#c09
+  source: ''
   checked: '2026-10-26'
-  qualification: Dated experimental tooling, not a complete present stack or a recommendation to install those tools
-    for every application.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D10
   title: Integration and release
-  position: Her 2022 ML guidance includes monitored updates and staged production evaluation.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C10
-  detail: research.md#integration-and-release
-  source: https://huyenchip.com/2022/01/02/real-time-machine-learning-challenges-and-solutions.html
+  detail: recent-ai.md#c10
+  source: ''
   checked: '2026-10-26'
-  qualification: Model/prediction-service lifecycle guidance, not her current personal Git, CI, deployment or rollback
-    configuration.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D11
   title: Boundaries and safeguards
-  position: Write-capable AI tools require explicit risk and security consideration.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C11
-  detail: research.md#boundaries-and-safeguards
-  source: https://huyenchip.com/2025/01/07/agents.html
+  detail: recent-ai.md#c11
+  source: ''
   checked: '2026-10-26'
-  qualification: January 2025 AI-product guidance; no complete deployed permission policy or personal coding sandbox
-    is established.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D12
   title: Evaluation and tradeoffs
-  position: Measure quality alongside inference cost, latency and evaluation validity.
-  evidence: Inferred
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C12
-  detail: research.md#evaluation-and-tradeoffs
-  source: https://huyenchip.com/2024/02/28/predictive-human-preference.html
+  detail: recent-ai.md#c12
+  source: ''
   checked: '2026-10-26'
-  qualification: Our synthesis of the dated sampling, preference and production sources; no controlled cross-engineer
-    superiority or current model ranking follows.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 ---
 
 # Chip Huyen
 
-[Open the slideshow]({{ '/engineers/chip-huyen/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/chip-huyen/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
-## Research cache
+## Research map
 
-[Detailed research](research.md) · [Common reward walkthrough](workflow.md) · [Source findings](sources.md) · [Slide notes](slides.md)
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
 
-Research checked and cut off on **26 October 2026**. This profile concerns **building AI systems**, not a verified personal coding-agent workflow. The public archive and dated primary articles support the claims below; no paid book bodies, private sessions, or live installations were inspected. Publication dates remain separate from the research check date.
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
 
@@ -163,119 +239,142 @@ Research checked and cut off on **26 October 2026**. This profile concerns **bui
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** Prioritise product usefulness over model capability.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-January 2025 product advice, not a measured universal bottleneck or a personal coding-agent workflow.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#approach-in-brief) · [Primary source](https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c01)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** Establish user need before choosing generative AI.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-January 2025 product discovery guidance; the deterministic reward requirements in our exercise are supplied independently.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#requirements-and-scope) · [Primary source](https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c02)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** Her July 2024 platform design adds components only as needed.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-An illustrative AI-platform architecture, not a compulsory component order or an observed coding increment cadence.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#increment-and-planning) · [Primary source](https://huyenchip.com/2024/07/25/genai-platform.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c03)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** Validate AI-product judgments using human assessment.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-January 2025 AI-application evaluation; no complete personal TDD cadence or coding-agent acceptance-test policy is established.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#testing-and-verification) · [Primary source](https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c04)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Stated.** Her April 2023 production account separates composable tasks and tracks prompt changes.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Historical AI-application engineering guidance; not a current refactoring-tool or code-review policy.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#design-and-refactoring) · [Primary source](https://huyenchip.com/2023/04/11/llm-engineering.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c05)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** Retain human review of application outputs and automated evaluators.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-January 2025 product-quality assessment, not evidence that she manually reads every line generated by a coding agent.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#human-understanding-and-review) · [Primary source](https://huyenchip.com/2025/01/16/ai-engineering-pitfalls.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c06)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** Her January 2025 agent framework connects environment, tools, planning and failure evaluation.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-An explicitly evolving conceptual AI-agent framework; her private coding-agent orchestration setup is not established.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#agent-autonomy-and-coordination) · [Primary source](https://huyenchip.com/2025/01/07/agents.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c07)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** Context construction supplies external information to the AI application.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-July 2024 AI-product retrieval/context design, not a documented personal coding-session memory or handoff system.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#context-and-durable-state) · [Primary source](https://huyenchip.com/2024/07/25/genai-platform.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c08)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** Her February 2024 preference experiment reports JAX and DistilBERT use.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Dated experimental tooling, not a complete present stack or a recommendation to install those tools for every application.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#tools-and-setup) · [Primary source](https://huyenchip.com/2024/02/28/predictive-human-preference.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c09)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** Her 2022 ML guidance includes monitored updates and staged production evaluation.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Model/prediction-service lifecycle guidance, not her current personal Git, CI, deployment or rollback configuration.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#integration-and-release) · [Primary source](https://huyenchip.com/2022/01/02/real-time-machine-learning-challenges-and-solutions.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c10)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Stated.** Write-capable AI tools require explicit risk and security consideration.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-January 2025 AI-product guidance; no complete deployed permission policy or personal coding sandbox is established.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#boundaries-and-safeguards) · [Primary source](https://huyenchip.com/2025/01/07/agents.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c11)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Inferred.** Measure quality alongside inference cost, latency and evaluation validity.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Our synthesis of the dated sampling, preference and production sources; no controlled cross-engineer superiority or current model ranking follows.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#evaluation-and-tradeoffs) · [Primary source](https://huyenchip.com/2024/02/28/predictive-human-preference.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
 
+[Recent evidence](recent-ai.md#c12)

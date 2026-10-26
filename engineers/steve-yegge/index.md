@@ -15,8 +15,7 @@ last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Track the work. Govern the fleet. Measure the outcome.
-summary: An evolving exploration of high delegation, structured work and agent orchestration. Personal experiments
-  and predictions retain their dates and limits.
+summary: Wyvern with a bespoke Wheelhouse harness. Personal trials, recommendations and unknowns are dated separately.
 strengths:
 - Durable work graphs
 - Agent orchestration
@@ -31,256 +30,375 @@ dimensions:
     and downstream capacity to Yegge.
   evidence: Stated
   claim: C01
-  detail: research.md#approach-in-brief
+  detail: recent-ai.md#c01
   source: https://re-cinq.com/podcast/steve-yegge-software-factory
   checked: '2026-10-26'
   qualification: Primary episode-page editorial account, not a complete independently checked transcript or controlled
     effectiveness result.
+  evidence_kind: Interview summary
+  published: '2026-09-20'
+  practice_date: Publisher summary, not independently checked full transcript
+  source_id: S08
+  ai_specific: true
+  source_format: Episode editorial summary
 - id: D02
   title: Requirements and specification
   position: His August 2026 Wheelhouse account describes conversations and designs becoming structured work records.
   evidence: Stated
   claim: C02
-  detail: research.md#techniques-and-principles
+  detail: recent-ai.md#c02
   source: https://yegge.ai/essays/the-shape-of-things-to-come/
   checked: '2026-10-26'
   qualification: August personal account; no mandatory executable-spec-only rule established.
+  evidence_kind: Personal use
+  published: 2026-08
+  practice_date: Wyvern/Wheelhouse account; includes predictions
+  source_id: S07
+  ai_specific: true
+  source_format: Authored article
 - id: D03
   title: Increment and planning
   position: His January 2026 retrospective describes task decomposition and observation-led experiments with agent-friendly
     tool interfaces.
   evidence: Stated
   claim: C03
-  detail: research.md#tools-can-fail-to-converge
+  detail: recent-ai.md#c03
   source: https://steve-yegge.medium.com/the-future-of-coding-agents-e9451a84207c
   checked: '2026-10-26'
   qualification: January retrospective, not a fixed current task size or planning horizon.
+  evidence_kind: Personal use
+  published: 2026-01
+  practice_date: Retrospective; exact publication day not established
+  source_id: S03
+  ai_specific: true
+  source_format: Authored article
 - id: D04
   title: Testing and verification
   position: His December 2025 guidance advocates recurring AI inspection and tests; a universal test-first cadence
     is not established.
   evidence: Stated
   claim: C04
-  detail: research.md#code-health-competes-with-feature-throughput
+  detail: recent-ai.md#c04
   source: https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9
   checked: '2026-10-26'
   qualification: December guidance; regenerated tests require independent contract review in our adaptation.
+  evidence_kind: Recommendation
+  published: '2025-12-07'
+  practice_date: Dated advice; not a universal workflow
+  source_id: S01
+  ai_specific: true
+  source_format: Authored article
 - id: D05
   title: Design and refactoring
   position: His December 2025 code-health advice accepts replacing generated code and tests; behavioural equivalence
     still needs evidence.
   evidence: Stated
   claim: C05
-  detail: research.md#code-health-competes-with-feature-throughput
+  detail: recent-ai.md#c05
   source: https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9
   checked: '2026-10-26'
   qualification: Historical personal advice; not proof that replacement preserves behaviour or fits every legacy
     system.
+  evidence_kind: Recommendation
+  published: '2025-12-07'
+  practice_date: Dated advice; not a universal workflow
+  source_id: S01
+  ai_specific: true
+  source_format: Authored article
 - id: D06
   title: Human understanding and review
   position: His August 2026 account predicts less human diff review in future but explicitly retains it in the short
     term.
   evidence: Stated
   claim: C06
-  detail: research.md#preserve-the-chronology
+  detail: recent-ai.md#c06
   source: https://yegge.ai/essays/the-shape-of-things-to-come/
   checked: '2026-10-26'
   qualification: Prediction and time-bound advice; not a present universal ban on human review.
+  evidence_kind: Personal use
+  published: 2026-08
+  practice_date: Wyvern/Wheelhouse account; includes predictions
+  source_id: S07
+  ai_specific: true
+  source_format: Authored article
 - id: D07
   title: Agent autonomy and coordination
   position: January 2026 introduces Gas Town fleet orchestration; his August 2026 personal account describes private,
     bespoke Wheelhouse.
   evidence: Stated
   claim: C07
-  detail: research.md#preserve-the-chronology
+  detail: recent-ai.md#c07
   source: https://yegge.ai/essays/the-shape-of-things-to-come/
   checked: '2026-10-26'
   qualification: January Gas Town launch must not be presented as his complete October setup.
+  evidence_kind: Personal use
+  published: 2026-08
+  practice_date: Wyvern/Wheelhouse account; includes predictions
+  source_id: S07
+  ai_specific: true
+  source_format: Authored article
 - id: D08
   title: Context and durable state
-  position: The Beads README inspected in October 2026 describes dependency-aware work and durable project facts;
-    this is public tool documentation.
+  position: His August 2026 Wheelhouse account describes turning discussions and designs into structured work records.
   evidence: Stated
   claim: C08
-  detail: research.md#work-needs-durable-structure
-  source: https://github.com/gastownhall/beads
+  detail: recent-ai.md#c08
+  source: https://yegge.ai/essays/the-shape-of-things-to-come/
   checked: '2026-10-26'
-  qualification: Current project documentation, not independently executed or proof of every private setting.
+  qualification: Private harness self-report; not an independently executed memory system.
+  evidence_kind: Personal use
+  published: 2026-08
+  practice_date: Wyvern/Wheelhouse account; includes predictions
+  source_id: S07
+  ai_specific: true
+  source_format: Authored article
 - id: D09
   title: Tooling and environment
   position: His April 2026 Gas City endorsement credits Knutsen and Sells; the later private Wheelhouse account
     is a separate tool history.
   evidence: Stated
   claim: C09
-  detail: research.md#preserve-the-chronology
+  detail: recent-ai.md#c09
   source: https://yegge.ai/essays/welcome-to-gas-city/
   checked: '2026-10-26'
   qualification: April endorsement credits Knutsen and Sells; later private practice is separately dated.
+  evidence_kind: Recommendation
+  published: '2026-04-24'
+  practice_date: Endorsement; distinguish from later personal use
+  source_id: S06
+  ai_specific: true
+  source_format: Authored article
 - id: D10
   title: Integration and release
-  position: The public Gas Town README inspected in October 2026 describes a merge queue and verification gates,
-    not his complete private release policy.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C10
-  detail: research.md#a-feature-from-idea-to-release
-  source: https://github.com/gastownhall/gastown
+  detail: recent-ai.md#c10
+  source: ''
   checked: '2026-10-26'
-  qualification: Does not establish the full current private release policy.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D11
   title: Boundaries and safeguards
   position: The September 2026 episode-page summary reports mechanical constraints and bounded adoption; complete
     private access controls are not established.
   evidence: Stated
   claim: C11
-  detail: research.md#failure-modes-and-limits
+  detail: recent-ai.md#c11
   source: https://re-cinq.com/podcast/steve-yegge-software-factory
   checked: '2026-10-26'
   qualification: Editorial account of the interview, not a complete independently checked transcript or an audit
     of current permissions.
+  evidence_kind: Interview summary
+  published: '2026-09-20'
+  practice_date: Publisher summary, not independently checked full transcript
+  source_id: S08
+  ai_specific: true
+  source_format: Episode editorial summary
 - id: D12
   title: Evaluation and tradeoffs
   position: The September 2026 episode-page account emphasises outcomes, quality debt and downstream capacity rather
     than activity counts.
   evidence: Stated
   claim: C12
-  detail: research.md#failure-modes-and-limits
+  detail: recent-ai.md#c12
   source: https://re-cinq.com/podcast/steve-yegge-software-factory
   checked: '2026-10-26'
   qualification: Editorial interview summary and anecdotes, not a controlled comparison. The useful evaluation focus
     is not a demonstrated universal productivity advantage.
+  evidence_kind: Interview summary
+  published: '2026-09-20'
+  practice_date: Publisher summary, not independently checked full transcript
+  source_id: S08
+  ai_specific: true
+  source_format: Episode editorial summary
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 practice_focus: coding-workflows
 ---
 
 # Steve Yegge
 
-[Open the slideshow]({{ '/engineers/steve-yegge/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/steve-yegge/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
 ## Research map
 
-[Detailed research](research.md) · [Common reward workflow and lab](workflow.md) · [Tool inventory](tools.md) · [Source findings](sources.md) · [Slide notes](slides.md)
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
 
-Research checked and cut off on **26 October 2026**. Documentary research only: no installed tool trial, private harness source, paid chapter, or comparative benchmark.
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
-
-The frontmatter feeds the same D01–D12 cards as other profiles. Stable entries below point to the original cached evidence; they do not create numerical scores.
 
 <a id="c01"></a>
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** The September 2026 interview-page summary attributes an emphasis on useful outcomes, human attention and downstream capacity to Yegge.
+**Stated · Interview summary.** The September 2026 interview-page summary attributes an emphasis on useful outcomes, human attention and downstream capacity to Yegge.
+
+Source format: Episode editorial summary.
+
+Published: **2026-09-20**. Practice: Publisher summary, not independently checked full transcript.
 
 Primary episode-page editorial account, not a complete independently checked transcript or controlled effectiveness result.
 
-[Cached detail](research.md#approach-in-brief) · [Primary source](https://re-cinq.com/podcast/steve-yegge-software-factory)
+[Recent evidence](recent-ai.md#c01) · [Primary source](https://re-cinq.com/podcast/steve-yegge-software-factory)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** His August 2026 Wheelhouse account describes conversations and designs becoming structured work records.
+**Stated · Personal use.** His August 2026 Wheelhouse account describes conversations and designs becoming structured work records.
+
+Source format: Authored article.
+
+Published: **2026-08**. Practice: Wyvern/Wheelhouse account; includes predictions.
 
 August personal account; no mandatory executable-spec-only rule established.
 
-[Cached detail](research.md#techniques-and-principles) · [Primary source](https://yegge.ai/essays/the-shape-of-things-to-come/)
+[Recent evidence](recent-ai.md#c02) · [Primary source](https://yegge.ai/essays/the-shape-of-things-to-come/)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** His January 2026 retrospective describes task decomposition and observation-led experiments with agent-friendly tool interfaces.
+**Stated · Personal use.** His January 2026 retrospective describes task decomposition and observation-led experiments with agent-friendly tool interfaces.
+
+Source format: Authored article.
+
+Published: **2026-01**. Practice: Retrospective; exact publication day not established.
 
 January retrospective, not a fixed current task size or planning horizon.
 
-[Cached detail](research.md#tools-can-fail-to-converge) · [Primary source](https://steve-yegge.medium.com/the-future-of-coding-agents-e9451a84207c)
+[Recent evidence](recent-ai.md#c03) · [Primary source](https://steve-yegge.medium.com/the-future-of-coding-agents-e9451a84207c)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** His December 2025 guidance advocates recurring AI inspection and tests; a universal test-first cadence is not established.
+**Stated · Recommendation.** His December 2025 guidance advocates recurring AI inspection and tests; a universal test-first cadence is not established.
+
+Source format: Authored article.
+
+Published: **2025-12-07**. Practice: Dated advice; not a universal workflow.
 
 December guidance; regenerated tests require independent contract review in our adaptation.
 
-[Cached detail](research.md#code-health-competes-with-feature-throughput) · [Primary source](https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9)
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Stated.** His December 2025 code-health advice accepts replacing generated code and tests; behavioural equivalence still needs evidence.
+**Stated · Recommendation.** His December 2025 code-health advice accepts replacing generated code and tests; behavioural equivalence still needs evidence.
+
+Source format: Authored article.
+
+Published: **2025-12-07**. Practice: Dated advice; not a universal workflow.
 
 Historical personal advice; not proof that replacement preserves behaviour or fits every legacy system.
 
-[Cached detail](research.md#code-health-competes-with-feature-throughput) · [Primary source](https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9)
+[Recent evidence](recent-ai.md#c05) · [Primary source](https://steve-yegge.medium.com/six-new-tips-for-better-coding-with-agents-d4e9c86e42a9)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** His August 2026 account predicts less human diff review in future but explicitly retains it in the short term.
+**Stated · Personal use.** His August 2026 account predicts less human diff review in future but explicitly retains it in the short term.
+
+Source format: Authored article.
+
+Published: **2026-08**. Practice: Wyvern/Wheelhouse account; includes predictions.
 
 Prediction and time-bound advice; not a present universal ban on human review.
 
-[Cached detail](research.md#preserve-the-chronology) · [Primary source](https://yegge.ai/essays/the-shape-of-things-to-come/)
+[Recent evidence](recent-ai.md#c06) · [Primary source](https://yegge.ai/essays/the-shape-of-things-to-come/)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** January 2026 introduces Gas Town fleet orchestration; his August 2026 personal account describes private, bespoke Wheelhouse.
+**Stated · Personal use.** January 2026 introduces Gas Town fleet orchestration; his August 2026 personal account describes private, bespoke Wheelhouse.
+
+Source format: Authored article.
+
+Published: **2026-08**. Practice: Wyvern/Wheelhouse account; includes predictions.
 
 January Gas Town launch must not be presented as his complete October setup.
 
-[Cached detail](research.md#preserve-the-chronology) · [Primary source](https://yegge.ai/essays/the-shape-of-things-to-come/)
+[Recent evidence](recent-ai.md#c07) · [Primary source](https://yegge.ai/essays/the-shape-of-things-to-come/)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** The Beads README inspected in October 2026 describes dependency-aware work and durable project facts; this is public tool documentation.
+**Stated · Personal use.** His August 2026 Wheelhouse account describes turning discussions and designs into structured work records.
 
-Current project documentation, not independently executed or proof of every private setting.
+Source format: Authored article.
 
-[Cached detail](research.md#work-needs-durable-structure) · [Primary source](https://github.com/gastownhall/beads)
+Published: **2026-08**. Practice: Wyvern/Wheelhouse account; includes predictions.
+
+Private harness self-report; not an independently executed memory system.
+
+[Recent evidence](recent-ai.md#c08) · [Primary source](https://yegge.ai/essays/the-shape-of-things-to-come/)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** His April 2026 Gas City endorsement credits Knutsen and Sells; the later private Wheelhouse account is a separate tool history.
+**Stated · Recommendation.** His April 2026 Gas City endorsement credits Knutsen and Sells; the later private Wheelhouse account is a separate tool history.
+
+Source format: Authored article.
+
+Published: **2026-04-24**. Practice: Endorsement; distinguish from later personal use.
 
 April endorsement credits Knutsen and Sells; later private practice is separately dated.
 
-[Cached detail](research.md#preserve-the-chronology) · [Primary source](https://yegge.ai/essays/welcome-to-gas-city/)
+[Recent evidence](recent-ai.md#c09) · [Primary source](https://yegge.ai/essays/welcome-to-gas-city/)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** The public Gas Town README inspected in October 2026 describes a merge queue and verification gates, not his complete private release policy.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Does not establish the full current private release policy.
+Source format: Not established.
 
-[Cached detail](research.md#a-feature-from-idea-to-release) · [Primary source](https://github.com/gastownhall/gastown)
+Published: **Not established**. Practice: Not established.
+
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c10)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Stated.** The September 2026 episode-page summary reports mechanical constraints and bounded adoption; complete private access controls are not established.
+**Stated · Interview summary.** The September 2026 episode-page summary reports mechanical constraints and bounded adoption; complete private access controls are not established.
+
+Source format: Episode editorial summary.
+
+Published: **2026-09-20**. Practice: Publisher summary, not independently checked full transcript.
 
 Editorial account of the interview, not a complete independently checked transcript or an audit of current permissions.
 
-[Cached detail](research.md#failure-modes-and-limits) · [Primary source](https://re-cinq.com/podcast/steve-yegge-software-factory)
+[Recent evidence](recent-ai.md#c11) · [Primary source](https://re-cinq.com/podcast/steve-yegge-software-factory)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Stated.** The September 2026 episode-page account emphasises outcomes, quality debt and downstream capacity rather than activity counts.
+**Stated · Interview summary.** The September 2026 episode-page account emphasises outcomes, quality debt and downstream capacity rather than activity counts.
+
+Source format: Episode editorial summary.
+
+Published: **2026-09-20**. Practice: Publisher summary, not independently checked full transcript.
 
 Editorial interview summary and anecdotes, not a controlled comparison. The useful evaluation focus is not a demonstrated universal productivity advantage.
 
-[Cached detail](research.md#failure-modes-and-limits) · [Primary source](https://re-cinq.com/podcast/steve-yegge-software-factory)
+[Recent evidence](recent-ai.md#c12) · [Primary source](https://re-cinq.com/podcast/steve-yegge-software-factory)

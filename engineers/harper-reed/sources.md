@@ -10,6 +10,10 @@ research_checked: '2026-10-26'
 cache_schema: 1
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Harper Reed — source findings
 
 All records inspected on **26 October 2026**, with that date as evidence cutoff. These are concise findings and scope notes, not archived copies. The sources are primary authored material or identified public artifacts. No paid/private content was accessed and no source commands or harness were executed.

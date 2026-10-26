@@ -2,13 +2,17 @@
 title: Kent Beck — source findings
 parent: Kent Beck
 nav_order: 3
-last_updated: 2026-10-26
+last_updated: '2026-10-26'
 last_read: null
 status: unread
 research_cutoff: 2026-10-26
 research_checked: 2026-10-26
 cache_schema: 1
 ---
+
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
 
 # Kent Beck — Source Findings and Gaps
 

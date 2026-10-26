@@ -10,6 +10,10 @@ research_checked: '2026-10-26'
 cache_schema: 1
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Hamel Husain — source findings
 
 All records were inspected on **26 October 2026**. Public articles and repository files were used; paid course recordings and private configurations were not accessed. No copied complete article or transcript is archived here. Website pages are living sources; the skill repository is pinned at `80d5f7b0127c7572ed9e9339937adbfd7240ffeb` (24 September 2026). Published skills were inspected as evidence, not executed as instructions.
@@ -58,6 +62,8 @@ All records were inspected on **26 October 2026**. Public articles and repositor
 <a id="s04"></a>
 
 ## S04 · AI Evals: Everything You Need to Know
+
+> **Freshness correction:** The FAQ was indexed as published 28 May 2025, despite the later displayed September 2026 date recorded below. Its original-versus-revision chronology is not established here. It no longer supports any active current-window comparison field. Do not treat the displayed date as proof that every recommendation was written recently.
 
 - **Author/source:** Hamel Husain and Shreya Shankar
 - **Published:** 2026-09-18; modified 2026-09-21
@@ -196,3 +202,13 @@ The October decision-model experiment is useful methodology, not a portable mode
 26 October 2026: initial primary-source research and pinned skill inspection. Derived slides were written from this cache without a second research pass or new verification date.
 
 26 October 2026: cache-only comparison refinement clarified dated compact summaries and slide scope; no new source inspection, execution or research date.
+
+<a id="s14"></a>
+
+## S14 · Why I Stopped Using nbdev
+
+Published: **2026-01-18**. Inspected: **2026-10-26**. Format: authored public article.
+
+[Primary source](https://hamel.dev/blog/posts/ai-stack/index.html)
+
+First-person change of development environment. Names Amp, Cursor and Claude Code; conventional stacks reduce reported assistant friction. Tool choices are dated, not an October installation inventory.

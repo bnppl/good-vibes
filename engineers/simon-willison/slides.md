@@ -5,13 +5,30 @@ nav_order: 1
 nav_exclude: true
 last_updated: 2026-10-26
 cache_schema: 1
-derived_from: engineers/simon-willison/research.md
+derived_from: engineers/simon-willison/recent-ai.md
 research_checked: 2026-10-26
+evidence_since: '2025-10-01'
 ---
 
-# Simon Willison — executable evidence
+# Simon Willison — recent AI use
 
-Eight short ideas derived from cached research checked on 26 October 2026. Worked reward examples are suggested adaptations, not reports of Willison's own implementation.
+Publications since 1 October 2025. Source dates and evidence kinds appear on each card. [Earlier cards and principles](background.md) remain outside this feed.
+
+## Card 09
+
+### A newsletter feature shipped through review
+
+> **Dinner produced a feature; review made it ready to ship.**
+>
+> Personal use · published 2026-10-09. His 9 October 2026 account describes developing a Django newsletter feature with Codex voice interaction and a local preview, then reviewing the PR and correcting an import approach before shipping. It is a maintained-feature account; the separate October game experiment has a different risk context.
+
+**In the wild:** Practice period: Newsletter feature built and shipped 2026-10-09.
+
+**Takeaway:** Distinguish the reported work from a complete daily workflow.
+
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/2026/Oct/9/built-using-my-voice/)
+
+---
 
 ## Card 01
 
@@ -19,13 +36,13 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 
 > **The fastest way into a codebase may be to run its tests.**
 >
-> Willison begins existing-project sessions with the test suite. It shows the agent the harness and gives later changes a baseline.
+> Recommendation · published 2026 (guide began 2026-02-23; chapter date unknown). Willison begins existing-project sessions with the test suite. It shows the agent the harness and gives later changes a baseline.
 
-**In the wild:** Suggested adaptation: record existing reward-test failures before changing replay protection.
+**In the wild:** Published pattern: First Run the Tests describes establishing the project’s execution baseline. It is advice, not a claim about every later project.
 
 **Takeaway:** Execute the baseline before interpreting the diff.
 
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#start-with-an-executable-baseline) · [Source register](sources.md)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/guides/agentic-engineering-patterns/first-run-the-tests/)
 
 ---
 
@@ -35,13 +52,13 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 
 > **A failing test is useful only if it fails for the right reason.**
 >
-> His red/green pattern calls for a failure before implementation. A broken import is not evidence that your replay check detects duplicate awards.
+> Recommendation · published 2026 (guide began 2026-02-23; chapter date unknown). His red/green pattern calls for a failure before implementation. A broken import is not evidence that your replay check detects duplicate awards.
 
-**In the wild:** Suggested adaptation: two deliveries should expose 20 points where the agreed rule requires 10.
+**In the wild:** Published pattern: confirm a meaningful failure before implementation. The guide’s launch post identifies this as one of its first chapters.
 
 **Takeaway:** Inspect the failure, not only the colour.
 
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#red-before-green) · [Source register](sources.md)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/)
 
 ---
 
@@ -51,13 +68,13 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 
 > **A green suite can still miss an obviously broken feature.**
 >
-> Willison complements tests with exploratory execution: try the API, run the code, or exercise a real web UI. Relevant discoveries can become regressions.
+> Recommendation · published 2026 (guide began 2026-02-23; chapter date unknown). Willison complements tests with exploratory execution: try the API, run the code, or exercise a real web UI. Relevant discoveries can become regressions.
 
-**In the wild:** Suggested adaptation: restart the real reward process, read the retained balance, then replay the original ID.
+**In the wild:** Published pattern: exploratory execution complements automated tests; it does not guarantee that every requirement was exercised.
 
 **Takeaway:** Exercise the boundary the requirement depends on.
 
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#tests-plus-exercised-behaviour) · [Source register](sources.md)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/guides/agentic-engineering-patterns/agentic-manual-testing/)
 
 ---
 
@@ -67,13 +84,13 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 
 > **Do not make your reviewer the first person to check your agent’s patch.**
 >
-> He places the initial review with the author, including the generated PR description. Evidence of testing makes the handoff more useful.
+> Personal use · published 2026-10-09. He places the initial review with the author, including the generated PR description. Evidence of testing makes the handoff more useful.
 
-**In the wild:** Suggested adaptation: explain the durable replay rule before requesting review.
+**In the wild:** Reported production feature: he reviewed the newsletter PR and changed the import approach before deploying it.
 
 **Takeaway:** Review the work and its description yourself.
 
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#review-is-the-authors-work) · [Source register](sources.md)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/2026/Oct/9/built-using-my-voice/)
 
 ---
 
@@ -83,13 +100,13 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 
 > **A subagent is useful before it becomes a miniature bureaucracy.**
 >
-> Willison emphasises fresh context for exploration and verbose tasks. Independent work can parallelise; too many roles add coordination overhead.
+> Recommendation · published 2026 (guide began 2026-02-23; chapter date unknown). Willison emphasises fresh context for exploration and verbose tasks. Independent work can parallelise; too many roles add coordination overhead.
 
-**In the wild:** Suggested adaptation: separate read-only exploration of persistence and test setup.
+**In the wild:** Published subagent guidance: independent work can use fresh context; this is separate from the much longer Battle Drones experiment.
 
 **Takeaway:** Delegate a bounded question with a clear output.
 
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#use-subagents-to-manage-context) · [Source register](sources.md)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/guides/agentic-engineering-patterns/subagents/)
 
 ---
 
@@ -99,29 +116,13 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 
 > **An implementation you cannot reason about can slow the next change.**
 >
-> His walkthrough and interactive-explanation patterns address cognitive debt. A source tour explains structure; a visual mechanism can supply missing intuition.
+> Recommendation · published 2026 (guide began 2026-02-23; chapter date unknown). His walkthrough and interactive-explanation patterns address cognitive debt. A source tour explains structure; a visual mechanism can supply missing intuition.
 
-**In the wild:** Suggested adaptation: trace first delivery, replay, restart and a new submission on an event timeline.
+**In the wild:** Published explanation pattern: ask for a source walkthrough to rebuild understanding. A generated explanation still needs checking.
 
 **Takeaway:** Use explanations to build understanding, then check them against the source.
 
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#make-hard-mechanisms-visible) · [Source register](sources.md)
-
----
-
-## Card 07
-
-### Evidence with a memory
-
-> **A useful demo records what ran, not merely what the agent hoped happened.**
->
-> Showboat, built by Willison, combines commentary with executed commands and captured output. Its verifier can re-run code blocks; scope still matters.
-
-**In the wild:** Suggested adaptation: record a local replay-and-restart sequence with synthetic data.
-
-**Takeaway:** Keep a reproducible observation trail.
-
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#tools-and-setup) · [Source register](sources.md)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/guides/agentic-engineering-patterns/linear-walkthroughs/)
 
 ---
 
@@ -131,13 +132,12 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 
 > **The same engineer can use different standards for a toy and a production feature.**
 >
-> His October accounts distinguish a heavily vibe-coded game from a blog feature refined through PR review. Preserve that context when comparing methods.
+> Personal use · published 2026-10-20. His October accounts distinguish a heavily vibe-coded game from a blog feature refined through PR review. Preserve that context when comparing methods.
 
-**In the wild:** A playtested experiment is not evidence of a universal production-review policy.
+**In the wild:** Reported game experiment: Battle Drones was extensively playtested with little code review, unlike the maintained newsletter feature.
 
 **Takeaway:** Compare like tasks and dates before declaring disagreement.
 
-[Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#a-feature-from-idea-to-release) · [Source register](sources.md)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/2026/Oct/20/battledrones/)
 
 ---
-

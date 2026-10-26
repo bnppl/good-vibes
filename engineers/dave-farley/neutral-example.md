@@ -11,6 +11,8 @@ cache_schema: 1
 derived_from: engineers/dave-farley/research.md
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # A common reward example
 
 **Suggested adaptation.** This chapter applies the [cached Farley principles](index.md#comparison-evidence) to the same neutral task used for other engineers. It is original proposed guidance, not a demonstration by Farley, a report of his private process, or a runnable implementation. No additional external research was performed.

@@ -14,145 +14,219 @@ last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Understand the system. Improve the feedback. Keep it changeable.
-summary: A context-sensitive view of agentic engineering that keeps humans responsible for code and its evolution.
-  Historical testing, refactoring and integration principles inform the guide without becoming an invented personal
-  agent workflow.
+summary: A context interview, not an invented coding session. Personal trials, recommendations and unknowns are
+  dated separately.
 strengths:
 - Changeability and cognitive load
 - Workflow-sensitive evaluation
 - Scenario-led understanding
-tools_summary: Public context-interview trial; Pi/gptel interest is not a verified daily stack. Guest tool inventories
-  stay with their authors.
+tools_summary: May 2026 context-interview trial; current coding tools and release setup not established. Pi/gptel
+  mentions are interest only.
 slides_url: /engineers/martin-fowler/learn/
 dimensions:
 - id: D01
   title: Goal and bottleneck
-  position: His August 2025 guidance asks for workflow and model details before accepting broad productivity conclusions.
+  position: Useful answers coexist with confident fabrication in his September 2026 account of interacting with
+    LLMs.
   evidence: Stated
   claim: C01
-  detail: research.md#approach-in-brief
-  source: https://martinfowler.com/articles/202508-ai-thoughts.html
+  detail: recent-ai.md#c01
+  source: https://martinfowler.com/articles/2026-dont-like-llms.html
   checked: '2026-10-26'
-  qualification: Historical 2025 methodological advice, not a measured universal advantage.
+  qualification: Personal reaction; not a measured productivity bottleneck.
+  evidence_kind: Personal use
+  published: '2026-09-17'
+  practice_date: Interactions before publication; exact dates not stated
+  source_id: S11
+  ai_specific: true
+  source_format: Authored article
 - id: D02
   title: Requirements and specification
-  position: Start from concrete scenarios; use an interview to clarify context and assumptions.
+  position: In the January 2026 conversation, he favours concrete scenarios and domain-familiar models.
   evidence: Stated
   claim: C02
-  detail: research.md#start-with-scenarios-and-let-design-teach-you
+  detail: recent-ai.md#c02
   source: https://martinfowler.com/articles/convo-what-how.html
   checked: '2026-10-26'
   qualification: Scenario recommendation and context-interview trial are documented separately; reward prompts are
     our adaptation.
+  evidence_kind: Recommendation
+  published: '2026-01-21'
+  practice_date: Conversation; not a personal build log
+  source_id: S10
+  ai_specific: true
+  source_format: Multi-person conversation
 - id: D03
   title: Increment and planning
-  position: His 2023 TDD explanation selects a next test and preserves refactoring; a current private agent cadence
-    is not established.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C03
-  detail: research.md#test-and-refactor-as-design-work
-  source: https://martinfowler.com/bliki/TestDrivenDevelopment.html
+  detail: recent-ai.md#c03
+  source: ''
   checked: '2026-10-26'
-  qualification: General 2023 TDD explanation must not be treated as a mandatory 2026 internal agent loop.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D04
   title: Testing and verification
-  position: Historical self-testing guidance advocates executable checks; his August 2025 account also warns that
-    agent success claims can disagree with execution.
+  position: His May 2026 description includes human evaluation of test results and other feedback after agent work.
   evidence: Stated
   claim: C04
-  detail: research.md#test-and-refactor-as-design-work
-  source: https://martinfowler.com/bliki/SelfTestingCode.html
+  detail: recent-ai.md#c04
+  source: https://martinfowler.com/bliki/AgenticEngineering.html
   checked: '2026-10-26'
-  qualification: Combines historical self-testing guidance with the reported success-claim problem in S01; exact
-    modern test stack unknown.
+  qualification: Recommendation; no personal test-first cadence or runner established.
+  evidence_kind: Recommendation
+  published: '2026-05-21'
+  practice_date: Not a personal session
+  source_id: S02
+  ai_specific: true
+  source_format: Authored article
 - id: D05
   title: Design and refactoring
-  position: His general refactoring guidance uses small behaviour-preserving transformations to improve understanding
-    and changeability.
+  position: In the January 2026 conversation, his own contributions favour concrete scenarios and domain-familiar
+    abstractions.
   evidence: Stated
   claim: C05
-  detail: research.md#test-and-refactor-as-design-work
-  source: https://refactoring.com/
+  detail: recent-ai.md#c05
+  source: https://martinfowler.com/articles/convo-what-how.html
   checked: '2026-10-26'
-  qualification: General engineering guidance; exact transformations and reward architecture are suggested adaptations.
+  qualification: His turns only; not evidence of his personal automated refactoring procedure.
+  evidence_kind: Recommendation
+  published: '2026-01-21'
+  practice_date: Conversation; not a personal build log
+  source_id: S10
+  ai_specific: true
+  source_format: Multi-person conversation
 - id: D06
   title: Human understanding and review
   position: Humans remain responsible for generated code and review code, tests and other feedback.
   evidence: Stated
   claim: C06
-  detail: research.md#approach-in-brief
+  detail: recent-ai.md#c06
   source: https://martinfowler.com/bliki/AgenticEngineering.html
   checked: '2026-10-26'
   qualification: Conceptual agentic-engineering definition, not an observed complete private session.
+  evidence_kind: Recommendation
+  published: '2026-05-21'
+  practice_date: Not a personal session
+  source_id: S02
+  ai_specific: true
+  source_format: Authored article
 - id: D07
   title: Agent autonomy and coordination
-  position: A current personal multi-agent coordination or autonomy configuration is not established.
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
   evidence: Not established
   claim: C07
-  detail: research.md#sources-and-research-gaps
+  detail: recent-ai.md#c07
   source: ''
   checked: '2026-10-26'
-  qualification: Conceptual descriptions of terminal agents do not establish a personal swarm topology or unattended
-    policy.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D08
   title: Context and durable state
   position: May 2026 context-interview trials and March 2026 decision-record guidance provide ways to preserve understanding.
   evidence: Stated
   claim: C08
-  detail: research.md#use-an-interview-to-build-context
+  detail: recent-ai.md#c08
   source: https://martinfowler.com/bliki/InterrogatoryLLM.html
   checked: '2026-10-26'
   qualification: S03 and S07 are documented techniques; a private automatic memory/handoff configuration is not
     established.
+  evidence_kind: Personal use
+  published: '2026-05-14'
+  practice_date: Trial before publication; exact date not stated
+  source_id: S03
+  ai_specific: true
+  source_format: Authored article
 - id: D09
   title: Tooling and environment
-  position: Pi and gptel were expressed interests in January 2026, not a verified daily agent stack.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C09
-  detail: research.md#tools-and-setup
-  source: https://martinfowler.com/fragments/2026-01-08.html
+  detail: recent-ai.md#c09
+  source: ''
   checked: '2026-10-26'
-  qualification: Do not convert curated guest reports or tool interest into current personal adoption.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D10
   title: Integration and release
-  position: His 2024 CI guidance favours frequent verified mainline integration; release remains a separate decision.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C10
-  detail: research.md#a-feature-from-idea-to-release
-  source: https://martinfowler.com/articles/continuousIntegration.html
+  detail: recent-ai.md#c10
+  source: ''
   checked: '2026-10-26'
-  qualification: General team practice; current private CI provider and agent deployment rights are unknown.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D11
   title: Boundaries and safeguards
-  position: His August 2025 article raises injection concerns while explicitly crediting Willison’s analysis; an
-    implemented personal sandbox is not established.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C11
-  detail: research.md#failure-modes-and-limits
-  source: https://martinfowler.com/articles/202508-ai-thoughts.html
+  detail: recent-ai.md#c11
+  source: ''
   checked: '2026-10-26'
-  qualification: This is a security concern, not proof of an implemented personal sandbox or permission policy.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D12
   title: Evaluation and tradeoffs
-  position: Treat practices as context-sensitive defaults and evaluate evidence at the workflow level.
+  position: His September 2026 reflection describes useful results alongside distrust of confident fabrication.
   evidence: Stated
   claim: C12
-  detail: research.md#treat-conventions-as-defaults-with-reasons
-  source: https://martinfowler.com/bliki/SensibleDefault.html
+  detail: recent-ai.md#c12
+  source: https://martinfowler.com/articles/2026-dont-like-llms.html
   checked: '2026-10-26'
-  qualification: General sensible-default framing; a universal comparative productivity result is not established.
+  qualification: Personal interactions, not a general verdict against AI use or a comparative benchmark.
+  evidence_kind: Personal use
+  published: '2026-09-17'
+  practice_date: Interactions before publication; exact dates not stated
+  source_id: S11
+  ai_specific: true
+  source_format: Authored article
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 practice_focus: coding-workflows
 ---
 
 # Martin Fowler
 
-[Open the slideshow]({{ '/engineers/martin-fowler/learn/' | relative_url }}) · [Compare cached profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/martin-fowler/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
 ## Research map
 
-[Detailed guide](research.md) · [Common reward workflow](workflow.md) · [Source findings](sources.md) · [Slide notes](slides.md)
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
 
-Research checked and cut off on **26 October 2026**. Historical principles, current recommendations, self-reported trials and our proposed reward implementation are distinct. A complete private tool, orchestration, or permission setup is not established.
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
 
@@ -160,118 +234,166 @@ Research checked and cut off on **26 October 2026**. Historical principles, curr
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** His August 2025 guidance asks for workflow and model details before accepting broad productivity conclusions.
+**Stated · Personal use.** Useful answers coexist with confident fabrication in his September 2026 account of interacting with LLMs.
 
-Historical 2025 methodological advice, not a measured universal advantage.
+Source format: Authored article.
 
-[Cached detail](research.md#approach-in-brief) · [Primary source](https://martinfowler.com/articles/202508-ai-thoughts.html)
+Published: **2026-09-17**. Practice: Interactions before publication; exact dates not stated.
+
+Personal reaction; not a measured productivity bottleneck.
+
+[Recent evidence](recent-ai.md#c01) · [Primary source](https://martinfowler.com/articles/2026-dont-like-llms.html)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** Start from concrete scenarios; use an interview to clarify context and assumptions.
+**Stated · Recommendation.** In the January 2026 conversation, he favours concrete scenarios and domain-familiar models.
+
+Source format: Multi-person conversation.
+
+Published: **2026-01-21**. Practice: Conversation; not a personal build log.
 
 Scenario recommendation and context-interview trial are documented separately; reward prompts are our adaptation.
 
-[Detail](research.md#start-with-scenarios-and-let-design-teach-you) · [Scenario source](sources.md#s10) · [Interview source](sources.md#s03)
+[Recent evidence](recent-ai.md#c02) · [Primary source](https://martinfowler.com/articles/convo-what-how.html)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** His 2023 TDD explanation selects a next test and preserves refactoring; a current private agent cadence is not established.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-General 2023 TDD explanation must not be treated as a mandatory 2026 internal agent loop.
+Source format: Not established.
 
-[Cached detail](research.md#test-and-refactor-as-design-work) · [Primary source](https://martinfowler.com/bliki/TestDrivenDevelopment.html)
+Published: **Not established**. Practice: Not established.
+
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c03)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** Historical self-testing guidance advocates executable checks; his August 2025 account also warns that agent success claims can disagree with execution.
+**Stated · Recommendation.** His May 2026 description includes human evaluation of test results and other feedback after agent work.
 
-Combines historical self-testing guidance with the reported success-claim problem in S01; exact modern test stack unknown.
+Source format: Authored article.
 
-[Cached detail](research.md#test-and-refactor-as-design-work) · [Primary source](https://martinfowler.com/bliki/SelfTestingCode.html)
+Published: **2026-05-21**. Practice: Not a personal session.
+
+Recommendation; no personal test-first cadence or runner established.
+
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://martinfowler.com/bliki/AgenticEngineering.html)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Stated.** His general refactoring guidance uses small behaviour-preserving transformations to improve understanding and changeability.
+**Stated · Recommendation.** In the January 2026 conversation, his own contributions favour concrete scenarios and domain-familiar abstractions.
 
-General engineering guidance; exact transformations and reward architecture are suggested adaptations.
+Source format: Multi-person conversation.
 
-[Cached detail](research.md#test-and-refactor-as-design-work) · [Primary source](https://refactoring.com/)
+Published: **2026-01-21**. Practice: Conversation; not a personal build log.
+
+His turns only; not evidence of his personal automated refactoring procedure.
+
+[Recent evidence](recent-ai.md#c05) · [Primary source](https://martinfowler.com/articles/convo-what-how.html)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** Humans remain responsible for generated code and review code, tests and other feedback.
+**Stated · Recommendation.** Humans remain responsible for generated code and review code, tests and other feedback.
+
+Source format: Authored article.
+
+Published: **2026-05-21**. Practice: Not a personal session.
 
 Conceptual agentic-engineering definition, not an observed complete private session.
 
-[Detail](research.md#approach-in-brief) · [Source finding](sources.md#s02)
+[Recent evidence](recent-ai.md#c06) · [Primary source](https://martinfowler.com/bliki/AgenticEngineering.html)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Not established.** A current personal multi-agent coordination or autonomy configuration is not established.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Conceptual descriptions of terminal agents do not establish a personal swarm topology or unattended policy.
+Source format: Not established.
 
-[Detail](research.md#sources-and-research-gaps) · [Research gaps](research.md#sources-and-research-gaps)
+Published: **Not established**. Practice: Not established.
+
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c07)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** May 2026 context-interview trials and March 2026 decision-record guidance provide ways to preserve understanding.
+**Stated · Personal use.** May 2026 context-interview trials and March 2026 decision-record guidance provide ways to preserve understanding.
+
+Source format: Authored article.
+
+Published: **2026-05-14**. Practice: Trial before publication; exact date not stated.
 
 S03 and S07 are documented techniques; a private automatic memory/handoff configuration is not established.
 
-[Cached detail](research.md#use-an-interview-to-build-context) · [Primary source](https://martinfowler.com/bliki/InterrogatoryLLM.html)
+[Recent evidence](recent-ai.md#c08) · [Primary source](https://martinfowler.com/bliki/InterrogatoryLLM.html)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** Pi and gptel were expressed interests in January 2026, not a verified daily agent stack.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Do not convert curated guest reports or tool interest into current personal adoption.
+Source format: Not established.
 
-[Detail](research.md#tools-and-setup) · [Source finding](sources.md#s09)
+Published: **Not established**. Practice: Not established.
+
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c09)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** His 2024 CI guidance favours frequent verified mainline integration; release remains a separate decision.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-General team practice; current private CI provider and agent deployment rights are unknown.
+Source format: Not established.
 
-[Cached detail](research.md#a-feature-from-idea-to-release) · [Primary source](https://martinfowler.com/articles/continuousIntegration.html)
+Published: **Not established**. Practice: Not established.
+
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c10)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Stated.** His August 2025 article raises injection concerns while explicitly crediting Willison’s analysis; an implemented personal sandbox is not established.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-This is a security concern, not proof of an implemented personal sandbox or permission policy.
+Source format: Not established.
 
-[Cached detail](research.md#failure-modes-and-limits) · [Primary source](https://martinfowler.com/articles/202508-ai-thoughts.html)
+Published: **Not established**. Practice: Not established.
+
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c11)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Stated.** Treat practices as context-sensitive defaults and evaluate evidence at the workflow level.
+**Stated · Personal use.** His September 2026 reflection describes useful results alongside distrust of confident fabrication.
 
-General sensible-default framing; a universal comparative productivity result is not established.
+Source format: Authored article.
 
-[Detail](research.md#treat-conventions-as-defaults-with-reasons) · [Default framing](sources.md#s08) · [Workflow-sensitive evaluation](sources.md#s01)
+Published: **2026-09-17**. Practice: Interactions before publication; exact dates not stated.
+
+Personal interactions, not a general verdict against AI use or a comparative benchmark.
+
+[Recent evidence](recent-ai.md#c12) · [Primary source](https://martinfowler.com/articles/2026-dont-like-llms.html)

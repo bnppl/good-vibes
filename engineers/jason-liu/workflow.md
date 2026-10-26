@@ -10,6 +10,8 @@ cache_schema: 1
 nav_order: 2
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # A deterministic reward feature through a measurement-first lens
 
 [Profile](index.md) · [Detailed research](research.md) · [Sources](sources.md)

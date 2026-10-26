@@ -10,6 +10,8 @@ cache_schema: 1
 nav_order: 1
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # Chip Huyen — engineering the AI product
 
 [Profile](index.md) · [Common worked feature](workflow.md) · [Source findings](sources.md) · [Slides](slides.md)

@@ -7,6 +7,8 @@ This is the storage contract for `/engineer`. The portable research prompt defin
 ```text
 engineers/<canonical-person-slug>/
   index.md             # person identity, comparison fields, research map
+  recent-ai.md         # recent AI evidence, actual cases, dates and current claim map
+  background.md        # archived comparison fields and retired slide notes
   research.md          # detailed guide; can link to focused chapters
   sources.md           # source register, inspected findings, dates and gaps
   techniques.md        # optional deep chapter
@@ -40,6 +42,7 @@ canonical_name: Person Name
 aliases: []
 practice_focus: coding-workflows
 focus_note: State a material scope boundary if needed.
+evidence_since: 2025-10-01
 research_cutoff: 2026-10-26
 research_checked: 2026-10-26
 last_updated: 2026-10-26
@@ -59,17 +62,31 @@ dimensions:
     detail: research.md#supported-heading
     source: https://example.org/original-source
     checked: 2026-10-26
+    evidence_kind: Personal use
+    source_format: Authored article
+    published: 2026-05-14
+    practice_date: Trial before publication; exact date not stated
+    source_id: S03
+    ai_specific: true
     qualification: Relevant scope, dates, limits, and distinctions.
 ---
 ```
 
 Include all D01–D12 in the order and with titles defined in the portable prompt. Evidence is one of `Demonstrated`, `Stated`, `Inferred`, `Suggested adaptation`, `Not established`. Unknowns have an empty `source`, an explanatory gap, and a local detail link. A dimension summarising several claims must link to a cached section that maps those claims to the relevant primary sources. The frontmatter `claim` is a stable entry ID rendered as an explicit lowercase anchor in the profile body, such as `<a id="c01"></a>`, so generated comparisons can cite `index.md#c01` across heading edits. Do not invent evidence for an unknown dimension. Mirror the frontmatter position, evidence label, and qualification in the profile's visible claim entry; links alone do not make that entry reviewable. If the two disagree, reconcile them against cached evidence before generating slides or comparisons. A recommendation and a self-reported personal practice may both be `Stated`, so their difference must remain explicit in the qualification. Record publication/practice dates separately from the evidence check date.
 
-`practice_focus` identifies the content's subject, not a person's skill, attitude, or permanent identity. Use `coding-workflows` for AI-assisted software development/delivery, `ai-systems` for building/evaluating products containing models, and `mixed` when both are substantively covered. `focus_note` is optional and explains a material boundary. The comparison picker can filter by focus and search names/aliases; selected people remain visible. A cross-focus comparison displays an explicit scope note. Missing legacy focus metadata defaults to coding-workflows, but new/updated profiles should state it explicitly.
-
 `research_checked` records actual research verification, not slide generation or site build dates. `research_cutoff` records the evidence horizon. Each source record should retain publication date, inspected date, URL, inspected scope, findings, supported claim IDs, and limitations; repository sources should retain revisions when available. Preserve claim IDs across refreshes, marking superseded claims explicitly rather than reassigning their IDs to unrelated assertions.
 
 Write a discoverable profile body linking detailed chapters, the source register, slide notes, and comparison view. If no deck has been generated yet, omit the slideshow link from the body and set `slides_url` to an empty string. The UI must not promise a nonexistent deck.
+
+`practice_focus` identifies the content's subject, not a person's skill, attitude, or permanent identity. Use `coding-workflows` for AI-assisted software development/delivery, `ai-systems` for building/evaluating products containing models, and `mixed` when both are substantively covered. `focus_note` is optional and explains a material boundary. The comparison picker can filter by focus and search names/aliases; selected people remain visible. A cross-focus comparison displays an explicit scope note. Missing legacy focus metadata defaults to coding-workflows, but new/updated profiles should state it explicitly.
+
+## Recent-AI eligibility
+
+The default main comparison uses AI-specific publications/revisions since `evidence_since` (2025-10-01 for this project). Each active dimension has `evidence_kind`, `source_format`, `published`, `practice_date`, `source_id`, and `ai_specific`, alongside the existing evidence label. A recommendation is not personal use. Keep exact dates unknown when they are unknown; a documented lower bound for a living guide is acceptable if explicitly labelled. A dated article about an older experiment must retain the older practice period.
+
+`Not established` fields use an empty primary source/source ID, `ai_specific: false`, and explicit date gaps. Historical or non-AI guidance cannot stand in for current evidence. Archive prior field values and retired slides in `background.md` without `engineer_profile: true` or a slide-collection parent. Preserve full research and its old inbound anchors; visibly route readers to `recent-ai.md` for current-window claims. Changes of claim support stay documented in the archive and source register.
+
+All visible claims mirror their structured positions and evidence kinds. Keep the check date separate from publication and practice metadata. No new date is inferred from the site's latest build, source search crawl, or mutable author biography.
 
 ## Derived slideshow collections
 

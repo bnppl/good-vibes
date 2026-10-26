@@ -8,6 +8,7 @@ COMPARE_WITH: {OPTIONAL_COMMA_SEPARATED_PEOPLE}
 FOCUS: {DEFAULT: software engineering practice, particularly AI-assisted and agentic development}
 PROJECT_CONTEXT: {OPTIONAL_PROJECT_AND_STACK}
 AS_OF: {DEFAULT: today's date}
+PUBLICATIONS_SINCE: {DEFAULT IN THIS PROJECT: 2025-10-01}
 EXISTING_PROFILES: {OPTIONAL_PATHS_OR_LINKS}
 STAGE: {DEFAULT: all; research, slides, all, or compare}
 REFRESH: {DEFAULT: false}
@@ -44,6 +45,20 @@ When REFRESH is explicitly true, refresh selected research first and then derive
 Some people primarily discuss using coding agents; others primarily discuss building products containing AI models. Set `practice_focus` to `coding-workflows`, `ai-systems`, or `mixed` for the material actually studied. Keep the same D01–D12 questions, but name the system being tested, evaluated, deployed, or secured. A product-evaluation loop is not automatically a code-test cadence or a personal coding-agent setup. Mark undocumented coding practices unknown instead of filling them with the subject's application-evaluation advice.
 
 Retain the fixed deterministic reward task as a clearly labelled adaptation for comparison. For AI-system specialists, it illustrates a deterministic software boundary; it does not establish model output quality, retrieval quality, or agent task success. Any additional model-based example is a separate optional illustration and must not change the shared task or masquerade as a comparable benchmark.
+
+### Publication window and actual AI use
+
+Use PUBLICATIONS_SINCE through AS_OF for the main AI comparison. In this project the default lower bound is **2025-10-01**, configurable with `--since`. Do not satisfy it with a recent inspection/build date. Earlier engineering principles remain useful background but cannot fill a missing recent AI-specific dimension.
+
+For every main claim record three separate dates: publication/revision, practice period (or explicitly unknown), and inspection. A recent retrospective can describe older work: say so. A living page needs a documented publication bound or revision; an undated artifact is not automatically in-window.
+
+Prioritise authored first-person accounts with named projects, prompts, actual decisions, corrections and results. Add a recent-AI entry chapter (`recent-ai.md`) to existing mixed-age profiles. Give each claim an `evidence_kind`: Personal use, Published artifact, Recommendation, Joint recommendation, Commentary, Interview summary, or Not established. These describe the relationship to the subject, independently of Demonstrated/Stated/Inferred. An interview summary is weaker than a checked transcript. A paper on a person's website may have another author.
+
+When only recent advice exists, retain it as advice and say personal use is not established. Do not manufacture a complete workflow from timeless books, a tool endorsement, an old experiment or a public outline. Preserve historical claims and retired slide IDs in `background.md`; stable claim IDs remain about the same dimensions and must record when their supporting evidence changes.
+
+Slides should lead with real documented projects. Each card names its publication period, evidence kind and scope; advice-only cards say so. Keep invented reward scenarios in optional labs, not as the repeated main “in the wild” example. Never recycle an existing card ID for a different topic; retire it and allocate a new ID.
+
+The comparison must expose publication and practice dates without requiring expansion, distinguish advice from use, and allow a personal-use/artifact view. Missing recent evidence remains an explicit gap. Existing caches without window metadata are unreviewed for this purpose; a cache-only stage cannot invent that review or fresh dates.
 
 ### 2. Research primary material
 

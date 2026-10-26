@@ -6,6 +6,13 @@ nav_exclude: false
 
 # Changelog
 
+## October 26, 2026: Recent AI Practice Comparisons
+
+- Refocused the ten published engineer comparisons on AI-specific publications since October 2025, with separate publication, practice and inspection dates and evidence kinds.
+- Added recent-evidence chapters, preserved historical fields/slides, and rebuilt 59 information cards around actual projects or explicitly labelled proposals.
+- Added source-format labels and a personal-use/artifact filter; clarified Fowler’s evidence gaps and Kim’s personal commit boundary.
+- Updated the reusable research rules and both `/engineer` command definitions with `--since`. See the [freshness review](engineers/freshness-review.md) for scope, source-access limits and validation.
+
 ## October 26, 2026: The Good Scroll
 
 - Rewrote sixteen cards as short information posts: hook, explanation, example, and takeaway, with optional source and practice links.

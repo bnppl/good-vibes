@@ -6,12 +6,29 @@ nav_exclude: true
 last_updated: '2026-10-26'
 research_checked: '2026-10-26'
 cache_schema: 1
-derived_from: engineers/andrej-karpathy/index.md
+derived_from: engineers/andrej-karpathy/recent-ai.md
+evidence_since: '2025-10-01'
 ---
 
-# Andrej Karpathy — bite-sized ideas
+# Andrej Karpathy — recent AI evidence
 
-Derived from the cache checked on 26 October 2026. This profile mixes coding guidance and AI-system concepts; worked examples are our suggested adaptations.
+Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
+
+## Card 09
+
+### autoresearch as a bounded published experiment
+
+> **A bounded research loop is an inspectable artifact.**
+>
+> Published artifact · publication / revision: 2026-03-26. The March 2026 pinned autoresearch files constrain a training experiment, retain an evaluator and record keep/discard decisions. microgpt is a separate educational artifact. These inspectable projects differ from a generic coding assistant workflow or a production release process.
+
+**In the wild:** Pinned autoresearch revision; experiments not rerun.
+
+**Takeaway:** The 2019 neural-network recipe and April 2025 deployment example are background. The LLM Wiki gist lacks a verified eligible revision here. April conversation material is an endorsed generated summary/cleaned transcript, not raw unaided prose.
+
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/README.md)
+
+---
 
 ## Card 01
 
@@ -19,29 +36,13 @@ Derived from the cache checked on 26 October 2026. This profile mixes coding gui
 
 > **A useful loop needs an outcome it can actually assess.**
 >
-> Karpathy's November 2025 verifiability argument connects automation to repeatable, efficient attempts and assessable outcomes. It is a conceptual argument, not a guarantee that every metric captures intent.
+> Commentary · publication / revision: 2025-11-17. Verifiable feedback makes repeated optimisation tractable.
 
-**In the wild:** Our reward check distinguishes a genuinely retained balance from a lost balance awarded again.
+**In the wild:** Conceptual verifiability argument.
 
-**Takeaway:** Describe what the measurement observes and what it misses.
+**Takeaway:** November 2025 conceptual argument; not a universal coding-workflow performance result.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#approach-in-brief) · [Cached claim](index.md#c01)
-
----
-
-## Card 02
-
-### Baseline before complexity
-
-> **An impressive result can sit on an untrusted measurement.**
->
-> His 2019 ML recipe begins with data inspection and simple baselines. This is training guidance, not a prescribed current coding-agent test cadence.
-
-**In the wild:** Our adaptation runs existing reward checks before adding a new persistence mechanism.
-
-**Takeaway:** Establish what works before trying to improve it.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#establish-a-simple-baseline-before-adding-complexity) · [Cached claim](index.md#c03)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s01) · [Primary source](https://karpathy.bearblog.dev/verifiability/)
 
 ---
 
@@ -51,13 +52,13 @@ Derived from the cache checked on 26 October 2026. This profile mixes coding gui
 
 > **Small enough to inspect is an engineering advantage.**
 >
-> February 2026 microgpt is a compact educational implementation. Its explanatory purpose does not mean every production system should fit in one file.
+> Published artifact · publication / revision: 2026-02-12. microgpt demonstrates an inspectable educational implementation, not a universal product architecture.
 
-**In the wild:** Our reward review asks where the accepted ID and balance become durable, using actual code paths.
+**In the wild:** Educational implementation; not a production architecture.
 
-**Takeaway:** Simplify the explanation without deleting essential structure.
+**Takeaway:** Article/code inspected, not executed; explanatory minimalism does not imply one-file production systems.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#keep-the-artifact-small-enough-to-explain) · [Cached claim](index.md#c05)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s03) · [Primary source](https://karpathy.github.io/2026/02/12/microgpt/)
 
 ---
 
@@ -67,13 +68,13 @@ Derived from the cache checked on 26 October 2026. This profile mixes coding gui
 
 > **The interesting autonomy is inside a defined experiment.**
 >
-> The March 2026 autoresearch artifact separates human instructions from agent-edited training code. It is an inspected ML design, not proof of a complete private agent swarm.
+> Published artifact · publication / revision: 2026-03-26. The published autoresearch baseline gives one agent a bounded ML experiment.
 
-**In the wild:** Our software adaptation declares the next missing reward behaviour and the files relevant to it.
+**In the wild:** Pinned autoresearch revision; experiments not rerun.
 
-**Takeaway:** Name the scope before increasing autonomy.
+**Takeaway:** 26 March 2026 design inspected, not executed; neither a complete private workflow nor proof that autonomous loops are generally effective.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#what-the-public-artifacts-actually-show) · [Cached claim](index.md#c07)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s04) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/README.md)
 
 ---
 
@@ -83,13 +84,13 @@ Derived from the cache checked on 26 October 2026. This profile mixes coding gui
 
 > **Changing the evaluator changes the experiment.**
 >
-> The March 2026 ML program excludes evaluator edits and extra dependencies. Written restrictions describe intent; they do not prove enforced resource permissions.
+> Published artifact · publication / revision: 2026-03-26. Published ML instructions forbid changing the evaluator and adding dependencies.
 
-**In the wild:** Our reward implementation must not rewrite expected balances to match its result.
+**In the wild:** Pinned autoresearch revision; experiments not rerun.
 
-**Takeaway:** Keep ownership of the objective separate from implementation.
+**Takeaway:** 26 March 2026 instructional boundary, not verified access enforcement; complete private permission policy remains unknown.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#what-the-public-artifacts-actually-show) · [Cached claim](index.md#c11)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s05) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md)
 
 ---
 
@@ -99,44 +100,12 @@ Derived from the cache checked on 26 October 2026. This profile mixes coding gui
 
 > **An endorsed cleaned transcript is still a cleaned transcript.**
 >
-> The April 2026 Sequoia page discloses AI-generated summary/transcript content checked by Karpathy. Its professional-responsibility framing must retain that provenance.
+> Commentary · publication / revision: 2026-04-30. The endorsed April 2026 account retains human judgment and responsibility.
 
-**In the wild:** Our source register does not present the inaccessible Software 3.0 subscriber article as fully read.
+**In the wild:** Endorsed generated summary and cleaned conversation transcript.
 
-**Takeaway:** Preserve how the evidence reached you.
+**Takeaway:** AI-generated account checked by Karpathy; complete current review/approval checklist remains unknown.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#human-understanding-and-review) · [Cached claim](index.md#c06)
-
----
-
-## Card 07
-
-### One number, two stories
-
-> **A post-replay balance can hide a lost reward.**
->
-> Suggested adaptation: our fixed task reads the retained balance immediately after runtime restart, before replaying A. Otherwise losing all state and awarding A again could still produce 10.
-
-**In the wild:** 0 → A10 → replayA10 → restart/read10 → replayA10 → newB20.
-
-**Takeaway:** Observe persistence separately from duplicate detection.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](workflow.md#shared-task) · [Scope limits](workflow.md#separate-optional-model-quality-illustration)
-
----
-
-## Card 08
-
-### Knowledge that accumulates
-
-> **A derived wiki and its sources are different layers.**
->
-> The public LLM Wiki pattern separates source material, derived knowledge, and schema. It is an abstract pattern, not a verified complete private deployment.
-
-**In the wild:** Our task note records what was tried; application storage still has to preserve the reward itself.
-
-**Takeaway:** Durable notes do not guarantee durable product state.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#context-and-durable-state) · [Cached claim](index.md#c08)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s07) · [Primary source](https://karpathy.bearblog.dev/sequoia-ascent-2026/)
 
 ---

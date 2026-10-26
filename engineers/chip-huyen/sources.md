@@ -10,6 +10,10 @@ cache_schema: 1
 nav_order: 3
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Chip Huyen — source findings
 
 All records were inspected on **26 October 2026**, with that date as research cutoff. Findings are concise records of public material, not archived full works. No paid book body, private configuration, or live tool installation was accessed. Website article revisions were not pinned; publication dates are the dates displayed on the inspected pages.
@@ -168,3 +172,7 @@ Current-looking prices, model rankings, API capabilities or software setup were 
 ## Cache history
 
 26 October 2026: initial primary research and comparison cache created; derived slides reuse it without a separate research pass. The neutral reward workflow is original adaptation; no application implementation or comparative execution trial was performed.
+
+## Recent-publication search — 26 October 2026
+
+Revisited the [author archive](https://huyenchip.com/blog/) and [books page](https://huyenchip.com/books/), and searched the author domain for 2026 AI engineering accounts. The visible technical archive and book timing did not establish an eligible first-person software-engineering workflow since 1 October 2025. A 2026 catalogue update is discovery metadata, not a new personal practice report. This is a bounded search, not an exhaustive absence claim.

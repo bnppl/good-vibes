@@ -93,16 +93,16 @@ ln -s ../../claude-config/commands/study.md .claude/commands/study.md
 /engineer "Kent Beck"
 /engineer "Kent Beck" --compare "Dave Farley"
 /engineer "Steve Yegge" --compare "Robert C. Martin, David Heinemeier Hansson"
-/engineer "Kent Beck" --refresh
+/engineer "Kent Beck" --refresh --since 2025-10-01
 ```
+
+The main comparison prioritises AI-specific publications since October 2025 (`--since` changes the lower bound). Each field shows publication date, practice period and whether the evidence is personal use, an artifact, advice or commentary. Older general principles are background.
 
 The default single-person command ensures research exists and then creates slides. Existing research is reused. `--stage research` creates only the cache; `--stage slides` derives slides without browsing. `--refresh` explicitly updates primary-source research and affected views. `--compare` defaults to cached comparison: missing profiles are reported as prerequisites, and evidence dates stay visible. Use `--stage all --compare "..."` to explicitly research missing participants and derive all views.
 
 [Browse engineers](engineers/index.md) and [open the side-by-side field cards]({{ '/engineers/compare/' | relative_url }}). The cards include twelve shared dimensions, tool summaries, qualifications, and source links, with a dimension selector and mobile horizontal scrolling. A generated comparison document adds evidence-backed disagreements, a common worked example, and adoption tradeoffs. The shared page discovers new cached profiles at build time. Name and alias search and focus filters keep larger collections usable. Focus badges distinguish coding with AI from building AI systems; selected people remain visible while filtering, and mixed-focus comparisons retain an explicit scope note.
 
-The [interactive approach map]({{ '/engineers/map/' | relative_url }}) shows all twenty engineers in overlapping regions. Select a name for scoped tooling examples, direct links and category icons. Region membership is editorial and reconciled to dated profile evidence; published artifacts and personal practice remain distinct.
-
-The [visual exploration gallery]({{ '/engineers/visuals/' | relative_url }}) adds eight interactive perspectives: verification ownership, subway routes, the same bug, confidence layers, the tool ecosystem, project contexts, evolution trails and a disagreement microscope. All views use the shared dated profile cache; adaptations and evidence boundaries remain explicit.
+The [interactive approach map]({{ '/engineers/map/' | relative_url }}) shows all twenty engineers in overlapping regions, with scoped tooling examples and direct links. The [visual exploration gallery]({{ '/engineers/visuals/' | relative_url }}) adds eight perspectives, including subway routes, verification ownership, project contexts and disagreement. These views retain their editorial scope and source qualifications.
 
 The [portable research prompt](docs/engineer-research-prompt.md) works in another research-capable assistant with `PERSON` as a parameter. The [cache and view schema](docs/engineer-cache-schema.md) defines the directory structure, evidence fields, and slide format. The slide stage reuses the main viewer: Jekyll embeds Markdown and plain JavaScript renders one bite-sized idea at a time. Saved ideas are separate for each engineer.
 
@@ -114,6 +114,23 @@ ln -s ../../claude-config/commands/engineer.md .claude/commands/engineer.md
 ```
 
 Inspect an existing destination before replacing it. Run the commands in this repository. They write documentation and derived views; they do not commit, push, or deploy.
+
+## How companies build software using AI
+
+The [company knowledge bases](companies/index.md) cover twenty organisations across banking, fintech, crypto, education, retail, media, transport, infrastructure and developer tools. Each company has its own directory with detailed research, source findings, observed workflow, optional practice, structured D01–D12 fields, slide notes and a slideshow. The [written comparison](companies/comparison.md) and [side-by-side cards]({{ '/companies/compare/' | relative_url }}) use those same claims, dates and qualifications. Search by company or alias, filter by industry and evidence, and compare up to three cases.
+
+The focus is how teams use AI to build and maintain software. An AI feature or tool announcement alone cannot establish an internal development practice. Policies, actual cases, artifacts and recommendations remain separate. A named team is not assumed to represent every employee. The [research review](companies/review.md) records evidence gaps, material corrections and validation.
+
+The portable [company research prompt](docs/company-research-prompt.md) and [cache contract](docs/company-cache-schema.md) support `/company` in Claude Code and OpenCode:
+
+```text
+/company "Stripe" --stage research
+/company "Stripe" --stage slides
+/company "Monzo" --compare "Stripe, Shopify"
+/company "GitLab" --refresh --since 2025-10-01
+```
+
+A comparison defaults to cached research; slide generation does not browse. Existing complete caches are reused unless a refresh is requested. The command wrappers live at `claude-config/commands/company.md` and `.opencode/commands/company.md`. Install the Claude wrapper in `.claude/commands/` using the same approach as `/engineer`. These commands do not themselves commit, push or deploy changes.
 
 ## The `agentic-alignment` skill
 

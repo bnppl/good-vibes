@@ -7,6 +7,8 @@ last_read: null
 status: unread
 ---
 
+> **Scope update:** The [first-ten freshness review](freshness-review.md) and [next-ten freshness review](freshness-review-next-ten.md) supersede the dated examples and counts below. Hamel and Liu now have recent personal coding accounts. Earlier slide/example descriptions are historical editorial context.
+
 # Refinement review — all twenty engineer studies
 
 Review date: **26 October 2026**. This review covers the twenty profiles' detailed research, source findings, worked examples, comparison fields, and derived slides. New research was performed for entries 11–20. Existing caches were reviewed editorially without turning that review into a new external verification date.

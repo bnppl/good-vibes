@@ -10,6 +10,10 @@ cache_schema: 1
 nav_order: 4
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Source findings
 
 All records inspected on **26 October 2026**. Public descriptions are identified as descriptions; they do not establish that a paid video was watched. Repository records use a fixed revision. Findings are concise notes, not archived articles.

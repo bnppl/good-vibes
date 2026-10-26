@@ -5,27 +5,28 @@ nav_order: 1
 nav_exclude: true
 last_updated: '2026-10-26'
 cache_schema: 1
-derived_from: engineers/harper-reed/index.md
+derived_from: engineers/harper-reed/recent-ai.md
 research_checked: '2026-10-26'
+evidence_since: '2025-10-01'
 ---
 
-# Harper Reed — bite-sized ideas
+# Harper Reed — recent AI evidence
 
-Derived from the cache checked on 26 October 2026. Examples are our suggested adaptations. Dates distinguish historical practices from later artifacts.
+Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
 
-## Card 01
+## Card 09
 
-### Visible intent
+### Claude Code from a phone, and a separate containment lab
 
-> **A useful handoff separates the goal from the guess.**
+> **A phone reconnects to the working session.**
 >
-> Reed’s February 2025 workflow keeps clarification and an execution plan distinct. That is a dated account, not a rule to specify every project fully before learning.
+> Personal use · publication / revision: 2026-01-05. His January account connects Blink, Tailscale and tmux to a Mac running Claude Code, allowing remote check-ins across terminal sessions. A September containment experiment is a different project. October public instructions document intended verification behaviour.
 
-**In the wild:** Our reward note distinguishes “once per ID” from a proposed storage mechanism.
+**In the wild:** Remote-terminal workflow reported in January; exact session dates unknown.
 
-**Takeaway:** Review intent before approving the plan.
+**Takeaway:** February–May 2025 prompt plans, TDD advice and commit routines are historical. The September experiment does not recommend exposing credentials in production. Public rules are not proof of actual runtime compliance.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#requirements-and-context) · [Cached evidence](index.md#c02)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md) · [Primary source](https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/)
 
 ---
 
@@ -35,13 +36,13 @@ Derived from the cache checked on 26 October 2026. Examples are our suggested ad
 
 > **A small fix does not need a novel of planning.**
 >
-> The October 2026 public instruction file sizes process to the change. Its existence demonstrates a written policy, not compliance in every real session.
+> Published artifact · publication / revision: 2026-10-15. October 2026 published rules size planning effort to the change.
 
-**In the wild:** Our next missing restart check may need a brief task note rather than a new architecture document.
+**In the wild:** Pinned revision; runtime compliance not observed.
 
-**Takeaway:** Make the process earn its size.
+**Takeaway:** Inspected instruction artifact, not proof of runtime compliance or a universal size threshold.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#planning-and-increments) · [Cached evidence](index.md#c03)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s10) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
 
 ---
 
@@ -51,13 +52,13 @@ Derived from the cache checked on 26 October 2026. Examples are our suggested ad
 
 > **A checklist cannot observe the balance.**
 >
-> May 2025 guidance advocates TDD and executable feedback. A claim that a task is finished still needs meaningful checks against the real system.
+> Published artifact · publication / revision: 2026-10-15. Published October instructions require verification and checks before claiming completion.
 
-**In the wild:** Our duplicate-ID check reads application state, not a fixture-owned counter.
+**In the wild:** Pinned revision; runtime compliance not observed.
 
-**Takeaway:** Inspect what the assertion actually observes.
+**Takeaway:** Artifact of intended agent behaviour; not an observed test-first session.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#testing-and-feedback) · [Cached evidence](index.md#c04)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s10) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
 
 ---
 
@@ -67,29 +68,13 @@ Derived from the cache checked on 26 October 2026. Examples are our suggested ad
 
 > **Keeping the terminal alive does not keep the product correct.**
 >
-> January 2026 describes remote terminal sessions. That supports interaction continuity, not a complete orchestration or correctness guarantee.
+> Personal use · publication / revision: 2026-01-05. January 2026 self-report names Claude Code, Tailscale, Blink and tmux.
 
-**In the wild:** Our task record and durable reward data solve different problems.
+**In the wild:** Remote-terminal workflow reported in January; exact session dates unknown.
 
-**Takeaway:** Separate session state from application state.
+**Takeaway:** Dated personal setup; no present installation or private configuration verified.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#autonomy-and-coordination) · [Cached evidence](index.md#c07)
-
----
-
-## Card 05
-
-### Checkpoint quality
-
-> **A polished commit message can describe broken code.**
->
-> The March 2024 Git-helper account automates metadata. Our takeaway: inspect the behaviour independently of how convincing its summary sounds.
-
-**In the wild:** A commit labelled “fixed replay” still needs the six balance observations.
-
-**Takeaway:** Treat the message as a description, not a test.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#integration-and-release) · [Cached source finding](sources.md#s08)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s06) · [Primary source](https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/)
 
 ---
 
@@ -99,45 +84,12 @@ Derived from the cache checked on 26 October 2026. Examples are our suggested ad
 
 > **A lab harness is not a production policy.**
 >
-> The September experiment and public README explore broad capabilities. They were inspected here, not executed or certified as safe.
+> Personal use · publication / revision: 2026-09-22. September 2026 experiment reports credential exposure through its environment.
 
-**In the wild:** Our ordinary reward exercise does not need unrelated credentials or external systems.
+**In the wild:** Laboratory containment experiment before publication.
 
-**Takeaway:** Compare controls within their actual context.
+**Takeaway:** A lab incident, not a recommended production policy or reproduced security audit.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#boundaries-and-safeguards) · [Cached evidence](index.md#c11)
-
----
-
-## Card 07
-
-### The restart observation
-
-> **Read before replay, or a lost reward can look restored.**
->
-> Suggested adaptation: our common task observes retained balance immediately after runtime restart. Replaying A first could conceal total state loss by awarding it again.
-
-**In the wild:** 0 → A10 → replay A10 → restart/read10 → replay A10 → B20.
-
-**Takeaway:** Verify persistence separately from duplicate detection.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#a-feature-from-idea-to-release) · [Cached evidence](index.md#c04)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s05) · [Primary source](https://harper.blog/2026/09/22/break-away/)
 
 ---
-
-## Card 08
-
-### Outcome over excitement
-
-> **A compelling story is a reason to experiment, not a benchmark.**
->
-> The learning-journey account is experience-based. Our proposed evaluation records accepted outcomes, review and rework rather than treating enthusiasm as comparable performance.
-
-**In the wild:** Two attempts need the same starting revision and acceptance checks before their durations mean much.
-
-**Takeaway:** Measure the whole path to a reviewed result.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#evaluation-and-tradeoffs) · [Cached evidence](index.md#c12)
-
----
-

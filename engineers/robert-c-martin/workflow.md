@@ -11,6 +11,8 @@ cache_schema: 1
 derived_from: engineers/robert-c-martin/research.md
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # A reward feature with inspectable constraints
 
 **Suggested adaptation.** This is an original exercise informed by the [cached material](research.md). Martin has not been observed implementing this task or approving these prompts. The point is to compare applications of ideas while holding the product problem constant.

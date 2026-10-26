@@ -10,6 +10,10 @@ cache_schema: 1
 nav_order: 3
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Armin Ronacher — source findings
 
 All sources were inspected as public authored material on **26 October 2026**. Publication dates below are the dates displayed on the articles. The cache does not archive their full text. Findings are concise; detailed applications are original suggestions rather than claims about Ronacher's private process.

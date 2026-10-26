@@ -2,13 +2,15 @@
 title: Birgitta Böckeler — detailed research
 parent: Birgitta Böckeler
 nav_order: 1
-last_updated: 2026-10-26
+last_updated: '2026-10-26'
 last_read: null
 status: unread
 research_cutoff: 2026-10-26
 research_checked: 2026-10-26
 cache_schema: 1
 ---
+
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
 
 # Birgitta Böckeler: Engineering the Agent's Working Environment
 

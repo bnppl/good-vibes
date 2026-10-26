@@ -10,6 +10,10 @@ cache_schema: 1
 nav_order: 3
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Jason Liu — source findings
 
 All records inspected as public material on **26 October 2026**. No source bodies are archived in full. Publication dates and live inspection dates are distinct. The author field reflects the byline, not ownership of every page on a host.
@@ -278,3 +282,23 @@ All records inspected as public material on **26 October 2026**. No source bodie
 - Stage 2 used this cache without a second research pass. No paid/private content was accessed.
 
 26 October 2026: cache-only comparison refinement clarified dated compact summaries and slide scope; no new source inspection, execution or research date.
+
+<a id="s15"></a>
+
+## S15 · Codex-maxxing
+
+Published: **2026-05-10**. Inspected: **2026-10-26**. Format: authored public article.
+
+[Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
+
+First-person workstream and port-trial account. Durable threads, explicit versioned memory, voice/context and a test-based Rich-to-Rust goal. A completed successful port is not established.
+
+<a id="s16"></a>
+
+## S16 · Three Ways Codex Can Use a Computer
+
+Published: **2026-06-16**. Inspected: **2026-10-26**. Format: authored public article.
+
+[Primary source](https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/)
+
+First-person cross-tool examples, visual annotations and self-reported approval boundaries. Software release policy and actual permission enforcement are not established.

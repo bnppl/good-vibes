@@ -9,137 +9,90 @@ research_checked: '2026-10-26'
 cache_schema: 1
 nav_order: 1
 nav_exclude: true
-derived_from: engineers/jason-liu/research.md
+derived_from: engineers/jason-liu/recent-ai.md
+evidence_since: '2025-10-01'
 ---
 
-# Jason Liu — bite-sized ideas
+# Jason Liu — recent AI evidence
 
-Derived from the cache checked on 26 October 2026. This deck concerns building AI systems; examples are suggested adaptations.
+Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
 
-## Card 01
+## Card 09
 
-### Locate the bottleneck
+### Durable Codex workstreams and a test-bounded port trial
 
-> **A better answer prompt cannot retrieve a missing source.**
+> **Persistent workstreams still need a completion test.**
 >
-> Liu’s May 2024 guidance starts by diagnosing retrieval. This is application advice, not proof that every AI failure begins there.
+> Personal use · publication / revision: 2026-05-10. His May account describes persistent Codex workstreams, explicit versioned memory and a Rich-to-Rust trial using existing tests as its target. June adds concrete browser review and approval boundaries. Neither article establishes that the port completed successfully.
 
-**In the wild:** Our optional policy assistant checks whether the needed rule was retrieved before changing generation.
+**In the wild:** Workstream and Rich-port trial accounts; exact run dates not established.
 
-**Takeaway:** Name the failing boundary.
+**Takeaway:** The 2024–September 2025 RAG and agent articles remain background. A January update to an August interface guide cannot refresh all of its original advice. Recent firsthand coding examples now warrant a mixed practice focus.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#approach-in-brief) · [Cached claim](index.md#c01)
-
----
-
-## Card 02
-
-### Separate the gaps
-
-> **Missing information and missing capability need different work.**
->
-> His January 2025 blueprint distinguishes unavailable source material from an inability to process it. A single average can hide the difference.
-
-**In the wild:** A missing policy differs from an existing policy with no usable effective-date field.
-
-**Takeaway:** Classify the failure before adding machinery.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#requirements-inventory-is-different-from-capability) · [Cached claim](index.md#c02)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
 
 ---
 
-## Card 03
+## Card 10
 
-### Prototype the decision
+### Explicit memory
 
-> **Test one useful capability before building a platform.**
+> **Memory has a reviewable home.**
 >
-> September 2025 guidance uses an available harness and scenario checks. One passing attempt is feasibility evidence, not proof of dependable production behaviour.
+> Personal use · publication: 2026-05-10. He reports an Obsidian vault versioned in Git, with instructions to retain decisions. This is a self-report; the private vault was not inspected.
 
-**In the wild:** Our reward lab starts with real baseline observations instead of a new orchestration layer.
+**In the wild:** A dated authored workflow account; exact session dates are not established.
 
-**Takeaway:** Keep the first claim small enough to inspect.
+**Takeaway:** Keep the report distinct from reproduced execution.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#planning-prove-one-bounded-capability-first) · [Cached claim](index.md#c03)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s15)
 
 ---
 
-## Card 04
+## Card 11
 
-### Ask what the score means
+### The artifact as context
 
-> **A valid judgment object can still contain a wrong judgment.**
+> **Point to the thing that needs changing.**
 >
-> His May 2025 RAG evaluation framework distinguishes question, context and answer relationships. Our qualification: schema validity and an LLM score do not independently establish correctness.
+> Personal use · publication: 2026-06-16. He reports using browser annotations to review generated visual artifacts. This is a concrete interaction pattern, not an exhaustive verification policy.
 
-**In the wild:** A Boolean relevance verdict needs checked examples before it becomes trusted evaluation evidence.
+**In the wild:** A dated authored workflow account; exact session dates are not established.
 
-**Takeaway:** Evaluate the evaluator too.
+**Takeaway:** Keep the report distinct from reproduced execution.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#evaluation-name-the-relationship) · [Cached claim](index.md#c04)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s16)
 
 ---
 
-## Card 05
+## Card 12
 
-### Context is an interface
+### A completion criterion
 
-> **A search result can help the agent decide what to read next.**
+> **A port needs an oracle.**
 >
-> The August 2025 context article adds metadata and facets to raw chunks. This is interface guidance, not a private-memory implementation or permission boundary.
+> Personal use · publication: 2026-05-10. The reported Rich-to-Rust trial uses existing tests as its finish criterion. The article does not establish successful completion.
 
-**In the wild:** A result exposes document identity and effective date so an agent can inspect the right source.
+**In the wild:** A dated authored workflow account; exact session dates are not established.
 
-**Takeaway:** Add structure that changes a useful decision.
+**Takeaway:** Keep the report distinct from reproduced execution.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#context-is-an-interface) · [Cached claim](index.md#c08)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s15)
 
 ---
 
-## Card 06
+## Card 13
 
-### Isolate noisy work
+### Consequential actions
 
-> **A diagnostic summary should preserve the important uncertainty.**
+> **A recurring thread still has an action boundary.**
 >
-> His August 2025 guidance, updated January 2026, isolates messy reads. Its examples are not guaranteed savings or a complete private coordination setup.
+> Personal use · publication: 2026-06-16. His June account reserves sending, publishing and account changes for approval. These are reported instructions, not independently verified controls.
 
-**In the wild:** A worker returns the failing command, evidence location and unresolved hypothesis instead of every log line.
+**In the wild:** A dated authored workflow account; exact session dates are not established.
 
-**Takeaway:** Check what the summary leaves out.
+**Takeaway:** Keep the report distinct from reproduced execution.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#coordination-isolate-the-noisy-work) · [Cached claim](index.md#c07)
-
----
-
-## Card 07
-
-### Observe the restart
-
-> **Read the balance before replay can accidentally repair the evidence.**
->
-> Suggested adaptation: the shared reward lab observes retained balance immediately after runtime restart. It checks deterministic persistence, not retrieval or model quality.
-
-**In the wild:** A10 → replayA10 → restart/read10 → replayA10 → B20.
-
-**Takeaway:** Separate lost balance from forgotten identity.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](workflow.md#shared-task-and-assumptions) · [Cached adaptation](workflow.md#step-5--re-run-the-complete-contract)
-
----
-
-## Card 08
-
-### Tradeoffs need data
-
-> **Fewer tools can reduce noise and still hide the tool you needed.**
->
-> His August 2024 tool-selection advice balances common tools, retrieval and latency. Usage heuristics do not guarantee a recall floor or universal improvement.
-
-**In the wild:** A candidate tool filter is checked on both frequent and unusual requests before adoption.
-
-**Takeaway:** Keep the missed cases beside the average.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#evaluation-and-tradeoffs) · [Cached claim](index.md#c12)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s16)
 
 ---

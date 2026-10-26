@@ -17,14 +17,14 @@ last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Give the loop a trustworthy question. Keep understanding.
-summary: A mixed lens on verifiable feedback, context, and understandable artifacts. Published ML experiments and
-  conceptual guidance remain distinct from undocumented private coding practice.
+summary: autoresearch as a bounded published experiment. Personal trials, recommendations and unknowns are dated
+  separately.
 strengths:
 - Verifiable feedback
 - Inspectable artifacts
 - Context and judgment
-tools_summary: Pinned autoresearch instructions, microgpt and LLM Wiki were inspected; dated agent commentary is
-  not a complete current private stack.
+tools_summary: March 2026 autoresearch artifact and February microgpt; no complete current private coding or release
+  configuration.
 slides_url: /engineers/andrej-karpathy/learn/
 dimensions:
 - id: D01
@@ -32,126 +32,200 @@ dimensions:
   position: Verifiable feedback makes repeated optimisation tractable.
   evidence: Stated
   claim: C01
-  detail: research.md#approach-in-brief
+  detail: recent-ai.md#c01
   source: https://karpathy.bearblog.dev/verifiability/
   checked: '2026-10-26'
   qualification: November 2025 conceptual argument; not a universal coding-workflow performance result.
+  evidence_kind: Commentary
+  published: '2025-11-17'
+  practice_date: Conceptual verifiability argument
+  source_id: S01
+  ai_specific: true
+  source_format: Authored article
 - id: D02
   title: Requirements and specification
   position: His endorsed April 2026 account keeps people responsible for specifications and oversight.
   evidence: Stated
   claim: C02
-  detail: research.md#human-understanding-and-review
+  detail: recent-ai.md#c02
   source: https://karpathy.bearblog.dev/sequoia-ascent-2026/
   checked: '2026-10-26'
-  qualification: AI-generated publication checked by Karpathy, not an independently verified raw transcript. Reward
-    prompts are our adaptation.
+  qualification: AI-generated publication checked by Karpathy, not an independently verified raw transcript.
+  evidence_kind: Commentary
+  published: '2026-04-30'
+  practice_date: Endorsed generated summary and cleaned conversation transcript
+  source_id: S07
+  ai_specific: true
+  source_format: Endorsed generated summary / cleaned transcript
 - id: D03
   title: Increment and planning
-  position: The 2019 ML recipe builds from inspected data and simple baselines through tested hypotheses.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C03
-  detail: research.md#establish-a-simple-baseline-before-adding-complexity
-  source: https://karpathy.github.io/2019/04/25/recipe/
+  detail: recent-ai.md#c03
+  source: ''
   checked: '2026-10-26'
-  qualification: Historical neural-network guidance, not an established current private coding-agent cadence.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D04
   title: Testing and verification
   position: Published ML instructions retain a baseline and exclude evaluator edits.
   evidence: Demonstrated
   claim: C04
-  detail: research.md#what-the-public-artifacts-actually-show
+  detail: recent-ai.md#c04
   source: https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md
   checked: '2026-10-26'
   qualification: 26 March 2026 instruction artifact inspected, not executed; not a universal unit-level TDD prescription.
+  evidence_kind: Published artifact
+  published: '2026-03-26'
+  practice_date: Pinned autoresearch revision; experiments not rerun
+  source_id: S05
+  ai_specific: true
+  source_format: Repository artifact
 - id: D05
   title: Design and refactoring
   position: microgpt demonstrates an inspectable educational implementation, not a universal product architecture.
   evidence: Demonstrated
   claim: C05
-  detail: research.md#keep-the-artifact-small-enough-to-explain
+  detail: recent-ai.md#c05
   source: https://karpathy.github.io/2026/02/12/microgpt/
   checked: '2026-10-26'
   qualification: Article/code inspected, not executed; explanatory minimalism does not imply one-file production
     systems.
+  evidence_kind: Published artifact
+  published: '2026-02-12'
+  practice_date: Educational implementation; not a production architecture
+  source_id: S03
+  ai_specific: true
+  source_format: Authored article
 - id: D06
   title: Human understanding and review
   position: The endorsed April 2026 account retains human judgment and responsibility.
   evidence: Stated
   claim: C06
-  detail: research.md#human-understanding-and-review
+  detail: recent-ai.md#c06
   source: https://karpathy.bearblog.dev/sequoia-ascent-2026/
   checked: '2026-10-26'
   qualification: AI-generated account checked by Karpathy; complete current review/approval checklist remains unknown.
+  evidence_kind: Commentary
+  published: '2026-04-30'
+  practice_date: Endorsed generated summary and cleaned conversation transcript
+  source_id: S07
+  ai_specific: true
+  source_format: Endorsed generated summary / cleaned transcript
 - id: D07
   title: Agent autonomy and coordination
   position: The published autoresearch baseline gives one agent a bounded ML experiment.
   evidence: Demonstrated
   claim: C07
-  detail: research.md#what-the-public-artifacts-actually-show
+  detail: recent-ai.md#c07
   source: https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/README.md
   checked: '2026-10-26'
-  qualification: 26 March 2026 design inspected, not executed; neither a complete private workflow nor proof that autonomous loops are
-    generally effective.
+  qualification: 26 March 2026 design inspected, not executed; neither a complete private workflow nor proof that
+    autonomous loops are generally effective.
+  evidence_kind: Published artifact
+  published: '2026-03-26'
+  practice_date: Pinned autoresearch revision; experiments not rerun
+  source_id: S04
+  ai_specific: true
+  source_format: Repository artifact
 - id: D08
   title: Context and durable state
-  position: The public LLM Wiki pattern separates sources, derived knowledge, and schema.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C08
-  detail: research.md#context-and-durable-state
-  source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+  detail: recent-ai.md#c08
+  source: ''
   checked: '2026-10-26'
-  qualification: Abstract pattern and stated preferences, not a verified private deployment; application persistence
-    is a different concern.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D09
   title: Tooling and environment
   position: December 2025 commentary endorses computer-local agent interaction and application-specific context.
   evidence: Stated
   claim: C09
-  detail: research.md#tools-and-setup
+  detail: recent-ai.md#c09
   source: https://karpathy.bearblog.dev/year-in-review-2025/
   checked: '2026-10-26'
   qualification: Historical commentary; complete present private host/model/tools inventory is not established.
+  evidence_kind: Commentary
+  published: '2025-12-19'
+  practice_date: Year-end reflection; not a complete personal tool inventory
+  source_id: S08
+  ai_specific: true
+  source_format: Authored article
 - id: D10
   title: Integration and release
-  position: The April 2025 MenuGen account reports work beyond a local prototype into deployment.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C10
-  detail: research.md#tools-and-setup
-  source: https://karpathy.bearblog.dev/vibe-coding-menugen/
+  detail: recent-ai.md#c10
+  source: ''
   checked: '2026-10-26'
-  qualification: One project report does not establish present CI, rollback, or production approval policy.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D11
   title: Boundaries and safeguards
   position: Published ML instructions forbid changing the evaluator and adding dependencies.
   evidence: Demonstrated
   claim: C11
-  detail: research.md#tools-and-setup
+  detail: recent-ai.md#c11
   source: https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md
   checked: '2026-10-26'
-  qualification: 26 March 2026 instructional boundary, not verified access enforcement; complete private permission policy remains
-    unknown.
+  qualification: 26 March 2026 instructional boundary, not verified access enforcement; complete private permission
+    policy remains unknown.
+  evidence_kind: Published artifact
+  published: '2026-03-26'
+  practice_date: Pinned autoresearch revision; experiments not rerun
+  source_id: S05
+  ai_specific: true
+  source_format: Repository artifact
 - id: D12
   title: Evaluation and tradeoffs
-  position: Judge the observation boundary and simplicity as well as the measured outcome.
-  evidence: Inferred
+  position: His November argument emphasises whether outcomes admit reliable verification.
+  evidence: Stated
   claim: C12
-  detail: research.md#failure-modes-and-limits
-  source: https://karpathy.github.io/2019/04/25/recipe/
+  detail: recent-ai.md#c12
+  source: https://karpathy.bearblog.dev/verifiability/
   checked: '2026-10-26'
-  qualification: Our synthesis across ML guidance and artifact limits; a reward metric is not every product requirement
-    and no universal comparative advantage is established.
+  qualification: Conceptual argument; not a benchmark of his personal coding productivity.
+  evidence_kind: Commentary
+  published: '2025-11-17'
+  practice_date: Conceptual verifiability argument
+  source_id: S01
+  ai_specific: true
+  source_format: Authored article
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 ---
 
 # Andrej Karpathy
 
-[Open slideshow]({{ '/engineers/andrej-karpathy/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/andrej-karpathy/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
 ## Research map
 
-[Detailed research](research.md) · [Common reward workflow](workflow.md) · [Source findings](sources.md) · [Slide notes](slides.md)
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
 
-Research checked and cut off on **26 October 2026**. Mixed focus: coding guidance, ML experimentation and conceptual AI systems are related but distinct. Public artifacts were inspected, not executed. Private policies remain unknown.
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
 
@@ -159,119 +233,142 @@ Research checked and cut off on **26 October 2026**. Mixed focus: coding guidanc
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** Verifiable feedback makes repeated optimisation tractable.
+**Stated · Commentary.** Verifiable feedback makes repeated optimisation tractable.
+
+Source format: Authored article. Published / revision: **2025-11-17**. Practice: Conceptual verifiability argument.
 
 November 2025 conceptual argument; not a universal coding-workflow performance result.
 
-[Cached detail](research.md#approach-in-brief) · [Primary source](https://karpathy.bearblog.dev/verifiability/)
+[Recent evidence](recent-ai.md#c01) · [Primary source](https://karpathy.bearblog.dev/verifiability/)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** His endorsed April 2026 account keeps people responsible for specifications and oversight.
+**Stated · Commentary.** His endorsed April 2026 account keeps people responsible for specifications and oversight.
 
-AI-generated publication checked by Karpathy, not an independently verified raw transcript. Reward prompts are our adaptation.
+Source format: Endorsed generated summary / cleaned transcript. Published / revision: **2026-04-30**. Practice: Endorsed generated summary and cleaned conversation transcript.
 
-[Cached detail](research.md#human-understanding-and-review) · [Primary source](https://karpathy.bearblog.dev/sequoia-ascent-2026/)
+AI-generated publication checked by Karpathy, not an independently verified raw transcript.
+
+[Recent evidence](recent-ai.md#c02) · [Primary source](https://karpathy.bearblog.dev/sequoia-ascent-2026/)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** The 2019 ML recipe builds from inspected data and simple baselines through tested hypotheses.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Historical neural-network guidance, not an established current private coding-agent cadence.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#establish-a-simple-baseline-before-adding-complexity) · [Primary source](https://karpathy.github.io/2019/04/25/recipe/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c03)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Demonstrated.** Published ML instructions retain a baseline and exclude evaluator edits.
+**Demonstrated · Published artifact.** Published ML instructions retain a baseline and exclude evaluator edits.
+
+Source format: Repository artifact. Published / revision: **2026-03-26**. Practice: Pinned autoresearch revision; experiments not rerun.
 
 26 March 2026 instruction artifact inspected, not executed; not a universal unit-level TDD prescription.
 
-[Cached detail](research.md#what-the-public-artifacts-actually-show) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md)
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Demonstrated.** microgpt demonstrates an inspectable educational implementation, not a universal product architecture.
+**Demonstrated · Published artifact.** microgpt demonstrates an inspectable educational implementation, not a universal product architecture.
+
+Source format: Authored article. Published / revision: **2026-02-12**. Practice: Educational implementation; not a production architecture.
 
 Article/code inspected, not executed; explanatory minimalism does not imply one-file production systems.
 
-[Cached detail](research.md#keep-the-artifact-small-enough-to-explain) · [Primary source](https://karpathy.github.io/2026/02/12/microgpt/)
+[Recent evidence](recent-ai.md#c05) · [Primary source](https://karpathy.github.io/2026/02/12/microgpt/)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** The endorsed April 2026 account retains human judgment and responsibility.
+**Stated · Commentary.** The endorsed April 2026 account retains human judgment and responsibility.
+
+Source format: Endorsed generated summary / cleaned transcript. Published / revision: **2026-04-30**. Practice: Endorsed generated summary and cleaned conversation transcript.
 
 AI-generated account checked by Karpathy; complete current review/approval checklist remains unknown.
 
-[Cached detail](research.md#human-understanding-and-review) · [Primary source](https://karpathy.bearblog.dev/sequoia-ascent-2026/)
+[Recent evidence](recent-ai.md#c06) · [Primary source](https://karpathy.bearblog.dev/sequoia-ascent-2026/)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Demonstrated.** The published autoresearch baseline gives one agent a bounded ML experiment.
+**Demonstrated · Published artifact.** The published autoresearch baseline gives one agent a bounded ML experiment.
+
+Source format: Repository artifact. Published / revision: **2026-03-26**. Practice: Pinned autoresearch revision; experiments not rerun.
 
 26 March 2026 design inspected, not executed; neither a complete private workflow nor proof that autonomous loops are generally effective.
 
-[Cached detail](research.md#what-the-public-artifacts-actually-show) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/README.md)
+[Recent evidence](recent-ai.md#c07) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/README.md)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** The public LLM Wiki pattern separates sources, derived knowledge, and schema.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Abstract pattern and stated preferences, not a verified private deployment; application persistence is a different concern.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#context-and-durable-state) · [Primary source](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c08)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** December 2025 commentary endorses computer-local agent interaction and application-specific context.
+**Stated · Commentary.** December 2025 commentary endorses computer-local agent interaction and application-specific context.
+
+Source format: Authored article. Published / revision: **2025-12-19**. Practice: Year-end reflection; not a complete personal tool inventory.
 
 Historical commentary; complete present private host/model/tools inventory is not established.
 
-[Cached detail](research.md#tools-and-setup) · [Primary source](https://karpathy.bearblog.dev/year-in-review-2025/)
+[Recent evidence](recent-ai.md#c09) · [Primary source](https://karpathy.bearblog.dev/year-in-review-2025/)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** The April 2025 MenuGen account reports work beyond a local prototype into deployment.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-One project report does not establish present CI, rollback, or production approval policy.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#tools-and-setup) · [Primary source](https://karpathy.bearblog.dev/vibe-coding-menugen/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c10)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Demonstrated.** Published ML instructions forbid changing the evaluator and adding dependencies.
+**Demonstrated · Published artifact.** Published ML instructions forbid changing the evaluator and adding dependencies.
+
+Source format: Repository artifact. Published / revision: **2026-03-26**. Practice: Pinned autoresearch revision; experiments not rerun.
 
 26 March 2026 instructional boundary, not verified access enforcement; complete private permission policy remains unknown.
 
-[Cached detail](research.md#tools-and-setup) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md)
+[Recent evidence](recent-ai.md#c11) · [Primary source](https://github.com/karpathy/autoresearch/blob/228791fb499afffb54b46200aca536f79142f117/program.md)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Inferred.** Judge the observation boundary and simplicity as well as the measured outcome.
+**Stated · Commentary.** His November argument emphasises whether outcomes admit reliable verification.
 
-Our synthesis across ML guidance and artifact limits; a reward metric is not every product requirement and no universal comparative advantage is established.
+Source format: Authored article. Published / revision: **2025-11-17**. Practice: Conceptual verifiability argument.
 
-[Cached detail](research.md#failure-modes-and-limits) · [Primary source](https://karpathy.github.io/2019/04/25/recipe/)
+Conceptual argument; not a benchmark of his personal coding productivity.
 
+[Recent evidence](recent-ai.md#c12) · [Primary source](https://karpathy.bearblog.dev/verifiability/)

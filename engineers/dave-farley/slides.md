@@ -5,13 +5,30 @@ nav_order: 1
 nav_exclude: true
 last_updated: 2026-10-26
 cache_schema: 1
-derived_from: engineers/dave-farley/index.md
+derived_from: engineers/dave-farley/recent-ai.md
 research_checked: 2026-10-26
+evidence_since: '2025-10-01'
 ---
 
-# Dave Farley — bite-sized ideas
+# Dave Farley — recent AI use
 
-Derived from the cached research checked on 26 October 2026. Examples are suggested adaptations for Spellhaven or the [common reward task](neutral-example.md); they are not Farley demonstrations.
+Publications since 1 October 2025. Source dates and evidence kinds appear on each card. [Earlier cards and principles](background.md) remain outside this feed.
+
+## Card 09
+
+### An AI acceptance-contract proposal
+
+> **His latest proposal puts acceptance examples under human control.**
+>
+> Recommendation · published 2026-10-25. The cached October 2026 authored article proposes human-owned executable acceptance examples, incremental agent implementation and verification. February interview and May AI-delivery guidance support the focus on precise intent and feedback. These are prescriptions and experience, not an inspected full coding session.
+
+**In the wild:** Practice period: Proposed agent workflow; not a reproduced implementation.
+
+**Takeaway:** Distinguish the reported work from a complete daily workflow.
+
+[Optional practice: adapt locally](research.md#7-your-first-lab) · [Recent evidence](recent-ai.md) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+
+---
 
 ## Card 01
 
@@ -19,13 +36,13 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 
 > **A specification should be able to tell you it was broken.**
 >
-> Farley advocates human-approved executable examples to guide agent work. The acceptance contract gives a concrete result to check. It still needs to express the right requirement.
+> Recommendation · published 2026-10-25. Farley advocates human-approved executable examples to guide agent work. The acceptance contract gives a concrete result to check. It still needs to express the right requirement.
 
-**In the wild:** A replayed spelling submission leaves the XP total unchanged.
+**In the wild:** Cached authored proposal: people own executable acceptance examples while agents implement against them. No complete personal build is reproduced.
 
 **Takeaway:** Own the intended behaviour before delegating implementation.
 
-[Optional practice: first lab](research.md#7-your-first-lab) · [Detailed research](research.md#1-the-techniques-and-what-each-contributes) · [Cached evidence](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md#7-your-first-lab) · [Recent evidence](recent-ai.md) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 ---
 
@@ -35,13 +52,13 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 
 > **Let the interface change without rewriting the intention.**
 >
-> His four-layer model separates scenarios, a domain language, protocol drivers, and the real system. Technical details belong below the behavioural example.
+> Recommendation · published 2026-10-25. His four-layer model separates scenarios, a domain language, protocol drivers, and the real system. Technical details belong below the behavioural example.
 
-**In the wild:** “The learner has 50 XP” survives a change to a button label or API route.
+**In the wild:** Cached proposal: scenarios, domain language, drivers and the system separate behavioural intent from interface details.
 
 **Takeaway:** Put technical coupling behind a driver.
 
-[Optional practice: first lab](research.md#7-your-first-lab) · [Detailed research](research.md#2-the-four-layer-model-applied-to-spellhaven) · [Cached evidence](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md#7-your-first-lab) · [Recent evidence](recent-ai.md) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 ---
 
@@ -51,13 +68,13 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 
 > **Small steps make being wrong cheaper.**
 >
-> Farley recommends one scenario at a time: observe a meaningful failure, implement, review, and commit. This is incremental discovery rather than an upfront specification of everything.
+> Recommendation · published 2026-10-25. Farley recommends one scenario at a time: observe a meaningful failure, implement, review, and commit. This is incremental discovery rather than an upfront specification of everything.
 
-**In the wild:** Agree replay protection before asking the agent to build an entire reward economy.
+**In the wild:** Cached proposal: work in observable increments rather than treating an entire upfront document as complete knowledge.
 
 **Takeaway:** Finish one observable increment.
 
-[Optional practice: first lab](research.md#7-your-first-lab) · [Detailed research](research.md#3-a-step-by-step-session) · [Cached evidence](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md#7-your-first-lab) · [Recent evidence](recent-ai.md) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 ---
 
@@ -67,13 +84,13 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 
 > **A passing test means less if the agent rewrote the answer.**
 >
-> Farley calls for human control of acceptance tests. Reviewing changes can detect contract erosion; actual access controls are a separate concern.
+> Recommendation · published 2026-10-25. Farley calls for human control of acceptance tests. Reviewing changes can detect contract erosion; actual access controls are a separate concern.
 
-**In the wild:** Changing expected XP from 50 to 60 hides the duplicate reward.
+**In the wild:** Cached proposal: humans control changes to the acceptance contract. A recommendation is not proof of deployed access controls.
 
 **Takeaway:** Treat an expectation change as a product decision.
 
-[Optional practice: first lab](research.md#7-your-first-lab) · [Detailed research](research.md#5-protecting-the-contract-in-practice) · [Cached evidence](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md#7-your-first-lab) · [Recent evidence](recent-ai.md) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 ---
 
@@ -83,60 +100,12 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 
 > **Would your test notice a plausible defect?**
 >
-> Farley recommends pairing acceptance tests with mutation testing. Surviving mutations need investigation; some reveal missing assertions, while others preserve equivalent behaviour.
+> Recommendation · published 2026-10-25. Farley recommends pairing acceptance tests with mutation testing. Surviving mutations need investigation; some reveal missing assertions, while others preserve equivalent behaviour.
 
-**In the wild:** Temporarily remove duplicate protection and check that the reward scenario fails.
+**In the wild:** Cached proposal: mutation checks challenge test sensitivity. No independently reproduced mutation result is available here.
 
 **Takeaway:** Challenge assertions, then investigate survivors.
 
-[Optional practice: first lab](research.md#7-your-first-lab) · [Detailed research](research.md#3-a-step-by-step-session) · [Cached evidence](index.md#comparison-evidence)
-
----
-
-## Card 06
-
-### Guidance is not a gate
-
-> **A course plugin can coach the agent. Your harness checks the result.**
->
-> The official course plugin documents learn, build, and review commands. It supplies guidance, not an independent test runner. This does not establish Farley’s entire private tool stack.
-
-**In the wild:** For Spellhaven, our guide suggests using its existing runner and a compatible mutation tool.
-
-**Takeaway:** Separate documented tools from your own adaptations.
-
-[Optional practice: first lab](research.md#7-your-first-lab) · [Detailed research](research.md#4-tools-what-is-official-and-what-is-a-suggested-choice) · [Cached evidence](index.md#comparison-evidence)
-
----
-
-## Card 07
-
-### Same problem, fairer comparison
-
-> **Changing the task changes what you are comparing.**
->
-> Our common reward exercise keeps the same outcomes for every engineer: 10 points once per submission ID, persistence across restart, and a new ID as a separate event. This is a suggested application of the cached principles, not a Farley demonstration.
-
-**In the wild:** Replaying A leaves 10; a read immediately after restart still shows 10; replaying A stays at 10; B produces 20.
-
-**Takeaway:** Agree the same observable outcomes before comparing workflows.
-
-[Optional practice: common reward lab](neutral-example.md#proposed-sequence-from-inspection-to-integration) · [Shared task and assumptions](neutral-example.md#the-shared-requirement) · [Cached evidence](index.md#comparison-evidence)
-
----
-
-## Card 08
-
-### The restart that matters
-
-> **A process-local memory can pass a replay test and still lose the rule.**
->
-> In our suggested reward exercise, restart is part of the agreed contract. The check must observe retained application state after a real runtime restart. Clearing a test variable does not establish persistence.
-
-**In the wild:** Suggested adaptation: A yields 10; a read after restart still shows 10; replaying A still leaves 10.
-
-**Takeaway:** Verify the boundary the requirement actually crosses.
-
-[Optional practice: common reward lab](neutral-example.md#proposed-sequence-from-inspection-to-integration) · [Layer and driver responsibilities](neutral-example.md#map-the-four-layers-without-prescribing-the-product-design) · [Detailed guide](research.md#3-a-step-by-step-session)
+[Optional practice: adapt locally](research.md#7-your-first-lab) · [Recent evidence](recent-ai.md) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 ---

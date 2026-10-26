@@ -10,6 +10,10 @@ research_checked: '2026-10-26'
 cache_schema: 1
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Gojko Adžić — source findings
 
 All sources inspected on **26 October 2026**. GitHub documents below were read at immutable revision `7e8ee8b4dcd9857da48845b187540e3e1891c70f`, whose commit date is 22 October 2026. These are records of inspected material, not an archive of entire third-party works.

@@ -6,9 +6,9 @@ has_children: true
 
 # Engineering approaches
 
-Detailed research first. Small ideas when you want them. Compare people against the same questions and evidence.
+Start with AI use documented in publications since October 2025. Compare actual reported projects, inspectable artifacts and advice with separate publication, practice and inspection dates. Older principles remain background.
 
-[First five](first-five.md) · [Studies 6–10](next-five.md) · [Studies 11–20](studies-eleven-to-twenty.md) · [All-twenty review](refinement-review.md) · [Open the comparison cards]({{ '/engineers/compare/' | relative_url }}){: .btn .btn-primary }
+[First-ten freshness review](freshness-review.md) · [Next-ten freshness review](freshness-review-next-ten.md) · [Studies 11–20](studies-eleven-to-twenty.md) · [All-twenty scope review](refinement-review.md) · [First five studies](first-five.md) · [Studies six to ten](next-five.md) · [Comparability review](comparability-review.md) · [Open the comparison cards]({{ '/engineers/compare/' | relative_url }}){: .btn .btn-primary }
 
 {% assign profiles = site.pages | where: 'engineer_profile', true | sort: 'canonical_name' %}
 {% for profile in profiles %}
@@ -16,21 +16,11 @@ Detailed research first. Small ideas when you want them. Compare people against 
 
 {{ profile.summary }}
 
-{% case profile.practice_focus %}{% when 'ai-systems' %}Building AI systems{% when 'mixed' %}Both / mixed focus{% else %}Coding with AI{% endcase %}
-
 {% if profile.slides_url and profile.slides_url != '' %}[Slideshow]({{ profile.slides_url | relative_url }}) · {% endif %}Research checked {{ profile.research_checked }}
 {% endfor %}
 
+Each engineer has a directory containing a detailed guide, source register, structured comparison profile, and derived slide notes. `/engineer` creates these; `--stage slides` rebuilds the short reads from the cache. `--compare` reuses cached evidence. Missing profiles need a research stage first.
+
 ## Explore all twenty together
 
-[Explore eight interactive perspectives]({{ '/engineers/visuals/' | relative_url }}) — ownership, routes, a shared bug, confidence layers, tools, project fit, evolution and disagreement.
-
-[Open the interactive approach map]({{ '/engineers/map/' | relative_url }}) — overlapping regions, selectable engineers and linked tooling examples with category icons.
-
-## Explore a focused comparison
-
-[Testing and verification]({{ '/engineers/compare/' | relative_url }}?people=dave-farley,matt-pocock,robert-c-martin&dimension=D04) · [Delegation]({{ '/engineers/compare/' | relative_url }}?people=harper-reed,peter-steinberger,steve-yegge&dimension=D07) · [AI-system evaluation]({{ '/engineers/compare/' | relative_url }}?people=chip-huyen,hamel-husain,jason-liu&dimension=D04&focus=ai-systems)
-
-These shortcuts choose a question, not a winner. The [refinement review](refinement-review.md) explains scope and evidence boundaries.
-
-Each engineer has a directory containing a detailed guide, source register, structured comparison profile, and derived slide notes. `/engineer` creates these; `--stage slides` rebuilds the short reads from the cache. `--compare` reuses cached evidence. Missing profiles need a research stage first.
+[Interactive approach map]({{ '/engineers/map/' | relative_url }}) · [Eight visual perspectives]({{ '/engineers/visuals/' | relative_url }})

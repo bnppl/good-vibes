@@ -10,6 +10,8 @@ cache_schema: 1
 nav_order: 1
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # Jason Liu — measure the system that actually answers the question
 
 [Profile](index.md) · [Common reward workflow](workflow.md) · [Sources](sources.md) · [Slide notes](slides.md)

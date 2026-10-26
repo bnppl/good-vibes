@@ -14,136 +14,214 @@ last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Clarify the work. Keep the loop inspectable.
-summary: Dated workflow accounts connect explicit intent, incremental execution and feedback. Later experiments
-  and current public rules qualify the early planning recipe.
+summary: Claude Code from a phone, and a separate containment lab. Personal trials, recommendations and unknowns
+  are dated separately.
 strengths:
 - Explicit handoffs
 - Practical feedback
 - Dated experimentation
-tools_summary: May 2025 Aider-to-Claude Code report; January 2026 remote terminal setup; September 2026 experimental
-  harness is a separate context.
+tools_summary: 'January 2026: Claude Code, Blink, Tailscale and tmux. September containment experiment and October
+  rules are separate evidence.'
 slides_url: /engineers/harper-reed/learn/
 dimensions:
 - id: D01
   title: Goal and bottleneck
-  position: Build through explicit stages, then learn by inspecting each result.
-  evidence: Inferred
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C01
-  detail: research.md#approach-in-brief
-  source: https://harper.blog/2025/04/17/an-llm-codegen-heros-journey/
+  detail: recent-ai.md#c01
+  source: ''
   checked: '2026-10-26'
-  qualification: Our synthesis of dated practitioner accounts, not a validated productivity model.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D02
   title: Requirements and specification
-  position: February 2025 greenfield work separates idea clarification from a prompt plan.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C02
-  detail: research.md#requirements-and-context
-  source: https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/
+  detail: recent-ai.md#c02
+  source: ''
   checked: '2026-10-26'
-  qualification: Historical personal workflow; not a universal requirement for extensive upfront specification.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D03
   title: Increment and planning
   position: October 2026 published rules size planning effort to the change.
   evidence: Demonstrated
   claim: C03
-  detail: research.md#planning-and-increments
+  detail: recent-ai.md#c03
   source: https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md
   checked: '2026-10-26'
   qualification: Inspected instruction artifact, not proof of runtime compliance or a universal size threshold.
+  evidence_kind: Published artifact
+  published: '2026-10-15'
+  practice_date: Pinned revision; runtime compliance not observed
+  source_id: S10
+  ai_specific: true
+  source_format: Repository artifact
 - id: D04
   title: Testing and verification
-  position: May 2025 guidance advocates TDD, linting, and checks before committing.
+  position: Published October instructions require verification and checks before claiming completion.
   evidence: Stated
   claim: C04
-  detail: research.md#testing-and-feedback
-  source: https://harper.blog/2025/05/08/basic-claude-code/
+  detail: recent-ai.md#c04
+  source: https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md
   checked: '2026-10-26'
-  qualification: Agent-written checks still need scrutiny; reported effectiveness is anecdotal.
+  qualification: Artifact of intended agent behaviour; not an observed test-first session.
+  evidence_kind: Published artifact
+  published: '2026-10-15'
+  practice_date: Pinned revision; runtime compliance not observed
+  source_id: S10
+  ai_specific: true
+  source_format: Repository artifact
 - id: D05
   title: Design and refactoring
   position: Published instructions prefer small changes and readable, maintainable code.
   evidence: Demonstrated
   claim: C05
-  detail: research.md#design-and-refactoring
+  detail: recent-ai.md#c05
   source: https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md
   checked: '2026-10-26'
   qualification: Inspected October artifact; not an independently observed design-quality outcome.
+  evidence_kind: Published artifact
+  published: '2026-10-15'
+  practice_date: Pinned revision; runtime compliance not observed
+  source_id: S10
+  ai_specific: true
+  source_format: Repository artifact
 - id: D06
   title: Human understanding and review
   position: Published instructions require actual verification before claiming completion.
   evidence: Demonstrated
   claim: C06
-  detail: research.md#human-review
+  detail: recent-ai.md#c06
   source: https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md
   checked: '2026-10-26'
   qualification: Rules describe intended behaviour; full personal review execution remains unobserved.
+  evidence_kind: Published artifact
+  published: '2026-10-15'
+  practice_date: Pinned revision; runtime compliance not observed
+  source_id: S10
+  ai_specific: true
+  source_format: Repository artifact
 - id: D07
   title: Agent autonomy and coordination
   position: January 2026 personal account uses multiple remote terminal sessions.
   evidence: Stated
   claim: C07
-  detail: research.md#autonomy-and-coordination
+  detail: recent-ai.md#c07
   source: https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/
   checked: '2026-10-26'
   qualification: Session multiplexing does not establish a complete orchestrator or safe parallel writes.
+  evidence_kind: Personal use
+  published: '2026-01-05'
+  practice_date: Remote-terminal workflow reported in January; exact session dates unknown
+  source_id: S06
+  ai_specific: true
+  source_format: Authored article
 - id: D08
   title: Context and durable state
-  position: February 2025 plans and checklists preserve work across sessions.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C08
-  detail: research.md#requirements-and-context
-  source: https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/
+  detail: recent-ai.md#c08
+  source: ''
   checked: '2026-10-26'
-  qualification: Task records are distinct from durable application data and a complete current memory system.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D09
   title: Tooling and environment
   position: January 2026 self-report names Claude Code, Tailscale, Blink and tmux.
   evidence: Stated
   claim: C09
-  detail: research.md#tools-and-setup
+  detail: recent-ai.md#c09
   source: https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/
   checked: '2026-10-26'
   qualification: Dated personal setup; no present installation or private configuration verified.
+  evidence_kind: Personal use
+  published: '2026-01-05'
+  practice_date: Remote-terminal workflow reported in January; exact session dates unknown
+  source_id: S06
+  ai_specific: true
+  source_format: Authored article
 - id: D10
   title: Integration and release
-  position: April 2025 advice uses frequent commits as recovery checkpoints.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C10
-  detail: research.md#integration-and-release
-  source: https://harper.blog/2025/04/10/waterfall-in-15-minutes-or-your-money-back/
+  detail: recent-ai.md#c10
+  source: ''
   checked: '2026-10-26'
-  qualification: Not a complete production deployment or rollback policy.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D11
   title: Boundaries and safeguards
   position: September 2026 experiment reports credential exposure through its environment.
   evidence: Stated
   claim: C11
-  detail: research.md#boundaries-and-safeguards
+  detail: recent-ai.md#c11
   source: https://harper.blog/2026/09/22/break-away/
   checked: '2026-10-26'
   qualification: A lab incident, not a recommended production policy or reproduced security audit.
+  evidence_kind: Personal use
+  published: '2026-09-22'
+  practice_date: Laboratory containment experiment before publication
+  source_id: S05
+  ai_specific: true
+  source_format: Authored article
 - id: D12
   title: Evaluation and tradeoffs
-  position: Assess learning and usable outcomes rather than treating enthusiasm as a benchmark.
-  evidence: Inferred
+  position: His September containment experiment reports unexpected credential exposure.
+  evidence: Stated
   claim: C12
-  detail: research.md#evaluation-and-tradeoffs
-  source: https://harper.blog/2025/04/17/an-llm-codegen-heros-journey/
+  detail: recent-ai.md#c12
+  source: https://harper.blog/2026/09/22/break-away/
   checked: '2026-10-26'
-  qualification: Our synthesis; reported learning and speed do not establish comparative superiority.
+  qualification: One lab outcome; no measured productivity benefit or production safety guarantee.
+  evidence_kind: Personal use
+  published: '2026-09-22'
+  practice_date: Laboratory containment experiment before publication
+  source_id: S05
+  ai_specific: true
+  source_format: Authored article
 practice_focus: coding-workflows
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 ---
 
 # Harper Reed
 
-[Open slideshow]({{ '/engineers/harper-reed/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/harper-reed/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
-## Research cache
+## Research map
 
-[Detailed guide](research.md) · [Common reward workflow](workflow.md) · [Source findings](sources.md) · [Slide notes](slides.md)
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
 
-Checked and cut off on **26 October 2026**. Public authored accounts and published artifacts were inspected, not executed. The latest pinned instruction file is not evidence that every real session follows it. Proposed reward examples and prompts are our adaptations.
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
 
@@ -151,119 +229,142 @@ Checked and cut off on **26 October 2026**. Public authored accounts and publish
 
 ### C01 · D01 · Goal and bottleneck
 
-**Inferred.** Build through explicit stages, then learn by inspecting each result.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Our synthesis of dated practitioner accounts, not a validated productivity model.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#approach-in-brief) · [Primary source](https://harper.blog/2025/04/17/an-llm-codegen-heros-journey/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c01)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** February 2025 greenfield work separates idea clarification from a prompt plan.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Historical personal workflow; not a universal requirement for extensive upfront specification.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#requirements-and-context) · [Primary source](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c02)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Demonstrated.** October 2026 published rules size planning effort to the change.
+**Demonstrated · Published artifact.** October 2026 published rules size planning effort to the change.
+
+Source format: Repository artifact. Published / revision: **2026-10-15**. Practice: Pinned revision; runtime compliance not observed.
 
 Inspected instruction artifact, not proof of runtime compliance or a universal size threshold.
 
-[Cached detail](research.md#planning-and-increments) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
+[Recent evidence](recent-ai.md#c03) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** May 2025 guidance advocates TDD, linting, and checks before committing.
+**Stated · Published artifact.** Published October instructions require verification and checks before claiming completion.
 
-Agent-written checks still need scrutiny; reported effectiveness is anecdotal.
+Source format: Repository artifact. Published / revision: **2026-10-15**. Practice: Pinned revision; runtime compliance not observed.
 
-[Cached detail](research.md#testing-and-feedback) · [Primary source](https://harper.blog/2025/05/08/basic-claude-code/)
+Artifact of intended agent behaviour; not an observed test-first session.
+
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Demonstrated.** Published instructions prefer small changes and readable, maintainable code.
+**Demonstrated · Published artifact.** Published instructions prefer small changes and readable, maintainable code.
+
+Source format: Repository artifact. Published / revision: **2026-10-15**. Practice: Pinned revision; runtime compliance not observed.
 
 Inspected October artifact; not an independently observed design-quality outcome.
 
-[Cached detail](research.md#design-and-refactoring) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
+[Recent evidence](recent-ai.md#c05) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Demonstrated.** Published instructions require actual verification before claiming completion.
+**Demonstrated · Published artifact.** Published instructions require actual verification before claiming completion.
+
+Source format: Repository artifact. Published / revision: **2026-10-15**. Practice: Pinned revision; runtime compliance not observed.
 
 Rules describe intended behaviour; full personal review execution remains unobserved.
 
-[Cached detail](research.md#human-review) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
+[Recent evidence](recent-ai.md#c06) · [Primary source](https://github.com/harperreed/dotfiles/blob/9b7fbb29d9e9835f29aae32544c1397a2ddde5ac/.claude/CLAUDE.md)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** January 2026 personal account uses multiple remote terminal sessions.
+**Stated · Personal use.** January 2026 personal account uses multiple remote terminal sessions.
+
+Source format: Authored article. Published / revision: **2026-01-05**. Practice: Remote-terminal workflow reported in January; exact session dates unknown.
 
 Session multiplexing does not establish a complete orchestrator or safe parallel writes.
 
-[Cached detail](research.md#autonomy-and-coordination) · [Primary source](https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/)
+[Recent evidence](recent-ai.md#c07) · [Primary source](https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** February 2025 plans and checklists preserve work across sessions.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Task records are distinct from durable application data and a complete current memory system.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#requirements-and-context) · [Primary source](https://harper.blog/2025/02/16/my-llm-codegen-workflow-atm/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c08)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** January 2026 self-report names Claude Code, Tailscale, Blink and tmux.
+**Stated · Personal use.** January 2026 self-report names Claude Code, Tailscale, Blink and tmux.
+
+Source format: Authored article. Published / revision: **2026-01-05**. Practice: Remote-terminal workflow reported in January; exact session dates unknown.
 
 Dated personal setup; no present installation or private configuration verified.
 
-[Cached detail](research.md#tools-and-setup) · [Primary source](https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/)
+[Recent evidence](recent-ai.md#c09) · [Primary source](https://harper.blog/2026/01/05/claude-code-is-better-on-your-phone/)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** April 2025 advice uses frequent commits as recovery checkpoints.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Not a complete production deployment or rollback policy.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#integration-and-release) · [Primary source](https://harper.blog/2025/04/10/waterfall-in-15-minutes-or-your-money-back/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c10)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Stated.** September 2026 experiment reports credential exposure through its environment.
+**Stated · Personal use.** September 2026 experiment reports credential exposure through its environment.
+
+Source format: Authored article. Published / revision: **2026-09-22**. Practice: Laboratory containment experiment before publication.
 
 A lab incident, not a recommended production policy or reproduced security audit.
 
-[Cached detail](research.md#boundaries-and-safeguards) · [Primary source](https://harper.blog/2026/09/22/break-away/)
+[Recent evidence](recent-ai.md#c11) · [Primary source](https://harper.blog/2026/09/22/break-away/)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Inferred.** Assess learning and usable outcomes rather than treating enthusiasm as a benchmark.
+**Stated · Personal use.** His September containment experiment reports unexpected credential exposure.
 
-Our synthesis; reported learning and speed do not establish comparative superiority.
+Source format: Authored article. Published / revision: **2026-09-22**. Practice: Laboratory containment experiment before publication.
 
-[Cached detail](research.md#evaluation-and-tradeoffs) · [Primary source](https://harper.blog/2025/04/17/an-llm-codegen-heros-journey/)
+One lab outcome; no measured productivity benefit or production safety guarantee.
 
+[Recent evidence](recent-ai.md#c12) · [Primary source](https://harper.blog/2026/09/22/break-away/)

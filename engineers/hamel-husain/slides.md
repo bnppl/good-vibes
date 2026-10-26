@@ -5,27 +5,28 @@ nav_order: 1
 nav_exclude: true
 last_updated: '2026-10-26'
 cache_schema: 1
-derived_from: engineers/hamel-husain/index.md
+derived_from: engineers/hamel-husain/recent-ai.md
 research_checked: '2026-10-26'
+evidence_since: '2025-10-01'
 ---
 
-# Hamel Husain — bite-sized ideas
+# Hamel Husain — recent AI evidence
 
-Derived from the cache checked on 26 October 2026. This deck concerns AI-product evaluation. Reward examples are our suggested adaptations, not a personal Husain coding-session demonstration.
+Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
 
-## Card 01
+## Card 09
 
-### The right target
+### A changed coding environment, alongside actual evaluator trials
 
-> **A model benchmark is not your product’s acceptance test.**
+> **AI assistance changed his development environment.**
 >
-> Husain’s product-evaluation work asks whether a particular application succeeds on its users’ tasks. General model scores answer a different question.
+> Personal use · publication / revision: 2026-01-18. In January he reports leaving nbdev for more conventional AI-assisted development, naming Amp, Cursor and Claude Code. September and October accounts separately report evaluator trials. His coding-tool choices, joint eval guidance and published evaluator skills supply different kinds of evidence.
 
-**In the wild:** Our reward lab checks the stored balance, not the model’s general reasoning score.
+**In the wild:** Reported coding-tool choices at publication; not October configuration.
 
-**Takeaway:** Name the system and outcome being evaluated.
+**Takeaway:** March 2024 and March 2025 guides remain background. A September 2026 modification does not make the whole October 2024 judge article newly published. The joint FAQ’s original-versus-revision chronology is uncertain; it stays dated guidance, not a fresh personal session.
 
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#approach-in-brief) · [Cached claim](index.md#c01)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md) · [Primary source](https://hamel.dev/blog/posts/ai-stack/index.html)
 
 ---
 
@@ -35,13 +36,13 @@ Derived from the cache checked on 26 October 2026. This deck concerns AI-product
 
 > **A rubric can hide a problem you have not noticed yet.**
 >
-> His September 2026 tool trial argues for examining data before committing to subjective criteria. That does not undo already agreed objective rules.
+> Personal use · publication / revision: 2026-09-30. His September trial finds problems with criteria fixed before inspecting representative data.
 
-**In the wild:** A earns ten points once is fixed intent; whether an explanation is misleading may need example review.
+**In the wild:** Reported trial with Isaac Flath before publication.
 
-**Takeaway:** Separate known obligations from criteria still being discovered.
+**Takeaway:** Reported trial with Isaac Flath; not every evaluator or model.
 
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#requirements-and-error-discovery) · [Cached claim](index.md#c02)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s11) · [Primary source](https://hamel.dev/blog/posts/claude-auto-evals/index.html)
 
 ---
 
@@ -51,13 +52,13 @@ Derived from the cache checked on 26 October 2026. This deck concerns AI-product
 
 > **Do not ask a language model whether ten equals ten.**
 >
-> The inspected code-eval skill assigns objective rules to code checks. A judge is for an interpretive criterion, not a substitute for an exact state observation.
+> Published artifact · publication / revision: 2026-09-24. Pinned code-eval guidance documents objective checks separately from subjective judge validation.
 
-**In the wild:** Read the actual balance after replay instead of grading a confident success message.
+**In the wild:** Pinned joint evaluator instructions; not an executed run.
 
-**Takeaway:** Use the simplest valid observation for the rule.
+**Takeaway:** An inspected instruction is evidence of a published design; execution and enforcement remain unverified.
 
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#testing-and-verification) · [Cached claim](sources.md#s10)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s10) · [Primary source](https://github.com/ai-evals-course/evals-skills/blob/80d5f7b0127c7572ed9e9339937adbfd7240ffeb/skills/write-code-eval/SKILL.md)
 
 ---
 
@@ -67,13 +68,13 @@ Derived from the cache checked on 26 October 2026. This deck concerns AI-product
 
 > **Your judge needs a test of its own.**
 >
-> Husain’s guide uses expert labels and critiques; the published validation recipe separates development from final assessment. A high aggregate agreement can conceal important errors.
+> Published artifact · publication / revision: 2026-09-24. Published evaluator instructions separate judge development from held-out validation.
 
-**In the wild:** Inspect both false acceptance and false rejection, with the positive class written down.
+**In the wild:** Pinned joint evaluator instructions; not an executed run.
 
-**Takeaway:** Validate the evaluator before trusting its verdicts.
+**Takeaway:** Pinned joint artifact; no validation run reproduced.
 
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#testing-and-verification) · [Cached claim](index.md#c04)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s09) · [Primary source](https://github.com/ai-evals-course/evals-skills/blob/80d5f7b0127c7572ed9e9339937adbfd7240ffeb/skills/validate-evaluator/SKILL.md)
 
 ---
 
@@ -83,13 +84,13 @@ Derived from the cache checked on 26 October 2026. This deck concerns AI-product
 
 > **A score is hard to challenge without the example.**
 >
-> His June 2026 product-design argument makes supporting evidence part of the review experience. It is guidance about verifiability, not a universal UI template.
+> Recommendation · publication / revision: 2026-06-29. Make AI outputs and supporting evidence easier for users and reviewers to verify.
 
-**In the wild:** Our suggested viewer shows the event, retained balance and explanation together.
+**In the wild:** AI-product reviewability guidance.
 
-**Takeaway:** Show what a reviewer needs to decide.
+**Takeaway:** June 2026 product-design advice; not a complete architecture or refactoring cadence for code generation.
 
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#design-and-refactoring) · [Cached claim](index.md#c05)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s06) · [Primary source](https://hamel.dev/blog/posts/eval-smell/)
 
 ---
 
@@ -99,13 +100,13 @@ Derived from the cache checked on 26 October 2026. This deck concerns AI-product
 
 > **The default cutoff is not a business decision.**
 >
-> Husain and Antaripa Saha’s October 2026 study investigates task-specific thresholds and calibration on 100 leasing traces. Its model results do not transfer automatically.
+> Personal use · publication / revision: 2026-10-20. The October 2026 joint study tunes task-specific decision thresholds and checks calibration alongside cost.
 
-**In the wild:** A different cost of missed failures can justify a different classifier tradeoff.
+**In the wild:** Joint study with Antaripa Saha; exact experiment dates unknown.
 
-**Takeaway:** Choose the tradeoff, then measure it on suitable data.
+**Takeaway:** Husain/Saha study on 100 traces, not universal default thresholds, calibrated probabilities, or a cross-engineer performance ranking.
 
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#evaluation-and-tradeoffs) · [Cached claim](index.md#c12)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s12) · [Primary source](https://hamel.dev/blog/posts/decision-model-evals/)
 
 ---
 
@@ -115,28 +116,12 @@ Derived from the cache checked on 26 October 2026. This deck concerns AI-product
 
 > **Published eval skills are not a private agent setup.**
 >
-> Husain and Shreya Shankar’s March/August 2026 publication shares product-evaluation skills. The September 2026 repository revision was inspected, not run.
+> Joint recommendation · publication / revision: 2026-03-02 (modified 2026-08-31). Joint eval skills let coding agents assist discovery and evaluator work; private coding-agent topology is not established.
 
-**In the wild:** A discovery helper can organise review; it does not own the product’s quality decision.
+**In the wild:** Joint skills announcement; not a private orchestration log.
 
-**Takeaway:** Keep shared guidance, personal practice and runtime evidence distinct.
+**Takeaway:** Husain/Shankar guidance and inspected repository, not an observed complete personal fleet or autonomous production permission.
 
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#agent-autonomy-and-coordination) · [Cached claim](index.md#c07)
-
----
-
-## Card 08
-
-### The boundary matters
-
-> **Read after restart before replaying the event.**
->
-> Suggested adaptation: the shared task observes persistence before resubmitting A. Otherwise losing all state and awarding A again could accidentally produce the expected ten.
-
-**In the wild:** 0 → A10 → replayA10 → restart/read10 → replayA10 → B20.
-
-**Takeaway:** Check persistence and duplicate identity separately.
-
-[Optional practice: common lab](workflow.md#first-practical-lab) · [Detailed evidence](workflow.md#the-fixed-task) · [Cached claim](workflow.md#step-1--establish-the-observation-path)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s07) · [Primary source](https://hamel.dev/blog/posts/evals-skills/)
 
 ---

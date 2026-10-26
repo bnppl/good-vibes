@@ -10,6 +10,8 @@ research_cutoff: '2026-10-26'
 research_checked: '2026-10-26'
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # Tools, provenance and setup boundaries
 
 | Tool | Relationship and inspected scope | What this establishes |

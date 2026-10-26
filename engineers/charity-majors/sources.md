@@ -10,6 +10,10 @@ title: Charity Majors — source findings
 nav_order: 3
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Charity Majors — source findings
 
 All records were inspected on **26 October 2026** through public original pages and extracted article text. Publication dates below are those shown by the pages. No full third-party text was archived. No runtime installation, private configuration, or paid book body was inspected.

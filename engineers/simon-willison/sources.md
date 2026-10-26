@@ -2,13 +2,17 @@
 title: Simon Willison — source findings
 parent: Simon Willison
 nav_order: 3
-last_updated: 2026-10-26
+last_updated: '2026-10-26'
 last_read: null
 status: unread
 research_cutoff: 2026-10-26
 research_checked: 2026-10-26
 cache_schema: 1
 ---
+
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
 
 # Source findings and research gaps
 
@@ -215,3 +219,11 @@ Recent discovery included his October archive before following the two original 
 ## Cache lineage
 
 Initial research: 2026-10-26. Slides were derived from this cache after research; their generation date does not represent additional external verification.
+
+<a id="s17"></a>
+
+## S17 — Writing about Agentic Engineering Patterns
+
+Author: Simon Willison. Published: 2026-02-23. Inspected: 2026-10-26.
+
+[Original](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/). Establishes guide launch, the first two chapters, and reported Claude Code use on its publishing infrastructure. Launch date is not the exact date of every living chapter.

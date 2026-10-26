@@ -9,26 +9,27 @@ research_checked: '2026-10-26'
 cache_schema: 1
 nav_order: 1
 nav_exclude: true
-derived_from: engineers/armin-ronacher/research.md
+derived_from: engineers/armin-ronacher/recent-ai.md
+evidence_since: '2025-10-01'
 ---
 
-# Armin Ronacher — bite-sized ideas
+# Armin Ronacher — recent AI use
 
-Derived from the research cache checked on 26 October 2026. Dates and evidence qualifications remain part of each idea. Worked examples are suggested adaptations.
+Publications since 1 October 2025. Source dates and evidence kinds appear on each card. [Earlier cards and principles](background.md) remain outside this feed.
 
-## Card 01
+## Card 09
 
-### Tool feedback
+### Porting MiniJinja, then composing tools in Pi
 
-> **The agent cannot fix an error it cannot see.**
+> **Porting and maintenance earned different levels of trust.**
 >
-> Ronacher’s 2025 recommendations favour fast tools, readable errors and accessible logs. That is dated guidance about the feedback environment, not proof of a universal productivity effect.
+> Personal use · published 2026-06-23. In June 2026 Ronacher reports successful loop-assisted porting of MiniJinja to Go while describing difficulties accepting unattended long-lived code. In October he publishes examples from his own Pi sessions using Codemode to compose operations, alongside an explanation of the harness/execution boundary.
 
-**In the wild:** Our reward exercise records whether A was newly accepted and what balance the application actually holds.
+**In the wild:** Practice period: Loop experiments before publication; exact dates not stated.
 
-**Takeaway:** Make the failure observable before adding orchestration.
+**Takeaway:** Distinguish the reported work from a complete daily workflow.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#techniques-and-principles) · [Cached claims](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://lucumr.pocoo.org/2026/6/23/the-coming-loop/)
 
 ---
 
@@ -38,13 +39,13 @@ Derived from the research cache checked on 26 October 2026. Dates and evidence q
 
 > **A plan is easier to challenge when you can edit it.**
 >
-> His December 2025 preference is conversational clarification and a visible Markdown handoff. This is not a universal rejection of other planning interfaces or executable tests.
+> Personal use · published 2025-12-17. His December 2025 preference is conversational clarification and a visible Markdown handoff. This is not a universal rejection of other planning interfaces or executable tests.
 
-**In the wild:** Our handoff lists the reward rule, relevant files, open questions and observed checks.
+**In the wild:** Reported preference: conversational planning with a Markdown handoff he can inspect and edit.
 
 **Takeaway:** Keep requirements distinct from speculative design.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#requirements-and-planning) · [Cached claims](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://lucumr.pocoo.org/2025/12/17/what-is-plan-mode/)
 
 ---
 
@@ -54,13 +55,13 @@ Derived from the research cache checked on 26 October 2026. Dates and evidence q
 
 > **A running loop is not the same as a maintainable result.**
 >
-> In June 2026 he separates useful bounded loops from difficulties with unattended long-lived code. The distinction concerns task and outcome, not a blanket rejection of agents.
+> Personal use · published 2026-06-23. In June 2026 he separates useful bounded loops from difficulties with unattended long-lived code. The distinction concerns task and outcome, not a blanket rejection of agents.
 
-**In the wild:** Our suggested review asks a person to explain why replaying A cannot add points again.
+**In the wild:** Reported contrast: loop-assisted MiniJinja-to-Go porting helped; unattended long-lived code remained harder to accept.
 
 **Takeaway:** Judge the artifact, not how long the machine stayed busy.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#human-role-and-coordination) · [Cached claims](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://lucumr.pocoo.org/2026/6/23/the-coming-loop/)
 
 ---
 
@@ -70,13 +71,13 @@ Derived from the research cache checked on 26 October 2026. Dates and evidence q
 
 > **January’s tool description can be wrong by October.**
 >
-> His January Pi article and October Codemode account describe different capabilities. The cache keeps those dates attached rather than inventing one timeless personal stack.
+> Personal use · published 2026-10-06. His January Pi article and October Codemode account describe different capabilities. The cache keeps those dates attached rather than inventing one timeless personal stack.
 
-**In the wild:** A historical absence of built-in MCP is not a current claim about Pi 1.0.
+**In the wild:** Authored October account: Pi’s Codemode can compose MCP operations. This supersedes an assumption drawn from the January tool description.
 
 **Takeaway:** Compare tools at compatible dates.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#tools-and-setup) · [Cached claims](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://lucumr.pocoo.org/2026/10/6/codemode/)
 
 ---
 
@@ -86,13 +87,13 @@ Derived from the research cache checked on 26 October 2026. Dates and evidence q
 
 > **A toy prompt can miss the failure your real session produces.**
 >
-> His July 2026 tool-schema investigation reports history-dependent malformed calls. The proposed explanation about training remains a hypothesis, not verified provider internals.
+> Personal use · published 2026-07-04. His July 2026 tool-schema investigation reports history-dependent malformed calls. The proposed explanation about training remains a hypothesis, not verified provider internals.
 
-**In the wild:** Our diagnostic bundle keeps the actual failing invocation and the relevant session conditions.
+**In the wild:** Reported investigation: a tool-schema failure depended on the real session history, not just a minimal prompt.
 
 **Takeaway:** Reproduce the integration before ranking the model.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#verification-and-design) · [Cached claims](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/)
 
 ---
 
@@ -102,13 +103,13 @@ Derived from the research cache checked on 26 October 2026. Dates and evidence q
 
 > **The machinery did it. You still own the action.**
 >
-> Ronacher’s accountability position keeps responsibility with the human or organisation deploying the tool. That principle does not specify one immutable review checklist.
+> Commentary · published 2026-05-26. Ronacher’s accountability position keeps responsibility with the human or organisation deploying the tool. That principle does not specify one immutable review checklist.
 
-**In the wild:** Before accepting our reward patch, a person checks the changed state rule and its evidence.
+**In the wild:** Authored argument: human and organisational accountability remains even when a tool performs an action.
 
 **Takeaway:** Delegate work without delegating ownership.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#human-role-and-coordination) · [Cached claims](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://lucumr.pocoo.org/2026/5/26/clankers/)
 
 ---
 
@@ -118,28 +119,12 @@ Derived from the research cache checked on 26 October 2026. Dates and evidence q
 
 > **A sandbox around the shell is not the whole harness.**
 >
-> October’s architecture account distinguishes harness trust from execution isolation. This is not a safety guarantee or complete permission policy.
+> Personal use · published 2026-10-06. October’s architecture account distinguishes harness trust from execution isolation. This is not a safety guarantee or complete permission policy.
 
-**In the wild:** Our setup review asks which operations occur on each side of the boundary.
+**In the wild:** Published architecture: Codemode operates in the harness, distinct from the target execution environment.
 
 **Takeaway:** Inspect actual capabilities, not just a sandbox label.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#boundaries-and-safeguards) · [Cached claims](index.md#comparison-evidence)
-
----
-
-## Card 08
-
-### The common test
-
-> **Read after restart before you replay.**
->
-> In our shared exercise, combining restart and replay can hide lost state: A is simply rewarded again. This is a suggested adaptation, not a Ronacher demonstration.
-
-**In the wild:** A gives 10; restart then read must still show 10; only then replay A and check it stays 10.
-
-**Takeaway:** Separate persistence from duplicate detection.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#first-practical-lab) · [Cached claims](index.md#comparison-evidence)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://lucumr.pocoo.org/2026/10/6/codemode/)
 
 ---

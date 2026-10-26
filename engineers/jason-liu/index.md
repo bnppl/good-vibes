@@ -9,144 +9,219 @@ person_id: jason-liu
 canonical_name: Jason Liu
 aliases:
 - jxnl
-practice_focus: ai-systems
-focus_note: Retrieval, model and product evaluation are distinct from a documented personal coding-agent workflow.
+practice_focus: mixed
+focus_note: Recent personal coding-tool/workflow accounts coexist with AI-product engineering guidance. Each claim
+  retains its own subject and source.
 research_cutoff: '2026-10-26'
 research_checked: '2026-10-26'
 last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Find the failing boundary. Measure the useful outcome.
-summary: 'A measurement-led approach to RAG and agent applications: diagnose components, expose context clearly
-  and iterate on evidence. Private coding practices remain separate from published product guidance.'
+summary: Durable Codex workstreams and a test-bounded port trial. Personal trials, recommendations and unknowns
+  are dated separately.
 strengths:
 - Retrieval diagnosis
 - Context interfaces
 - Product feedback
-tools_summary: Instructor authorship; living 2024 tutorials inspected in 2026; September 2025 agent-prototyping
-  guidance. Complete present private setup unknown.
+tools_summary: 'May/June 2026: Codex workstreams, explicit versioned memory, voice input and browser review; full
+  October stack unknown.'
 slides_url: /engineers/jason-liu/learn/
 dimensions:
 - id: D01
   title: Goal and bottleneck
-  position: His May 2024 RAG guidance diagnoses retrieval before changing generation.
+  position: He describes durable workstreams that continue beyond one prompt.
   evidence: Stated
   claim: C01
-  detail: research.md#approach-in-brief
-  source: https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/
+  detail: recent-ai.md#c01
+  source: https://jxnl.co/writing/2026/05/10/codex-maxxing/
   checked: '2026-10-26'
-  qualification: Application advice based on consulting; not a universal coding bottleneck or controlled speed result.
+  qualification: Personal account; no productivity benchmark.
+  evidence_kind: Personal use
+  published: '2026-05-10'
+  practice_date: Workstream and Rich-port trial accounts; exact run dates not established
+  source_id: S15
+  ai_specific: true
+  source_format: Authored article
 - id: D02
   title: Requirements and specification
-  position: His January 2025 blueprint separates information gaps from capability gaps.
+  position: He uses browser annotations to specify changes on the artifact itself.
   evidence: Stated
   claim: C02
-  detail: research.md#requirements-inventory-is-different-from-capability
-  source: https://jxnl.co/writing/2025/01/24/systematically-improving-rag-applications/
+  detail: recent-ai.md#c02
+  source: https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/
   checked: '2026-10-26'
-  qualification: AI-product requirements and segmentation; not a complete personal coding specification format.
+  qualification: Visual workflow example, not a universal requirements format.
+  evidence_kind: Personal use
+  published: '2026-06-16'
+  practice_date: Reported cross-tool and browser workflows; exact session dates unknown
+  source_id: S16
+  ai_specific: true
+  source_format: Authored article
 - id: D03
   title: Increment and planning
-  position: September 2025 guidance prototypes a bounded agent capability before infrastructure.
+  position: Pinned threads retain continuity across recurring workstreams.
   evidence: Stated
   claim: C03
-  detail: research.md#planning-prove-one-bounded-capability-first
-  source: https://jxnl.co/writing/2025/09/04/context-engineering-rapid-agent-prototyping/
+  detail: recent-ai.md#c03
+  source: https://jxnl.co/writing/2026/05/10/codex-maxxing/
   checked: '2026-10-26'
-  qualification: A passing scenario is narrow feasibility evidence, not production reliability or a fixed personal
-    cadence.
+  qualification: Self-report, not a fixed code increment size.
+  evidence_kind: Personal use
+  published: '2026-05-10'
+  practice_date: Workstream and Rich-port trial accounts; exact run dates not established
+  source_id: S15
+  ai_specific: true
+  source_format: Authored article
 - id: D04
   title: Testing and verification
-  position: His May 2025 RAG framework distinguishes retrieval and question/context/answer relationships.
+  position: His Rich-to-Rust trial uses the original tests as the completion criterion.
   evidence: Stated
   claim: C04
-  detail: research.md#evaluation-name-the-relationship
-  source: https://jxnl.co/writing/2025/05/19/there-are-only-6-rag-evals/
+  detail: recent-ai.md#c04
+  source: https://jxnl.co/writing/2026/05/10/codex-maxxing/
   checked: '2026-10-26'
-  qualification: Product evaluation, not a unit-TDD policy; exhaustive framing and judge effectiveness are not independently
-    proven here.
+  qualification: Reported goal and verification design; successful migration is not established.
+  evidence_kind: Personal use
+  published: '2026-05-10'
+  practice_date: Workstream and Rich-port trial accounts; exact run dates not established
+  source_id: S15
+  ai_specific: true
+  source_format: Authored article
 - id: D05
   title: Design and refactoring
-  position: November 2024 guidance separates topic coverage from processing capabilities.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C05
-  detail: research.md#diagnose-a-component-without-forgetting-the-user
-  source: https://jxnl.co/writing/2024/11/18/decomposing-rag-systems-to-identify-bottlenecks/
+  detail: recent-ai.md#c05
+  source: ''
   checked: '2026-10-26'
-  qualification: Modular AI-application diagnosis; no mandatory personal refactoring cadence established.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D06
   title: Human understanding and review
-  position: May 2024 feedback guidance names the quality being judged.
+  position: He reports reviewing visual artifacts with contextual browser annotations.
   evidence: Stated
   claim: C06
-  detail: research.md#match-feedback-to-the-decision
-  source: https://jxnl.co/writing/2024/05/11/low-hanging-fruit-for-rag-search/
+  detail: recent-ai.md#c06
+  source: https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/
   checked: '2026-10-26'
-  qualification: User/product feedback is not a documented private code-review ritual.
+  qualification: Review workflow; no exhaustive code-review policy established.
+  evidence_kind: Personal use
+  published: '2026-06-16'
+  practice_date: Reported cross-tool and browser workflows; exact session dates unknown
+  source_id: S16
+  ai_specific: true
+  source_format: Authored article
 - id: D07
   title: Agent autonomy and coordination
-  position: August 2025 guidance isolates noisy reads in subagents; January 2026 update dates interface changes.
+  position: He reports recurring threads that respond to incoming feedback.
   evidence: Stated
   claim: C07
-  detail: research.md#coordination-isolate-the-noisy-work
-  source: https://jxnl.co/writing/2025/08/29/context-engineering-slash-commands-subagents/
+  detail: recent-ai.md#c07
+  source: https://jxnl.co/writing/2026/05/10/codex-maxxing/
   checked: '2026-10-26'
-  qualification: Transferable context design, not a complete personal swarm topology or guaranteed token saving.
+  qualification: Specific cross-tool loops; no general multi-agent topology established.
+  evidence_kind: Personal use
+  published: '2026-05-10'
+  practice_date: Workstream and Rich-port trial accounts; exact run dates not established
+  source_id: S15
+  ai_specific: true
+  source_format: Authored article
 - id: D08
   title: Context and durable state
-  position: August 2025 tool-response guidance exposes source metadata and facets.
+  position: He keeps explicit memory in a versioned Obsidian vault.
   evidence: Stated
   claim: C08
-  detail: research.md#context-is-an-interface
-  source: https://jxnl.co/writing/2025/08/27/facets-context-engineering/
+  detail: recent-ai.md#c08
+  source: https://jxnl.co/writing/2026/05/10/codex-maxxing/
   checked: '2026-10-26'
-  qualification: Context presentation is not evidence of a private durable-memory store or application persistence.
+  qualification: Authored self-report, not an independently inspected vault.
+  evidence_kind: Personal use
+  published: '2026-05-10'
+  practice_date: Workstream and Rich-port trial accounts; exact run dates not established
+  source_id: S15
+  ai_specific: true
+  source_format: Authored article
 - id: D09
   title: Tooling and environment
-  position: Authored Instructor tutorials publish structured relevance-judgment examples.
-  evidence: Demonstrated
+  position: He reports Codex with voice input and meeting transcripts.
+  evidence: Stated
   claim: C09
-  detail: research.md#tools-and-setup
-  source: https://python.useinstructor.com/blog/2024/10/23/building-an-llm-based-reranker-for-your-rag-pipeline/
+  detail: recent-ai.md#c09
+  source: https://jxnl.co/writing/2026/05/10/codex-maxxing/
   checked: '2026-10-26'
-  qualification: Inspected code artifact, not executed. Living snippets are not an immutable historical or verified
-    current setup.
+  qualification: Dated personal account, not a complete present stack.
+  evidence_kind: Personal use
+  published: '2026-05-10'
+  practice_date: Workstream and Rich-port trial accounts; exact run dates not established
+  source_id: S15
+  ai_specific: true
+  source_format: Authored article
 - id: D10
   title: Integration and release
-  position: His August 2024 product playbook links evaluation to production observations and iteration.
+  position: He keeps approval before posting, submitting or changing accounts.
   evidence: Stated
   claim: C10
-  detail: research.md#a-feature-from-idea-to-release
-  source: https://jxnl.co/writing/2024/08/19/rag-flywheel/
+  detail: recent-ai.md#c10
+  source: https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/
   checked: '2026-10-26'
-  qualification: AI-product lifecycle advice; complete personal Git/CI/deployment/rollback policy remains unknown.
+  qualification: Cross-app action boundary; a complete software release pipeline remains unknown.
+  evidence_kind: Personal use
+  published: '2026-06-16'
+  practice_date: Reported cross-tool and browser workflows; exact session dates unknown
+  source_id: S16
+  ai_specific: true
+  source_format: Authored article
 - id: D11
   title: Boundaries and safeguards
-  position: September 2025 application guidance starts deterministic and bounds tool loops.
+  position: His published routing instructions reserve consequential actions for approval.
   evidence: Stated
   claim: C11
-  detail: research.md#boundaries-and-safeguards
-  source: https://jxnl.co/writing/2025/09/04/context-engineering-agent-frameworks-and-form-factors/
+  detail: recent-ai.md#c11
+  source: https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/
   checked: '2026-10-26'
-  qualification: Stopping/cost advice is not a verified private permission, sandbox or protected-test policy.
+  qualification: Self-reported instruction policy; enforcement was not inspected.
+  evidence_kind: Personal use
+  published: '2026-06-16'
+  practice_date: Reported cross-tool and browser workflows; exact session dates unknown
+  source_id: S16
+  ai_specific: true
+  source_format: Authored article
 - id: D12
   title: Evaluation and tradeoffs
-  position: August 2024 tool-selection advice weighs coverage, usage and added latency.
+  position: He values continuity while recognising context and cache costs.
   evidence: Stated
   claim: C12
-  detail: research.md#evaluation-and-tradeoffs
-  source: https://jxnl.co/writing/2024/08/21/trade-off-tool-selection/
+  detail: recent-ai.md#c12
+  source: https://jxnl.co/writing/2026/05/10/codex-maxxing/
   checked: '2026-10-26'
-  qualification: Usage distributions are heuristics; no guaranteed recall floor or comparative superiority established.
+  qualification: Personal tradeoff; no measured comparison.
+  evidence_kind: Personal use
+  published: '2026-05-10'
+  practice_date: Workstream and Rich-port trial accounts; exact run dates not established
+  source_id: S15
+  ai_specific: true
+  source_format: Authored article
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 ---
 
 # Jason Liu
 
-[Open slideshow]({{ '/engineers/jason-liu/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/jason-liu/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
-[Detailed research](research.md) · [Common reward workflow](workflow.md) · [Source findings](sources.md) · [Slide notes](slides.md)
+## Research map
 
-Research checked and cut off on **26 October 2026**. This profile primarily concerns building AI systems. Deterministic software tests, retrieval evaluation and model-output quality are separate subjects. The common reward workflow is our adaptation, not a Liu demonstration.
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
+
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
 
@@ -154,119 +229,142 @@ Research checked and cut off on **26 October 2026**. This profile primarily conc
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** His May 2024 RAG guidance diagnoses retrieval before changing generation.
+**Stated · Personal use.** He describes durable workstreams that continue beyond one prompt.
 
-Application advice based on consulting; not a universal coding bottleneck or controlled speed result.
+Source format: Authored article. Published / revision: **2026-05-10**. Practice: Workstream and Rich-port trial accounts; exact run dates not established.
 
-[Cached detail](research.md#approach-in-brief) · [Primary source](https://jxnl.co/writing/2024/05/22/systematically-improving-your-rag/)
+Personal account; no productivity benchmark.
+
+[Recent evidence](recent-ai.md#c01) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** His January 2025 blueprint separates information gaps from capability gaps.
+**Stated · Personal use.** He uses browser annotations to specify changes on the artifact itself.
 
-AI-product requirements and segmentation; not a complete personal coding specification format.
+Source format: Authored article. Published / revision: **2026-06-16**. Practice: Reported cross-tool and browser workflows; exact session dates unknown.
 
-[Cached detail](research.md#requirements-inventory-is-different-from-capability) · [Primary source](https://jxnl.co/writing/2025/01/24/systematically-improving-rag-applications/)
+Visual workflow example, not a universal requirements format.
+
+[Recent evidence](recent-ai.md#c02) · [Primary source](https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** September 2025 guidance prototypes a bounded agent capability before infrastructure.
+**Stated · Personal use.** Pinned threads retain continuity across recurring workstreams.
 
-A passing scenario is narrow feasibility evidence, not production reliability or a fixed personal cadence.
+Source format: Authored article. Published / revision: **2026-05-10**. Practice: Workstream and Rich-port trial accounts; exact run dates not established.
 
-[Cached detail](research.md#planning-prove-one-bounded-capability-first) · [Primary source](https://jxnl.co/writing/2025/09/04/context-engineering-rapid-agent-prototyping/)
+Self-report, not a fixed code increment size.
+
+[Recent evidence](recent-ai.md#c03) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** His May 2025 RAG framework distinguishes retrieval and question/context/answer relationships.
+**Stated · Personal use.** His Rich-to-Rust trial uses the original tests as the completion criterion.
 
-Product evaluation, not a unit-TDD policy; exhaustive framing and judge effectiveness are not independently proven here.
+Source format: Authored article. Published / revision: **2026-05-10**. Practice: Workstream and Rich-port trial accounts; exact run dates not established.
 
-[Cached detail](research.md#evaluation-name-the-relationship) · [Primary source](https://jxnl.co/writing/2025/05/19/there-are-only-6-rag-evals/)
+Reported goal and verification design; successful migration is not established.
+
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Stated.** November 2024 guidance separates topic coverage from processing capabilities.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Modular AI-application diagnosis; no mandatory personal refactoring cadence established.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#diagnose-a-component-without-forgetting-the-user) · [Primary source](https://jxnl.co/writing/2024/11/18/decomposing-rag-systems-to-identify-bottlenecks/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c05)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** May 2024 feedback guidance names the quality being judged.
+**Stated · Personal use.** He reports reviewing visual artifacts with contextual browser annotations.
 
-User/product feedback is not a documented private code-review ritual.
+Source format: Authored article. Published / revision: **2026-06-16**. Practice: Reported cross-tool and browser workflows; exact session dates unknown.
 
-[Cached detail](research.md#match-feedback-to-the-decision) · [Primary source](https://jxnl.co/writing/2024/05/11/low-hanging-fruit-for-rag-search/)
+Review workflow; no exhaustive code-review policy established.
+
+[Recent evidence](recent-ai.md#c06) · [Primary source](https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** August 2025 guidance isolates noisy reads in subagents; January 2026 update dates interface changes.
+**Stated · Personal use.** He reports recurring threads that respond to incoming feedback.
 
-Transferable context design, not a complete personal swarm topology or guaranteed token saving.
+Source format: Authored article. Published / revision: **2026-05-10**. Practice: Workstream and Rich-port trial accounts; exact run dates not established.
 
-[Cached detail](research.md#coordination-isolate-the-noisy-work) · [Primary source](https://jxnl.co/writing/2025/08/29/context-engineering-slash-commands-subagents/)
+Specific cross-tool loops; no general multi-agent topology established.
+
+[Recent evidence](recent-ai.md#c07) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** August 2025 tool-response guidance exposes source metadata and facets.
+**Stated · Personal use.** He keeps explicit memory in a versioned Obsidian vault.
 
-Context presentation is not evidence of a private durable-memory store or application persistence.
+Source format: Authored article. Published / revision: **2026-05-10**. Practice: Workstream and Rich-port trial accounts; exact run dates not established.
 
-[Cached detail](research.md#context-is-an-interface) · [Primary source](https://jxnl.co/writing/2025/08/27/facets-context-engineering/)
+Authored self-report, not an independently inspected vault.
+
+[Recent evidence](recent-ai.md#c08) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Demonstrated.** Authored Instructor tutorials publish structured relevance-judgment examples.
+**Stated · Personal use.** He reports Codex with voice input and meeting transcripts.
 
-Inspected code artifact, not executed. Living snippets are not an immutable historical or verified current setup.
+Source format: Authored article. Published / revision: **2026-05-10**. Practice: Workstream and Rich-port trial accounts; exact run dates not established.
 
-[Cached detail](research.md#tools-and-setup) · [Primary source](https://python.useinstructor.com/blog/2024/10/23/building-an-llm-based-reranker-for-your-rag-pipeline/)
+Dated personal account, not a complete present stack.
+
+[Recent evidence](recent-ai.md#c09) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** His August 2024 product playbook links evaluation to production observations and iteration.
+**Stated · Personal use.** He keeps approval before posting, submitting or changing accounts.
 
-AI-product lifecycle advice; complete personal Git/CI/deployment/rollback policy remains unknown.
+Source format: Authored article. Published / revision: **2026-06-16**. Practice: Reported cross-tool and browser workflows; exact session dates unknown.
 
-[Cached detail](research.md#a-feature-from-idea-to-release) · [Primary source](https://jxnl.co/writing/2024/08/19/rag-flywheel/)
+Cross-app action boundary; a complete software release pipeline remains unknown.
+
+[Recent evidence](recent-ai.md#c10) · [Primary source](https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Stated.** September 2025 application guidance starts deterministic and bounds tool loops.
+**Stated · Personal use.** His published routing instructions reserve consequential actions for approval.
 
-Stopping/cost advice is not a verified private permission, sandbox or protected-test policy.
+Source format: Authored article. Published / revision: **2026-06-16**. Practice: Reported cross-tool and browser workflows; exact session dates unknown.
 
-[Cached detail](research.md#boundaries-and-safeguards) · [Primary source](https://jxnl.co/writing/2025/09/04/context-engineering-agent-frameworks-and-form-factors/)
+Self-reported instruction policy; enforcement was not inspected.
+
+[Recent evidence](recent-ai.md#c11) · [Primary source](https://jxnl.co/writing/2026/06/16/three-ways-codex-can-use-a-computer/)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Stated.** August 2024 tool-selection advice weighs coverage, usage and added latency.
+**Stated · Personal use.** He values continuity while recognising context and cache costs.
 
-Usage distributions are heuristics; no guaranteed recall floor or comparative superiority established.
+Source format: Authored article. Published / revision: **2026-05-10**. Practice: Workstream and Rich-port trial accounts; exact run dates not established.
 
-[Cached detail](research.md#evaluation-and-tradeoffs) · [Primary source](https://jxnl.co/writing/2024/08/21/trade-off-tool-selection/)
+Personal tradeoff; no measured comparison.
 
+[Recent evidence](recent-ai.md#c12) · [Primary source](https://jxnl.co/writing/2026/05/10/codex-maxxing/)

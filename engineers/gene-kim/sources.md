@@ -10,6 +10,10 @@ research_checked: '2026-10-26'
 cache_schema: 1
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # Gene Kim — source findings
 
 [Profile](index.md) · [Research](research.md) · [Worked example](workflow.md)
@@ -149,3 +153,7 @@ Dates of historical project reports remain visible. No first-person source inspe
 ## Comparability audit
 
 26 October 2026: cache-only review clarified material dates, personal versus joint or published-artifact evidence, and compact comparison wording. Claim IDs, slide IDs, source verification dates and unknowns were preserved. No fresh source research or runtime tool execution was performed.
+
+## S09 expanded inspection — January 2026 interview
+
+The public transcript was revisited on 26 October 2026, including the feedback-loop and project-account sections. It distinguishes his discretionary commit policy from Yegge’s, reports merge contention and alternative exploration, and recounts a Trello API investigation. The episode publication date is not the date of those projects. Puppeteer is attributed to Yegge in that example, not silently assigned to Kim.

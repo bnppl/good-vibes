@@ -11,15 +11,15 @@ status: unread
 
 The first five entries, in order, from **ai-engineering-top-20.md**, prepared on 26 October 2026. This follows the shortlist's table order, rather than its separate suggested deep-dive sequence. The shortlist describes its order as suggested usefulness for studying AI-assisted development, not a definitive ranking of engineering ability.
 
-Each study keeps detailed research and source findings alongside bite-sized slides. The comparison cards use the same cache and D01–D12 dimensions.
+The current comparison prioritises AI-specific publications since October 2025; publication and practice dates stay separate. Each study keeps detailed research and source findings alongside bite-sized slides. The comparison cards use the same cache and D01–D12 dimensions.
 
 | List position | Engineer | Detailed research | Slides |
 |---|---|---|---|
-| 1 | [Simon Willison](simon-willison/index.md) | [Research](simon-willison/research.md) · [Sources](simon-willison/sources.md) | [Open deck]({{ '/engineers/simon-willison/learn/' | relative_url }}) |
-| 2 | [Birgitta Böckeler](birgitta-bockeler/index.md) | [Research](birgitta-bockeler/research.md) · [Sources](birgitta-bockeler/sources.md) | [Open deck]({{ '/engineers/birgitta-bockeler/learn/' | relative_url }}) |
-| 3 | [Dave Farley](dave-farley/index.md) | [Research](dave-farley/research.md) · [Sources](dave-farley/sources.md) | [Open deck]({{ '/engineers/dave-farley/learn/' | relative_url }}) |
-| 4 | [Kent Beck](kent-beck/index.md) | [Research](kent-beck/research.md) · [Sources](kent-beck/sources.md) | [Open deck]({{ '/engineers/kent-beck/learn/' | relative_url }}) |
-| 5 | [Addy Osmani](addy-osmani/index.md) | [Research](addy-osmani/research.md) · [Sources](addy-osmani/sources.md) | [Open deck]({{ '/engineers/addy-osmani/learn/' | relative_url }}) |
+| 1 | [Simon Willison](simon-willison/index.md) | [Research](simon-willison/recent-ai.md) · [Sources](simon-willison/sources.md) | [Open deck]({{ '/engineers/simon-willison/learn/' | relative_url }}) |
+| 2 | [Birgitta Böckeler](birgitta-bockeler/index.md) | [Research](birgitta-bockeler/recent-ai.md) · [Sources](birgitta-bockeler/sources.md) | [Open deck]({{ '/engineers/birgitta-bockeler/learn/' | relative_url }}) |
+| 3 | [Dave Farley](dave-farley/index.md) | [Research](dave-farley/recent-ai.md) · [Sources](dave-farley/sources.md) | [Open deck]({{ '/engineers/dave-farley/learn/' | relative_url }}) |
+| 4 | [Kent Beck](kent-beck/index.md) | [Research](kent-beck/recent-ai.md) · [Sources](kent-beck/sources.md) | [Open deck]({{ '/engineers/kent-beck/learn/' | relative_url }}) |
+| 5 | [Addy Osmani](addy-osmani/index.md) | [Research](addy-osmani/recent-ai.md) · [Sources](addy-osmani/sources.md) | [Open deck]({{ '/engineers/addy-osmani/learn/' | relative_url }}) |
 
 [Open the comparison cards]({{ '/engineers/compare/' | relative_url }}){: .btn .btn-primary }
 

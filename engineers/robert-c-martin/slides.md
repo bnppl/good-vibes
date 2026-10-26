@@ -6,12 +6,29 @@ nav_exclude: true
 last_updated: '2026-10-26'
 research_checked: '2026-10-26'
 cache_schema: 1
-derived_from: engineers/robert-c-martin/index.md
+derived_from: engineers/robert-c-martin/recent-ai.md
+evidence_since: '2025-10-01'
 ---
 
-# Robert C. Martin — bite-sized ideas
+# Robert C. Martin — recent AI evidence
 
-Derived from the cache checked on 26 October 2026. Worked reward examples are suggested adaptations. Paid video descriptions establish teaching scope, not demonstrations observed in this research.
+Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
+
+## Card 09
+
+### September supervision supersedes the custom-harness story
+
+> **His September account changes the custom-harness story.**
+>
+> Personal use · publication / revision: 2026-09-24. The September interview page describes terminal-based supervision, occasional code inspection and a move away from a custom harness. Unit tests, complexity/coverage signals and mutation checks remain, with relaxed constraints. September SwarmForge files remain useful historical artifacts, not his verified current setup.
+
+**In the wild:** Interview-page account of then-current practice; full recording not checked.
+
+**Takeaway:** The interview page was inspected; the full recording was not independently checked. Robert/Justin episode descriptions are joint teaching outlines. The 2012 architecture and 2014/2016 test essays cannot fill recent AI-specific gaps.
+
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md) · [Primary source](https://www.aviator.co/podcast/uncle-bob-martin-ai-clean-code)
+
+---
 
 ## Card 01
 
@@ -19,13 +36,13 @@ Derived from the cache checked on 26 October 2026. Worked reward examples are su
 
 > **The human needs something better than a success message.**
 >
-> The joint Clean AI outline proposes a higher-level source document humans can review. The advertised cross-platform exercise was not watched here.
+> Personal use · publication / revision: 2026-09-24. In September he describes human-authored or reviewed Gherkin for elaborate behaviour.
 
-**In the wild:** Our reward contract says once per submission ID, including after restart.
+**In the wild:** Interview-page account of then-current practice; full recording not checked.
 
-**Takeaway:** Make intended behaviour inspectable before implementation.
+**Takeaway:** Interview-page self-report; not a mandatory format for every task.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#start-with-a-source-humans-can-review) · [Cached claim](index.md#c02)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s13) · [Primary source](https://www.aviator.co/podcast/uncle-bob-martin-ai-clean-code)
 
 ---
 
@@ -35,29 +52,13 @@ Derived from the cache checked on 26 October 2026. Worked reward examples are su
 
 > **Running a line is not the same as testing its meaning.**
 >
-> Martin's 2016 mutation article distinguishes execution coverage from detection of a changed outcome. Missing requirements still need attention.
+> Personal use · publication / revision: 2026-09-24. In September he reports unit tests, CRAP and mutation checks with relaxed constraints.
 
-**In the wild:** Our suggested check forgets accepted IDs after restart and tests whether replay is wrongly rewarded.
+**In the wild:** Interview-page account of then-current practice; full recording not checked.
 
-**Takeaway:** Challenge the detector, not just its coverage report.
+**Takeaway:** Self-report; metric thresholds evolve and no results were reproduced.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#challenge-assertions-rather-than-worship-coverage) · [Cached claim](index.md#c04)
-
----
-
-## Card 03
-
-### Behaviour and structure
-
-> **“It works” leaves another engineering question open.**
->
-> His 2014 TDD account separates fine test-first work, refactoring, and wider architectural feedback. Historical advice is not a verified current agent micro-cadence.
-
-**In the wild:** Our exercise keeps replay semantics separate from an extraction that clarifies persistence.
-
-**Takeaway:** Ask what changed and what should remain invariant.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#keep-test-first-design-separate-from-larger-feedback) · [Cached claim](index.md#c03)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s13) · [Primary source](https://www.aviator.co/podcast/uncle-bob-martin-ai-clean-code)
 
 ---
 
@@ -67,13 +68,13 @@ Derived from the cache checked on 26 October 2026. Worked reward examples are su
 
 > **The rule should not disappear inside the plumbing.**
 >
-> The historical Clean Architecture article separates business policy from external mechanisms. It does not require exactly four tiers.
+> Personal use · publication / revision: 2026-09-24. He reports relaxing structural constraints when agents remain coherent.
 
-**In the wild:** Our reviewer traces submission identity and the successful durable points update through the existing boundary.
+**In the wild:** Interview-page account of then-current practice; full recording not checked.
 
-**Takeaway:** Choose a seam that makes the important transition explainable.
+**Takeaway:** September account supersedes timeless small-function assumptions; no universal architecture follows.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#separate-policy-from-technical-mechanism) · [Cached claim](index.md#c05)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s13) · [Primary source](https://www.aviator.co/podcast/uncle-bob-martin-ai-clean-code)
 
 ---
 
@@ -83,13 +84,13 @@ Derived from the cache checked on 26 October 2026. Worked reward examples are su
 
 > **A published swarm does not prove its author still uses it.**
 >
-> SwarmForge is an inspected public artifact. Martin's 24 September 2026 interview-page account describes moving away from his custom harness. Those records answer different questions.
+> Personal use · publication / revision: 2026-09-24. His 24 September 2026 interview-page account reports moving away from his custom harness.
 
-**In the wild:** Compare a repository's documented design separately from a dated personal workflow.
+**In the wild:** Interview-page account of then-current practice; full recording not checked.
 
-**Takeaway:** Preserve chronology when comparing approaches.
+**Takeaway:** Earlier public multi-agent teaching and the published framework remain separate evidence; private current topology unknown.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#published-framework-is-not-a-current-personal-topology) · [Cached claim](index.md#c07)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s13) · [Primary source](https://www.aviator.co/podcast/uncle-bob-martin-ai-clean-code)
 
 ---
 
@@ -99,13 +100,13 @@ Derived from the cache checked on 26 October 2026. Worked reward examples are su
 
 > **A rule against weakening a gate is not proof the gate is protected.**
 >
-> The published engineering prompt forbids invented metric substitutes and hand-edited mutation manifests. Its text alone does not establish enforcement completeness.
+> Published artifact · publication / revision: 2026-09-04. Pinned SwarmForge engineering instructions forbid fabricated metric substitutes and hand-edited mutation manifests.
 
-**In the wild:** Our proposed review includes changed assertions, fixtures, runner configuration, and metric tools.
+**In the wild:** Pinned SwarmForge instructions; not proof of enforcement.
 
-**Takeaway:** Inspect the control surface as well as the instruction.
+**Takeaway:** Inspected prompt instructions do not establish filesystem permissions, enforcement completeness or security efficacy.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](tools.md#quality-tools-and-guardrails) · [Cached claim](index.md#c11)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s10) · [Primary source](https://github.com/unclebob/swarm-forge/blob/f4f5fbcae0de6f7dcc26e82400334227647cfdb2/swarmforge/constitution/articles/engineering.prompt)
 
 ---
 
@@ -115,28 +116,12 @@ Derived from the cache checked on 26 October 2026. Worked reward examples are su
 
 > **A finished conversation is not a durable work item.**
 >
-> The inspected handoff rules use committed structured work and explicit receive/complete steps. This is documented protocol, not verified execution.
+> Published artifact · publication / revision: 2026-09-04. Pinned SwarmForge handoff documentation prescribes committed, structured work items.
 
-**In the wild:** Our adaptation hands over the reviewed diff, contract, command results, and remaining gaps.
+**In the wild:** Pinned SwarmForge instructions; not an executed handoff.
 
-**Takeaway:** Make the next worker's starting point inspectable.
+**Takeaway:** Published artifact at pinned revision; not executed. Durable task records do not establish application persistence.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#tools-and-setup) · [Cached claim](index.md#c08)
-
----
-
-## Card 08
-
-### The missing observation
-
-> **Read the balance before replay can repair the evidence.**
->
-> Suggested adaptation: our shared task observes retained balance immediately after restart. Re-awarding A could otherwise conceal that the original reward was lost.
-
-**In the wild:** 0 → A10 → replay A10 → restart/read10 → replay A10 → B20.
-
-**Takeaway:** Test persistence and replay identity separately.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](workflow.md#fixed-task-and-assumptions) · [Cached workflow](workflow.md#5-challenge-the-checks)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s12) · [Primary source](https://github.com/unclebob/swarm-forge/blob/f4f5fbcae0de6f7dcc26e82400334227647cfdb2/swarmforge/constitution/articles/handoffs.prompt)
 
 ---

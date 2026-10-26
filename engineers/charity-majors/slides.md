@@ -5,13 +5,30 @@ nav_order: 1
 nav_exclude: true
 last_updated: '2026-10-26'
 cache_schema: 1
-derived_from: engineers/charity-majors/index.md
+derived_from: engineers/charity-majors/recent-ai.md
 research_checked: '2026-10-26'
+evidence_since: '2025-10-01'
 ---
 
-# Charity Majors — bite-sized ideas
+# Charity Majors — recent AI evidence
 
-Derived from research checked on 26 October 2026. Operational guidance, company documents and personal practice remain distinct. Reward examples are suggested adaptations.
+Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
+
+## Card 09
+
+### AI norms and production feedback, with a personal-coding gap
+
+> **Her recent evidence is strongest on organisations and feedback.**
+>
+> Personal use · publication / revision: 2026-09-21. Her September account describes listening and norm-setting around AI adoption. June and March essays argue for explicit commitments and production feedback. These are organisational work and engineering recommendations, not a demonstrated personal coding-agent sequence.
+
+**In the wild:** Organisational listening and norm-setting; exact dates not established.
+
+**Takeaway:** The 2024 observability examples remain background. Honeycomb engineering norms attributed to Emily Nakashima must not become Majors’s own agent configuration. Composite company anecdotes are not personal measurements.
+
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md) · [Primary source](https://charity.wtf/p/where-do-ai-norms-come-from)
+
+---
 
 ## Card 01
 
@@ -19,13 +36,13 @@ Derived from research checked on 26 October 2026. Operational guidance, company 
 
 > **A patch is not the end of learning.**
 >
-> Majors’s March 2026 operational recommendation connects intent to observed behaviour after a change. Pre-production checks still matter.
+> Recommendation · publication / revision: 2026-03-18. Prioritise fast feedback connecting developer intent to production consequences.
 
-**In the wild:** Our reward lab checks actual balances; production follow-up is a separately scoped extension.
+**In the wild:** AI-era production-feedback argument; not a personal release log.
 
-**Takeaway:** Keep correctness checks and operational learning distinct.
+**Takeaway:** March 2026 operational recommendation; not a measured universal bottleneck or a complete personal agent process.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#production-feedback-belongs-in-development) · [Cached evidence](index.md#c01)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s02) · [Primary source](https://www.honeycomb.io/blog/production-is-where-the-rigor-goes)
 
 ---
 
@@ -35,29 +52,13 @@ Derived from research checked on 26 October 2026. Operational guidance, company 
 
 > **The quickest visible win may move work to someone else.**
 >
-> Her June 2026 account asks teams to consider both benefits and downstream costs. Its opening story is explicitly a composite.
+> Commentary · publication / revision: 2026-06-02. Assess gains alongside downstream costs and the team’s whole outcome.
 
-**In the wild:** Our retrospective records reviewer cleanup alongside implementation time.
+**In the wild:** Composite anecdotes; not her personal productivity result.
 
-**Takeaway:** Ask who receives the gain and who carries the cost.
+**Takeaway:** June 2026 argument plus historical team-outcome advice; anecdotes and external organisational reports are not controlled comparative evidence.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#let-the-people-with-costs-inform-the-experiment) · [Cached evidence](index.md#c12)
-
----
-
-## Card 03
-
-### A question you did not predict
-
-> **A dashboard can answer the wrong question beautifully.**
->
-> Her 2024 observability framing favours contextual events and exploratory questions over relying only on predefined aggregates.
-
-**In the wild:** A reward owner needs to distinguish a new A from replayed A, not just count successful calls.
-
-**Takeaway:** Retain useful context for investigation.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#observe-detailed-events-then-ask-questions) · [Cached evidence](index.md#c08)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s04) · [Primary source](https://charity.wtf/p/ai-enthusiasts-are-in-a-race-against)
 
 ---
 
@@ -67,13 +68,13 @@ Derived from research checked on 26 October 2026. Operational guidance, company 
 
 > **“Own the loop” is a responsibility, not an excuse.**
 >
-> Published September 2026 company values keep people responsible for their work while distinguishing prose review from software validation. They do not establish a complete private review system.
+> Recommendation · publication / revision: 2026-06-15. Make required behaviour and commitments explicit rather than leaving meaning only in code.
 
-**In the wild:** A person checks the reward contract and evidence before accepting a patch.
+**In the wild:** Argument; not a personal coding session.
 
-**Takeaway:** Delegate work while keeping ownership.
+**Takeaway:** June 2026 advocacy. Regeneration ideas credit Chad Fowler; no executable-spec-only personal workflow is established.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#human-understanding-and-review) · [Cached evidence](index.md#c06)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s01) · [Primary source](https://charity.wtf/p/ai-demands-more-engineering-discipline)
 
 ---
 
@@ -83,13 +84,13 @@ Derived from research checked on 26 October 2026. Operational guidance, company 
 
 > **An adoption priority needs time, not just enthusiasm.**
 >
-> Her July 2026 mandate argument calls for funded learning and explicit tradeoffs. It does not say every organisation needs a mandate.
+> Recommendation · publication / revision: 2026-07-02. Fund learning and make adoption tradeoffs visible; no personal code-increment cadence is established.
 
-**In the wild:** A team agrees which work pauses while it tries the reward exercise.
+**In the wild:** Organisational learning advice.
 
-**Takeaway:** Make the learning cost visible.
+**Takeaway:** July 2026 organisational guidance; no personal implementation cadence is established.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#treat-adoption-as-funded-learning) · [Cached evidence](index.md#c03)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s05) · [Primary source](https://charity.wtf/p/in-defense-of-ai-mandates)
 
 ---
 
@@ -99,45 +100,12 @@ Derived from research checked on 26 October 2026. Operational guidance, company 
 
 > **A company note is not one person’s private setup.**
 >
-> The September engineering FAQ is an Emily Nakashima note introduced by Majors. Its organisational goals do not establish Majors’s personal agent topology.
+> Recommendation · publication / revision: 2026-09-09. The person owns the work; review and automated validation have different roles.
 
-**In the wild:** Do not copy another author’s agent-count discussion into her tooling card.
+**In the wild:** Published company norms; not a personal coding log.
 
-**Takeaway:** Keep personal, team and coauthored claims separate.
+**Takeaway:** September 2026 published company values, not proof of one universal personal line-by-line review policy.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#agent-autonomy-and-safeguards) · [Cached evidence](index.md#c07)
-
----
-
-## Card 07
-
-### The persuasive log
-
-> **A message saying “awarded” is not the reward itself.**
->
-> Suggested adaptation: diagnostics can explain a transition, but our fixed task must observe actual application state.
-
-**In the wild:** The log reports duplicate rejection while a broken balance update still adds points.
-
-**Takeaway:** Use telemetry to explain evidence, not replace it.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#production-feedback-belongs-in-development) · [Cached evidence](index.md#c04)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s06) · [Primary source](https://www.honeycomb.io/blog/ai-norms-values-part-3-things-we-hold-true)
 
 ---
-
-## Card 08
-
-### The missing observation
-
-> **Read after restart before replaying the event.**
->
-> Suggested adaptation: combining restart and replay could hide lost state by awarding A again. This is our common exercise, not a Majors demonstration.
-
-**In the wild:** 0 → A10 → replayA10 → restart/read10 → replayA10 → B20.
-
-**Takeaway:** Separate reward persistence from duplicate protection.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed research](research.md#first-practical-lab) · [Cached evidence](index.md#c04)
-
----
-

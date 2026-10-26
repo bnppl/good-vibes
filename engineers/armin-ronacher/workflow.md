@@ -10,6 +10,8 @@ cache_schema: 1
 nav_order: 2
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # A reward feature through a practical feedback loop
 
 **Suggested adaptation.** This is an original implementation exercise informed by the [cached research](research.md). Ronacher did not demonstrate this feature. The sequence and prompts below are our proposal. Their purpose is to make the different profiles comparable without claiming to emulate a private development session.

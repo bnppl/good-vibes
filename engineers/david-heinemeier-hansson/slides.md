@@ -5,13 +5,30 @@ nav_order: 1
 nav_exclude: true
 last_updated: '2026-10-26'
 cache_schema: 1
-derived_from: engineers/david-heinemeier-hansson/index.md
+derived_from: engineers/david-heinemeier-hansson/recent-ai.md
 research_checked: '2026-10-26'
+evidence_since: '2025-10-01'
 ---
 
-# David Heinemeier Hansson — bite-sized ideas
+# David Heinemeier Hansson — recent AI evidence
 
-Derived from cached public research checked on 26 October 2026. Dates matter; worked reward examples are suggested adaptations.
+Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
+
+## Card 09
+
+### Supervised OpenCode work and an isolated OpenClaw experiment
+
+> **An everyday workflow and an isolated experiment have different boundaries.**
+>
+> Personal use · publication / revision: 2026-01-07. His January account describes guiding agents and reviewing outcomes using OpenCode. In February he reports trying OpenClaw inside a Proxmox VM, separated from personal data and logins. These are distinct contexts; the later Basecamp API/CLI announcement is team product work.
+
+**In the wild:** January OpenCode workflow account.
+
+**Takeaway:** The 2014 TDD/design essays and 2024 system-test post remain historical. They do not establish his current AI testing cadence. October economic forecasts and August enthusiasm are not measured delivery outcomes.
+
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md) · [Primary source](https://world.hey.com/dhh/promoting-ai-agents-3ee04945)
+
+---
 
 ## Card 01
 
@@ -19,13 +36,13 @@ Derived from cached public research checked on 26 October 2026. Dates matter; wo
 
 > **A 2025 opinion is not a permanent personality.**
 >
-> DHH's May 2025 preference for retaining the keyboard differs from his October 2026 advocacy of agent-written code. Keep both dated positions instead of inventing a timeless label.
+> Personal use · publication / revision: 2026-01-07. His January personal workflow names OpenCode for supervised agent work.
 
-**In the wild:** Comparing his earlier pair-programming preference with a later terminal-agent report requires the dates.
+**In the wild:** January OpenCode workflow account.
 
-**Takeaway:** Compare the position, task and tool generation together.
+**Takeaway:** The March Basecamp CLI announcement is a separate team product event.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#keep-the-timeline-attached) · [Cached claim](index.md#c01)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s02) · [Primary source](https://world.hey.com/dhh/promoting-ai-agents-3ee04945)
 
 ---
 
@@ -35,45 +52,13 @@ Derived from cached public research checked on 26 October 2026. Dates matter; wo
 
 > **Delegating work can still include reviewing its outcome.**
 >
-> His January 2026 account describes supervised agents and human guidance. It is a dated personal report, not an exhaustive current review checklist or proof of unattended professional reliability.
+> Personal use · publication / revision: 2026-01-07. January 2026: reports supervised delegation, not unreviewed professional work.
 
-**In the wild:** Our proposed reward review checks the actual state and executed evidence.
+**In the wild:** January OpenCode workflow account.
 
-**Takeaway:** Separate delegation from acceptance.
+**Takeaway:** Self-report, not a complete current topology.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#human-understanding-and-review) · [Cached claim](index.md#c06)
-
----
-
-## Card 03
-
-### Tests have contexts
-
-> **“Long live testing” did not mean “one test strategy forever.”**
->
-> His 2014 testing argument and May 2024 browser-suite assessment differ. The later account retains smoke coverage while favouring other checks for business logic. Neither establishes his complete current agent policy.
-
-**In the wild:** Our reward rule can be checked at the real application boundary without inventing a browser requirement.
-
-**Takeaway:** Match a check to the failure it can observe.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#test-for-confidence-without-conflating-eras) · [Cached claim](index.md#c04)
-
----
-
-## Card 04
-
-### A reason for a boundary
-
-> **An interface can make a test easier and the code harder to explain.**
->
-> DHH's April 2014 design criticism targets indirection added only for isolated tests. It is contextual, not a prohibition on every useful abstraction.
-
-**In the wild:** Our exercise asks what responsibility a new reward repository actually clarifies.
-
-**Takeaway:** Explain the design benefit, not just the pattern name.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#judge-an-abstraction-by-what-it-clarifies) · [Cached claim](index.md#c05)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s02) · [Primary source](https://world.hey.com/dhh/promoting-ai-agents-3ee04945)
 
 ---
 
@@ -83,13 +68,13 @@ Derived from cached public research checked on 26 October 2026. Dates matter; wo
 
 > **One isolated assistant experiment is not a complete security policy.**
 >
-> In February 2026 he reports running OpenClaw in a VM separate from personal data and logins. The account was not independently security-audited and does not describe every coding session.
+> Personal use · publication / revision: 2026-02-05. February 2026: reports an OpenClaw experiment isolated from personal data and logins in a VM.
 
-**In the wild:** Our local reward exercise does not need personal mail or production credentials.
+**In the wild:** OpenClaw VM experiment before publication.
 
-**Takeaway:** Inspect the capabilities of the actual task environment.
+**Takeaway:** Single self-reported experiment, not a security audit or universal permission policy.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#boundaries-and-safeguards) · [Cached claim](index.md#c11)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s03) · [Primary source](https://world.hey.com/dhh/clankers-with-claws-9f86fa71)
 
 ---
 
@@ -99,13 +84,13 @@ Derived from cached public research checked on 26 October 2026. Dates matter; wo
 
 > **An AI feature can be possible without being worth shipping.**
 >
-> The March 2026 product account describes unshipped experiments, while May's Basecamp announcement keeps human communication central. These are product decisions, not a measured agent workflow.
+> Personal use · publication / revision: 2026-08-09. His August account describes enthusiasm for expanded execution.
 
-**In the wild:** Our reward change need not grow an unrelated AI dashboard just because one can be generated.
+**In the wild:** Personal account; no controlled productivity comparison.
 
-**Takeaway:** Keep a reason for the feature beyond the technology.
+**Takeaway:** Personal report, not evidence of superior quality, latency or cost.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#distinguish-technical-possibility-from-a-useful-product) · [Cached claim](index.md#c12)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s05) · [Primary source](https://world.hey.com/dhh/endless-execution-4157e065)
 
 ---
 
@@ -115,28 +100,12 @@ Derived from cached public research checked on 26 October 2026. Dates matter; wo
 
 > **Announcing a tool does not document every private step.**
 >
-> Team-provided agent interfaces and hosting capabilities establish available products. They do not establish DHH's complete personal release process, exact installed configuration, or sole authorship of each component.
+> Personal use · publication / revision: 2026-01-07. His January personal workflow names OpenCode for supervised agent work.
 
-**In the wild:** A Basecamp CLI announcement is not a verified reward-deployment gate.
+**In the wild:** January OpenCode workflow account.
 
-**Takeaway:** Separate product capability, personal use, and implementation evidence.
+**Takeaway:** The March Basecamp CLI announcement is a separate team product event.
 
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](research.md#tools-and-setup) · [Cached claim](index.md#c09)
-
----
-
-## Card 08
-
-### The missing observation
-
-> **Read after restart before you replay.**
->
-> Suggested adaptation: our shared reward exercise observes retained balance before another request. Otherwise lost state followed by awarding A again could accidentally produce the expected 10.
-
-**In the wild:** Baseline0 → A10 → replayA10 → restart/read10 → replayA10 → B20.
-
-**Takeaway:** Verify persistence and duplicate identity separately.
-
-[Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](workflow.md#shared-task-and-assumptions) · [Cached claim](workflow.md#5-choose-evidence-with-an-honest-boundary)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Source register](sources.md#s02) · [Primary source](https://world.hey.com/dhh/promoting-ai-agents-3ee04945)
 
 ---

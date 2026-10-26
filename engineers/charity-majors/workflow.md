@@ -11,6 +11,8 @@ cache_schema: 1
 derived_from: engineers/charity-majors/research.md
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # A reward feature through an operational lens
 
 **Suggested adaptation.** This whole exercise is original proposed guidance informed by the [cached research](research.md). Majors did not demonstrate this feature or publish these prompts. The aim is to keep the task comparable while examining what an operational perspective adds.

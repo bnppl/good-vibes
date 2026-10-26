@@ -11,6 +11,8 @@ cache_schema: 1
 derived_from: engineers/david-heinemeier-hansson/research.md
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # A reward feature with explicit outcomes and design judgment
 
 [Profile](index.md) · [Research](research.md) · [Source findings](sources.md)

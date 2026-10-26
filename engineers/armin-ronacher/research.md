@@ -10,6 +10,8 @@ cache_schema: 1
 nav_order: 1
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # Armin Ronacher — detailed research
 
 **Scope:** software engineering with coding agents, from June 2025 to the 6 October 2026 Codemode article; research inspected on 26 October 2026. This profile records changing public practices rather than claiming to reproduce a complete current personal system.

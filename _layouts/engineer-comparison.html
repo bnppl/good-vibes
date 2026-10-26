@@ -15,7 +15,7 @@
     <p class="eyebrow">Different people. The same questions.</p>
     <h1>Collect the ideas.<br>Compare the approaches.</h1>
     <p><a href="{{ '/engineers/map/' | relative_url }}">Explore all twenty on the approach map ↗</a> · <a href="{{ '/engineers/visuals/' | relative_url }}">Eight more perspectives ↗</a></p>
-    <p class="intro">Detailed field cards from cached research. Pick up to three engineers, then explore their methods side by side. Evidence labels and dates travel with every position.</p>
+    <p class="intro">AI-specific publications since October 2025. Pick up to three engineers. Compare reported personal use, published artifacts and recommendations without treating them as the same evidence.</p>
     <form id="engineer-picker"><fieldset><legend>Choose engineers</legend>
       <div class="picker-filters">
         <label for="engineer-search">Find a person<input id="engineer-search" type="search" placeholder="Name or alias…" autocomplete="off"></label>
@@ -25,23 +25,24 @@
       <p id="picker-status" class="filter-status" role="status" aria-live="polite"></p>
       <div id="choices" class="choices"></div></fieldset></form>
     <div class="comparison-toolbar"><label for="dimension">Explore a dimension</label><select id="dimension"><option value="all">All twelve dimensions</option></select></div>
+    <div class="comparison-toolbar"><label for="evidence-view">Evidence to show</label><select id="evidence-view"><option value="all">All recent AI evidence</option><option value="practice">Reported personal use and artifacts</option></select></div>
     <p id="comparison-status" role="status" aria-live="polite"></p>
     <p id="scope-notice" class="scope-notice" hidden></p>
     <div id="cards" class="profile-grid" tabindex="-1"></div>
-    <p class="cache-note">These cards reuse the stored profile; they do not perform live research. “Not established” means unknown. Different descriptions alone do not prove disagreement. Add a profile with <code>/engineer "Person Name"</code>, then rebuild the site.</p>
+    <p class="cache-note">Publication dates are separate from practice dates and inspection dates. A recent retrospective can describe older work. Artifacts have been inspected, not necessarily executed. “Not established” means unknown; older general advice stays in each profile’s background archive. These cards reuse cached research.</p>
     <noscript><p>Browse the <a href="{{ '/engineers/' | relative_url }}">research archive</a> with JavaScript switched off.</p></noscript>
   </main>
   <template id="engineer-cache">
     {% assign profiles = site.pages | where: 'engineer_profile', true | sort: 'canonical_name' %}
     {% for profile in profiles %}
-    <article data-person="{{ profile.person_id | escape }}" data-name="{{ profile.canonical_name | escape }}" data-aliases="{{ profile.aliases | join: ", " | escape }}" data-focus="{{ profile.practice_focus | default: 'coding-workflows' | escape }}" data-url="{{ profile.url | relative_url }}" data-slides="{{ profile.slides_url | relative_url }}" data-checked="{{ profile.research_checked | escape }}" data-cutoff="{{ profile.research_cutoff | escape }}">
+    <article data-person="{{ profile.person_id | escape }}" data-name="{{ profile.canonical_name | escape }}" data-aliases="{{ profile.aliases | join: ", " | escape }}" data-focus="{{ profile.practice_focus | default: 'coding-workflows' | escape }}" data-url="{{ profile.url | relative_url }}" data-slides="{% if profile.slides_url and profile.slides_url != '' %}{{ profile.slides_url | relative_url }}{% endif %}" data-checked="{{ profile.research_checked | escape }}" data-cutoff="{{ profile.research_cutoff | escape }}" data-since="{{ profile.evidence_since | escape }}">
       <p class="cached-tagline">{{ profile.tagline | escape }}</p>
       <p class="cached-summary">{{ profile.summary | escape }}</p>
       <p class="cached-focus-note">{{ profile.focus_note | escape }}</p>
       <p class="cached-tools">{{ profile.tools_summary | escape }}</p>
       <ul class="cached-strengths">{% for strength in profile.strengths %}<li>{{ strength | escape }}</li>{% endfor %}</ul>
       {% for dimension in profile.dimensions %}
-      <section data-dimension="{{ dimension.id | escape }}" data-title="{{ dimension.title | escape }}" data-evidence="{{ dimension.evidence | escape }}" data-claim="{{ dimension.claim | escape }}" data-checked="{{ dimension.checked | escape }}">
+      <section data-dimension="{{ dimension.id | escape }}" data-title="{{ dimension.title | escape }}" data-evidence="{{ dimension.evidence | escape }}" data-claim="{{ dimension.claim | escape }}" data-checked="{{ dimension.checked | escape }}" data-kind="{{ dimension.evidence_kind | escape }}" data-published="{{ dimension.published | escape }}" data-practice="{{ dimension.practice_date | escape }}" data-format="{{ dimension.source_format | escape }}">
         <p class="cached-position">{{ dimension.position | escape }}</p>
         <p class="cached-qualification">{{ dimension.qualification | escape }}</p>
         <a class="cached-detail" href="{{ dimension.detail | escape }}">Read the evidence</a>

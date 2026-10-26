@@ -1,6 +1,6 @@
 ---
 description: Cache detailed engineer research, derive slides, and compare cached profiles
-argument-hint: '"Person Name" [--stage research|slides|all] [--compare "Person A, Person B"] [--refresh] [--focus "topic"] [--project "context"] [--as-of YYYY-MM-DD]'
+argument-hint: '"Person Name" [--stage research|slides|all] [--compare "Person A, Person B"] [--refresh] [--focus "topic"] [--project "context"] [--as-of YYYY-MM-DD] [--since YYYY-MM-DD]'
 ---
 
 # /engineer — Research, distil, compare
@@ -18,6 +18,7 @@ Read `docs/engineer-research-prompt.md` for the complete research and comparison
 - `--focus "topic"`: default software engineering, particularly AI-assisted and agentic development.
 - `--project "context"`: use a common project example; otherwise use the neutral example in the prompt.
 - `--as-of YYYY-MM-DD`: filter the cache to evidence available at that cutoff. Never silently substitute later evidence. If the cache cannot support it, report the gap; research requires a research stage or `--refresh`.
+- `--since YYYY-MM-DD`: publication lower bound; default `2025-10-01` in this project. Pass as PUBLICATIONS_SINCE. Separate publication from practice and inspection dates; retain older general advice as background. A cache-only stage reports missing window metadata instead of inventing it.
 - Missing person, invalid stage/date, or an empty explicit option needs clarification. Do not silently discard it.
 
 ## Execute in two stages
@@ -30,7 +31,7 @@ For an existing cache, reuse it unless `--refresh` was supplied. If the requeste
 
 ### Stage 2: consumable views
 
-Read only the cached research; do not browse. Distil the cache into `slides.md` using the existing slideshow Markdown format and `slideshow.html` using `layout: learning-deck`. Use one idea per card, a punchy accurate hook, a concrete example, a useful takeaway, and optional deeper links. No mandatory recall test. Add collections when needed instead of stuffing an entire subject into a card. Preserve card IDs and per-person storage keys across updates.
+Read only the cached research; do not browse. Distil the cache into `slides.md` using the existing slideshow Markdown format and `slideshow.html` using `layout: learning-deck`. Use one idea per card, a punchy accurate hook, a concrete example, a useful takeaway, and optional deeper links. Lead with real recent projects from the cache; label advice and publication/practice dates. Keep hypothetical reward examples in optional labs and archive retired card IDs. No mandatory recall test. Add collections when needed instead of stuffing an entire subject into a card. Preserve card IDs and per-person storage keys across updates.
 
 Generate the compact comparison fields from the same claims and evidence, keeping dates and qualifications. The generic `/engineers/compare/` page discovers all cached profiles and renders detailed field cards with D01–D12, sources, and dimension filters. Do not edit its JavaScript for each new engineer.
 

@@ -15,147 +15,216 @@ last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Delegate the work. Design the feedback. Own the outcome.
-summary: A feedback-centred approach to conversational development, calibrated delegation and organisational learning.
-  Personal project accounts are kept separate from joint Kim/Yegge prescriptions.
+summary: A clearer commit boundary, and a retrospective API investigation. Personal trials, recommendations and
+  unknowns are dated separately.
 strengths:
 - Fast feedback
 - Calibrated delegation
 - Organisational wiring
-tools_summary: Historical Claude Code/Clojure project accounts; current full personal stack remains unknown.
+tools_summary: 'January 2026 interview: retrospective Claude Code use and a personal commit boundary. Full current
+  configuration unknown.'
 slides_url: /engineers/gene-kim/learn/
 dimensions:
 - id: D01
   title: Goal and bottleneck
-  position: Joint Kim/Yegge 2025 guidance emphasises useful outcomes, frequent feedback and modularity as code generation
-    becomes cheaper.
+  position: In January 2026 he describes AI enabling useful tools and wider exploration, beyond typing faster.
   evidence: Stated
   claim: C01
-  detail: research.md#2-techniques-and-principles
-  source: https://itrevolution.com/articles/essential-skills-of-a-vibe-coder/
+  detail: recent-ai.md#c01
+  source: https://techleadjournal.dev/episodes/244/
   checked: '2026-10-26'
-  qualification: Joint Kim/Yegge prescription, not a demonstrated universal productivity effect.
+  qualification: Interview self-report; not a controlled productivity result.
+  evidence_kind: Personal use
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
 - id: D02
   title: Requirements and specification
   position: Joint Kim/Yegge October 2025 guidance uses concrete requirements, examples and context for conversational
     refinement.
   evidence: Stated
   claim: C02
-  detail: research.md#state-outcomes-and-let-conversation-refine-them
+  detail: recent-ai.md#c02
   source: https://itrevolution.com/articles/the-key-vibe-coding-practices/
   checked: '2026-10-26'
   qualification: Joint excerpt; no universal private template established.
+  evidence_kind: Joint recommendation
+  published: '2025-10-09'
+  practice_date: Not a personal session
+  source_id: S06
+  ai_specific: true
+  source_format: Authored article
 - id: D03
   title: Increment and planning
-  position: Joint Kim/Yegge September 2025 guidance decomposes objectives into manageable steps, then reviews and
-    iterates.
+  position: October 2025 joint guidance recommends reviewing a plan and clarifying context before implementation.
   evidence: Stated
   claim: C03
-  detail: research.md#keep-the-loop-small-and-verify-before-accepting
-  source: https://itrevolution.com/articles/the-vibe-coding-loop/
+  detail: recent-ai.md#c03
+  source: https://itrevolution.com/articles/the-key-vibe-coding-practices/
   checked: '2026-10-26'
-  qualification: Joint recommendation; no fixed increment size or mandatory agent count.
+  qualification: Joint Kim/Yegge advice; not proof of a fixed personal planning ritual.
+  evidence_kind: Joint recommendation
+  published: '2025-10-09'
+  practice_date: Not a personal session
+  source_id: S06
+  ai_specific: true
+  source_format: Authored article
 - id: D04
   title: Testing and verification
-  position: Joint Kim/Yegge September 2025 guidance recommends tests and expectations before generation, followed
-    by verification.
+  position: His January 2026 interview recommends fast signals for detecting and correcting mistakes and awareness
+    of tests.
   evidence: Stated
   claim: C04
-  detail: research.md#keep-the-loop-small-and-verify-before-accepting
-  source: https://itrevolution.com/articles/the-vibe-coding-loop/
+  detail: recent-ai.md#c04
+  source: https://techleadjournal.dev/episodes/244/
   checked: '2026-10-26'
-  qualification: This does not establish strict unit-level TDD for every personal change.
+  qualification: Advice in a first-person interview; strict unit-level TDD is not established.
+  evidence_kind: Recommendation
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
 - id: D05
   title: Design and refactoring
-  position: His March 2025 Trello account proposes better testability and interfaces; completion of every proposed
-    refactor is not established.
+  position: He reports merge contention and recommends boundaries that let agents work without interfering.
   evidence: Stated
   claim: C05
-  detail: research.md#use-architecture-to-make-categories-of-mistakes-testable
-  source: https://itrevolution.com/articles/rearchitecting-my-trello-management-tool-with-claude-code-using-vibe-coding-architecting-part-2/
+  detail: recent-ai.md#c05
+  source: https://techleadjournal.dev/episodes/244/
   checked: '2026-10-26'
-  qualification: Personal 2025 account includes proposed changes; completion of every refactor is unverified.
+  qualification: Personal failure account plus advice; no exact mandatory architecture established.
+  evidence_kind: Personal use
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
 - id: D06
   title: Human understanding and review
   position: In his January 2026 interview, Kim retains human accountability even when implementation is delegated.
   evidence: Stated
   claim: C06
-  detail: research.md#3-a-feature-from-idea-to-release
+  detail: recent-ai.md#c06
   source: https://techleadjournal.dev/episodes/244/
   checked: '2026-10-26'
   qualification: Interview self-report and advice; not a universal line-by-line review rule.
+  evidence_kind: Recommendation
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
 - id: D07
   title: Agent autonomy and coordination
-  position: His March 2025 solo guidance calibrates pairing and delegation by novelty, capability and consequences.
+  position: He reports occasionally allowing agent commits while generally keeping the decision about what enters
+    version control.
   evidence: Stated
   claim: C07
-  detail: research.md#calibrate-pairing-and-delegation
-  source: https://itrevolution.com/articles/vibe-coding-pairing-vs-delegation/
+  detail: recent-ai.md#c07
+  source: https://techleadjournal.dev/episodes/244/
   checked: '2026-10-26'
-  qualification: Solo 2025 guidance. Joint later orchestration patterns are not a complete current personal topology.
+  qualification: Self-reported discretion; do not substitute Yegge’s more permissive commit policy.
+  evidence_kind: Personal use
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
 - id: D08
   title: Context and durable state
-  position: His June 2025 manuscript-tool report includes plan files; a complete current memory/handoff protocol
-    is not established.
-  evidence: Stated
-  claim: C08
-  detail: research.md#evaluate-more-than-generated-volume
-  source: https://itrevolution.com/articles/the-last-80-hours-of-editing-the-vibe-coding-book/
-  checked: '2026-10-26'
-  qualification: Historical published output; do not infer that a particular durable-state file is always used.
-- id: D09
-  title: Tooling and environment
-  position: His 2025 project reports name Claude Code and Clojure; those dated choices do not establish a complete
-    current private stack.
-  evidence: Stated
-  claim: C09
-  detail: research.md#4-tools-and-setup
-  source: https://itrevolution.com/articles/the-last-80-hours-of-editing-the-vibe-coding-book/
-  checked: '2026-10-26'
-  qualification: Historical personal use; complete current stack and configuration unknown.
-- id: D10
-  title: Integration and release
-  position: A complete current personal integration, release and rollback policy is not established.
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
   evidence: Not established
-  claim: C10
-  detail: research.md#6-failure-modes-and-limits
+  claim: C08
+  detail: recent-ai.md#c08
   source: ''
   checked: '2026-10-26'
-  qualification: General verification guidance does not supply his actual present release gates.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
+- id: D09
+  title: Tooling and environment
+  position: The January 2026 interview describes Claude Code use, including letting it investigate a Trello API
+    problem.
+  evidence: Stated
+  claim: C09
+  detail: recent-ai.md#c09
+  source: https://techleadjournal.dev/episodes/244/
+  checked: '2026-10-26'
+  qualification: Retrospective project example; date of that work and full October configuration are not established.
+  evidence_kind: Personal use
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
+- id: D10
+  title: Integration and release
+  position: In January 2026 he describes version control as his fallback and usually retains the commit decision.
+  evidence: Stated
+  claim: C10
+  detail: recent-ai.md#c10
+  source: https://techleadjournal.dev/episodes/244/
+  checked: '2026-10-26'
+  qualification: Personal integration boundary; not a documented production deployment or rollback procedure.
+  evidence_kind: Personal use
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
 - id: D11
   title: Boundaries and safeguards
   position: His January 2026 interview warns about unchecked generated work and retains human responsibility; enforced
     protections remain unestablished.
   evidence: Stated
   claim: C11
-  detail: research.md#6-failure-modes-and-limits
+  detail: recent-ai.md#c11
   source: https://techleadjournal.dev/episodes/244/
   checked: '2026-10-26'
   qualification: Specific current access controls or enforced test protections were not established.
+  evidence_kind: Recommendation
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
 - id: D12
   title: Evaluation and tradeoffs
-  position: The June 2025 report records agent/local test disagreement; assess accepted outcomes and verification
-    effort rather than transfer personal speed claims.
-  evidence: Inferred
+  position: He describes trying alternative implementations in parallel, then choosing one, and values wider exploration.
+  evidence: Stated
   claim: C12
-  detail: research.md#evaluate-more-than-generated-volume
-  source: https://itrevolution.com/articles/the-last-80-hours-of-editing-the-vibe-coding-book/
+  detail: recent-ai.md#c12
+  source: https://techleadjournal.dev/episodes/244/
   checked: '2026-10-26'
-  qualification: 'Our inference from a retrospective project report: test-result mismatch is reported, while the
-    common-task evaluation protocol is our adaptation. No controlled comparative advantage is established.'
+  qualification: Self-report with an unspecified task/date; not a measured universal benefit.
+  evidence_kind: Personal use
+  published: '2026-01-19'
+  practice_date: Interview recollections; project dates not fully established
+  source_id: S09
+  ai_specific: true
+  source_format: Interview transcript
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 practice_focus: coding-workflows
 ---
 
 # Gene Kim
 
-Delegate the work. Design the feedback. Own the outcome.
-
-[Open the slideshow]({{ '/engineers/gene-kim/learn/' | relative_url }}) · [Compare cached profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/gene-kim/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
 ## Research map
 
-[Detailed research](research.md) · [Common reward workflow](workflow.md) · [Source findings and limits](sources.md) · [Slide notes](slides.md)
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
 
-Research checked and cut off on **26 October 2026**. The cache combines dated personal reports with clearly attributed joint recommendations. It does not establish an October 2026 private configuration.
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
 
@@ -163,118 +232,166 @@ Research checked and cut off on **26 October 2026**. The cache combines dated pe
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** Joint Kim/Yegge 2025 guidance emphasises useful outcomes, frequent feedback and modularity as code generation becomes cheaper.
+**Stated · Personal use.** In January 2026 he describes AI enabling useful tools and wider exploration, beyond typing faster.
 
-Joint Kim/Yegge prescription, not a demonstrated universal productivity effect.
+Source format: Interview transcript.
 
-[Cached detail](research.md#2-techniques-and-principles) · [Primary source](https://itrevolution.com/articles/essential-skills-of-a-vibe-coder/)
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
+
+Interview self-report; not a controlled productivity result.
+
+[Recent evidence](recent-ai.md#c01) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** Joint Kim/Yegge October 2025 guidance uses concrete requirements, examples and context for conversational refinement.
+**Stated · Joint recommendation.** Joint Kim/Yegge October 2025 guidance uses concrete requirements, examples and context for conversational refinement.
+
+Source format: Authored article.
+
+Published: **2025-10-09**. Practice: Not a personal session.
 
 Joint excerpt; no universal private template established.
 
-[Cached detail](research.md#state-outcomes-and-let-conversation-refine-them) · [Primary source](https://itrevolution.com/articles/the-key-vibe-coding-practices/)
+[Recent evidence](recent-ai.md#c02) · [Primary source](https://itrevolution.com/articles/the-key-vibe-coding-practices/)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** Joint Kim/Yegge September 2025 guidance decomposes objectives into manageable steps, then reviews and iterates.
+**Stated · Joint recommendation.** October 2025 joint guidance recommends reviewing a plan and clarifying context before implementation.
 
-Joint recommendation; no fixed increment size or mandatory agent count.
+Source format: Authored article.
 
-[Cached detail](research.md#keep-the-loop-small-and-verify-before-accepting) · [Primary source](https://itrevolution.com/articles/the-vibe-coding-loop/)
+Published: **2025-10-09**. Practice: Not a personal session.
+
+Joint Kim/Yegge advice; not proof of a fixed personal planning ritual.
+
+[Recent evidence](recent-ai.md#c03) · [Primary source](https://itrevolution.com/articles/the-key-vibe-coding-practices/)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** Joint Kim/Yegge September 2025 guidance recommends tests and expectations before generation, followed by verification.
+**Stated · Recommendation.** His January 2026 interview recommends fast signals for detecting and correcting mistakes and awareness of tests.
 
-This does not establish strict unit-level TDD for every personal change.
+Source format: Interview transcript.
 
-[Cached detail](research.md#keep-the-loop-small-and-verify-before-accepting) · [Primary source](https://itrevolution.com/articles/the-vibe-coding-loop/)
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
+
+Advice in a first-person interview; strict unit-level TDD is not established.
+
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Stated.** His March 2025 Trello account proposes better testability and interfaces; completion of every proposed refactor is not established.
+**Stated · Personal use.** He reports merge contention and recommends boundaries that let agents work without interfering.
 
-Personal 2025 account includes proposed changes; completion of every refactor is unverified.
+Source format: Interview transcript.
 
-[Cached detail](research.md#use-architecture-to-make-categories-of-mistakes-testable) · [Primary source](https://itrevolution.com/articles/rearchitecting-my-trello-management-tool-with-claude-code-using-vibe-coding-architecting-part-2/)
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
+
+Personal failure account plus advice; no exact mandatory architecture established.
+
+[Recent evidence](recent-ai.md#c05) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** In his January 2026 interview, Kim retains human accountability even when implementation is delegated.
+**Stated · Recommendation.** In his January 2026 interview, Kim retains human accountability even when implementation is delegated.
+
+Source format: Interview transcript.
+
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
 
 Interview self-report and advice; not a universal line-by-line review rule.
 
-[Cached detail](research.md#3-a-feature-from-idea-to-release) · [Primary source](https://techleadjournal.dev/episodes/244/)
+[Recent evidence](recent-ai.md#c06) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** His March 2025 solo guidance calibrates pairing and delegation by novelty, capability and consequences.
+**Stated · Personal use.** He reports occasionally allowing agent commits while generally keeping the decision about what enters version control.
 
-Solo 2025 guidance. Joint later orchestration patterns are not a complete current personal topology.
+Source format: Interview transcript.
 
-[Cached detail](research.md#calibrate-pairing-and-delegation) · [Primary source](https://itrevolution.com/articles/vibe-coding-pairing-vs-delegation/)
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
+
+Self-reported discretion; do not substitute Yegge’s more permissive commit policy.
+
+[Recent evidence](recent-ai.md#c07) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** His June 2025 manuscript-tool report includes plan files; a complete current memory/handoff protocol is not established.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Historical published output; do not infer that a particular durable-state file is always used.
+Source format: Not established.
 
-[Cached detail](research.md#evaluate-more-than-generated-volume) · [Primary source](https://itrevolution.com/articles/the-last-80-hours-of-editing-the-vibe-coding-book/)
+Published: **Not established**. Practice: Not established.
+
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c08)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** His 2025 project reports name Claude Code and Clojure; those dated choices do not establish a complete current private stack.
+**Stated · Personal use.** The January 2026 interview describes Claude Code use, including letting it investigate a Trello API problem.
 
-Historical personal use; complete current stack and configuration unknown.
+Source format: Interview transcript.
 
-[Cached detail](research.md#4-tools-and-setup) · [Primary source](https://itrevolution.com/articles/the-last-80-hours-of-editing-the-vibe-coding-book/)
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
+
+Retrospective project example; date of that work and full October configuration are not established.
+
+[Recent evidence](recent-ai.md#c09) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Not established.** A complete current personal integration, release and rollback policy is not established.
+**Stated · Personal use.** In January 2026 he describes version control as his fallback and usually retains the commit decision.
 
-General verification guidance does not supply his actual present release gates.
+Source format: Interview transcript.
 
-[Cached detail](research.md#6-failure-modes-and-limits)
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
+
+Personal integration boundary; not a documented production deployment or rollback procedure.
+
+[Recent evidence](recent-ai.md#c10) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Stated.** His January 2026 interview warns about unchecked generated work and retains human responsibility; enforced protections remain unestablished.
+**Stated · Recommendation.** His January 2026 interview warns about unchecked generated work and retains human responsibility; enforced protections remain unestablished.
+
+Source format: Interview transcript.
+
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
 
 Specific current access controls or enforced test protections were not established.
 
-[Cached detail](research.md#6-failure-modes-and-limits) · [Primary source](https://techleadjournal.dev/episodes/244/)
+[Recent evidence](recent-ai.md#c11) · [Primary source](https://techleadjournal.dev/episodes/244/)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Inferred.** The June 2025 report records agent/local test disagreement; assess accepted outcomes and verification effort rather than transfer personal speed claims.
+**Stated · Personal use.** He describes trying alternative implementations in parallel, then choosing one, and values wider exploration.
 
-Our inference from a retrospective project report: test-result mismatch is reported, while the common-task evaluation protocol is our adaptation. No controlled comparative advantage is established.
+Source format: Interview transcript.
 
-[Cached detail](research.md#evaluate-more-than-generated-volume) · [Primary source](https://itrevolution.com/articles/the-last-80-hours-of-editing-the-vibe-coding-book/)
+Published: **2026-01-19**. Practice: Interview recollections; project dates not fully established.
+
+Self-report with an unspecified task/date; not a measured universal benefit.
+
+[Recent evidence](recent-ai.md#c12) · [Primary source](https://techleadjournal.dev/episodes/244/)

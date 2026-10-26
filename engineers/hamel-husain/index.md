@@ -8,159 +8,228 @@ cache_schema: 1
 person_id: hamel-husain
 canonical_name: Hamel Husain
 aliases: []
-practice_focus: ai-systems
-focus_note: Product evaluation and deployment guidance do not establish his personal coding-agent or TDD policy.
+practice_focus: mixed
+focus_note: Recent personal coding-tool/workflow accounts coexist with AI-product engineering guidance. Each claim
+  retains its own subject and source.
 research_cutoff: '2026-10-26'
 research_checked: '2026-10-26'
 last_updated: '2026-10-26'
 last_read: null
 status: unread
 tagline: Look at the failures. Make the evaluator earn trust.
-summary: An AI-product engineering approach centred on domain judgment, observable failures and validated measurement.
-  Product evaluation is distinct from a personal code-generation workflow.
+summary: A changed coding environment, alongside actual evaluator trials. Personal trials, recommendations and unknowns
+  are dated separately.
 strengths:
 - Error discovery
 - Human–judge alignment
 - Verifiable product design
-tools_summary: October 2025 notebook/custom-interface self-report; joint eval skills pinned to September 2026.
-  Complete present private stack unknown.
+tools_summary: 'January 2026: Amp, Cursor, Claude Code and Next.js; separate recent AI-product evaluation trials
+  and joint skill artifacts.'
 slides_url: /engineers/hamel-husain/learn/
 dimensions:
 - id: D01
   title: Goal and bottleneck
-  position: Make AI-product quality measurable before optimising architecture or generation speed.
+  position: He reports choosing conventional development tools to reduce friction with AI assistants.
   evidence: Stated
   claim: C01
-  detail: research.md#approach-in-brief
-  source: https://hamel.dev/blog/posts/evals/index.html
+  detail: recent-ai.md#c01
+  source: https://hamel.dev/blog/posts/ai-stack/index.html
   checked: '2026-10-26'
-  qualification: Product-development advice from 2024/2025, not a measured universal bottleneck or personal coding
-    cadence.
+  qualification: January tool-choice account; his broader evaluation guidance concerns AI products.
+  evidence_kind: Personal use
+  published: '2026-01-18'
+  practice_date: Reported coding-tool choices at publication; not October configuration
+  source_id: S14
+  ai_specific: true
+  source_format: Authored article
 - id: D02
   title: Requirements and specification
-  position: His 2025 guide and September 2026 trial favour inspecting examples before committing to subjective failure
-    criteria.
+  position: His September trial finds problems with criteria fixed before inspecting representative data.
   evidence: Stated
   claim: C02
-  detail: research.md#requirements-and-error-discovery
+  detail: recent-ai.md#c02
   source: https://hamel.dev/blog/posts/claude-auto-evals/index.html
   checked: '2026-10-26'
-  qualification: Open-ended product criteria can emerge from review; this does not suspend already agreed deterministic
-    requirements.
+  qualification: Reported trial with Isaac Flath; not every evaluator or model.
+  evidence_kind: Personal use
+  published: '2026-09-30'
+  practice_date: Reported trial with Isaac Flath before publication
+  source_id: S11
+  ai_specific: true
+  source_format: Authored article
 - id: D03
   title: Increment and planning
-  position: Use a product-improvement loop of observation, targeted change and measured feedback.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C03
-  detail: research.md#increment-and-planning
-  source: https://hamel.dev/blog/posts/field-guide/index.html
+  detail: recent-ai.md#c03
+  source: ''
   checked: '2026-10-26'
-  qualification: A product-experiment increment is not an established patch size or strict internal agent TDD cycle.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D04
   title: Testing and verification
-  position: Use code for objective product checks; validate subjective judges against human labels and held-out
-    examples.
+  position: Published evaluator instructions separate judge development from held-out validation.
   evidence: Stated
   claim: C04
-  detail: research.md#testing-and-verification
-  source: https://hamel.dev/blog/posts/llm-judge/index.html
+  detail: recent-ai.md#c04
+  source: https://github.com/ai-evals-course/evals-skills/blob/80d5f7b0127c7572ed9e9339937adbfd7240ffeb/skills/validate-evaluator/SKILL.md
   checked: '2026-10-26'
-  qualification: Product evaluation, with supporting published skill artifacts. It does not establish a universal
-    personal coding-agent test-first policy.
+  qualification: Pinned joint artifact; no validation run reproduced.
+  evidence_kind: Published artifact
+  published: '2026-09-24'
+  practice_date: Pinned joint evaluator instructions; not an executed run
+  source_id: S09
+  ai_specific: true
+  source_format: Repository artifact
 - id: D05
   title: Design and refactoring
   position: Make AI outputs and supporting evidence easier for users and reviewers to verify.
   evidence: Stated
   claim: C05
-  detail: research.md#design-and-refactoring
+  detail: recent-ai.md#c05
   source: https://hamel.dev/blog/posts/eval-smell/
   checked: '2026-10-26'
   qualification: June 2026 product-design advice; not a complete architecture or refactoring cadence for code generation.
+  evidence_kind: Recommendation
+  published: '2026-06-29'
+  practice_date: AI-product reviewability guidance
+  source_id: S06
+  ai_specific: true
+  source_format: Authored article
 - id: D06
   title: Human understanding and review
   position: Domain experts own quality criteria; inspect the data and the evaluator rather than approving a score
     alone.
   evidence: Stated
   claim: C06
-  detail: research.md#human-understanding-and-review
+  detail: recent-ai.md#c06
   source: https://hamel.dev/blog/posts/claude-auto-evals/index.html
   checked: '2026-10-26'
   qualification: September trial and earlier judge guidance. Human product judgment remains distinct from complete
     line-by-line code-review policy.
+  evidence_kind: Personal use
+  published: '2026-09-30'
+  practice_date: Reported trial with Isaac Flath before publication
+  source_id: S11
+  ai_specific: true
+  source_format: Authored article
 - id: D07
   title: Agent autonomy and coordination
   position: Joint eval skills let coding agents assist discovery and evaluator work; private coding-agent topology
     is not established.
   evidence: Stated
   claim: C07
-  detail: research.md#agent-autonomy-and-coordination
+  detail: recent-ai.md#c07
   source: https://hamel.dev/blog/posts/evals-skills/
   checked: '2026-10-26'
   qualification: Husain/Shankar guidance and inspected repository, not an observed complete personal fleet or autonomous
     production permission.
+  evidence_kind: Joint recommendation
+  published: 2026-03-02 (modified 2026-08-31)
+  practice_date: Joint skills announcement; not a private orchestration log
+  source_id: S07
+  ai_specific: true
+  source_format: Authored article
 - id: D08
   title: Context and durable state
   position: Published evaluator guidance separates prompt examples, development cases and final test cases.
   evidence: Demonstrated
   claim: C08
-  detail: research.md#context-and-durable-state
+  detail: recent-ai.md#c08
   source: https://github.com/ai-evals-course/evals-skills/blob/80d5f7b0127c7572ed9e9339937adbfd7240ffeb/skills/validate-evaluator/SKILL.md
   checked: '2026-10-26'
   qualification: An inspected artifact and data-state convention, not evidence of personal conversational memory
     or handoff infrastructure.
+  evidence_kind: Published artifact
+  published: '2026-09-24'
+  practice_date: Pinned joint evaluator instructions; not an executed run
+  source_id: S09
+  ai_specific: true
+  source_format: Repository artifact
 - id: D09
   title: Tooling and environment
-  position: His October 2025 account favours notebooks and custom review interfaces over a vendor-specific universal
-    answer.
+  position: In January he names Amp, Cursor and Claude Code, and Next.js for web work.
   evidence: Stated
   claim: C09
-  detail: research.md#tools-and-setup
-  source: https://hamel.dev/blog/posts/eval-tools/index.html
+  detail: recent-ai.md#c09
+  source: https://hamel.dev/blog/posts/ai-stack/index.html
   checked: '2026-10-26'
-  qualification: Historical self-report; joint published eval skills and September tool trial are separately attributed.
-    Complete present stack unknown.
+  qualification: Dated personal choices; not a claim about his October installed setup.
+  evidence_kind: Personal use
+  published: '2026-01-18'
+  practice_date: Reported coding-tool choices at publication; not October configuration
+  source_id: S14
+  ai_specific: true
+  source_format: Authored article
 - id: D10
   title: Integration and release
-  position: Joint September 2026 guidance separates regression checks before release from sampled production evaluation.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C10
-  detail: research.md#integration-and-release
-  source: https://hamel.dev/blog/posts/evals-faq/
+  detail: recent-ai.md#c10
+  source: ''
   checked: '2026-10-26'
-  qualification: AI-product lifecycle guidance, not a verified current private deployment, approval or rollback
-    configuration.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D11
   title: Boundaries and safeguards
-  position: Joint guidance distinguishes inline guardrails from evaluators that measure outcomes after generation.
-  evidence: Stated
+  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
+  evidence: Not established
   claim: C11
-  detail: research.md#boundaries-and-safeguards
-  source: https://hamel.dev/blog/posts/evals-faq/
+  detail: recent-ai.md#c11
+  source: ''
   checked: '2026-10-26'
-  qualification: Product-control distinction; a complete personal coding sandbox, permission and protected-test
-    policy is not established.
+  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
+    opposition or absence of use.
+  evidence_kind: Not established
+  published: Not established
+  practice_date: Not established
+  source_id: ''
+  ai_specific: false
+  source_format: Not established
 - id: D12
   title: Evaluation and tradeoffs
   position: The October 2026 joint study tunes task-specific decision thresholds and checks calibration alongside
     cost.
   evidence: Stated
   claim: C12
-  detail: research.md#evaluation-and-tradeoffs
+  detail: recent-ai.md#c12
   source: https://hamel.dev/blog/posts/decision-model-evals/
   checked: '2026-10-26'
   qualification: Husain/Saha study on 100 traces, not universal default thresholds, calibrated probabilities, or
     a cross-engineer performance ranking.
+  evidence_kind: Personal use
+  published: '2026-10-20'
+  practice_date: Joint study with Antaripa Saha; exact experiment dates unknown
+  source_id: S12
+  ai_specific: true
+  source_format: Authored article
+evidence_since: '2025-10-01'
+evidence_focus: AI-specific publications since October 2025; personal use distinguished from advice
 ---
 
 # Hamel Husain
 
-[Open the slideshow]({{ '/engineers/hamel-husain/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
+[Recent AI evidence](recent-ai.md) · [Slideshow]({{ '/engineers/hamel-husain/learn/' | relative_url }}) · [Compare profiles]({{ '/engineers/compare/' | relative_url }})
 
-## Research cache
+## Research map
 
-[Detailed guide](research.md) · [Common task and optional AI-product lab](workflow.md) · [Source findings](sources.md) · [Slide notes](slides.md)
+[AI use and recent publications](recent-ai.md) · [Earlier detailed research](research.md) · [Source register](sources.md) · [Comparison history](background.md) · [Slide notes](slides.md)
 
-Research checked and cut off on **26 October 2026**. This is primarily a profile of **building AI systems**. A product evaluation loop does not establish Husain’s personal coding-agent setup or universal TDD policy. Shared material retains Shreya Shankar’s and Antaripa Saha’s authorship; a note about Shankar’s session is not a Husain demonstration.
+The comparison prioritises AI-specific publications since **1 October 2025**. Publication date does not establish when a practice occurred. Older general advice no longer fills missing recent fields.
 
 ## Comparison evidence
 
@@ -168,118 +237,142 @@ Research checked and cut off on **26 October 2026**. This is primarily a profile
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** Make AI-product quality measurable before optimising architecture or generation speed.
+**Stated · Personal use.** He reports choosing conventional development tools to reduce friction with AI assistants.
 
-Product-development advice from 2024/2025, not a measured universal bottleneck or personal coding cadence.
+Source format: Authored article. Published / revision: **2026-01-18**. Practice: Reported coding-tool choices at publication; not October configuration.
 
-[Cached detail](research.md#approach-in-brief) · [Primary source](https://hamel.dev/blog/posts/evals/index.html)
+January tool-choice account; his broader evaluation guidance concerns AI products.
+
+[Recent evidence](recent-ai.md#c01) · [Primary source](https://hamel.dev/blog/posts/ai-stack/index.html)
 
 <a id="c02"></a>
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** His 2025 guide and September 2026 trial favour inspecting examples before committing to subjective failure criteria.
+**Stated · Personal use.** His September trial finds problems with criteria fixed before inspecting representative data.
 
-Open-ended product criteria can emerge from review; this does not suspend already agreed deterministic requirements.
+Source format: Authored article. Published / revision: **2026-09-30**. Practice: Reported trial with Isaac Flath before publication.
 
-[Cached detail](research.md#requirements-and-error-discovery) · [Primary source](https://hamel.dev/blog/posts/claude-auto-evals/index.html)
+Reported trial with Isaac Flath; not every evaluator or model.
+
+[Recent evidence](recent-ai.md#c02) · [Primary source](https://hamel.dev/blog/posts/claude-auto-evals/index.html)
 
 <a id="c03"></a>
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** Use a product-improvement loop of observation, targeted change and measured feedback.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-A product-experiment increment is not an established patch size or strict internal agent TDD cycle.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#increment-and-planning) · [Primary source](https://hamel.dev/blog/posts/field-guide/index.html)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c03)
 
 <a id="c04"></a>
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** Use code for objective product checks; validate subjective judges against human labels and held-out examples.
+**Stated · Published artifact.** Published evaluator instructions separate judge development from held-out validation.
 
-Product evaluation, with supporting published skill artifacts. It does not establish a universal personal coding-agent test-first policy.
+Source format: Repository artifact. Published / revision: **2026-09-24**. Practice: Pinned joint evaluator instructions; not an executed run.
 
-[Cached detail](research.md#testing-and-verification) · [Primary source](https://hamel.dev/blog/posts/llm-judge/index.html)
+Pinned joint artifact; no validation run reproduced.
+
+[Recent evidence](recent-ai.md#c04) · [Primary source](https://github.com/ai-evals-course/evals-skills/blob/80d5f7b0127c7572ed9e9339937adbfd7240ffeb/skills/validate-evaluator/SKILL.md)
 
 <a id="c05"></a>
 
 ### C05 · D05 · Design and refactoring
 
-**Stated.** Make AI outputs and supporting evidence easier for users and reviewers to verify.
+**Stated · Recommendation.** Make AI outputs and supporting evidence easier for users and reviewers to verify.
+
+Source format: Authored article. Published / revision: **2026-06-29**. Practice: AI-product reviewability guidance.
 
 June 2026 product-design advice; not a complete architecture or refactoring cadence for code generation.
 
-[Cached detail](research.md#design-and-refactoring) · [Primary source](https://hamel.dev/blog/posts/eval-smell/)
+[Recent evidence](recent-ai.md#c05) · [Primary source](https://hamel.dev/blog/posts/eval-smell/)
 
 <a id="c06"></a>
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** Domain experts own quality criteria; inspect the data and the evaluator rather than approving a score alone.
+**Stated · Personal use.** Domain experts own quality criteria; inspect the data and the evaluator rather than approving a score alone.
+
+Source format: Authored article. Published / revision: **2026-09-30**. Practice: Reported trial with Isaac Flath before publication.
 
 September trial and earlier judge guidance. Human product judgment remains distinct from complete line-by-line code-review policy.
 
-[Cached detail](research.md#human-understanding-and-review) · [Primary source](https://hamel.dev/blog/posts/claude-auto-evals/index.html)
+[Recent evidence](recent-ai.md#c06) · [Primary source](https://hamel.dev/blog/posts/claude-auto-evals/index.html)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** Joint eval skills let coding agents assist discovery and evaluator work; private coding-agent topology is not established.
+**Stated · Joint recommendation.** Joint eval skills let coding agents assist discovery and evaluator work; private coding-agent topology is not established.
+
+Source format: Authored article. Published / revision: **2026-03-02 (modified 2026-08-31)**. Practice: Joint skills announcement; not a private orchestration log.
 
 Husain/Shankar guidance and inspected repository, not an observed complete personal fleet or autonomous production permission.
 
-[Cached detail](research.md#agent-autonomy-and-coordination) · [Primary source](https://hamel.dev/blog/posts/evals-skills/)
+[Recent evidence](recent-ai.md#c07) · [Primary source](https://hamel.dev/blog/posts/evals-skills/)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Demonstrated.** Published evaluator guidance separates prompt examples, development cases and final test cases.
+**Demonstrated · Published artifact.** Published evaluator guidance separates prompt examples, development cases and final test cases.
+
+Source format: Repository artifact. Published / revision: **2026-09-24**. Practice: Pinned joint evaluator instructions; not an executed run.
 
 An inspected artifact and data-state convention, not evidence of personal conversational memory or handoff infrastructure.
 
-[Cached detail](research.md#context-and-durable-state) · [Primary source](https://github.com/ai-evals-course/evals-skills/blob/80d5f7b0127c7572ed9e9339937adbfd7240ffeb/skills/validate-evaluator/SKILL.md)
+[Recent evidence](recent-ai.md#c08) · [Primary source](https://github.com/ai-evals-course/evals-skills/blob/80d5f7b0127c7572ed9e9339937adbfd7240ffeb/skills/validate-evaluator/SKILL.md)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** His October 2025 account favours notebooks and custom review interfaces over a vendor-specific universal answer.
+**Stated · Personal use.** In January he names Amp, Cursor and Claude Code, and Next.js for web work.
 
-Historical self-report; joint published eval skills and September tool trial are separately attributed. Complete present stack unknown.
+Source format: Authored article. Published / revision: **2026-01-18**. Practice: Reported coding-tool choices at publication; not October configuration.
 
-[Cached detail](research.md#tools-and-setup) · [Primary source](https://hamel.dev/blog/posts/eval-tools/index.html)
+Dated personal choices; not a claim about his October installed setup.
+
+[Recent evidence](recent-ai.md#c09) · [Primary source](https://hamel.dev/blog/posts/ai-stack/index.html)
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** Joint September 2026 guidance separates regression checks before release from sampled production evaluation.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-AI-product lifecycle guidance, not a verified current private deployment, approval or rollback configuration.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#integration-and-release) · [Primary source](https://hamel.dev/blog/posts/evals-faq/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c10)
 
 <a id="c11"></a>
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Stated.** Joint guidance distinguishes inline guardrails from evaluators that measure outcomes after generation.
+**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
 
-Product-control distinction; a complete personal coding sandbox, permission and protected-test policy is not established.
+Source format: Not established. Published / revision: **Not established**. Practice: Not established.
 
-[Cached detail](research.md#boundaries-and-safeguards) · [Primary source](https://hamel.dev/blog/posts/evals-faq/)
+Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+
+[Recent evidence](recent-ai.md#c11)
 
 <a id="c12"></a>
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Stated.** The October 2026 joint study tunes task-specific decision thresholds and checks calibration alongside cost.
+**Stated · Personal use.** The October 2026 joint study tunes task-specific decision thresholds and checks calibration alongside cost.
+
+Source format: Authored article. Published / revision: **2026-10-20**. Practice: Joint study with Antaripa Saha; exact experiment dates unknown.
 
 Husain/Saha study on 100 traces, not universal default thresholds, calibrated probabilities, or a cross-engineer performance ranking.
 
-[Cached detail](research.md#evaluation-and-tradeoffs) · [Primary source](https://hamel.dev/blog/posts/decision-model-evals/)
+[Recent evidence](recent-ai.md#c12) · [Primary source](https://hamel.dev/blog/posts/decision-model-evals/)

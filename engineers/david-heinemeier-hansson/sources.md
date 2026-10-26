@@ -10,6 +10,10 @@ research_checked: '2026-10-26'
 cache_schema: 1
 ---
 
+## Publication-window review — 26 October 2026
+
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+
 # David Heinemeier Hansson — source findings
 
 All twelve public authored articles were inspected on **26 October 2026**. Dates are displayed publication dates, not assertions that a practice remains current. Whole articles are not archived. Tool repositories, immutable installed versions, paid book bodies, private sessions, and linked keynote transcripts were not independently inspected.

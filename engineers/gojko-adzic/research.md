@@ -10,6 +10,8 @@ research_checked: '2026-10-26'
 cache_schema: 1
 ---
 
+> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+
 # Gojko Adžić — detailed research
 
 **A useful comparison is not “BDD versus agents.” It is how people keep product intent, decisions and verification inspectable as more implementation is automated.**
