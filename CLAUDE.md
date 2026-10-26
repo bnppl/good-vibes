@@ -18,7 +18,7 @@ Personal learning wiki on context engineering and spec-driven development, plus 
 - New content follows: concept → patterns/anti-patterns → actionable steps → cross-references
 - TL;DR refs: `(covered in TL;DR [newsletter], [Month Year])`
 - Internal links use relative paths: `[Kiro](../frameworks/kiro.md)`
-- No code, no build steps — markdown only
+- Learning content stays in Markdown. The GitHub Pages slideshow uses `_layouts/learning-deck.html` and vanilla CSS/JavaScript in `assets/`, with no additional build steps. Its lesson content comes from `learning-deck/week-*.md`.
 
 ## Boundaries
 

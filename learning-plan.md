@@ -8,7 +8,7 @@ status: unread
 
 # Learning Plan: Reliable AI-Assisted Engineering
 
-**Prefer smaller bites?** Open the [Learning Deck](learning-deck/index.md): 16 short cards with examples, revealable recall answers, and four lab cards. Return here to track exercise evidence.
+**Prefer smaller bites?** [Launch the learning slideshow]({{ '/learn/' | relative_url }}) for 16 short lessons with Learn → Recall → Try steps and four lab cards. You can also [browse the card notes](learning-deck/index.md). Return here to track exercise evidence.
 
 **Goal:** Demonstrate which AI workflows improve delivery, quality, cost, and your understanding on a real project. Context engineering and proportionate specifications support that goal; framework adoption is optional.
 
@@ -17,6 +17,8 @@ status: unread
 **Use one project throughout.** Your spelling app is a good candidate. Choose a small bug, a feature, a refactor, a regression, and a tool/context discovery task. Use isolated branches and synthetic data. The suggested five-task starting set is a learning exercise, not enough evidence for a general productivity claim.
 
 **Progress preserved:** The previous plan marked foundations, instructions, knowledge, and orchestration complete (old Sessions 1, 2, 3, 6). Keep those completions as prior reading; the new exercises still need evidence. Existing chapter `last_read` and `status` values remain unchanged. Reading progress and exercise completion are separate.
+
+**Research catch-up:** The [26 October study briefing](study-briefings/2026-10-26.md) records new material and evidence limits. Fold skill-discovery checks into Session 4, targeted retrieval into Session 5, source-linked handoffs into Session 8, summary/resume trust checks into Session 11, a specialist-to-skill comparison into Session 14, and identity/CI/review bottlenecks into Session 16. These extend existing exercises; they do not add required sessions or imply completion.
 
 **At each sitting:** Before opening notes, recall the previous lesson and one failure mode. Explain your answer, then check it. Revisit the explanation at the next weekly lab. A checked box below means you produced the stated evidence; `/study mark-read` only records reading.
 

@@ -40,7 +40,9 @@ status: unread             # unread | in-progress | read
 
 ## The learning plan
 
-Start with the [Learning Deck](learning-deck/index.md) for bite-sized lessons: 16 cards across four weeks, with concrete examples, revealable recall answers, small exercises, and four lab cards. It works as Markdown in the wiki and Obsidian; exercise completion stays in the learning plan.
+Start with the **learning slideshow** at `/learn/` on the GitHub Pages site: 16 lessons across four weeks with Learn → Recall → Try steps, plus four lab cards. It supports arrow keys, touch swipes, direct links to cards, and browser-local position and review progress. Exercise completion stays in the learning plan. The [Learning Deck notes](learning-deck/index.md) are the single source of lesson content.
+
+The slideshow uses a standalone [Jekyll layout](_layouts/learning-deck.html), [CSS](assets/css/learning-deck.css), and [plain JavaScript](assets/js/learning-deck.js). Jekyll embeds the weekly Markdown pages at build time; no JavaScript build tools, external libraries, or runtime requests are needed. The existing GitHub Pages workflow builds and deploys it with the rest of the wiki. URLs respect the configured Pages base path. Browser progress does not sync between devices or modify `/study` metadata.
 
 [`learning-plan.md`](learning-plan.md) brings evaluation and verification into week one, adds dedicated harness and containment work, and makes framework comparison optional. Short mobile readings lead to observable exercise outputs; four development labs provide baseline, comparison, handoff, and adoption evidence. Existing reading dates remain intact.
 
@@ -54,8 +56,8 @@ Start with the [Learning Deck](learning-deck/index.md) for bite-sized lessons: 1
 | `/study [file or topic]` | **Deep Read** | Walks you through a specific file as a structured briefing (key concepts → actionable → how it connects → notable details), warns about missing prerequisites, and updates `last_read` / `status` when you're done. |
 | `/study status` | **Status** | Shows a table of reading progress — which files are read, which have updates since you last read them, and the oldest unread material. |
 | `/study mark-read [file]` | **Mark Read** | Updates a file's frontmatter to `status: read` without walking through it. |
-| `/study update` | **Research** | Scans current guide state, then researches recent developments in parallel across `last30days`, WebSearch, TL;DR newsletters, Hacker News (via Algolia API + comments), and a curated list of high-signal blogs (Anthropic Engineering, Simon Willison, Latent Space, Addy Osmani, Martin Fowler, LangChain, OpenAI). Diffs findings against existing content and presents a proposed-updates briefing. |
-| `/study update --apply` | **Research + Apply** | Same as `update`, but writes the edits directly and bumps `last_updated` on every modified file. |
+| `/study update` | **Research** | Scans current guide state, then researches recent developments in parallel across `last30days`, WebSearch, TL;DR newsletters, Hacker News (via Algolia API + comments), and a curated list of high-signal blogs (Anthropic Engineering, Simon Willison, Latent Space, Addy Osmani, Martin Fowler, LangChain, OpenAI). Diffs findings against existing content and proposes chapter updates plus affected slideshow-card refreshes. |
+| `/study update --apply` | **Research + Apply** | Same as `update`, but writes the chapter and corresponding card edits directly, updating `last_updated` only on changed files. |
 
 ### Guarantees
 
@@ -63,6 +65,8 @@ Start with the [Learning Deck](learning-deck/index.md) for bite-sized lessons: 1
 - **Research mode** only modifies content when `--apply` is passed or you confirm.
 - When content is updated, `last_updated` is bumped in that file's frontmatter.
 - New content follows the guide's existing voice: direct, practical, cited.
+- Research updates check the weekly slideshow cards against their source chapters and refresh affected cards while preserving IDs, concise formatting, and exercise progress. Browser review marks remain local and are not reset; the update summary identifies changed cards to revisit.
+- Card updates reach the slideshow through the next GitHub Pages build and deployment; `/study update` does not commit, push, or deploy.
 
 ### How progress tracking works
 

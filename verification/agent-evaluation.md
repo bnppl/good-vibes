@@ -60,3 +60,9 @@ Create your task list and run record. Predict the effect of one proposed change,
 - [Harness engineering](../context-engineering/harness-engineering.md) — the components being evaluated.
 - [Test the tests](test-the-tests.md) — checking whether your correctness checks catch defects.
 - [Security and containment](agent-security.md) — access boundaries and benign negative tests.
+
+## Evaluate Discovery and Environment Failures Separately
+
+A skill can work when named explicitly yet never be selected during real work. Compare natural requests with explicit invocation, then inspect discovery, adherence, and the final application separately. See the [skills exercise](../context-engineering/instruction-layer.md#october-2026-evaluate-whether-skills-are-discovered).
+
+An older gap also matters: Anthropic's [infrastructure-noise study](https://www.anthropic.com/research/infrastructure-noise) (February 5, 2026) showed that resource configuration changed Terminal-Bench 2.0 outcomes. Record CPU/RAM allocations and hard limits, timeouts, dependency availability, and infrastructure errors. Report environment failures separately and retain them in the run accounting; do not quietly remove failed runs or relabel implementation errors. This evidence predates the July update but was missing from this chapter.

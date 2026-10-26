@@ -2,7 +2,7 @@
 title: "Knowledge Layer"
 parent: "Context Engineering"
 nav_order: 3
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: 2026-04-06
 status: read
 ---
@@ -148,7 +148,7 @@ See [Agentic Development](agentic-dev.md) for the "filesystem as context" patter
 
 2. **Measure context pollution with A/B testing.** Run queries with and without retrieved context. If adding retrieval doesn't improve output — or actively degrades it — you have a retrieval quality problem, not a model problem.
 
-3. **Default to hybrid search.** Start with a combination of semantic and keyword retrieval. Pure vector search has enough failure modes on exact matches and identifiers that hybrid is the safer default, especially for technical content.
+3. **Match retrieval to the information gap.** Use filename or keyword search for known identifiers; compare semantic or hybrid search when the task needs conceptual matches. Measure relevance, correctness, latency, and context consumed instead of making hybrid search a universal default.
 
 4. **Load via tools, not upfront injection.** Give the model a retrieval tool and let it pull what it needs. Reserve system prompt knowledge for things that are always relevant: core instructions, persona, constraints. Everything else should be retrievable.
 
@@ -160,3 +160,9 @@ See [Agentic Development](agentic-dev.md) for the "filesystem as context" patter
 
 - **Podcast:** [Retrieval After RAG: Hybrid Search, Agents, and Database Design — Latent Space](https://www.latent.space/p/turbopuffer) *(March 12, 2026)*. Simon Hørup Eskildsen (Turbopuffer) on how agentic workloads are changing search — agents fire many parallel queries instead of one, which reshapes this page's retrieval guidance.
 - **Podcast:** [Agentic RAG: A New Paradigm in AI Retrieval — Don't Panic! It's Just Data](https://podcasts.apple.com/us/podcast/dont-panic-its-just-data/id1229119513) *(June 2, 2026)*. The enterprise knowledge-layer angle: agent-driven retrieval strategies replacing static RAG pipelines.
+
+## October 2026: Search, Then Read Only What Is Needed
+
+LangChain's [retrieval guidance](https://www.langchain.com/blog/context-engineering-starts-with-retrieval) (October 23) makes an existing principle operational: locate names or matching lines before reading files; page large results; return a path and preview when full output is saved elsewhere. This is implementation guidance from Deep Agents, not a universal benchmark result.
+
+**Try it:** For one spelling-app investigation, record the question each search answers. Compare a large result dump with targeted reads. Keep source locations available so summaries can be checked. Delegate reading only when isolation or parallelism justifies the extra handoff; offloading does not require another agent.

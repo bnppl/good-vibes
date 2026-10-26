@@ -2,7 +2,7 @@
 title: "Multi-Agent Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 2
-last_updated: 2026-06-16
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -10,15 +10,15 @@ status: unread
 # Multi-Agent Patterns
 
 {: .hook }
-> **Multi-agent systems use ~15x more tokens than single agents. The question isn't whether to use them — it's when the payoff is actually worth it.**
+> **Extra agents need a measured payoff.**
 >
-> Anthropic's production system outperformed single-agent by 90.2%. It also cost 15× more. Most tasks don't justify that multiplier.
+> Anthropic reported substantial gains and higher token use on its research workload. Those results do not establish a universal coding-agent improvement or cost multiplier.
 
 **In short:**
 - **The problem:** Teams add agents as a reflex for complexity, then discover coordination overhead costs more than parallelization saves.
 - **The idea:** Five patterns — Orchestrator-Worker, Pipeline, Parallel, Hierarchical, Swarm — each with a specific use case and a specific failure mode.
-- **How it works:** Orchestrator-Worker handles ~70% of production cases; Pipeline works for structured sequential workflows; Parallel requires strict task independence; Hierarchical scales decomposition; Swarm remains experimental.
-- **The result:** The production default is orchestrator-worker with parallel execution. Start there; add complexity only when the task genuinely requires it.
+- **How it works:** Orchestrator-Worker coordinates separate tasks; Pipeline suits fixed stages; Parallel needs task independence; Hierarchical adds decomposition; Swarm adds coordination complexity. These are design choices, not a deployment-share ranking.
+- **The result:** Establish a single-loop baseline. Add separate agents for measured context, parallelism, verification, or permission needs, and compare end-to-end outcomes.
 
 {: .aha }
 > **Multi-agent is a cost, not a feature** — justify it by what parallelism enables (independent subtasks, context limits, specialization), not by how it sounds.
@@ -36,7 +36,7 @@ When a single agent isn't enough — because the task is too large for one conte
 
 ## Orchestrator-Worker (Hub and Spoke)
 
-The most deployed multi-agent pattern in production, accounting for roughly 70% of enterprise deployments. A central orchestrator receives the task, decomposes it, and dispatches subtasks to specialized worker agents.
+A central orchestrator receives the task, decomposes it, and dispatches subtasks to worker agents. This guide has not established a representative deployment-share estimate for the pattern.
 
 **How it works:**
 1. Orchestrator analyzes the request and breaks it into subtasks
@@ -51,7 +51,7 @@ The most deployed multi-agent pattern in production, accounting for roughly 70% 
 - Effort budgets embedded in prompts — simple tasks: 1 agent / 3-10 tool calls; complex research: 10+ subagents with divided responsibilities.
 - Extended thinking for both lead agent (planning) and subagents (post-tool evaluation).
 
-**Addy Osmani's coding-specific findings:** Three focused agents consistently outperform one generalist. Quality gates are non-negotiable — plan approval catches architectural failures before code exists. And clear specifications amplify leverage: "the mechanical work of typing code is being automated. The cognitive work of understanding systems is being amplified."
+**Coding-specific comparison:** Treat the number and specialisms of agents as experimental choices. Review interfaces, integration checks, total cost, and human review effort. A separate reviewer can help, but its agreement with the implementer is not independent evidence that the result is correct.
 
 This is the pattern behind Claude Code's forked subagents, Augment Intent's Coordinator/Implementor/Verifier, and Factory Droids' task pipeline.
 
@@ -178,3 +178,9 @@ For now, orchestrator-worker with parallel execution handles most production nee
 ---
 
 For sources and further reading, see [sources.md](./sources.md).
+
+## October 2026: Fold Coupled Specialists into Skills
+
+Anthropic's [October 22 guidance](https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop) describes enterprise deployments where one loop with progressively loaded skills and tools reduced handoff losses. This is practitioner evidence, not a controlled finding that one agent always wins. *(covered in TL;DR Dev, October 2026)*
+
+**Try it:** Replace one tightly coupled specialist with a skill and tools, keeping model, tasks, and budget fixed. Inspect which individual tasks regress, not only the average score. Preserve separate agents for independent parallel work, useful verification, enforced permission separation, or measured context pressure. Keep deterministic access controls when simplifying orchestration. See [agent evaluation](../verification/agent-evaluation.md).

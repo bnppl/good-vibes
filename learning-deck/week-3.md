@@ -2,6 +2,7 @@
 title: "03 · Make good work survive"
 parent: Learning Deck
 nav_order: 3
+last_updated: 2026-10-26
 ---
 
 # 03 · Make good work survive
@@ -90,7 +91,7 @@ No. A refusal shows agent behaviour. A denied operation shows an enforced bounda
 
 </details>
 
-**Try it:** Draft an access matrix for files, network, credentials, and external writes. Plan a benign negative test using disposable fixtures only.
+**Try it:** Draft an access matrix for files, network, credentials, and external writes. Plan a benign negative test using disposable fixtures only. Repeat it after a summary or handoff to check that untrusted text has not gained authority.
 
 [Full exercise: session 11](../learning-plan.md#session-11-permissions-and-prompt-injection) · Go deeper: [Agent security and containment](../verification/agent-security.md)
 

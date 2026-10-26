@@ -145,3 +145,13 @@ Teams that front-loaded context engineering — AGENTS.md files, architectural f
 ---
 
 For sources and further reading, see [sources.md](./sources.md).
+
+## October 2026: Identity and Delivery Infrastructure
+
+LangChain's [company harness account](https://www.langchain.com/blog/components-building-company-harness) (October 24) adds deployment concerns beyond the model loop: user-facing channels, caller versus service identity, shared versus private memory, sandboxed execution, and scheduled or event-driven runs. These are lessons from its internal agents, not a mandatory product stack.
+
+**Proposed team exercise:** Name the principal used for each external action and the owner of each memory record. For background jobs, test expired permissions, duplicate delivery, cancellation, and audit attribution. A user's authorisation does not imply that every integration holds the credentials needed to execute it.
+
+Anthropic's [source-control case study](https://www.anthropic.com/research/redesigning-source-control) (October 13, updated October 15) describes tooling strain under unusually high change volume. It explicitly recognises that Git remains suitable for most repositories. The useful leadership question is where review, CI, or integration is now limiting delivery—not whether to copy its infrastructure.
+
+**Try it:** Add review wait, CI queue time, integration failures, and rework to the week-four recommendation. More generated code or PRs is not itself evidence of better outcomes.

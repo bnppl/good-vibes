@@ -54,3 +54,9 @@ Write the access matrix, perform one benign boundary test, and attach the denial
 - [Autonomy](../agent-patterns/autonomy.md) — matching discretion to task risk.
 - [Harness engineering](../context-engineering/harness-engineering.md) — permissions and verification as runtime components.
 - [Characterization and handoff](characterization-and-handoff.md) — transferring state without inventing authority.
+
+## September 2026: Preserve Trust across Context Assembly
+
+The [context privilege escalation preprint](https://arxiv.org/abs/2609.01222v2) (September 2 revision) distinguishes low-trust text promoted into higher-priority messages from text persisting beyond its original scope. It studies twelve harnesses at specific versions; it does not establish that every current release remains affected.
+
+**Proposed defensive exercise:** Track source, trust, and scope through retrieval, summaries, memory, and handoffs. In disposable fixtures, check whether a harmless out-of-scope instruction is still rejected after summarisation and a fresh-session resume. Keep source content distinct from authorised instructions. Record the exact harness version and tested path; one passing test does not prove general immunity.

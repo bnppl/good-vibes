@@ -2,6 +2,7 @@
 title: "02 · Give the agent what it needs"
 parent: Learning Deck
 nav_order: 2
+last_updated: 2026-10-26
 ---
 
 # 02 · Give the agent what it needs
@@ -34,7 +35,7 @@ No. Extra irrelevant or stale material can obscure the useful information. Compa
 
 </details>
 
-**Try it:** Trace one failure to a context problem. Propose one retrieval change and predict what should improve.
+**Try it:** Trace one failure to a context problem. Propose one retrieval change and predict what should improve. For a large result, compare a full dump with a saved file, preview, and targeted reads.
 
 [Full exercise: session 5](../learning-plan.md#session-5-retrieval-that-fits-the-task) · Go deeper: [Knowledge layer](../context-engineering/knowledge-layer.md) · [Tool layer](../context-engineering/tool-layer.md)
 
@@ -118,7 +119,7 @@ Use observed drift, task boundaries, and context pressure. A fixed time limit is
 
 </details>
 
-**Try it:** Draft a five-field handoff and name a concrete sign that would trigger a reset.
+**Try it:** Draft a five-field handoff and name a concrete sign that would trigger a reset. Attach a source path and revision to one conclusion so the next session can verify it.
 
 [Full exercise: session 8](../learning-plan.md#session-8-state-across-context-windows) · Go deeper: [Memory layer](../context-engineering/memory-layer.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
 

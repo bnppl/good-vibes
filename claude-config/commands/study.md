@@ -10,7 +10,9 @@ The guide lives in four directories (discover files dynamically; do not hardcode
 
 Use `learning-plan.md` for the four-week sequence and practical completion criteria. Chapter reading progress is separate from exercise completion. Never mark exercises complete merely because their readings are read. Do not modify learning-plan checkboxes in Briefing, Status, or Deep Read modes.
 
-Every file has YAML frontmatter with three fields:
+The slideshow at `/learn/` is built from `learning-deck/week-*.md`. These cards are maintained summaries of the guide, not additional tracked chapters. Research mode must check and refresh affected cards alongside chapter updates; other modes do not rewrite them. Browser review progress, chapter reading metadata, and practical exercise completion are separate.
+
+Tracked chapter files have YAML frontmatter with three fields:
 ```yaml
 last_updated: 2026-04-02   # when content last changed
 last_read: null             # when the user last studied this file (null = never)
@@ -77,7 +79,7 @@ Match the intent:
 
 Research recent developments and propose updates to the guide.
 
-1. **Scan current guide state.** Read `learning-plan.md` and the files in all four guide directories to understand what's already covered — key topics, sources cited, frameworks listed, claims made.
+1. **Scan current guide state.** Read `learning-plan.md` and the files in all four guide directories to understand what's already covered — key topics, sources cited, frameworks listed, claims made. Also read `learning-deck/index.md` and all `learning-deck/week-*.md` pages. Map each card to its linked chapters and learning-plan session or lab; check for existing drift between cards and their sources, even when a finding is already covered in the guide.
 
 2. **Research.** Run these in parallel:
    - `/last30days context engineering spec driven development agentic coding harness engineering --agent` (if the last30days skill is available)
@@ -129,6 +131,11 @@ For each:
   - Source: [where you found this]
   - Type: update | new-topic | correction
 
+### Slideshow card updates ([count])
+- [Week file and card/lab ID → changed source chapter/session → proposed card change]
+- [Include corrections for existing card drift; say explicitly when no cards need changes]
+- [List new topics that do not fit an existing card as deferred coverage, with a reason]
+
 ### Already covered ([count])
 - [Brief list of findings that matched existing content — proves the guide is current]
 
@@ -136,7 +143,16 @@ For each:
 - [Anything interesting but not relevant to context engineering / SDD]
 ```
 
-5. If `--apply` was passed, make the edits directly. Update `last_updated` in the frontmatter of every modified file. If `--apply` was NOT passed, ask: "Want me to apply these updates? I can do all of them, or you can pick specific ones."
+5. **Apply the approved chapter and card updates together.** With `--apply`, write the proposed edits directly, including affected slideshow cards. Without `--apply`, propose both chapter and card changes without writing them; ask: "Want me to apply these updates? I can do all of them, or you can pick specific ones." After confirmation, apply only the approved scope and its corresponding card changes. Bump or add `last_updated` in the frontmatter of files whose content actually changed; leave unchanged files and all `last_read` / `status` values alone.
+
+6. **Check and report.** Follow the card-maintenance rules below. Report changed chapter paths, week files, and card/lab IDs, plus any deferred coverage or checks you could not run. If no cards changed, state why. Updated cards appear after the normal GitHub Pages rebuild and deployment; research mode does not itself commit, push, or deploy. Browser review marks are not reset by content updates: identify changed cards for the user to revisit.
+
+### Slideshow card maintenance
+
+- **Follow the dependency, not just the link.** Check cards linked to each changed chapter and cards teaching the same concept. Update the idea, example, recall question/answer, exercise, or lab evidence only where the source change affects them. Repair stale summaries even if their chapter needs no new edit. Leave unrelated cards untouched.
+- **Keep it digestible and sourced.** Retain one main idea per card, a concrete example, one recall question with a revealable answer, and one small exercise. Aim for roughly 150 words per lesson; keep detailed evidence in the chapter and link to it. Preserve qualifications and source scope when shortening; do not turn a practitioner suggestion into a universal rule. Keep exercises and lab evidence aligned with the learning plan without changing completion checkboxes.
+- **Preserve the slideshow contract.** Inspect `_layouts/learning-deck.html` and `assets/js/learning-deck.js` before editing the deck. Keep existing week filenames, navigation frontmatter, card numbers, and lab IDs stable so shared URLs and saved progress still work. Preserve the current card count and parser structure: `## Card NN`, its `###` title, the hook/idea blockquote, `Picture it:`, `Recall before revealing:`, `<details markdown="1">` with its `<summary>`, `Try it:`, and full-exercise/source links. Labs keep `## Lab card`, the task blockquote, `Your evidence:`, `Keep in mind:`, and the full-lab link. Do not rename these labels or hand-edit generated site output. If a new topic cannot fit coherently, report it as deferred rather than silently adding cards or changing the renderer.
+- **Verify the result.** Check local links and learning-plan anchors, reveal markup, preserved card IDs/counts, and that each changed recall answer agrees with the updated chapter. Run the Jekyll build and a slideshow smoke check if the environment supports them; otherwise report that limitation. Do not modify slideshow code or browser storage as part of a content refresh.
 
 ---
 
@@ -221,9 +237,9 @@ Confirm: "Marked [file] as read." Reading completion does not imply that a lab o
 
 - Never modify file content in Briefing, Deep Read, or Status modes — only frontmatter.
 - In Research mode, only modify content if `--apply` is passed or the user confirms.
-- When updating content, always bump `last_updated` in that file's frontmatter.
+- When content actually changes, bump or add `last_updated` in that file's frontmatter; preserve existing reading metadata.
 - Keep the guide's existing voice: direct, practical, no fluff, cite sources.
 - New content should follow the same patterns: concept → patterns/anti-patterns → actionable steps → cross-references.
 - When adding TL;DR newsletter references, format as: `(covered in TL;DR [newsletter], [Month Year])`
 - When adding framework references from the guide itself, use relative links: `[Kiro](../frameworks/kiro.md)`
-- The guide is markdown-only. No code, no build steps.
+- Keep learning content in Markdown. Research updates maintain the weekly cards; the existing Jekyll layout and JavaScript render the slideshow without additional build steps.

@@ -399,3 +399,12 @@ High-signal community discussions. Where the HN item URL wasn't captured during 
 - [Effective harnesses for long-running agents — Anthropic](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) (November 26, 2025). Incremental progress, durable handoffs, and verification across context windows; does not establish a universal session-duration cutoff.
 
 **Evidence rule:** Numerical claims need their original source and scope. Distinguish source findings from heuristics and suggested exercises. The five-task starter, four-week schedule, self-explanation prompts, and lab protocols in this plan are proposed learning activities, not validated universal thresholds.
+
+## October 26, 2026: Study Research Catch-up
+
+- [Expo: Your skills need an evaluation mechanism](https://expo.dev/blog/your-skills-need-an-evaluation-mechanism) (2026-10-08). Practitioner experiment; specific plugin, tasks, model configuration, and repeated runs.
+- [LongHarness v1](https://arxiv.org/abs/2610.13075v1) (2026-10-09). Preprint; document-reasoning evaluation, not coding productivity.
+- [Context Privilege Escalation v2](https://arxiv.org/abs/2609.01222v2) (2026-09-02). Preprint; results concern the harness versions examined.
+- [Anthropic: Quantifying infrastructure noise in agentic coding evals](https://www.anthropic.com/research/infrastructure-noise) (2026-02-05). Older coverage gap; environment confounder in Terminal-Bench 2.0.
+
+See the [research run record](../study-briefings/2026-10-26.md) for scope, application, and remaining gaps.

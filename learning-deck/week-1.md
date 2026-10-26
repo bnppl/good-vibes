@@ -2,6 +2,7 @@
 title: "01 · Build confidence"
 parent: Learning Deck
 nav_order: 1
+last_updated: 2026-10-26
 ---
 
 # 01 · Build confidence
@@ -62,7 +63,7 @@ They test whether an improvement transfers beyond the examples you used to desig
 
 </details>
 
-**Try it:** Create one blank run record: task, starting commit, configuration, trial, checks, review/rework minutes, elapsed time, cost, failure, evidence. Reserve unseen tasks.
+**Try it:** Create one blank run record: task, starting state, configuration, trial, checks, review/rework time, elapsed time, cost, failure, evidence. Record resource limits and environment failures; reserve unseen tasks.
 
 [Full exercise: session 2](../learning-plan.md#session-2-evaluate-the-agent) · Go deeper: [Agent evaluation](../verification/agent-evaluation.md)
 
@@ -118,7 +119,7 @@ No. Relevance, conflicts, and measured task outcomes matter more than an arbitra
 
 </details>
 
-**Try it:** Find three redundant, conflicting, or derivable instructions. Draft a leaner version and keep the baseline for comparison.
+**Try it:** Compare leaner instructions with your baseline. If detailed guidance is a skill, use a request that does not name it and check whether it is discovered and correctly used.
 
 [Full exercise: session 4](../learning-plan.md#session-4-lean-instructions) · Go deeper: [Instruction layer](../context-engineering/instruction-layer.md)
 

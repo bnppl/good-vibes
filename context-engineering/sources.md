@@ -642,3 +642,16 @@ Most useful for: tracking the open model landscape for agentic coding.
 **[Ask HN: Best approaches for agent verification / avoiding confident hallucination?]** — ~120 points, 88 comments. High-signal practitioner thread on the current state of agent verification. Top answers converge on: mutation testing for test quality, property-based testing for input coverage, contract testing at service boundaries, and evaluation evals (running the agent against a fixed task set on each deploy). The thread is useful calibration for which verification techniques practitioners are actually using vs. theorizing about. *(July 2026)*
 
 **[Pipelex: Typed Multi-Agent Pipeline Orchestration]** — ~145 points, 71 comments. A typed DSL for defining multi-agent pipelines where the schema of each agent's input and output is declared and validated at pipeline definition time, not just at runtime. The key insight: most multi-agent coordination failures are type errors in disguise — "I expected a list of task objects but got a summary string." Pipelex makes those contracts explicit and checkable before the pipeline runs. Relevant to [orchestration-layer](orchestration-layer.md) sub-agent patterns; treats the coordinator/worker handoff as a typed interface rather than a natural-language convention. *(July 2026)*
+
+## October 26, 2026: Study Research Catch-up
+
+- [Expo: Your skills need an evaluation mechanism](https://expo.dev/blog/your-skills-need-an-evaluation-mechanism) (2026-10-08). Practitioner experiment; specific plugin, tasks, model configuration, and repeated runs.
+- [Anthropic: When to fold subagents into your main agent loop](https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop) (2026-10-22). Deployment guidance; validate locally before changing architecture.
+- [LangChain: Context Engineering Starts with Retrieval](https://www.langchain.com/blog/context-engineering-starts-with-retrieval) (2026-10-23). Implementation guidance, not a comparative benchmark.
+- [LongHarness v1](https://arxiv.org/abs/2610.13075v1) (2026-10-09). Preprint; document-reasoning evaluation, not coding productivity.
+- [Context Privilege Escalation v2](https://arxiv.org/abs/2609.01222v2) (2026-09-02). Preprint; results concern the harness versions examined.
+- [LangChain: The five components of building a company harness](https://www.langchain.com/blog/components-building-company-harness) (2026-10-24). Internal deployment account; not a required stack.
+- [Anthropic: Redesigning source control](https://www.anthropic.com/research/redesigning-source-control) (2026-10-13; revised 2026-10-15). Unusual company workload; avoid generalising its infrastructure choices.
+- [Anthropic: Quantifying infrastructure noise in agentic coding evals](https://www.anthropic.com/research/infrastructure-noise) (2026-02-05). Older coverage gap; environment confounder in Terminal-Bench 2.0.
+
+See the [research run record](../study-briefings/2026-10-26.md) for scope, application, and remaining gaps.

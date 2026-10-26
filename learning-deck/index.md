@@ -8,9 +8,13 @@ has_children: true
 
 **Learn one idea. Recall it. Try it on your spelling app.**
 
+[Launch the slideshow →]({{ '/learn/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 }
+
+The slideshow shows one card at a time, with **Learn → Recall → Try** steps. Use the arrow keys, swipe on mobile, or choose any card. It remembers your place and reviewed cards in this browser. Share the URL to link directly to a card and step.
+
 Sixteen lesson cards and four lab cards turn the [learning plan](../learning-plan.md) into smaller bites. Each lesson takes roughly **3–5 minutes**; use the rest of your 10–15 minute session for its exercise. Labs still need 60–90 minutes and your development environment.
 
-[Start with card 01 →](week-1.md#card-01)
+[Read card 01 in the notes →](week-1.md#card-01)
 
 ## Pick a deck
 
@@ -29,11 +33,11 @@ Sixteen lesson cards and four lab cards turn the [learning plan](../learning-pla
 4. **Try:** Make the small output. The spelling-app examples are illustrative; use another project if you prefer.
 5. **Return:** Revisit tricky cards at your next sitting and weekly lab.
 
-**Easy / Hesitant / Again:** Give each card a quick confidence rating in your own notes. Revisit “Again” first. This is a suggested review habit, not an automated spaced-repetition scheduler.
+**Easy / Hesitant / Again:** Give each card a quick confidence rating in your own notes. Revisit “Again” first. The slideshow records reviewed cards, but does not schedule spaced repetition.
 
 ## Keep evidence, not just a streak
 
-A read card is reading progress. An exercise is complete when its output exists. Tick the corresponding session in the [learning plan](../learning-plan.md) once you have that evidence; `/study mark-read` continues to track the original chapters separately. This deck does not add or reset reading metadata.
+A reviewed card is reading progress. An exercise is complete when its output exists. Tick the corresponding session in the [learning plan](../learning-plan.md) once you have that evidence; `/study mark-read` continues to track the original chapters separately. Browser progress does not change the repo's reading metadata or exercise checkboxes, and does not sync between devices.
 
 A tiny personal note is enough to start:
 

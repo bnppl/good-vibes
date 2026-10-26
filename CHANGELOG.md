@@ -6,6 +6,27 @@ nav_exclude: false
 
 # Changelog
 
+## October 26, 2026: Study Updates Keep Cards in Sync
+
+- Extended both Claude Code and OpenCode `/study update` definitions to scan weekly cards, detect drift, and propose corresponding slideshow changes alongside chapter updates.
+- Apply mode updates affected cards within the approved scope, preserving concise lessons, source qualifications, stable card IDs and parser labels, reading metadata, and exercise evidence.
+- Added card-change reporting and checks for links, recall answers, and slideshow structure; clarified that Pages deployment and browser review marks remain separate.
+
+## October 26, 2026: Study Research Catch-up
+
+- Ran the study briefing across all 41 tracked files: 38 unread, three previously read and updated, no in-progress or current files. Kept reading dates, statuses, and exercise checkboxes unchanged.
+- Added sourced material on skill discovery evaluation, simplifying coupled specialist agents, targeted retrieval, evidence-linked memory, trust across summaries/resumes, service identity, and delivery infrastructure bottlenecks.
+- Added the older infrastructure-noise evaluation reference as a coverage gap, explicitly distinguished from newly published research.
+- Corrected unsupported multi-agent defaults and the unconditional hybrid-search recommendation. Kept practitioner accounts, preprints, and proposed exercises distinct.
+- Linked the findings into existing sessions and card exercises. Recorded source dates, research scope, limitations, and the full inventory in `study-briefings/2026-10-26.md`.
+
+## October 26, 2026: GitHub Pages Learning Slideshow
+
+- Added a JavaScript slideshow at `/learn/`, with a dedicated responsive layout, weekly deck picker, and Learn → Recall → Try steps.
+- Added keyboard and swipe navigation, shareable card/step URLs, answer reveals, and browser-local position and review progress. Reviewing a card does not complete its practical exercise.
+- Reused the weekly Markdown cards as the single content source, with Jekyll-rendered content and base-path-aware links. No additional JavaScript build or runtime dependencies.
+- Linked the slideshow from the wiki home, deck index, and learning plan.
+
 ## October 26, 2026: Bite-Sized Learning Deck
 
 - Added four weekly Markdown decks with 16 lesson cards and four lab cards, following the revised learning plan.

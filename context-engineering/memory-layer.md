@@ -130,3 +130,9 @@ The practical insight: most teams focus exclusively on the model layer (waiting 
 
 - **Read (short):** [How AI Agents Actually Remember: Inside Mem0, Supermemory, and Letta](https://kenhuangus.substack.com/p/how-ai-agents-actually-remember-inside) — Ken Huang *(2026)*. Mechanism-level comparison of the leading memory frameworks — how each one decides what to write, retrieve, and forget.
 - **Read (short):** [Agent Memory at Scale 2026: Letta, Zep, Mem0, and LangMem Compared](https://agentmarketcap.ai/blog/2026/04/10/agent-memory-vendor-landscape-2026-letta-zep-mem0-langmem) *(April 10, 2026)*. The current vendor landscape for this page's persistence patterns, with the trade-offs (bolt-on memory layer vs. memory-native runtime) mapped out.
+
+## October 2026: Separate Evidence from Conclusions
+
+[LongHarness](https://arxiv.org/abs/2610.13075v1) (October 9 preprint) manages evidence and conclusions explicitly rather than leaving both in an expanding transcript. Its evaluation concerns document reasoning with GLM-5.3-Flash and Qwen3.8-Flash on OfficeQA Pro, AA-LCR, and LongBench v2; it does not establish coding-productivity gains.
+
+**Proposed coding exercise:** Extend a handoff with a small evidence ledger: claim, source path and revision, check performed, current status, and unresolved question. Mark superseded claims when code changes. Ask a fresh session to verify one conclusion from its source. This adapts the research idea; it is not a reproduction of the paper's system.

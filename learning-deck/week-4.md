@@ -2,6 +2,7 @@
 title: "04 · Choose your workflow"
 parent: Learning Deck
 nav_order: 4
+last_updated: 2026-10-26
 ---
 
 # 04 · Choose your workflow
@@ -62,7 +63,7 @@ Coordination, conflicts, integration, review, and duplicated work can outweigh t
 
 </details>
 
-**Try it:** Design a bounded comparison with ownership, interfaces, isolation, integration checks, and cost budget—or explain why one agent is enough.
+**Try it:** Compare a coupled specialist with a skill in one loop. Keep tasks and budget fixed; check individual regressions, integration, and review effort. Retain separate agents where they earn their cost.
 
 [Full exercise: session 14](../learning-plan.md#session-14-delegate-only-with-a-testable-reason) · Go deeper: [Multi-agent coordination](../agent-patterns/multi-agent.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
 
@@ -90,7 +91,7 @@ It should surface the uncertainty and escalate according to the agreed boundary.
 
 </details>
 
-**Try it:** Write allowed actions, escalation triggers, limits, recovery steps, and who reviews consequential changes.
+**Try it:** Write allowed actions, escalation triggers, limits, recovery steps, and reviewers. Name whose credentials each external action uses, including scheduled runs.
 
 [Full exercise: session 15](../learning-plan.md#session-15-autonomy-recovery-and-review) · Go deeper: [Autonomy](../agent-patterns/autonomy.md) · [Production lessons](../agent-patterns/production.md)
 
@@ -118,7 +119,7 @@ An explicit problem, evidence with limits, adoption conditions, and a clear reas
 
 </details>
 
-**Try it:** Draft one page: problem, results, costs, comprehension check, risks, adoption conditions, and reversal criteria.
+**Try it:** Draft one page: problem, results, costs, understanding, risks, adoption conditions, and reversal criteria. Include review and CI delays, not only generation speed.
 
 [Full exercise: session 16](../learning-plan.md#session-16-evidence-and-team-recommendation) · Go deeper: [Agent evaluation](../verification/agent-evaluation.md) · [Verification sources](../verification/sources.md)
 
