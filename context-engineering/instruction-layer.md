@@ -2,7 +2,7 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: 2026-04-06
 status: read
 ---
@@ -10,7 +10,7 @@ status: read
 # The Instruction Layer
 
 {: .hook }
-> **Your CLAUDE.md has a ~50-rule ceiling — and most projects blow past it without noticing.**
+> **Every instruction should earn its place through relevance and observed behaviour.**
 >
 > Every extra rule isn't free. Past a certain point, models start dropping or contradicting instructions instead of following them better.
 
@@ -24,7 +24,7 @@ status: read
 > **Instructions are a budget, not a wishlist** — every rule you add spends from the same attention budget as everything else in context.
 
 {: .try-it }
-> Count the directives in your current CLAUDE.md / rules files. If you're near or over ~50, pick three to delete today.
+> Identify three redundant or conflicting directives in your rules files. Compare a leaner version against your baseline tasks.
 
 ---
 
@@ -106,13 +106,9 @@ The adoption signal is strong: OpenAI, Google, GitHub, and Cursor all adopted si
 
 **The SKILL.md format.** A SKILL.md file has three layers: YAML frontmatter (`name`, `description`, trigger conditions — the ~80 tokens the agent sees at discovery), a brief activation summary (~200–500 tokens loaded when the skill activates), and optional reference sections loaded only during execution. The format enforces the tier structure by design: you cannot accidentally pre-load a reference section because it only loads when the agent explicitly requests it. The practical math: 17 skills × 80 tokens = 1,360 tokens always-on vs. an average of 3,000–8,000 tokens per skill if pre-loaded — a 3–5× reduction in baseline context cost for the same capability surface.
 
-### The ~50 Instruction Ceiling
+### Instruction Budgets: Measure Behaviour
 
-Anthropic's documentation notes that system prompts already contain around 50 instructions by the time you account for tool descriptions, formatting guidance, and core behavioral rules. Models can reliably follow approximately this many instructions before degradation sets in.
-
-Every instruction you add competes for attention with every other instruction. This isn't a theoretical concern — at high instruction counts, models start dropping rules inconsistently. The ceiling forces prioritization: if you're writing instruction 51, something else should come out.
-
-**Model-generation caveat.** The ~50 figure applies to Sonnet-class models. More capable models in the Fable-5 class can reliably follow 150–200 discrete instructions before degradation appears — the ceiling scales with model capability. This doesn't mean you should write 200 rules: the 50-instruction discipline forces a prioritization exercise that produces better instruction files regardless of the model's ceiling. But it does mean the "if you're over 50, something is wrong" heuristic should be recalibrated per model generation. If your team is running Fable 5 exclusively, the practical ceiling is higher; if you're running a mix of models, calibrate to the least capable one your instruction file will see.
+Keep instructions relevant, non-conflicting, and easy to discover. There is no verified universal 50-instruction ceiling, nor a supported model-specific allowance of 150–200 rules in the sources checked for this revision. Test instruction changes on representative tasks rather than counting rules as a quality measure. Move mechanically enforceable rules into tooling and detailed guidance into scoped references.
 
 ---
 
@@ -166,7 +162,7 @@ The pattern: every rationalization sounds like good judgment in the moment. The 
 
 ## Actionable Steps
 
-1. **Audit your system prompt.** Count instructions explicitly. If you're over 50, start removing. Cut anything the model already knows, anything derivable from the codebase, and anything that hasn't demonstrably changed behavior.
+1. **Audit your system prompt.** Check relevance and conflicts, then evaluate a leaner version. Cut anything the model already knows, anything derivable from the codebase, and anything that hasn't demonstrably changed behavior.
 
 2. **Use progressive disclosure.** Instead of embedding all project conventions, tell the model where to find them: "Before making changes to the API layer, read `docs/api-conventions.md`." This keeps the instruction layer lean and ensures the model gets current information rather than a potentially stale copy.
 

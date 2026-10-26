@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -229,11 +229,9 @@ Birgitta Boeckeler's analysis on Martin Fowler's site documents how Claude Code 
 
 The key principle: context should be loaded when it's relevant, not pre-loaded because it might be relevant.
 
-### The ~50 Instruction Ceiling
+### Instruction Budgets: Measure Behaviour
 
-Anthropic's documentation notes that system prompts already contain around 50 instructions by the time you account for tool descriptions, formatting guidance, and core behavioral rules. Models can reliably follow approximately this many instructions before degradation sets in.
-
-Every instruction you add competes for attention with every other instruction. This isn't a theoretical concern — at high instruction counts, models start dropping rules inconsistently. The ceiling forces prioritization: if you're writing instruction 51, something else should come out.
+Keep instructions relevant, non-conflicting, and easy to discover. There is no verified universal 50-instruction ceiling, nor a supported model-specific allowance of 150–200 rules in the sources checked for this revision. Test instruction changes on representative tasks rather than counting rules as a quality measure. Move mechanically enforceable rules into tooling and detailed guidance into scoped references.
 
 ---
 
@@ -251,7 +249,7 @@ Every instruction you add competes for attention with every other instruction. T
 
 ## Actionable Steps
 
-1. **Audit your system prompt.** Count instructions explicitly. If you're over 50, start removing. Cut anything the model already knows, anything derivable from the codebase, and anything that hasn't demonstrably changed behavior.
+1. **Audit your system prompt.** Check relevance and conflicts, then evaluate a leaner version. Cut anything the model already knows, anything derivable from the codebase, and anything that hasn't demonstrably changed behavior.
 
 2. **Use progressive disclosure.** Instead of embedding all project conventions, tell the model where to find them: "Before making changes to the API layer, read `docs/api-conventions.md`." This keeps the instruction layer lean and ensures the model gets current information rather than a potentially stale copy.
 

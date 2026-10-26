@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -123,7 +123,7 @@ The default context: previous turns in the conversation. Short-term memory is wh
 
 It works well for referencing earlier requirements, building on prior discussion, and keeping the model oriented within a single task. The problem is that it degrades over time.
 
-Anthropic's finding from production agent work: every agent's success rate decreases after 35 minutes of continuous operation, and doubling task duration quadruples the failure rate. Old turns don't disappear — they accumulate. What was useful context ten messages ago becomes noise now: resolved questions, superseded plans, outdated status updates. The model's attention gets divided across all of it, diluting focus on what currently matters.
+Long sessions can accumulate stale decisions, superseded plans, and noisy tool output. There is no verified universal 35-minute cutoff or duration-to-failure multiplier in the primary sources checked for this revision. Monitor repeated work, missed requirements, and context pressure; checkpoint at coherent task boundaries and preserve verified state. See Anthropic’s [long-running agent guidance](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) for incremental work and durable handoffs.
 
 This is the core tension in short-term memory: you need history for continuity, but history degrades performance over time. You can't simply dump everything into context and expect performance to hold. This tension drives most of the strategies in the orchestration layer — context compression, turn summarization, and explicit pruning of resolved threads.
 
@@ -290,7 +290,7 @@ Recomputing the cache for a 100K+ token context is expensive in both time and mo
 
 **LLM summarization as primary compaction.** The JetBrains data is clear: agents using LLM summarization as the main strategy ran 15% longer with worse results. The model over-trusts its own summaries and loses important details in the compression. Use observation masking first. Add LLM summarization for genuinely long-running tasks where masking alone isn't enough.
 
-**Monolithic agents.** Trying to hold everything in one context window works for short tasks. For anything taking longer than 30–35 minutes, Anthropic found context degradation becomes likely. The model starts losing track of earlier decisions, repeating completed work, or missing relevant history that's been pushed too far back.
+**Unmanaged context.** Repeated work, lost requirements, and stale decisions are signals to checkpoint, compact, or start a fresh session. Choose based on the task and observed behaviour rather than a fixed 30–35-minute limit. Preserve verified state and unresolved questions.
 
 **Rewriting context between turns.** Changing system prompts, tool definitions, or any early context between turns invalidates the KV-cache. The cost scales with the total context length — expensive for large windows.
 

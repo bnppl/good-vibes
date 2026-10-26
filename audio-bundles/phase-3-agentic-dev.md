@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-04-02
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -30,7 +30,7 @@ Your CLAUDE.md, `.cursorrules`, or AGENTS.md is the one piece of context that lo
 - Debugging sessions and their solutions — these become noise once the bug is fixed
 - Ephemeral task state — write that to a todo file instead
 
-**The 50-instruction ceiling.** Anthropic's own research notes that models can reliably follow around 50 discrete instructions. Past that, instructions start competing for attention and less prominent ones get dropped. This isn't a soft guideline — it's a practical ceiling. If your instruction file has 80 rules, you're probably getting 50 of them followed inconsistently. Audit ruthlessly. Cut anything that's redundant with the linter, derivable from the code, or hasn't been violated in the last month.
+**Instruction budgets.** Keep instructions relevant, non-conflicting, and easy to discover. There is no verified universal 50-instruction ceiling, nor a supported model-specific allowance of 150–200 rules in the sources checked for this revision. Test instruction changes on representative tasks rather than counting rules as a quality measure. Move mechanically enforceable rules into tooling and detailed guidance into scoped references.
 
 **Progressive disclosure over exhaustive lists.** Instead of enumerating every API convention in CLAUDE.md, write one line: "Read `docs/api-conventions.md` before making API changes." The agent loads the detailed guidance when it needs it, and it doesn't crowd out other instructions the rest of the time. This pattern scales — you can have deep reference material without overwhelming the always-on context.
 
@@ -92,7 +92,7 @@ The distinction isn't "use SDD or don't" — it's about matching the level of sp
 
 ## Context Strategies for Long Coding Sessions
 
-**The 35-minute degradation curve.** Anthropic's production data shows agent success rates decrease meaningfully after 35 minutes of work, with doubled session duration quadrupling the failure rate. This is the practical ceiling for unmanaged context. It's not that models can't handle long sessions — it's that accumulated noise, compacted decisions, and degraded instruction recall compound. The longer the session, the more the context has drifted from what you actually want.
+**Context drift and checkpoints.** Long sessions can accumulate stale decisions, superseded plans, and noisy tool output. There is no verified universal 35-minute cutoff or duration-to-failure multiplier in the primary sources checked for this revision. Monitor repeated work, missed requirements, and context pressure; checkpoint at coherent task boundaries and preserve verified state. See Anthropic’s [long-running agent guidance](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) for incremental work and durable handoffs.
 
 Three strategies for working around this:
 
@@ -168,13 +168,13 @@ Most teams running agentic development workflows have no idea whether their cont
 
 A step-by-step setup for a new agentic dev project:
 
-**1. Set up your instruction file.** Create CLAUDE.md (or the equivalent for your tool). Keep it under 50 rules. Focus on universal project rules: how to run tests, commit and style conventions, architectural boundaries. Use progressive disclosure for anything detailed — point to reference docs rather than inlining their content.
+**1. Set up your instruction file.** Create CLAUDE.md (or the equivalent for your tool). Keep it lean and evaluate instruction adherence on your actual tasks. Focus on universal project rules: how to run tests, commit and style conventions, architectural boundaries. Use progressive disclosure for anything detailed — point to reference docs rather than inlining their content.
 
 **2. Write a spec before implementation.** Define what you're building, how it should work, and what success looks like. Even a one-page spec dramatically improves agent output compared to ad-hoc instructions. The spec doesn't need to be exhaustive — it needs to establish the right frame before the agent starts generating code.
 
 **3. Create an implementation plan.** Break the spec into tasks sized for one context window — roughly 15–30 minutes of agent work each. Include exact file paths, expected behavior, and test criteria in each task description. This is where the quality multiplier kicks in: precise task descriptions produce precise work.
 
-**4. Execute per-task with fresh agents or compaction breaks.** Don't let context degrade through a long session. Either dispatch fresh agents per task (Strategy 3 above) or compact explicitly between tasks (Strategy 2). Treat the 35-minute curve as a hard constraint, not a soft guideline.
+**4. Execute per-task with fresh agents or compaction breaks.** Don't let context degrade through a long session. Either dispatch fresh agents per task (Strategy 3 above) or compact explicitly between tasks (Strategy 2). Use task boundaries, observed drift, and context pressure to choose checkpoints; elapsed time alone is not a reliability limit.
 
 **5. Use the filesystem for persistence.** Write progress, decisions, and notes to files. These survive context resets and serve as the bridge between sessions. Update the spec and implementation plan as the project evolves — keep them as the canonical source of truth rather than letting the conversation history become the record.
 

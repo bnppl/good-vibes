@@ -2,76 +2,48 @@
 title: "Agentic TDD"
 parent: "Verification"
 nav_order: 1
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
 
+
 # Agentic TDD: Verification-First Development
 
-{: .hook }
-> **Adding "do TDD" to a system prompt can actually increase regressions — because the agent writes tests that confirm its own broken logic.**
->
-> The Fowler "TDD Paradox" (March 2026): agents writing their own tests inflate regressions rather than reduce them when there's no human review gate on the tests themselves.
+## Concept
 
-**In short:**
-- **The problem:** Agent-written tests validate whatever the agent happened to produce — the test author and code author are the same untrusted party.
-- **The idea:** Tests as prompts — failing tests as the specification language, giving agents an unambiguous binary success criterion before they write a line of code.
-- **How it works:** Red-Green-Agent loop (human-approved failing test → agent makes it pass → fresh agent refactors); negative test priority; PreToolUse hooks as hard gates blocking writes to `src/` without a failing test.
-- **The result:** A green suite is not a safe suite. Kill rate from mutation testing is the honest measure; line coverage tells you the test ran the code, not that it would notice if the code changed.
+A reviewed failing test gives a coding agent concrete feedback about intended behaviour. It also gives the next session a regression check. Passing that test is evidence about the cases it covers, not proof that the whole feature is correct.
 
-{: .aha }
-> **Tests as prompts, not tests as validation** — the agent needs a runnable binary success criterion before it writes a line, not a vague "add tests when done" instruction.
+Tests and specifications complement implementation review. The same agent may misunderstand both the requirement and the test; writing the test first does not prevent that mistake. Verification must include whether the assertion expresses the user's intent and fails for the right reason.
 
-{: .try-it }
-> Pick one function an agent wrote recently. Write one test that specifies a specific invariant — a boundary condition, an error path, something non-obvious. Confirm the test would fail on a plausible wrong implementation before the agent sees it.
+## A Practical Loop
 
----
+1. State the expected behaviour, edge cases, and acceptance criteria in terms a reviewer can inspect.
+2. Write or review a focused test. Run it against the starting implementation and inspect the failure: a missing dependency or broken test setup is not the desired red state.
+3. Ask the agent to implement the change within the agreed scope. Supply relevant domain and architecture constraints as well as the failing test.
+4. Re-run the check and relevant existing regression tests. Inspect changes to tests, fixtures, and configuration as carefully as production code.
+5. Refactor while preserving behaviour. Use a fresh context when it helps focus; it is not required for every refactor.
+6. Review the actual implementation and explain its important choices and failure modes before accepting the change.
 
-## Deep dive
+For exploratory work, first investigate what the system does and clarify intent. Characterization tests capture observed behaviour; they do not automatically make that behaviour desirable. A documentation-only edit or other low-impact reversible task may need a direct check rather than a new automated test. Match verification effort to the change.
 
-By 2026, **Agentic TDD** has emerged as the primary "safety net" for AI-driven software engineering. As AI agents generate an increasing percentage of new code, the focus has shifted from *writing* code to *verifying* it.
+## Patterns and Anti-Patterns
 
-## The Core Paradigm: "Tests as Prompts"
+- **Protect authoritative checks.** Keep task acceptance criteria and evaluator checks outside the candidate's writable surface where practical. In shared repositories, use required checks and independent review for changes to grading or access controls.
+- **Exercise errors and boundaries.** Include relevant invalid input, failure recovery, and existing behaviour. Do not rely on happy-path coverage alone.
+- **Test the tests.** A deliberate defect, targeted mutation testing, or a property test can expose weak assertions. Mutation scores are diagnostic: equivalent mutants and the selected mutation operators limit what a score establishes.
+- **Review self-healing tests.** A selector fix can be legitimate; weakening a behavioural assertion to make a change pass can hide a regression. Require evidence that the expected behaviour remains intact.
+- **Use hooks for early feedback.** A hook can remind or block covered write paths. One failing test somewhere in the session does not prove that subsequent code is tested, and a hook does not necessarily cover every shell or tool path. CI and resource permissions remain separate controls.
+- **Avoid green-by-construction.** Generating implementation and assertions from the same mistaken assumption can produce a green suite. Compare tests with independently reviewed intent and inspect the resulting behaviour.
 
-The most significant shift in professional agentic workflows is treating tests not just as validation, but as the **specification language** for AI.
+## Action Step
 
-- **Deterministic Success:** Instead of vague natural language prompts (e.g., "build a login page"), you provide a suite of failing tests. This gives the agent a clear, binary success criterion: the task is done when the tests are green.
-- **Preventing "Hallucinated Quality":** TDD prevents a common failure mode where agents write tests *after* the code that simply confirm their own broken logic. By requiring the test to exist (and fail) first, the agent cannot "cheat."
+Pick one small feature. Record a reviewed failing test, a successful implementation run, and one plausible defect the test catches. Explain what remains untested. Keep that evidence with the task record described in [agent evaluation](agent-evaluation.md).
 
-## Key Trends in 2026
+## Cross-References and Sources
 
-- **TDAD (Test-Driven Agentic Development):** A formalized protocol that uses graph-based impact analysis to improve issue resolution. The core mechanism: rather than asking an agent to "fix issue #123," you surface the specific tests that currently fail due to that issue, and the agent targets those directly. Research shows that providing specific test context to agents is 40% more effective than general instruction — because the agent has an unambiguous success criterion rather than a prose description it must interpret.
-- **Autonomous Quality Assurance (AQA):** Independent QA agents that observe application updates and modify test coverage on the fly, handling up to 60% of regression testing without human intervention. These agents watch for behavior drift rather than just green/red test status.
-- **Self-Healing Test Suites:** 2026 agents can automatically update test selectors and assertions when UI changes or minor refactors occur, significantly reducing the "maintenance tax." Note the narrow scope: self-healing is appropriate for *structural* changes (a renamed CSS class, a moved DOM element) but not *behavioral* ones (a changed button label that signals a changed user flow). Agents that heal behavioral changes without human review are concealing regressions, not fixing them.
-
-## The "TDD Paradox" (March 2026 Finding)
-
-A study by Martin Fowler's team found that simply adding "do TDD" to a system prompt can actually *increase* regressions if the agent is allowed to write its own tests without oversight. The most effective 2026 workflows involve:
-
-1.  **Human-defined Intent:** The human writes the high-level spec and edge cases.
-2.  **Agent-generated Tests:** The agent translates that spec into executable tests.
-3.  **Human Review of Tests:** The human verifies the *tests* are correct before the agent writes a single line of production code.
-
-## Actionable Patterns
-
-- **The Red-Green-Agent Loop:** 
-    1. Write (or approve) a failing test.
-    2. Dispatch agent with the command: "Make this test pass."
-    3. Verify the pass and refactor using a fresh agent context.
-- **Negative Testing as a Priority:** Agents are naturally "optimistic." Explicitly requiring tests for error states, null values, and security boundaries is the only way to ensure robust output.
-- **Agentic Hooks:** Claude Code's `PreToolUse` hook fires before any tool call, including file writes. A hook configured to check for at least one failing test in the session before allowing writes to `src/` is a hard gate — the agent physically cannot produce untested code. Gemini CLI offers equivalent `before_tool` hooks. The pattern works best when the hook outputs a clear error message pointing the agent back to the test-first requirement, rather than silently blocking.
-
-## A Green Suite Is Not a Safe Suite
-
-The "TDD Paradox" is partly a test-quality problem: an agent that writes shallow tests — ones that execute a function but assert almost nothing meaningful about its behavior — can reach green with very little verification value. The kill rate metric from mutation testing (see [test-the-tests](test-the-tests.md)) is the honest measure of whether the suite would catch bugs. Line coverage tells you the test *ran* the code; kill rate tells you the test *would notice* if the code changed. A 90% line-coverage suite with a 35% kill rate is theater. Asking the agent to write tests that cover specific invariants, error conditions, and boundary values — and then running mutation testing on the result — is the only reliable way to confirm the safety net is real.
-
-## Learn on the go
-
-- **Podcast:** [Tech League #17 — Alan Richardson on testing in the AI era](https://techleaguepodcast.com/episodes/) *(April 3, 2026)*. Directly on this page's questions: how to test AI-generated code, whether TDD still makes sense with agents, and why self-healing tests are a red flag — the same behavioral-vs-structural distinction this page draws.
-- **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Ryan Lopopolo (OpenAI) on going from 3.5 to 70 PRs per engineer per week — with tests and linters as the feedback loop that closes the agent's loop. The tests-as-hard-gates argument at production scale.
-- **Course:** [Claude Code 2026: Subagents, MCP, Skills and Plugins Bootcamp](https://www.udemy.com/course/claude-code-for-agentic-ai-build-ai-agents-10x-faster/) — Udemy *(2026, actively updated)*. Covers the hooks system hands-on — including the `PreToolUse` gate pattern this page describes for blocking untested writes.
-
----
-
-**Next Session:** [comprehension-debt](comprehension-debt.md)
+- [Test the tests](test-the-tests.md) — mutation and property-based checks.
+- [Characterization and handoff](characterization-and-handoff.md) — legacy behaviour and the next session.
+- [Comprehension debt](comprehension-debt.md) — maintaining understanding alongside verification.
+- [Security and containment](agent-security.md) — limits of hooks and enforced access.
+- [Demystifying evals for AI agents — Anthropic](https://www.anthropic.com/research/demystifying-evals-for-ai-agents) — outcome-based evaluation and grading. The workflow above is this guide's suggested practice, not a claim of a universal measured TDD improvement.

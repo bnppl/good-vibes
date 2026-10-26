@@ -2,7 +2,7 @@
 title: "Cross-Session Regression"
 parent: "Verification"
 nav_order: 3
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -64,7 +64,7 @@ Session B is asked to add a "last login" field to the user list endpoint. It wri
 
 The traditional answer to "how do we catch regressions across authors" is code review. A human reads the diff, holds the rest of the system in their head, notices the contract break or the duplicate utility or the N+1, and blocks the merge. This worked when the diff arrived once a day and the reviewer had built half the surrounding code themselves. It does not work when an agent produces a clean, well-formatted, locally-correct PR every twelve minutes and the reviewer has not personally written any of the surrounding code in months.
 
-This is the speed asymmetry from [comprehension-debt](comprehension-debt.md): AI generates code 5–7x faster than humans can comprehend it, and the Anthropic study (Jan 2026) found developers using AI for passive delegation scored **17% lower** on debugging and comprehension tests. The implication for cross-session regression is brutal. The reviewer cannot detect the silent contract break by reading the diff, because the broken caller is not in the diff. They cannot detect the parallel re-implementation, because the existing utility is not in the diff. They cannot detect the invariant violation, because the invariant is not written down anywhere in the diff's blast radius. Reading the code only catches the bugs that are visible in the code being read—and the cross-session regressions, by definition, live in the code that isn't.
+The [comprehension-debt](comprehension-debt.md) chapter explains why green tests and generated volume do not establish human understanding. Anthropic’s learning study measured immediate comprehension in a small, mostly junior sample; it does not establish a universal productivity-to-understanding ratio. For cross-session regressions, review must include affected callers and invariants outside the diff. Combine that review with checks appropriate to the change.
 
 ## Why Context Engineering Alone Is Insufficient
 

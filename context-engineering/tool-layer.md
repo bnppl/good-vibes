@@ -2,7 +2,7 @@
 title: "Tool Layer"
 parent: "Context Engineering"
 nav_order: 4
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -89,7 +89,7 @@ MCP provides both tools (actions the model can take) and resources (data the mod
 
 Models struggle with large tool sets. Once you have 20 or more tools, you start seeing predictable failure modes.
 
-**(New — April 12 research)** The numbers are now more concrete. The SwirlAI "State of Context Engineering in 2026" report cites OpenAI's recommendation: **fewer than 20 tools per agent, with accuracy degrading past 10.** The token cost alone is significant — a single complex JSON schema consumes 500+ tokens, so 90 tools burn 50,000+ tokens before any user interaction even begins. This reframes the tool selection problem as partly a context budget problem: large tool sets don't just confuse the model, they consume the context window that should be available for actual work.
+**Tool count and context cost.** Earlier secondary-source recommendations about fewer than 20 tools and degradation past 10 should not be treated as universal limits. Schema size, similarity between tools, discovery mechanisms, and model capability matter. Measure loaded tokens and tool-selection failures on representative tasks; compare curated and dynamically discovered tool sets.
 
 Predictable failure modes:
 

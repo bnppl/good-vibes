@@ -21,14 +21,14 @@ context-engineering/   # The guide: foundations, layers, agentic dev, sources
 frameworks/            # Survey of spec-driven development tools
 agent-patterns/        # Notes on agent architecture patterns
 verification/          # Notes on verification practices
-learning-plan.md       # The study roadmap
+learning-plan.md       # Four-week roadmap: 16 short sessions and four practical labs
 claude-config/
   commands/study.md    # The /study slash command definition
 skills/
   agentic-alignment/   # The agentic-alignment skill
 ```
 
-Every `.md` file in `context-engineering/` and `frameworks/` carries YAML frontmatter used by `/study`:
+Study files in `context-engineering/`, `frameworks/`, `agent-patterns/`, and `verification/` carry YAML frontmatter used by `/study`:
 
 ```yaml
 last_updated: 2026-04-02   # when content last changed
@@ -38,13 +38,19 @@ status: unread             # unread | in-progress | read
 
 ---
 
+## The learning plan
+
+Start with the [Learning Deck](learning-deck/index.md) for bite-sized lessons: 16 cards across four weeks, with concrete examples, revealable recall answers, small exercises, and four lab cards. It works as Markdown in the wiki and Obsidian; exercise completion stays in the learning plan.
+
+[`learning-plan.md`](learning-plan.md) brings evaluation and verification into week one, adds dedicated harness and containment work, and makes framework comparison optional. Short mobile readings lead to observable exercise outputs; four development labs provide baseline, comparison, handoff, and adoption evidence. Existing reading dates remain intact.
+
 ## The `/study` command
 
 `/study` is a Claude Code slash command defined in [`claude-config/commands/study.md`](https://github.com/bnppl/good-vibes/blob/main/claude-config/commands/study.md). It turns the wiki into an active study partner rather than a passive pile of markdown. Run it inside Claude Code with optional arguments:
 
 | Command | Mode | What it does |
 |---|---|---|
-| `/study` | **Briefing** | Reads frontmatter across the guide, buckets files into *unread*, *updated since last read*, and *up to date*, then recommends a 2–3 file study path. |
+| `/study` | **Briefing** | Reads frontmatter across all four content directories, buckets files into *unread*, *updated since last read*, and *up to date*, then recommends a 2–3 file study path. |
 | `/study [file or topic]` | **Deep Read** | Walks you through a specific file as a structured briefing (key concepts → actionable → how it connects → notable details), warns about missing prerequisites, and updates `last_read` / `status` when you're done. |
 | `/study status` | **Status** | Shows a table of reading progress — which files are read, which have updates since you last read them, and the oldest unread material. |
 | `/study mark-read [file]` | **Mark Read** | Updates a file's frontmatter to `status: read` without walking through it. |

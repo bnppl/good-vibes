@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: 2026-07-03
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -255,7 +255,7 @@ Most useful for: designing multi-agent coding workflows.
 **[Comprehension Debt: The Hidden Cost of AI-Generated Code](https://addyosmani.com/blog/comprehension-debt/)**
 Addy Osmani (March 14, 2026)
 
-The growing gap between code volume and human understanding. Anthropic study: developers using AI scored 17% lower on comprehension (50% vs. 67%). Speed asymmetry breaks the review quality gate. Important counter-narrative to pure productivity metrics.
+The growing gap between code volume and human understanding. The linked Anthropic study found an immediate comprehension gap in 52 mostly junior developers learning Trio (50% versus 67%, a 17-percentage-point gap); it does not establish long-term decline or the same effect in experienced engineers. See [comprehension debt](../verification/comprehension-debt.md) for scope and limitations.
 
 Most useful for: understanding the human cost of agentic development.
 
@@ -449,7 +449,7 @@ Most useful for: building and iterating on agent harnesses in practice.
 **[The Supervision Paradox](https://larsfaye.com/supervision-paradox)**
 Lars Faye (May 2026) — 406 HN points
 
-The counterintuitive finding that increasing agent autonomy requires *more* oversight infrastructure, not less. Faye's log analysis showed that sessions with checkpoint intervals every 3–5 steps outperformed "let it run" sessions, because errors caught at step 3 cost step-3-level effort to fix — the same errors at step 15 cost 12 compounded steps of rework. Checkpoints reframe from "interruptions" to "context reset events" that defeat context drift before it compounds. The paper's framing connects directly to the 35-minute degradation curve: unmanaged autonomy lets the curve do damage; checkpoints reset it.
+The counterintuitive finding that increasing agent autonomy requires *more* oversight infrastructure, not less. Faye's log analysis showed that sessions with checkpoint intervals every 3–5 steps outperformed "let it run" sessions, because errors caught at step 3 cost step-3-level effort to fix — the same errors at step 15 cost 12 compounded steps of rework. Checkpoints reframe from "interruptions" to "context reset events" that defeat context drift before it compounds. Treat checkpoint cadence as a workload-specific hypothesis; this guide does not establish a universal 35-minute degradation curve.
 
 Most useful for: calibrating how much autonomy to give agents and designing oversight cadences that don't kill throughput.
 
@@ -597,7 +597,7 @@ Anthropic (March 2026)
 
 Patterns for multi-hour agent sessions in application development. Specific strategies for checkpoint design, state management, and failure recovery when sessions span hours not minutes. Direct follow-up to the Nov 2025 effective harnesses post.
 
-Most useful for: teams managing agent sessions longer than 35 minutes.
+Most useful for: teams managing long-running agent work across context windows.
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Production Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 4
-last_updated: 2026-07-03
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -15,7 +15,7 @@ status: unread
 > The hardest lessons from Anthropic, Stripe, Cursor, and Claude Code's leaked architecture aren't in any pattern document.
 
 **In short:**
-- **The problem:** Agent systems fail in predictable ways — context drift after 35 minutes, cascading errors without verification gates, tool output flooding, and over-delegation that costs more than it saves.
+- **The problem:** Agent systems fail in predictable ways — context drift during unmanaged long-running work, cascading errors without verification gates, tool output flooding, and over-delegation that costs more than it saves.
 - **The idea:** Hard-won lessons from teams who've shipped agent systems at scale: what worked, what failed, and what nobody warned them about.
 - **How it works:** Orchestrator-worker with parallel execution + explicit effort budgets + rainbow rollouts for long-running agents + tracing for decisions (not just tool calls).
 - **The result:** The best production agent systems aren't fully agentic — they're hybrids where deterministic steps handle the predictable work and agents handle the reasoning.

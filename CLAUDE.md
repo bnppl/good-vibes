@@ -13,7 +13,7 @@ Personal learning wiki on context engineering and spec-driven development, plus 
 
 ## Conventions
 
-- Every `.md` in `context-engineering/` and `frameworks/` carries frontmatter — preserve it when editing content
+- Study files in `context-engineering/`, `frameworks/`, `agent-patterns/`, and `verification/` carry frontmatter — preserve it when editing content
 - Voice: direct, practical, cited. No fluff.
 - New content follows: concept → patterns/anti-patterns → actionable steps → cross-references
 - TL;DR refs: `(covered in TL;DR [newsletter], [Month Year])`

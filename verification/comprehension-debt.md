@@ -2,7 +2,7 @@
 title: "Comprehension Debt"
 parent: "Verification"
 nav_order: 2
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -10,7 +10,7 @@ status: unread
 # Comprehension Debt & Cognitive Sustainability
 
 {: .hook }
-> **AI generates code 5-7× faster than humans can comprehend it. Developers using AI for passive delegation scored 17% lower on debugging tests.**
+> **Generated code still needs human understanding; immediate task completion is not evidence of learning.**
 >
 > Comprehension debt is invisible — tests are green, velocity is high — until something breaks and nobody can fix it.
 
@@ -36,9 +36,9 @@ Unlike traditional technical debt, which manifests as friction (slow builds, mes
 
 ## The 2026 Crisis: The Speed Asymmetry
 
-AI generates code **10–20× faster** than humans can meaningfully review it — the 5–7× figure was measured in controlled settings; production teams running autonomous agents report a larger practical gap because the bottleneck is review, not generation. The traditional "5–7×" is a velocity figure; the comprehension asymmetry is higher because *reviewing generated code for correctness* takes longer than the generation did. This creates a "review bottleneck" where traditional peer review fails because the volume of code outpaces the human ability to audit it.
+Code generation can outpace careful review. The ratio depends on the task, model, workflow, and reviewer; this guide does not establish a universal generation-to-comprehension multiplier. Measure review and rework time alongside output.
 
-The **17% comprehension gap** from Anthropic's January 2026 study (50% vs. 67% on debugging tests for passive delegation vs. active engagement) understates the practical effect over time. Follow-up analysis showed comprehension of AI-generated code **decays faster than comprehension of human-written code** when not actively maintained: developers who stopped engaging with a module after an AI-assisted sprint showed measurably worse recall at the 4-week mark than developers who wrote the same module themselves, even controlling for module complexity. The mechanism is consistent with the "testing effect" in learning science — writing code engages retrieval and elaboration in ways that reviewing does not.
+Anthropic’s [January 29, 2026 randomized study](https://www.anthropic.com/research/AI-assistance-coding-skills) involved 52 mostly junior developers learning the unfamiliar Trio library. The AI-assisted group scored 50% versus 67% on an immediate comprehension quiz: a 17-percentage-point gap. The comparison was AI assistance versus coding by hand, not a randomized comparison of passive delegation versus active engagement. The small sample and immediate assessment limit generalization to experienced engineers and longer-term learning. The source does not establish four-week retention decay; the earlier unsourced follow-up claim has been removed.
 
 Comprehension debt also **compounds across sessions** in a way technical debt does not. When Session B cannot understand code Session A produced, it works around it or duplicates it — adding more code nobody understands on top of code nobody understands. Session C inherits both. The codebase grows; the shared theory shrinks. This spiral is the real crisis, not any single session's output quality.
 
@@ -46,17 +46,17 @@ Comprehension debt also **compounds across sessions** in a way technical debt do
 
 To maintain cognitive sustainability, professional engineers move from "passive delegation" to "active inquiry":
 
-### 1. The 1-5 Rule
-Before merging any AI-generated pull request, the author must self-score their understanding on a scale of 1–5:
+### 1. A Suggested 1-5 Self-Check
+As a suggested reflection exercise before merging an AI-generated pull request, the author can self-score their understanding on a scale of 1–5:
 - **1:** I have no idea how this works, but the tests are green. (DO NOT MERGE)
-- **3:** I can explain the main approach but not every edge case. (MINIMUM FOR MERGE)
+- **3:** I can explain the main approach but need to investigate important edge cases. (REVIEW GAPS)
 - **5:** I can walk through the logic end-to-end and explain why every choice was made.
 
 ### 2. The "Explain the PR" Protocol
-Senior engineers or reviewers require the author to walk through the logic of AI-generated code *without* looking at the diff. If the author cannot explain the "why" behind a specific architectural choice, the debt is considered too high to merge.
+A reviewer can ask the author to walk through the logic of AI-generated code *without* looking at the diff. If the author cannot explain the "why" behind a specific architectural choice, the debt is considered too high to merge.
 
 ### 3. Three-File Deep Dive
-For large agentic sessions, developers are required to fully read (not skim) the three files with the largest diffs, tracing complex execution paths end-to-end to rebuild the mental model.
+For large agentic sessions, developers can fully read (not skim) the three files with the largest diffs, tracing complex execution paths end-to-end to rebuild the mental model.
 
 ### 4. Declarative Orchestration
 Shifting the developer's role from "line-by-line coder" to "architectural supervisor." This involves writing rigorous specifications and interfaces *first*, then using AI only to fill in the implementation details. Birgitta Böckeler's Thoughtworks piece on spec-driven development (2025) frames this as the structural complement to comprehension management: when the spec exists before the code, the human's comprehension obligation is concentrated on the spec — which is short, intentional, and written in human terms — rather than on the generated implementation.
@@ -77,3 +77,7 @@ Teams should conduct "temporal audits" to identify modules that have become "bla
 ---
 
 **Next Session:** [tool-engineering](../context-engineering/tool-engineering.md)
+
+## Completion evidence
+
+Before asking AI for an explanation, explain the change and its failure modes yourself. Then compare your account with the code and tests. A self-score or an approved specification does not replace implementation review, particularly for security-sensitive changes. Revisit the explanation at a later session; this is a suggested learning exercise, not a validated merge threshold.

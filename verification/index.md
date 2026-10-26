@@ -2,7 +2,7 @@
 has_children: true
 title: Verification
 nav_order: 5
-last_updated: 2026-04-27
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -11,15 +11,18 @@ status: unread
 
 Professional AI-assisted development in 2026 is defined by a shift from **code generation** to **code verification**. As AI agents generate increasing volumes of code, the bottleneck — and the risk — is the human ability to verify, understand, and govern the output.
 
-The wiki splits verification into two modules. **Module 3** covers verification habits *within* a single agent session: tests as prompts, comprehension discipline, ACI design. **Module 4** covers verification artifacts that span sessions: the scenarios, contracts, fitness functions, and characterization tests that catch regressions when one agent session breaks something a previous session built.
+The [learning plan](../learning-plan.md) introduces evaluation and verification in week one, then develops cross-session reliability and containment. Reading a chapter and completing its exercise are tracked separately.
 
-## Module 3: Per-Session Verification
+## Evaluation, Containment, and Per-Session Verification
+
+- [agent-evaluation](agent-evaluation.md) — Baselines, repeated trials, held-out tasks, outcomes, cost, and review effort.
+- [agent-security](agent-security.md) — Prompt injection, scoped access, environment containment, and benign negative tests.
 
 - [agentic-tdd](agentic-tdd.md) — Using tests as the primary specification and success criterion for agents.
 - [comprehension-debt](comprehension-debt.md) — Strategies for maintaining cognitive sustainability and system understanding.
 - [tool-engineering](../context-engineering/tool-engineering.md) — Designing robust Agent-Computer Interfaces (ACI).
 
-## Module 4: Cross-Session Verification
+## Cross-Session Verification
 
 - [cross-session-regression](cross-session-regression.md) — The cross-session regression problem; why classical regression thinking falls short.
 - [bdd-for-agents](bdd-for-agents.md) — Gherkin scenarios as agent contracts and living documentation.

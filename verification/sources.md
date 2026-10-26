@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Verification"
 nav_order: 10
-last_updated: 2026-05-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -390,3 +390,12 @@ High-signal community discussions. Where the HN item URL wasn't captured during 
 **[Cq — Stack Overflow for AI coding agents](https://blog.mozilla.ai/cq-stack-overflow-for-agents/)** — 225 points (via HN discussion). Strong debate on whether agent-targeted knowledge bases are a real category or repackaged search.
 
 **[Hegel: a universal property-based testing protocol](https://hegel.dev)** — 133 points (via HN discussion). Smaller thread but high signal on the polyglot-PBT question.
+
+## October 26, 2026: Evaluation and Containment
+
+- [Demystifying evals for AI agents — Anthropic](https://www.anthropic.com/research/demystifying-evals-for-ai-agents) (January 9, 2026). Defines tasks, trials, traces, outcomes, and grader choices; practical recommendations rather than a controlled universal comparison. Used in [agent evaluation](agent-evaluation.md).
+- [How we contain Claude across products — Anthropic](https://www.anthropic.com/research/how-we-contain-claude) (May 25, 2026). Primary engineering account of containment and its implementation failures. Used in [agent security](agent-security.md).
+- [How AI assistance impacts the formation of coding skills — Anthropic](https://www.anthropic.com/research/AI-assistance-coding-skills) (January 29, 2026). Small randomized study of mostly junior developers learning an unfamiliar library; immediate assessment, not longitudinal retention evidence.
+- [Effective harnesses for long-running agents — Anthropic](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) (November 26, 2025). Incremental progress, durable handoffs, and verification across context windows; does not establish a universal session-duration cutoff.
+
+**Evidence rule:** Numerical claims need their original source and scope. Distinguish source findings from heuristics and suggested exercises. The five-task starter, four-week schedule, self-explanation prompts, and lab protocols in this plan are proposed learning activities, not validated universal thresholds.

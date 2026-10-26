@@ -2,7 +2,7 @@
 title: "Contract Testing"
 parent: "Verification"
 nav_order: 6
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -16,12 +16,12 @@ status: unread
 
 **In short:**
 - **The problem:** Silent contract breaks between sessions — the provider API changes, the consumer's tests stub the provider, nothing catches the drift until production.
-- **The idea:** Consumer-driven contracts (Pact) and Anti-Corruption Layers as the only verification mechanism that catches interface drift *on both sides of a boundary* — the consumer's CI knows the provider drifted, and vice versa.
+- **The idea:** Consumer-driven contracts (Pact) and Anti-Corruption Layers as a focused way to verify consumer expectations against provider behaviour. Integration, schema, and end-to-end checks can complement it.
 - **How it works:** Consumer writes a test generating a contract file → contract published to broker → provider CI replays consumer expectations against the real provider → build fails if provider breaks a consumer expectation.
 - **The result:** No human has to remember Session A's interface assumptions. The contract does. And it fires in CI, not in production.
 
 {: .aha }
-> **Contracts are the only technique that fails the consumer's CI when the provider drifts** — everything else runs on one side, or covers the wrong layer.
+> **Contracts make consumer expectations explicit.** Detecting provider drift depends on running verification against the relevant versions and wiring the result into CI or deployment gates.
 
 {: .try-it }
 > Pick two modules where different agent sessions built opposite sides of an interface. Write one consumer-driven contract test (Pact) or OpenAPI schema check. Wire provider CI to verify it pre-merge. The first contract feels like overhead; the third prevents the regression that costs a day to debug.
@@ -30,7 +30,7 @@ status: unread
 
 ## Deep dive
 
-**Contract testing** is the most direct mechanical answer to the cross-session regression problem from [cross-session-regression](cross-session-regression.md). When two sessions touch opposite sides of a module or service boundary — Session A on the provider, Session B on the consumer — the only artifact that can catch a silent break before merge is a contract that *both sides verify against*. Type checks pass. Unit tests pass. Each session's CI pipeline lights up green. And then production breaks because the consumer expected a `userId` and the provider started returning `user_id`.
+**Contract testing** is the most direct mechanical answer to the cross-session regression problem from [cross-session-regression](cross-session-regression.md). When two sessions touch opposite sides of a module or service boundary — Session A on the provider, Session B on the consumer — a contract that both sides verify can catch a silent break before merge; integration and end-to-end tests can also detect such breaks. Type checks pass. Unit tests pass. Each session's CI pipeline lights up green. And then production breaks because the consumer expected a `userId` and the provider started returning `user_id`.
 
 Without contracts, that failure is invisible to both sessions and to CI. The provider's tests don't know about the consumer. The consumer's tests mock the provider. Code review assumes a human read both sides — and in agentic dev, no one has. Contracts are the trip-wire that fires when a change on one side violates an expectation on the other, and they fire *in CI*, not in production. If you do nothing else from this module, add contract tests at the boundaries your sessions actually cross.
 
@@ -80,7 +80,7 @@ The mechanism: as part of characterization testing (covered in [characterization
 - **Type systems** cover compile-time shape inside one process. They evaporate at the network edge, at the serialization boundary, and across async/queue-based handoffs. Two services that share TypeScript types via a monorepo still drift the moment one of them deploys before the other.
 - **Code review** assumes a reviewer has read both sides of the boundary and held them in their head simultaneously. In agentic dev, no one has.
 
-Contracts are the only technique that **fails the consumer's CI when the provider drifts** — and *vice versa*. That's the unique property. Everything else either runs only on one side, or covers the wrong layer.
+Contracts can block incompatible changes when consumer publication, provider verification, version selection, and CI/deployment gates are configured correctly. A consumer pipeline does not automatically fail whenever a provider changes; detection depends on when verification runs and which results the gate checks.
 
 ## Pact Broker Workflow at Team Scale
 
@@ -88,7 +88,7 @@ The Pact broker is the piece that makes consumer-driven contracts work at scale.
 
 The 2026 piece worth flagging is the [**PactFlow MCP Server**](https://pactflow.io/blog/pactflow-mcp-server/) — the most concrete agent-aware contract tooling shipped to date. It exposes Pact operations as MCP tools so agents in Claude Code, Cursor, or VS Code can generate Pact tests, review them, and maintain the broker state inside the dev loop. The point isn't that agents now write Pact tests for free; it's that the *contract artifact* — the consumer's published expectation — becomes a first-class thing the agent can read, write, and reason about. Session B's agent can ask the broker, "what does the current consumer expect from this provider?" before touching the provider, instead of inferring it from the code.
 
-The cleanest articulation of *why this is now non-optional* is PactFlow's three-part **[Bridging Development Gaps with AI-Augmented Contract Testing](https://pactflow.io/blog/ai-automation-part-3/)** series. Part 1 covers agents authoring contracts from OpenAPI specs. Part 2 covers contract lifecycle management (who owns the contract, how it evolves, what triggers a re-verification). Part 3, the most recent, addresses multi-team coordination: agents generate APIs and clients independently and at machine speed; the human-mediated coordination that used to keep both sides in sync (standups, design docs, "did you tell the iOS team?") doesn't scale to that velocity. Contracts are now mandatory because contracts are the only coordination mechanism that runs at machine speed too.
+The cleanest articulation of *why this is now non-optional* is PactFlow's three-part **[Bridging Development Gaps with AI-Augmented Contract Testing](https://pactflow.io/blog/ai-automation-part-3/)** series. Part 1 covers agents authoring contracts from OpenAPI specs. Part 2 covers contract lifecycle management (who owns the contract, how it evolves, what triggers a re-verification). Part 3, the most recent, addresses multi-team coordination: agents generate APIs and clients independently and at machine speed; the human-mediated coordination that used to keep both sides in sync (standups, design docs, "did you tell the iOS team?") doesn't scale to that velocity. Use executable contracts where independent evolution warrants their lifecycle cost; automated integration and schema checks may be sufficient for simpler boundaries.
 
 ## Traps
 

@@ -2,7 +2,7 @@
 title: "Orchestration Layer"
 parent: "Context Engineering"
 nav_order: 6
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -148,7 +148,7 @@ LangChain published a complementary taxonomy to Osmani's that maps multi-agent p
 
 ### Parallel Agent Limits **(New — April 12 research)**
 
-Osmani's follow-up research (April 7, 2026) identified a practical ceiling: **beyond 5 parallel agents, coordination costs exceed benefits.** Key anti-patterns that compound at scale: vague specifications multiply errors across parallel runs (each agent independently misinterprets the same ambiguity), oversized teams lose more time to coordination than they gain from parallelism, and skipping verification treats impressive output as correct.
+**Parallelism is workload-dependent.** The earlier “beyond five agents” claim is not a general engineering limit. Independent work may benefit from more agents; shared mutable state and integration dependencies can erase the gain even with two. Compare correctness, total cost, elapsed time, and integration/review effort against a single-agent baseline before expanding.
 
 A notable finding: **human-curated `AGENTS.md` files outperform LLM-generated versions.** Research showed LLM-generated instruction files marginally *reduced* agent success rates — likely because models produce plausible but imprecise guidance that subtly misdirects. The principle: "Delegate the tasks, not the judgment."
 
@@ -240,7 +240,7 @@ Recomputing the cache for a 100K+ token context is expensive in both time and mo
 
 **LLM summarization as primary compaction.** The JetBrains data is clear: agents using LLM summarization as the main strategy ran 15% longer with worse results. The model over-trusts its own summaries and loses important details in the compression. Use observation masking first. Add LLM summarization for genuinely long-running tasks where masking alone isn't enough.
 
-**Monolithic agents.** Trying to hold everything in one context window works for short tasks. For anything taking longer than 30–35 minutes, Anthropic found context degradation becomes likely. The model starts losing track of earlier decisions, repeating completed work, or missing relevant history that's been pushed too far back.
+**Unmanaged context.** Repeated work, lost requirements, and stale decisions are signals to checkpoint, compact, or start a fresh session. Choose based on the task and observed behaviour rather than a fixed 30–35-minute limit. Preserve verified state and unresolved questions.
 
 **Rewriting context between turns.** Changing system prompts, tool definitions, or any early context between turns invalidates the KV-cache. The cost scales with the total context length — expensive for large windows.
 

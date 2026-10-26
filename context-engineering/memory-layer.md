@@ -2,7 +2,7 @@
 title: "Memory Layer"
 parent: "Context Engineering"
 nav_order: 5
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -38,7 +38,7 @@ The default context: previous turns in the conversation. Short-term memory is wh
 
 It works well for referencing earlier requirements, building on prior discussion, and keeping the model oriented within a single task. The problem is that it degrades over time.
 
-Anthropic's finding from production agent work: every agent's success rate decreases after 35 minutes of continuous operation, and doubling task duration quadruples the failure rate. Old turns don't disappear — they accumulate. What was useful context ten messages ago becomes noise now: resolved questions, superseded plans, outdated status updates. The model's attention gets divided across all of it, diluting focus on what currently matters.
+Long sessions can accumulate stale decisions, superseded plans, and noisy tool output. There is no verified universal 35-minute cutoff or duration-to-failure multiplier in the primary sources checked for this revision. Monitor repeated work, missed requirements, and context pressure; checkpoint at coherent task boundaries and preserve verified state. See Anthropic’s [long-running agent guidance](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) for incremental work and durable handoffs.
 
 This is the core tension in short-term memory: you need history for continuity, but history degrades performance over time. You can't simply dump everything into context and expect performance to hold. This tension drives most of the strategies in the orchestration layer — context compression, turn summarization, and explicit pruning of resolved threads.
 

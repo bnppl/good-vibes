@@ -8,6 +8,8 @@ nav_exclude: true
 
 A personal learning wiki on **context engineering** and **spec-driven development**.
 
+[Start learning: bite-sized cards →](learning-deck/index.md)
+
 ## Contents
 
 | Section | What It Covers |

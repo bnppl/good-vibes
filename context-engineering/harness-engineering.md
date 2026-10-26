@@ -2,7 +2,7 @@
 title: "Harness Engineering"
 parent: "Context Engineering"
 nav_order: 10
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -28,7 +28,7 @@ status: unread
 | 3. Harness Engineering | 2026 | Environment | Building deterministic guardrails, verification loops, and runtime constraints around the model | Requires upfront investment |
 
 {: .aha }
-> **You can't prompt or context your way to reliability.** At some point you need enforcement, not advice. A CLAUDE.md saying "don't delete production tables" is a suggestion. A PreToolUse hook that blocks DROP TABLE in production is a guarantee.
+> **You can't prompt or context your way to reliability.** At some point you need enforcement, not advice. A CLAUDE.md saying "don't delete production tables" is a suggestion. A hook that blocks `DROP TABLE` covers the paths it intercepts. Pair it with restricted database credentials, execution isolation, and network controls; test alternative access paths. It is not a general guarantee against data loss.
 
 ## The 5 Layers of a Production Harness
 
@@ -72,7 +72,7 @@ Harness engineering doesn't replace context engineering — it sits on top of it
 Progressive disclosure, compression, and instruction files (all context engineering concepts) are the *input* to a harness. The harness adds verification, guardrails, and observability as the *feedback* layer.
 
 {: .try-it }
-> Add one deterministic guardrail to your agent pipeline this week. A PreToolUse hook that blocks `DROP TABLE` in production. A CI check that runs a linter on every agent-generated PR. Start with enforcement, not advice — that's the harness mindset.
+> Add one deterministic guardrail to your agent pipeline this week. A tested hook plus restricted database permissions in a disposable environment. A CI check that runs a linter on every agent-generated PR. Start with enforcement, not advice — that's the harness mindset.
 
 ## Cross-References
 
@@ -89,3 +89,7 @@ Progressive disclosure, compression, and instruction files (all context engineer
 - **Course:** [Learn Harness Engineering — WalkingLabs](https://walkinglabs.github.io/learn-harness-engineering/en/) *(2026, free)*. The structured course version of this page — synthesizes the OpenAI and Anthropic material into exercises, with a minimal harness template to copy.
 - **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Lopopolo (OpenAI) on going from 3.5 to 70 PRs per engineer per week by inverting spec-driven development and engineering the harness instead — the discipline this page defines, reported from the largest deployment discussing it publicly.
 - **Read (short):** [AI Native DevCon Day 1: Making AI Agents Ready for Enterprise](https://dev.to/tessl/ai-native-devcon-day-1-making-ai-agents-ready-for-enterprise-1e50) *(June 2026)*. Conference recap covering the harness talks — useful map of who is doing what in this space right now.
+
+## Evaluate the boundary and the feedback
+
+Use [agent evaluation](../verification/agent-evaluation.md) to measure whether a harness change improves real tasks. Use [security and containment](../verification/agent-security.md) to distinguish model refusals, hook checks, and environment-enforced access boundaries. Preserve a simple baseline and include review effort and cost.

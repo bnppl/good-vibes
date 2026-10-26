@@ -2,7 +2,7 @@
 title: "DDD Boundaries"
 parent: "Verification"
 nav_order: 5
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -10,7 +10,7 @@ status: unread
 # DDD Boundaries: Session Scope as Architectural Scope
 
 {: .hook }
-> **One bounded context, one agent session, one blast radius — that's the topology design that makes every other verification problem in this module cheaper to solve.**
+> **Use domain boundaries to scope cohesive changes and make cross-context dependencies explicit.**
 >
 > DDD's primitives — bounded contexts, context maps, aggregates, ubiquitous language — turn out to be exactly the primitives needed to manage agent session boundaries. The boundary problem hasn't changed; the entities crossing it have.
 
@@ -30,7 +30,7 @@ status: unread
 
 ## Deep dive
 
-One bounded context, one agent session, one blast radius. That is the whole thesis of this session, and everything below is in service of it. If you align the seams of your codebase with the seams of your agent workflow, the verification problems Module 4 has been circling get dramatically cheaper to solve. If you don't, no amount of contract testing or fitness-function tooling will save you from sessions that quietly chew through each other's invariants.
+A bounded context is a useful responsibility scope, not a required one-to-one mapping to an agent session. One context may need many sessions; a coordinated change may legitimately span several contexts. Choose session boundaries around cohesive work, explicit interfaces, ownership, and verification.
 
 This is **Domain-Driven Design** repurposed as agent-topology design. The same primitives Eric Evans introduced in 2003 to manage human team boundaries — bounded contexts, context maps, aggregates, ubiquitous language — turn out to be exactly the primitives needed to manage agent session boundaries. The boundary problem hasn't changed; the entities crossing it have. In 2026, the most useful framing of DDD is not "a methodology for modeling complex domains" but "a methodology for deciding where one mind ends and another begins."
 
@@ -38,9 +38,9 @@ This is **Domain-Driven Design** repurposed as agent-topology design. The same p
 
 A **bounded context** in classical DDD is a region of the system inside which a model is internally consistent: terms have a single meaning, invariants hold, and the domain language is unambiguous. Outside the boundary, the same word may mean something different — `Customer` in Billing is not `Customer` in Shipping — and that's fine, as long as the boundary is explicit.
 
-An agent session has remarkably similar properties. It has a limited context window, a limited working memory, and — most importantly — a limited **ubiquitous-language vocabulary** that it carries from the prompts, files, and conversation it has loaded. When you ask one session to span two domains, you're asking the model to keep two ubiquitous languages coherent in the same window. It can do this for short stretches; it cannot do it reliably across a long task.
+An agent session has remarkably similar properties. It has a limited context window, a limited working memory, and — most importantly — a limited **ubiquitous-language vocabulary** that it carries from the prompts, files, and conversation it has loaded. When you ask one session to span two domains, you're asking the model to keep two ubiquitous languages coherent in the same window. Its reliability depends on the task, context, and harness; crossing domains calls for explicit terminology and checks.
 
-Map one session to one bounded context and the model's cognitive surface aligns with the architecture's natural seam. Cross-context calls then become **explicit** — forced through declared integrations the agent has to look up — rather than **accidental**, the kind that happen when an agent thinks "while I'm here, I'll just touch this other module." Nikita Golovko's GitNation talk *From Prompt Spaghetti to Bounded Contexts* (2026) makes this mapping the central recommendation: bounded contexts become the agent's responsibility scope, and the context map becomes the explicit cross-agent integration surface.
+Scoping a session to a cohesive change within a bounded context can reduce unrelated context. Cross-context calls then become **explicit** — forced through declared integrations the agent has to look up — rather than **accidental**, the kind that happen when an agent thinks "while I'm here, I'll just touch this other module." Nikita Golovko's GitNation talk *From Prompt Spaghetti to Bounded Contexts* (2026) makes this mapping the central recommendation: bounded contexts become the agent's responsibility scope, and the context map becomes the explicit cross-agent integration surface.
 
 The analogy worth holding in your head: a bounded context is to an agent session what a microservice is to a team. Both are units of independent reasoning with a published contract at the edge. Both fail the same way when the boundary leaks — through coupling that wasn't supposed to exist, discovered only when somebody changes one side and breaks the other.
 
@@ -56,11 +56,11 @@ This is the structural fix for the handoff problem [characterization-and-handoff
 
 ## Aggregates and Invariants as Testable Constraints
 
-An **aggregate** is the unit of consistency: a cluster of objects treated as a single whole for the purposes of data changes, with one entity (the aggregate root) acting as the gateway. The classical reason to use aggregates is transactional — you load and save them atomically. The agent-era reason is verification: aggregates are where you encode invariants that **the agent cannot violate even if it tries**.
+An **aggregate** is the unit of consistency: a cluster of objects treated as a single whole for the purposes of data changes, with one entity (the aggregate root) acting as the gateway. The classical reason to use aggregates is transactional — you load and save them atomically. The agent-era reason is verification: aggregates are where you encode invariants enforced by the current implementation.
 
-If `LineItem` raises in its constructor when `quantity <= 0`, then "negative quantity slipped into the order" is no longer a bug an agent could introduce. It's an unrepresentable state across every session that touches the order domain. The same goes for `Order.addLineItem` rejecting items from a different currency, or `Shipment.markDelivered` refusing to fire if the shipment has no carrier assigned. The invariants live in the code that constructs and mutates the aggregate; they do not live in PR-review discipline, in a checklist somewhere, or in the hope that the next session will read the same scenarios you read.
+If `LineItem` raises in its constructor when `quantity <= 0`, then that construction path rejects negative quantities. An agent could still modify the constructor or introduce a bypass, so protect the invariant with regression checks and review. The same goes for `Order.addLineItem` rejecting items from a different currency, or `Shipment.markDelivered` refusing to fire if the shipment has no carrier assigned. The invariants live in the code that constructs and mutates the aggregate; they do not live in PR-review discipline, in a checklist somewhere, or in the hope that the next session will read the same scenarios you read.
 
-Contrast this with the alternative: invariants enforced socially. Reviewer notices the violation, asks for a change, agent fixes it, ships. This works exactly as long as the reviewer is paying attention. Across many sessions and many reviewers, the failure rate compounds. An aggregate-level invariant has a failure rate of zero — it is a deterministic gate, the same kind of gate [cross-session-regression](cross-session-regression.md) argued the entire verification stack needs more of.
+Contrast this with the alternative: invariants enforced socially. Reviewer notices the violation, asks for a change, agent fixes it, ships. This works exactly as long as the reviewer is paying attention. Across many sessions and many reviewers, the failure rate compounds. An aggregate-level check rejects covered invalid states while the check remains intact and is used by every relevant mutation path. Test those assumptions across sessions; the implementation itself can change.
 
 A useful rule: if you find yourself writing a comment like "// must be positive" or a docstring saying "callers must ensure X before calling Y," promote the constraint into the aggregate. Comments don't survive sessions. Constructors do. The aggregate is the most durable place in the codebase to put a rule, because the type system and the runtime both enforce it without anyone — human or agent — having to remember.
 

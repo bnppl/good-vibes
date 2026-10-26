@@ -6,7 +6,25 @@ nav_exclude: false
 
 # Changelog
 
-Research updates applied on 2026-05-04. Each entry shows which finding landed where.
+## October 26, 2026: Bite-Sized Learning Deck
+
+- Added four weekly Markdown decks with 16 lesson cards and four lab cards, following the revised learning plan.
+- Each lesson includes one main idea, a spelling-app example, a recall question with a collapsible answer, an exercise, and links to the full material.
+- Added a deck landing page and entry links from the home page, README, and learning plan. Kept chapter reading metadata and exercise completion separate.
+
+
+Updates to the learning guide and study tooling. Historical entries retain their original dates.
+
+## October 26, 2026: Measured Practice and Evidence Corrections
+
+- Replaced the 29-session reading sequence with 16 short sessions and four practical labs; preserved prior completed-reading notes and existing reading metadata.
+- Added `verification/agent-evaluation.md` and `verification/agent-security.md`, linked through the verification index and source list.
+- Moved evaluation, acceptance criteria, comprehension checks, and baseline measurement into week one; added harness mapping, held-out comparisons, cross-session regression checks, containment tests, and a team adoption recommendation.
+- Made the framework survey optional and tied comparison to observed bottlenecks.
+- Qualified instruction-count, session-duration, parallel-agent, comprehension, contract-testing, architecture, and hook-guarantee claims; corrected repeated claims in audio reading bundles. Removed the unsupported four-week comprehension-decay assertion.
+- Updated both Claude Code and OpenCode `/study` definitions to scan four directories, follow the revised sequence, separate reading from exercise completion, and check source scope before adding claims.
+- Clarified the TDD workflow: reviewed intent and tests, protected authoritative checks, risk-based review, and exploratory work where behaviour is unknown.
+
 
 ---
 

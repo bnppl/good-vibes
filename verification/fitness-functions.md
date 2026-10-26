@@ -2,7 +2,7 @@
 title: "Fitness Functions"
 parent: "Verification"
 nav_order: 7
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -21,7 +21,7 @@ status: unread
 - **The result:** The agent attempts the disallowed import, the build fails, the agent reads the failure message and routes around the constraint. The rule becomes part of the environment, not the reviewer's discipline.
 
 {: .aha }
-> **Fitness functions are the only artifact automatically loaded every single run** — because CI runs every single run, regardless of who or what is writing the code.
+> **Required CI checks can enforce architectural rules on each change** — alongside behavioural, contract, and other checks. Confirm that the pipeline actually runs and blocks incompatible changes.
 
 {: .try-it }
 > Pick one rule you're tired of catching in PR review. Write it as a fitness function (ArchUnit, import-linter, ESLint custom rule). Add a `WHY` comment linking to the ADR or postmortem. Wire it into a pre-commit hook so the agent gets feedback inside its own loop, not 10 minutes later in CI.
@@ -30,7 +30,7 @@ status: unread
 
 ## Deep dive
 
-**Neal Ford, Rebecca Parsons, Patrick Kua, and Pramod Sadalage's *Building Evolutionary Architectures* (2nd ed.)** gave us the term "fitness function," and the second edition's expanded catalog of examples is still the cleanest single source on the technique. In a wiki about agentic verification, fitness functions are the most underrated entry. Of the three failure shapes catalogued in [cross-session-regression](cross-session-regression.md) — silent contract breaks, parallel re-implementation, and invariant violations — fitness functions are the only mechanism that catches the **invariant violation** shape *directly*. Tests catch behavior. Contracts catch interface drift. Fitness functions catch architecture.
+**Neal Ford, Rebecca Parsons, Patrick Kua, and Pramod Sadalage's *Building Evolutionary Architectures* (2nd ed.)** gave us the term "fitness function," and the second edition's expanded catalog of examples is still the cleanest single source on the technique. In a wiki about agentic verification, fitness functions are the most underrated entry. Of the three failure shapes catalogued in [cross-session-regression](cross-session-regression.md) — silent contract breaks, parallel re-implementation, and invariant violations — fitness functions provide direct checks on architectural characteristics. Behavioural, property, contract, and integration tests can also catch invariants; choose checks according to what must hold.
 
 Make the case sharply: agents do not have access to your memory. They do not remember the Tuesday 2024 incident that taught the team why `domain/` cannot import `infrastructure/`. They do not know that the senior engineer who would have caught it in PR review left the company eight months ago. **Fitness functions move human memory into CI.** They are the cheapest verification mechanism per regression caught for any rule that you can state precisely but currently enforce with vibes.
 
@@ -51,7 +51,7 @@ Three reasons, each sharper than the last:
 
 1. **Agents silently violate rules you hold in your head.** A senior engineer carrying the architecture in their skull will rewrite an agent PR that crosses a layer boundary; a junior reviewer at 11pm will not. Either way, the rule is in a human, not the system. Fitness functions move the rule into CI where the agent **bounces off it** the same way it bounces off a failing test. The rule becomes part of the environment, not part of the reviewer's discipline.
 
-2. **Agents have no continuity across sessions.** Every new session starts cold. The architectural decisions made six months ago do not survive context compaction; they do not survive a new conversation; they certainly do not survive a different model. Fitness functions are the **codified institutional memory** of those decisions — the only artifact that is automatically loaded every single run, because CI runs every single run.
+2. **Agents have no continuity across sessions.** Every new session starts cold. The architectural decisions made six months ago do not survive context compaction; they do not survive a new conversation; they certainly do not survive a different model. Fitness functions are the **codified institutional memory** of those decisions — an artifact that can be checked on every change when configured as a required CI gate.
 
 3. **Agents will write fitness functions on request, but humans must author the rules.** This is the load-bearing point. The techdebt.best "AI Architecture Drift" piece argues that fitness functions must run in the *agent's* feedback loop (not just the post-merge CI pipeline) or the agent never learns the rule — it has already built five layers on top of the violation by the time CI catches it ten minutes later. The rule encodes taste; the rule's enforcement is mechanical. Humans bring the first; agents are excellent at the second.
 

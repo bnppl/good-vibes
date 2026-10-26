@@ -2,7 +2,7 @@
 title: "Agentic Development"
 parent: "Context Engineering"
 nav_order: 8
-last_updated: 2026-07-04
+last_updated: 2026-10-26
 last_read: null
 status: unread
 ---
@@ -10,7 +10,7 @@ status: unread
 # Agentic Development: Patterns That Work
 
 {: .hook }
-> **The 35-minute cliff: your coding agent doesn't get smarter the longer it runs — it gets worse.**
+> **Long-running work needs observable progress, verified state, and reliable handoffs.**
 >
 > Context strategy isn't an afterthought for long sessions. It's a development practice.
 
@@ -62,7 +62,7 @@ Your CLAUDE.md, `.cursorrules`, or AGENTS.md is the one piece of context that lo
 - Debugging sessions and their solutions — these become noise once the bug is fixed
 - Ephemeral task state — write that to a todo file instead
 
-**The 50-instruction ceiling.** Anthropic's own research notes that Sonnet-class models can reliably follow around 50 discrete instructions. Past that, instructions start competing for attention and less prominent ones get dropped. If your instruction file has 80 rules, you're probably getting 50 of them followed inconsistently. Audit ruthlessly. Cut anything redundant with the linter, derivable from the code, or not violated in the last month. (More capable models like Fable 5 can handle 150–200 instructions before degradation appears — but the discipline of limiting to ~50 produces better instruction files regardless of ceiling. See [Instruction Layer](instruction-layer.md) for the model-generation caveat.)
+**Instruction budgets.** Keep instructions relevant, non-conflicting, and easy to discover. There is no verified universal 50-instruction ceiling, nor a supported model-specific allowance of 150–200 rules in the sources checked for this revision. Test instruction changes on representative tasks rather than counting rules as a quality measure. Move mechanically enforceable rules into tooling and detailed guidance into scoped references.
 
 **Progressive disclosure over exhaustive lists.** Instead of enumerating every API convention in CLAUDE.md, write one line: "Read `docs/api-conventions.md` before making API changes." The agent loads the detailed guidance when it needs it, and it doesn't crowd out other instructions the rest of the time. This pattern scales — you can have deep reference material without overwhelming the always-on context.
 
@@ -140,7 +140,7 @@ The distinction isn't "use SDD or don't" — it's about matching the level of sp
 
 ## Context Strategies for Long Coding Sessions
 
-**The 35-minute degradation curve.** Anthropic's production data shows agent success rates decrease meaningfully after 35 minutes of work, with doubled session duration quadrupling the failure rate. This is the practical ceiling for unmanaged context. It's not that models can't handle long sessions — it's that accumulated noise, compacted decisions, and degraded instruction recall compound. The longer the session, the more the context has drifted from what you actually want.
+**Context drift and checkpoints.** Long sessions can accumulate stale decisions, superseded plans, and noisy tool output. There is no verified universal 35-minute cutoff or duration-to-failure multiplier in the primary sources checked for this revision. Monitor repeated work, missed requirements, and context pressure; checkpoint at coherent task boundaries and preserve verified state. See Anthropic’s [long-running agent guidance](https://www.anthropic.com/research/effective-harnesses-for-long-running-agents) for incremental work and durable handoffs.
 
 Three strategies for working around this:
 
@@ -220,7 +220,7 @@ Their findings reinforce several patterns: over-specifying task requirements (ex
 
 **Claude Code auto mode and agent autonomy.** Anthropic shipped auto mode in March 2026 — a permission system where model-based classifiers approve or block agent actions, replacing manual approval for routine operations. The design is instructive for context engineering: a two-stage classification where Stage 1 performs fast single-token filtering (8.5% false positive rate) and Stage 2 applies chain-of-thought reasoning (reducing false positives to 0.4%). Critically, the classifier strips the agent's own reasoning — seeing only user messages and executable commands — preventing the agent from "talking the classifier into" approving dangerous actions. The 93% auto-approval rate (matching how often users manually approve) suggests that most agent actions are routine. The remaining 7% is where human judgment adds value — a useful heuristic for calibrating agent autonomy in any system.
 
-**Comprehension debt.** Addy Osmani coined the term "comprehension debt" (March 2026) for the growing gap between how much code exists and how much any human genuinely understands. Unlike technical debt, it accumulates invisibly — code looks clean, tests pass, but no one truly grasps the design decisions. An Anthropic study found developers using AI for code generation scored 17% lower on comprehension (50% vs. 67%), with the largest declines in debugging and conceptual understanding. The speed asymmetry is the core problem: AI generates code far faster than humans can meaningfully review it, removing the quality gate that review traditionally provided. Mitigation: question-driven AI use outperforms pure delegation, specifications document intent that code alone can't capture, and engineers who genuinely understand systems become *more* valuable as AI volume increases, not less.
+**Comprehension debt.** Generated code can outpace the reviewer’s understanding. Anthropic’s [January 2026 study](https://www.anthropic.com/research/AI-assistance-coding-skills) involved 52 mostly junior developers learning Trio and found lower immediate quiz scores in the AI-assisted group (50% versus 67%, a 17-percentage-point gap). It does not establish the same effect for experienced engineers or long-term retention. Use active inquiry and explain the implementation as well as reviewing its specification.
 
 **VibeSec: the security dimension of comprehension debt.** Martin Fowler coined the term "VibeSec" (May 27, 2026) for what happens when security-sensitive code is approved on feel rather than understanding. When an agent generates authentication logic, input validation, or cryptographic operations and the reviewer approves because it "looks right," they're doing vibe security — evaluating security properties by aesthetic rather than comprehension. Fowler documented cases where AI-generated security code passed review, passed static analysis, and broke in production in ways the reviewer couldn't have caught without deeply understanding the primitives involved. The mitigation isn't different from the general comprehension debt case — active inquiry, the 1-5 scoring rule applied specifically to security-sensitive PRs — but the stakes are higher. Comprehension debt in auth or crypto code compounds across sessions and remains invisible until exploited. The practical rule: security-sensitive code requires a comprehension score of 4 or 5, not the 3 minimum for general code. See [comprehension-debt](../verification/comprehension-debt.md) for the scoring framework.
 
@@ -238,7 +238,7 @@ The instinct when adopting autonomous agents is to step back and let them run. T
 
 The design implication: **checkpoints are context events, not interruptions.** Each checkpoint is an opportunity to reinitialize the agent's understanding of what it's doing and why — correcting context drift before it compounds. The best oversight systems don't slow agents down; they reset context efficiently enough that the agent benefits from a clean state rather than fighting accumulated noise.
 
-This connects directly to the 35-minute degradation curve: the curve exists precisely because unchecked sessions let context drift and noise accumulate. Structured checkpoints are the mechanism for defeating the curve, not a concession that agents need hand-holding.
+Structured checkpoints can make drift visible and preserve verified state. Their benefit and frequency should be measured for the workload; no universal time-based degradation curve is established here.
 
 A companion post — Lars Faye's "Agentic Coding Is a Trap" (May 2026, 463 points on Hacker News) — makes the harder version of the same argument: the marketing of agentic tools frames autonomy as the goal, but autonomy without supervision infrastructure isn't autonomy, it's abdication. Where the Supervision Paradox is an empirical finding (checkpoint data showing better outcomes with more structured oversight), the Trap framing is a structural critique: the incentive structure of agentic tool demos selects for "look how autonomous this is" rather than "look how reliable the oversight is." Both posts converge on the same practical conclusion, but the Trap framing is useful for making the case inside organizations that have adopted "AI autonomy" as a goal in itself.
 
@@ -298,13 +298,13 @@ The key shift: when a loop fails, the bug is usually in the loop specification, 
 
 A step-by-step setup for a new agentic dev project:
 
-**1. Set up your instruction file.** Create CLAUDE.md (or the equivalent for your tool). Keep it under 50 rules. Focus on universal project rules: how to run tests, commit and style conventions, architectural boundaries. Use progressive disclosure for anything detailed — point to reference docs rather than inlining their content.
+**1. Set up your instruction file.** Create CLAUDE.md (or the equivalent for your tool). Keep it lean and evaluate instruction adherence on your actual tasks. Focus on universal project rules: how to run tests, commit and style conventions, architectural boundaries. Use progressive disclosure for anything detailed — point to reference docs rather than inlining their content.
 
 **2. Write a spec before implementation.** Define what you're building, how it should work, and what success looks like. Even a one-page spec dramatically improves agent output compared to ad-hoc instructions. The spec doesn't need to be exhaustive — it needs to establish the right frame before the agent starts generating code.
 
 **3. Create an implementation plan.** Break the spec into tasks sized for one context window — roughly 15–30 minutes of agent work each. Include exact file paths, expected behavior, and test criteria in each task description. This is where the quality multiplier kicks in: precise task descriptions produce precise work.
 
-**4. Execute per-task with fresh agents or compaction breaks.** Don't let context degrade through a long session. Either dispatch fresh agents per task (Strategy 3 above) or compact explicitly between tasks (Strategy 2). Treat the 35-minute curve as a hard constraint, not a soft guideline.
+**4. Execute per-task with fresh agents or compaction breaks.** Don't let context degrade through a long session. Either dispatch fresh agents per task (Strategy 3 above) or compact explicitly between tasks (Strategy 2). Use task boundaries, observed drift, and context pressure to choose checkpoints; elapsed time alone is not a reliability limit.
 
 **5. Use the filesystem for persistence.** Write progress, decisions, and notes to files. These survive context resets and serve as the bridge between sessions. Update the spec and implementation plan as the project evolves — keep them as the canonical source of truth rather than letting the conversation history become the record.
 
