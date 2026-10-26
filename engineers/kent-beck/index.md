@@ -43,7 +43,7 @@ dimensions:
   qualification: Historical project instructions; not a universal requirements format.
 - id: D03
   title: Increment and planning
-  position: Small increments; recent public teaser proposes fixing loop time and flexing scope.
+  position: Small increments; an October 2026 public teaser proposes fixing feedback-loop time and flexing scope.
   evidence: Stated
   claim: C03
   detail: research.md#2-techniques-and-principles
@@ -70,7 +70,8 @@ dimensions:
   qualification: Timing is contextual, not a mandate to refactor before every change.
 - id: D06
   title: Human understanding and review
-  position: The human continues to inspect design and intervene in augmented coding.
+  position: In his June 2025 augmented-coding account, Beck reports inspecting design and intervening when generation
+    goes off course.
   evidence: Stated
   claim: C06
   detail: sources.md#s01
@@ -79,7 +80,8 @@ dimensions:
   qualification: June self-report; complete current review policy is not established.
 - id: D07
   title: Agent autonomy and coordination
-  position: Desired outcomes matter more than managing agent coordination.
+  position: His April 2026 Intent session reports coordination burden and argues for desired outcomes rather than
+    managing agents for its own sake.
   evidence: Stated
   claim: C07
   detail: sources.md#s06
@@ -88,7 +90,7 @@ dimensions:
   qualification: April self-report about Intent; not evidence that all parallel work fails.
 - id: D08
   title: Context and durable state
-  position: Published test-plan instructions and repository-local conventions provide explicit guidance.
+  position: June 2025 test-plan instructions and inspected BPlusTree3 conventions provide explicit project guidance.
   evidence: Stated
   claim: C08
   detail: research.md#4-tools-and-setup
@@ -97,7 +99,8 @@ dimensions:
   qualification: No complete personal durable-memory or handoff architecture established.
 - id: D09
   title: Tooling and environment
-  position: Reported Augment experiments; BPlusTree3 uses concrete Cargo and benchmark checks.
+  position: Dated Augment experiments and inspected BPlusTree3 Cargo/benchmark checks provide examples, not a complete
+    current personal stack.
   evidence: Stated
   claim: C09
   detail: research.md#4-tools-and-setup
@@ -115,13 +118,15 @@ dimensions:
   qualification: Do not generalise a library project into a full product pipeline.
 - id: D11
   title: Boundaries and safeguards
-  position: Distinguish reversible changes and wider impact; stop unexplained expectation changes.
-  evidence: Suggested adaptation
+  position: A complete personal permissions, sandbox, protected-test, approval, or budget policy is not established
+    by the reviewed cache.
+  evidence: Not established
   claim: C11
-  detail: sources.md#s04
-  source: https://newsletter.kentbeck.com/p/distinctions-with-a-difference
+  detail: research.md#6-failure-modes-and-limits
+  source: ''
   checked: '2026-10-26'
-  qualification: The stop rule is this guide’s application; security permissions and sandbox are not established.
+  qualification: Unknown is not opposition or non-use. The June project account reports unwanted work and removed
+    tests, but our proposed stop rule is an adaptation rather than evidence of Beck’s deployed enforcement policy.
 - id: D12
   title: Evaluation and tradeoffs
   position: Evaluate behaviour, changeability, and coordination cost; universal superiority is unproven.
@@ -169,11 +174,11 @@ Historical project instructions; not a universal requirements format.
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** Small increments; recent public teaser proposes fixing loop time and flexing scope.
+**Stated.** Small increments; an October 2026 public teaser proposes fixing feedback-loop time and flexing scope.
 
 October paid body was not accessed; no universal time target inferred.
 
-[Cached source finding](sources.md#s09) · [Primary source](https://newsletter.kentbeck.com/p/thinkie-fix-time-flex-scope)
+[Cached detail](research.md#2-techniques-and-principles) · [Primary source](https://newsletter.kentbeck.com/p/thinkie-fix-time-flex-scope)
 
 <a id="c04"></a>
 
@@ -199,41 +204,41 @@ Timing is contextual, not a mandate to refactor before every change.
 
 ### C06 · D06 · Human understanding and review
 
-**Stated.** The human continues to inspect design and intervene in augmented coding.
+**Stated.** In his June 2025 augmented-coding account, Beck reports inspecting design and intervening when generation goes off course.
 
 June self-report; complete current review policy is not established.
 
-[Cached source finding](sources.md#s01) · [Primary source](https://newsletter.kentbeck.com/p/augmented-coding-beyond-the-vibes)
+[Cached detail](sources.md#s01) · [Primary source](https://newsletter.kentbeck.com/p/augmented-coding-beyond-the-vibes)
 
 <a id="c07"></a>
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** Desired outcomes matter more than managing agent coordination.
+**Stated.** His April 2026 Intent session reports coordination burden and argues for desired outcomes rather than managing agents for its own sake.
 
 April self-report about Intent; not evidence that all parallel work fails.
 
-[Cached source finding](sources.md#s06) · [Primary source](https://newsletter.kentbeck.com/p/genie-lessons-nobody-wants-agents)
+[Cached detail](sources.md#s06) · [Primary source](https://newsletter.kentbeck.com/p/genie-lessons-nobody-wants-agents)
 
 <a id="c08"></a>
 
 ### C08 · D08 · Context and durable state
 
-**Stated.** Published test-plan instructions and repository-local conventions provide explicit guidance.
+**Stated.** June 2025 test-plan instructions and inspected BPlusTree3 conventions provide explicit project guidance.
 
 No complete personal durable-memory or handoff architecture established.
 
-[Cached source finding](sources.md#s03) · [Primary source](https://github.com/KentBeck/BPlusTree3/blob/main/agent.md)
+[Cached detail](research.md#4-tools-and-setup) · [Primary source](https://github.com/KentBeck/BPlusTree3/blob/main/agent.md)
 
 <a id="c09"></a>
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** Reported Augment experiments; BPlusTree3 uses concrete Cargo and benchmark checks.
+**Stated.** Dated Augment experiments and inspected BPlusTree3 Cargo/benchmark checks provide examples, not a complete current personal stack.
 
 Tool use is dated and project-specific; no universal preferred model inferred.
 
-[Cached source finding](sources.md#s03) · [Primary source](https://github.com/KentBeck/BPlusTree3/blob/main/agent.md)
+[Cached detail](research.md#4-tools-and-setup) · [Primary source](https://github.com/KentBeck/BPlusTree3/blob/main/agent.md)
 
 <a id="c10"></a>
 
@@ -249,11 +254,11 @@ Do not generalise a library project into a full product pipeline.
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Suggested adaptation.** Distinguish reversible changes and wider impact; stop unexplained expectation changes.
+**Not established.** A complete personal permissions, sandbox, protected-test, approval, or budget policy is not established by the reviewed cache.
 
-The stop rule is this guide’s application; security permissions and sandbox are not established.
+Unknown is not opposition or non-use. The June project account reports unwanted work and removed tests, but our proposed stop rule is an adaptation rather than evidence of Beck’s deployed enforcement policy.
 
-[Cached source finding](sources.md#s04) · [Primary source](https://newsletter.kentbeck.com/p/distinctions-with-a-difference)
+[Cached detail](research.md#6-failure-modes-and-limits)
 
 <a id="c12"></a>
 

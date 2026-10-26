@@ -21,7 +21,7 @@ Inspected on **26 October 2026**. These notes preserve relevant findings, scope,
 - **URL:** <https://newsletter.kentbeck.com/p/augmented-coding-beyond-the-vibes>.
 - **Inspected:** public article and published system-prompt appendix.
 - **Finding:** a self-reported BPlusTree3 experience, human intervention, and explicit next-test instructions. Augment sponsorship disclosed.
-- **Supports:** C02, C03, C06, C08, C09, C11.
+- **Supports:** C02, C03, C06, C08, C09; provides historical risk context for C11, not an established permission policy.
 - **Limits:** project account and instructions, not a reproduced effectiveness study or proof of current daily settings. Warnings about unwanted work and removed tests are observations from this context.
 
 <a id="s02"></a>
@@ -52,7 +52,7 @@ Inspected on **26 October 2026**. These notes preserve relevant findings, scope,
 - **URL:** <https://newsletter.kentbeck.com/p/distinctions-with-a-difference>.
 - **Inspected:** public authored post, excluding reader comments as evidence of Beck's position.
 - **Finding:** distinguishes reversibility, safety, scope of impact, and structural versus behavioural changes. Timing matters.
-- **Supports:** C05, C11.
+- **Supports:** C05; informs the original proposed safeguards in the workflow, not a documented personal control policy for C11.
 - **Limits:** historical general design advice, not a current AI product setup or automatic rejection of every combined patch.
 
 <a id="s05"></a>
@@ -125,3 +125,5 @@ Inspected on **26 October 2026**. These notes preserve relevant findings, scope,
 ## Cache log
 
 26 October 2026: initial primary-source research and comparison fields created. Slides were derived from this cache after the research stage; generating slides does not refresh source verification dates.
+
+26 October 2026: cache-only comparability audit separated C11's original proposed stop rule from an attributed personal safeguards policy. The profile now records that policy as not established; the original safeguard proposal remains clearly labelled in the worked exercise. The common reward example now distinguishes retained balance after restart from replay protection and uses totals in the same event sequence as the other profiles. No external source dates changed.

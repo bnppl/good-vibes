@@ -281,6 +281,12 @@ Requirements do change. When a reward rule changes intentionally, revise the con
 
 The discipline reduces certain risks; it does not eliminate exploration, architectural judgment, usability evaluation, or unknown requirements. For legacy areas without a reliable seam, start with [characterization tests](../../verification/characterization-and-handoff.md), then introduce the smallest boundary that permits meaningful verification.
 
+### Evaluation and tradeoffs
+
+**Inferred synthesis from the cached sources.** Farley's acceptance-first approach evaluates whether agreed behaviour is present; mutation checks challenge assertion strength, and code inspection remains a judgment about risk. These address different sources of uncertainty. The [25 October article](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe) supplies the acceptance/mutation and risk-based-review recommendations; the [test-quality article](https://www.linkedin.com/pulse/tdd-properties-good-tests-dave-farley-iexge) supplies qualitative test concerns.
+
+The [worked test challenge](#3-a-step-by-step-session) explains why a survivor needs triage and why a mutation score cannot establish complete requirements. A correct executable contract may still omit something the product needs; a failing mutation need not represent a meaningful fault. This is a confidence-and-review tradeoff, not a claim that every generated line must be read or can safely go unread. The reviewed public material does not establish a universal productivity advantage over the other workflows.
+
 ## 7. Your first lab
 
 Use one real Spellhaven behaviour, such as duplicate XP, and stop after a complete increment. These sessions are a suggested learning exercise, not measured optimal durations.

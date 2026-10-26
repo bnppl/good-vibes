@@ -44,7 +44,7 @@ dimensions:
   qualification: Prose guidance must still be connected to executable checks.
 - id: D03
   title: Increment and planning
-  position: Small supervised chunks with meaningful checks and version-control checkpoints.
+  position: His January 2026 workflow reports small supervised chunks, meaningful checks, and version-control checkpoints.
   evidence: Stated
   claim: C03
   detail: research.md#3-a-feature-from-idea-to-release
@@ -80,7 +80,8 @@ dimensions:
   qualification: Review depth is contextual; no approval-free release implied.
 - id: D07
   title: Agent autonomy and coordination
-  position: Parallel workers need scoped ownership, coordination and verification gates.
+  position: His March 2026 orchestration guidance gives parallel workers scoped ownership, coordination and verification
+    gates.
   evidence: Stated
   claim: C07
   detail: research.md#2-techniques-and-principles
@@ -98,7 +99,7 @@ dimensions:
   qualification: Exact private memory configuration not established.
 - id: D09
   title: Tooling and environment
-  position: Publishes Agent Skills; separately reports using several coding and debugging tools.
+  position: Publishes Agent Skills; his January 2026 self-report separately names coding and debugging tools.
   evidence: Stated
   claim: C09
   detail: research.md#4-tools-and-setup
@@ -107,7 +108,8 @@ dimensions:
   qualification: Published artifacts and historical self-report are distinguished in tools.md.
 - id: D10
   title: Integration and release
-  position: Use small comprehensible changes and frequent version-control checkpoints.
+  position: His January 2026 workflow reports small comprehensible changes and frequent version-control checkpoints;
+    a complete production release policy is not established.
   evidence: Stated
   claim: C10
   detail: research.md#3-a-feature-from-idea-to-release
@@ -128,7 +130,7 @@ dimensions:
   position: Audit configuration value and cost; do not assume every skill improves every workflow.
   evidence: Stated
   claim: C12
-  detail: research.md#6-failure-modes-and-limits
+  detail: research.md#configuration-needs-pruning-as-well-as-accumulation
   source: https://addyosmani.com/blog/audit-your-agent-files/
   checked: '2026-10-26'
   qualification: Personal observations and reported research do not establish universal thresholds.
@@ -176,11 +178,11 @@ Research checked and cut off on **26 October 2026**. Public articles and artifac
 
 ### C03 · D03 · Increment and planning
 
-**Stated.** Small supervised chunks with meaningful checks and version-control checkpoints.
+**Stated.** His January 2026 workflow reports small supervised chunks, meaningful checks, and version-control checkpoints.
+
+January self-report; not proof of an invariant process across all projects.
 
 [Cached detail](research.md#3-a-feature-from-idea-to-release) · [Primary source](https://addyosmani.com/blog/ai-coding-workflow/)
-
-*January self-report; not proof of an invariant process across all projects.*
 
 <a id="c04"></a>
 
@@ -216,11 +218,11 @@ Research checked and cut off on **26 October 2026**. Public articles and artifac
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** Parallel workers need scoped ownership, coordination and verification gates.
+**Stated.** His March 2026 orchestration guidance gives parallel workers scoped ownership, coordination and verification gates.
+
+Talk-based guidance, not evidence that every personal task uses a fleet.
 
 [Cached detail](research.md#2-techniques-and-principles) · [Primary source](https://addyosmani.com/blog/code-agent-orchestra/)
-
-*Talk-based guidance, not evidence that every personal task uses a fleet.*
 
 <a id="c08"></a>
 
@@ -236,21 +238,21 @@ Research checked and cut off on **26 October 2026**. Public articles and artifac
 
 ### C09 · D09 · Tooling and environment
 
-**Stated.** Publishes Agent Skills; separately reports using several coding and debugging tools.
+**Stated.** Publishes Agent Skills; his January 2026 self-report separately names coding and debugging tools.
+
+Published artifacts and historical self-report are distinguished in tools.md.
 
 [Cached detail](research.md#4-tools-and-setup) · [Primary source](https://github.com/addyosmani/agent-skills)
-
-*Published artifacts and historical self-report are distinguished in tools.md.*
 
 <a id="c10"></a>
 
 ### C10 · D10 · Integration and release
 
-**Stated.** Use small comprehensible changes and frequent version-control checkpoints.
+**Stated.** His January 2026 workflow reports small comprehensible changes and frequent version-control checkpoints; a complete production release policy is not established.
+
+No complete personal production deployment topology established.
 
 [Cached detail](research.md#3-a-feature-from-idea-to-release) · [Primary source](https://addyosmani.com/blog/ai-coding-workflow/)
-
-*No complete personal production deployment topology established.*
 
 <a id="c11"></a>
 
@@ -268,7 +270,6 @@ Research checked and cut off on **26 October 2026**. Public articles and artifac
 
 **Stated.** Audit configuration value and cost; do not assume every skill improves every workflow.
 
-[Cached detail](research.md#6-failure-modes-and-limits) · [Primary source](https://addyosmani.com/blog/audit-your-agent-files/)
+Personal observations and reported research do not establish universal thresholds.
 
-*Personal observations and reported research do not establish universal thresholds.*
-
+[Cached detail](research.md#configuration-needs-pruning-as-well-as-accumulation) · [Primary source](https://addyosmani.com/blog/audit-your-agent-files/)

@@ -61,7 +61,7 @@ dimensions:
 ---
 ```
 
-Include all D01–D12 in the order and with titles defined in the portable prompt. Evidence is one of `Demonstrated`, `Stated`, `Inferred`, `Suggested adaptation`, `Not established`. Unknowns have an empty `source`, an explanatory gap, and a local detail link. A dimension summarising several claims must link to a cached section that maps those claims to the relevant primary sources. The frontmatter `claim` is a stable entry ID rendered as an explicit lowercase anchor in the profile body, such as `<a id="c01"></a>`, so generated comparisons can cite `index.md#c01` across heading edits. Do not invent evidence for an unknown dimension.
+Include all D01–D12 in the order and with titles defined in the portable prompt. Evidence is one of `Demonstrated`, `Stated`, `Inferred`, `Suggested adaptation`, `Not established`. Unknowns have an empty `source`, an explanatory gap, and a local detail link. A dimension summarising several claims must link to a cached section that maps those claims to the relevant primary sources. The frontmatter `claim` is a stable entry ID rendered as an explicit lowercase anchor in the profile body, such as `<a id="c01"></a>`, so generated comparisons can cite `index.md#c01` across heading edits. Do not invent evidence for an unknown dimension. Mirror the frontmatter position, evidence label, and qualification in the profile's visible claim entry; links alone do not make that entry reviewable. If the two disagree, reconcile them against cached evidence before generating slides or comparisons. A recommendation and a self-reported personal practice may both be `Stated`, so their difference must remain explicit in the qualification. Record publication/practice dates separately from the evidence check date.
 
 `research_checked` records actual research verification, not slide generation or site build dates. `research_cutoff` records the evidence horizon. Each source record should retain publication date, inspected date, URL, inspected scope, findings, supported claim IDs, and limitations; repository sources should retain revisions when available. Preserve claim IDs across refreshes, marking superseded claims explicitly rather than reassigning their IDs to unrelated assertions.
 
@@ -108,6 +108,12 @@ Each Markdown collection uses `parent: Person Name Slides`, a unique `nav_order`
 ```
 
 Every card requires the hook, explanation, example, takeaway, optional-practice link, and at least one deeper-reading link. Keep body text around 30 seconds of reading when possible; split a complex topic into several cards rather than dropping material qualifications. The notes remain a detailed escape hatch. No recall/reveal step is required. Stable card IDs and per-engineer storage keys keep saved ideas separate from the main learning deck and other engineers.
+
+## Comparability review
+
+After a batch, read every selected profile's research, worked examples, source findings, comparison entries, and slides. Check the twelve dimension titles and scope, source-to-claim attribution, frontmatter/body agreement, material historical dates, unknowns, and the fixed reward observation sequence in the research prompt. Keep card IDs, cache identity, and reading metadata stable. Do not refresh research dates for a cache-only editorial correction.
+
+Record substantive corrections and remaining limitations in a review document. A missing personal setup remains unknown; do not add an invented policy to make profiles look equally complete. Compare documented principles, advice, experiments, and demonstrated artifacts as distinct kinds of evidence. The shared example aligns the problem, not the workflow or its effectiveness. Retain legitimate differences.
 
 ## Cached comparison stage
 

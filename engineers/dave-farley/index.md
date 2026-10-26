@@ -25,7 +25,8 @@ slides_url: /engineers/dave-farley/learn/
 dimensions:
 - id: D01
   title: Goal and bottleneck
-  position: Verification is the bottleneck; define intended behaviour precisely.
+  position: Farley prioritises precise intent and verification, which he identifies as the bottleneck in agentic
+    work.
   evidence: Stated
   claim: C01
   detail: research.md#1-the-techniques-and-what-each-contributes
@@ -55,14 +56,15 @@ dimensions:
     guidance.'
 - id: D04
   title: Testing and verification
-  position: Layer acceptance tests; use mutation testing to challenge assertions.
+  position: Drive behaviour with human-owned failing acceptance examples; separate unit-level design feedback and
+    challenge assertions with mutation testing.
   evidence: Stated
   claim: C04
   detail: research.md#2-the-four-layer-model-applied-to-spellhaven
   source: https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe
   checked: '2026-10-26'
-  qualification: 'S01/S05/S06/S07: acceptance layering and mutation are documented. Tool selection and test boundaries
-    in the worked example are suggestions.'
+  qualification: 'S01/S05/S06/S07/S12: acceptance-first behaviour, unit-level design, and test quality are distinct
+    concerns. Tool selection and boundaries in the reward exercise remain suggested adaptations.'
 - id: D05
   title: Design and refactoring
   position: Retain modularity, separation of concerns, testability, and refactoring.
@@ -85,7 +87,8 @@ dimensions:
     generated line can safely go unread.'
 - id: D07
   title: Agent autonomy and coordination
-  position: Agents implement within the acceptance contract. A complete orchestration setup is not established.
+  position: His 25 October 2026 proposal has agents implement within human-owned acceptance contracts; a complete
+    personal orchestration setup is not established.
   evidence: Stated
   claim: C07
   detail: research.md#sources-and-further-study
@@ -137,14 +140,16 @@ dimensions:
     worked guide are suggested implementations of that concern.'
 - id: D12
   title: Evaluation and tradeoffs
-  position: A universal productivity advantage is not established by the public material reviewed.
+  position: Assess behavioural confidence through acceptance evidence and mutation checks while retaining review
+    and acknowledging untested requirements; universal productivity gains remain unestablished.
   evidence: Inferred
   claim: C12
-  detail: research.md#6-common-ways-this-approach-can-fail
+  detail: research.md#evaluation-and-tradeoffs
   source: https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe
   checked: '2026-10-26'
-  qualification: 'Our assessment of S01–S12: advocacy, interview, curriculum, and documentation are not comparable
-    controlled outcome evidence. No workflow winner or universal productivity effect is claimed.'
+  qualification: 'Inferred synthesis of S01/S02/S05: source recommendations concern verification and risk-based
+    review; our limits include equivalent mutants, incomplete requirements, and lack of controlled cross-workflow
+    outcome evidence. C12 retains its original universal-efficacy limitation.'
 ---
 
 # Dave Farley
@@ -165,9 +170,11 @@ Research checked and cut off on **26 October 2026**. This is public-source resea
 
 ### C01 · D01 · Goal and bottleneck
 
-**Stated.** Verification is the bottleneck; define intended behaviour precisely.
+**Stated.** Farley prioritises precise intent and verification, which he identifies as the bottleneck in agentic work.
 
-[Detail](research.md#1-the-techniques-and-what-each-contributes) · [Primary source](https://www.aviator.co/podcast/engineering-discipline-dave-farley)
+S02: public first-person interview, checked 26 October 2026; a stated priority, not a measured universal bottleneck.
+
+[Cached detail](research.md#1-the-techniques-and-what-each-contributes) · [Primary source](https://www.aviator.co/podcast/engineering-discipline-dave-farley)
 
 <a id="c02"></a>
 
@@ -189,9 +196,11 @@ Research checked and cut off on **26 October 2026**. This is public-source resea
 
 ### C04 · D04 · Testing and verification
 
-**Stated.** Layer acceptance tests; use mutation testing to challenge assertions.
+**Stated.** Drive behaviour with human-owned failing acceptance examples; separate unit-level design feedback and challenge assertions with mutation testing.
 
-[Detail](research.md#2-the-four-layer-model-applied-to-spellhaven) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+S01/S05/S06/S07/S12: acceptance-first behaviour, unit-level design, and test quality are distinct concerns. Tool selection and boundaries in the reward exercise remain suggested adaptations.
+
+[Cached detail](research.md#2-the-four-layer-model-applied-to-spellhaven) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 <a id="c05"></a>
 
@@ -213,9 +222,11 @@ Research checked and cut off on **26 October 2026**. This is public-source resea
 
 ### C07 · D07 · Agent autonomy and coordination
 
-**Stated.** Agents implement within the acceptance contract. A complete orchestration setup is not established.
+**Stated.** His 25 October 2026 proposal has agents implement within human-owned acceptance contracts; a complete personal orchestration setup is not established.
 
-[Detail](research.md#sources-and-further-study) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+S01/S03: implementation against an acceptance contract is stated. Personal orchestration, model routing, and parallel-agent arrangements are not established.
+
+[Cached detail](research.md#sources-and-further-study) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 <a id="c08"></a>
 
@@ -253,6 +264,8 @@ Research checked and cut off on **26 October 2026**. This is public-source resea
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Inferred.** A universal productivity advantage is not established by the public material reviewed.
+**Inferred.** Assess behavioural confidence through acceptance evidence and mutation checks while retaining review and acknowledging untested requirements; universal productivity gains remain unestablished.
 
-[Detail](research.md#6-common-ways-this-approach-can-fail) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+Inferred synthesis of S01/S02/S05: source recommendations concern verification and risk-based review; our limits include equivalent mutants, incomplete requirements, and lack of controlled cross-workflow outcome evidence. C12 retains its original universal-efficacy limitation.
+
+[Cached detail](research.md#evaluation-and-tradeoffs) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)

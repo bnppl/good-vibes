@@ -133,7 +133,7 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 >
 > In our suggested reward exercise, restart is part of the agreed contract. The check must observe retained application state after a real runtime restart. Clearing a test variable does not establish persistence.
 
-**In the wild:** A works once, the process restarts, and the same A must still leave the account at 10 points.
+**In the wild:** Suggested adaptation: A yields 10; a read after restart still shows 10; replaying A still leaves 10.
 
 **Takeaway:** Verify the boundary the requirement actually crosses.
 

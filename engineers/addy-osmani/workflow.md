@@ -53,8 +53,11 @@ Do not mark an entire area safe just because its code looks modern. A small modu
 |---|---|
 | Start at zero; process submission A | Total becomes 10 |
 | Receive A again | Total remains 10 |
-| Restart; receive A again | Total remains 10 |
+| Restart; read without receiving another submission | Total remains 10 |
+| Receive A again after restart | Total remains 10 |
 | Receive new submission B | Total becomes 20 |
+
+Read after restart before replaying A: a lost balance followed by an accidental second award could otherwise produce the expected total of 10 for the wrong reason.
 
 Record additional questions separately. For instance, if submission A arrives with different content, there is no agreed outcome yet. Stop and resolve the rule before treating any generated answer as authoritative.
 

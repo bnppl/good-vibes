@@ -35,8 +35,9 @@ Draft a small checklist:
 ```text
 [ ] A first submission adds 10 points.
 [ ] Delivering that submission again adds no points.
-[ ] A distinct submission adds a separate 10 points.
-[ ] Restarting preserves a successful award and replay protection.
+[ ] Restarting, then reading without another delivery, retains 10 points.
+[ ] Replaying the same ID after restart leaves 10 points.
+[ ] A distinct submission adds a separate 10 points, taking the total to 20.
 ```
 
 This is an exercise plan, not Beck's original plan file. It is intentionally limited to the common contract. Choose the next missing behaviour, not the most impressive architecture. The existing product may need a different ordering because some of these cases are already satisfied.
@@ -71,16 +72,17 @@ The decision is contextual: tidy before, after, later, or never. The general des
 
 Repeat only for the remaining contract cases. Run the restart check with a genuinely renewed process or equivalent real lifecycle boundary in the target system. Verify that a new ID remains eligible; a crude global “already rewarded” switch could suppress all future rewards while passing the simplest replay case.
 
-A useful final table:
+A useful final table, starting at zero and following this sequence:
 
-| Observation | Expected result | What remains outside scope |
-|---|---|---|
-| First ID, first delivery | +10 | Other reward amounts |
-| Same ID delivered again | +0 | Concurrency unless required separately |
-| New ID delivered | +10 | Identity policy beyond the agreed ID |
-| Restart then replay the successful ID | +0; previous total retained | Crash recovery at every possible write boundary unless specified |
+| Observation | Expected total | What remains outside scope |
+|---|---:|---|
+| First ID A, first delivery | 10 | Other reward amounts |
+| Same ID A delivered again | 10 | Concurrency unless required separately |
+| Restart, then read without another delivery | 10 | Crash recovery at every possible write boundary unless specified |
+| Replay A after restart | 10 | Simultaneous deliveries unless required separately |
+| New ID B delivered | 20 | Identity policy beyond the agreed ID |
 
-This table is a local test design, not a claim that these examples exhaust correctness.
+The separate read after restart prevents a lost balance followed by re-awarding A from accidentally matching the expected result. This table is a local test design, not a claim that these examples exhaust correctness.
 
 ## Step 7: Review and hand over
 

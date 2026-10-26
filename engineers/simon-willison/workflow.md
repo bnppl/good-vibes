@@ -37,8 +37,11 @@ Use one known starting state:
 | Begin with an empty reward store | 0 |
 | Submit ID `alpha` | 10 |
 | Deliver `alpha` again | 10 |
-| Restart using the same store; deliver `alpha` | 10 |
+| Restart using the same store; read without delivering anything | 10 |
+| Deliver `alpha` again after restart | 10 |
 | Submit ID `beta` | 20 |
+
+Read the retained total immediately after restart, before sending another submission. Combining restart with replay could conceal a lost balance followed by a second award.
 
 Specify whether a return value reports total points or points newly awarded, if that is part of the API. Those are different quantities; a total of 10 is not evidence of a new 10-point award. Do not let the agent infer an incompatible interpretation from a convenient function name.
 

@@ -85,12 +85,26 @@ The stack, code structure, and implementation are unspecified. There is no addit
 3. **Write a short task brief.** State that a repeated ID adds no further reward; a fresh ID is a separate event. Include the actual persistence constraints and scope. Explicitly decide which document will be retained after the task, rather than allowing temporary notes to become accidental product policy.
 4. **Select useful guides.** Load the existing storage convention and one good neighbouring example. Supply the documented build and test commands. Avoid loading every project document. Check that the agent can restate the rule and identify where to verify it.
 5. **Select useful sensors.** Reuse the type checker and test runner. Add a structural rule only if there is a real boundary worth preserving; do not introduce a new tool solely to make the workflow look sophisticated. Check that the test observes actual persisted state rather than the test fixture's own counter.
-6. **Agree an independent expected result.** Starting at zero, one accepted ID yields ten points; replay of that ID leaves ten; restart and replay still leave ten; a fresh ID yields twenty. These values are deductions from this task's fixed brief, not source quotations or extra product requirements.
+6. **Agree an independent expected result.** Starting at zero, one accepted ID yields ten points; replay of that ID leaves ten; restart followed by a read without new delivery still leaves ten; replay after restart leaves ten; a fresh ID yields twenty. These values are deductions from this task's fixed brief, not source quotations or extra product requirements.
 7. **Implement a bounded slice.** Let the agent change the relevant path, then inspect diffs and check results. If a test is drafted by AI, review the intent before trusting its green result. Require the reason for a failure, not merely a log line saying the suite was red.
 8. **Inspect the architectural consequence.** A duplicate check placed in the UI alone may not cover the application boundary. An in-memory record may not survive restart. Examine those choices against the given requirement and the inspected starting architecture, rather than prescribing an unneeded service or database.
 9. **Exercise the complete task.** Verify the restart case and the fresh-ID case using the same harness. Inspect any test changes, disabled checks, or altered fixtures. Do not use test counts or coverage alone as evidence of the rule.
 10. **Improve one recurring weakness.** If this attempt repeatedly used the wrong storage abstraction, add a focused guide or a check that catches it. Validate that intervention on the same mistake before treating it as a reusable control. Remove redundant guidance rather than accumulating instructions indefinitely.
 11. **Prepare integration evidence.** Retain the agreed rule, commands, results, reviewed change, and unresolved limitations. Use the repository's existing integration and release process. No universal release cadence was established by this research.
+
+### Common acceptance observations
+
+For comparison, keep the observable task separate from the chosen development sequence. Starting at zero, use these same observations for every profile. These are **suggested adaptation** checks, not a Böckeler demonstration.
+
+| Operation | Expected total |
+|---|---:|
+| Deliver submission A | 10 |
+| Deliver A again | 10 |
+| Restart the runtime with the same durable data, then read without delivering anything | 10 |
+| Deliver A again after restart | 10 |
+| Deliver new submission B | 20 |
+
+The read before replay matters: losing the balance and accidentally awarding A again could otherwise leave ten and conceal two defects. No UI, transport, database product, concurrent-delivery guarantee, or crash-atomicity requirement is added to the common task.
 
 ## 4. Tools and setup
 

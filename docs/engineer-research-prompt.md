@@ -110,6 +110,10 @@ For each dimension, record a concrete position or workflow, the evidence label, 
 | D11 | Boundaries and safeguards | Permissions, test ownership, protected checks, budget and stop conditions? |
 | D12 | Evaluation and tradeoffs | What evidence establishes success? Costs, failures, appropriate contexts? |
 
+Keep each dimension about the same engineering decision across people. In D04, distinguish who authors or approves tests, test level, cadence, and the boundary exercised; do not collapse every technique into “uses tests.” In D10, distinguish integration/version-control advice from a demonstrated production release process. In D12, describe the person's documented evaluation/tradeoff position when available, putting the absence of comparable effectiveness evidence in the qualification rather than substituting it for the position.
+
+For every dimension, distinguish recommendation from reported personal practice, inspected artifact, and our inference in the qualification. A shared publication host, coauthored book, or interview does not make a claim personal to every associated engineer. State a material historical date in the compact position or qualification so the short comparison does not erase it. The `checked` date is when evidence was inspected, not when the described practice occurred.
+
 Stable section names and dimension IDs must survive updates, so profiles remain comparable over time. Unknown entries are useful results; do not fill them with stereotypes.
 
 ### 6. Work the same example across people
@@ -117,6 +121,19 @@ Stable section names and dimension IDs must survive updates, so profiles remain 
 Unless PROJECT_CONTEXT provides a better common example, use:
 
 “A request may be delivered more than once. A reward worth 10 points must be awarded once per submission ID. A successful award must survive restart. A new submission ID is a separate event. Start by establishing how the existing system behaves.”
+
+The common observable sequence is fixed:
+
+| Step | Action | Expected balance |
+|---|---|---|
+| 0 | Read an isolated empty account | 0 |
+| 1 | Deliver submission A | 10 |
+| 2 | Deliver A again | 10 |
+| 3 | Restart the runtime, retaining durable data, then read before delivering anything | 10 |
+| 4 | Deliver A again after restart | 10 |
+| 5 | Deliver distinct submission B | 20 |
+
+Observe step 3 separately from step 4: a system that loses both balance and deduplication state could re-award A and appear to pass a combined restart-and-replay assertion. A test-only reset or recreated in-memory fixture is not evidence of persistence across runtime restart. Any additional stress, concurrency, UI, or network checks must be labelled optional extensions and excluded from the common acceptance scope.
 
 Use the same agreed requirements, starting code assumptions, runtime constraints, and definition of done for each person. Make unknown starting conditions explicit. Do not add concurrency, networking, or UI requirements for only one participant.
 

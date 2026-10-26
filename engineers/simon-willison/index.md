@@ -36,8 +36,8 @@ dimensions:
   qualification: Definition and practitioner priorities, not a controlled outcome result.
 - id: D02
   title: Requirements and specification
-  position: Specify goals and iterate on evidence; a recent production example uses conversational requirements
-    and a live preview.
+  position: His 9 October 2026 production blog feature uses conversational requirements and a live preview; the
+    guide also advocates iterating on evidence.
   evidence: Stated
   claim: C02
   detail: research.md#a-feature-from-idea-to-release
@@ -110,7 +110,8 @@ dimensions:
   qualification: Sources S04, S06, S09, S13, S14 and S16; inventory is not an exhaustive current stack.
 - id: D10
   title: Integration and release
-  position: Use Git and reviewable changes; the October production example deploys after PR review and corrections.
+  position: His 9 October 2026 production-feature account uses PR review and corrections before deployment; guide
+    recommendations favour reviewable Git changes.
   evidence: Stated
   claim: C10
   detail: research.md#a-feature-from-idea-to-release
@@ -167,7 +168,7 @@ Definition and practitioner priorities, not a controlled outcome result.
 
 ### C02 · D02 · Requirements and specification
 
-**Stated.** Specify goals and iterate on evidence; a recent production example uses conversational requirements and a live preview.
+**Stated.** His 9 October 2026 production blog feature uses conversational requirements and a live preview; the guide also advocates iterating on evidence.
 
 The voice-led blog feature is one project, not a universal specification format.
 
@@ -247,7 +248,7 @@ Sources S04, S06, S09, S13, S14 and S16; inventory is not an exhaustive current 
 
 ### C10 · D10 · Integration and release
 
-**Stated.** Use Git and reviewable changes; the October production example deploys after PR review and corrections.
+**Stated.** His 9 October 2026 production-feature account uses PR review and corrections before deployment; guide recommendations favour reviewable Git changes.
 
 One release account does not establish a universal CI or rollback system.
 
