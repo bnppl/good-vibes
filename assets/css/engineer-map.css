@@ -1,0 +1,43 @@
+/* Native styles for the approved organic approach map. */
+:root { --foreground:var(--ink);--muted-foreground:var(--muted);--border:var(--line);--popover:#fff;--popover-foreground:var(--ink);--accent:#e8e8e1;--accent-foreground:var(--ink);--viz-series-1:#4f80bb;--viz-series-2:#ab8844;--viz-series-3:#a06cb1;--viz-series-4:#4d967f;--viz-series-5:#c47266 }
+.map-shell{max-width:840px;margin:0 auto;padding:36px 28px 64px}.map-shell h1{font-size:clamp(2rem,6vw,3.5rem);letter-spacing:-.045em;line-height:1.1}.map-shell h2{font-size:1.4rem;line-height:1.25}.map-intro,.map-note{color:var(--muted);max-width:740px}.map-note{font-size:.9rem}.site-header nav{display:flex;gap:18px;flex-wrap:wrap}.site-header nav a{font-size:.85rem}.text-small{font-size:.8rem}.text-muted{color:var(--muted)}
+#organic-engineers-linked-tools .btn{font:inherit;border:0;border-radius:6px;background:transparent;color:inherit;padding:8px 9px;min-height:44px;max-width:100%;overflow-wrap:normal;line-height:1.25;cursor:pointer}
+#organic-engineers-linked-tools .btn:hover{background:var(--accent)}
+#organic-engineers-linked-tools .btn[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+#organic-engineers-linked-tools .card{border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 14px 45px #0003;background:var(--popover);color:var(--popover-foreground)}
+#organic-engineers-linked-tools .person{font-size:14px}
+#organic-engineers-linked-tools .person .btn{text-wrap:balance}
+#organic-engineers-linked-tools .tool-popup{font-size:14px}
+#organic-engineers-linked-tools .tool-popup h3{font-size:1.2rem}
+#organic-engineers-linked-tools .tool-popup a{color:var(--ink)}
+#organic-engineers-linked-tools .tool-popup details summary{cursor:pointer;min-height:36px}
+#organic-engineers-linked-tools .tool-categories svg{flex:none}
+@media(max-width:540px){.map-shell{padding:24px 10px 48px}.site-header{padding:18px 14px;align-items:start;flex-wrap:wrap}.site-header nav{gap:14px}.brand-section{display:none}#organic-engineers-linked-tools .person .btn{padding:8px 4px}#organic-engineers-linked-tools .card{padding:14px}}
+@media(prefers-color-scheme:dark){:root{color-scheme:dark;--ink:#e7ebe7;--muted:#b4bdb5;--paper:#19211d;--line:#46534a;--popover:#27332c;--accent:#3a473f;--viz-series-1:#88b6ed;--viz-series-2:#dfbe7d;--viz-series-3:#cfa0df;--viz-series-4:#82ccb4;--viz-series-5:#efa393}}
+
+#organic-engineers-linked-tools {color:var(--foreground)}
+#organic-engineers-linked-tools .landscape {position:relative;width:100%;margin-block:14px}
+#organic-engineers-linked-tools .landscape svg {width:100%;display:block}
+#organic-engineers-linked-tools .person {position:absolute;transform:translate(-50%,-50%);max-width:27%;text-align:center}
+#organic-engineers-linked-tools .region-label {position:absolute;transform:translate(-50%,-50%);text-align:center;pointer-events:none;font-weight:500}
+#organic-engineers-linked-tools .legend {display:flex;flex-wrap:wrap;gap:14px;margin-block:12px}
+#organic-engineers-linked-tools .swatch {display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:5px}
+#organic-engineers-linked-tools .regions path {transition:fill-opacity .18s ease,stroke-opacity .18s ease}
+#organic-engineers-linked-tools .person {transition:opacity .18s ease}
+#organic-engineers-linked-tools .detail {margin-top:16px}
+#organic-engineers-linked-tools .detail p {margin-block:6px}
+@media(prefers-reduced-motion:reduce){#organic-engineers-linked-tools .regions path,#organic-engineers-linked-tools .person {transition:none}}
+
+#organic-engineers-linked-tools {position:relative}
+#organic-engineers-linked-tools .tool-popup {position:absolute;z-index:30;width:min(420px,calc(100% - 16px));box-sizing:border-box;overflow-wrap:anywhere;background:var(--popover);color:var(--popover-foreground)}
+#organic-engineers-linked-tools .tool-popup[hidden] {display:none}
+#organic-engineers-linked-tools .popup-heading {display:flex;align-items:center;justify-content:space-between;gap:12px}
+#organic-engineers-linked-tools .popup-heading h3 {margin:0}
+#organic-engineers-linked-tools .tool-example {padding-block:12px;border-bottom:1px solid var(--border)}
+#organic-engineers-linked-tools .tool-popup p {margin-block:6px}
+#organic-engineers-linked-tools .tool-popup details {margin-block:12px}
+
+#organic-engineers-linked-tools .tool-link {font-weight:500}
+#organic-engineers-linked-tools .tool-categories {display:flex;flex-wrap:wrap;gap:6px 14px;margin-block:6px}
+#organic-engineers-linked-tools .tool-category {display:inline-flex;align-items:center;gap:5px}
+#organic-engineers-linked-tools .tool-category i {display:inline-block;width:16px;height:16px}

@@ -100,6 +100,8 @@ The default single-person command ensures research exists and then creates slide
 
 [Browse engineers](engineers/index.md) and [open the side-by-side field cards]({{ '/engineers/compare/' | relative_url }}). The cards include twelve shared dimensions, tool summaries, qualifications, and source links, with a dimension selector and mobile horizontal scrolling. A generated comparison document adds evidence-backed disagreements, a common worked example, and adoption tradeoffs. The shared page discovers new cached profiles at build time. Name and alias search and focus filters keep larger collections usable. Focus badges distinguish coding with AI from building AI systems; selected people remain visible while filtering, and mixed-focus comparisons retain an explicit scope note.
 
+The [interactive approach map]({{ '/engineers/map/' | relative_url }}) shows all twenty engineers in overlapping regions. Select a name for scoped tooling examples, direct links and category icons. Region membership is editorial; provisional placements remain marked.
+
 The [portable research prompt](docs/engineer-research-prompt.md) works in another research-capable assistant with `PERSON` as a parameter. The [cache and view schema](docs/engineer-cache-schema.md) defines the directory structure, evidence fields, and slide format. The slide stage reuses the main viewer: Jekyll embeds Markdown and plain JavaScript renders one bite-sized idea at a time. Saved ideas are separate for each engineer.
 
 Claude Code's wrapper is `claude-config/commands/engineer.md`; OpenCode's is `.opencode/commands/engineer.md`. Both read the same prompt and schema. To install the Claude command from the repo root:

@@ -21,6 +21,10 @@ Detailed research first. Small ideas when you want them. Compare people against 
 {% if profile.slides_url and profile.slides_url != '' %}[Slideshow]({{ profile.slides_url | relative_url }}) · {% endif %}Research checked {{ profile.research_checked }}
 {% endfor %}
 
+## Explore all twenty together
+
+[Open the interactive approach map]({{ '/engineers/map/' | relative_url }}) — overlapping regions, selectable engineers and linked tooling examples with category icons.
+
 ## Explore a focused comparison
 
 [Testing and verification]({{ '/engineers/compare/' | relative_url }}?people=dave-farley,matt-pocock,robert-c-martin&dimension=D04) · [Delegation]({{ '/engineers/compare/' | relative_url }}?people=harper-reed,peter-steinberger,steve-yegge&dimension=D07) · [AI-system evaluation]({{ '/engineers/compare/' | relative_url }}?people=chip-huyen,hamel-husain,jason-liu&dimension=D04&focus=ai-systems)
