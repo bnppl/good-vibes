@@ -42,7 +42,6 @@ The optional reward exercise in the earlier research/workflow remains our propos
 | [S07](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/LINTER-HOOK.md) | 2026-10-22 | Published artifact | Pinned repository revision; not an executed run |
 | [S09](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/GETTING-STARTED.md) | 2026-10-22 | Published artifact | Pinned repository revision; not an executed run |
 | [S03](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/README.md) | 2026-10-22 | Published artifact | Pinned repository revision; not an executed run |
-
 | [S15](sources.md#s15) | 2026-10-22 | Published worker instruction | Failing-test-first prescribed; not an executed run |
 | [S16](sources.md#s16) | 2026-10-22 | Published planning instruction | Same-step tests and source, test first |
 
