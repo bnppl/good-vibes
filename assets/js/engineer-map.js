@@ -134,43 +134,49 @@ const data=[
       0,
       1
     ],
-    true,
+    false,
     "May 2025 guidance advocates TDD, linting, and checks before committing.",
-    "Dated workflow accounts connect explicit intent, incremental execution and feedback. Later experiments and current public rules qualify the early planning recipe.",
-    "Tool authorship and current personal use still need checking."
+    "Coding projects and published instructions: staged planning, TDD/lint guidance (2025), remote sessions (January 2026), and Breakaway experiments (September 2026).",
+    "May 2025 Aider-to-Claude Code report; January 2026 remote terminal setup; September 2026 experimental harness is a separate context."
   ],
   [
     "Matt Pocock",
     "matt-pocock",
     [
-      1
+      0,
+      1,
+      2
     ],
-    true,
+    false,
     "The pinned October skill specifies red-green at human-agreed public seams; refactoring moves to review.",
-    "Published skills are inspected artifacts, not a verified complete personal setup.",
-    "Tool authorship and current personal use still need checking."
+    "October 2026 published skills: human-agreed test seams, specification interviews, dependency-ready tickets, worktrees and assembled-branch review. Inspected, not executed.",
+    "Publishes mattpocock/skills. Pinned instructions and public explainers were inspected; no installation or runtime effectiveness was tested."
   ],
   [
     "Robert C. Martin",
     "robert-c-martin",
     [
-      0
+      0,
+      1,
+      2
     ],
-    true,
+    false,
     "His June 2016 article advocates mutation testing to challenge assertions; coverage alone records execution.",
-    "Historical design principles, published agent artifacts, and a changing personal workflow provide distinct evidence. Discipline matters without turning a dated harness or review choice into a universal rule.",
-    "Tool authorship and current personal use still need checking."
+    "September 2026 SwarmForge artifact and later terminal-agent self-report. His later account reports moving away from his custom harness.",
+    "Published artifacts and personal reports are separate evidence; a complete current private stack is not established."
   ],
   [
     "Peter Steinberger",
     "peter-steinberger",
     [
+      0,
+      1,
       2
     ],
-    true,
+    false,
     "His October 2025 workflow asks for tests after feature implementation, retaining the same context.",
-    "A fast, iterative approach with dated reports of parallel agents, executable feedback and selective review. Current public artifacts add structured skills and release guidance without establishing a complete private setup.",
-    "Tool authorship and current personal use still need checking."
+    "October/December 2025 personal workflow: tests after implementation, conversational intent, parallel terminal agents and selective review. October 2026 shared artifacts add skills and release checks.",
+    "Historical 2025 Claude-to-Codex shift; pinned October 2026 agent-scripts and Oracle docs show later skills/integrations. Inspected, not installed."
   ],
   [
     "DHH",
@@ -178,21 +184,23 @@ const data=[
     [
       1
     ],
-    true,
+    false,
     "May 2024: favours model/controller checks and limited browser smoke coverage; current agent cadence unknown.",
-    "A changing public stance on coding agents, testing and product value. Dated recommendations and reported experiments remain distinct from a complete current personal workflow.",
-    "Rails authorship is distinct from AI tool authorship and usage."
+    "January 2026 personal OpenCode account: outcome review and supervised delegation. February assistant and March Basecamp team artifacts have separate scopes.",
+    "January 2026 OpenCode self-report; February 2026 isolated OpenClaw experiment; March 2026 team Basecamp interfaces. Current private setup remains unknown."
   ],
   [
     "Andrej Karpathy",
     "andrej-karpathy",
     [
-      1
+      1,
+      2,
+      4
     ],
-    true,
+    false,
     "Published ML instructions retain a baseline and exclude evaluator edits.",
-    "Conceptual AI systems and coding guidance are distinct; ML experiments do not establish a complete personal coding-agent policy.",
-    "Tool authorship and current personal use still need checking."
+    "March 2026 autoresearch: a bounded agent-driven ML experiment with a fixed baseline/evaluator. April oversight commentary and the LLM Wiki pattern provide separate human/context evidence.",
+    "Pinned autoresearch instructions, microgpt and LLM Wiki were inspected; dated agent commentary is not a complete current private stack."
   ],
   [
     "Charity Majors",
@@ -200,10 +208,10 @@ const data=[
     [
       3
     ],
-    true,
+    false,
     "Extend verification to observed operational behaviour as well as pre-production checks.",
-    "Operational and production engineering guidance; a full personal coding-agent workflow is not established.",
-    "Tool authorship and current personal use still need checking."
+    "March 2026 operational guidance: instrument changes, deploy through the normal process and inspect production behaviour. September company values retain human ownership.",
+    "Honeycomb and observability techniques appear in operational guidance; complete current personal coding-agent tools and permissions remain unknown."
   ],
   [
     "Chip Huyen",
@@ -211,10 +219,10 @@ const data=[
     [
       4
     ],
-    true,
+    false,
     "Validate AI-product judgments using human assessment.",
-    "These claims concern building AI products. Model evaluation does not establish a personal coding-agent or TDD policy.",
-    "Tool authorship and current personal use still need checking."
+    "AI-product and ML-system evaluation guidance. The core evaluation examples are from January 2025 and earlier; the cache does not establish a newer personal coding-agent workflow.",
+    "Public model/platform examples and a dated JAX/DistilBERT experiment; no complete current coding-agent stack is established."
   ],
   [
     "Hamel Husain",
@@ -223,25 +231,235 @@ const data=[
       3,
       4
     ],
-    true,
+    false,
     "Use code for objective product checks; validate subjective judges against human labels and held-out examples.",
-    "Product evaluation and deployment guidance do not establish his personal coding-agent or TDD policy.",
-    "Tool authorship and current personal use still need checking."
+    "AI-product evaluation: objective code checks, human-labelled/held-out judge validation and September 2026 guidance separating regression checks from sampled production evaluation.",
+    "October 2025 notebook/custom-interface self-report; joint eval skills pinned to September 2026. Complete present private stack unknown."
   ],
   [
     "Jason Liu",
     "jason-liu",
     [
+      1,
+      3,
       4
     ],
-    true,
+    false,
     "His May 2025 RAG framework distinguishes retrieval and question/context/answer relationships.",
-    "Retrieval, model and product evaluation are distinct from a documented personal coding-agent workflow.",
-    "Tool authorship and current personal use still need checking."
+    "RAG/product work: faceted context and subagent guidance (August 2025, with a January 2026 interface update), retrieval/answer evaluation and the production feedback flywheel.",
+    "Instructor authorship; living 2024 tutorials inspected in 2026; September 2025 agent-prototyping guidance. Complete present private setup unknown."
   ]
 ];
+const placementEvidence={
+  "harper-reed": {
+    "note": "Explicit plans, checks and verification instructions support checks and steering. Multiple remote terminals alone do not establish orchestrated workers.",
+    "claims": [
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D07",
+        "anchor": "c07"
+      },
+      {
+        "label": "D08",
+        "anchor": "c08"
+      }
+    ]
+  },
+  "matt-pocock": {
+    "note": "Red-green checks, human-agreed seams and specification review overlap with the published parallel ticket/worktree design.",
+    "claims": [
+      {
+        "label": "D02",
+        "anchor": "c02"
+      },
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D07",
+        "anchor": "c07"
+      }
+    ]
+  },
+  "robert-c-martin": {
+    "note": "The overlap includes published acceptance/mutation instructions, above-code human supervision and the SwarmForge coordination design. It is not a claim that he still personally uses that harness.",
+    "claims": [
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D07",
+        "anchor": "c07"
+      },
+      {
+        "label": "D09",
+        "anchor": "c09"
+      },
+      {
+        "label": "D10",
+        "anchor": "c10"
+      }
+    ]
+  },
+  "peter-steinberger": {
+    "note": "Tests after implementation are executable verification, not TDD. Conversational steering and reported parallel agents support the other two regions.",
+    "claims": [
+      {
+        "label": "D02",
+        "anchor": "c02"
+      },
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D07",
+        "anchor": "c07"
+      }
+    ]
+  },
+  "david-heinemeier-hansson": {
+    "note": "The placement records supervised outcome review. Historical model/controller-testing views do not establish a current coding-agent test cadence or a complete orchestration setup.",
+    "claims": [
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D07",
+        "anchor": "c07"
+      },
+      {
+        "label": "D09",
+        "anchor": "c09"
+      }
+    ]
+  },
+  "andrej-karpathy": {
+    "note": "Human specification/context, a bounded autonomous research loop and ML outcome evaluation overlap. This is AI research evidence, not a unit-TDD policy or a multi-agent fleet.",
+    "claims": [
+      {
+        "label": "D02",
+        "anchor": "c02"
+      },
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D07",
+        "anchor": "c07"
+      },
+      {
+        "label": "D08",
+        "anchor": "c08"
+      }
+    ]
+  },
+  "charity-majors": {
+    "note": "Production feedback is the documented emphasis. It extends pre-production checks; a complete personal TDD policy and agent topology remain unknown.",
+    "claims": [
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D10",
+        "anchor": "c10"
+      }
+    ]
+  },
+  "chip-huyen": {
+    "note": "Human assessment of model/application quality supports AI evaluation. Historical guidance stays dated and is not recast as current coding-agent practice.",
+    "claims": [
+      {
+        "label": "D02",
+        "anchor": "c02"
+      },
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D10",
+        "anchor": "c10"
+      }
+    ]
+  },
+  "hamel-husain": {
+    "note": "Validated product evaluators and sampled production feedback overlap. Code evaluators are not evidence of a universal personal coding-agent TDD cadence.",
+    "claims": [
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D06",
+        "anchor": "c06"
+      },
+      {
+        "label": "D08",
+        "anchor": "c08"
+      },
+      {
+        "label": "D10",
+        "anchor": "c10"
+      }
+    ]
+  },
+  "jason-liu": {
+    "note": "Explicit context presentation, component evaluation and production observations overlap. Isolated subagent reads do not establish a complete personal orchestration setup.",
+    "claims": [
+      {
+        "label": "D04",
+        "anchor": "c04"
+      },
+      {
+        "label": "D07",
+        "anchor": "c07"
+      },
+      {
+        "label": "D08",
+        "anchor": "c08"
+      },
+      {
+        "label": "D10",
+        "anchor": "c10"
+      }
+    ]
+  }
+};
 const groups=[['Executable checks',1],['Context & human steering',2],['Agent orchestration',3],['Production feedback',4],['AI application evaluations',5]];
-const pos=[[.27,250],[.27,330],[.64,270],[.27,410],[.64,350],[.64,430],[.27,490],[.86,550],[.68,150],[.49,525],[.46,455],[.26,600],[.16,115],[.85,105],[.52,610],[.30,690],[.17,865],[.80,850],[.49,940],[.79,1015]];
+const pos=[[0.27, 260], [0.27, 340], [0.74, 250], [0.27, 420], [0.74, 330], [0.74, 410], [0.27, 500], [0.82, 760], [0.74, 130], [0.27, 580], [0.27, 660], [0.74, 490], [0.74, 570], [0.74, 650], [0.28, 760], [0.74, 860], [0.18, 1040], [0.83, 1100], [0.49, 1170], [0.46, 990]];
 const short=['Farley','Beck','Willison','Böckeler','Osmani','Adžić','Fowler','Ronacher','Yegge','Kim','Reed','Pocock','Martin','Steinberger','DHH','Karpathy','Majors','Huyen','Husain','Liu'];
 const landscape=root.querySelector('.landscape'),legend=root.querySelector('.legend'),detail=root.querySelector('.detail');let selected=null,selectedGroup=null;
 const toolExamples={
@@ -764,7 +982,7 @@ function closePopup(restore=false){popup.hidden=true;selected=null;show();if(res
 function positionPopup(){if(popup.hidden||selected===null)return;const person=root.querySelector(`[data-person="${selected}"]`);if(!person)return;const personRect=person.getBoundingClientRect(),rootRect=root.getBoundingClientRect();const width=popup.getBoundingClientRect().width;const left=Math.max(8,Math.min(rootRect.width-width-8,personRect.left-rootRect.left+personRect.width/2-width/2));popup.style.left=left+'px';const y=personRect.bottom-rootRect.top+10;const bottom=landscape.offsetTop+landscape.offsetHeight;const height=popup.getBoundingClientRect().height;popup.style.top=Math.max(0,y+height<=bottom?y:personRect.top-rootRect.top-height-10)+'px'}
 function renderPopup(){if(selected===null){popup.hidden=true;return}const d=data[selected];popup.replaceChildren();const heading=document.createElement('div');heading.className='popup-heading';const h=document.createElement('h3');h.id='engineer-linked-tools-heading';h.textContent=d[0];const close=document.createElement('button');close.type='button';close.className='btn btn-ghost';close.textContent='Close';close.setAttribute('aria-label','Close tooling popup');close.addEventListener('click',()=>closePopup(true));heading.append(h,close);popup.append(heading);const subtitle=document.createElement('div');subtitle.className='text-small';subtitle.textContent='Tool names link to the tool or documented account · checked 26 October 2026';popup.append(subtitle);
 (toolExamples[d[1]]||[]).forEach((example,index)=>popup.append(makeToolRow(example,toolLinkMetadata[d[1]][index])));
-const scope=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Verification and project context';scope.append(summary);for(const [label,text]of [['Verification',d[4]],['Project / date',d[5]]]){const p=document.createElement('p');const b=document.createElement('strong');b.textContent=label+': ';p.append(b,document.createTextNode(text));scope.append(p)}scope.addEventListener('toggle',positionPopup);popup.append(scope);
+const scope=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Verification, project and map evidence';scope.append(summary);for(const [label,text]of [['Verification',d[4]],['Project / date',d[5]]]){const p=document.createElement('p');const b=document.createElement('strong');b.textContent=label+': ';p.append(b,document.createTextNode(text));scope.append(p)}const basis=placementEvidence[d[1]];if(basis){const p=document.createElement('p');const label=document.createElement('strong');label.textContent='Map rationale: ';p.append(label,document.createTextNode(basis.note));scope.append(p);const links=document.createElement('p');links.className='text-small';links.append(document.createTextNode('Profile evidence: '));basis.claims.forEach((claim,index)=>{if(index)links.append(document.createTextNode(' · '));const a=document.createElement('a');a.textContent=claim.label;a.href=siteBase+'/engineers/'+d[1]+'/#'+claim.anchor;a.target='_blank';a.rel='noopener';links.append(a)});scope.append(links)}scope.addEventListener('toggle',positionPopup);popup.append(scope);
 if(d[3]){const p=document.createElement('p');p.className='text-small';p.textContent='Map placement remains provisional; tooling examples come from the current research cache.';popup.append(p)}const a=document.createElement('a');a.href=siteBase+'/engineers/'+d[1]+'/sources.html';a.textContent='Full source register ↗';a.target='_blank';a.rel='noopener';popup.append(a);popup.hidden=false;if(globalThis.lucide?.createIcons)globalThis.lucide.createIcons({attrs:{width:16,height:16}});positionPopup()}
 root.addEventListener('click',e=>{if(e.target.closest('.person')){returnFocus=e.target.closest('button');if(!popup.hidden){positionPopup();popup.querySelector('button').focus({preventScroll:true});popup.scrollIntoView({block:'nearest',behavior:'instant'})}}});
 document.addEventListener('pointerdown',e=>{if(!popup.hidden&&!popup.contains(e.target)&&!e.target.closest('.person'))closePopup(false)});
@@ -775,17 +993,286 @@ function svgEl(t,a){const el=document.createElementNS(ns,t);for(const [k,v]of Ob
 function show(){const chosen=selected===null?null:data[selected];root.querySelectorAll('[data-region]').forEach(el=>{const active=chosen?chosen[2].includes(+el.dataset.region):selectedGroup===null||selectedGroup===+el.dataset.region;el.setAttribute('fill-opacity',active?'.15':'.025');el.setAttribute('stroke-opacity',active?'.6':'.1')});root.querySelectorAll('[data-person]').forEach(el=>{const d=data[+el.dataset.person];el.style.opacity=selectedGroup===null||d[2].includes(selectedGroup)?'1':'.25';el.querySelector('button').setAttribute('aria-pressed',String(+el.dataset.person===selected))});legend.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===selectedGroup)));detail.replaceChildren();
 if(chosen){const p=document.createElement('p');p.textContent=chosen[0]+' · tooling popup open';detail.append(p);renderPopup()}else{popup.hidden=true;const p=document.createElement('p');p.textContent=selectedGroup===null?'Select an engineer for tooling examples.':groups[selectedGroup][0]+': '+data.filter(d=>d[2].includes(selectedGroup)).map(d=>d[0]+(d[3]?' *':'')).join(' · ');detail.append(p)}}
 
-function draw(){const w=landscape.clientWidth,H=w<500?1180:1020;landscape.replaceChildren();landscape.style.height=H+'px';const svg=svgEl('svg',{viewBox:`0 0 ${w} ${H}`,height:H,role:'img','aria-label':'Five translucent organic approach regions overlap around twenty engineer names. Areas and distances are schematic.'});const title=svgEl('title');title.textContent='Overlapping AI engineering approaches';svg.append(title);const desc=svgEl('desc');desc.textContent='Executable checks, human steering and orchestration overlap in the upper landscape. Production feedback and AI application evaluations overlap below. Provisional people carry an asterisk.';svg.append(desc);const shapes=svgEl('g',{class:'regions'});svg.append(shapes);
-const X=n=>n*w,Y=n=>n/1100*H;
+function draw(){const w=landscape.clientWidth,H=w<500?1380:1200;landscape.replaceChildren();landscape.style.height=H+'px';const svg=svgEl('svg',{viewBox:`0 0 ${w} ${H}`,height:H,role:'img','aria-label':'Five translucent organic approach regions overlap around twenty engineer names. Areas and distances are schematic.'});const title=svgEl('title');title.textContent='Overlapping AI engineering approaches';svg.append(title);const desc=svgEl('desc');desc.textContent='Executable checks, human steering and orchestration overlap in the upper landscape. Production feedback and AI application evaluations overlap below. Placements reflect dated self-reports, published artifacts and guidance; they do not establish complete current personal setups.';svg.append(desc);const shapes=svgEl('g',{class:'regions'});svg.append(shapes);
+const X=n=>n*w,Y=n=>n/1300*H;
 const path=(parts)=>parts.map(p=>typeof p==='string'?p:p.map((v,i)=>i%2?Y(v):X(v)).join(' ')).join(' ');
 const outlines=[
-['M',[.04,155],'C',[.00,20,.35,12,.56,68],'C',[.78,65,.81,170,.76,300],'C',[.79,445,.68,565,.49,556],'C',[.26,580,.06,550,.04,420],'C',[.01,300,.08,250,.04,155],'Z'],
-['M',[.14,250],'C',[.12,180,.45,185,.64,202],'C',[.84,185,.99,230,.97,380],'C',[1.00,520,.96,672,.73,714],'C',[.63,770,.20,782,.10,674],'C',[.01,562,.14,420,.14,250],'Z'],
-['M',[.57,110],'C',[.55,20,.96,8,.98,108],'C',[1.01,245,.91,340,.97,460],'C',[1.01,582,.92,627,.80,602],'C',[.69,580,.58,468,.56,375],'C',[.52,257,.59,190,.57,110],'Z'],
-['M',[.04,867],'C',[.02,786,.24,783,.42,827],'C',[.61,843,.67,902,.61,983],'C',[.53,1070,.21,1082,.07,1002],'C',[.01,962,.02,930,.04,867],'Z'],
-['M',[.42,879],'C',[.44,787,.69,764,.89,795],'C',[1.00,817,1.00,960,.96,1038],'C',[.91,1110,.58,1101,.44,1044],'C',[.36,1009,.36,943,.42,879],'Z']
+  [
+    "M",
+    [
+      0.05,
+      155
+    ],
+    "C",
+    [
+      0.01,
+      20,
+      0.42,
+      18,
+      0.7,
+      65
+    ],
+    "C",
+    [
+      0.94,
+      74,
+      0.94,
+      220,
+      0.91,
+      350
+    ],
+    "C",
+    [
+      0.96,
+      505,
+      0.87,
+      690,
+      0.64,
+      720
+    ],
+    "C",
+    [
+      0.4,
+      750,
+      0.08,
+      725,
+      0.04,
+      600
+    ],
+    "C",
+    [
+      0.0,
+      415,
+      0.08,
+      290,
+      0.05,
+      155
+    ],
+    "Z"
+  ],
+  [
+    "M",
+    [
+      0.12,
+      250
+    ],
+    "C",
+    [
+      0.12,
+      185,
+      0.5,
+      190,
+      0.68,
+      205
+    ],
+    "C",
+    [
+      0.94,
+      190,
+      1.0,
+      280,
+      0.97,
+      490
+    ],
+    "C",
+    [
+      1.0,
+      705,
+      0.94,
+      865,
+      0.7,
+      930
+    ],
+    "C",
+    [
+      0.59,
+      967,
+      0.59,
+      1010,
+      0.45,
+      1040
+    ],
+    "C",
+    [
+      0.3,
+      1060,
+      0.29,
+      938,
+      0.17,
+      870
+    ],
+    "C",
+    [
+      0.01,
+      760,
+      0.11,
+      470,
+      0.12,
+      250
+    ],
+    "Z"
+  ],
+  [
+    "M",
+    [
+      0.58,
+      105
+    ],
+    "C",
+    [
+      0.56,
+      20,
+      0.96,
+      12,
+      0.98,
+      108
+    ],
+    "C",
+    [
+      1.0,
+      300,
+      0.94,
+      490,
+      0.98,
+      690
+    ],
+    "C",
+    [
+      1.0,
+      850,
+      0.91,
+      950,
+      0.76,
+      936
+    ],
+    "C",
+    [
+      0.6,
+      933,
+      0.59,
+      780,
+      0.57,
+      610
+    ],
+    "C",
+    [
+      0.54,
+      410,
+      0.58,
+      210,
+      0.58,
+      105
+    ],
+    "Z"
+  ],
+  [
+    "M",
+    [
+      0.04,
+      1040
+    ],
+    "C",
+    [
+      0.01,
+      952,
+      0.23,
+      924,
+      0.43,
+      951
+    ],
+    "C",
+    [
+      0.61,
+      955,
+      0.67,
+      1022,
+      0.63,
+      1140
+    ],
+    "C",
+    [
+      0.57,
+      1268,
+      0.24,
+      1283,
+      0.07,
+      1201
+    ],
+    "C",
+    [
+      0.01,
+      1160,
+      0.02,
+      1101,
+      0.04,
+      1040
+    ],
+    "Z"
+  ],
+  [
+    "M",
+    [
+      0.42,
+      976
+    ],
+    "C",
+    [
+      0.42,
+      933,
+      0.58,
+      928,
+      0.64,
+      898
+    ],
+    "C",
+    [
+      0.66,
+      816,
+      0.83,
+      794,
+      0.88,
+      856
+    ],
+    "C",
+    [
+      0.93,
+      914,
+      0.86,
+      967,
+      0.94,
+      1014
+    ],
+    "C",
+    [
+      1.0,
+      1064,
+      1.0,
+      1196,
+      0.94,
+      1250
+    ],
+    "C",
+    [
+      0.88,
+      1310,
+      0.6,
+      1296,
+      0.44,
+      1230
+    ],
+    "C",
+    [
+      0.35,
+      1188,
+      0.36,
+      1035,
+      0.42,
+      976
+    ],
+    "Z"
+  ]
 ];outlines.forEach((outline,i)=>{const p=svgEl('path',{d:path(outline),fill:`var(--viz-series-${groups[i][1]})`,stroke:`var(--viz-series-${groups[i][1]})`,'stroke-width':'1.2','fill-opacity':'.15','stroke-opacity':'.6','data-region':i});shapes.append(p)});landscape.append(svg);
-const labels=[['Executable',.21,38,'checks'],['Context & human steering',.39,756,''],['Agent',.82,30,'orchestration'],['Production feedback',.23,810,''],['AI application',.77,780,'evaluations']];labels.forEach(l=>{const el=document.createElement('div');el.className='region-label text-small';el.style.left=(l[1]*100)+'%';el.style.top=Y(l[2])+'px';el.append(document.createTextNode(l[0]));if(l[3]){el.append(document.createElement('br'),document.createTextNode(l[3]))}landscape.append(el)});
+const labels=[["Executable", 0.21, 40, "checks"], ["Context & human", 0.3, 852, "steering"], ["Agent", 0.82, 30, "orchestration"], ["Production", 0.2, 963, "feedback"], ["AI application", 0.8, 960, "evaluations"]];labels.forEach(l=>{const el=document.createElement('div');el.className='region-label text-small';el.style.left=(l[1]*100)+'%';el.style.top=Y(l[2])+'px';el.append(document.createTextNode(l[0]));if(l[3]){el.append(document.createElement('br'),document.createTextNode(l[3]))}landscape.append(el)});
 data.forEach((d,i)=>{const wrap=document.createElement('div');wrap.className='person';wrap.dataset.person=i;wrap.style.left=pos[i][0]*100+'%';wrap.style.top=Y(pos[i][1])+'px';const b=document.createElement('button');b.type='button';b.className='btn btn-ghost';b.textContent=(w<540?short[i]:d[0])+(d[3]?' *':'');b.setAttribute('aria-label',d[0]+(d[3]?', provisional placement':''));b.setAttribute('aria-pressed','false');b.setAttribute('aria-haspopup','dialog');b.addEventListener('click',()=>{selected=selected===i?null:i;selectedGroup=null;show()});wrap.append(b);landscape.append(wrap)});show()}
 groups.forEach((g,i)=>{const b=document.createElement('button');b.type='button';b.className='btn btn-ghost';b.setAttribute('aria-pressed','false');const sw=document.createElement('span');sw.className='swatch';sw.style.background=`var(--viz-series-${g[1]})`;sw.setAttribute('aria-hidden','true');b.append(sw,document.createTextNode(g[0]));b.addEventListener('click',()=>{selected=null;selectedGroup=selectedGroup===i?null:i;show()});legend.append(b)});let previous=0;new ResizeObserver(()=>{const w=landscape.clientWidth;if(w!==previous){previous=w;draw()}}).observe(landscape);draw();
 })();
