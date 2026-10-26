@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/learning-deck.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/engineer-comparison.css' | relative_url }}">
+  <script src="{{ '/assets/js/engineer-comparison.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#cards">Skip to profiles</a>
+  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">gv</span>good vibes<span class="brand-section"> / engineer field notes</span></a><a href="{{ '/engineers/' | relative_url }}">Research archive ↗</a></header>
+  <main class="comparison-shell">
+    <p class="eyebrow">Different people. The same questions.</p>
+    <h1>Collect the ideas.<br>Compare the approaches.</h1>
+    <p class="intro">Detailed field cards from cached research. Pick up to three engineers, then explore their methods side by side. Evidence labels and dates travel with every position.</p>
+    <form id="engineer-picker"><fieldset><legend>Choose engineers</legend><div id="choices" class="choices"></div></fieldset></form>
+    <div class="comparison-toolbar"><label for="dimension">Explore a dimension</label><select id="dimension"><option value="all">All twelve dimensions</option></select></div>
+    <p id="comparison-status" role="status" aria-live="polite"></p>
+    <div id="cards" class="profile-grid" tabindex="-1"></div>
+    <p class="cache-note">These cards reuse the stored profile; they do not perform live research. “Not established” means unknown. Different descriptions alone do not prove disagreement. Add a profile with <code>/engineer "Person Name"</code>, then rebuild the site.</p>
+    <noscript><p>Browse the <a href="{{ '/engineers/' | relative_url }}">research archive</a> with JavaScript switched off.</p></noscript>
+  </main>
+  <template id="engineer-cache">
+    {% assign profiles = site.pages | where: 'engineer_profile', true | sort: 'canonical_name' %}
+    {% for profile in profiles %}
+    <article data-person="{{ profile.person_id | escape }}" data-name="{{ profile.canonical_name | escape }}" data-url="{{ profile.url | relative_url }}" data-slides="{{ profile.slides_url | relative_url }}" data-checked="{{ profile.research_checked | escape }}" data-cutoff="{{ profile.research_cutoff | escape }}">
+      <p class="cached-tagline">{{ profile.tagline | escape }}</p>
+      <p class="cached-summary">{{ profile.summary | escape }}</p>
+      <p class="cached-tools">{{ profile.tools_summary | escape }}</p>
+      <ul class="cached-strengths">{% for strength in profile.strengths %}<li>{{ strength | escape }}</li>{% endfor %}</ul>
+      {% for dimension in profile.dimensions %}
+      <section data-dimension="{{ dimension.id | escape }}" data-title="{{ dimension.title | escape }}" data-evidence="{{ dimension.evidence | escape }}" data-claim="{{ dimension.claim | escape }}" data-checked="{{ dimension.checked | escape }}">
+        <p class="cached-position">{{ dimension.position | escape }}</p>
+        <p class="cached-qualification">{{ dimension.qualification | escape }}</p>
+        <a class="cached-detail" href="{{ dimension.detail | escape }}">Read the evidence</a>
+        {% if dimension.source and dimension.source != '' %}<a class="cached-source" href="{{ dimension.source | escape }}">Primary source ↗</a>{% endif %}
+      </section>
+      {% endfor %}
+    </article>
+    {% endfor %}
+  </template>
+</body>
+</html>

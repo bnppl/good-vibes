@@ -83,6 +83,34 @@ ln -s ../../claude-config/commands/study.md .claude/commands/study.md
 
 ---
 
+## Research an engineer's approach
+
+`/engineer` separates detailed research from the short reads built from it. Each person has a directory under `engineers/` containing their research, sources, comparison fields, and derived slideshow notes. There is no fixed research length: substantial topics can grow into their own chapters.
+
+```text
+/engineer "Kent Beck" --stage research
+/engineer "Kent Beck" --stage slides
+/engineer "Kent Beck"
+/engineer "Kent Beck" --compare "Dave Farley"
+/engineer "Steve Yegge" --compare "Robert C. Martin, David Heinemeier Hansson"
+/engineer "Kent Beck" --refresh
+```
+
+The default single-person command ensures research exists and then creates slides. Existing research is reused. `--stage research` creates only the cache; `--stage slides` derives slides without browsing. `--refresh` explicitly updates primary-source research and affected views. `--compare` defaults to cached comparison: missing profiles are reported as prerequisites, and evidence dates stay visible. Use `--stage all --compare "..."` to explicitly research missing participants and derive all views.
+
+[Browse engineers](engineers/index.md) and [open the side-by-side field cards]({{ '/engineers/compare/' | relative_url }}). The cards include twelve shared dimensions, tool summaries, qualifications, and source links, with a dimension selector and mobile horizontal scrolling. A generated comparison document adds evidence-backed disagreements, a common worked example, and adoption tradeoffs. The shared page discovers new cached profiles at build time.
+
+The [portable research prompt](docs/engineer-research-prompt.md) works in another research-capable assistant with `PERSON` as a parameter. The [cache and view schema](docs/engineer-cache-schema.md) defines the directory structure, evidence fields, and slide format. The slide stage reuses the main viewer: Jekyll embeds Markdown and plain JavaScript renders one bite-sized idea at a time. Saved ideas are separate for each engineer.
+
+Claude Code's wrapper is `claude-config/commands/engineer.md`; OpenCode's is `.opencode/commands/engineer.md`. Both read the same prompt and schema. To install the Claude command from the repo root:
+
+```bash
+mkdir -p .claude/commands
+ln -s ../../claude-config/commands/engineer.md .claude/commands/engineer.md
+```
+
+Inspect an existing destination before replacing it. Run the commands in this repository. They write documentation and derived views; they do not commit, push, or deploy.
+
 ## The `agentic-alignment` skill
 
 A Claude Code skill defined in [`skills/agentic-alignment/SKILL.md`](https://github.com/bnppl/good-vibes/blob/main/skills/agentic-alignment/SKILL.md). It's **brownfield-focused**: the job is to take a codebase that already exists, already has conventions, and already has history, and make it work better with AI coding agents.

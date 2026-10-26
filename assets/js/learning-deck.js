@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const $ = id => document.getElementById(id);
-  const key = 'good-vibes-learning-deck-v2';
+  const key = document.body.dataset.storageKey || 'good-vibes-learning-deck-v2';
   const cards = [], weeks = [];
   let index = 0, saved = {}, bookmarks = new Set(), storageAvailable = true, rendered = false;
 
@@ -47,13 +47,14 @@
       }
       weeks.push(week);
     }
-    if (cards.length !== 16 || weeks.length !== 4) throw new Error('Expected 16 ideas in four collections');
+    if (!cards.length || !weeks.length || weeks.some(week => !week.cards.length)) throw new Error('Expected nonempty idea collections');
+    if (new Set(cards.map(card => card.id)).size !== cards.length) throw new Error('Duplicate card IDs');
   }
 
   function readSaved() {
     try {
       const raw = localStorage.getItem(key);
-      const data = JSON.parse(raw || localStorage.getItem('good-vibes-learning-deck-v1') || '{}');
+      const data = JSON.parse(raw || (key === 'good-vibes-learning-deck-v2' ? localStorage.getItem('good-vibes-learning-deck-v1') : null) || '{}');
       saved = data && typeof data === 'object' ? data : {};
       bookmarks = new Set(Array.isArray(saved.bookmarks) ? saved.bookmarks.filter(id => cards.some(c => c.id === id)) : []);
     } catch (_) { storageAvailable = false; }
@@ -75,7 +76,7 @@
     const id = location.hash.slice(1).split('/')[0]; // Old /recall and /try links still reach the same idea.
     let found = cards.findIndex(c => c.id === id);
     const lab = id.match(/^lab-([1-4])$/);
-    if (lab) found = weeks[Number(lab[1]) - 1].cards[0];
+    if (lab && weeks[Number(lab[1]) - 1]) found = weeks[Number(lab[1]) - 1].cards[0];
     if (found < 0) { navigate(0); return; }
     index = found;
     history.replaceState(null, '', `#${cards[index].id}`);
@@ -103,7 +104,7 @@
     $('lesson').dataset.theme = card.week.number;
     $('deck-label').textContent = card.week.title;
     $('card-count').textContent = `${card.week.cards.indexOf(index) + 1} / ${card.week.cards.length}`;
-    $('card-label').textContent = 'AI engineering / small truths';
+    $('card-label').textContent = document.body.dataset.cardLabel || 'AI engineering / small truths';
     $('topic').textContent = card.topic;
     $('lesson-title').textContent = card.hook;
     $('idea').innerHTML = card.idea;

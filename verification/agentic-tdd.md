@@ -42,6 +42,8 @@ Pick one small feature. Record a reviewed failing test, a successful implementat
 
 ## Cross-References and Sources
 
+- [Dave Farley: agentic development](../engineers/dave-farley/index.md) — sourced techniques, tool attribution, and a worked spelling-app feature.
+
 - [Test the tests](test-the-tests.md) — mutation and property-based checks.
 - [Characterization and handoff](characterization-and-handoff.md) — legacy behaviour and the next session.
 - [Comprehension debt](comprehension-debt.md) — maintaining understanding alongside verification.

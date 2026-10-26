@@ -18,6 +18,8 @@ The [learning plan](../learning-plan.md) introduces evaluation and verification 
 - [agent-evaluation](agent-evaluation.md) — Baselines, repeated trials, held-out tasks, outcomes, cost, and review effort.
 - [agent-security](agent-security.md) — Prompt injection, scoped access, environment containment, and benign negative tests.
 
+- [Dave Farley: agentic development](../engineers/dave-farley/index.md) — A sourced deep dive, four-layer examples, tools, prompts, and a spelling-app walkthrough.
+
 - [agentic-tdd](agentic-tdd.md) — Using tests as the primary specification and success criterion for agents.
 - [comprehension-debt](comprehension-debt.md) — Strategies for maintaining cognitive sustainability and system understanding.
 - [tool-engineering](../context-engineering/tool-engineering.md) — Designing robust Agent-Computer Interfaces (ACI).

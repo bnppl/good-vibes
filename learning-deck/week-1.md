@@ -59,7 +59,7 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 **Takeaway:** Make the bug visible before you celebrate its disappearance.
 
-[Optional practice: session 3](../learning-plan.md#session-3-acceptance-tests-and-human-understanding) · Go deeper: [Agentic TDD](../verification/agentic-tdd.md) · [Comprehension debt](../verification/comprehension-debt.md)
+[Optional practice: session 3](../learning-plan.md#session-3-acceptance-tests-and-human-understanding) · Go deeper: [Agentic TDD](../verification/agentic-tdd.md) · [Dave Farley walkthrough](../engineers/dave-farley/research.md) · [Comprehension debt](../verification/comprehension-debt.md)
 
 ---
 

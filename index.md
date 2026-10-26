@@ -19,5 +19,6 @@ A personal learning wiki on **context engineering** and **spec-driven developmen
 | [Context Engineering](context-engineering/index.md) | The guide: mental models, layers, agentic dev patterns |
 | [Agent Architecture Patterns](agent-patterns/index.md) | Reasoning loops, multi-agent coordination, production lessons |
 | [Spec-Driven Development Frameworks](frameworks/index.md) | Survey of nine SDD tools |
+| [Engineers](engineers/index.md) | Detailed research, bite-sized slides, and comparison field cards |
 | [Verification](verification/index.md) | Per-session habits and cross-session artifacts |
 | [Learning Plan](learning-plan.md) | The study roadmap |
