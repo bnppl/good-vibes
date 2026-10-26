@@ -148,6 +148,7 @@ dimensions:
   checked: '2026-10-26'
   qualification: Editorial interview summary and anecdotes, not a controlled comparison. The useful evaluation focus
     is not a demonstrated universal productivity advantage.
+practice_focus: coding-workflows
 ---
 
 # Steve Yegge

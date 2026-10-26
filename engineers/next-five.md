@@ -1,7 +1,7 @@
 ---
 title: Studies six to ten
 parent: Engineers
-nav_order: 21
+nav_order: 32
 last_updated: 2026-10-26
 last_read: null
 status: unread

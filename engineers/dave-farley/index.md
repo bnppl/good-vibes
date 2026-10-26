@@ -150,6 +150,7 @@ dimensions:
   qualification: 'Inferred synthesis of S01/S02/S05: source recommendations concern verification and risk-based
     review; our limits include equivalent mutants, incomplete requirements, and lack of controlled cross-workflow
     outcome evidence. C12 retains its original universal-efficacy limitation.'
+practice_focus: coding-workflows
 ---
 
 # Dave Farley
@@ -182,7 +183,9 @@ S02: public first-person interview, checked 26 October 2026; a stated priority, 
 
 **Stated.** Human-owned executable examples define the acceptance contract.
 
-[Detail](research.md#1-the-techniques-and-what-each-contributes) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+S01/S03/S12: human ownership and executable examples are documented; the reward examples here are our adaptations.
+
+[Cached detail](research.md#1-the-techniques-and-what-each-contributes) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 <a id="c03"></a>
 
@@ -190,7 +193,9 @@ S02: public first-person interview, checked 26 October 2026; a stated priority, 
 
 **Stated.** One scenario at a time: observe failure, implement, review, commit.
 
-[Detail](research.md#3-a-step-by-step-session) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+S01/S04: the incremental loop is stated; the exact worked scenario order in this cache is proposed guidance.
+
+[Cached detail](research.md#3-a-step-by-step-session) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 <a id="c04"></a>
 
@@ -208,7 +213,9 @@ S01/S05/S06/S07/S12: acceptance-first behaviour, unit-level design, and test qua
 
 **Stated.** Retain modularity, separation of concerns, testability, and refactoring.
 
-[Detail](research.md#1-the-techniques-and-what-each-contributes) · [Primary source](https://www.aviator.co/podcast/engineering-discipline-dave-farley)
+S02: foundational design concerns remain important; the cache does not establish one mandatory architecture or refactoring tool.
+
+[Cached detail](research.md#1-the-techniques-and-what-each-contributes) · [Primary source](https://www.aviator.co/podcast/engineering-discipline-dave-farley)
 
 <a id="c06"></a>
 
@@ -216,7 +223,9 @@ S01/S05/S06/S07/S12: acceptance-first behaviour, unit-level design, and test qua
 
 **Stated.** Humans own intent; inspect code when risk warrants it.
 
-[Detail](research.md#3-a-step-by-step-session) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+S01: human intent ownership and risk-based code inspection. This does not establish that every generated line can safely go unread.
+
+[Cached detail](research.md#3-a-step-by-step-session) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 <a id="c07"></a>
 
@@ -234,7 +243,9 @@ S01/S03: implementation against an acceptance contract is stated. Personal orche
 
 **Not established.** A complete personal context, memory, and handoff setup is not established.
 
-[Detail](research.md#sources-and-further-study)
+The inspected public cache does not establish a complete personal memory or handoff setup. Unknown is not evidence of non-use.
+
+[Cached detail](research.md#sources-and-further-study)
 
 <a id="c09"></a>
 
@@ -242,7 +253,9 @@ S01/S03: implementation against an acceptance contract is stated. Personal orche
 
 **Stated.** Official course plugin offers learn, build, and review. This does not establish his complete personal stack.
 
-[Detail](research.md#4-tools-what-is-official-and-what-is-a-suggested-choice) · [Primary source](https://github.com/cd-training-courses/claude-skills)
+S08/S09/S10: official course commands are documented; the advertised score feature and separately maintained scoring implementation are not a complete personal stack. Repository revision was not captured; recheck before installation.
+
+[Cached detail](research.md#4-tools-what-is-official-and-what-is-a-suggested-choice) · [Primary source](https://github.com/cd-training-courses/claude-skills)
 
 <a id="c10"></a>
 
@@ -250,7 +263,9 @@ S01/S03: implementation against an acceptance contract is stated. Personal orche
 
 **Stated.** Small reversible changes, automated verification, and releasability.
 
-[Detail](research.md#3-a-step-by-step-session) · [Primary source](https://www.linkedin.com/pulse/continuous-delivery-matters-more-less-when-ai-loop-dave-farley-zidce)
+S04/S07: continuous verification and releasability are documented. The proposed application pipeline is not Farley’s private configuration.
+
+[Cached detail](research.md#3-a-step-by-step-session) · [Primary source](https://www.linkedin.com/pulse/continuous-delivery-matters-more-less-when-ai-loop-dave-farley-zidce)
 
 <a id="c11"></a>
 
@@ -258,7 +273,9 @@ S01/S03: implementation against an acceptance contract is stated. Personal orche
 
 **Stated.** Acceptance-test changes need human control.
 
-[Detail](research.md#5-protecting-the-contract-in-practice) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
+S01: the human-controlled acceptance contract is stated. Permission and CI arrangements in the worked guide are suggested implementations of that concern.
+
+[Cached detail](research.md#5-protecting-the-contract-in-practice) · [Primary source](https://www.linkedin.com/pulse/spec-must-executable-dave-farley-jrnxe)
 
 <a id="c12"></a>
 

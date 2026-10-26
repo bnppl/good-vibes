@@ -152,6 +152,7 @@ dimensions:
   checked: '2026-10-26'
   qualification: Our evidence assessment. Repository self-reports and historical survey correlations are not a controlled
     cross-engineer trial.
+practice_focus: coding-workflows
 ---
 
 # Gojko Adžić

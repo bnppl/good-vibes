@@ -39,6 +39,12 @@ When REFRESH is explicitly true, refresh selected research first and then derive
 - Do not assume the person endorses coding agents, TDD, BDD, specifications, multi-agent systems, or any other approach. If they reject the premise or have not documented a position, report that faithfully.
 - If no PROJECT_CONTEXT is supplied, use the neutral worked example below. Do not require project details to begin useful research.
 
+### 1a. Keep the engineering subject explicit
+
+Some people primarily discuss using coding agents; others primarily discuss building products containing AI models. Set `practice_focus` to `coding-workflows`, `ai-systems`, or `mixed` for the material actually studied. Keep the same D01–D12 questions, but name the system being tested, evaluated, deployed, or secured. A product-evaluation loop is not automatically a code-test cadence or a personal coding-agent setup. Mark undocumented coding practices unknown instead of filling them with the subject's application-evaluation advice.
+
+Retain the fixed deterministic reward task as a clearly labelled adaptation for comparison. For AI-system specialists, it illustrates a deterministic software boundary; it does not establish model output quality, retrieval quality, or agent task success. Any additional model-based example is a separate optional illustration and must not change the shared task or masquerade as a comparable benchmark.
+
 ### 2. Research primary material
 
 Search the web and inspect original sources: authored articles, newsletters, books or accessible excerpts, talks, interviews, repositories, instructions, demos, and official tool documentation. Prefer direct demonstrations when describing an actual workflow. Search summaries and other people's commentary are discovery aids, not evidence of the subject's practice.

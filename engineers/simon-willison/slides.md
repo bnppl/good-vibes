@@ -53,7 +53,7 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 >
 > Willison complements tests with exploratory execution: try the API, run the code, or exercise a real web UI. Relevant discoveries can become regressions.
 
-**In the wild:** Suggested adaptation: restart the real reward process and replay the original ID.
+**In the wild:** Suggested adaptation: restart the real reward process, read the retained balance, then replay the original ID.
 
 **Takeaway:** Exercise the boundary the requirement depends on.
 

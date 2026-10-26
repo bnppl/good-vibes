@@ -53,7 +53,7 @@ Derived from the research cache checked on 26 October 2026. Reward examples are 
 >
 > In a multi-person conversation, Fowler’s own contributions favour concrete scenarios and domain-familiar abstractions. Do not assign every speaker’s claims to him.
 
-**In the wild:** Walk through first A, replay A, restart, and new B before choosing a reward design.
+**In the wild:** Walk through first A, replay A, the separate restart read, replay after restart, and new B before choosing a reward design.
 
 **Takeaway:** Let observed cases sharpen the model.
 

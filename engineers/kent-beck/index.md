@@ -136,6 +136,7 @@ dimensions:
   source: https://newsletter.kentbeck.com/p/genie-tarpit
   checked: '2026-10-26'
   qualification: Conceptual synthesis and self-reports, not a controlled comparative productivity result.
+practice_focus: coding-workflows
 ---
 
 # Kent Beck

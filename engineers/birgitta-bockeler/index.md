@@ -146,6 +146,7 @@ dimensions:
   checked: '2026-10-26'
   qualification: Limited greenfield tasks; LLM-based quality judgment; imperfect adherence. Not evidence against
     all TDD.
+practice_focus: coding-workflows
 ---
 
 # Birgitta Böckeler

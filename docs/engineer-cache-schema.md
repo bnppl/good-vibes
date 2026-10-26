@@ -38,6 +38,8 @@ cache_schema: 1
 person_id: person-name
 canonical_name: Person Name
 aliases: []
+practice_focus: coding-workflows
+focus_note: State a material scope boundary if needed.
 research_cutoff: 2026-10-26
 research_checked: 2026-10-26
 last_updated: 2026-10-26
@@ -62,6 +64,8 @@ dimensions:
 ```
 
 Include all D01–D12 in the order and with titles defined in the portable prompt. Evidence is one of `Demonstrated`, `Stated`, `Inferred`, `Suggested adaptation`, `Not established`. Unknowns have an empty `source`, an explanatory gap, and a local detail link. A dimension summarising several claims must link to a cached section that maps those claims to the relevant primary sources. The frontmatter `claim` is a stable entry ID rendered as an explicit lowercase anchor in the profile body, such as `<a id="c01"></a>`, so generated comparisons can cite `index.md#c01` across heading edits. Do not invent evidence for an unknown dimension. Mirror the frontmatter position, evidence label, and qualification in the profile's visible claim entry; links alone do not make that entry reviewable. If the two disagree, reconcile them against cached evidence before generating slides or comparisons. A recommendation and a self-reported personal practice may both be `Stated`, so their difference must remain explicit in the qualification. Record publication/practice dates separately from the evidence check date.
+
+`practice_focus` identifies the content's subject, not a person's skill, attitude, or permanent identity. Use `coding-workflows` for AI-assisted software development/delivery, `ai-systems` for building/evaluating products containing models, and `mixed` when both are substantively covered. `focus_note` is optional and explains a material boundary. The comparison picker can filter by focus and search names/aliases; selected people remain visible. A cross-focus comparison displays an explicit scope note. Missing legacy focus metadata defaults to coding-workflows, but new/updated profiles should state it explicitly.
 
 `research_checked` records actual research verification, not slide generation or site build dates. `research_cutoff` records the evidence horizon. Each source record should retain publication date, inspected date, URL, inspected scope, findings, supported claim IDs, and limitations; repository sources should retain revisions when available. Preserve claim IDs across refreshes, marking superseded claims explicitly rather than reassigning their IDs to unrelated assertions.
 

@@ -134,6 +134,7 @@ dimensions:
   source: https://addyosmani.com/blog/audit-your-agent-files/
   checked: '2026-10-26'
   qualification: Personal observations and reported research do not establish universal thresholds.
+practice_focus: coding-workflows
 ---
 
 # Addy Osmani

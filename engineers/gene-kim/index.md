@@ -142,6 +142,7 @@ dimensions:
   checked: '2026-10-26'
   qualification: 'Our inference from a retrospective project report: test-result mismatch is reported, while the
     common-task evaluation protocol is our adaptation. No controlled comparative advantage is established.'
+practice_focus: coding-workflows
 ---
 
 # Gene Kim

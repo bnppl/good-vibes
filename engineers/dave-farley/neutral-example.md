@@ -46,8 +46,10 @@ A scenario could be expressed as:
 Scenario: A rewarded submission remains a single event after restart
   Given an isolated account with 0 points
   When submission A is delivered
-  And the system restarts while retaining durable data
-  And submission A is delivered again
+  Then the account has 10 points
+  When the system restarts while retaining durable data
+  Then the account has 10 points before any further submission
+  When submission A is delivered again
   Then the account has 10 points
 ```
 

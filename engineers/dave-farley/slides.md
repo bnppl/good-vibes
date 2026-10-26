@@ -117,7 +117,7 @@ Derived from the cached research checked on 26 October 2026. Examples are sugges
 >
 > Our common reward exercise keeps the same outcomes for every engineer: 10 points once per submission ID, persistence across restart, and a new ID as a separate event. This is a suggested application of the cached principles, not a Farley demonstration.
 
-**In the wild:** Replaying A leaves 10 points; restarting and replaying A still leaves 10; delivering B produces 20.
+**In the wild:** Replaying A leaves 10; a read immediately after restart still shows 10; replaying A stays at 10; B produces 20.
 
 **Takeaway:** Agree the same observable outcomes before comparing workflows.
 

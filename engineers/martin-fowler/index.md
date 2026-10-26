@@ -141,6 +141,7 @@ dimensions:
   source: https://martinfowler.com/bliki/SensibleDefault.html
   checked: '2026-10-26'
   qualification: General sensible-default framing; a universal comparative productivity result is not established.
+practice_focus: coding-workflows
 ---
 
 # Martin Fowler

@@ -49,7 +49,7 @@ Eight small reads derived from public-source research checked on 26 October 2026
 
 ### Earned autonomy
 
-> **The riskiest file should not set its own permission level.**
+> **The agent should not set its own level of autonomy.**
 >
 > His brownfield guidance gives people responsibility for risk zones. Test confidence, visibility and recovery influence autonomy.
 

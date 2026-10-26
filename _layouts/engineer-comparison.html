@@ -15,9 +15,17 @@
     <p class="eyebrow">Different people. The same questions.</p>
     <h1>Collect the ideas.<br>Compare the approaches.</h1>
     <p class="intro">Detailed field cards from cached research. Pick up to three engineers, then explore their methods side by side. Evidence labels and dates travel with every position.</p>
-    <form id="engineer-picker"><fieldset><legend>Choose engineers</legend><div id="choices" class="choices"></div></fieldset></form>
+    <form id="engineer-picker"><fieldset><legend>Choose engineers</legend>
+      <div class="picker-filters">
+        <label for="engineer-search">Find a person<input id="engineer-search" type="search" placeholder="Name or alias…" autocomplete="off"></label>
+        <label for="practice-focus">Focus<select id="practice-focus"><option value="all">All focuses</option><option value="coding-workflows">Coding with AI</option><option value="ai-systems">Building AI systems</option><option value="mixed">Both / mixed focus</option></select></label>
+        <button id="clear-selection" type="button" class="picker-clear">Clear selection</button>
+      </div>
+      <p id="picker-status" class="filter-status" role="status" aria-live="polite"></p>
+      <div id="choices" class="choices"></div></fieldset></form>
     <div class="comparison-toolbar"><label for="dimension">Explore a dimension</label><select id="dimension"><option value="all">All twelve dimensions</option></select></div>
     <p id="comparison-status" role="status" aria-live="polite"></p>
+    <p id="scope-notice" class="scope-notice" hidden></p>
     <div id="cards" class="profile-grid" tabindex="-1"></div>
     <p class="cache-note">These cards reuse the stored profile; they do not perform live research. “Not established” means unknown. Different descriptions alone do not prove disagreement. Add a profile with <code>/engineer "Person Name"</code>, then rebuild the site.</p>
     <noscript><p>Browse the <a href="{{ '/engineers/' | relative_url }}">research archive</a> with JavaScript switched off.</p></noscript>
@@ -25,9 +33,10 @@
   <template id="engineer-cache">
     {% assign profiles = site.pages | where: 'engineer_profile', true | sort: 'canonical_name' %}
     {% for profile in profiles %}
-    <article data-person="{{ profile.person_id | escape }}" data-name="{{ profile.canonical_name | escape }}" data-url="{{ profile.url | relative_url }}" data-slides="{{ profile.slides_url | relative_url }}" data-checked="{{ profile.research_checked | escape }}" data-cutoff="{{ profile.research_cutoff | escape }}">
+    <article data-person="{{ profile.person_id | escape }}" data-name="{{ profile.canonical_name | escape }}" data-aliases="{{ profile.aliases | join: ", " | escape }}" data-focus="{{ profile.practice_focus | default: 'coding-workflows' | escape }}" data-url="{{ profile.url | relative_url }}" data-slides="{{ profile.slides_url | relative_url }}" data-checked="{{ profile.research_checked | escape }}" data-cutoff="{{ profile.research_cutoff | escape }}">
       <p class="cached-tagline">{{ profile.tagline | escape }}</p>
       <p class="cached-summary">{{ profile.summary | escape }}</p>
+      <p class="cached-focus-note">{{ profile.focus_note | escape }}</p>
       <p class="cached-tools">{{ profile.tools_summary | escape }}</p>
       <ul class="cached-strengths">{% for strength in profile.strengths %}<li>{{ strength | escape }}</li>{% endfor %}</ul>
       {% for dimension in profile.dimensions %}

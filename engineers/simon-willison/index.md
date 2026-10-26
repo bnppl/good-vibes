@@ -138,6 +138,7 @@ dimensions:
   checked: '2026-10-26'
   qualification: Our evidence assessment, not an effectiveness claim by Willison; experiments and production have
     different stakes.
+practice_focus: coding-workflows
 ---
 
 # Simon Willison

@@ -1,7 +1,7 @@
 ---
 title: Comparability review — first ten
 parent: Engineers
-nav_order: 22
+nav_order: 34
 last_updated: 2026-10-26
 last_read: null
 status: unread

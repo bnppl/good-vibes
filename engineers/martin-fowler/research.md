@@ -30,7 +30,7 @@ Scope: public material inspected on **26 October 2026**, with the same date as e
 
 **Stated.** In the January 2026 conversation with Unmesh Joshi and Rebecca Parsons, Fowler's own contributions connect changeability to cognitive load, favour domain-familiar models, resist a rigid split between requirements and implementation, and propose starting from concrete scenarios. The other speakers' arguments are not automatically his. [S10](sources.md#s10)
 
-**Suggested adaptation.** For a reward feature, write the observable sequence before choosing an implementation: deliver A, replay A, restart, replay A, deliver B. A small implementation experiment might reveal that the current application cannot restart without losing state. That discovery changes the work plan; it does not justify silently changing the agreed outcome. Maintain a distinction between product intent and the team's evolving understanding of a feasible design.
+**Suggested adaptation.** For a reward feature, write the observable sequence before choosing an implementation: read baseline, deliver A, replay A, restart and read before any replay, replay A, deliver B. A small implementation experiment might reveal that the current application cannot restart without losing state. That discovery changes the work plan; it does not justify silently changing the agreed outcome. Maintain a distinction between product intent and the team's evolving understanding of a feasible design.
 
 ### Use an interview to build context
 

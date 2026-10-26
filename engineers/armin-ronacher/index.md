@@ -138,6 +138,7 @@ dimensions:
   source: https://lucumr.pocoo.org/2025/7/30/things-that-didnt-work/
   checked: '2026-10-26'
   qualification: Informal personal heuristics; no universal productivity advantage established.
+practice_focus: coding-workflows
 ---
 
 # Armin Ronacher
