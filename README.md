@@ -102,6 +102,8 @@ The default single-person command ensures research exists and then creates slide
 
 The [interactive approach map]({{ '/engineers/map/' | relative_url }}) shows all twenty engineers in overlapping regions. Select a name for scoped tooling examples, direct links and category icons. Region membership is editorial and reconciled to dated profile evidence; published artifacts and personal practice remain distinct.
 
+The [visual exploration gallery]({{ '/engineers/visuals/' | relative_url }}) adds eight interactive perspectives: verification ownership, subway routes, the same bug, confidence layers, the tool ecosystem, project contexts, evolution trails and a disagreement microscope. All views use the shared dated profile cache; adaptations and evidence boundaries remain explicit.
+
 The [portable research prompt](docs/engineer-research-prompt.md) works in another research-capable assistant with `PERSON` as a parameter. The [cache and view schema](docs/engineer-cache-schema.md) defines the directory structure, evidence fields, and slide format. The slide stage reuses the main viewer: Jekyll embeds Markdown and plain JavaScript renders one bite-sized idea at a time. Saved ideas are separate for each engineer.
 
 Claude Code's wrapper is `claude-config/commands/engineer.md`; OpenCode's is `.opencode/commands/engineer.md`. Both read the same prompt and schema. To install the Claude command from the repo root:

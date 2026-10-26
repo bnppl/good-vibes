@@ -23,6 +23,8 @@ Detailed research first. Small ideas when you want them. Compare people against 
 
 ## Explore all twenty together
 
+[Explore eight interactive perspectives]({{ '/engineers/visuals/' | relative_url }}) — ownership, routes, a shared bug, confidence layers, tools, project fit, evolution and disagreement.
+
 [Open the interactive approach map]({{ '/engineers/map/' | relative_url }}) — overlapping regions, selectable engineers and linked tooling examples with category icons.
 
 ## Explore a focused comparison
