@@ -97,6 +97,78 @@ Skill. A command in Osmani’s published lifecycle collection. Namespaced forms 
 
 - **Addy Osmani · Published artifact** — The tools chapter records /spec in the inspected README command table. [Primary evidence](https://github.com/addyosmani/agent-skills) · [Cached claim](../engineers/addy-osmani/tools.md). Publication/revision: Not established; mutable, unpinned repository. Practice: Not established; README inspected, not executed. Limit: No immutable revision captured. No installation or runtime effectiveness test. This does not establish daily adoption.
 
+### api-and-interface-design · Addy Osmani
+
+Skill. Design contracts and boundaries that callers can understand and use consistently.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Design contracts and boundaries that callers can understand and use consistently. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/api-and-interface-design/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-api-and-interface-design). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### constraint-driven-development · Addy Osmani
+
+Skill. Agree a written quality bar and detect changes that weaken it.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Agree a written quality bar and detect changes that weaken it. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/constraint-driven-development/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-constraint-driven-development). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### idea-refine · Addy Osmani
+
+Skill. Explore alternatives and narrow an initial idea into a concrete direction.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Explore alternatives and narrow an initial idea into a concrete direction. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/idea-refine/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-idea-refine). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### interview-me · Addy Osmani
+
+Skill. Elicit the underlying goal through focused questions instead of filling in missing intent.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Elicit the underlying goal through focused questions instead of filling in missing intent. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/interview-me/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-interview-me). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### spec-driven-development · Addy Osmani
+
+Skill. Write the intended capabilities and scope before implementing significant work.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Write the intended capabilities and scope before implementing significant work. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/spec-driven-development/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-spec-driven-development). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### research · Matt Pocock
+
+Skill. Investigate a question using primary sources and preserve a cited project note.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Investigate a question using primary sources and preserve a cited project note. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/research/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-research). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### domain-modeling · Matt Pocock
+
+Skill. Refine shared domain terminology and record it in a glossary and decisions.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Refine shared domain terminology and record it in a glossary and decisions. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/domain-modeling/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-domain-modeling). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### to-spec · Matt Pocock
+
+Skill. Synthesize an existing conversation into a specification for the configured tracker.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Synthesize an existing conversation into a specification for the configured tracker. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/to-spec/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-to-spec). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### grill-with-docs · Matt Pocock
+
+Skill. Combine design questioning with contemporaneous domain and decision documentation.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Combine design questioning with contemporaneous domain and decision documentation. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/grill-with-docs/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-grill-with-docs). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### create-cli · Peter Steinberger
+
+Skill. Specify command-line arguments, help, outputs, configuration and failure behaviour.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Specify command-line arguments, help, outputs, configuration and failure behaviour. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/create-cli/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-create-cli). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.
+
+### codebase-design · Matt Pocock
+
+Skill. Use a shared vocabulary to reason about module depth, interfaces and test seams.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Use a shared vocabulary to reason about module depth, interfaces and test seams. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/codebase-design/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-codebase-design). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### grilling · Matt Pocock
+
+Skill. Resolve a plan through successive rounds of questions about dependent decisions.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Resolve a plan through successive rounds of questions about dependent decisions. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/grilling/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-grilling). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
 ## Plan & coordinate
 
 Split work, choose ownership and schedule agent execution.
@@ -188,6 +260,30 @@ Skill. Published factory commands prepare an impact analysis and execution plan 
 Skill. A command in Osmani’s published lifecycle collection. Namespaced forms may be needed where host commands collide; no execution or adoption claim.
 
 - **Addy Osmani · Published artifact** — The tools chapter records /plan in the inspected README command table. [Primary evidence](https://github.com/addyosmani/agent-skills) · [Cached claim](../engineers/addy-osmani/tools.md). Publication/revision: Not established; mutable, unpinned repository. Practice: Not established; README inspected, not executed. Limit: No immutable revision captured. No installation or runtime effectiveness test. This does not establish daily adoption.
+
+### planning-and-task-breakdown · Addy Osmani
+
+Skill. Turn a specification into ordered tasks with observable completion criteria.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Turn a specification into ordered tasks with observable completion criteria. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/planning-and-task-breakdown/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-planning-and-task-breakdown). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### triage · Matt Pocock
+
+Skill. Qualify issues or external contributions and prepare scoped implementation briefs.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Qualify issues or external contributions and prepare scoped implementation briefs. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/triage/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-triage). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### wayfinder · Matt Pocock
+
+Skill. Explore a large uncertain goal through tracked decisions, research and prototypes.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Explore a large uncertain goal through tracked decisions, research and prototypes. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wayfinder/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-wayfinder). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### github-project-triage · Peter Steinberger
+
+Skill. Review repository queues for concrete blockers, evidence and next actions.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Review repository queues for concrete blockers, evidence and next actions. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/github-project-triage/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-github-project-triage). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.
 
 ## Supply context
 
@@ -315,6 +411,48 @@ Skill. Published /spec, /plan, /build, /test, /review and /ship commands; shown 
 Tool. Persistent work graph and project context, created by Yegge and now maintained by gastownhall. Public artifact, not proof of a current private deployment.
 
 - **Steve Yegge · Published artifact** — The inspected tools chapter records bd ready/show/update/close/prime and the public work graph. [Primary evidence](https://github.com/gastownhall/beads) · [Cached claim](../engineers/steve-yegge/tools.md). Publication/revision: Not established; mutable, unpinned repository. Practice: Not established; README inspected, not executed. Limit: Living README inspected, not executed. The source register records a README history commit; the link here is mutable. No claim of current private deployment.
+
+### context-engineering · Addy Osmani
+
+Skill. Choose relevant project guidance and context for the next agent task.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Choose relevant project guidance and context for the next agent task. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/context-engineering/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-context-engineering). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### documentation-and-adrs · Addy Osmani
+
+Skill. Record consequential decisions, rationale and future-facing project documentation.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Record consequential decisions, rationale and future-facing project documentation. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/documentation-and-adrs/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-documentation-and-adrs). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### source-driven-development · Addy Osmani
+
+Skill. Check framework and API decisions against authoritative current documentation.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Check framework and API decisions against authoritative current documentation. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/source-driven-development/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-source-driven-development). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### using-agent-skills · Addy Osmani
+
+Skill. Find the relevant skill for a task and apply its intended workflow.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Find the relevant skill for a task and apply its intended workflow. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/using-agent-skills/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-using-agent-skills). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### project-structure · Peter Steinberger
+
+Skill. Produce a compact symbol map of a TypeScript or Swift repository.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Produce a compact symbol map of a TypeScript or Swift repository. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/project-structure/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-project-structure). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.
+
+### writing-for-agents · Matt Pocock
+
+Skill. Write concise, navigable instructions that another agent can follow reliably.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Write concise, navigable instructions that another agent can follow reliably. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/writing-for-agents/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-writing-for-agents). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### setup-matt-pocock-skills · Matt Pocock
+
+Skill. Configure repository tracker conventions, domain documentation and skill guidance.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Configure repository tracker conventions, domain documentation and skill guidance. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/setup-matt-pocock-skills/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-setup-matt-pocock-skills). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
 
 ## Implement
 
@@ -463,6 +601,42 @@ Skill. A command in Osmani’s published lifecycle collection. Namespaced forms 
 
 - **Addy Osmani · Published artifact** — The tools chapter records /build in the inspected README command table. [Primary evidence](https://github.com/addyosmani/agent-skills) · [Cached claim](../engineers/addy-osmani/tools.md). Publication/revision: Not established; mutable, unpinned repository. Practice: Not established; README inspected, not executed. Limit: No immutable revision captured. No installation or runtime effectiveness test. This does not establish daily adoption.
 
+### deprecation-and-migration · Addy Osmani
+
+Skill. Plan replacement or removal of old interfaces and transition users deliberately.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Plan replacement or removal of old interfaces and transition users deliberately. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/deprecation-and-migration/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-deprecation-and-migration). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### frontend-ui-engineering · Addy Osmani
+
+Skill. Build accessible, responsive interfaces grounded in the project design system.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Build accessible, responsive interfaces grounded in the project design system. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/frontend-ui-engineering/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-frontend-ui-engineering). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### incremental-implementation · Addy Osmani
+
+Skill. Deliver one verifiable vertical slice before expanding the change.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Deliver one verifiable vertical slice before expanding the change. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/incremental-implementation/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-incremental-implementation). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### prototype · Matt Pocock
+
+Skill. Build a disposable experiment to answer a specific design or interaction question.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Build a disposable experiment to answer a specific design or interaction question. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/prototype/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-prototype). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### implement · Matt Pocock
+
+Skill. Implement an agreed specification or tickets with focused checks and a review.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Implement an agreed specification or tickets with focused checks and a review. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/implement/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-implement). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### frontend-design · Peter Steinberger
+
+Skill. Implement a coherent visual direction for a working user interface.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Implement a coherent visual direction for a working user interface. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/frontend-design/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-frontend-design). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The skill has a per-directory licence notice. Inspect and preserve LICENSE.txt and any upstream credit.
+
 ## Verify behaviour
 
 Exercise code, tests, browsers, structural rules and security checks.
@@ -583,6 +757,66 @@ Skill. A command in Osmani’s published lifecycle collection. Namespaced forms 
 
 - **Addy Osmani · Published artifact** — The tools chapter records /test in the inspected README command table. [Primary evidence](https://github.com/addyosmani/agent-skills) · [Cached claim](../engineers/addy-osmani/tools.md). Publication/revision: Not established; mutable, unpinned repository. Practice: Not established; README inspected, not executed. Limit: No immutable revision captured. No installation or runtime effectiveness test. This does not establish daily adoption.
 
+### browser-testing-with-devtools · Addy Osmani
+
+Skill. Inspect a running browser through DevTools MCP and capture behavioural evidence.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Inspect a running browser through DevTools MCP and capture behavioural evidence. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/browser-testing-with-devtools/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-browser-testing-with-devtools). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### debugging-and-error-recovery · Addy Osmani
+
+Skill. Investigate failures systematically before choosing a repair.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Investigate failures systematically before choosing a repair. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/debugging-and-error-recovery/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-debugging-and-error-recovery). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### performance-optimization · Addy Osmani
+
+Skill. Measure a bottleneck, improve it and compare the result against the baseline.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Measure a bottleneck, improve it and compare the result against the baseline. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/performance-optimization/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-performance-optimization). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### security-and-hardening · Addy Osmani
+
+Skill. Inspect application inputs, dependencies and trust boundaries for concrete weaknesses.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Inspect application inputs, dependencies and trust boundaries for concrete weaknesses. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/security-and-hardening/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-security-and-hardening). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### test-driven-development · Addy Osmani
+
+Skill. Exercise a failing behavioural test before implementation, then maintain the verification loop.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Exercise a failing behavioural test before implementation, then maintain the verification loop. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/test-driven-development/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-test-driven-development). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### diagnosing-bugs · Matt Pocock
+
+Skill. Gather evidence, isolate a hard failure and test a diagnosis before repairing it.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Gather evidence, isolate a hard failure and test a diagnosis before repairing it. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/diagnosing-bugs/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-diagnosing-bugs). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### swift-concurrency-expert · Peter Steinberger
+
+Skill. Diagnose Swift concurrency errors and review isolation and Sendable boundaries.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Diagnose Swift concurrency errors and review isolation and Sendable boundaries. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/swift-concurrency-expert/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-swift-concurrency-expert). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger.
+
+### swiftui-performance-audit · Peter Steinberger
+
+Skill. Investigate SwiftUI rendering and resource use with code review and profiling.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Investigate SwiftUI rendering and resource use with code review and profiling. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/swiftui-performance-audit/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-swiftui-performance-audit). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger.
+
+### native-app-performance · Peter Steinberger
+
+Skill. Capture and analyse native-app CPU profiles using the Xcode command-line tools.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Capture and analyse native-app CPU profiles using the Xcode command-line tools. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/native-app-performance/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-native-app-performance). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.
+
+### codex-debugging · Peter Steinberger
+
+Skill. Investigate Codex implementation/configuration problems in a local source checkout.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Investigate Codex implementation/configuration problems in a local source checkout. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/codex-debugging/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-codex-debugging). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.
+
 ## Review & understand
 
 Inspect the result, recover understanding and make acceptance decisions.
@@ -658,6 +892,42 @@ Tool. Publish Markdown demonstrations with executed commands, captured output an
 Skill. A command in Osmani’s published lifecycle collection. Namespaced forms may be needed where host commands collide; no execution or adoption claim.
 
 - **Addy Osmani · Published artifact** — The tools chapter records /review in the inspected README command table. [Primary evidence](https://github.com/addyosmani/agent-skills) · [Cached claim](../engineers/addy-osmani/tools.md). Publication/revision: Not established; mutable, unpinned repository. Practice: Not established; README inspected, not executed. Limit: No immutable revision captured. No installation or runtime effectiveness test. This does not establish daily adoption.
+
+### code-review-and-quality · Addy Osmani
+
+Skill. Review a change for correctness, maintainability, design, security and performance.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Review a change for correctness, maintainability, design, security and performance. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-review-and-quality/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-code-review-and-quality). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### code-simplification · Addy Osmani
+
+Skill. Reduce implementation complexity while checking that behaviour is preserved.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Reduce implementation complexity while checking that behaviour is preserved. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-simplification/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-code-simplification). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### doubt-driven-development · Addy Osmani
+
+Skill. Challenge important assumptions using a separate adversarial review context.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Challenge important assumptions using a separate adversarial review context. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/doubt-driven-development/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-doubt-driven-development). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### improve-codebase-architecture · Matt Pocock
+
+Skill. Identify opportunities for clearer module interfaces and explore a chosen refactor.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Identify opportunities for clearer module interfaces and explore a chosen refactor. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/improve-codebase-architecture/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-improve-codebase-architecture). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
+
+### swiftui-view-refactor · Peter Steinberger
+
+Skill. Restructure SwiftUI views and dependency/state handling consistently.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Restructure SwiftUI views and dependency/state handling consistently. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/swiftui-view-refactor/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-swiftui-view-refactor). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger.
+
+### github-deep-review · Peter Steinberger
+
+Skill. Investigate an issue or pull request using code and high-confidence supporting evidence.
+
+- **Peter Steinberger · Published artifact** — The published skill describes this capability: Investigate an issue or pull request using code and high-confidence supporting evidence. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/github-deep-review/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-github-deep-review). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.
 
 ## Integrate & release
 
@@ -745,6 +1015,24 @@ Skill. A command in Osmani’s published lifecycle collection. Namespaced forms 
 
 - **Addy Osmani · Published artifact** — The tools chapter records /ship in the inspected README command table. [Primary evidence](https://github.com/addyosmani/agent-skills) · [Cached claim](../engineers/addy-osmani/tools.md). Publication/revision: Not established; mutable, unpinned repository. Practice: Not established; README inspected, not executed. Limit: No immutable revision captured. No installation or runtime effectiveness test. This does not establish daily adoption.
 
+### ci-cd-and-automation · Addy Osmani
+
+Skill. Configure repeatable build and verification gates with explicit delivery boundaries.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Configure repeatable build and verification gates with explicit delivery boundaries. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/ci-cd-and-automation/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-ci-cd-and-automation). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### git-workflow-and-versioning · Addy Osmani
+
+Skill. Organise branches, commits and change history into understandable units.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Organise branches, commits and change history into understandable units. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/git-workflow-and-versioning/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-git-workflow-and-versioning). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### shipping-and-launch · Addy Osmani
+
+Skill. Prepare launch evidence, monitoring and rollback arrangements before a rollout.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Prepare launch evidence, monitoring and rollback arrangements before a rollout. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/shipping-and-launch/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-shipping-and-launch). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
 ## Observe & improve
 
 Use production feedback, failures, cost and quality to improve the loop.
@@ -797,6 +1085,18 @@ Process. Account for platform-building work and inspect where agents misundersta
 
 - **Block · Reported team use** — Count platform-building effort as well as migration execution. [Primary evidence](https://engineering.block.xyz/blog/from-base-web-to-fluent-ui-without-a-flag-day) · [Cached claim](../companies/block/research.md#c12). Publication/revision: 2026-04-06. Practice: Migration-engine work from 2024-12-02 through 2026-02-26; retrospective. Limit: The source reports substantial preparation and exceptions; code volume is not net value.
 - **Grafana Labs · Reported team use** — Evaluate actual agent failures instead of assuming help text is sufficient. [Primary evidence](https://medium.com/grafana-labs/clis-in-the-age-of-agents-how-we-designed-gcx-cdfca8954b30) · [Cached claim](../companies/grafana-labs/research.md#c12). Publication/revision: 2026-07-28. Practice: Internal offsite and CLI-design iteration before publication. Limit: Observed usability failures do not establish measured delivery or cost improvement.
+
+### observability-and-instrumentation · Addy Osmani
+
+Skill. Add useful logs, metrics and traces for diagnosing real application behaviour.
+
+- **Addy Osmani · Published artifact** — The published skill describes this capability: Add useful logs, metrics and traces for diagnosing real application behaviour. [Primary evidence](https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/observability-and-instrumentation/SKILL.md) · [Cached claim](../engineers/addy-osmani/skill-inventory.md#skill-addy-observability-and-instrumentation). Publication/revision: Repository revision 2026-10-13; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.
+
+### retro · Matt Pocock
+
+Skill. Review session evidence and propose improvements to the coding environment.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Review session evidence and propose improvements to the coding environment. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/retro/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-retro). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
 
 ## Harness & access
 
@@ -897,11 +1197,17 @@ Tool. Spotify runs Honk within its existing developer platform. Public Backstage
 
 - **Spotify · Reported company use** — Honk runs within the existing developer platform. [Primary evidence](https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint) · [Cached claim](../companies/spotify/research.md#c09). Publication/revision: 2026-06-03. Practice: Retrospective and usage reported by June publication. Limit: The internal system is not established as an open-source release.
 
+### wizard · Matt Pocock
+
+Skill. Prepare an interactive shell walkthrough for setup steps a human must perform.
+
+- **Matt Pocock · Published artifact** — The published skill describes this capability: Prepare an interactive shell walkthrough for setup steps a human must perform. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wizard/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-wizard). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill. Install the walkthrough capability only; do not launch credential capture, provision infrastructure or execute cutover steps during bootstrap.
+
 ## Coverage and gaps
 
 All 40 profiles were reviewed. Missing observations indicate a gap in this curated, coding-focused index, not that the subject does not use AI.
 
-- [Addy Osmani](../engineers/addy-osmani/index.md): 9 indexed evidence associations. Publishes Agent Skills; historical self-reports and orchestration surveys are not a complete current personal stack.
+- [Addy Osmani](../engineers/addy-osmani/index.md): 34 indexed evidence associations. Publishes Agent Skills; historical self-reports and orchestration surveys are not a complete current personal stack.
 - [Andrej Karpathy](../engineers/andrej-karpathy/index.md): 0 indexed evidence associations. March 2026 autoresearch artifact and February microgpt; no complete current private coding or release configuration.
 - [Armin Ronacher](../engineers/armin-ronacher/index.md): 4 indexed evidence associations. Dated public tool accounts; complete current private setup unknown.
 - [Birgitta Böckeler](../engineers/birgitta-bockeler/index.md): 4 indexed evidence associations. Dated reports cover several coding agents and static-analysis sensors; they do not establish a complete current personal stack.
@@ -916,8 +1222,8 @@ All 40 profiles were reviewed. Missing observations indicate a gap in this curat
 - [Jason Liu](../engineers/jason-liu/index.md): 6 indexed evidence associations. May/June 2026: Codex workstreams, explicit versioned memory, voice input and browser review; full October stack unknown.
 - [Kent Beck](../engineers/kent-beck/index.md): 1 indexed evidence associations. April 2026 sponsored Intent session on a Go radix tree. BPlusTree3 is background; its recent activity is not established here.
 - [Martin Fowler](../engineers/martin-fowler/index.md): 2 indexed evidence associations. May 2026 context-interview trial; current coding tools and release setup not established. Pi/gptel mentions are interest only.
-- [Matt Pocock](../engineers/matt-pocock/index.md): 8 indexed evidence associations. Pinned October 2026 composable skills; displayed article update dates do not establish original publication.
-- [Peter Steinberger](../engineers/peter-steinberger/index.md): 7 indexed evidence associations. October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.
+- [Matt Pocock](../engineers/matt-pocock/index.md): 24 indexed evidence associations. Pinned October 2026 composable skills; displayed article update dates do not establish original publication.
+- [Peter Steinberger](../engineers/peter-steinberger/index.md): 17 indexed evidence associations. October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.
 - [Robert C. Martin](../engineers/robert-c-martin/index.md): 5 indexed evidence associations. September 2026 interview: Grok TUI, prior Codex/Claude, above-code supervision; SwarmForge is a separately dated artifact.
 - [Simon Willison](../engineers/simon-willison/index.md): 7 indexed evidence associations. Documented examples include Claude Code, Codex, Rodney, Showboat and Git; no complete private setup established.
 - [Steve Yegge](../engineers/steve-yegge/index.md): 3 indexed evidence associations. Beads and Gas Town are public ecosystem tools; April Gas City endorsement and later private Wheelhouse account have distinct provenance.

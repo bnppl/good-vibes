@@ -167,6 +167,17 @@ for stage,command in [('define','/spec'),('plan','/plan'),('build','/build'),('v
 artifact('context','tool','Beads','Persistent work graph and project context, created by Yegge and now maintained by gastownhall. Public artifact, not proof of a current private deployment.','engineers/steve-yegge','https://github.com/gastownhall/beads','s04','The inspected tools chapter records bd ready/show/update/close/prime and the public work graph.')
 items['context|Beads']['observations'][0]['detail']='/engineers/steve-yegge/tools.html'
 items['context|Beads']['observations'][0]['qualification']='Living README inspected, not executed. The source register records a README history commit; the link here is mutable. No claim of current private deployment.'
+# Individually inspected public skill files. These are artifacts, not inferred personal adoption.
+skill_inventory=json.loads((ROOT/'docs/bootstrap/skill_inventory.json').read_text())
+for skill in skill_inventory['skills']:
+ eid=skill['entity'];url='https://github.com/'+skill['repository']+'/blob/'+skill['revision']+'/'+skill['path']
+ detail='/'+eid+'/skill-inventory.html#'+skill['id']
+ metadata={k:v for k,v in skill.items() if k not in ['id','stage','name','usage','entity']}
+ items['individual-skill|'+skill['id']]={'id':skill['id'],'stage':skill['stage'],'type':'skill','name':skill['name'],'usage':skill['usage'],'skill':metadata,'observations':[{'entity':eid,'claim':'The published skill describes this capability: '+skill['usage'],'kind':'Published artifact','published':'Repository revision '+skill['revisionDate']+'; individual publication date not established','practice':'Instruction artifact, not an observed personal session','checked':skill_inventory['reviewed'],'qualification':'Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. '+' '.join(skill['notes']),'source':url,'detail':detail,'register':'/'+eid+'/skill-inventory.html#sources','format':'Pinned SKILL.md instruction artifact'}]}
+# Existing precise skill entries gain install metadata without changing their IDs.
+for item_id,slug in [('verify-2','tdd'),('review-1','code-review')]:
+ item=next(i for i in items.values() if i['id']==item_id)
+ item['skill']={'repository':'mattpocock/skills','revision':'5beb35b040e3de97e54fa9e386d7e42d15c295c2','path':'skills/engineering/'+slug+'/SKILL.md','skillName':slug,'library':'Skills for Real Engineers','manualOnly':False,'companions':['skill-matt-setup-matt-pocock-skills'],'requirements':[],'notes':['Use one installation strategy per host; do not duplicate plugin and editable skill copies.'],'testFirst':slug=='tdd'}
 result={'schema':1,'title':'Agentic engineering pipeline atlas','reviewed':'2026-10-27','cacheDate':max(o['checked'] for i in items.values() for o in i['observations']),'since':'2025-10-01','stages':[{'id':i,'name':n,'description':d} for i,n,d in STAGES], 'types':['tool','skill','process','harness','environment'],'entities':[{k:v for k,v in p.items() if k!='dimensions'}|{'id':eid,'observations':sum(o['entity']==eid for x in items.values() for o in x['observations'])} for eid,p in profiles.items()], 'items':list(items.values())}
 (ROOT/'assets/pipeline-catalog.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 # A complete readable, searchable non-JavaScript companion.

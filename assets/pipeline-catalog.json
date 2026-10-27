@@ -65,7 +65,7 @@
       "path": "engineers/addy-osmani",
       "summary": "Publishes Agent Skills; historical self-reports and orchestration surveys are not a complete current personal stack.",
       "id": "engineers/addy-osmani",
-      "observations": 9
+      "observations": 34
     },
     {
       "name": "Andrej Karpathy",
@@ -185,7 +185,7 @@
       "path": "engineers/matt-pocock",
       "summary": "Pinned October 2026 composable skills; displayed article update dates do not establish original publication.",
       "id": "engineers/matt-pocock",
-      "observations": 8
+      "observations": 24
     },
     {
       "name": "Peter Steinberger",
@@ -193,7 +193,7 @@
       "path": "engineers/peter-steinberger",
       "summary": "October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.",
       "id": "engineers/peter-steinberger",
-      "observations": 7
+      "observations": 17
     },
     {
       "name": "Robert C. Martin",
@@ -2035,7 +2035,23 @@
           "register": "/engineers/matt-pocock/sources.html#s03",
           "format": "Repository artifact"
         }
-      ]
+      ],
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "path": "skills/engineering/tdd/SKILL.md",
+        "skillName": "tdd",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [],
+        "notes": [
+          "Use one installation strategy per host; do not duplicate plugin and editable skill copies."
+        ],
+        "testFirst": true
+      }
     },
     {
       "id": "verify-3",
@@ -2395,7 +2411,23 @@
           "register": "/engineers/matt-pocock/sources.html#s04",
           "format": "Repository artifact"
         }
-      ]
+      ],
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "path": "skills/engineering/code-review/SKILL.md",
+        "skillName": "code-review",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [],
+        "notes": [
+          "Use one installation strategy per host; do not duplicate plugin and editable skill copies."
+        ],
+        "testFirst": false
+      }
     },
     {
       "id": "review-2",
@@ -4135,6 +4167,1969 @@
           "detail": "/engineers/steve-yegge/tools.html",
           "register": "/engineers/steve-yegge/sources.html#s04",
           "format": "Official README"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-api-and-interface-design",
+      "stage": "define",
+      "type": "skill",
+      "name": "api-and-interface-design · Addy Osmani",
+      "usage": "Design contracts and boundaries that callers can understand and use consistently.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/api-and-interface-design/SKILL.md",
+        "skillName": "api-and-interface-design",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Design contracts and boundaries that callers can understand and use consistently.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/api-and-interface-design/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-api-and-interface-design",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-browser-testing-with-devtools",
+      "stage": "verify",
+      "type": "skill",
+      "name": "browser-testing-with-devtools · Addy Osmani",
+      "usage": "Inspect a running browser through DevTools MCP and capture behavioural evidence.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/browser-testing-with-devtools/SKILL.md",
+        "skillName": "browser-testing-with-devtools",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A compatible browser surface and a configured Chrome DevTools MCP server."
+        ],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Inspect a running browser through DevTools MCP and capture behavioural evidence.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/browser-testing-with-devtools/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-browser-testing-with-devtools",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-ci-cd-and-automation",
+      "stage": "ship",
+      "type": "skill",
+      "name": "ci-cd-and-automation · Addy Osmani",
+      "usage": "Configure repeatable build and verification gates with explicit delivery boundaries.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/ci-cd-and-automation/SKILL.md",
+        "skillName": "ci-cd-and-automation",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Configure repeatable build and verification gates with explicit delivery boundaries.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/ci-cd-and-automation/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-ci-cd-and-automation",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-code-review-and-quality",
+      "stage": "review",
+      "type": "skill",
+      "name": "code-review-and-quality · Addy Osmani",
+      "usage": "Review a change for correctness, maintainability, design, security and performance.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/code-review-and-quality/SKILL.md",
+        "skillName": "code-review-and-quality",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Review a change for correctness, maintainability, design, security and performance.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-review-and-quality/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-code-review-and-quality",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-code-simplification",
+      "stage": "review",
+      "type": "skill",
+      "name": "code-simplification · Addy Osmani",
+      "usage": "Reduce implementation complexity while checking that behaviour is preserved.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/code-simplification/SKILL.md",
+        "skillName": "code-simplification",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Reduce implementation complexity while checking that behaviour is preserved.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/code-simplification/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-code-simplification",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-constraint-driven-development",
+      "stage": "define",
+      "type": "skill",
+      "name": "constraint-driven-development · Addy Osmani",
+      "usage": "Agree a written quality bar and detect changes that weaken it.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/constraint-driven-development/SKILL.md",
+        "skillName": "constraint-driven-development",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Agree a written quality bar and detect changes that weaken it.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/constraint-driven-development/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-constraint-driven-development",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-context-engineering",
+      "stage": "context",
+      "type": "skill",
+      "name": "context-engineering · Addy Osmani",
+      "usage": "Choose relevant project guidance and context for the next agent task.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/context-engineering/SKILL.md",
+        "skillName": "context-engineering",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Choose relevant project guidance and context for the next agent task.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/context-engineering/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-context-engineering",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-debugging-and-error-recovery",
+      "stage": "verify",
+      "type": "skill",
+      "name": "debugging-and-error-recovery · Addy Osmani",
+      "usage": "Investigate failures systematically before choosing a repair.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/debugging-and-error-recovery/SKILL.md",
+        "skillName": "debugging-and-error-recovery",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Investigate failures systematically before choosing a repair.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/debugging-and-error-recovery/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-debugging-and-error-recovery",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-deprecation-and-migration",
+      "stage": "build",
+      "type": "skill",
+      "name": "deprecation-and-migration · Addy Osmani",
+      "usage": "Plan replacement or removal of old interfaces and transition users deliberately.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/deprecation-and-migration/SKILL.md",
+        "skillName": "deprecation-and-migration",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Plan replacement or removal of old interfaces and transition users deliberately.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/deprecation-and-migration/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-deprecation-and-migration",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-documentation-and-adrs",
+      "stage": "context",
+      "type": "skill",
+      "name": "documentation-and-adrs · Addy Osmani",
+      "usage": "Record consequential decisions, rationale and future-facing project documentation.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/documentation-and-adrs/SKILL.md",
+        "skillName": "documentation-and-adrs",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Record consequential decisions, rationale and future-facing project documentation.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/documentation-and-adrs/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-documentation-and-adrs",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-doubt-driven-development",
+      "stage": "review",
+      "type": "skill",
+      "name": "doubt-driven-development · Addy Osmani",
+      "usage": "Challenge important assumptions using a separate adversarial review context.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/doubt-driven-development/SKILL.md",
+        "skillName": "doubt-driven-development",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "The host must support the required agent/reviewer delegation, or the capability must be explicitly adapted/deferred."
+        ],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Challenge important assumptions using a separate adversarial review context.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/doubt-driven-development/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-doubt-driven-development",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-frontend-ui-engineering",
+      "stage": "build",
+      "type": "skill",
+      "name": "frontend-ui-engineering · Addy Osmani",
+      "usage": "Build accessible, responsive interfaces grounded in the project design system.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/frontend-ui-engineering/SKILL.md",
+        "skillName": "frontend-ui-engineering",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A user-interface project and a concrete design brief."
+        ],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Build accessible, responsive interfaces grounded in the project design system.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/frontend-ui-engineering/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-frontend-ui-engineering",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-git-workflow-and-versioning",
+      "stage": "ship",
+      "type": "skill",
+      "name": "git-workflow-and-versioning · Addy Osmani",
+      "usage": "Organise branches, commits and change history into understandable units.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/git-workflow-and-versioning/SKILL.md",
+        "skillName": "git-workflow-and-versioning",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Organise branches, commits and change history into understandable units.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/git-workflow-and-versioning/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-git-workflow-and-versioning",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-idea-refine",
+      "stage": "define",
+      "type": "skill",
+      "name": "idea-refine · Addy Osmani",
+      "usage": "Explore alternatives and narrow an initial idea into a concrete direction.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/idea-refine/SKILL.md",
+        "skillName": "idea-refine",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Explore alternatives and narrow an initial idea into a concrete direction.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/idea-refine/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-idea-refine",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-incremental-implementation",
+      "stage": "build",
+      "type": "skill",
+      "name": "incremental-implementation · Addy Osmani",
+      "usage": "Deliver one verifiable vertical slice before expanding the change.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/incremental-implementation/SKILL.md",
+        "skillName": "incremental-implementation",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Deliver one verifiable vertical slice before expanding the change.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/incremental-implementation/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-incremental-implementation",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-interview-me",
+      "stage": "define",
+      "type": "skill",
+      "name": "interview-me · Addy Osmani",
+      "usage": "Elicit the underlying goal through focused questions instead of filling in missing intent.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/interview-me/SKILL.md",
+        "skillName": "interview-me",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Elicit the underlying goal through focused questions instead of filling in missing intent.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/interview-me/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-interview-me",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-observability-and-instrumentation",
+      "stage": "learn",
+      "type": "skill",
+      "name": "observability-and-instrumentation · Addy Osmani",
+      "usage": "Add useful logs, metrics and traces for diagnosing real application behaviour.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/observability-and-instrumentation/SKILL.md",
+        "skillName": "observability-and-instrumentation",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Add useful logs, metrics and traces for diagnosing real application behaviour.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/observability-and-instrumentation/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-observability-and-instrumentation",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-performance-optimization",
+      "stage": "verify",
+      "type": "skill",
+      "name": "performance-optimization · Addy Osmani",
+      "usage": "Measure a bottleneck, improve it and compare the result against the baseline.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/performance-optimization/SKILL.md",
+        "skillName": "performance-optimization",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Measure a bottleneck, improve it and compare the result against the baseline.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/performance-optimization/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-performance-optimization",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-planning-and-task-breakdown",
+      "stage": "plan",
+      "type": "skill",
+      "name": "planning-and-task-breakdown · Addy Osmani",
+      "usage": "Turn a specification into ordered tasks with observable completion criteria.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/planning-and-task-breakdown/SKILL.md",
+        "skillName": "planning-and-task-breakdown",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Turn a specification into ordered tasks with observable completion criteria.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/planning-and-task-breakdown/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-planning-and-task-breakdown",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-security-and-hardening",
+      "stage": "verify",
+      "type": "skill",
+      "name": "security-and-hardening · Addy Osmani",
+      "usage": "Inspect application inputs, dependencies and trust boundaries for concrete weaknesses.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/security-and-hardening/SKILL.md",
+        "skillName": "security-and-hardening",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Inspect application inputs, dependencies and trust boundaries for concrete weaknesses.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/security-and-hardening/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-security-and-hardening",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-shipping-and-launch",
+      "stage": "ship",
+      "type": "skill",
+      "name": "shipping-and-launch · Addy Osmani",
+      "usage": "Prepare launch evidence, monitoring and rollback arrangements before a rollout.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/shipping-and-launch/SKILL.md",
+        "skillName": "shipping-and-launch",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Prepare launch evidence, monitoring and rollback arrangements before a rollout.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/shipping-and-launch/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-shipping-and-launch",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-source-driven-development",
+      "stage": "context",
+      "type": "skill",
+      "name": "source-driven-development · Addy Osmani",
+      "usage": "Check framework and API decisions against authoritative current documentation.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/source-driven-development/SKILL.md",
+        "skillName": "source-driven-development",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Check framework and API decisions against authoritative current documentation.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/source-driven-development/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-source-driven-development",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-spec-driven-development",
+      "stage": "define",
+      "type": "skill",
+      "name": "spec-driven-development · Addy Osmani",
+      "usage": "Write the intended capabilities and scope before implementing significant work.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/spec-driven-development/SKILL.md",
+        "skillName": "spec-driven-development",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Write the intended capabilities and scope before implementing significant work.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/spec-driven-development/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-spec-driven-development",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-test-driven-development",
+      "stage": "verify",
+      "type": "skill",
+      "name": "test-driven-development · Addy Osmani",
+      "usage": "Exercise a failing behavioural test before implementation, then maintain the verification loop.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/test-driven-development/SKILL.md",
+        "skillName": "test-driven-development",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": true
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Exercise a failing behavioural test before implementation, then maintain the verification loop.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/test-driven-development/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-test-driven-development",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-addy-using-agent-skills",
+      "stage": "context",
+      "type": "skill",
+      "name": "using-agent-skills · Addy Osmani",
+      "usage": "Find the relevant skill for a task and apply its intended workflow.",
+      "skill": {
+        "repository": "addyosmani/agent-skills",
+        "revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+        "revisionDate": "2026-10-13",
+        "path": "skills/using-agent-skills/SKILL.md",
+        "skillName": "using-agent-skills",
+        "library": "Agent Skills",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/addy-osmani",
+          "claim": "The published skill describes this capability: Find the relevant skill for a task and apply its intended workflow.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-13; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills.",
+          "source": "https://github.com/addyosmani/agent-skills/blob/aeac41d4d005999432bb7312f7ff06383a91d59d/skills/using-agent-skills/SKILL.md",
+          "detail": "/engineers/addy-osmani/skill-inventory.html#skill-addy-using-agent-skills",
+          "register": "/engineers/addy-osmani/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-research",
+      "stage": "define",
+      "type": "skill",
+      "name": "research · Matt Pocock",
+      "usage": "Investigate a question using primary sources and preserve a cited project note.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/research/SKILL.md",
+        "skillName": "research",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [
+          "The host must support the required agent/reviewer delegation, or the capability must be explicitly adapted/deferred."
+        ],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Investigate a question using primary sources and preserve a cited project note.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/research/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-research",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-diagnosing-bugs",
+      "stage": "verify",
+      "type": "skill",
+      "name": "diagnosing-bugs · Matt Pocock",
+      "usage": "Gather evidence, isolate a hard failure and test a diagnosis before repairing it.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+        "skillName": "diagnosing-bugs",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Gather evidence, isolate a hard failure and test a diagnosis before repairing it.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/diagnosing-bugs/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-diagnosing-bugs",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-domain-modeling",
+      "stage": "define",
+      "type": "skill",
+      "name": "domain-modeling · Matt Pocock",
+      "usage": "Refine shared domain terminology and record it in a glossary and decisions.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/domain-modeling/SKILL.md",
+        "skillName": "domain-modeling",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Refine shared domain terminology and record it in a glossary and decisions.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/domain-modeling/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-domain-modeling",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-improve-codebase-architecture",
+      "stage": "review",
+      "type": "skill",
+      "name": "improve-codebase-architecture · Matt Pocock",
+      "usage": "Identify opportunities for clearer module interfaces and explore a chosen refactor.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/improve-codebase-architecture/SKILL.md",
+        "skillName": "improve-codebase-architecture",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills",
+          "skill-matt-codebase-design",
+          "skill-matt-grilling",
+          "skill-matt-domain-modeling"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Identify opportunities for clearer module interfaces and explore a chosen refactor.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/improve-codebase-architecture/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-improve-codebase-architecture",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-prototype",
+      "stage": "build",
+      "type": "skill",
+      "name": "prototype · Matt Pocock",
+      "usage": "Build a disposable experiment to answer a specific design or interaction question.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/prototype/SKILL.md",
+        "skillName": "prototype",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Build a disposable experiment to answer a specific design or interaction question.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/prototype/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-prototype",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-retro",
+      "stage": "learn",
+      "type": "skill",
+      "name": "retro · Matt Pocock",
+      "usage": "Review session evidence and propose improvements to the coding environment.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/retro/SKILL.md",
+        "skillName": "retro",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills",
+          "skill-matt-writing-for-agents"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Review session evidence and propose improvements to the coding environment.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/retro/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-retro",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-triage",
+      "stage": "plan",
+      "type": "skill",
+      "name": "triage · Matt Pocock",
+      "usage": "Qualify issues or external contributions and prepare scoped implementation briefs.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/triage/SKILL.md",
+        "skillName": "triage",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [
+          "A configured tracker/repository context; external writes require separate task authority."
+        ],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Qualify issues or external contributions and prepare scoped implementation briefs.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/triage/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-triage",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-wayfinder",
+      "stage": "plan",
+      "type": "skill",
+      "name": "wayfinder · Matt Pocock",
+      "usage": "Explore a large uncertain goal through tracked decisions, research and prototypes.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/wayfinder/SKILL.md",
+        "skillName": "wayfinder",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills",
+          "skill-matt-grilling",
+          "skill-matt-domain-modeling",
+          "skill-matt-research",
+          "skill-matt-prototype"
+        ],
+        "requirements": [
+          "The host must support the required agent/reviewer delegation, or the capability must be explicitly adapted/deferred.",
+          "A configured tracker/repository context; external writes require separate task authority."
+        ],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Explore a large uncertain goal through tracked decisions, research and prototypes.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wayfinder/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-wayfinder",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-wizard",
+      "stage": "platform",
+      "type": "skill",
+      "name": "wizard · Matt Pocock",
+      "usage": "Prepare an interactive shell walkthrough for setup steps a human must perform.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/wizard/SKILL.md",
+        "skillName": "wizard",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "Install the walkthrough capability only; do not launch credential capture, provision infrastructure or execute cutover steps during bootstrap."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Prepare an interactive shell walkthrough for setup steps a human must perform.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill. Install the walkthrough capability only; do not launch credential capture, provision infrastructure or execute cutover steps during bootstrap.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/wizard/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-wizard",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-to-spec",
+      "stage": "define",
+      "type": "skill",
+      "name": "to-spec · Matt Pocock",
+      "usage": "Synthesize an existing conversation into a specification for the configured tracker.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/to-spec/SKILL.md",
+        "skillName": "to-spec",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [
+          "A configured tracker/repository context; external writes require separate task authority."
+        ],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Synthesize an existing conversation into a specification for the configured tracker.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/to-spec/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-to-spec",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-grill-with-docs",
+      "stage": "define",
+      "type": "skill",
+      "name": "grill-with-docs · Matt Pocock",
+      "usage": "Combine design questioning with contemporaneous domain and decision documentation.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/grill-with-docs/SKILL.md",
+        "skillName": "grill-with-docs",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills",
+          "skill-matt-grilling",
+          "skill-matt-domain-modeling"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Combine design questioning with contemporaneous domain and decision documentation.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/grill-with-docs/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-grill-with-docs",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-implement",
+      "stage": "build",
+      "type": "skill",
+      "name": "implement · Matt Pocock",
+      "usage": "Implement an agreed specification or tickets with focused checks and a review.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/implement/SKILL.md",
+        "skillName": "implement",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills",
+          "review-1"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Implement an agreed specification or tickets with focused checks and a review.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/implement/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-implement",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-create-cli",
+      "stage": "define",
+      "type": "skill",
+      "name": "create-cli · Peter Steinberger",
+      "usage": "Specify command-line arguments, help, outputs, configuration and failure behaviour.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/create-cli/SKILL.md",
+        "skillName": "create-cli",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Specify command-line arguments, help, outputs, configuration and failure behaviour.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/create-cli/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-create-cli",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-frontend-design",
+      "stage": "build",
+      "type": "skill",
+      "name": "frontend-design · Peter Steinberger",
+      "usage": "Implement a coherent visual direction for a working user interface.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/frontend-design/SKILL.md",
+        "skillName": "frontend-design",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A user-interface project and a concrete design brief."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "The skill has a per-directory licence notice. Inspect and preserve LICENSE.txt and any upstream credit."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Implement a coherent visual direction for a working user interface.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The skill has a per-directory licence notice. Inspect and preserve LICENSE.txt and any upstream credit.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/frontend-design/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-frontend-design",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-project-structure",
+      "stage": "context",
+      "type": "skill",
+      "name": "project-structure · Peter Steinberger",
+      "usage": "Produce a compact symbol map of a TypeScript or Swift repository.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/project-structure/SKILL.md",
+        "skillName": "project-structure",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A TypeScript or Swift source tree; include the adjacent map helper and its runtime dependencies."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Produce a compact symbol map of a TypeScript or Swift repository.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/project-structure/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-project-structure",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-swift-concurrency-expert",
+      "stage": "verify",
+      "type": "skill",
+      "name": "swift-concurrency-expert · Peter Steinberger",
+      "usage": "Diagnose Swift concurrency errors and review isolation and Sendable boundaries.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/swift-concurrency-expert/SKILL.md",
+        "skillName": "swift-concurrency-expert",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling.",
+          "Check compiler compatibility with the source’s Swift 6.2+ scope."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Diagnose Swift concurrency errors and review isolation and Sendable boundaries.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/swift-concurrency-expert/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-swift-concurrency-expert",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-swiftui-performance-audit",
+      "stage": "verify",
+      "type": "skill",
+      "name": "swiftui-performance-audit · Peter Steinberger",
+      "usage": "Investigate SwiftUI rendering and resource use with code review and profiling.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/swiftui-performance-audit/SKILL.md",
+        "skillName": "swiftui-performance-audit",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Investigate SwiftUI rendering and resource use with code review and profiling.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/swiftui-performance-audit/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-swiftui-performance-audit",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-swiftui-view-refactor",
+      "stage": "review",
+      "type": "skill",
+      "name": "swiftui-view-refactor · Peter Steinberger",
+      "usage": "Restructure SwiftUI views and dependency/state handling consistently.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/swiftui-view-refactor/SKILL.md",
+        "skillName": "swiftui-view-refactor",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Restructure SwiftUI views and dependency/state handling consistently.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step. The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/swiftui-view-refactor/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-swiftui-view-refactor",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-native-app-performance",
+      "stage": "verify",
+      "type": "skill",
+      "name": "native-app-performance · Peter Steinberger",
+      "usage": "Capture and analyse native-app CPU profiles using the Xcode command-line tools.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/native-app-performance/SKILL.md",
+        "skillName": "native-app-performance",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Capture and analyse native-app CPU profiles using the Xcode command-line tools.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/native-app-performance/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-native-app-performance",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-github-deep-review",
+      "stage": "review",
+      "type": "skill",
+      "name": "github-deep-review · Peter Steinberger",
+      "usage": "Investigate an issue or pull request using code and high-confidence supporting evidence.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/github-deep-review/SKILL.md",
+        "skillName": "github-deep-review",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A configured tracker/repository context; external writes require separate task authority."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Investigate an issue or pull request using code and high-confidence supporting evidence.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/github-deep-review/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-github-deep-review",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-github-project-triage",
+      "stage": "plan",
+      "type": "skill",
+      "name": "github-project-triage · Peter Steinberger",
+      "usage": "Review repository queues for concrete blockers, evidence and next actions.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/github-project-triage/SKILL.md",
+        "skillName": "github-project-triage",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "A configured tracker/repository context; external writes require separate task authority."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Review repository queues for concrete blockers, evidence and next actions.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/github-project-triage/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-github-project-triage",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-peter-codex-debugging",
+      "stage": "verify",
+      "type": "skill",
+      "name": "codex-debugging · Peter Steinberger",
+      "usage": "Investigate Codex implementation/configuration problems in a local source checkout.",
+      "skill": {
+        "repository": "steipete/agent-scripts",
+        "revision": "1159adf26ad007df38b87debb107d3946008d38b",
+        "revisionDate": "2026-10-20",
+        "path": "skills/codex-debugging/SKILL.md",
+        "skillName": "codex-debugging",
+        "library": "Agent Scripts",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [
+          "This targets Codex itself, not arbitrary app bugs; it expects an accessible local Codex source checkout."
+        ],
+        "notes": [
+          "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "The published skill describes this capability: Investigate Codex implementation/configuration problems in a local source checkout.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-20; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/codex-debugging/SKILL.md",
+          "detail": "/engineers/peter-steinberger/skill-inventory.html#skill-peter-codex-debugging",
+          "register": "/engineers/peter-steinberger/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-codebase-design",
+      "stage": "define",
+      "type": "skill",
+      "name": "codebase-design · Matt Pocock",
+      "usage": "Use a shared vocabulary to reason about module depth, interfaces and test seams.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/codebase-design/SKILL.md",
+        "skillName": "codebase-design",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [
+          "skill-matt-setup-matt-pocock-skills"
+        ],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Use a shared vocabulary to reason about module depth, interfaces and test seams.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/codebase-design/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-codebase-design",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-writing-for-agents",
+      "stage": "context",
+      "type": "skill",
+      "name": "writing-for-agents · Matt Pocock",
+      "usage": "Write concise, navigable instructions that another agent can follow reliably.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/productivity/writing-for-agents/SKILL.md",
+        "skillName": "writing-for-agents",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Write concise, navigable instructions that another agent can follow reliably.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/writing-for-agents/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-writing-for-agents",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-grilling",
+      "stage": "define",
+      "type": "skill",
+      "name": "grilling · Matt Pocock",
+      "usage": "Resolve a plan through successive rounds of questions about dependent decisions.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/productivity/grilling/SKILL.md",
+        "skillName": "grilling",
+        "library": "Skills for Real Engineers",
+        "manualOnly": false,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Resolve a plan through successive rounds of questions about dependent decisions.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/productivity/grilling/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-grilling",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "skill-matt-setup-matt-pocock-skills",
+      "stage": "context",
+      "type": "skill",
+      "name": "setup-matt-pocock-skills · Matt Pocock",
+      "usage": "Configure repository tracker conventions, domain documentation and skill guidance.",
+      "skill": {
+        "repository": "mattpocock/skills",
+        "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+        "revisionDate": "2026-10-19",
+        "path": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+        "skillName": "setup-matt-pocock-skills",
+        "library": "Skills for Real Engineers",
+        "manualOnly": true,
+        "companions": [],
+        "requirements": [],
+        "notes": [
+          "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+        ],
+        "testFirst": false
+      },
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The published skill describes this capability: Configure repository tracker conventions, domain documentation and skill guidance.",
+          "kind": "Published artifact",
+          "published": "Repository revision 2026-10-19; individual publication date not established",
+          "practice": "Instruction artifact, not an observed personal session",
+          "checked": "2026-10-27",
+          "qualification": "Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/setup-matt-pocock-skills/SKILL.md",
+          "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-setup-matt-pocock-skills",
+          "register": "/engineers/matt-pocock/skill-inventory.html#sources",
+          "format": "Pinned SKILL.md instruction artifact"
         }
       ]
     }

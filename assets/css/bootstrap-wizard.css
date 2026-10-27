@@ -4,3 +4,4 @@
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 .wizard-footer{position:sticky;bottom:0;background:var(--paper);z-index:5;border-top:1px solid var(--line);margin-top:18px;padding:12px 0}.wizard-panel h2:focus{outline:none}
 .wizard-footer{position:static}.wizard-content.is-curating .wizard-footer{position:sticky;bottom:0}
+.skill-origin{font-size:.7rem;color:var(--muted);overflow-wrap:anywhere;margin:8px 0}.curate-actions #browse-skills{background:var(--accent);font-weight:650}.issue-list>button{margin-block:8px}

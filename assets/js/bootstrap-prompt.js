@@ -10,7 +10,7 @@
     const picked=catalog.items.filter(i=>state.selected.includes(i.id));const errors=[],notes=[];
     if(!state.project.name.trim()||!state.project.goal.trim())errors.push('Add a project name and goal in step 1.');
     if(!picked.length)errors.push('Choose at least one tool, skill or process in step 2.');
-    const before=picked.filter(i=>first.has(i.id)),after=picked.filter(i=>i.id==='verify-4');
+    const before=picked.filter(i=>first.has(i.id)||i.skill?.testFirst),after=picked.filter(i=>i.id==='verify-4');
     if(before.length&&after.length)errors.push('Test-first and tests-after practices conflict. Remove one approach from the selection.');
     if(state.rules.timing==='before'&&after.length)errors.push('Your test-first rule conflicts with the selected tests-after practice.');
     if(state.rules.timing==='after'&&before.length)errors.push('Your tests-after rule conflicts with a selected test-first skill or factory instruction.');
@@ -19,8 +19,9 @@
     if(state.rules.ci==='none'&&picked.some(i=>i.stage==='ship'||/CI/.test(i.name)))notes.push('No CI provider is selected. CI-dependent work will be documented for later activation; local checks can still run.');
     if(state.project.type!=='web'&&picked.some(i=>['verify-7','verify-17','build-21'].includes(i.id)))notes.push('Browser / web tooling is selected for another project type. The agent must check whether the project actually has a compatible web surface.');
     if(!state.rules.review&&picked.some(i=>['review-5','ship-7'].includes(i.id)))notes.push('A selected process explicitly requires human acceptance. That requirement remains in the prompt even with the general review checkbox off.');
+    const needed=new Set();const visit=(id)=>{if(needed.has(id))return;needed.add(id);const item=catalog.items.find(i=>i.id===id);for(const companion of item?.skill?.companions||[])visit(companion);};picked.forEach(i=>visit(i.id));const missing=[...needed].filter(id=>!state.selected.includes(id));if(missing.length)errors.push('Selected AI skills require companion capabilities. Add them before exporting so their installation and scope remain reviewable.');
     const timing=state.rules.timing==='selected'?(before.length?'before':after.length?'after':'unspecified'):state.rules.timing;
-    return {errors,notes,picked,timing};
+    return {errors,notes,picked,timing,missing};
   }
   function generate(state,catalog,recipes,origin){
     const a=analyze(state,catalog,recipes),{project:p,rules:r}=state;const entities=new Map(catalog.entities.map(e=>[e.id,e]));
@@ -29,6 +30,18 @@
     lines.push('- '+timings[a.timing],'- Failed repair budget: '+md(r.retries)+' attempts per failing operation, then preserve the evidence, report the blocker and hand back. Do not repeat an unchanged failing command indefinitely.','- Execution environment: '+({local:'use project-local tooling and a reproducible documented developer setup.',container:'prepare a project development container using the project’s actual stack. Validate a local build inside it; do not equate a container with complete isolation.',worktree:'use separate branches/worktrees for genuinely independent concurrent tasks. Define file ownership and run integrated checks before handoff.'}[r.isolation]),'- CI: '+({none:'local setup only. Document CI-dependent selections as deferred activation work. Do not create a provider configuration or silently claim CI has run.',github:'configure a minimal GitHub Actions workflow from the actual verified local commands. An authored workflow is not a successful hosted CI run; distinguish both in the handoff.',gitlab:'configure minimal GitLab CI from actual verified local commands. Distinguish configuration authored locally from a hosted pipeline actually executed.',existing:'inspect the existing CI provider and adapt its current workflow; do not replace it with a different provider. If none exists, record CI activation as blocked pending a provider choice rather than guessing.'}[r.ci]),'- Acceptance: '+((r.review||a.picked.some(i=>['review-5','ship-7'].includes(i.id)))?'require human acceptance before merge or release. Agent reviews supplement the acceptance decision.':'prepare a self-review packet and report verified results. Merge and deployment remain outside this bootstrap task.'),'');
     if(a.errors.length)lines.push('## Unresolved selection conflicts','',...a.errors.map(x=>'- '+x),'','Resolve these before executing the conflicting setup.','');
     if(r.notes.trim())lines.push('### Additional user instructions','',fence(r.notes),'');
+    const selectedSkills=a.picked.filter(i=>i.skill);
+    if(selectedSkills.length){
+      lines.push('## AI skill installation plan','','Target host: '+md(r.skillHost||'auto')+'. If auto, infer only from unambiguous selected coding tools; otherwise ask which host to configure before installation. Do not assume every host supports plugins, nested skill discovery, reviewer delegation or manual-only triggers.','',
+      'Choose one installation strategy per repository and host. Avoid installing a whole plugin and editable copies of the same skills. Install only selected skills and the reviewed companion capabilities listed below; preserve folder assets, scripts, reference files, licence notices and upstream credit. Resolve required repository-level references locally. Do not run a maintainer’s global sync, account-changing workflow or release operation as a smoke test.','');
+      for(const repository of [...new Set(selectedSkills.map(i=>i.skill.repository))]){
+        const members=selectedSkills.filter(i=>i.skill.repository===repository),sample=members[0].skill;
+        lines.push('### '+md(repository),'','[Repository setup reference](https://github.com/'+repository+'/blob/'+sample.revision+'/README.md)','');
+        for(const item of members){const s=item.skill;lines.push('- **'+md(s.skillName)+'** — source path: `'+s.path+'`; inspected revision: `'+s.revision+'`; '+(s.manualOnly?'manual-only invocation.':'preserve documented discovery/trigger behaviour.')+' [Exact skill](https://github.com/'+repository+'/blob/'+s.revision+'/'+s.path+').');if(s.companions?.length)lines.push('  - Companion selection IDs: '+s.companions.map(x=>'`'+x+'`').join(', ')+'.');}
+        lines.push('');
+      }
+      lines.push('Verify installation by checking host discovery, required companions and relative reference resolution. Record installed revisions and locations in docs/bootstrap.md. If unsupported, record the skill as deferred; do not claim an installation succeeded.','');
+    }
     lines.push('## Selected capabilities and setup instructions','',`Catalogue snapshot: ${md(catalog.reviewed)}. Recipe review: ${md(recipes.reviewed)}. ${a.picked.length} selected entries. Attribution counts are not independent studies. These setup instructions are project adaptations.`, '');
     if(!a.picked.length)lines.push('No capabilities selected yet.','');
     a.picked.forEach(item=>{const recipe=recipes.items[item.id]||{mode:'research',instructions:['Inspect the primary source and verify a public setup path. Otherwise record this item as deferred; do not invent an installation.']};const stage=catalog.stages.find(s=>s.id===item.stage)?.name||item.stage;

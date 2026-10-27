@@ -367,7 +367,11 @@
     "verify-2": {
       "mode": "artifact",
       "instructions": [
-        "Inspect the selected pinned skill and current installation/host instructions before adopting it. Apply red-green at human-agreed public seams; keep its review/refactoring boundary explicit."
+        "Inspect the exact skill file skills/engineering/tdd/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Use one installation strategy per host; do not duplicate plugin and editable skill copies."
       ]
     },
     "verify-3": {
@@ -458,10 +462,13 @@
       ]
     },
     "review-1": {
-      "mode": "research",
+      "mode": "artifact",
       "instructions": [
-        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
-        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+        "Inspect the exact skill file skills/engineering/code-review/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Use one installation strategy per host; do not duplicate plugin and editable skill copies."
       ]
     },
     "review-2": {
@@ -892,6 +899,539 @@
       "instructions": [
         "Inspect current Beads setup and repository compatibility. Initialise only project-local durable task state needed for the first slice; document how state is versioned and recovered.",
         "Resolve the official current installation and setup documentation for Beads. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable."
+      ]
+    },
+    "skill-addy-api-and-interface-design": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/api-and-interface-design/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-browser-testing-with-devtools": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/browser-testing-with-devtools/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A compatible browser surface and a configured Chrome DevTools MCP server.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-ci-cd-and-automation": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/ci-cd-and-automation/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-code-review-and-quality": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/code-review-and-quality/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-code-simplification": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/code-simplification/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-constraint-driven-development": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/constraint-driven-development/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-context-engineering": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/context-engineering/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-debugging-and-error-recovery": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/debugging-and-error-recovery/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-deprecation-and-migration": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/deprecation-and-migration/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-documentation-and-adrs": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/documentation-and-adrs/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-doubt-driven-development": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/doubt-driven-development/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The host must support the required agent/reviewer delegation, or the capability must be explicitly adapted/deferred.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-frontend-ui-engineering": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/frontend-ui-engineering/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A user-interface project and a concrete design brief.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-git-workflow-and-versioning": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/git-workflow-and-versioning/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-idea-refine": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/idea-refine/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-incremental-implementation": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/incremental-implementation/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-interview-me": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/interview-me/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-observability-and-instrumentation": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/observability-and-instrumentation/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-performance-optimization": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/performance-optimization/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-planning-and-task-breakdown": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/planning-and-task-breakdown/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-security-and-hardening": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/security-and-hardening/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-shipping-and-launch": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/shipping-and-launch/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-source-driven-development": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/source-driven-development/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-spec-driven-development": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/spec-driven-development/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-test-driven-development": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/test-driven-development/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-addy-using-agent-skills": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/using-agent-skills/SKILL.md at research revision aeac41d4d005999432bb7312f7ff06383a91d59d in addyosmani/agent-skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The README notes that per-skill installs omit repository-level shared references. Preserve required checklists and repair local pointers without installing unrelated skills."
+      ]
+    },
+    "skill-matt-research": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/research/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The host must support the required agent/reviewer delegation, or the capability must be explicitly adapted/deferred.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-diagnosing-bugs": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/diagnosing-bugs/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-domain-modeling": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/domain-modeling/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-improve-codebase-architecture": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/improve-codebase-architecture/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-prototype": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/prototype/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-retro": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/retro/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-triage": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/triage/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A configured tracker/repository context; external writes require separate task authority.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-wayfinder": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/wayfinder/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "The host must support the required agent/reviewer delegation, or the capability must be explicitly adapted/deferred.",
+        "A configured tracker/repository context; external writes require separate task authority.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-wizard": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/wizard/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.",
+        "Install the walkthrough capability only; do not launch credential capture, provision infrastructure or execute cutover steps during bootstrap."
+      ]
+    },
+    "skill-matt-to-spec": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/to-spec/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A configured tracker/repository context; external writes require separate task authority.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-grill-with-docs": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/grill-with-docs/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-implement": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/implement/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-peter-create-cli": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/create-cli/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+      ]
+    },
+    "skill-peter-frontend-design": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/frontend-design/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A user-interface project and a concrete design brief.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+        "The skill has a per-directory licence notice. Inspect and preserve LICENSE.txt and any upstream credit."
+      ]
+    },
+    "skill-peter-project-structure": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/project-structure/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A TypeScript or Swift source tree; include the adjacent map helper and its runtime dependencies.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+      ]
+    },
+    "skill-peter-swift-concurrency-expert": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/swift-concurrency-expert/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling.",
+        "Check compiler compatibility with the source’s Swift 6.2+ scope.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+        "The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger."
+      ]
+    },
+    "skill-peter-swiftui-performance-audit": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/swiftui-performance-audit/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+        "The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger."
+      ]
+    },
+    "skill-peter-swiftui-view-refactor": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/swiftui-view-refactor/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.",
+        "The source credits Dimillian/Skills. Preserve that upstream attribution; inclusion in Agent Scripts does not establish original authorship by Steinberger."
+      ]
+    },
+    "skill-peter-native-app-performance": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/native-app-performance/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A relevant Swift/native Apple project; profiling workflows require macOS and Xcode tooling.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+      ]
+    },
+    "skill-peter-github-deep-review": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/github-deep-review/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A configured tracker/repository context; external writes require separate task authority.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+      ]
+    },
+    "skill-peter-github-project-triage": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/github-project-triage/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "A configured tracker/repository context; external writes require separate task authority.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+      ]
+    },
+    "skill-peter-codex-debugging": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/codex-debugging/SKILL.md at research revision 1159adf26ad007df38b87debb107d3946008d38b in steipete/agent-scripts. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "This targets Codex itself, not arbitrary app bugs; it expects an accessible local Codex source checkout.",
+        "Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step."
+      ]
+    },
+    "skill-matt-codebase-design": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/codebase-design/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-writing-for-agents": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/productivity/writing-for-agents/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-grilling": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/productivity/grilling/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "skill-matt-setup-matt-pocock-skills": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the exact skill file skills/engineering/setup-matt-pocock-skills/SKILL.md at research revision 5beb35b040e3de97e54fa9e386d7e42d15c295c2 in mattpocock/skills. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.",
+        "Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.",
+        "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
+        "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
+        "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
       ]
     }
   }

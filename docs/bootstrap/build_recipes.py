@@ -41,5 +41,11 @@ for item in catalog['items']:
  elif kind=='process':steps=['Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.','Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author.']
  else:steps=['Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.','Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work.']
  if id in custom:steps=custom[id]+[s for s in steps if 'Resolve the official' in s or 'Do not install a guessed' in s]
+ if item.get('skill'):
+  skill=item['skill'];kind='artifact'
+  steps=['Inspect the exact skill file '+skill['path']+' at research revision '+skill['revision']+' in '+skill['repository']+'. Read the repository setup instructions and relevant companion files before choosing a current compatible installation.',
+    'Install this selected capability in the project scope for the chosen agent host, preserving its folder assets, relative references, licence and attribution. Verify required companion skills and any cross-folder references; do not copy only SKILL.md or install unrelated skills.',
+    ('Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.' if skill.get('manualOnly') else 'Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.'),
+    'Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.']+skill.get('requirements',[])+skill.get('notes',[])
  items[id]=dict(mode=kind,instructions=steps)
 (ROOT/'assets/bootstrap-recipes.json').write_text(json.dumps(dict(schema=1,reviewed='2026-10-27',items=items),ensure_ascii=False,indent=2)+'\n')
