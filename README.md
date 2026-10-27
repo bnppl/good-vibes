@@ -191,3 +191,5 @@ You don't need Claude Code to use the content — everything is plain markdown. 
 - [`context-engineering/index.md`](context-engineering/index.md) — entry point for the guide
 - [`frameworks/index.md`](frameworks/index.md) — entry point for the SDD framework survey
 - [`learning-plan.md`](learning-plan.md) — the study roadmap
+
+Explore [company subway routes](https://bnppl.github.io/good-vibes/companies/subway-routes/): source-backed AI-assisted engineering cases, with explicit endpoints and exclusions.

@@ -1,0 +1,528 @@
+checked: '2026-10-27'
+window: Publications from 1 October 2025; cases retain their own dates.
+cases:
+- id: stripe
+  name: Stripe
+  case: Minions · unattended coding
+  published: '2026-02-19'
+  source: https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2
+  sourceSection: Devboxes; Blueprints; Feedback loops
+  kind: Reported team use
+  group: delivery
+  steps:
+  - station: context
+    label: Task, context & devbox
+    actor: Harness
+    detail: A bounded task runs in an isolated standard developer environment with scoped rules.
+  - station: change
+    label: Implement task
+    actor: Agent
+    detail: Blueprints combine model reasoning with deterministic operations.
+  - station: checks
+    label: Local checks
+    actor: Deterministic
+    detail: Configured linters and relevant local checks precede CI.
+  - station: ci
+    label: CI & bounded repair
+    actor: Mixed
+    detail: A failed run can return to the agent for one repair attempt; after the second push it returns to a human.
+  - station: human
+    label: Human scrutiny
+    actor: Human
+    detail: Minion-produced work returns for human review.
+  tools:
+  - name: Minions / blueprints
+    relationship: Built internally
+  - name: Devboxes
+    relationship: Existing internal developer infrastructure
+  - name: goose fork
+    relationship: Customised by Stripe
+  boundary: No autonomous merge or production-deployment authority is established. A returned branch can still need repair.
+  loop: One agent repair opportunity after CI failure; then human handoff.
+- id: spotify
+  name: Spotify
+  case: Honk · pre-PR verification
+  published: '2025-12-09'
+  source: https://engineering.atspotify.com/2025/12/feedback-loops-background-coding-agents-part-3
+  sourceSection: Verification loops; LLMs in verification
+  kind: Reported team use
+  group: delivery
+  steps:
+  - station: context
+    label: Bounded prompt & repository
+    actor: Harness
+    detail: The agent sees the relevant repository and a supplied change request.
+  - station: change
+    label: Rewrite code
+    actor: Agent
+    detail: The background agent edits within its limited environment.
+  - station: checks
+    label: Build / test verifiers
+    actor: Deterministic
+    detail: Repository-specific verifiers activate automatically and return concise results.
+  - station: ai-review
+    label: Prompt–diff judge
+    actor: Model
+    detail: A judge checks the proposed diff against the original request after other verifiers.
+  - station: pr
+    label: Open PR if checks pass
+    actor: Harness
+    detail: A stop hook runs relevant verifiers before attempting to open a PR.
+  tools:
+  - name: Honk
+    relationship: Internal background-agent system
+  - name: Verifier MCP tool / stop hook
+    relationship: Built into the workflow
+  boundary: The report says the judge lacked an evaluation suite. Linux-only verifier coverage at this date was incomplete;
+    no deployment step is inferred.
+  loop: Verifier and judge feedback can send the agent back to its change.
+- id: coinbase
+  name: Coinbase
+  case: Figma-to-code · component workers
+  published: '2026-06-03'
+  source: https://www.coinbase.com/blog/automating-figma-to-code-at-coinbase
+  sourceSection: The Orchestrator Pattern
+  kind: Reported team use
+  group: delivery
+  steps:
+  - station: plan
+    label: Approve component plan
+    actor: Human + agent
+    detail: The agent reads designs and waits for engineer sign-off before code.
+  - station: context
+    label: Validated scaffold
+    actor: Agent
+    detail: A scaffold is validated and opened as a draft PR before component workers start.
+  - station: change
+    label: Parallel component workers
+    actor: Agents
+    detail: Each worker implements a focused component against the scaffold.
+  - station: checks
+    label: Validation gates
+    actor: Tools
+    detail: Each worker runs lint, typing, formatting, query and test checks.
+  - station: pr
+    label: Focused draft PRs
+    actor: Agents
+    detail: Workers open component draft PRs targeting the scaffold branch.
+  tools:
+  - name: Rules and prompt templates
+    relationship: Published internally as skills
+  - name: Reference implementation
+    relationship: Team-provided example
+  boundary: The scaffold contains its own checks and draft PR. Parallel workers are a fan-out, not a serial worker chain.
+    Later partner-team refinement is outside this route.
+  loop: ''
+- id: github
+  name: GitHub
+  case: Copilot runtime · Rust migration
+  published: 2026-09-16; updated 2026-09-23
+  source: https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/
+  sourceSection: Migration plan; Testing; Lessons learned
+  kind: Reported team use
+  group: delivery
+  steps:
+  - station: before
+    label: Establish behavioural tests
+    actor: Engineers
+    detail: Existing E2E coverage and pilot ports establish the migration machinery.
+  - station: change
+    label: Port components
+    actor: Agents + engineers
+    detail: Components are replaced incrementally, with human architectural work and oversight.
+  - station: pr
+    label: Port PRs
+    actor: Team
+    detail: The migration proceeds through separate port pull requests.
+  - station: checks
+    label: Existing E2E tests
+    actor: Tools
+    detail: Required failures prevent a port PR from landing.
+  - station: merge
+    label: Land incremental changes
+    actor: Team
+    detail: Passing ports land in the evolving mainline.
+  tools:
+  - name: GitHub Copilot
+    relationship: Used for scoped porting and review
+  - name: Existing E2E suites
+    relationship: Behavioural checks retained during migration
+  boundary: Coverage gaps still allowed regressions. Existing tests before a migration are not evidence of unit-test-first
+    agent work.
+  loop: ''
+- id: grafana-labs
+  name: Grafana Labs
+  case: Tern · data-source externalisation
+  published: '2026-09-24'
+  source: https://medium.com/grafana-labs/how-and-why-were-bringing-data-sources-out-of-the-grafana-monolith-775f58eaebc3
+  sourceSection: 'Streamlining the process with AI: how Tern works'
+  kind: Reported team use
+  group: delivery
+  steps:
+  - station: context
+    label: Study completed migrations
+    actor: Agents
+    detail: Agents compare already-externalised repositories with their old locations.
+  - station: guides
+    label: Write migration guides
+    actor: Agent
+    detail: Findings become commands, decision trees and verification instructions.
+  - station: plan
+    label: Audit readiness
+    actor: Agents
+    detail: Remaining data sources are assessed for blockers and readiness.
+  - station: change
+    label: Execute migrations
+    actor: Agents + engineers
+    detail: Agents perform mechanical migration work; humans resolve hard design decisions.
+  tools:
+  - name: Tern
+    relationship: Built by a Grafana engineer
+  - name: Migration guides
+    relationship: Generated and corrected during execution
+  boundary: Human decisions interleave with execution. Failures feed back into guides. This route does not append a single
+    universal release sequence.
+  loop: Execution failures are incorporated into the next migration guide.
+- id: monzo
+  name: Monzo
+  case: Designer-led scoped product changes
+  published: '2026-03-20'
+  source: https://monzo.com/blog/how-Monzo-Designers-are-shipping-safer-faster-product-improvements
+  sourceSection: How designers improve quality; Designers learning to ship safely
+  kind: Reported designer / team use
+  group: delivery
+  steps:
+  - station: plan
+    label: Identify a small UI change
+    actor: Designer
+    detail: The account starts with narrow copy and interface improvements.
+  - station: change
+    label: Change production code
+    actor: Designer + AI
+    detail: Designers use AI tools in real repositories with engineering support.
+  - station: pr
+    label: Raise a PR
+    actor: Designer
+    detail: The change enters the existing repository review process.
+  - station: human
+    label: Engineering review
+    actor: Engineers
+    detail: Code review remains mandatory.
+  - station: ship
+    label: Controlled production change
+    actor: Authorised people
+    detail: Production changes remain within existing safety and deployment guardrails.
+  tools:
+  - name: Cursor
+    relationship: Reported designer use
+  - name: GitHub
+    relationship: Existing contribution workflow
+  boundary: The article contains different designer accounts. Deployment descriptions vary by role; it does not establish
+    autonomous deployment or specific AI testing gates.
+  loop: ''
+- id: posthog
+  name: PostHog
+  case: Self-driving team · issue to merged PR
+  published: '2026-09-15'
+  source: https://posthog.com/blog/self-driving-loops
+  sourceSection: The issues → reports → PRs loop
+  kind: Reported team use
+  group: delivery
+  steps:
+  - station: plan
+    label: Issue & readiness scout
+    actor: Human + scout
+    detail: A human writes intended behaviour; a scout checks scope, blockers and duplication.
+  - station: change
+    label: Implement ready work
+    actor: Agent workflow
+    detail: Ready reports start implementation tasks.
+  - station: pr
+    label: Propose a change
+    actor: Agent workflow
+    detail: The account links a concrete rename-feature PR to its source issue.
+  - station: human
+    label: Review the result
+    actor: Human
+    detail: The author checks and approves the resulting change.
+  - station: merge
+    label: Merge approved PR
+    actor: Team
+    detail: The cited example merged after approval.
+  tools:
+  - name: Issue-readiness scout
+    relationship: Internal team workflow
+  - name: PostHog skills / MCP
+    relationship: Used in the reported loops
+  boundary: This is one team’s issue-to-PR loop. No CI, test-first or deployment station is added from separate PostHog articles.
+  loop: ''
+- id: 37signals
+  name: 37signals
+  case: Lexxy · browser red/green
+  published: '2026-09-28'
+  source: https://dev.37signals.com/lexxy-1-0/
+  sourceSection: Agents
+  kind: Reported team use
+  group: repair
+  steps:
+  - station: before
+    label: Write and fail a browser test
+    actor: Agent workflow
+    detail: The Lexxy report explicitly describes observing a failing test.
+  - station: change
+    label: Fix the behaviour
+    actor: Agent workflow
+    detail: Implementation addresses the failing editor behaviour.
+  - station: checks
+    label: Observe a passing browser test
+    actor: Playwright
+    detail: The browser suite provides realistic clipboard, keyboard and focus feedback.
+  tools:
+  - name: Claude
+    relationship: Reported use from project start
+  - name: Playwright
+    relationship: Adopted for the browser feedback loop
+  boundary: This is the documented Lexxy loop, not every 37signals project. Separate sandbox/branch bug validation is described
+    but not forced into this sequence.
+  loop: Browser red → fix → browser green.
+- id: block
+  name: Block
+  case: Actionable CI · eligible autofix
+  published: '2026-02-23'
+  source: https://engineering.block.xyz/blog/actionable-ci
+  sourceSection: 'Layer 3: Agentic Autofix'
+  kind: Reported team use
+  group: repair
+  steps:
+  - station: context
+    label: Analyse failure & check eligibility
+    actor: Tools + human
+    detail: Static rules and model analysis interpret CI failures; a developer explicitly initiates eligible autofix.
+  - station: change
+    label: Generate a fix
+    actor: Goose
+    detail: A headless agent receives the failure analysis.
+  - station: pr
+    label: Open draft PR
+    actor: Goose
+    detail: The proposed repair is submitted as a draft.
+  - station: ci
+    label: Validate on CI
+    actor: CI + agent
+    detail: Failures return to Goose up to a configured retry limit.
+  - station: human
+    label: Promote for review
+    actor: Harness
+    detail: Passing drafts become reviewable only if the original branch has not changed.
+  tools:
+  - name: Actionable CI
+    relationship: Built by Block DX
+  - name: goose
+    relationship: Block’s agent, used headlessly
+  boundary: If a developer has already fixed the branch, the draft is closed. Ready for review is not approval, merge or deployment.
+  loop: CI failures trigger bounded repair retries.
+- id: shopify
+  name: Shopify
+  case: River · vulnerability remediation
+  published: '2026-09-02'
+  source: https://shopify.engineering/river-vulnerability-remediation
+  sourceSection: Validate live state; Repair; Freshness; Closure
+  kind: Reported team use
+  group: repair
+  steps:
+  - station: context
+    label: Validate live finding / PR state
+    actor: River
+    detail: Check the ledger against current code and tracker state; stop if already resolved.
+  - station: change
+    label: Repair on current head
+    actor: River
+    detail: Rebase or prepare a narrow fix only for a still-active vulnerability.
+  - station: ci
+    label: Recheck the current patch
+    actor: CI + River
+    detail: Fresh heads retrigger checks; stale evidence cannot justify closure.
+  - station: human
+    label: Owner decisions & approval
+    actor: Engineers
+    detail: Code owners retain product-risk decisions, approval and merge responsibility.
+  - station: merge
+    label: Freshness-gated merge
+    actor: Workflow
+    detail: The remediation workflow follows the approved change through merge.
+  - station: closure
+    label: Verify on repository head
+    actor: River
+    detail: Check resulting code and dependency state before marking the finding resolved.
+  tools:
+  - name: River
+    relationship: Internal Shopify agent
+  - name: Slack threads / work ledger
+    relationship: Used for investigation and handoff
+  boundary: Only the remediation route is mapped. Post-merge repository verification is not production telemetry or proof
+    of every security property.
+  loop: Recheck changing repository and PR state on later runs.
+- id: mozilla
+  name: Mozilla
+  case: Firefox · Anthropic red-team findings
+  published: '2026-03-06'
+  source: https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/
+  sourceSection: An emerging technique, pressure-tested by Firefox engineers
+  kind: Reported collaboration
+  group: repair
+  steps:
+  - station: reproduce
+    label: Receive reproducible findings
+    actor: Anthropic red team
+    detail: AI-assisted reports arrive with minimal executable test cases.
+  - station: human
+    label: Validate findings
+    actor: Mozilla engineers
+    detail: Firefox engineers reproduce and validate the submitted bugs.
+  - station: change
+    label: Prepare security fixes
+    actor: Mozilla engineers
+    detail: Engineers land patches in response to validated reports.
+  - station: ship
+    label: Ship Firefox fixes
+    actor: Mozilla
+    detail: The report states fixes shipped in Firefox 148.
+  tools:
+  - name: Claude
+    relationship: Used by the external Anthropic red team
+  - name: Minimal reproductions
+    relationship: Supplied with reports
+  boundary: AI discovery belongs to the collaborating red team; the source does not establish AI-written Firefox patches.
+  loop: ''
+- id: duolingo
+  name: Duolingo
+  case: iOS · scheduled test backfill
+  published: '2026-06-24'
+  source: https://blog.duolingo.com/ai-ios-unit-test-generation-pipeline/
+  sourceSection: Scheduled backfill; PR lifecycle workflow
+  kind: Reported team use
+  group: assurance
+  steps:
+  - station: plan
+    label: Score and filter Swift files
+    actor: Temporal workflow
+    detail: Coverage and file heuristics select candidates, excluding duplicates and cooldowns.
+  - station: change
+    label: Generate tests and mocks
+    actor: Claude Code
+    detail: Remote Linux workers generate test code but cannot compile Swift locally.
+  - station: pr
+    label: Open generated-test PR
+    actor: Workflow
+    detail: The PR is recorded for lifecycle management.
+  - station: ci
+    label: Repair from CI results
+    actor: CI + agents
+    detail: A lifecycle manager routes build failures to repair, with retry limits and cooldowns.
+  - station: human
+    label: Assign reviewer / enable auto-merge
+    actor: Lifecycle manager
+    detail: Green CI triggers reviewer assignment and enables auto-merge; the reviewer handles the PR.
+  tools:
+  - name: Temporal workflows
+    relationship: Built around the test-generation system
+  - name: Claude Code
+    relationship: Used remotely
+  - name: S3 state store
+    relationship: Coordinates workflow state
+  boundary: This is test generation for existing code, not test-first feature development. Enabling auto-merge is not a claim
+    of unconditional immediate merge.
+  loop: CI repair is bounded; rejected or exhausted candidates enter cooldown.
+- id: cloudflare
+  name: Cloudflare
+  case: Merge-request AI review
+  published: '2026-04-20'
+  source: https://blog.cloudflare.com/ai-code-review/
+  sourceSection: Plugin architecture; Coordinator; GitLab actions
+  kind: Reported team use
+  group: assurance
+  steps:
+  - station: pr
+    label: Merge request triggers review
+    actor: GitLab CI
+    detail: The existing MR starts the reviewer workflow.
+  - station: context
+    label: Assemble MR context
+    actor: Plugins
+    detail: VCS context and repository instructions configure the run.
+  - station: ai-review
+    label: Specialists + coordinator
+    actor: Models
+    detail: Specialist sessions review aspects; a coordinator consolidates and filters findings.
+  - station: findings
+    label: Publish review verdict
+    actor: Review system
+    detail: The system posts findings and sets or revokes its own bot approval.
+  tools:
+  - name: OpenCode reviewer / plugins
+    relationship: Built internally on OpenCode
+  - name: AI Gateway / Workers
+    relationship: Supporting internal control plane
+  boundary: This is automated review, not code generation. No test, implementation, human-approval or deployment step is invented.
+  loop: ''
+- id: datadog
+  name: Datadog
+  case: Unicron · verified live optimisation
+  published: '2026-03-09'
+  source: https://www.datadoghq.com/blog/ai/fully-autonomous-optimization/
+  sourceSection: Five-stage pipeline
+  kind: Reported bounded evaluation
+  group: runtime
+  steps:
+  - station: context
+    label: Specialise target workload
+    actor: Evolution system
+    detail: Bind organisation and aggregation configuration into the candidate function.
+  - station: change
+    label: Evolve code variants
+    actor: LLM agent
+    detail: BitsEvolve searches for improved aggregation implementations.
+  - station: proof
+    label: Prove codec safety properties
+    actor: Verus
+    detail: Formal proofs cover specified properties of codec libraries the evolved code calls.
+  - station: shadow
+    label: Compare held-back traffic
+    actor: Runtime
+    detail: Reject candidates whose output hash differs from the baseline on validation messages.
+  - station: hotswap
+    label: Hot-swap verified WASM
+    actor: Runtime
+    detail: The reported system installs accepted modules in running aggregation services.
+  tools:
+  - name: BitsEvolve / Unicron
+    relationship: Datadog systems
+  - name: Verus
+    relationship: Formal-verification tool used
+  - name: WASM / Wasmtime
+    relationship: Runtime isolation and execution
+  boundary: Two evaluated workloads; codec proofs and sampled output equality are different evidence. No proof of arbitrary
+    application correctness is claimed.
+  loop: ''
+excluded:
+- id: circleci
+  name: CircleCI
+  reason: The cache does not establish a detailed recent internal AI-assisted development sequence.
+- id: jpmorgan-chase
+  name: JPMorgan Chase
+  reason: Adoption and strategy material do not establish a reconstructable delivery sequence.
+- id: microsoft
+  name: Microsoft
+  reason: Adoption reports and repository instructions do not establish one ordered internal workflow in the inspected material.
+- id: gitlab
+  name: GitLab
+  reason: The cache has a declared AI-development playbook, not a reported execution case. Policy is not drawn as observed
+    practice.
+- id: uber
+  name: Uber
+  reason: The inspected overview combines multiple managed workflows and cost controls. It does not supply one case sequence
+    precise enough for this map.
+- id: zalando
+  name: Zalando
+  reason: The snapshot describes tool adoption, previews and risk-based approval, but does not connect them into a specific
+    agent-execution sequence. No route is assembled from independent policies.

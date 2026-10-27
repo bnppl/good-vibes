@@ -11,6 +11,8 @@ status: unread
 
 Twenty company knowledge bases across banking, payments, crypto, education, retail, media, transport, infrastructure and developer tools. Each keeps detailed research, source findings, an observed workflow, optional practice and bite-size slides together in its own directory.
 
+[Explore the subway map]({{ '/companies/subway-routes/' | relative_url }}){: .btn .btn-primary }
+
 [Compare companies]({{ '/companies/compare/' | relative_url }}){: .btn .btn-primary }
 
 [Approach comparison](comparison.md) · [Research and comparability review](review.md) · [Source map](sources.md) · [Individual engineers](../engineers/index.md)
