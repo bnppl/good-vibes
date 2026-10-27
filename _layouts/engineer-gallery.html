@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="{{ '/assets/css/engineer-visuals.css' | relative_url }}">
   <script src="{{ '/assets/vendor/lucide-icons-0.468.0.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/engineer-gallery.js' | relative_url }}" defer></script>
+  <link rel="stylesheet" href="{{ '/assets/css/visual-navigation.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script src="{{ '/assets/js/visual-navigation.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#visual-gallery">Skip to visualizations</a>
-  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">gv</span>good vibes<span class="brand-section"> / engineer perspectives</span></a><nav aria-label="Engineer views"><a href="{{ '/engineers/map/' | relative_url }}">Approach map</a><a href="{{ '/engineers/compare/' | relative_url }}">Field cards</a><a href="{{ '/engineers/' | relative_url }}">Research archive</a></nav></header>
+  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">gv</span>good vibes<span class="brand-section"> / engineer perspectives</span></a><nav class="gv-context-links" aria-label="Engineer views"><a href="{{ '/engineers/map/' | relative_url }}">Approach map</a><a href="{{ '/engineers/compare/' | relative_url }}">Field cards</a><a href="{{ '/engineers/' | relative_url }}">Research archive</a></nav></header>
+  {% include visual-navigation.html %}
   <main class="visual-shell">
     <p class="eyebrow">Same people. Different questions.</p>
     <h1>Eight ways to see<br>the approaches.</h1>

@@ -9,10 +9,13 @@
   <link rel="stylesheet" href="{{ '/assets/css/engineer-visuals.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/css/company-visuals/subway.css' | relative_url }}">
   <script src="{{ '/assets/js/company-visuals/subway.js' | relative_url }}" defer></script>
+  <link rel="stylesheet" href="{{ '/assets/css/visual-navigation.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script src="{{ '/assets/js/visual-navigation.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#company-map-root">Skip to map</a>
-  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">gv</span>good vibes<span class="brand-section"> / company field notes</span></a><nav aria-label="Related views"><a href="{{ '/companies/' | relative_url }}">Company research</a><a href="{{ '/companies/compare/' | relative_url }}">Compare companies</a><a href="{{ '/engineers/subway-routes/' | relative_url }}">Engineer subway map</a><a href="{{ '/pipeline/subway/' | relative_url }}">Combined tooling map</a></nav></header>
+  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">gv</span>good vibes<span class="brand-section"> / company field notes</span></a><nav class="gv-context-links" aria-label="Related views"><a href="{{ '/companies/' | relative_url }}">Company research</a><a href="{{ '/companies/compare/' | relative_url }}">Compare companies</a><a href="{{ '/engineers/subway-routes/' | relative_url }}">Engineer subway map</a><a href="{{ '/pipeline/subway/' | relative_url }}">Combined tooling map</a></nav></header>
+  {% include visual-navigation.html %}
   <main class="visual-shell" data-company-map data-baseurl="{{ site.baseurl | escape }}">
     <h1>Company subway map</h1>
     <div id="company-map-root" class="visual-root" tabindex="-1"></div>

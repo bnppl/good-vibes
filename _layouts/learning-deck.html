@@ -7,6 +7,8 @@
   <title>{{ page.title }} · {{ site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/learning-deck.css' | relative_url }}" />
   <script src="{{ '/assets/js/learning-deck.js' | relative_url }}" defer></script>
+  <link rel="stylesheet" href="{{ '/assets/css/visual-navigation.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script src="{{ '/assets/js/visual-navigation.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 <body data-storage-key="{{ page.deck_storage_key | default: 'good-vibes-learning-deck-v2' | escape }}" data-card-label="{{ page.deck_card_label | default: 'AI engineering / small truths' | escape }}">
   <a class="skip-link" href="#lesson-title">Skip to idea</a>
@@ -14,6 +16,7 @@
     <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">gv</span>good vibes<span class="brand-section">{{ page.deck_section | default: ' / the good scroll' | escape }}</span></a>
     <a class="notes-link" href="{{ page.deck_notes | default: '/learning-deck/' | relative_url }}">All the notes ↗</a>
   </header>
+  {% include visual-navigation.html %}
   <div id="app" class="app-shell" hidden>
     <aside class="sidebar" aria-label="Choose a collection">
       <p class="eyebrow">A better rabbit hole.</p>

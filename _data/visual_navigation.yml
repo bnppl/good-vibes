@@ -1,0 +1,110 @@
+- id: tooling
+  title: Tooling & combined maps
+  description: Follow tools, skills and processes across individuals and companies.
+  items:
+    - title: Mobile tooling subway
+      url: /pipeline/subway/mobile/
+      description: A vertical map with large tap targets, inline sources and a stage picker.
+      label: Mobile first
+      tags: phone pocket vertical combined tools skills processes people engineers companies
+    - title: Combined tooling subway
+      url: /pipeline/subway/
+      description: Overlay stage-specific tooling on engineer and company lines, then inspect the evidence.
+      label: Combined map
+      tags: subway metro train tools skills processes people companies desktop wide
+    - title: Pipeline atlas
+      url: /pipeline/
+      description: Search the full stage-by-stage catalogue and filter by subject, usage type and evidence relationship.
+      label: Search & filter
+      tags: catalogue tools skills processes stages all evidence people engineers companies
+- id: compare
+  title: Compare & explore
+  description: Start with the people, companies or engineering ideas you want to compare.
+  items:
+    - title: Compare companies
+      url: /companies/compare/
+      description: Compare up to three companies across engineering dimensions, with dated sources and scope.
+      label: Company cards
+      tags: industries organisations stripe monzo shopify comparison
+    - title: Compare engineers
+      url: /engineers/compare/
+      description: Put individual approaches side by side and distinguish reported use, artifacts and advice.
+      label: Engineer cards
+      tags: people individual field baseball cards comparison
+    - title: Engineering approach map
+      url: /engineers/map/
+      description: Explore overlapping schools of thought and follow linked tooling examples.
+      label: Approach landscape
+      tags: original initial landscape overlaps regions engineers
+- id: subway
+  title: Workflow subway maps
+  description: Inspect the dedicated engineer and company route views.
+  items:
+    - title: Company subway map
+      url: /companies/subway-routes/
+      description: Trace dated company cases, their checks and the boundaries where the evidence ends.
+      label: Company workflows
+      tags: subway metro train companies routes sequence cases
+    - title: Engineer subway map
+      url: /engineers/subway-routes/
+      description: Explore the shared network of activities and the qualifications behind individual routes.
+      label: Engineer workflows
+      tags: subway metro train engineers people routes
+- id: perspectives
+  title: More engineer perspectives
+  description: Explore a specific engineering question through the existing visual studies.
+  items:
+    - title: Who writes the exam?
+      url: /engineers/exam-ownership/
+      description: Inspect who owns success criteria, checks, implementation and acceptance.
+      label: Ownership
+      tags: engineers people tests human criteria verification responsibility
+    - title: The same bug, twenty approaches
+      url: /engineers/same-bug/
+      description: Walk through an illustrative duplicate-reward scenario with evidence-informed approaches.
+      label: Illustrative scenario
+      tags: engineers people bug example walkthrough simulation duplicate reward
+    - title: Confidence cross-sections
+      url: /engineers/confidence-layers/
+      description: Compare verification layers and their documented ownership, with unknowns visible.
+      label: Verification
+      tags: engineers people tests testing confidence evidence layers
+    - title: The tooling grove
+      url: /engineers/tool-ecosystem/
+      description: Trace tools people created, published, used or assessed without merging those relationships.
+      label: Tool ecosystem
+      tags: engineers people grove tools tree ecosystem creators authors
+    - title: Project landscape
+      url: /engineers/project-landscape/
+      description: Explore how project context changes the questions to ask about an approach.
+      label: Project fit
+      tags: engineers people landscape risk suitability projects context
+    - title: Approaches through time
+      url: /engineers/evolution-trails/
+      description: Follow dated tools, experiments and ideas while keeping public artifacts separate from current practice.
+      label: Timeline
+      tags: engineers people evolution trails chronology history time changes
+    - title: Disagreement microscope
+      url: /engineers/disagreement-microscope/
+      description: Inspect specific contrasts and distinguish disagreement from different contexts or missing evidence.
+      label: Method contrasts
+      tags: engineers people disagreement differences microscope compare questions
+- id: slides
+  title: Slides & research collections
+  description: Read bite-size lessons or choose a subject for its own slides and detailed source archive.
+  items:
+    - title: AI engineering slideshow
+      url: /learn/
+      description: Browse the main collection of short AI engineering lessons and saved ideas.
+      label: Learning deck
+      tags: slides slideshow learn lessons cards swipe
+    - title: Engineer studies & slides
+      url: /engineers/
+      description: Choose an engineer for their detailed knowledge base, source register and bite-size slides.
+      label: Research archive
+      tags: people engineers slides sources research biographies
+    - title: Company studies & slides
+      url: /companies/
+      description: Choose a company for its reported workflows, sources and bite-size slides.
+      label: Research archive
+      tags: companies organisations slides sources research industries

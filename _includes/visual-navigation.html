@@ -1,0 +1,15 @@
+<nav class="gv-view-nav" aria-label="Visualisation navigation">
+  <a class="gv-hub-link" href="{{ '/visualisations/' | relative_url }}"{% if page.url == '/visualisations/' %} aria-current="page"{% endif %}><span aria-hidden="true">▦</span> All visualisations <span aria-hidden="true">→</span></a>
+  <details class="gv-switcher">
+    <summary>Switch view <span class="gv-current">{{ page.title | escape }}</span></summary>
+    <div class="gv-menu-panel">
+      <p class="gv-menu-intro">Maps, comparisons, tooling and slides — choose a view.</p>
+      {% for group in site.data.visual_navigation %}
+      <section class="gv-menu-group"><h2>{{ group.title | escape }}</h2>
+        {% for view in group.items %}<a href="{{ view.url | relative_url }}"{% if view.url == page.url %} aria-current="page"{% endif %}>{{ view.title | escape }}{% if view.url == page.url %}<span class="gv-here">You’re here</span>{% endif %}</a>{% endfor %}
+      </section>
+      {% endfor %}
+      <a class="gv-menu-all" href="{{ '/visualisations/' | relative_url }}">Browse the full visualisation hub →</a>
+    </div>
+  </details>
+</nav>

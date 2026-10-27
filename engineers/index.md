@@ -6,6 +6,10 @@ has_children: true
 
 # Engineering approaches
 
+[All visualisations →]({{ '/visualisations/' | relative_url }}){: .btn .btn-primary }
+
+
+
 [Explore the pipeline atlas: tools, skills and processes]({{ '/pipeline/' | relative_url }}){: .btn }
 
 Start with AI use documented in publications since October 2025. Compare actual reported projects, inspectable artifacts and advice with separate publication, practice and inspection dates. Older principles remain background.
