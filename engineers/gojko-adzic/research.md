@@ -2,29 +2,29 @@
 title: Gojko Adžić — detailed research
 parent: Gojko Adžić
 nav_order: 1
-last_updated: '2026-10-26'
+last_updated: '2026-10-27'
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-10-27'
+research_checked: '2026-10-27'
 cache_schema: 1
 ---
 
-> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+> **Scope update — 27 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
 
 # Gojko Adžić — detailed research
 
 **A useful comparison is not “BDD versus agents.” It is how people keep product intent, decisions and verification inspectable as more implementation is automated.**
 
-Research horizon and verification date: **26 October 2026**. This profile combines current public factory artifacts with explicitly dated earlier writing. It does not infer that every historical technique remains a daily habit.
+Research horizon and verification date: **27 October 2026**. This profile combines current public factory artifacts with explicitly dated earlier writing. It does not infer that every historical technique remains a daily habit.
 
 [Profile and evidence](index.md#comparison-evidence) · [Worked example](workflow.md) · [Tools](tools.md) · [Sources](sources.md)
 
 ## Approach in brief
 
-**Stated.** The September 2026 talk advocates supervised automation with visible decisions and repeatable feedback. Humans remain involved during the process, rather than judging only its final output. It presents a progression in how responsibilities are handled, not a universal prescription that every team should immediately run many agents. [S01](sources.md#s01)
+**Stated.** The September 2026 talk contrasts a vibe-coded **"Dark Factory"** (where agents orchestrate agents via **"markdown prayers"** and humans inspect only at the finish line) with a plan-driven **"Lights-On Factory"** built on deterministic guardrails and visible decisions. It maps a three-stage supervision progression (**`Dictating → Regulating → Supervising`**) and reports that shifting repeatable micro-decisions from LLM inference to deterministic computation cuts token usage by ~80% and runs 6–10x faster. [S01](sources.md#s01)
 
-**Stated.** His June 2026 product essay warns that easier technical production leaves customer understanding and prioritisation unresolved. Its future-role claims are predictions. The practical implication we draw is to distinguish “the rule is implemented” from “this was a useful rule to build.” [S10](sources.md#s10)
+**Stated.** His June 2026 product essay warns of the **"Chef Gusteau" / "junk food" problem**: when AI coding agents make technical execution effortless, builders lacking product management skills produce *"a beautifully engineered dish that nobody ordered."* Its future-role claims are predictions. The practical implication we draw is to distinguish “the rule is implemented” from “this was a useful rule to build.” [S10](sources.md#s10)
 
 **Demonstrated artifact.** The public Lights-on Software Factory repository is a concrete starting point based on Votito. It brings together a controlled environment and deterministic support around an AI coding workflow. This cache inspected published documents, not an executed production session. [S03](sources.md#s03)
 
@@ -34,7 +34,7 @@ Research horizon and verification date: **26 October 2026**. This profile combin
 
 In a September 2025 Spec Kit experiment, Adžić valued editable intermediate decisions but found the generated requirements too broad and the documentation too overwhelming for meaningful human participation. He wanted better detail and a scoping step that supported progressive delivery. This is a dated account of the version he tried, not a verdict on all current spec-driven tools. [S02](sources.md#s02)
 
-The later sample workflow turns a proposed change into impact analysis and a human-approved execution plan. It explicitly permits bypassing impact analysis for a small, clear task. [S04](sources.md#s04)
+The later October 2026 sample workflow (`/impact-analysis`) reads a problem statement in `plans/<name>.md`, verifies claims against existing code/tests/docs, asks up to four clarifying questions per round across core functionality, scope, integration and edge cases, and records out-of-scope items before generating a human-approved execution plan. It explicitly permits bypassing impact analysis for a small, clear task. [S04](sources.md#s04)
 
 **Our application:** start a reward change with six observable balances and a short anti-goal list. An agent can identify ambiguities, but a person owns product intent. In this fixed exercise, a new submission ID is already agreed to be a separately rewarded event; do not reopen that rule as an implementation choice. A beautifully formatted document that leaves identity undefined still hides the important choice.
 

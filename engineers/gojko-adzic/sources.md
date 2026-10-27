@@ -2,21 +2,21 @@
 title: Gojko Adžić — source register
 parent: Gojko Adžić
 nav_order: 4
-last_updated: '2026-10-26'
+last_updated: '2026-10-27'
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-10-27'
+research_checked: '2026-10-27'
 cache_schema: 1
 ---
 
-## Publication-window review — 26 October 2026
+## Publication-window review — 27 October 2026
 
-The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current.
 
 # Gojko Adžić — source findings
 
-All sources inspected on **26 October 2026**. GitHub documents below were read at immutable revision `7e8ee8b4dcd9857da48845b187540e3e1891c70f`, whose commit date is 22 October 2026. These are records of inspected material, not an archive of entire third-party works.
+All sources inspected on **26–27 October 2026**. GitHub documents below were read at immutable revision `7e8ee8b4dcd9857da48845b187540e3e1891c70f`, whose commit date is 22 October 2026. These are records of inspected material, not an archive of entire third-party works.
 
 <a id="s01"></a>
 
@@ -26,8 +26,8 @@ All sources inspected on **26 October 2026**. GitHub documents below were read a
 - **Publication:** September 2026 (slide filename; exact presentation day not established).
 - **URL:** [Keeping humans in the loop with AI coding agents](https://gojko.net/slides/202609-gotocph.pdf).
 - **Inspected scope:** 35-page public slide deck; extracted text inspected.
-- **Cached finding:** Argues for visible human supervision, useful boundaries and recurring feedback embodied in computation. Presents a staged path rather than one mandatory starting setup.
-- **Supports:** C01, C06, C07, C11.
+- **Cached finding:** Contrasts a fully automated, vibe-coded "Dark Factory" (relying on agent-to-agent orchestration and "markdown prayers," with humans only inspecting the end result) against a plan-driven "Lights-On Factory" with deterministic guardrails. Maps a three-stage supervision progression (`Dictating → Regulating → Supervising`) and reports that moving repeatable decisions from LLM inference to deterministic computation cuts token usage by ~80% and runs 6–10x faster.
+- **Supports:** C01, C06, C07, C11, C12.
 - **Limits:** Talk advocacy and reported examples. Quoted Ben Evans and Anthropic material retain their original attribution; headline performance numbers are not controlled comparative results.
 
 <a id="s02"></a>
@@ -50,7 +50,7 @@ All sources inspected on **26 October 2026**. GitHub documents below were read a
 - **Publication:** Repository revision dated 2026-10-22.
 - **URL:** [Lights-on software factory README](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/README.md).
 - **Inspected scope:** Pinned public README.
-- **Cached finding:** A public Claude Code boilerplate based on Votito, combining environment, regulation, feedback, planning and deterministic workflow tools.
+- **Cached finding:** A public Claude Code boilerplate based on Votito, combining container environment, deterministic Bash regulation (`bin/regulate.js`), edit-time lint hooks, interactive planning and deterministic workflow compilation (`.workflow.mjs`), reporting ~80% token savings over unconstrained agent orchestration.
 - **Supports:** C07, C09, C12.
 - **Limits:** Artifact inspection, not an executed benchmark or a complete private Votito checkout. The reported token saving lacks an independently reproduced comparison here.
 
@@ -62,7 +62,7 @@ All sources inspected on **26 October 2026**. GitHub documents below were read a
 - **Publication:** Repository revision dated 2026-10-22.
 - **URL:** [Trivial planning/execution workflow](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/WORKFLOW.md).
 - **Inspected scope:** Pinned public workflow documentation.
-- **Cached finding:** Documents impact analysis, an approved phased implementation plan, and execution. Plan steps declare writable files, dependencies, and verification; small clear work can skip impact analysis.
+- **Cached finding:** Documents problem statements in `plans/<name>.md`, `/impact-analysis` (which verifies code claims and asks up to four clarifying questions per round across scope, integration and edge cases, plus out-of-scope items), `/plan-execution` (producing phased steps and a `.plan.json` sidecar with declared writable files, dependencies and verification), and `/execute` (generating a disposable `.workflow.mjs` script). Small clear work can skip impact analysis.
 - **Supports:** C02, C03, C08.
 - **Limits:** Example workflow is intentionally replaceable. An epic-level plan does not imply a single unverified implementation increment.
 
@@ -74,7 +74,7 @@ All sources inspected on **26 October 2026**. GitHub documents below were read a
 - **Publication:** Repository revision dated 2026-10-22.
 - **URL:** [The plan-to-workflow orchestrator](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/ORCHESTRATOR.md).
 - **Inspected scope:** Pinned public orchestrator documentation.
-- **Cached finding:** Structured plans generate scripts; parallel workers are followed by merged-tree gates and a final refutation-oriented check. Progress and run measures support resumption and diagnosis.
+- **Cached finding:** Structured plans compile into `.workflow.mjs` scripts; parallel `workflow-worker` agents are followed by `workflow-gate` agents running merged-tree `make` goals (with up to three rework rounds routed back to workers on failure) and a standalone read-only `workflow-check` skeptic that attempts to refute step claims. Progress (`.progress.jsonl`) and fault lists support resumption and diagnosis.
 - **Supports:** C04, C07, C08, C10, C12.
 - **Limits:** Role instructions and documented behaviour were inspected; tools were not run. Final gate guidance is not proof of the exact production release pipeline.
 

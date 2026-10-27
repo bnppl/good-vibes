@@ -2,21 +2,21 @@
 title: David Heinemeier Hansson — source findings
 parent: David Heinemeier Hansson
 nav_order: 3
-last_updated: '2026-10-26'
+last_updated: '2026-10-27'
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-10-27'
+research_checked: '2026-10-27'
 cache_schema: 1
 ---
 
-## Publication-window review — 26 October 2026
+## Publication-window review — 27 October 2026
 
-The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current. The original inspection dates remain unchanged.
+The active source-to-claim map, publication dates, practice periods and evidence kinds are in [recent AI evidence](recent-ai.md#evidence-used-in-the-comparison). Earlier mappings below are retained as provenance; they do not make a background source current.
 
 # David Heinemeier Hansson — source findings
 
-All twelve public authored articles were inspected on **26 October 2026**. Dates are displayed publication dates, not assertions that a practice remains current. Whole articles are not archived. Tool repositories, immutable installed versions, paid book bodies, private sessions, and linked keynote transcripts were not independently inspected.
+All twelve public authored articles were inspected on **26–27 October 2026**. Dates are displayed publication dates, not assertions that a practice remains current. Whole articles are not archived. Tool repositories, immutable installed versions, paid book bodies, private sessions, and linked keynote transcripts were not independently inspected.
 
 [Profile](index.md) · [Research](research.md) · [Worked feature](workflow.md)
 
@@ -30,7 +30,7 @@ All twelve public authored articles were inspected on **26 October 2026**. Dates
 
 **Inspected scope:** Public authored article, including its relevant testing, tool, or product discussion.
 
-**Finding:** Enjoys writing Ruby and reports conversational LLM collaboration; this is a dated position before stronger agent adoption.
+**Finding:** Enjoys writing Ruby by hand and reports conversational LLM collaboration rather than letting inline autocomplete tools take the keyboard; this is a dated position before his 2026 agent adoption.
 
 **Supports:** Historical context for C01/C06/C07.
 
@@ -40,29 +40,29 @@ All twelve public authored articles were inspected on **26 October 2026**. Dates
 
 ## S02 · Promoting AI agents
 
-**Author:** David Heinemeier Hansson · **Published:** 2026-01-07 · **Inspected:** 2026-10-26.
+**Author:** David Heinemeier Hansson · **Published:** 2026-01-07 · **Inspected:** 2026-10-27.
 
 [Primary source](https://world.hey.com/dhh/promoting-ai-agents-3ee04945)
 
 **Inspected scope:** Public authored article, including its relevant testing, tool, or product discussion.
 
-**Finding:** Reports OpenCode-based supervised delegation and outcome review, while distinguishing accepted quality from generated volume.
+**Finding:** Explains why terminal coding agents (using OpenCode and Claude Code, integrated into Omarchy) succeeded for him where inline IDE autocomplete (Copilot, Cursor) "stole the keyboard" mid-thought: agents control the terminal, run validation tests themselves, search documentation, and switch across Claude Opus 4.5, Codex 5, Gemini 3, MiniMax M2.1 and GLM-4.7. Reports supervised collaboration and human outcome review while noting he was then "nowhere close to the claims of having agents write 90%+ of the code" when holding the line on quality and cohesion.
 
-**Supports:** C06, C07, C09.
+**Supports:** C04, C06, C07, C08, C09.
 
-**Limits:** Self-report at that date; exact current review cadence and complete private setup unknown.
+**Limits:** Self-report at that date; his later October 2026 essay (S06) moves past the January "not 90%+" boundary toward "pencils down" on hand-written code. Exact current review checklist and complete private setup remain unknown.
 
 <a id="s03"></a>
 
 ## S03 · Clankers with claws
 
-**Author:** David Heinemeier Hansson · **Published:** 2026-02-05 · **Inspected:** 2026-10-26.
+**Author:** David Heinemeier Hansson · **Published:** 2026-02-05 · **Inspected:** 2026-10-27.
 
 [Primary source](https://world.hey.com/dhh/clankers-with-claws-9f86fa71)
 
 **Inspected scope:** Public authored article, including its relevant testing, tool, or product discussion.
 
-**Finding:** Reports an OpenClaw experiment isolated in a Proxmox VM, with persistence and human-interface tasks.
+**Finding:** Reports an OpenClaw experiment ("Kef") isolated in a Proxmox VM with persistent memory and reminders, navigating standard human-centric web interfaces (creating a HEY.com email account, signing up for Fizzy, populating a board, and joining Basecamp) without specialized MCPs, APIs, or pre-installed skills.
 
 **Supports:** C08, C11.
 
@@ -72,13 +72,13 @@ All twelve public authored articles were inspected on **26 October 2026**. Dates
 
 ## S04 · Basecamp becomes agent accessible
 
-**Author:** David Heinemeier Hansson · **Published:** 2026-03-25 · **Inspected:** 2026-10-26.
+**Author:** David Heinemeier Hansson · **Published:** 2026-03-25 · **Inspected:** 2026-10-27.
 
 [Primary source](https://world.hey.com/dhh/basecamp-becomes-agent-accessible-3ae6b949)
 
 **Inspected scope:** Public authored article, including its relevant testing, tool, or product discussion.
 
-**Finding:** Announces team-built agent interfaces after declining to ship insufficiently useful native AI features.
+**Finding:** Announces team-built agent interfaces (revamped API, `basecamp` CLI, and agent skill instructions) after declining to ship native in-app AI experiments in Basecamp and Fizzy that proved insufficiently useful.
 
 **Supports:** C08, C09, C12.
 
@@ -88,13 +88,13 @@ All twelve public authored articles were inspected on **26 October 2026**. Dates
 
 ## S05 · Endless execution
 
-**Author:** David Heinemeier Hansson · **Published:** 2026-08-09 · **Inspected:** 2026-10-26.
+**Author:** David Heinemeier Hansson · **Published:** 2026-08-09 · **Inspected:** 2026-10-27.
 
 [Primary source](https://world.hey.com/dhh/endless-execution-4157e065)
 
 **Inspected scope:** Public authored article, including its relevant testing, tool, or product discussion.
 
-**Finding:** Expresses enthusiasm for rapidly executing ideas; no comparative measurement is supplied.
+**Finding:** Describes working with coding agents as "a little genie trapped in my machine" that grants the liberation of "endless execution"—turning every idea or whim into reality and calling it the most fun he has had in 40+ years of computing.
 
 **Supports:** C12 and historical context.
 
@@ -104,17 +104,17 @@ All twelve public authored articles were inspected on **26 October 2026**. Dates
 
 ## S06 · Over my dead pencil
 
-**Author:** David Heinemeier Hansson · **Published:** 2026-10-06 · **Inspected:** 2026-10-26.
+**Author:** David Heinemeier Hansson · **Published:** 2026-10-06 · **Inspected:** 2026-10-27.
 
 [Primary source](https://world.hey.com/dhh/over-my-dead-pencil-fb0f3647)
 
 **Inspected scope:** Public authored article, including its relevant testing, tool, or product discussion.
 
-**Finding:** Argues that agent-written code will dominate professional development; an economic forecast and recommendation, not a controlled result.
+**Finding:** Follows up on his Rails World 2026 remarks ("it's time to put down the pencils. We're not going to write the vast majority of code by hand any longer"), arguing that manually typing out lines of Ruby, Rust, or C++ is no longer economically viable. Frames AI agents as fast, capable "coworkers" who still need occasional help and direction, and predicts a software development bloom as costs plummet.
 
-**Supports:** C01.
+**Supports:** C01, C06, C07.
 
-**Limits:** Room poll and predictions are not representative experimental evidence. Linked keynote was not independently transcribed.
+**Limits:** Room poll and economic predictions are not controlled experimental evidence. The linked Rails World 2026 keynote video was not independently transcribed in this register.
 
 <a id="s07"></a>
 

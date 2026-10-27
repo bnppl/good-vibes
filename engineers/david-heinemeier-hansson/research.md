@@ -2,15 +2,15 @@
 title: David Heinemeier Hansson — detailed research
 parent: David Heinemeier Hansson
 nav_order: 1
-last_updated: '2026-10-26'
+last_updated: '2026-10-27'
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-10-27'
+research_checked: '2026-10-27'
 cache_schema: 1
 ---
 
-> **Scope update — 26 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
+> **Scope update — 27 October 2026:** Start with [recent AI evidence](recent-ai.md). The material below retains earlier principles, dated reports and our optional adaptations. It must not be read as a complete current personal AI workflow.
 
 # David Heinemeier Hansson — a dated, changing approach
 
@@ -18,17 +18,17 @@ cache_schema: 1
 
 ## Approach in brief
 
-**Stated.** On 6 October 2026 DHH argues that programmers should embrace agent-written code, presenting the shift as an economic and professional forecast. That is advocacy, not a controlled productivity result. [S06](sources.md#s06)
+**Stated.** On 6 October 2026 DHH tells fellow programmers that it is time to "put down the pencils" because writing the vast majority of code in Ruby, Rust, or C++ by hand is no longer economically viable, framing coding agents as fast new "coworkers." That combines a personal/industry workflow shift with an economic forecast, not a controlled productivity benchmark. [S06](sources.md#s06)
 
-**Our synthesis:** this profile is most useful as a chronology of changing judgment about programming, tools, testing, and product usefulness. It would be misleading to assemble statements from different years into one timeless “DHH method.” The detailed task below is our adaptation; no inspected source shows him implementing it.
+**Our synthesis:** this profile is most useful as a chronology of changing judgment about programming, tools, testing, and product usefulness. It would be misleading to assemble statements from different years—or even January 2026 versus October 2026—into one timeless “DHH method.” The detailed task below is our adaptation; no inspected source shows him implementing it.
 
-Research checked and cut off on **26 October 2026**. Only public authored articles were inspected. Private sessions, paid books, present company policies, exact installed versions, and a complete current personal harness configuration were not accessed.
+Research checked and cut off on **27 October 2026**. Only public authored articles were inspected. Private sessions, paid books, present company policies, exact installed versions, and a complete current personal harness configuration were not accessed.
 
 ## Techniques and principles
 
 ### Keep the timeline attached
 
-In May 2025 he describes enjoying hand-written Ruby while using LLMs conversationally. The January 2026 account instead reports supervised agent delegation. August's essay expresses enthusiasm for rapidly exploring ideas, and October's argument is stronger still. These dates belong to the claims. [S01](sources.md#s01) · [S02](sources.md#s02) · [S05](sources.md#s05) · [S06](sources.md#s06)
+In May 2025 he describes enjoying hand-written Ruby while using LLMs conversationally rather than letting inline autocomplete take the keyboard. The January 2026 account reports promoting terminal agents (OpenCode, Claude Code) into supervised collaboration while explicitly noting he was then "nowhere close to the claims of having agents write 90%+ of the code." August's essay celebrates "endless execution" with coding agents, and October's essay declares "pencils down" on writing the vast majority of code by hand. These dates belong to the claims. [S01](sources.md#s01) · [S02](sources.md#s02) · [S05](sources.md#s05) · [S06](sources.md#s06)
 
 **Suggested adaptation.** When adopting an engineer's advice, record the task, tool generation, and observation date alongside it. A preference formed during autocomplete usage need not predict how someone uses terminal agents a year later. A later enthusiastic essay also does not retroactively demonstrate that every earlier limitation disappeared.
 

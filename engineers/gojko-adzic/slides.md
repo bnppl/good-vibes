@@ -2,11 +2,11 @@
 title: Gojko Adžić — bite-sized ideas
 parent: Gojko Adžić Slides
 nav_order: 1
-last_updated: '2026-10-26'
+last_updated: '2026-10-27'
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-10-27'
+research_checked: '2026-10-27'
 cache_schema: 1
 nav_exclude: true
 derived_from: engineers/gojko-adzic/recent-ai.md
@@ -21,13 +21,13 @@ Publications since 1 October 2025. Source dates and evidence kinds appear on eac
 
 ### A pinned lights-on software factory
 
-> **His factory checks the combined result after the workers finish.**
+> **Replace "dark factory" markdown prayers with deterministic orchestration and visible decisions.**
 >
-> Published artifact · published 2026-10-22. The cache records an October 2026 revision of the public lights-on factory: declared-file work, structured progress, worker checks, integrated gates and command regulation. September conference slides supply the supervision argument. The repository is an inspectable artifact; no factory run or benchmark was reproduced.
+> Published artifact · published 2026-10-22. The cache records the October 2026 revision of his public lights-on factory (based on Votito): interactive `/impact-analysis`, declared-file `.plan.json` steps, failing-test-first `workflow-worker` instructions, merged-tree `workflow-gate` checks, a `workflow-check` skeptic, and Bash regulation. September slides (`S01`) frame the `Dictating → Regulating → Supervising` path.
 
-**In the wild:** Practice period: Pinned repository revision; not an executed run.
+**In the wild:** Compiling `plans/<name>.plan.json` into a deterministic `.workflow.mjs` script with `bin/regulate.js` and `lint-edited-file.js` hooks rather than relying on unconstrained LLM orchestration (inspected artifact; not executed here).
 
-**Takeaway:** Distinguish the reported work from a complete daily workflow.
+**Takeaway:** Move repeatable orchestration and guardrails from LLM inference into deterministic computation while keeping human decisions visible.
 
 [Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/WORKFLOW.md)
 
@@ -37,15 +37,15 @@ Publications since 1 October 2025. Source dates and evidence kinds appear on eac
 
 ### The unrequested product
 
-> **Correct code can still answer the wrong question.**
+> **Flawless agent-generated code can still cook a dish nobody ordered.**
 >
-> Commentary · published 2026-06-24. Adžić’s product essay argues that easier technical production leaves customer understanding and prioritisation essential. Its future-role claims are predictions, not measured outcomes.
+> Commentary · published 2026-06-24. Adžić’s June 2026 product essay warns of a "Chef Gusteau" trap: as AI coding agents make technical implementation effortless, builders lacking product management skills risk shipping "junk food"—a beautifully engineered dish that nobody ordered.
 
-**In the wild:** Authored product-role forecast: easier production increases the importance of deciding what to build; the forecast is not a measured outcome.
+**In the wild:** Authored product-role forecast (`S10`): easier code production increases the bottleneck on customer empathy, hypothesis testing, and scoping.
 
-**Takeaway:** Verify the product decision as well as its implementation.
+**Takeaway:** Verify the product decision and scope (`/impact-analysis`) as rigorously as the implementation.
 
-[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://gojko.net/2026/06/24/everyone-will-be-a-pm/)
+[Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md#c01) · [Primary source](https://gojko.net/2026/06/24/everyone-will-be-a-pm/)
 
 ---
 
