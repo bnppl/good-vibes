@@ -193,3 +193,5 @@ You don't need Claude Code to use the content — everything is plain markdown. 
 - [`learning-plan.md`](learning-plan.md) — the study roadmap
 
 Explore [company subway routes](https://bnppl.github.io/good-vibes/companies/subway-routes/): source-backed AI-assisted engineering cases, with explicit endpoints and exclusions.
+
+[Project bootstrap wizard](https://bnppl.github.io/good-vibes/pipeline/bootstrap/) curates sourced tools and processes into a downloadable agent setup prompt.

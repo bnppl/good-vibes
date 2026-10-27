@@ -1,0 +1,898 @@
+{
+  "schema": 1,
+  "reviewed": "2026-10-27",
+  "items": {
+    "define-1": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "define-2": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "define-3": {
+      "mode": "process",
+      "instructions": [
+        "Record observable acceptance examples, edge cases and non-goals in docs/acceptance.md before implementation. Keep the human-agreed expectations separate from the generated solution."
+      ]
+    },
+    "define-4": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "define-5": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "define-6": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "define-7": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "define-8": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "define-9": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "define-10": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "plan-1": {
+      "mode": "process",
+      "instructions": [
+        "Split the first useful feature into a small reviewable change. Record the plan, allowed files and stop condition; finish one verified slice before adding parallelism."
+      ]
+    },
+    "plan-2": {
+      "mode": "research",
+      "instructions": [
+        "Create thin task records with outcome, allowed files, dependencies and exact verification. Only dependency-ready tasks may execute.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "plan-3": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "plan-4": {
+      "mode": "artifact",
+      "instructions": [
+        "Read the public Lights-on Software Factory onboarding and current repository rules. Adapt its sample application, worker boundaries and make gates to the requested stack. Preserve its explicit test-first worker rule. Do not imply that this reproduces private Votito infrastructure."
+      ]
+    },
+    "plan-5": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "plan-6": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for Mux. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "plan-7": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "plan-8": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "plan-9": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for Temporal. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "plan-10": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "plan-11": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "plan-12": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "context-1": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "context-2": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect Agent Scripts as a published reference. Adopt only relevant repository-owned guidance/helpers after checking licensing, host support and external side effects; do not copy another project’s assumptions wholesale."
+      ]
+    },
+    "context-3": {
+      "mode": "process",
+      "instructions": [
+        "Create AGENTS.md as canonical shared project guidance. Record commands, architecture, test ownership and consequential-action boundaries; distinguish written guidance from enforced controls."
+      ]
+    },
+    "context-4": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the selected public engineering-skills repository. Install or adapt only the chosen capabilities for the selected host and document which files and triggers were added."
+      ]
+    },
+    "context-5": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "context-6": {
+      "mode": "process",
+      "instructions": [
+        "Create repository-owned agent instructions describing architecture, actual setup/test commands, file boundaries, review authority and known limitations. Add host-specific instruction files only for the selected agent hosts, linked to a canonical source."
+      ]
+    },
+    "context-7": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for Obsidian. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "context-8": {
+      "mode": "process",
+      "instructions": [
+        "Version a concise plan, decisions and handoff record containing changed files, exact checks and unresolved issues. Never claim that chat/task persistence proves application data durability."
+      ]
+    },
+    "context-9": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "context-10": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "context-11": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "context-12": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "context-13": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "context-14": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "build-1": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for Claude Code. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "build-2": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for OpenAI Codex. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "build-3": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for GitHub Copilot CLI. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "build-4": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for Visual Studio Code. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "build-5": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for Cursor. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "build-6": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for Amp. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "build-7": {
+      "mode": "public",
+      "instructions": [
+        "Resolve the official current installation and setup documentation for OpenCode. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.",
+        "Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name."
+      ]
+    },
+    "build-8": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "build-9": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "build-10": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "build-11": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "build-12": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "build-13": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "build-14": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "build-15": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "build-16": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "verify-1": {
+      "mode": "process",
+      "instructions": [
+        "For each agreed behaviour, write a focused failing test, run it and confirm it fails for the intended reason, implement the smallest change, then rerun. Keep acceptance expectations independently reviewable."
+      ]
+    },
+    "verify-2": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the selected pinned skill and current installation/host instructions before adopting it. Apply red-green at human-agreed public seams; keep its review/refactoring boundary explicit."
+      ]
+    },
+    "verify-3": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "verify-4": {
+      "mode": "process",
+      "instructions": [
+        "Agree acceptance outcomes first. Implement the bounded feature, then add and run tests in the same context. Label this tests-after implementation; do not present it as TDD."
+      ]
+    },
+    "verify-5": {
+      "mode": "research",
+      "instructions": [
+        "Choose and configure the relevant ESLint, Semgrep and dependency-cruiser sensors for the actual languages. Explain unsupported checks; do not add JavaScript tooling to a non-JavaScript project without a real target.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "verify-6": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "verify-7": {
+      "mode": "public",
+      "instructions": [
+        "Add a minimal Playwright browser smoke test for one user-visible journey on the requested web UI. Configure a local development-server fixture and capture failure artifacts. Defer this item with a reason if the project has no browser surface.",
+        "Resolve the official current installation and setup documentation for Playwright. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable."
+      ]
+    },
+    "verify-8": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "verify-9": {
+      "mode": "process",
+      "instructions": [
+        "Run and record an existing behavioural baseline before migration. Protect that oracle from silent weakening; port one component, compare outcomes, and record coverage gaps. A new project without a baseline must establish one first."
+      ]
+    },
+    "verify-10": {
+      "mode": "process",
+      "instructions": [
+        "Configure the stack’s formatter, linter, type/static checks and focused behavioural tests. Expose exact local commands and ensure a failing check returns a nonzero exit code."
+      ]
+    },
+    "verify-11": {
+      "mode": "process",
+      "instructions": [
+        "Expose independent verification commands separate from the implementation agent’s completion claim. Require them before a proposed PR; implementation must not silently weaken the checks."
+      ]
+    },
+    "verify-12": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "verify-13": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "verify-14": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "verify-15": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "review-1": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "review-2": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "review-3": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "review-4": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "review-5": {
+      "mode": "process",
+      "instructions": [
+        "Create a review packet containing intent, diff, tests actually run, results and remaining gaps. Automated review is advisory; human acceptance remains a separate decision."
+      ]
+    },
+    "review-6": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "review-7": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "review-8": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "ship-1": {
+      "mode": "process",
+      "instructions": [
+        "Run cheap local checks first. Bound expensive CI-repair attempts using the configured retry budget. If checks remain red, preserve failure evidence and hand back without merging."
+      ]
+    },
+    "ship-2": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "ship-3": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "ship-4": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "ship-5": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "ship-6": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "ship-7": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "ship-8": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "ship-9": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "ship-10": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "ship-11": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "learn-1": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "learn-2": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "learn-3": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "learn-4": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "learn-5": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "learn-6": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "learn-7": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "platform-1": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-2": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-3": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-4": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-5": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-6": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-7": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "platform-8": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the published regulator/hook implementation. Adapt role rules to the actual project commands, and test allowed and denied examples. Document coverage gaps; a hook alone is not full containment."
+      ]
+    },
+    "platform-9": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "platform-10": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "platform-11": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "context-15": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-12": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "verify-16": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "build-17": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "build-18": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "plan-13": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "build-19": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "platform-13": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "define-11": {
+      "mode": "research",
+      "instructions": [
+        "Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "context-16": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "context-17": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-14": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-15": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "review-9": {
+      "mode": "internal",
+      "instructions": [
+        "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
+        "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "build-20": {
+      "mode": "process",
+      "instructions": [
+        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
+        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+      ]
+    },
+    "build-21": {
+      "mode": "public",
+      "instructions": [
+        "Scaffold Next.js only if it fits the requested stack. Read current official setup documentation, pin compatible dependencies and add one working local route plus a test.",
+        "Resolve the official current installation and setup documentation for Next.js. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable."
+      ]
+    },
+    "context-18": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect Agent Skills’ current host and installation instructions. Select relevant lifecycle commands and document their names/namespace; do not assume every host exposes identical slash commands."
+      ]
+    },
+    "verify-17": {
+      "mode": "public",
+      "instructions": [
+        "Use the public Rodney CLI only after checking current installation and browser prerequisites. Exercise a running local web UI and capture observable behaviour. Do not substitute browser interaction for assertions.",
+        "Resolve the official current installation and setup documentation for Rodney. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable."
+      ]
+    },
+    "review-10": {
+      "mode": "public",
+      "instructions": [
+        "Use Showboat to record a small executed demonstration and its real output. Run its documented verification/replay flow. Do not fabricate captured output or claim that a recording proves untested requirements.",
+        "Resolve the official current installation and setup documentation for Showboat. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable."
+      ]
+    },
+    "define-12": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "plan-14": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "build-22": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "verify-18": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "review-11": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "ship-12": {
+      "mode": "artifact",
+      "instructions": [
+        "Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.",
+        "Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions."
+      ]
+    },
+    "context-19": {
+      "mode": "public",
+      "instructions": [
+        "Inspect current Beads setup and repository compatibility. Initialise only project-local durable task state needed for the first slice; document how state is versioned and recovered.",
+        "Resolve the official current installation and setup documentation for Beads. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable."
+      ]
+    }
+  }
+}

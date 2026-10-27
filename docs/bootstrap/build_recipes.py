@@ -1,0 +1,45 @@
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2]
+catalog=json.loads((ROOT/'assets/pipeline-catalog.json').read_text())
+public={'build-1':'Claude Code','build-2':'OpenAI Codex','build-3':'GitHub Copilot CLI','build-4':'Visual Studio Code','build-5':'Cursor','build-6':'Amp','build-7':'OpenCode','build-21':'Next.js','verify-7':'Playwright','verify-17':'Rodney','review-10':'Showboat','context-19':'Beads','context-7':'Obsidian','plan-6':'Mux','plan-9':'Temporal'}
+artifacts=['plan-4','context-2','context-4','verify-2','context-18','define-12','plan-14','build-22','verify-18','review-11','ship-12','plan-13','build-19','build-15','platform-8']
+internal=['define-2','define-5','define-10','plan-7','plan-12','context-12','context-14','context-15','context-16','context-17','build-12','build-13','build-14','build-16','build-17','build-18','review-3','review-7','review-9','ship-2','ship-3','ship-4','ship-5','ship-10','platform-1','platform-2','platform-3','platform-4','platform-5','platform-6','platform-11','platform-12','platform-14','platform-15','verify-16']
+custom={
+ 'define-3':['Record observable acceptance examples, edge cases and non-goals in docs/acceptance.md before implementation. Keep the human-agreed expectations separate from the generated solution.'],
+ 'plan-1':['Split the first useful feature into a small reviewable change. Record the plan, allowed files and stop condition; finish one verified slice before adding parallelism.'],
+ 'plan-2':['Create thin task records with outcome, allowed files, dependencies and exact verification. Only dependency-ready tasks may execute.'],
+ 'plan-4':['Read the public Lights-on Software Factory onboarding and current repository rules. Adapt its sample application, worker boundaries and make gates to the requested stack. Preserve its explicit test-first worker rule. Do not imply that this reproduces private Votito infrastructure.'],
+ 'context-6':['Create repository-owned agent instructions describing architecture, actual setup/test commands, file boundaries, review authority and known limitations. Add host-specific instruction files only for the selected agent hosts, linked to a canonical source.'],
+ 'context-3':['Create AGENTS.md as canonical shared project guidance. Record commands, architecture, test ownership and consequential-action boundaries; distinguish written guidance from enforced controls.'],
+ 'verify-1':['For each agreed behaviour, write a focused failing test, run it and confirm it fails for the intended reason, implement the smallest change, then rerun. Keep acceptance expectations independently reviewable.'],
+ 'verify-2':['Inspect the selected pinned skill and current installation/host instructions before adopting it. Apply red-green at human-agreed public seams; keep its review/refactoring boundary explicit.'],
+ 'verify-4':['Agree acceptance outcomes first. Implement the bounded feature, then add and run tests in the same context. Label this tests-after implementation; do not present it as TDD.'],
+ 'verify-7':['Add a minimal Playwright browser smoke test for one user-visible journey on the requested web UI. Configure a local development-server fixture and capture failure artifacts. Defer this item with a reason if the project has no browser surface.'],
+ 'verify-17':['Use the public Rodney CLI only after checking current installation and browser prerequisites. Exercise a running local web UI and capture observable behaviour. Do not substitute browser interaction for assertions.'],
+ 'review-10':['Use Showboat to record a small executed demonstration and its real output. Run its documented verification/replay flow. Do not fabricate captured output or claim that a recording proves untested requirements.'],
+ 'context-19':['Inspect current Beads setup and repository compatibility. Initialise only project-local durable task state needed for the first slice; document how state is versioned and recovered.'],
+ 'verify-5':['Choose and configure the relevant ESLint, Semgrep and dependency-cruiser sensors for the actual languages. Explain unsupported checks; do not add JavaScript tooling to a non-JavaScript project without a real target.'],
+ 'verify-10':['Configure the stack’s formatter, linter, type/static checks and focused behavioural tests. Expose exact local commands and ensure a failing check returns a nonzero exit code.'],
+ 'verify-9':['Run and record an existing behavioural baseline before migration. Protect that oracle from silent weakening; port one component, compare outcomes, and record coverage gaps. A new project without a baseline must establish one first.'],
+ 'verify-11':['Expose independent verification commands separate from the implementation agent’s completion claim. Require them before a proposed PR; implementation must not silently weaken the checks.'],
+ 'review-5':['Create a review packet containing intent, diff, tests actually run, results and remaining gaps. Automated review is advisory; human acceptance remains a separate decision.'],
+ 'ship-1':['Run cheap local checks first. Bound expensive CI-repair attempts using the configured retry budget. If checks remain red, preserve failure evidence and hand back without merging.'],
+ 'context-8':['Version a concise plan, decisions and handoff record containing changed files, exact checks and unresolved issues. Never claim that chat/task persistence proves application data durability.'],
+ 'build-21':['Scaffold Next.js only if it fits the requested stack. Read current official setup documentation, pin compatible dependencies and add one working local route plus a test.'],
+ 'context-2':['Inspect Agent Scripts as a published reference. Adopt only relevant repository-owned guidance/helpers after checking licensing, host support and external side effects; do not copy another project’s assumptions wholesale.'],
+ 'context-4':['Inspect the selected public engineering-skills repository. Install or adapt only the chosen capabilities for the selected host and document which files and triggers were added.'],
+ 'context-18':['Inspect Agent Skills’ current host and installation instructions. Select relevant lifecycle commands and document their names/namespace; do not assume every host exposes identical slash commands.'],
+ 'platform-8':['Inspect the published regulator/hook implementation. Adapt role rules to the actual project commands, and test allowed and denied examples. Document coverage gaps; a hook alone is not full containment.'],
+}
+items={}
+for item in catalog['items']:
+ id=item['id'];kind='public' if id in public else 'artifact' if id in artifacts else 'internal' if id in internal else 'process' if item['type']=='process' else 'research'
+ if kind=='public':steps=[f'Resolve the official current installation and setup documentation for {public[id]}. Check OS, language/runtime, account/licence and host prerequisites; pin compatible project dependencies where applicable.','Install or configure the selected capability in the requested scope, then run the documented version/help or smallest meaningful smoke check. Record exact commands and results; never invent an install command from a product name.']
+ elif kind=='artifact':steps=['Inspect the linked published artifact and its current setup documentation. Check licence, supported agent host, prerequisites and relevant entry points before adapting it.','Adopt only the selected capability, replace sample-project assumptions, and validate one small end-to-end operation. Retain research revision links separately from installed versions.']
+ elif kind=='internal':steps=['Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.','Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure.']
+ elif kind=='process':steps=['Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.','Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author.']
+ else:steps=['Availability and reproducible setup are not established by this catalogue entry. Inspect the primary sources and locate authoritative project documentation before choosing any implementation.','Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work.']
+ if id in custom:steps=custom[id]+[s for s in steps if 'Resolve the official' in s or 'Do not install a guessed' in s]
+ items[id]=dict(mode=kind,instructions=steps)
+(ROOT/'assets/bootstrap-recipes.json').write_text(json.dumps(dict(schema=1,reviewed='2026-10-27',items=items),ensure_ascii=False,indent=2)+'\n')

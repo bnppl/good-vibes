@@ -18,6 +18,7 @@ A personal learning wiki on **context engineering** and **spec-driven developmen
 
 | Section | What It Covers |
 |---|---|
+| [Project bootstrap wizard](pipeline/bootstrap.html) | Curate sourced tools and processes, then download an agent setup prompt |
 | [Context Engineering](context-engineering/index.md) | The guide: mental models, layers, agentic dev patterns |
 | [Agent Architecture Patterns](agent-patterns/index.md) | Reasoning loops, multi-agent coordination, production lessons |
 | [Spec-Driven Development Frameworks](frameworks/index.md) | Survey of nine SDD tools |

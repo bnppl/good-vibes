@@ -2,6 +2,11 @@
   title: Tooling & combined maps
   description: Follow tools, skills and processes across individuals and companies.
   items:
+    - title: Project bootstrap wizard
+      url: /pipeline/bootstrap/
+      description: Curate sourced tools and processes, set project rules, and download an agent-ready bootstrap-prompt.md.
+      label: Build your own
+      tags: wizard new project bootstrap prompt markdown md setup scaffold curate starter tools processes
     - title: Mobile tooling subway
       url: /pipeline/subway/mobile/
       description: A vertical map with large tap targets, inline sources and a stage picker.
