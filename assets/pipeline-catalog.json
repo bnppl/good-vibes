@@ -185,7 +185,7 @@
       "path": "engineers/matt-pocock",
       "summary": "Pinned October 2026 composable skills; displayed article update dates do not establish original publication.",
       "id": "engineers/matt-pocock",
-      "observations": 7
+      "observations": 8
     },
     {
       "name": "Peter Steinberger",
@@ -193,7 +193,7 @@
       "path": "engineers/peter-steinberger",
       "summary": "October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.",
       "id": "engineers/peter-steinberger",
-      "observations": 6
+      "observations": 7
     },
     {
       "name": "Robert C. Martin",
@@ -1107,6 +1107,28 @@
     {
       "id": "context-3",
       "stage": "context",
+      "type": "process",
+      "name": "AGENTS.MD shared instructions",
+      "usage": "Agent Scripts publishes review and publication authority in its instruction file. Inspected instructions are not proof of runtime enforcement.",
+      "observations": [
+        {
+          "entity": "engineers/peter-steinberger",
+          "claim": "Pinned guidance documents review and publication authority; Oracle adds scoped preview advice.",
+          "kind": "Published artifact",
+          "published": "2026-10-20",
+          "practice": "Pinned repository revision; not an executed run",
+          "checked": "2026-10-26",
+          "qualification": "Instructions and tool documentation are not proof of resource-level enforcement, safe permissions, or compliance.",
+          "source": "https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/AGENTS.MD",
+          "detail": "/engineers/peter-steinberger/recent-ai.html#c11",
+          "register": "/engineers/peter-steinberger/sources.html#s07",
+          "format": "Repository artifact"
+        }
+      ]
+    },
+    {
+      "id": "context-4",
+      "stage": "context",
       "type": "skill",
       "name": "Composable engineering skills",
       "usage": "Publish composable skills with repository setup instructions; inspection does not establish runtime compatibility.",
@@ -1127,7 +1149,7 @@
       ]
     },
     {
-      "id": "context-4",
+      "id": "context-5",
       "stage": "context",
       "type": "process",
       "name": "Scoped repository rules",
@@ -1162,7 +1184,7 @@
       ]
     },
     {
-      "id": "context-5",
+      "id": "context-6",
       "stage": "context",
       "type": "process",
       "name": "Repository instruction files",
@@ -1210,7 +1232,7 @@
       ]
     },
     {
-      "id": "context-6",
+      "id": "context-7",
       "stage": "context",
       "type": "tool",
       "name": "Obsidian vault",
@@ -1232,7 +1254,7 @@
       ]
     },
     {
-      "id": "context-7",
+      "id": "context-8",
       "stage": "context",
       "type": "process",
       "name": "Structured task records & handoffs",
@@ -1280,7 +1302,7 @@
       ]
     },
     {
-      "id": "context-8",
+      "id": "context-9",
       "stage": "context",
       "type": "process",
       "name": "Pi session branches & local task records",
@@ -1302,7 +1324,7 @@
       ]
     },
     {
-      "id": "context-9",
+      "id": "context-10",
       "stage": "context",
       "type": "process",
       "name": "Interrogatory LLM",
@@ -1324,7 +1346,7 @@
       ]
     },
     {
-      "id": "context-10",
+      "id": "context-11",
       "stage": "context",
       "type": "process",
       "name": "Versioned rules, templates & prompts",
@@ -1346,7 +1368,7 @@
       ]
     },
     {
-      "id": "context-11",
+      "id": "context-12",
       "stage": "context",
       "type": "process",
       "name": "Shared organisational context",
@@ -1394,7 +1416,7 @@
       ]
     },
     {
-      "id": "context-12",
+      "id": "context-13",
       "stage": "context",
       "type": "process",
       "name": "Migration guides improved from failures",
@@ -1416,7 +1438,7 @@
       ]
     },
     {
-      "id": "context-13",
+      "id": "context-14",
       "stage": "context",
       "type": "tool",
       "name": "Per-file / per-PR external state",
@@ -1996,6 +2018,28 @@
     {
       "id": "verify-2",
       "stage": "verify",
+      "type": "skill",
+      "name": "tdd (Matt Pocock)",
+      "usage": "Pinned SKILL.md instructions for red-green at human-agreed public seams; refactoring is handled during review.",
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The pinned October skill specifies red-green at human-agreed public seams; refactoring moves to review.",
+          "kind": "Published artifact",
+          "published": "2026-10-19",
+          "practice": "Pinned skill revision; not an independently observed session",
+          "checked": "2026-10-26",
+          "qualification": "Inspected instructions, not a runtime test. Old red-green-refactor trigger wording does not define the current body.",
+          "source": "https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/tdd/SKILL.md",
+          "detail": "/engineers/matt-pocock/recent-ai.html#c04",
+          "register": "/engineers/matt-pocock/sources.html#s03",
+          "format": "Repository artifact"
+        }
+      ]
+    },
+    {
+      "id": "verify-3",
+      "stage": "verify",
       "type": "process",
       "name": "Agent-loop TDD experiments",
       "usage": "Compare human checkpoints with agent-internal TDD; narrow results do not establish a universal winner.",
@@ -2016,7 +2060,7 @@
       ]
     },
     {
-      "id": "verify-3",
+      "id": "verify-4",
       "stage": "verify",
       "type": "process",
       "name": "Tests after implementation",
@@ -2038,7 +2082,7 @@
       ]
     },
     {
-      "id": "verify-4",
+      "id": "verify-5",
       "stage": "verify",
       "type": "tool",
       "name": "ESLint, Semgrep & dependency-cruiser",
@@ -2060,7 +2104,7 @@
       ]
     },
     {
-      "id": "verify-5",
+      "id": "verify-6",
       "stage": "verify",
       "type": "process",
       "name": "Unit tests, CRAP & mutation checks",
@@ -2082,7 +2126,7 @@
       ]
     },
     {
-      "id": "verify-6",
+      "id": "verify-7",
       "stage": "verify",
       "type": "tool",
       "name": "Playwright",
@@ -2104,7 +2148,7 @@
       ]
     },
     {
-      "id": "verify-7",
+      "id": "verify-8",
       "stage": "verify",
       "type": "process",
       "name": "Browser-driven QA",
@@ -2126,7 +2170,7 @@
       ]
     },
     {
-      "id": "verify-8",
+      "id": "verify-9",
       "stage": "verify",
       "type": "process",
       "name": "Existing tests as a migration oracle",
@@ -2174,7 +2218,7 @@
       ]
     },
     {
-      "id": "verify-9",
+      "id": "verify-10",
       "stage": "verify",
       "type": "process",
       "name": "Lint, types, formatting & targeted tests",
@@ -2209,7 +2253,7 @@
       ]
     },
     {
-      "id": "verify-10",
+      "id": "verify-11",
       "stage": "verify",
       "type": "process",
       "name": "Independent verifiers before PR creation",
@@ -2231,7 +2275,7 @@
       ]
     },
     {
-      "id": "verify-11",
+      "id": "verify-12",
       "stage": "verify",
       "type": "process",
       "name": "Executable security reproductions",
@@ -2266,7 +2310,7 @@
       ]
     },
     {
-      "id": "verify-12",
+      "id": "verify-13",
       "stage": "verify",
       "type": "process",
       "name": "Risk-specific command / replication / performance checks",
@@ -2288,7 +2332,7 @@
       ]
     },
     {
-      "id": "verify-13",
+      "id": "verify-14",
       "stage": "verify",
       "type": "process",
       "name": "Distribution checks after extraction",
@@ -2310,7 +2354,7 @@
       ]
     },
     {
-      "id": "verify-14",
+      "id": "verify-15",
       "stage": "verify",
       "type": "environment",
       "name": "Preview deployments",
@@ -3510,7 +3554,7 @@
       ]
     },
     {
-      "id": "context-14",
+      "id": "context-15",
       "stage": "context",
       "type": "tool",
       "name": "Toolshed MCP",
@@ -3554,7 +3598,7 @@
       ]
     },
     {
-      "id": "verify-15",
+      "id": "verify-16",
       "stage": "verify",
       "type": "harness",
       "name": "Dispatch",
@@ -3721,7 +3765,7 @@
       ]
     },
     {
-      "id": "context-15",
+      "id": "context-16",
       "stage": "context",
       "type": "tool",
       "name": "Engineering Codex (Cloudflare)",
@@ -3743,7 +3787,7 @@
       ]
     },
     {
-      "id": "context-16",
+      "id": "context-17",
       "stage": "context",
       "type": "tool",
       "name": "S3 workflow state",
@@ -3875,7 +3919,7 @@
       ]
     },
     {
-      "id": "context-17",
+      "id": "context-18",
       "stage": "context",
       "type": "skill",
       "name": "Agent Skills lifecycle commands",
@@ -3897,7 +3941,7 @@
       ]
     },
     {
-      "id": "verify-16",
+      "id": "verify-17",
       "stage": "verify",
       "type": "tool",
       "name": "Rodney",
@@ -4007,7 +4051,7 @@
       ]
     },
     {
-      "id": "verify-17",
+      "id": "verify-18",
       "stage": "verify",
       "type": "skill",
       "name": "Agent Skills /test",
@@ -4073,7 +4117,7 @@
       ]
     },
     {
-      "id": "context-18",
+      "id": "context-19",
       "stage": "context",
       "type": "tool",
       "name": "Beads",

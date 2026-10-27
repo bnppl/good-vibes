@@ -207,6 +207,12 @@ Skill. Use canonical shared instructions and repository-owned skills.
 
 - **Peter Steinberger · Published artifact** — Pinned October 2026 documentation makes shared instructions and repo-owned skills canonical. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/README.md) · [Cached claim](../engineers/peter-steinberger/recent-ai.md#c08). Publication/revision: 2026-10-20. Practice: Pinned repository revision; not an executed run. Limit: Demonstrated means an inspected published design, not an executed synchronization or complete private memory stack.
 
+### AGENTS.MD shared instructions
+
+Process. Agent Scripts publishes review and publication authority in its instruction file. Inspected instructions are not proof of runtime enforcement.
+
+- **Peter Steinberger · Published artifact** — Pinned guidance documents review and publication authority; Oracle adds scoped preview advice. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/AGENTS.MD) · [Cached claim](../engineers/peter-steinberger/recent-ai.md#c11). Publication/revision: 2026-10-20. Practice: Pinned repository revision; not an executed run. Limit: Instructions and tool documentation are not proof of resource-level enforcement, safe permissions, or compliance.
+
 ### Composable engineering skills
 
 Skill. Publish composable skills with repository setup instructions; inspection does not establish runtime compatibility.
@@ -469,6 +475,12 @@ Process. Use failing examples before implementation. Recommendation, published s
 - **Simon Willison · Recommendation** — Use red/green TDD and complement automated checks with exploratory execution of actual behaviour. [Primary evidence](https://simonwillison.net/guides/agentic-engineering-patterns/agentic-manual-testing/) · [Cached claim](../engineers/simon-willison/recent-ai.md#c04). Publication/revision: 2026 (guide began 2026-02-23; chapter date unknown). Practice: Living guide; exact practice dates not established. Limit: Relevant sources S02–S04; a green suite does not establish every requirement.
 - **Matt Pocock · Published artifact** — The pinned October skill specifies red-green at human-agreed public seams; refactoring moves to review. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/tdd/SKILL.md) · [Cached claim](../engineers/matt-pocock/recent-ai.md#c04). Publication/revision: 2026-10-19. Practice: Pinned skill revision; not an independently observed session. Limit: Inspected instructions, not a runtime test. Old red-green-refactor trigger wording does not define the current body.
 - **Gojko Adžić · Published artifact** — The published factory agent instructions require `workflow-worker` agents to write a failing test before implementation and run file-scoped checks, followed by `workflow-gate` merged-tree checks (up to three rework rounds) and a read-only `workflow-check` skeptic. [Primary evidence](https://github.com/gojko/lights-on-software-factory/blob/7e8ee8b4dcd9857da48845b187540e3e1891c70f/workspace/.claude/agents/workflow-worker.md) · [Cached claim](../engineers/gojko-adzic/recent-ai.md#c04). Publication/revision: 2026-10-22. Practice: Pinned repository revision; not an executed run. Limit: Inspected instructions, not observed execution. Writing a failing test first is explicit; actual red-phase execution and adherence were not verified. Later gates do not imply tests-after development.
+
+### tdd (Matt Pocock)
+
+Skill. Pinned SKILL.md instructions for red-green at human-agreed public seams; refactoring is handled during review.
+
+- **Matt Pocock · Published artifact** — The pinned October skill specifies red-green at human-agreed public seams; refactoring moves to review. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/tdd/SKILL.md) · [Cached claim](../engineers/matt-pocock/recent-ai.md#c04). Publication/revision: 2026-10-19. Practice: Pinned skill revision; not an independently observed session. Limit: Inspected instructions, not a runtime test. Old red-green-refactor trigger wording does not define the current body.
 
 ### Agent-loop TDD experiments
 
@@ -904,8 +916,8 @@ All 40 profiles were reviewed. Missing observations indicate a gap in this curat
 - [Jason Liu](../engineers/jason-liu/index.md): 6 indexed evidence associations. May/June 2026: Codex workstreams, explicit versioned memory, voice input and browser review; full October stack unknown.
 - [Kent Beck](../engineers/kent-beck/index.md): 1 indexed evidence associations. April 2026 sponsored Intent session on a Go radix tree. BPlusTree3 is background; its recent activity is not established here.
 - [Martin Fowler](../engineers/martin-fowler/index.md): 2 indexed evidence associations. May 2026 context-interview trial; current coding tools and release setup not established. Pi/gptel mentions are interest only.
-- [Matt Pocock](../engineers/matt-pocock/index.md): 7 indexed evidence associations. Pinned October 2026 composable skills; displayed article update dates do not establish original publication.
-- [Peter Steinberger](../engineers/peter-steinberger/index.md): 6 indexed evidence associations. October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.
+- [Matt Pocock](../engineers/matt-pocock/index.md): 8 indexed evidence associations. Pinned October 2026 composable skills; displayed article update dates do not establish original publication.
+- [Peter Steinberger](../engineers/peter-steinberger/index.md): 7 indexed evidence associations. October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.
 - [Robert C. Martin](../engineers/robert-c-martin/index.md): 5 indexed evidence associations. September 2026 interview: Grok TUI, prior Codex/Claude, above-code supervision; SwarmForge is a separately dated artifact.
 - [Simon Willison](../engineers/simon-willison/index.md): 7 indexed evidence associations. Documented examples include Claude Code, Codex, Rodney, Showboat and Git; no complete private setup established.
 - [Steve Yegge](../engineers/steve-yegge/index.md): 3 indexed evidence associations. Beads and Gas Town are public ecosystem tools; April Gas City endorsement and later private Wheelhouse account have distinct provenance.

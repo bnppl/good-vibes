@@ -81,7 +81,7 @@
     $('stage-title').textContent = current ? current.name : 'All stages';
     $('stage-description').textContent = current ? current.description : 'Browse all indexed tools, skills and processes. Expand a card for the attributed evidence.';
     const associations = shown.reduce((n, i) => n + i.observations.length, 0);
-    $('result-count').textContent = `${shown.length} entries · ${associations} attributions`;
+    $('result-count').textContent = `${shown.length} ${shown.length === 1 ? "entry" : "entries"} · ${associations} ${associations === 1 ? "attribution" : "attributions"}`;
     $('cards').replaceChildren(...shown.map(renderCard));
     $('empty').hidden = !!shown.length;
     document.querySelectorAll('[data-stage]').forEach(button => {
