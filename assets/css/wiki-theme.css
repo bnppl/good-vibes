@@ -1,0 +1,164 @@
+/* Just the Docs extension layer. Loaded only by its head_custom hook;
+   slide and visualisation layouts keep their own layout and interactions. */
+body {
+  font-family: var(--gv-font);
+  color: var(--gv-ink);
+  background: var(--gv-paper);
+  line-height: 1.65;
+}
+a { color: var(--gv-green); text-underline-offset: 4px; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+  outline: 3px solid var(--gv-focus);
+  outline-offset: 3px;
+}
+.side-bar, .side-bar + .main .main-header { background: var(--gv-paper); }
+.side-bar, .site-header, .main-header, .main-content hr { border-color: var(--gv-line); }
+.site-title {
+  gap: 10px;
+  color: var(--gv-ink);
+  font-size: 18px !important;
+  font-weight: 800;
+  letter-spacing: -.5px;
+  text-transform: lowercase;
+}
+.gv-brand-mark {
+  flex: 0 0 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--gv-ink);
+  color: var(--gv-lime);
+  font: 24px/1 Georgia, serif;
+  letter-spacing: -2px;
+  padding-right: 2px;
+}
+.site-header .icon { color: var(--gv-green); }
+.site-title:hover, .site-button:hover { background: #e8e9df; }
+.site-nav { padding-top: var(--gv-space-3); }
+.nav-list .nav-list-item { margin: 4px 8px; }
+.site-nav .nav-list .nav-list-item .nav-list-link {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 44px;
+  border-radius: var(--gv-radius);
+  color: var(--gv-muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+.site-nav .nav-list .nav-list-item .nav-list-link:hover,
+.site-nav .nav-list .nav-list-item .nav-list-link.active {
+  background: #e8e9df;
+  background-image: none;
+  color: var(--gv-ink);
+}
+.site-nav .nav-list .nav-list-item .nav-list-link.active {
+  background: var(--gv-ink);
+  color: var(--gv-lime);
+}
+.nav-list .nav-list-item .nav-list-expander { color: var(--gv-green); min-height: 44px; }
+.nav-list .nav-list-item .nav-list-expander:hover { background: #e8e9df; }
+.nav-list-item:has(> .nav-list-link.active) > .nav-list-expander { color: var(--gv-lime); }
+.nav-list-item:has(> .nav-list-link.active) > .nav-list-expander:hover { background: var(--gv-green); }
+.site-footer, .breadcrumb-nav, .search-input, .main-content .text-muted { color: var(--gv-muted); }
+.main-content-wrap { padding-top: var(--gv-space-4); padding-bottom: 64px; }
+.main-content { overflow-wrap: anywhere; }
+.main-content h1, .main-content h2, .main-content h3,
+.main-content h4, .main-content h5, .main-content h6 {
+  color: var(--gv-ink);
+  font-weight: 750;
+  text-transform: none;
+}
+.main-content h1 {
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+  margin-bottom: var(--gv-space-3);
+}
+.main-content h2 { font-size: 26px; letter-spacing: -.03em; margin-top: 40px; }
+.main-content h3 { font-size: 20px; letter-spacing: -.02em; margin-top: 28px; }
+.main-content p, .main-content li { line-height: 1.7; }
+.main-content a:not(.btn):not(.anchor-heading) {
+  background-image: none;
+  text-decoration: underline;
+  text-decoration-color: var(--gv-line);
+}
+.main-content a:hover { text-decoration-color: currentColor !important; }
+.main-content .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 11px 20px;
+  border: 1px solid var(--gv-line);
+  border-radius: var(--gv-radius);
+  background: transparent;
+  color: var(--gv-ink);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: normal;
+  box-shadow: none;
+  text-decoration: none;
+}
+.main-content .btn:hover { background: #e8e9df; }
+.main-content .btn-primary { background: var(--gv-ink); border-color: var(--gv-ink); color: var(--gv-lime); }
+.main-content .btn-primary:hover { background: var(--gv-green); color: var(--gv-lime); }
+.main-content .table-wrapper {
+  border: 1px solid var(--gv-line);
+  border-radius: var(--gv-radius);
+  box-shadow: none;
+}
+.main-content table { background: var(--gv-surface); }
+.main-content th, .main-content td { border-color: var(--gv-line); padding: 14px 16px; }
+.main-content td { background: var(--gv-surface); }
+.main-content th { background: #e8e9df; color: var(--gv-ink); }
+.main-content blockquote {
+  margin: 24px 0;
+  padding: 20px 24px;
+  border: 1px solid var(--gv-line);
+  border-radius: var(--gv-card-radius);
+  background: var(--gv-surface);
+  box-shadow: none;
+  color: var(--gv-ink);
+}
+/* Match the slide palettes without changing the callout semantics. */
+.main-content .hook { background: var(--gv-pink); }
+.main-content .aha { background: var(--gv-blue); }
+.main-content .try-it { background: #e5f0d8; }
+.main-content .hook, .main-content .aha, .main-content .try-it {
+  border: 0;
+  border-radius: var(--gv-card-radius);
+  padding: 20px 24px;
+  box-shadow: none;
+  color: var(--gv-ink);
+}
+.main-content .hook::before, .main-content .aha::before, .main-content .try-it::before {
+  color: var(--gv-green);
+}
+.main-content .highlight, .main-content pre, .main-content code {
+  background: #e8e9df;
+  border-radius: 8px;
+}
+.main-content pre { padding: 16px; }
+.main-content details { margin: 24px 0; padding: 16px 20px; border: 1px solid var(--gv-line); border-radius: var(--gv-radius); background: var(--gv-surface); }
+.main-content summary { cursor: pointer; font-weight: 650; min-height: 28px; }
+.search-input { background: var(--gv-paper); font-family: var(--gv-font); color: var(--gv-ink); }
+.search-input::placeholder { color: var(--gv-muted); }
+.search-results { background: var(--gv-surface); border-color: var(--gv-line); }
+.search-result:hover, .search-result.active { background: #e8e9df; }
+.search-result-title { color: var(--gv-green); }
+.search-result-doc .search-result-icon { color: var(--gv-muted); }
+.gv-wiki-links { display: flex; align-items: center; gap: 16px; padding: 8px 24px 8px 12px; font-size: 12px; font-weight: 650; }
+.gv-wiki-links a { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; white-space: nowrap; }
+@media (max-width: 799px) {
+  .main-content-wrap { padding-top: 24px; }
+  .gv-wiki-links { flex-wrap: wrap; gap: 4px 20px; padding: 8px 16px; border-top: 1px solid var(--gv-line); }
+  .main-content h1 { font-size: clamp(30px, 8vw, 39px); }
+  .main-content h2 { font-size: 24px; }
+  .main-content blockquote { padding: 18px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
