@@ -9,6 +9,8 @@ status: unread
 
 # How companies build software using AI
 
+[Explore the pipeline atlas: tools, skills and processes]({{ '/pipeline/' | relative_url }}){: .btn }
+
 Twenty company knowledge bases across banking, payments, crypto, education, retail, media, transport, infrastructure and developer tools. Each keeps detailed research, source findings, an observed workflow, optional practice and bite-size slides together in its own directory.
 
 [Explore the subway map]({{ '/companies/subway-routes/' | relative_url }}){: .btn .btn-primary }

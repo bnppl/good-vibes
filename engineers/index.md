@@ -6,6 +6,8 @@ has_children: true
 
 # Engineering approaches
 
+[Explore the pipeline atlas: tools, skills and processes]({{ '/pipeline/' | relative_url }}){: .btn }
+
 Start with AI use documented in publications since October 2025. Compare actual reported projects, inspectable artifacts and advice with separate publication, practice and inspection dates. Older principles remain background.
 
 [First-ten freshness review](freshness-review.md) · [Next-ten freshness review](freshness-review-next-ten.md) · [Studies 11–20](studies-eleven-to-twenty.md) · [All-twenty scope review](refinement-review.md) · [First five studies](first-five.md) · [Studies six to ten](next-five.md) · [Comparability review](comparability-review.md) · [Open the comparison cards]({{ '/engineers/compare/' | relative_url }}){: .btn .btn-primary }
