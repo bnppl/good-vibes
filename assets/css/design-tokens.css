@@ -1,0 +1,27 @@
+/* Good Vibes: shared by the learning slides and the documentation theme. */
+:root {
+  color-scheme: light;
+  --gv-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --gv-ink: #1c2824;
+  --gv-muted: #657069;
+  --gv-paper: #f3f2ed;
+  --gv-surface: #fffefa;
+  --gv-line: #d5d9cf;
+  --gv-green: #223a30;
+  --gv-lime: #daf687;
+  --gv-blue: #dce8f4;
+  --gv-pink: #f2d6df;
+  --gv-yellow: #ece5ae;
+  --gv-focus: #a145e5;
+  --gv-radius: 12px;
+  --gv-card-radius: 22px;
+  --gv-space-1: 8px;
+  --gv-space-2: 16px;
+  --gv-space-3: 24px;
+  --gv-space-4: 40px;
+  /* Existing visualisations use these short names. */
+  --ink: var(--gv-ink);
+  --muted: var(--gv-muted);
+  --paper: var(--gv-paper);
+  --line: var(--gv-line);
+}

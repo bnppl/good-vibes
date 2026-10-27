@@ -1,10 +1,7 @@
+@import url("design-tokens.css");
+
 :root {
-  color-scheme:light;
-  --ink:#1c2824;
-  --muted:#657069;
-  --paper:#f3f2ed;
-  --line:#d5d9cf;
-  font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif
+  font-family:var(--gv-font)
 }
 * {
   box-sizing:border-box
@@ -33,7 +30,7 @@ button:disabled {
   cursor:default
 }
 button:focus-visible,a:focus-visible,summary:focus-visible {
-  outline:3px solid #a145e5;
+  outline:3px solid var(--gv-focus);
   outline-offset:5px
 }
 [hidden] {
@@ -195,32 +192,32 @@ button:focus-visible,a:focus-visible,summary:focus-visible {
   background:var(--ink)
 }
 .lesson {
-  --card:#223a30;
+  --card:var(--gv-green);
   --text:#f6faed;
-  --accent:#daf687;
+  --accent:var(--gv-lime);
   --soft:rgba(255,255,255,.08);
   background:var(--card);
   color:var(--text);
   padding:28px 36px 22px;
-  border-radius:22px;
+  border-radius:var(--gv-card-radius);
   min-height:490px;
   overflow-wrap:anywhere;
   box-shadow:0 10px 35px -25px #17291e70
 }
 .lesson[data-theme="2"] {
-  --card:#dce8f4;
+  --card:var(--gv-blue);
   --text:#172c46;
   --accent:#244f8e;
   --soft:rgba(255,255,255,.38)
 }
 .lesson[data-theme="3"] {
-  --card:#f2d6df;
+  --card:var(--gv-pink);
   --text:#512638;
   --accent:#8c2d55;
   --soft:rgba(255,255,255,.36)
 }
 .lesson[data-theme="4"] {
-  --card:#ece5ae;
+  --card:var(--gv-yellow);
   --text:#3c3a20;
   --accent:#5a4a17;
   --soft:rgba(255,255,255,.32)
