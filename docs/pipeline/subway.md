@@ -13,3 +13,13 @@ The combined `/pipeline/subway/` view reads `assets/pipeline-catalog.json`, the 
 - The SVG supports keyboard activation. HTML station buttons and evidence cards provide an alternative to operating the diagram. On small screens, Expand enables readable horizontal scrolling.
 
 Validation: run the catalogue integrity checker and JavaScript syntax check. Browser QA covers default mixed routes, focusing, tool selection, exact evidence links, relationship filters, process visibility, query search, route add/remove, six-line limit, shared URL restoration and responsive overflow. The existing standalone atlas and source records are preserved.
+
+## Pocket view
+
+`/pipeline/subway/mobile/` uses the same catalogue and JavaScript evidence/filter logic. The `data-layout="mobile"` flag selects a vertical HTML/CSS rail layout instead of the SVG. It defaults to Stripe, Gojko Adžić and Simon Willison; explicitly shared selections still support six lines.
+
+Stages expand one at a time, with source cards inline beside their rail markers. The sticky stage picker, collapsible filter panel, Done control, readable form fonts and 44-pixel evidence links avoid the wide diagram’s pan/zoom interaction. Harness/access remains separate. Search, relationships, source dates and qualifications are unchanged.
+
+Mobile/wide links carry the current URL state. The pocket view additionally saves collapsed-stage state with `closed=1`. Existing wide links continue to work.
+
+Browser verification: 390px and 320px iframe viewports have no page-level horizontal overflow (375px and 305px usable width after scrollbars); inline Toolshed evidence retains its February date and primary/cached source links; stage jumping, accordion collapse, foundation navigation, filters, Done, and selection/filter preservation when switching to the wide view work. Existing wide SVG routes were checked after the shared script change. Syntax, catalogue integrity and template rendering checks pass.
