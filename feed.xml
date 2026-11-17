@@ -1,0 +1,24 @@
+---
+layout: null
+permalink: /feed.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Good Vibes — Important updates</title>
+    <link>https://bnppl.github.io/good-vibes/</link>
+    <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
+    <language>en-GB</language>
+    <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Tue, 17 Nov 2026 08:47:26 +0000</lastBuildDate>
+    <item>
+      <title>Subscribe to important Good Vibes updates</title>
+      <link>https://bnppl.github.io/good-vibes/</link>
+      <guid isPermaLink="false">good-vibes:2026-11-17:rss-launch</guid>
+      <pubDate>Tue, 17 Nov 2026 08:47:26 +0000</pubDate>
+      <description>The new feed will highlight significant research findings, corrections and useful additions across the guide, engineer and company profiles, learning slides and project bootstrap tools. Each update will explain what changed, why it matters and where to read more. The scheduled daily refresh will add entries when important changes are published.</description>
+      <category>Project updates</category>
+    </item>
+  </channel>
+</rss>

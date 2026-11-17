@@ -14,6 +14,8 @@ A personal learning wiki on **context engineering** and **spec-driven developmen
 
 [Browse all lesson notes](learning-deck/index.md)
 
+[Subscribe to important updates (RSS)]({{ '/feed.xml' | relative_url }})
+
 ## Contents
 
 | Section | What It Covers |
