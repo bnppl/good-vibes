@@ -2,7 +2,7 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-10-26
+last_updated: 2026-11-18
 last_read: 2026-04-06
 status: read
 ---
@@ -193,3 +193,9 @@ The pattern: every rationalization sounds like good judgment in the moment. The 
 Expo's [skills evaluation](https://expo.dev/blog/your-skills-need-an-evaluation-mechanism) (October 8) tested ordinary app requests that did not name skills. Across ten PRDs, with three runs per configuration using Claude Code's `sonnet-5-high`, an overview entrypoint increased downstream skill loading from 9% to 55%. Loading alone did not establish correct implementation. This is one plugin and task set, not a transferable success rate. *(covered in TL;DR Dev, October 2026)*
 
 **Try it:** Test the spelling-app guidance with a natural request, explicit invocation, and a crowded skill catalog. Record discovery, correct use, and final behaviour separately. Put distinguishing cues early in descriptions and compare against a no-skill baseline. Catalog limits depend on the harness version.
+
+## November 2026: Portability Includes the Host
+
+GitHub's [12 November skills guide](https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/) separates reusable instructions from project manifests and host-provided access. Its Proof Agent example performs static diff review, not test execution; the demonstration's findings are advisory. This is public guidance and an example, not evidence of GitHub-wide internal adoption.
+
+**Suggested check:** Verify discovery, companion references, required tools and permission boundaries on each target client. Keep business decisions reviewable when generating project configuration. A copied SKILL.md neither installs a dependency nor grants database access.

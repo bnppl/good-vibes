@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "title": "Agentic engineering pipeline atlas",
-  "reviewed": "2026-10-27",
-  "cacheDate": "2026-10-27",
+  "reviewed": "2026-11-18",
+  "cacheDate": "2026-11-18",
   "since": "2025-10-01",
   "stages": [
     {
@@ -209,7 +209,7 @@
       "path": "engineers/simon-willison",
       "summary": "Documented examples include Claude Code, Codex, Rodney, Showboat and Git; no complete private setup established.",
       "id": "engineers/simon-willison",
-      "observations": 7
+      "observations": 8
     },
     {
       "name": "Steve Yegge",
@@ -337,7 +337,7 @@
       "path": "companies/posthog",
       "summary": "Published accounts include cloud dev environments, hogli, CI, ReviewHog/Codex in a named review case, and versioned skills.",
       "id": "companies/posthog",
-      "observations": 8
+      "observations": 9
     },
     {
       "name": "Shopify",
@@ -1897,15 +1897,15 @@
       "observations": [
         {
           "entity": "companies/posthog",
-          "claim": "The developer CLI and cloud environments help agents run checks and collect evidence.",
-          "kind": "Reported company use",
-          "published": "2026-07-28",
-          "practice": "January–July 2026 retrospective; individual changes span that period",
-          "checked": "2026-10-26",
-          "qualification": "The July account includes work being built; universal availability is not established.",
-          "source": "https://posthog.com/blog/10k-prs-a-month",
+          "claim": "DevEx exposes CI analytics through MCP for agent investigation and repair PRs.",
+          "kind": "Reported team use",
+          "published": "2026-10-28",
+          "practice": "October 2026; exact run dates unknown",
+          "checked": "2026-11-18",
+          "qualification": "Internal team account; does not establish automatic merge or company-wide availability.",
+          "source": "https://posthog.com/blog/self-driving-ci",
           "detail": "/companies/posthog/research.html#c09",
-          "register": "/companies/posthog/sources.html#s01",
+          "register": "/companies/posthog/sources.html#s06",
           "format": "Authored engineering article"
         }
       ]
@@ -3881,6 +3881,50 @@
           "detail": "/companies/spotify/research.html#c09",
           "register": "/companies/spotify/sources.html#s04",
           "format": "Written talk highlights"
+        }
+      ]
+    },
+    {
+      "id": "platform-16",
+      "stage": "platform",
+      "type": "environment",
+      "name": "External sandbox prototypes",
+      "usage": "Inspect all tool paths; host-native operations may remain outside the guest.",
+      "observations": [
+        {
+          "entity": "engineers/simon-willison",
+          "claim": "External sandbox prototypes separate agent execution from the host.",
+          "kind": "Personal use",
+          "published": "2026-11-17",
+          "practice": "Prototype work reported at publication; exact session dates unknown",
+          "checked": "2026-11-18",
+          "qualification": "Prototype integration; Claude Code native Read/Edit stay on the host. No independent security audit.",
+          "source": "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+          "detail": "/engineers/simon-willison/recent-ai.html#c11",
+          "register": "/engineers/simon-willison/sources.html#s18",
+          "format": "Authored project account"
+        }
+      ]
+    },
+    {
+      "id": "learn-8",
+      "stage": "learn",
+      "type": "process",
+      "name": "CI signal-driven repair",
+      "usage": "Use deterministic CI signals for investigation and proposed PRs, with merge authority separate.",
+      "observations": [
+        {
+          "entity": "companies/posthog",
+          "claim": "DevEx exposes CI analytics through MCP for agent investigation and repair PRs.",
+          "kind": "Reported team use",
+          "published": "2026-10-28",
+          "practice": "October 2026; exact run dates unknown",
+          "checked": "2026-11-18",
+          "qualification": "Internal team account; does not establish automatic merge or company-wide availability.",
+          "source": "https://posthog.com/blog/self-driving-ci",
+          "detail": "/companies/posthog/research.html#c09",
+          "register": "/companies/posthog/sources.html#s06",
+          "format": "Authored engineering article"
         }
       ]
     },

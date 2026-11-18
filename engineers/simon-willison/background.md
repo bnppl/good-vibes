@@ -2,7 +2,7 @@
 title: Simon Willison — comparison history
 parent: Simon Willison
 nav_order: 9
-last_updated: '2026-10-26'
+last_updated: 2026-11-18
 nav_exclude: true
 ---
 
@@ -241,3 +241,7 @@ Eight short ideas derived from cached research checked on 26 October 2026. Worke
 [Optional practice: first lab](research.md#first-practical-lab) · [Detailed evidence](research.md#a-feature-from-idea-to-release) · [Source register](sources.md)
 
 ---
+
+## 18 November 2026 · C11 evidence change
+
+The 26 October cache left recent safeguards evidence unknown. C11 now uses S18's dated prototype report, with S19 as artifact context. The stable claim ID is retained; this does not establish a complete personal security policy.

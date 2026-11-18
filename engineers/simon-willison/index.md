@@ -9,9 +9,9 @@ person_id: simon-willison
 canonical_name: Simon Willison
 aliases:
 - simonw
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
-last_updated: '2026-10-26'
+research_cutoff: '2026-11-18'
+research_checked: '2026-11-18'
+last_updated: 2026-11-18
 last_read: null
 status: unread
 tagline: Execute it. Show the evidence. Own the result.
@@ -179,20 +179,20 @@ dimensions:
   source_format: Authored article
 - id: D11
   title: Boundaries and safeguards
-  position: Recent AI-specific evidence for this dimension is not established in the reviewed material.
-  evidence: Not established
+  position: External sandbox prototypes separate agent execution from the host.
+  evidence: Stated
   claim: C11
   detail: recent-ai.md#c11
-  source: ''
-  checked: '2026-10-26'
-  qualification: Older guidance and undated artifacts remain in the background archive. This gap does not imply
-    opposition or absence of use.
-  evidence_kind: Not established
-  published: Not established
-  practice_date: Not established
-  source_id: ''
-  ai_specific: false
-  source_format: Not established
+  source: https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/
+  checked: '2026-11-18'
+  qualification: Prototype integration; Claude Code native Read/Edit stay on the host. No independent security
+    audit.
+  evidence_kind: Personal use
+  published: '2026-11-17'
+  practice_date: Prototype work reported at publication; exact session dates unknown
+  source_id: S18
+  ai_specific: true
+  source_format: Authored project account
 - id: D12
   title: Evaluation and tradeoffs
   position: Evaluate evidence in project context; no universal comparative speed or safety advantage is established
@@ -371,15 +371,13 @@ One release account does not establish a universal CI or rollback system.
 
 ### C11 · D11 · Boundaries and safeguards
 
-**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
+**Stated · Personal use.** External sandbox prototypes separate agent execution from the host.
 
-Source format: Not established.
+Prototype integration; Claude Code native Read/Edit stay on the host. No independent security audit.
 
-Published: **Not established**. Practice: Not established.
+Published: **2026-11-17**. Practice: Prototype work reported at publication; exact session dates unknown. Checked: 2026-11-18. Source format: Authored project account.
 
-Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
-
-[Recent evidence](recent-ai.md#c11)
+[Primary source](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/) · [Cached findings](sources.md#s18)
 
 <a id="c12"></a>
 

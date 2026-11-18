@@ -3,10 +3,10 @@ title: PostHog — bite-sized ideas
 parent: PostHog Company Slides
 nav_order: 1
 nav_exclude: true
-last_updated: '2026-10-26'
+last_updated: 2026-11-18
 cache_schema: 1
 derived_from: companies/posthog/research.md
-research_checked: '2026-10-26'
+research_checked: '2026-11-18'
 evidence_since: '2025-10-01'
 ---
 
@@ -77,3 +77,17 @@ Real cases and explicit gaps from AI-assisted software development. Publication 
 [Optional practice: adapt the shared observations](workflow.md#optional-practice) · [Detailed research](research.md) · [Source findings](sources.md#s04)
 
 ---
+
+## Card 04
+
+### Give repair a signal
+
+> **An agent needs a reason to investigate.**
+>
+> Reported team use · published 2026-10-28. DevEx connects CI detectors to investigations.
+
+**In the wild:** Engineering Analytics supplies queryable CI evidence through MCP.
+
+**Takeaway:** Keep proposed repairs and merge authority separate.
+
+[Optional practice](workflow.md#optional-practice) · [Evidence](research.md#c09)

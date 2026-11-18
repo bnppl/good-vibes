@@ -1,14 +1,14 @@
 ---
 title: Pipeline evidence catalogue
 nav_exclude: true
-last_updated: '2026-10-27'
+last_updated: 2026-11-18
 ---
 
 # Pipeline evidence catalogue
 
 [Open the interactive atlas](index.html)
 
-Reviewed all 20 engineer and 20 company caches. This is a stage index, not a claim that any person or team follows the combined pipeline. Sources were checked in the underlying research on 26–27 October 2026; this catalogue does not revalidate current installations. Prioritises publications from 1 October 2025. Undated public artifacts remain explicitly labelled. AI-product evaluation and our hypothetical practice exercises are excluded. A retrospective publication may describe older work.
+Reviewed all 20 engineer and 20 company caches. This is a stage index, not a claim that any person or team follows the combined pipeline. Source inspection dates vary by attribution, including targeted additions on 18 November 2026; this catalogue does not revalidate current installations. Prioritises publications from 1 October 2025. Undated public artifacts remain explicitly labelled. AI-product evaluation and our hypothetical practice exercises are excluded. A retrospective publication may describe older work.
 
 Tool names are attributed only within the named case. “Published artifact” means published by or associated with the subject, not proof of use. Declared policy and advice are not treated as observed practice. Internal harnesses are not necessarily available to install.
 
@@ -551,7 +551,7 @@ Tool. Expose reusable coding operations through a shared workflow library.
 
 Tool. Make developer commands, checks and evidence collection executable for agents.
 
-- **PostHog · Reported company use** — The developer CLI and cloud environments help agents run checks and collect evidence. [Primary evidence](https://posthog.com/blog/10k-prs-a-month) · [Cached claim](../companies/posthog/research.md#c09). Publication/revision: 2026-07-28. Practice: January–July 2026 retrospective; individual changes span that period. Limit: The July account includes work being built; universal availability is not established.
+- **PostHog · Reported team use** — DevEx exposes CI analytics through MCP for agent investigation and repair PRs. [Primary evidence](https://posthog.com/blog/self-driving-ci) · [Cached claim](../companies/posthog/research.md#c09). Publication/revision: 2026-10-28. Practice: October 2026; exact run dates unknown. Limit: Internal team account; does not establish automatic merge or company-wide availability.
 
 ### Docker / make factory environment
 
@@ -1086,6 +1086,12 @@ Process. Account for platform-building work and inspect where agents misundersta
 - **Block · Reported team use** — Count platform-building effort as well as migration execution. [Primary evidence](https://engineering.block.xyz/blog/from-base-web-to-fluent-ui-without-a-flag-day) · [Cached claim](../companies/block/research.md#c12). Publication/revision: 2026-04-06. Practice: Migration-engine work from 2024-12-02 through 2026-02-26; retrospective. Limit: The source reports substantial preparation and exceptions; code volume is not net value.
 - **Grafana Labs · Reported team use** — Evaluate actual agent failures instead of assuming help text is sufficient. [Primary evidence](https://medium.com/grafana-labs/clis-in-the-age-of-agents-how-we-designed-gcx-cdfca8954b30) · [Cached claim](../companies/grafana-labs/research.md#c12). Publication/revision: 2026-07-28. Practice: Internal offsite and CLI-design iteration before publication. Limit: Observed usability failures do not establish measured delivery or cost improvement.
 
+### CI signal-driven repair
+
+Process. Use deterministic CI signals for investigation and proposed PRs, with merge authority separate.
+
+- **PostHog · Reported team use** — DevEx exposes CI analytics through MCP for agent investigation and repair PRs. [Primary evidence](https://posthog.com/blog/self-driving-ci) · [Cached claim](../companies/posthog/research.md#c09). Publication/revision: 2026-10-28. Practice: October 2026; exact run dates unknown. Limit: Internal team account; does not establish automatic merge or company-wide availability.
+
 ### observability-and-instrumentation · Addy Osmani
 
 Skill. Add useful logs, metrics and traces for diagnosing real application behaviour.
@@ -1197,6 +1203,12 @@ Tool. Spotify runs Honk within its existing developer platform. Public Backstage
 
 - **Spotify · Reported company use** — Honk runs within the existing developer platform. [Primary evidence](https://engineering.atspotify.com/2026/6/code-with-claude-coding-is-no-longer-the-constraint) · [Cached claim](../companies/spotify/research.md#c09). Publication/revision: 2026-06-03. Practice: Retrospective and usage reported by June publication. Limit: The internal system is not established as an open-source release.
 
+### External sandbox prototypes
+
+Environment. Inspect all tool paths; host-native operations may remain outside the guest.
+
+- **Simon Willison · Personal use** — External sandbox prototypes separate agent execution from the host. [Primary evidence](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/) · [Cached claim](../engineers/simon-willison/recent-ai.md#c11). Publication/revision: 2026-11-17. Practice: Prototype work reported at publication; exact session dates unknown. Limit: Prototype integration; Claude Code native Read/Edit stay on the host. No independent security audit.
+
 ### wizard · Matt Pocock
 
 Skill. Prepare an interactive shell walkthrough for setup steps a human must perform.
@@ -1225,7 +1237,7 @@ All 40 profiles were reviewed. Missing observations indicate a gap in this curat
 - [Matt Pocock](../engineers/matt-pocock/index.md): 24 indexed evidence associations. Pinned October 2026 composable skills; displayed article update dates do not establish original publication.
 - [Peter Steinberger](../engineers/peter-steinberger/index.md): 17 indexed evidence associations. October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.
 - [Robert C. Martin](../engineers/robert-c-martin/index.md): 5 indexed evidence associations. September 2026 interview: Grok TUI, prior Codex/Claude, above-code supervision; SwarmForge is a separately dated artifact.
-- [Simon Willison](../engineers/simon-willison/index.md): 7 indexed evidence associations. Documented examples include Claude Code, Codex, Rodney, Showboat and Git; no complete private setup established.
+- [Simon Willison](../engineers/simon-willison/index.md): 8 indexed evidence associations. Documented examples include Claude Code, Codex, Rodney, Showboat and Git; no complete private setup established.
 - [Steve Yegge](../engineers/steve-yegge/index.md): 3 indexed evidence associations. Beads and Gas Town are public ecosystem tools; April Gas City endorsement and later private Wheelhouse account have distinct provenance.
 - [37signals](../companies/37signals/index.md): 3 indexed evidence associations. Lexxy reports Claude and Playwright; DHH separately reports OpenCode. Hot Cell’s production sandbox is not a coding-agent sandbox.
 - [Block](../companies/block/index.md): 8 indexed evidence associations. Dated accounts include goose, a TypeScript diagnostics/migration runtime, targeted Jest execution, CI repair agents and a versioned skills marketplace. Runtime evolution must not be flattened into a single October stack.
@@ -1241,7 +1253,7 @@ All 40 profiles were reviewed. Missing observations indicate a gap in this curat
 - [Microsoft](../companies/microsoft/index.md): 4 indexed evidence associations. January–April Copilot CLI/Claude Code cohorts; October VS Code instructions. No universal current Microsoft tool stack established.
 - [Monzo](../companies/monzo/index.md): 7 indexed evidence associations. Reported Cursor use in March designer examples; August Agent Chip integrates Slack, Linear, GitHub, internal knowledge and sandboxed agent bundles. Models and private configuration remain incomplete.
 - [Mozilla](../companies/mozilla/index.md): 2 indexed evidence associations. Firefox fuzzing infrastructure plus a security harness and ephemeral VMs; Claude for one Android prototype; Claude Code in a localization internship account. These are not a complete company-wide stack.
-- [PostHog](../companies/posthog/index.md): 8 indexed evidence associations. Published accounts include cloud dev environments, hogli, CI, ReviewHog/Codex in a named review case, and versioned skills.
+- [PostHog](../companies/posthog/index.md): 9 indexed evidence associations. Published accounts include cloud dev environments, hogli, CI, ReviewHog/Codex in a named review case, and versioned skills.
 - [Shopify](../companies/shopify/index.md): 10 indexed evidence associations. River in Slack; World monorepo and Nix substrate; Remote Dev mobile environments; Dispatch security scanning. Internal configuration and a complete daily stack remain private.
 - [Spotify](../companies/spotify/index.md): 6 indexed evidence associations. Honk / Claude Code, Fleetshift, Backstage, restricted verification/Git tools and Kubernetes-hosted background sessions. Tool access evolved; November restrictions are not silently applied to later versions.
 - [Stripe](../companies/stripe/index.md): 11 indexed evidence associations. February 2026 reports: custom goose-derived Minions harness, AWS devboxes, scoped Cursor-compatible rules, Toolshed MCP and existing CI. The private harness was not executed.

@@ -1,8 +1,8 @@
 ---
 parent: PostHog
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: 2026-11-18
+research_checked: '2026-11-18'
+research_cutoff: '2026-11-18'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -106,3 +106,13 @@ Original public pages and relevant extracted text were inspected on **26 October
 **Supports:** Background / scope boundary only.
 
 **Limits:** Context only until a dated revision is verified; not used to fill current comparison dimensions.
+
+<a id="s06"></a>
+
+## S06 · Engineers are shipping faster, so we made our CI self-driving to keep up
+
+- **Author:** Raúl Negrón-Otero. **Published:** 2026-10-28. **Checked:** 2026-11-18.
+- **Practice:** October 2026; exact run dates unknown. **Kind:** Reported team use; authored engineering article.
+- **Original:** [DevEx account](https://posthog.com/blog/self-driving-ci).
+- **Findings:** CI records feed Engineering Analytics and MCP; deterministic signals lead to investigations and PRs. Linked examples include WebKit failure, Rust test races and unnecessary dependency installation.
+- **Supports:** C09; earlier July tooling remains background in S01. No controlled benefit estimate or automatic merge authority established.

@@ -43,6 +43,7 @@
     }
   ],
   "simon-willison": [
+    {"name":"External sandbox prototypes","relationship":"Co-created · Nov 2026","purpose":"External execution environments; Claude Code native Read/Edit remain on host. Prototype account, not an independent audit.","url":"https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/","categories":["verification"]},
     {
       "name": "Rodney",
       "relationship": "Created",

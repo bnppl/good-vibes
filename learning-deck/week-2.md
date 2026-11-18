@@ -2,7 +2,7 @@
 title: "02 · Give the agent what it needs"
 parent: Learning Deck
 nav_order: 2
-last_updated: 2026-10-26
+last_updated: 2026-11-18
 ---
 
 # 02 · Give the agent what it needs
@@ -73,7 +73,7 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 **In the wild:** “Retry fix at abc123; scoring passes; offline sync untested” gives the next session a place to restart.
 
-**Takeaway:** Attach a source or check to important conclusions.
+**Takeaway:** Attach a source or check to important conclusions; label untested guesses.
 
 [Optional practice: session 8](../learning-plan.md#session-8-state-across-context-windows) · Go deeper: [Memory layer](../context-engineering/memory-layer.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
 

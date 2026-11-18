@@ -2,7 +2,7 @@
 title: Agent Security and Containment
 parent: Verification
 nav_order: 12
-last_updated: 2026-10-26
+last_updated: 2026-11-18
 last_read: null
 status: unread
 ---
@@ -60,3 +60,9 @@ Write the access matrix, perform one benign boundary test, and attach the denial
 The [context privilege escalation preprint](https://arxiv.org/abs/2609.01222v2) (September 2 revision) distinguishes low-trust text promoted into higher-priority messages from text persisting beyond its original scope. It studies twelve harnesses at specific versions; it does not establish that every current release remains affected.
 
 **Proposed defensive exercise:** Track source, trust, and scope through retrieval, summaries, memory, and handoffs. In disposable fixtures, check whether a harmless out-of-scope instruction is still rejected after summarisation and a fresh-session resume. Keep source content distinct from authorised instructions. Record the exact harness version and tested path; one passing test does not prove general immunity.
+
+## November 2026: Check Every Tool Path
+
+Willison and Prime Radiant's [external sandbox prototypes](https://blog.primeradiant.com/external-sandboxes-for-coding-agents/) separate the agent process from command execution. Important integration limit: Claude Code's Bash is routed into the guest, while native Read/Edit remain on the host. This is not whole-agent filesystem isolation.
+
+**Proposed check:** Enumerate shell, native filesystem and network paths separately. In disposable fixtures, test a denied write through each enabled path; retain host permissions for paths outside the guest. See the [pinned protocol/conformance project](https://github.com/prime-radiant-inc/external-sandbox/blob/0681c98a08b2bbdbd9f59fa5bef21c38caccbccf/README.md). Inspection is not an independently executed security audit.

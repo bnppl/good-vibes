@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-10-27",
+  "reviewed": "2026-11-18",
   "items": {
     "define-1": {
       "mode": "process",
@@ -809,6 +809,19 @@
       "instructions": [
         "Treat this as inspiration for a local process, not an installable package. The source does not supply a reproducible public installation of the named internal system.",
         "Implement only a small stack-appropriate local analogue of the selected usage. Name it as a project adaptation; do not claim to install or reproduce the source company’s private infrastructure."
+      ]
+    },
+    "platform-16": {
+      "mode": "research",
+      "instructions": [
+        "Inspect the pinned external-sandbox project and current backend prerequisites. Enumerate shell and native filesystem tool paths; Claude Code Read/Edit may remain on the host. Test each allowed/denied path with disposable fixtures before claiming containment. Do not run an attack or use real credentials as a smoke check.",
+        "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
+      ]
+    },
+    "learn-8": {
+      "mode": "process",
+      "instructions": [
+        "Adapt one deterministic CI detector to local CI records. Preserve source-run evidence, bound repair retries and require normal merge checks. Engineering Analytics is an internal team system, not an installable public package."
       ]
     },
     "review-9": {

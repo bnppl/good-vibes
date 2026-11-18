@@ -2,11 +2,11 @@
 title: Simon Willison — recent AI evidence
 parent: Simon Willison
 nav_order: 0
-last_updated: '2026-10-26'
+last_updated: 2026-11-18
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-11-18'
+research_checked: '2026-11-18'
 evidence_since: '2025-10-01'
 cache_schema: 1
 ---
@@ -17,7 +17,7 @@ cache_schema: 1
 
 ## Scope and dates
 
-Publication window: **1 October 2025–26 October 2026**. Publication, practice and inspection dates are separate. This page prioritises actual use where documented; recommendations and inspected artifacts have their own labels. A newly published retrospective may describe older work.
+Publication window: **1 October 2025–18 November 2026**. Publication, practice and inspection dates are separate. This page prioritises actual use where documented; recommendations and inspected artifacts have their own labels. A newly published retrospective may describe older work.
 
 ## A newsletter feature shipped through review
 
@@ -192,13 +192,13 @@ One release account does not establish a universal CI or rollback system.
 
 ### C11 · Boundaries and safeguards
 
-**Not established · Not established.** Recent AI-specific evidence for this dimension is not established in the reviewed material.
+**Stated · Personal use.** External sandbox prototypes separate agent execution from the host.
 
-Source format: Not established.
+Prototype integration; Claude Code native Read/Edit stay on the host. No independent security audit.
 
-Published: **Not established**. Practice: Not established. Checked: 2026-10-26.
+Published: **2026-11-17**. Practice: Prototype work reported at publication; exact session dates unknown. Checked: 2026-11-18. Source format: Authored project account.
 
-Older guidance and undated artifacts remain in the background archive. This gap does not imply opposition or absence of use.
+[Primary source](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/) · [Cached findings](sources.md#s18)
 
 <a id="c12"></a>
 

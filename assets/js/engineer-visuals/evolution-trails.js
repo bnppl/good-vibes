@@ -290,6 +290,7 @@ window.EngineerVisuals['evolution-trails'] = function(ctx) {
     }
   ],
   "simon-willison": [
+    {"source":"S18","date":"2026-11-17","lane":"practice","title":"External sandbox prototypes","summary":"Personal prototype report; integration scope differs by agent. No independent security audit.","url":"https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/"},
     {
       "source": "S11",
       "date": "2025-06-16",

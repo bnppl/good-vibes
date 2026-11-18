@@ -2,11 +2,11 @@
 title: Simon Willison — source findings
 parent: Simon Willison
 nav_order: 3
-last_updated: '2026-10-26'
+last_updated: 2026-11-18
 last_read: null
 status: unread
-research_cutoff: 2026-10-26
-research_checked: 2026-10-26
+research_cutoff: '2026-11-18'
+research_checked: '2026-11-18'
 cache_schema: 1
 ---
 
@@ -227,3 +227,21 @@ Initial research: 2026-10-26. Slides were derived from this cache after research
 Author: Simon Willison. Published: 2026-02-23. Inspected: 2026-10-26.
 
 [Original](https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/). Establishes guide launch, the first two chapters, and reported Claude Code use on its publishing infrastructure. Launch date is not the exact date of every living chapter.
+
+<a id="s18"></a>
+
+## S18 · External sandboxes for coding agents
+
+- **Author:** Simon Willison; collaboration with Prime Radiant.
+- **Published:** 2026-11-17. **Checked:** 2026-11-18. **Practice:** prototype work before publication; exact dates unknown.
+- **Original:** [First-person account](https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/); [technical explanation](https://blog.primeradiant.com/external-sandboxes-for-coding-agents/).
+- **Finding:** Reports building interchangeable external execution environments. Supports C11; Personal use, Stated. No independent runtime verification.
+
+<a id="s19"></a>
+
+## S19 · External Sandbox project
+
+- **Artifact:** [README at 0681c98](https://github.com/prime-radiant-inc/external-sandbox/blob/0681c98a08b2bbdbd9f59fa5bef21c38caccbccf/README.md), inspected 2026-11-18; revision publication date not established here.
+- **Scope:** README, integration guidance; no installation executed.
+- **Finding:** Shared protocol and conformance runner, with separate core, mount, browser and proxy profiles. Historical results apply to exact tested revisions, not every later version.
+- **Supports:** C11 implementation context; Published artifact. Inspection demonstrates documentation, not operational safety.

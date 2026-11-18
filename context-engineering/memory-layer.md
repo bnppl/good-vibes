@@ -2,7 +2,7 @@
 title: "Memory Layer"
 parent: "Context Engineering"
 nav_order: 5
-last_updated: 2026-10-26
+last_updated: 2026-11-18
 last_read: null
 status: unread
 ---
@@ -54,7 +54,7 @@ Long-term memory is information that survives beyond a single conversation. Two 
 
 The key design decision: what is worth persisting versus what is derivable from other sources? Memory should store what is NOT available elsewhere. User preferences, feedback, project context, past decisions — these aren't in any file you can read. Code structure, function signatures, git history — these are better derived fresh from source. Storing derivable information wastes memory space and creates staleness risk without adding anything that a tool call wouldn't give you more reliably.
 
-**Memory synthesis in production.** OpenAI's "ChatGPT Dreaming V3" (June 2026) is the first major product implementation of background memory synthesis — the system runs memory consolidation *offline*, outside active conversations, improving freshness, continuity, and relevance over longer time horizons. This operationalizes the self-improving agent pattern at consumer scale and signals that managed background memory consolidation is becoming a standard feature rather than a custom engineering investment. The model analogy is apt: "dreaming" as offline consolidation of what was experienced during active sessions.
+**Memory synthesis evidence.** The earlier unsourced “ChatGPT Dreaming V3” paragraph and its “first major product” claim are withdrawn. See the dated November study below for inspectable evidence; no product-first or industry-adoption ranking is established here.
 
 ## Episodic Memory — Learning from Experience
 
@@ -136,3 +136,9 @@ The practical insight: most teams focus exclusively on the model layer (waiting 
 [LongHarness](https://arxiv.org/abs/2610.13075v1) (October 9 preprint) manages evidence and conclusions explicitly rather than leaving both in an expanding transcript. Its evaluation concerns document reasoning with GLM-5.3-Flash and Qwen3.8-Flash on OfficeQA Pro, AA-LCR, and LongBench v2; it does not establish coding-productivity gains.
 
 **Proposed coding exercise:** Extend a handoff with a small evidence ledger: claim, source path and revision, check performed, current status, and unresolved question. Mark superseded claims when code changes. Ask a fresh session to verify one conclusion from its source. This adapts the research idea; it is not a reproduction of the paper's system.
+
+## November 2026: Consolidation Needs an Oracle
+
+Anthropic's [6 November memory study](https://www.anthropic.com/research/components-of-agent-memory) separates transcripts, notes, richer representations and injected context. Its CL-Bench 1.0 database task starts fresh sessions with persistent memory files; stronger models recorded validated rules, while weaker ones retained untested guesses. The Pokémon comparison uses one run per model and is not a coding-productivity study.
+
+**Suggested adaptation:** Label each durable rule as tested or provisional, attach its evidence, and recheck it after relevant code changes. Evaluate consolidation against fresh-session task outcomes rather than note volume. Background rewriting can preserve a mistake as easily as a useful lesson.

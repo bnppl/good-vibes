@@ -2,11 +2,11 @@
 title: Simon Willison — detailed research
 parent: Simon Willison
 nav_order: 1
-last_updated: '2026-10-26'
+last_updated: 2026-11-18
 last_read: null
 status: unread
-research_cutoff: 2026-10-26
-research_checked: 2026-10-26
+research_cutoff: '2026-11-18'
+research_checked: '2026-11-18'
 cache_schema: 1
 ---
 
@@ -197,3 +197,7 @@ The stable [D01–D12 matrix and C01–C12 claims](index.md#comparison-evidence)
 ## Sources and research gaps
 
 See the [sixteen-record source register](sources.md) for the inspected findings, dates, claim mapping, and limits. Stage 2 slides are derived from this cache and perform no additional research.
+
+## November safeguards evidence
+
+[C11](recent-ai.md#c11) now has a dated external-sandbox prototype account, replacing the earlier current-window evidence gap. See [S18–S19](sources.md#s18); historical guidance and the optional worked example remain distinct from this project.

@@ -6,6 +6,8 @@ public={'build-1':'Claude Code','build-2':'OpenAI Codex','build-3':'GitHub Copil
 artifacts=['plan-4','context-2','context-4','verify-2','context-18','define-12','plan-14','build-22','verify-18','review-11','ship-12','plan-13','build-19','build-15','platform-8']
 internal=['define-2','define-5','define-10','plan-7','plan-12','context-12','context-14','context-15','context-16','context-17','build-12','build-13','build-14','build-16','build-17','build-18','review-3','review-7','review-9','ship-2','ship-3','ship-4','ship-5','ship-10','platform-1','platform-2','platform-3','platform-4','platform-5','platform-6','platform-11','platform-12','platform-14','platform-15','verify-16']
 custom={
+ 'platform-16':['Inspect the pinned external-sandbox project and current backend prerequisites. Enumerate shell and native filesystem tool paths; Claude Code Read/Edit may remain on the host. Test each allowed/denied path with disposable fixtures before claiming containment. Do not run an attack or use real credentials as a smoke check.'],
+ 'learn-8':['Adapt one deterministic CI detector to local CI records. Preserve source-run evidence, bound repair retries and require normal merge checks. Engineering Analytics is an internal team system, not an installable public package.'],
  'define-3':['Record observable acceptance examples, edge cases and non-goals in docs/acceptance.md before implementation. Keep the human-agreed expectations separate from the generated solution.'],
  'plan-1':['Split the first useful feature into a small reviewable change. Record the plan, allowed files and stop condition; finish one verified slice before adding parallelism.'],
  'plan-2':['Create thin task records with outcome, allowed files, dependencies and exact verification. Only dependency-ready tasks may execute.'],
@@ -48,4 +50,4 @@ for item in catalog['items']:
     ('Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.' if skill.get('manualOnly') else 'Confirm how the chosen host discovers and invokes this skill; do not invent an identical slash command across hosts.'),
     'Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.']+skill.get('requirements',[])+skill.get('notes',[])
  items[id]=dict(mode=kind,instructions=steps)
-(ROOT/'assets/bootstrap-recipes.json').write_text(json.dumps(dict(schema=1,reviewed='2026-10-27',items=items),ensure_ascii=False,indent=2)+'\n')
+(ROOT/'assets/bootstrap-recipes.json').write_text(json.dumps(dict(schema=1,reviewed='2026-11-18',items=items),ensure_ascii=False,indent=2)+'\n')

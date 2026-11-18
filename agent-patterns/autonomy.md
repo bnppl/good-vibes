@@ -2,7 +2,7 @@
 title: "Autonomy Spectrum"
 parent: "Agent Architecture Patterns"
 nav_order: 3
-last_updated: 2026-06-16
+last_updated: 2026-11-18
 last_read: null
 status: unread
 ---
@@ -139,3 +139,9 @@ Context engineering (Level 3 in this framework) is foundational — it enables e
 ---
 
 For sources and further reading, see [sources.md](./sources.md).
+
+## November 2026: Responsiveness Is a Separate Requirement
+
+Harrison Chase's [2 November context-engineering discussion](https://www.langchain.com/blog/context-engineering-challenges-late-2026) identifies unresolved problems in proactive agents: notification calibration, memory selection, asynchronous completion and goal tracking. These are practitioner observations, not validated general solutions.
+
+**Suggested adaptation:** Track background task IDs, pending approvals and current goals explicitly. Test completion arriving while the main agent is busy, idle or awaiting approval; stale completion must not revive superseded work. Judge notifications by usefulness as well as task completion.

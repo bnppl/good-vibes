@@ -2,7 +2,7 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-07-04
+last_updated: 2026-11-18
 last_read: null
 status: unread
 ---
@@ -118,3 +118,9 @@ See [sources](sources.md) for full citations.
 ---
 
 **Next Session:** [characterization-and-handoff](characterization-and-handoff.md)
+
+## November 2026: Keep the Contract Reviewable
+
+Matteo Vaccari's [Tests as data](https://www.martinfowler.com/articles/tests-as-data.html) (11 November) proposes human-readable customer tests stored as data, interpreted by a smaller runner. This is a recommendation informed by practitioner interviews, not a controlled comparison showing universal superiority. The author is Vaccari; hosting on martinfowler.com does not establish Fowler's personal workflow.
+
+**Suggested adaptation:** For XP replay, keep the agreed input/expected-state table separately reviewable. Protect both those expectations and the runner, then inject a duplicate-award defect to confirm failure. Data files still need correctness checks; changing representation alone does not enforce ownership.

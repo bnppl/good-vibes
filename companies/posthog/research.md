@@ -1,8 +1,8 @@
 ---
 parent: PostHog
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: 2026-11-18
+research_checked: '2026-11-18'
+research_cutoff: '2026-11-18'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -137,13 +137,13 @@ Publication / revision: **2026-10-20**. Practice: Work over the preceding 28 day
 
 ### C09 · D09 · Tooling and environment
 
-**Stated · Reported company use.** The developer CLI and cloud environments help agents run checks and collect evidence.
+**Stated · Reported team use.** DevEx exposes CI analytics through MCP for agent investigation and repair PRs.
 
-The July account includes work being built; universal availability is not established.
+Internal team account; does not establish automatic merge or company-wide availability.
 
-Publication / revision: **2026-07-28**. Practice: January–July 2026 retrospective; individual changes span that period. Checked: 2026-10-26. Source format: Authored engineering article.
+Publication: **2026-10-28**. Practice: October 2026; exact run dates unknown. Checked: 2026-11-18. Source format: Authored engineering article.
 
-[Primary source](https://posthog.com/blog/10k-prs-a-month) · [Cached findings](sources.md#s01)
+[Primary source](https://posthog.com/blog/self-driving-ci) · [Cached findings](sources.md#s06)
 
 <a id="c10"></a>
 

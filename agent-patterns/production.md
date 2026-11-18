@@ -2,7 +2,7 @@
 title: "Production Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 4
-last_updated: 2026-10-26
+last_updated: 2026-11-18
 last_read: null
 status: unread
 ---
@@ -155,3 +155,9 @@ LangChain's [company harness account](https://www.langchain.com/blog/components-
 Anthropic's [source-control case study](https://www.anthropic.com/research/redesigning-source-control) (October 13, updated October 15) describes tooling strain under unusually high change volume. It explicitly recognises that Git remains suitable for most repositories. The useful leadership question is where review, CI, or integration is now limiting delivery—not whether to copy its infrastructure.
 
 **Try it:** Add review wait, CI queue time, integration failures, and rework to the week-four recommendation. More generated code or PRs is not itself evidence of better outcomes.
+
+## October 2026: Detect Before Delegating CI Repair
+
+PostHog's [28 October DevEx account](https://posthog.com/blog/self-driving-ci) reports deterministic detectors for flaky checks, broken default-branch workflows and duration regressions, followed by agent investigation and proposed PRs. This is reported team use, not evidence of unattended merge authority or a controlled productivity gain.
+
+**Suggested adaptation:** Start with one reproducible CI signal, preserve its evidence, cap repair attempts and retain merge checks. [Cached company findings](../companies/posthog/sources.md#s06).

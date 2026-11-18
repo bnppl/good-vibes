@@ -11,7 +11,15 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 17 Nov 2026 08:47:26 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 08:53:15 +0000</lastBuildDate>
+    <item>
+      <title>Check every tool path; ground memory and CI repair in evidence</title>
+      <link>https://bnppl.github.io/good-vibes/study-briefings/2026-11-18.html</link>
+      <guid isPermaLink="false">good-vibes:2026-11-18:containment-memory-ci</guid>
+      <pubDate>Wed, 18 Nov 2026 08:53:15 +0000</pubDate>
+      <description>Added tool-path containment checks, qualified memory-consolidation evidence and reviewable acceptance data; refreshed Willison safeguards and PostHog CI repair evidence, slides, atlas and bootstrap recipes. These distinguish prototypes and team reports from proven general benefits. Sources: https://blog.primeradiant.com/external-sandboxes-for-coding-agents/ ; https://posthog.com/blog/self-driving-ci ; https://www.anthropic.com/research/components-of-agent-memory ; https://www.martinfowler.com/articles/tests-as-data.html .</description>
+      <category>Research updates</category>
+    </item>
     <item>
       <title>Subscribe to important Good Vibes updates</title>
       <link>https://bnppl.github.io/good-vibes/</link>

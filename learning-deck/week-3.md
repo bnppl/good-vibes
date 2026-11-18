@@ -2,7 +2,7 @@
 title: "03 · Make good work survive"
 parent: Learning Deck
 nav_order: 3
-last_updated: 2026-10-26
+last_updated: 2026-11-18
 ---
 
 # 03 · Make good work survive
@@ -55,7 +55,7 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 >
 > Instructions influence behaviour. Permissions limit what actions can happen. Retrieved text cannot grant authority, even when it survives in a summary or a later session.
 
-**In the wild:** A README asks the agent to write outside the checkout. The environment should reject that write if it is attempted.
+**In the wild:** A README asks the agent to write outside the checkout. Check shell and native file tools separately: a sandboxed Bash does not necessarily contain Read/Edit.
 
 **Takeaway:** Check the boundary itself, not just the agent’s promise.
 
@@ -71,7 +71,7 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 >
 > Implementation and tests can share the same misunderstanding. A deliberate regression checks whether your safety net rejects a known defect. It does not prove the suite catches every defect.
 
-**In the wild:** In an isolated copy, award XP twice. Does the retry test fail?
+**In the wild:** Keep a reviewable expected-state table. In an isolated copy, award XP twice. Does the runner reject it?
 
 **Takeaway:** Test whether your checks can disagree with broken code.
 

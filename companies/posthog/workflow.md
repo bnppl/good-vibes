@@ -1,8 +1,8 @@
 ---
 parent: PostHog
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: 2026-11-18
+research_checked: '2026-11-18'
+research_cutoff: '2026-11-18'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -47,3 +47,7 @@ Keep a human decision point, durable evidence and a way to verify that a propose
 Have the implementation expose `balance()`, `deliver(event_id)` and `restart_preserving_data()`. Run these observations through an external black-box check, rather than reading a test-owned substitute for the balance. The replay-only check cannot reveal whether the service lost its state at restart: the pre-replay read is essential.
 
 Before asking an agent to implement or test it, record who may edit the contract, which files it may change, the command used to execute checks, and when a human decision is needed. Preserve the actual command output and changed-file list. A passing generated test suite is not a substitute for the observations above.
+
+## October CI case — cache addendum
+
+[S06](sources.md#s06) adds a DevEx CI investigation case to the earlier feedback loop. This updates tooling evidence, not release authority. The optional exercise below/above remains our adaptation. Earlier claims retain their original verification dates.

@@ -2,7 +2,7 @@
 title: Comparing company approaches
 parent: Companies
 nav_order: 30
-last_updated: '2026-10-26'
+last_updated: 2026-11-18
 last_read: null
 status: unread
 ---
@@ -88,3 +88,7 @@ Add company-specific fields for **team scope**, **platform ownership**, **rollou
 - Banks do not necessarily use less autonomous engineering tooling; compare actual access and approval boundaries rather than industry stereotypes.
 - Public source is not proof that the internal AI harness is public. A repository may be company-originated but maintained by an independent community.
 - A single CTO, team or project cannot establish a company-wide practice. Undated living handbooks need a verified revision before they enter a strict recent-publication comparison.
+
+## 18 November 2026 · PostHog tooling update
+
+PostHog [C09](posthog/research.md#c09) now links the October DevEx CI account. It is reported team use; keep it separate from company-wide claims and from merge/deploy authority. Other dimensions retain their earlier source dates.

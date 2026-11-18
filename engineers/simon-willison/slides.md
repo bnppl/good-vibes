@@ -3,10 +3,10 @@ title: Simon Willison — executable evidence
 parent: Simon Willison Slides
 nav_order: 1
 nav_exclude: true
-last_updated: 2026-10-26
+last_updated: 2026-11-18
 cache_schema: 1
 derived_from: engineers/simon-willison/recent-ai.md
-research_checked: 2026-10-26
+research_checked: '2026-11-18'
 evidence_since: '2025-10-01'
 ---
 
@@ -141,3 +141,17 @@ Publications since 1 October 2025. Source dates and evidence kinds appear on eac
 [Optional practice: adapt locally](research.md) · [Recent evidence](recent-ai.md) · [Primary source](https://simonwillison.net/2026/Oct/20/battledrones/)
 
 ---
+
+## Card 10
+
+### Which tools crossed the boundary?
+
+> **Sandboxing Bash leaves other doors to check.**
+>
+> Personal use · published 2026-11-17. Willison reports external-sandbox prototype work with Prime Radiant.
+
+**In the wild:** Claude Code native Read/Edit stay on the host; Bash runs in the guest. Prototype scope matters.
+
+**Takeaway:** List and test every tool path before claiming isolation.
+
+[Optional practice: containment](../../verification/agent-security.md#benign-negative-tests) · [Cached evidence](recent-ai.md#c11) · [Primary source](https://blog.primeradiant.com/external-sandboxes-for-coding-agents/)
