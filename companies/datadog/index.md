@@ -6,11 +6,11 @@ company_profile: true
 company_id: datadog
 industry: Observability / developer software
 organisation_context: Large public company
-research_checked: '2026-10-26'
+research_checked: '2026-11-19'
 evidence_since: '2025-10-01'
 published: '2026-07-01'
 evidence_kind: Company engineering case collection
-last_updated: '2026-10-26'
+last_updated: 2026-11-19
 last_read: null
 status: unread
 canonical_name: Datadog
@@ -19,7 +19,7 @@ cache_schema: 1
 aliases:
 - DataDog
 practice_focus: coding-workflows
-research_cutoff: '2026-10-26'
+research_cutoff: '2026-11-19'
 focus_note: Named systems, optimization and internal-tool cases; different autonomy boundaries are preserved.
 tagline: Make the verification boundary explicit.
 summary: Recent cases show systems construction, bounded optimization and AI-built validation infrastructure. Published
@@ -372,3 +372,7 @@ Benchmark workloads, service context and later production outcomes may differ.
 Published / revision: **2026-07-01**. Practice: Project work before July publication; exact dates unknown. Checked: 2026-10-26. Format: Authored engineering case collection.
 
 [Source record](sources.md#s02) · [Original source](https://www.datadoghq.com/blog/how-datadog-uses-ai-to-build-internal-software-delivery-tools-and-improve-system/)
+
+## November 2026 · separate security-team evidence
+
+Read the [new vulnerability-hunt case](research.md#security-hunts-2026) and [S07](sources.md#s07). It supplements the systems/optimization comparison above; it does not redate those twelve dimensions or establish company-wide release authority.

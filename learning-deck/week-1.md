@@ -2,7 +2,7 @@
 title: "01 · Build confidence"
 parent: Learning Deck
 nav_order: 1
-last_updated: 2026-10-26
+last_updated: 2026-11-19
 ---
 
 # 01 · Build confidence
@@ -37,7 +37,7 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 > **A four-minute patch can create a thirty-minute repair job.**
 >
-> Generation time is only one part of the job. Review, rework, and integration can swallow the apparent saving. Track the whole journey before deciding a workflow is faster.
+> Generation time is only one part of the job. Review, rework, and integration can swallow the apparent saving. Track the whole journey, separating task types, before deciding a workflow is faster.
 
 **In the wild:** One patch lands quickly but needs half an hour of repairs. Another takes longer to generate and works first time.
 

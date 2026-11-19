@@ -2,9 +2,9 @@
 title: Datadog — source findings
 parent: Datadog
 nav_order: 2
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: 2026-11-19
+research_checked: '2026-11-19'
+research_cutoff: '2026-11-19'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -15,7 +15,7 @@ cache_schema: 1
 
 [Profile](index.md) · [Research](research.md)
 
-Sources inspected on **26 October 2026**. No tools, services or experiments were executed. Dates below are publication/revision dates, not inspection dates substituted for freshness. Original pages may change; pinned artifacts preserve only the stated revision.
+Initial sources inspected on **26 October 2026**; S07 records the later inspection separately. No tools, services or experiments were executed. Dates below are publication/revision dates, not inspection dates substituted for freshness. Original pages may change; pinned artifacts preserve only the stated revision.
 
 <a id="s01"></a>
 
@@ -110,3 +110,14 @@ Sources inspected on **26 October 2026**. No tools, services or experiments were
 ## Evidence not established
 
 No private configuration, exact current installed stack, undisclosed permissions, protected-test policy or missing release authority is manufactured from public examples. Vendor and practitioner reports retain their attribution. Exact practice dates remain unknown where sources do not supply them.
+
+<a id="s07"></a>
+
+## S07 · Agentic vulnerability hunting system
+
+- **Authors:** Bianca Lankford, Matt Meen, Adrien Peronnet. [Original](https://www.datadoghq.com/blog/datadogs-agentic-vulnerability-hunting-system/).
+- **Published:** 2026-11-18. **Checked:** 2026-11-19. **Practice:** Initial benchmark August 2026; exact hunt dates unknown.
+- **Scope:** Public security-engineering article; no independent execution.
+- **Kind / label:** Reported team use / Stated.
+- **Supports:** [Additional security case](research.md#security-hunts-2026); existing systems claims remain separate.
+- **Limit:** Known-vulnerability rediscovery does not establish recall on unknown bugs or safe automatic fixes. No controlled general productivity result is claimed.

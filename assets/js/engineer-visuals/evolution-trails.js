@@ -619,6 +619,7 @@ window.EngineerVisuals['evolution-trails'] = function(ctx) {
     }
   ],
   "matt-pocock": [
+    {"source":"S15","date":"2026-11-18","lane":"practice","title":"Course Video Manager walkthrough update","summary":"Public personal-workflow text; displayed revision date, original publication unknown. Video not independently verified.","url":"https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n"},
     {
       "source": "S01",
       "date": "2026-03-16",

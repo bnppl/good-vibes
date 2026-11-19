@@ -8,9 +8,9 @@ cache_schema: 1
 person_id: matt-pocock
 canonical_name: Matt Pocock
 aliases: []
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
-last_updated: '2026-10-26'
+research_cutoff: '2026-11-19'
+research_checked: '2026-11-19'
+last_updated: 2026-11-19
 last_read: null
 status: unread
 tagline: Agree the seam. Build a slice. Review two questions.
@@ -136,20 +136,19 @@ dimensions:
   source_format: Repository artifact
 - id: D08
   title: Context and durable state
-  position: August handoff guidance references settled artifacts and distinguishes portability from ordinary context
-    continuation.
+  position: The Course Video Manager walkthrough uses a glossary and ADRs as context.
   evidence: Stated
   claim: C08
   detail: recent-ai.md#c08
-  source: https://www.aihero.dev/skills-handoff
-  checked: '2026-10-26'
-  qualification: Temporary handoff output is not a durable memory system or application persistence.
-  evidence_kind: Recommendation
-  published: Updated 2026-08-24; original publication not established
-  practice_date: Dated living guidance; exact personal practice dates unknown
-  source_id: S10
+  source: https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n
+  checked: '2026-11-19'
+  qualification: One reported feature; text inspected, video not independently verified.
+  evidence_kind: Personal use
+  published: Updated 2026-11-18; original publication not established
+  practice_date: Course Video Manager feature; exact session dates unknown
+  source_id: S15
   ai_specific: true
-  source_format: Authored living guide (update date only)
+  source_format: Authored walkthrough text
 - id: D09
   title: Tooling and environment
   position: Publishes composable agent skills; the pinned README documents installation and repo-specific setup
@@ -321,13 +320,13 @@ Published artifact, not an executed fleet or a claim that every personal task us
 
 ### C08 · D08 · Context and durable state
 
-**Stated · Recommendation.** August handoff guidance references settled artifacts and distinguishes portability from ordinary context continuation.
+**Stated · Personal use.** The Course Video Manager walkthrough uses a glossary and ADRs as context.
 
-Source format: Authored living guide (update date only). Published / revision: **Updated 2026-08-24; original publication not established**. Practice: Dated living guidance; exact personal practice dates unknown.
+One reported feature; text inspected, video not independently verified.
 
-Temporary handoff output is not a durable memory system or application persistence.
+Revision: **Updated 2026-11-18; original publication not established**. Practice: Course Video Manager feature; exact session dates unknown. Checked: 2026-11-19. Format: Authored walkthrough text.
 
-[Recent evidence](recent-ai.md#c08) · [Primary source](https://www.aihero.dev/skills-handoff)
+[Primary source](https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n) · [Source record](sources.md#s15)
 
 <a id="c09"></a>
 

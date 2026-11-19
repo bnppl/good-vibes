@@ -2,11 +2,11 @@
 title: Matt Pocock — recent AI evidence
 parent: Matt Pocock
 nav_order: 0
-last_updated: '2026-10-26'
+last_updated: 2026-11-19
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-11-19'
+research_checked: '2026-11-19'
 evidence_since: '2025-10-01'
 cache_schema: 1
 ---
@@ -17,7 +17,11 @@ cache_schema: 1
 
 ## Scope and dates
 
-Publication window: **1 October 2025–26 October 2026**. Publication, revision, practice and inspection dates are separate. An update is labelled as an update and does not establish original publication or the date each passage was written. This page prioritises actual use where documented; recommendations and inspected artifacts have their own labels. A newly published retrospective may describe older work.
+Publication window: **1 October 2025–19 November 2026**. Publication, revision, practice and inspection dates are separate. An update is labelled as an update and does not establish original publication or the date each passage was written. This page prioritises actual use where documented; recommendations and inspected artifacts have their own labels. A newly published retrospective may describe older work.
+
+## Course Video Manager case
+
+[S15](sources.md#s15) adds a dated first-person workflow account to the earlier instruction artifacts. It reports prototypes, settled specifications, ticketed implementation and retrospective feedback. This does not independently verify the video or imply all pinned skills were used unchanged.
 
 ## Composable skills with an explicit revision boundary
 
@@ -137,13 +141,13 @@ Published artifact, not an executed fleet or a claim that every personal task us
 
 ### C08 · Context and durable state
 
-**Stated · Recommendation.** August handoff guidance references settled artifacts and distinguishes portability from ordinary context continuation.
+**Stated · Personal use.** The Course Video Manager walkthrough uses a glossary and ADRs as context.
 
-Source format: Authored living guide (update date only). Published / revision: **Updated 2026-08-24; original publication not established**. Practice: Dated living guidance; exact personal practice dates unknown. Checked: 2026-10-26.
+One reported feature; text inspected, video not independently verified.
 
-Temporary handoff output is not a durable memory system or application persistence.
+Revision: **Updated 2026-11-18; original publication not established**. Practice: Course Video Manager feature; exact session dates unknown. Checked: 2026-11-19. Format: Authored walkthrough text.
 
-[Primary source](https://www.aihero.dev/skills-handoff) · [Source register](sources.md#s10)
+[Primary source](https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n) · [Source record](sources.md#s15)
 
 <a id="c09"></a>
 

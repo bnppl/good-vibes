@@ -2,11 +2,11 @@
 title: Matt Pocock — source findings
 parent: Matt Pocock
 nav_order: 3
-last_updated: '2026-10-26'
+last_updated: 2026-11-19
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-11-19'
+research_checked: '2026-11-19'
 cache_schema: 1
 ---
 
@@ -288,3 +288,14 @@ All records inspected on **26 October 2026**. Public material only; no paid bodi
 ## Cache-only refinement
 
 26 October 2026: Material October/August 2026 dates now remain visible in the short cards, including the changed implementation/refactoring loop. No external source refresh occurred; research dates, reading metadata, card IDs and browser-storage identity were preserved.
+
+<a id="s15"></a>
+
+## S15 · Course Video Manager feature walkthrough
+
+- **Author:** Matt Pocock. [Original](https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n).
+- **Revision shown:** Updated 2026-11-18; original publication not established. **Checked:** 2026-11-19.
+- **Practice:** Reported feature work; exact session dates unknown.
+- **Scope:** Public authored text inspected; accompanying video and underlying sessions not independently verified.
+- **Finding:** A glossary records domain concepts; ADRs preserve decision reasons. Supports C08 as Stated / Personal use.
+- **Limit:** One feature account, not a controlled effectiveness comparison or complete private setup. No new installation recipe is inferred.

@@ -1,14 +1,14 @@
 ---
 title: Pipeline evidence catalogue
 nav_exclude: true
-last_updated: 2026-11-18
+last_updated: 2026-11-19
 ---
 
 # Pipeline evidence catalogue
 
 [Open the interactive atlas](index.html)
 
-Reviewed all 20 engineer and 20 company caches. This is a stage index, not a claim that any person or team follows the combined pipeline. Source inspection dates vary by attribution, including targeted additions on 18 November 2026; this catalogue does not revalidate current installations. Prioritises publications from 1 October 2025. Undated public artifacts remain explicitly labelled. AI-product evaluation and our hypothetical practice exercises are excluded. A retrospective publication may describe older work.
+Reviewed all 20 engineer and 20 company caches. This is a stage index, not a claim that any person or team follows the combined pipeline. Source inspection dates vary by attribution, including targeted additions on 18–19 November 2026; this catalogue does not revalidate current installations. Prioritises publications from 1 October 2025. Undated public artifacts remain explicitly labelled. AI-product evaluation and our hypothetical practice exercises are excluded. A retrospective publication may describe older work.
 
 Tool names are attributed only within the named case. “Published artifact” means published by or associated with the subject, not proof of use. Declared policy and advice are not treated as observed practice. Internal harnesses are not necessarily available to install.
 
@@ -454,6 +454,12 @@ Skill. Configure repository tracker conventions, domain documentation and skill 
 
 - **Matt Pocock · Published artifact** — The published skill describes this capability: Configure repository tracker conventions, domain documentation and skill guidance. [Primary evidence](https://github.com/mattpocock/skills/blob/5beb35b040e3de97e54fa9e386d7e42d15c295c2/skills/engineering/setup-matt-pocock-skills/SKILL.md) · [Cached claim](../engineers/matt-pocock/skill-inventory.md#skill-matt-setup-matt-pocock-skills). Publication/revision: Repository revision 2026-10-19; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill.
 
+### Project glossary and ADRs
+
+Process. Keep domain vocabulary and decision rationale discoverable.
+
+- **Matt Pocock · Personal use** — The Course Video Manager walkthrough uses a glossary and ADRs as context. [Primary evidence](https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n) · [Cached claim](../engineers/matt-pocock/recent-ai.md#c08). Publication/revision: Updated 2026-11-18; original publication not established. Practice: Course Video Manager feature; exact session dates unknown. Limit: One reported feature; text inspected, video not independently verified.
+
 ## Implement
 
 Use coding agents, developer tools and executable environments.
@@ -816,6 +822,12 @@ Skill. Capture and analyse native-app CPU profiles using the Xcode command-line 
 Skill. Investigate Codex implementation/configuration problems in a local source checkout.
 
 - **Peter Steinberger · Published artifact** — The published skill describes this capability: Investigate Codex implementation/configuration problems in a local source checkout. [Primary evidence](https://github.com/steipete/agent-scripts/blob/1159adf26ad007df38b87debb107d3946008d38b/skills/codex-debugging/SKILL.md) · [Cached claim](../engineers/peter-steinberger/skill-inventory.md#skill-peter-codex-debugging). Publication/revision: Repository revision 2026-10-20; individual publication date not established. Practice: Instruction artifact, not an observed personal session. Limit: Inspected, not installed or executed. Publication does not establish daily use or runtime compatibility. Some source instructions assume the maintainer’s machine paths or tools. Adapt only verified project paths; do not run the repository-wide global sync script as a project bootstrap step.
+
+### Threat-pack regression hunts
+
+Process. Repeat fixed-input hunts against hidden known findings; distinguish report reduction from reliable detection.
+
+- **Datadog · Reported team use** — Security-team qualification and repeatability case; separate from systems construction. [Primary evidence](https://www.datadoghq.com/blog/datadogs-agentic-vulnerability-hunting-system/) · [Cached claim](../companies/datadog/research.md#security-hunts-2026). Publication/revision: 2026-11-18. Practice: Initial benchmark August 2026; exact hunt dates unknown. Limit: Reported case, not independent execution or evidence of safe automatic remediation.
 
 ## Review & understand
 
@@ -1234,7 +1246,7 @@ All 40 profiles were reviewed. Missing observations indicate a gap in this curat
 - [Jason Liu](../engineers/jason-liu/index.md): 6 indexed evidence associations. May/June 2026: Codex workstreams, explicit versioned memory, voice input and browser review; full October stack unknown.
 - [Kent Beck](../engineers/kent-beck/index.md): 1 indexed evidence associations. April 2026 sponsored Intent session on a Go radix tree. BPlusTree3 is background; its recent activity is not established here.
 - [Martin Fowler](../engineers/martin-fowler/index.md): 2 indexed evidence associations. May 2026 context-interview trial; current coding tools and release setup not established. Pi/gptel mentions are interest only.
-- [Matt Pocock](../engineers/matt-pocock/index.md): 24 indexed evidence associations. Pinned October 2026 composable skills; displayed article update dates do not establish original publication.
+- [Matt Pocock](../engineers/matt-pocock/index.md): 25 indexed evidence associations. Pinned October 2026 composable skills; displayed article update dates do not establish original publication.
 - [Peter Steinberger](../engineers/peter-steinberger/index.md): 17 indexed evidence associations. October/December 2025 personal workflows; October 2026 Agent Scripts and Oracle artifacts are separately dated.
 - [Robert C. Martin](../engineers/robert-c-martin/index.md): 5 indexed evidence associations. September 2026 interview: Grok TUI, prior Codex/Claude, above-code supervision; SwarmForge is a separately dated artifact.
 - [Simon Willison](../engineers/simon-willison/index.md): 8 indexed evidence associations. Documented examples include Claude Code, Codex, Rodney, Showboat and Git; no complete private setup established.
@@ -1244,7 +1256,7 @@ All 40 profiles were reviewed. Missing observations indicate a gap in this curat
 - [CircleCI](../companies/circleci/index.md): 0 indexed evidence associations. Product integrations are documented. CircleCI’s own current internal AI coding toolchain is not established.
 - [Cloudflare](../companies/cloudflare/index.md): 6 indexed evidence associations. OpenCode-based review orchestration, GitLab CI, Cloudflare Access/AI Gateway, Backstage and AGENTS.md context, governed Engineering Codex. The Codex is internal standards, not OpenAI Codex.
 - [Coinbase](../companies/coinbase/index.md): 7 indexed evidence associations. June internal tooling: screenshot inputs, reference implementations, versioned rules/templates and local checks. May Mux: worktree/branch/terminal isolation within a broader portfolio including Cursor, Copilot, OpenCode and Claude Code.
-- [Datadog](../companies/datadog/index.md): 7 indexed evidence associations. Named cases use Claude Code/Cursor/Codex and verification tools. Pinned redis-rust is research, not a production replacement.
+- [Datadog](../companies/datadog/index.md): 8 indexed evidence associations. Named cases use Claude Code/Cursor/Codex and verification tools. Pinned redis-rust is research, not a production replacement.
 - [Duolingo](../companies/duolingo/index.md): 7 indexed evidence associations. Published accounts: Temporal, shared Codex/Claude wrappers, S3 state and CI; not a private installed inventory.
 - [GitHub](../companies/github/index.md): 8 indexed evidence associations. March Copilot CLI/VS Code account; September runtime-port retrospective. Current private company-wide stack unknown.
 - [GitLab](../companies/gitlab/index.md): 3 indexed evidence associations. Pinned DevEx guidance names Duo, Claude and MCP; R&D playbook describes a tool-flexible harness. Private configurations unverified.

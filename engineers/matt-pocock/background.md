@@ -2,7 +2,7 @@
 title: Matt Pocock — comparison history
 parent: Matt Pocock
 nav_order: 9
-last_updated: '2026-10-26'
+last_updated: 2026-11-19
 nav_exclude: true
 ---
 
@@ -239,3 +239,7 @@ Derived from the cached research checked on 26 October 2026. Worked examples are
 [Optional practice: common reward lab](workflow.md#first-practical-lab) · [Detailed evidence](workflow.md#first-practical-lab) · [Cached claim](index.md#c04)
 
 ---
+
+## 19 November 2026 · C08 support change
+
+The prior C08 used S10's August handoff recommendation. C08 now uses S15's dated first-person feature account. S10 and its limits remain in the source register; the stable dimension has not been reassigned to a different subject.

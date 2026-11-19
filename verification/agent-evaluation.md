@@ -2,7 +2,7 @@
 title: Agent Evaluation
 parent: Verification
 nav_order: 11
-last_updated: 2026-10-26
+last_updated: 2026-11-19
 last_read: null
 status: unread
 ---
@@ -66,3 +66,15 @@ Create your task list and run record. Predict the effect of one proposed change,
 A skill can work when named explicitly yet never be selected during real work. Compare natural requests with explicit invocation, then inspect discovery, adherence, and the final application separately. See the [skills exercise](../context-engineering/instruction-layer.md#october-2026-evaluate-whether-skills-are-discovered).
 
 An older gap also matters: Anthropic's [infrastructure-noise study](https://www.anthropic.com/research/infrastructure-noise) (February 5, 2026) showed that resource configuration changed Terminal-Bench 2.0 outcomes. Record CPU/RAM allocations and hard limits, timeouts, dependency availability, and infrastructure errors. Report environment failures separately and retain them in the run accounting; do not quietly remove failed runs or relabel implementation errors. This evidence predates the July update but was missing from this chapter.
+
+## November 2026: Stratify Outcomes, Not Just Activity
+
+OpenAI's [18 November research-acceleration report](https://openai.com/index/research-acceleration-jagged-frontier/) separates usage telemetry, researcher surveys and research outputs. Estimated success varies by task category; activity measures such as changed code and experiment counts do not themselves establish faster research progress. API-equivalent usage is valued at list prices, not actual internal cost. These are internal AI-R&D observations, not an independent trial of ordinary product-development teams. The public report combines changing models and harnesses rather than identifying one reproducible configuration for a general productivity claim.
+
+**Suggested adaptation:** Break your task results down by bug fix, feature, refactor and investigation. Keep human intervention and review cost visible in each group. A better aggregate can hide a regression in a task type you depend on.
+
+## November 2026: Rediscovery Must Be Repeatable
+
+Datadog's [18 November hunt account](https://www.datadoghq.com/blog/datadogs-agentic-vulnerability-hunting-system/) distinguishes finding a reference vulnerability at least once from finding it consistently across independent runs. The initial August benchmark contains 43 validated vulnerabilities across nine threat packs; a working stability threshold is seven detections in ten runs, not a universal standard. Packs, repository snapshots and configurations are frozen; reference findings are hidden from the hunting agent.
+
+**Suggested adaptation:** Repeat a small set of known-failure tasks before adopting a model or harness change. Report both any-run success and per-task consistency. Test the filter's false negatives as well as report volume. [Company evidence and limits](../companies/datadog/research.md#security-hunts-2026).

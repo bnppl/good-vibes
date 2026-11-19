@@ -2,7 +2,7 @@
 title: Comparing company approaches
 parent: Companies
 nav_order: 30
-last_updated: 2026-11-18
+last_updated: 2026-11-19
 last_read: null
 status: unread
 ---
@@ -92,3 +92,7 @@ Add company-specific fields for **team scope**, **platform ownership**, **rollou
 ## 18 November 2026 · PostHog tooling update
 
 PostHog [C09](posthog/research.md#c09) now links the October DevEx CI account. It is reported team use; keep it separate from company-wide claims and from merge/deploy authority. Other dimensions retain their earlier source dates.
+
+## 19 November 2026 · Datadog security evidence
+
+The [additional Datadog hunt case](datadog/research.md#security-hunts-2026) is security-team practice. It is indexed separately from the existing systems/optimization dimensions. Comparing rediscovery with code-test coverage or optimization savings would mix different outcomes; no shared performance score is inferred.

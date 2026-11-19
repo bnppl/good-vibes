@@ -2,11 +2,11 @@
 title: Matt Pocock — detailed research
 parent: Matt Pocock
 nav_order: 1
-last_updated: '2026-10-26'
+last_updated: 2026-11-19
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-11-19'
+research_checked: '2026-11-19'
 cache_schema: 1
 ---
 
@@ -22,7 +22,7 @@ cache_schema: 1
 
 **Demonstrated artifact.** The October public skills provide an inspectable, composable process. The repository calls them daily-use tools; that self-report does not establish every private setting or session. This profile inspected revision `5beb35b040e3de97e54fa9e386d7e42d15c295c2`, dated 19 October 2026. No skills were installed or executed. [S02](sources.md#s02)
 
-Research checked and cut off on **26 October 2026**. This guide separates public prescriptions, older workflow names, artifact inspection, and our original application. The worked reward feature is not a Pocock demonstration.
+Initial research checked and cut off on **26 October 2026**; the November C08 update is linked below. This guide separates public prescriptions, older workflow names, artifact inspection, and our original application. The worked reward feature is not a Pocock demonstration.
 
 ## Techniques and principles
 
@@ -137,3 +137,7 @@ The stable [C01–C12 entries](index.md#comparison-evidence) preserve advice ver
 ## Sources and research gaps
 
 The [fourteen source records](sources.md) identify inspected scope, dates, findings and claim links. Public explainers and a pinned repository support process attribution. Tool instructions were not executed; paid course bodies, full private configuration, complete security permissions and production release/rollback policy were not established. Public source terminology evolves: March's seven-phase guide and October's current skill names should be read in their own dates.
+
+## November case update
+
+The [current C08](recent-ai.md#c08) now has a reported personal project behind its durable-context claim. Earlier sections preserve the October artifact review and optional adaptations; their inspection dates have not been promoted to November.

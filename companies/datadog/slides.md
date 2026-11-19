@@ -2,9 +2,9 @@
 title: Datadog — bite-sized ideas
 parent: Datadog Company Slides
 nav_order: 1
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: 2026-11-19
+research_checked: '2026-11-19'
+research_cutoff: '2026-11-19'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -96,3 +96,17 @@ Recent AI-assisted software development, with dates and source scope attached. [
 [Optional practice: inspect an outcome](workflow.md#optional-practice) · [Detailed evidence](research.md) · [Source record](sources.md#s02)
 
 ---
+
+## Card 06
+
+### A quieter scanner can still miss bugs
+
+> **Fewer reports do not prove better filtering.**
+>
+> Reported team use · published 2026-11-18. Datadog evaluates qualification as well as hunt results.
+
+**In the wild:** Uncompleted reproduction remains unverified.
+
+**Takeaway:** Inspect rejected candidates and record what could not be tested.
+
+[Optional practice](workflow.md#optional-practice) · [Evidence](research.md#security-hunts-2026)

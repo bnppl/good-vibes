@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-18",
+  "reviewed": "2026-11-19",
   "items": {
     "define-1": {
       "mode": "process",
@@ -1445,6 +1445,18 @@
         "Preserve the source manual-only invocation flag; do not turn this into an automatically triggered skill.",
         "Document the actual installed revision/path, trigger, prerequisites and a non-consequential discovery or smoke check. Installing the capability does not authorise publishing, merging, provisioning or accessing accounts.",
         "Configure tracker and domain-document conventions before using engineering workflows. Avoid simultaneous plugin and editable-copy installation of the same skill."
+      ]
+    },
+    "context-glossary-adrs": {
+      "mode": "process",
+      "instructions": [
+        "Inspect existing project vocabulary and decision records. Add only missing domain terms or consequential decisions; link each to current code and mark superseded choices. This is a local adaptation, not evidence of reproducing Pocock’s complete workflow."
+      ]
+    },
+    "verify-threat-pack-hunts": {
+      "mode": "process",
+      "instructions": [
+        "Treat Datadog’s hunt pipeline as an internal-system pattern. For a disposable local fixture, agree security requirements, separate hidden reference cases from agent inputs, repeat bounded checks and keep unresolved reproduction explicitly unverified. Do not scan third-party or production systems as a bootstrap smoke test."
       ]
     }
   }

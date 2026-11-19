@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "title": "Agentic engineering pipeline atlas",
-  "reviewed": "2026-11-18",
-  "cacheDate": "2026-11-18",
+  "reviewed": "2026-11-19",
+  "cacheDate": "2026-11-19",
   "since": "2025-10-01",
   "stages": [
     {
@@ -185,7 +185,7 @@
       "path": "engineers/matt-pocock",
       "summary": "Pinned October 2026 composable skills; displayed article update dates do not establish original publication.",
       "id": "engineers/matt-pocock",
-      "observations": 24
+      "observations": 25
     },
     {
       "name": "Peter Steinberger",
@@ -265,7 +265,7 @@
       "path": "companies/datadog",
       "summary": "Named cases use Claude Code/Cursor/Codex and verification tools. Pinned redis-rust is research, not a production replacement.",
       "id": "companies/datadog",
-      "observations": 7
+      "observations": 8
     },
     {
       "name": "Duolingo",
@@ -6174,6 +6174,50 @@
           "detail": "/engineers/matt-pocock/skill-inventory.html#skill-matt-setup-matt-pocock-skills",
           "register": "/engineers/matt-pocock/skill-inventory.html#sources",
           "format": "Pinned SKILL.md instruction artifact"
+        }
+      ]
+    },
+    {
+      "id": "context-glossary-adrs",
+      "stage": "context",
+      "type": "process",
+      "name": "Project glossary and ADRs",
+      "usage": "Keep domain vocabulary and decision rationale discoverable.",
+      "observations": [
+        {
+          "entity": "engineers/matt-pocock",
+          "claim": "The Course Video Manager walkthrough uses a glossary and ADRs as context.",
+          "kind": "Personal use",
+          "published": "Updated 2026-11-18; original publication not established",
+          "practice": "Course Video Manager feature; exact session dates unknown",
+          "checked": "2026-11-19",
+          "qualification": "One reported feature; text inspected, video not independently verified.",
+          "source": "https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n",
+          "detail": "/engineers/matt-pocock/recent-ai.html#c08",
+          "register": "/engineers/matt-pocock/sources.html#s15",
+          "format": "Authored walkthrough text"
+        }
+      ]
+    },
+    {
+      "id": "verify-threat-pack-hunts",
+      "stage": "verify",
+      "type": "process",
+      "name": "Threat-pack regression hunts",
+      "usage": "Repeat fixed-input hunts against hidden known findings; distinguish report reduction from reliable detection.",
+      "observations": [
+        {
+          "entity": "companies/datadog",
+          "claim": "Security-team qualification and repeatability case; separate from systems construction.",
+          "kind": "Reported team use",
+          "published": "2026-11-18",
+          "practice": "Initial benchmark August 2026; exact hunt dates unknown",
+          "checked": "2026-11-19",
+          "qualification": "Reported case, not independent execution or evidence of safe automatic remediation.",
+          "source": "https://www.datadoghq.com/blog/datadogs-agentic-vulnerability-hunting-system/",
+          "detail": "/companies/datadog/research.html#security-hunts-2026",
+          "register": "/companies/datadog/sources.html#s07",
+          "format": "Authored security-engineering article"
         }
       ]
     }

@@ -11,7 +11,15 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 18 Nov 2026 08:53:15 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 08:23:00 +0000</lastBuildDate>
+    <item>
+      <title>Measure repeatability and task-specific outcomes</title>
+      <link>https://bnppl.github.io/good-vibes/study-briefings/2026-11-19.html</link>
+      <guid isPermaLink="false">good-vibes:2026-11-19:repeatability-context-evidence</guid>
+      <pubDate>Thu, 19 Nov 2026 08:23:00 +0000</pubDate>
+      <description>Added a dated Pocock feature account, Datadog security-hunt repeatability evidence and task-specific evaluation guidance from OpenAI. These help separate reported practice, repeatable checks and activity metrics. Updated profiles, slides, comparison notes, the atlas and bootstrap adaptations. Sources: https://www.aihero.dev/watch-me-ship-a-21-000-line-feature-with-mattpocock-skills~ez95n ; https://www.datadoghq.com/blog/datadogs-agentic-vulnerability-hunting-system/ ; https://openai.com/index/research-acceleration-jagged-frontier/ .</description>
+      <category>Research updates</category>
+    </item>
     <item>
       <title>Check every tool path; ground memory and CI repair in evidence</title>
       <link>https://bnppl.github.io/good-vibes/study-briefings/2026-11-18.html</link>

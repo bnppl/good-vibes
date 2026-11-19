@@ -2,9 +2,9 @@
 title: Datadog — workflow and optional practice
 parent: Datadog
 nav_order: 3
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: 2026-11-19
+research_checked: '2026-11-19'
+research_cutoff: '2026-11-19'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -53,3 +53,7 @@ A balance of ten only after replay cannot demonstrate persistence through restar
 Ask an agent for a bounded implementation or inspection, then capture the patch, commands, actual output and remaining uncertainty. Use an independent process to read stored state. If the implementation changes a test or expectation, review the semantic change separately. A screenshot, prose explanation or claimed successful command is not the state observation itself.
 
 Compare the initial and final change using completion, reviewer effort, defect discoveries and cost per accepted task. Do not reward token consumption or generated line count. Decide approval, merge and deployment authority before the run, and use only an environment whose access matches the task.
+
+## Security-hunt case boundary
+
+The [November account](research.md#security-hunts-2026) is an additional observed workflow, separate from the earlier optimization and systems examples. Our optional exercise remains an adaptation; reading a new account does not complete it.

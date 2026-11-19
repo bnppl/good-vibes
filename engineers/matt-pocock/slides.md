@@ -2,11 +2,11 @@
 title: Matt Pocock — bite-sized ideas
 parent: Matt Pocock Slides
 nav_order: 1
-last_updated: '2026-10-26'
+last_updated: 2026-11-19
 last_read: null
 status: unread
-research_cutoff: '2026-10-26'
-research_checked: '2026-10-26'
+research_cutoff: '2026-11-19'
+research_checked: '2026-11-19'
 cache_schema: 1
 nav_exclude: true
 derived_from: engineers/matt-pocock/recent-ai.md
@@ -15,7 +15,23 @@ evidence_since: '2025-10-01'
 
 # Matt Pocock — recent AI evidence
 
-Window: **1 October 2025–26 October 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
+Window: **1 October 2025–19 November 2026**. Publication/revision dates and practice periods differ. [Earlier cards and principles](background.md).
+
+## Card 10
+
+### Keep the reason as well as the name
+
+> **A glossary and an ADR answer different questions.**
+>
+> Personal use · page updated 2026-11-18; original date unknown.
+
+**In the wild:** His Course Video Manager account separates domain vocabulary from decision reasons.
+
+**Takeaway:** Preserve intent without treating old decisions as unquestionable rules.
+
+[Optional practice](research.md) · [Evidence](recent-ai.md#c08)
+
+---
 
 ## Card 09
 

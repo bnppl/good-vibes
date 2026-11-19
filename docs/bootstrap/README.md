@@ -46,3 +46,7 @@ The wizard provides an entry-type selector, a published-skills shortcut, source-
 ## 18 November evidence additions
 
 Two appended catalogue IDs preserve previous selections: `platform-16` (external sandbox prototypes) and `learn-8` (PostHog CI signal-driven repair). Recipes distinguish public prototype inspection from an internal-system adaptation and require path-specific checks. The [12 November GitHub guide](https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/) reinforces separate project configuration and per-host discovery/tools/permission checks; it does not establish GitHub-wide internal use.
+
+## 19 November evidence additions
+
+`context-glossary-adrs` indexes a reported personal feature account; `verify-threat-pack-hunts` indexes a separate security-team case. Their setup steps are local adaptations, with no guessed installation of an internal platform. Existing pinned skill versions and IDs remain unchanged.

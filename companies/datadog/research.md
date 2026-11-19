@@ -2,9 +2,9 @@
 title: Datadog — detailed research
 parent: Datadog
 nav_order: 1
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: 2026-11-19
+research_checked: '2026-11-19'
+research_cutoff: '2026-11-19'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -15,7 +15,7 @@ cache_schema: 1
 
 [Profile](index.md) · [Source register](sources.md) · [Workflow](workflow.md) · [Slides](slides.md)
 
-Reviewed **26 October 2026**. Named systems, optimization and internal-tool cases; different autonomy boundaries are preserved. Recent publication does not date every underlying practice.
+Initial systems review: **26 October 2026**; the separate November security case appears below. Named systems, optimization and internal-tool cases; different autonomy boundaries are preserved. Recent publication does not date every underlying practice.
 
 ## Three cases with different autonomy boundaries
 
@@ -182,3 +182,11 @@ Published / revision: **2026-07-01**. Practice: Project work before July publica
 ## How to use this knowledge base
 
 Start with a concrete decision you need to improve, then inspect its claim and source scope. The optional exercise transfers an observation technique, not a company’s complete process. Before adopting a pattern, identify the artifact under test, who owns its meaning, what can falsify it, and who can authorize a production change. No numerical ranking of companies is implied.
+
+<a id="security-hunts-2026"></a>
+
+## November security hunts: context, qualification and reproduction
+
+**Stated · Reported team use.** The [18 November security-engineering account](https://www.datadoghq.com/blog/datadogs-agentic-vulnerability-hunting-system/) adds human-reviewed threat packs and reproducibility checks. Qualified candidates must connect a reachable entry point to a violated security invariant; incomplete reproduction stays unverified. Separate scoring checks repeated rediscovery against hidden references.
+
+Practice began before publication; the initial benchmark is dated August 2026, while exact operational hunt dates are unknown. This is a security-team account, not evidence that arbitrary remediation or production release is autonomous. [S07](sources.md#s07) records the inspected scope. Existing C01–C12 retain their original cases and dates.
