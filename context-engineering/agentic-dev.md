@@ -2,7 +2,7 @@
 title: "Agentic Development"
 parent: "Context Engineering"
 nav_order: 8
-last_updated: 2026-10-26
+last_updated: 2026-11-20
 last_read: null
 status: unread
 ---
@@ -300,9 +300,9 @@ A step-by-step setup for a new agentic dev project:
 
 **1. Set up your instruction file.** Create CLAUDE.md (or the equivalent for your tool). Keep it lean and evaluate instruction adherence on your actual tasks. Focus on universal project rules: how to run tests, commit and style conventions, architectural boundaries. Use progressive disclosure for anything detailed — point to reference docs rather than inlining their content.
 
-**2. Write a spec before implementation.** Define what you're building, how it should work, and what success looks like. Even a one-page spec dramatically improves agent output compared to ad-hoc instructions. The spec doesn't need to be exhaustive — it needs to establish the right frame before the agent starts generating code.
+**2. Make intent reviewable before implementation.** Agree the behaviour, constraints and acceptance examples. Use a short note for a small change; create a maintained spec when handoffs or future changes need it. Treat any quality or time benefit as a hypothesis to evaluate, including the cost of reading and maintaining the spec.
 
-**3. Create an implementation plan.** Break the spec into tasks sized for one context window — roughly 15–30 minutes of agent work each. Include exact file paths, expected behavior, and test criteria in each task description. This is where the quality multiplier kicks in: precise task descriptions produce precise work.
+**3. Create a proportionate implementation plan.** Split work at independently verifiable boundaries. Include relevant paths, expected behaviour, dependencies and checks. Choose task size from observed context pressure and integration effort rather than a fixed duration; planning detail can also become stale.
 
 **4. Execute per-task with fresh agents or compaction breaks.** Don't let context degrade through a long session. Either dispatch fresh agents per task (Strategy 3 above) or compact explicitly between tasks (Strategy 2). Use task boundaries, observed drift, and context pressure to choose checkpoints; elapsed time alone is not a reliability limit.
 
@@ -317,3 +317,9 @@ A step-by-step setup for a new agentic dev project:
 - **Podcast/Video:** [An AI state of the union — Simon Willison on Lenny's Podcast](https://www.youtube.com/watch?v=wc8FBhQtdsA) *(April 2, 2026)*. The current state of agentic engineering from the field's most careful chronicler — parallel agents, automation timelines, and where human judgment stays load-bearing.
 - **Read (short):** [Loop Engineering — Addy Osmani](https://www.oreilly.com/radar/loop-engineering/) — O'Reilly Radar *(June 2026)*. The canonical write-up of this page's Loop Engineering section — the five-component architecture, from the week it went viral.
 - **Course:** [Claude Code Beginner to Pro: Agentic Coding for Developers](https://www.udemy.com/course/learn-claude-code/) — Udemy *(updated June 2026)*. Hands-on with the workflows this page describes: instruction files, custom automations, slash commands, and session management, building a real app.
+
+## November 2026: Specs Have a Maintenance Cost
+
+[Spec-Driven Development as Prescribed and as Practiced, v5](https://arxiv.org/html/2608.25202v5) (revised 16 November; first submitted 25 August) studies Reddit discussions, 21 practitioner interviews and 266 selected repositories. Participants reported benefits alongside extra planning/review work and divergence between specs and code. This observational preprint does not isolate SDD's causal effect from improving models; its public repository sample is OpenSpec-heavy.
+
+**Suggested practice:** Agree intent and acceptance examples, then choose proportionate documentation. Name who maintains a living spec and when behaviour changes trigger review. When code and spec disagree, decide which reflects intended behaviour; detecting disagreement does not settle that question. Compare delivery, review and rework costs rather than assuming more specification is better.

@@ -2,7 +2,7 @@
 title: "Tool Layer"
 parent: "Context Engineering"
 nav_order: 4
-last_updated: 2026-10-26
+last_updated: 2026-11-20
 last_read: null
 status: unread
 ---
@@ -87,7 +87,7 @@ MCP provides both tools (actions the model can take) and resources (data the mod
 
 ## The Tool Selection Problem
 
-Models struggle with large tool sets. Once you have 20 or more tools, you start seeing predictable failure modes.
+Large or ambiguous tool sets can increase selection mistakes. There is no established universal tool-count threshold in the sources checked here.
 
 **Tool count and context cost.** Earlier secondary-source recommendations about fewer than 20 tools and degradation past 10 should not be treated as universal limits. Schema size, similarity between tools, discovery mechanisms, and model capability matter. Measure loaded tokens and tool-selection failures on representative tasks; compare curated and dynamically discovered tool sets.
 
@@ -142,7 +142,7 @@ Implement using the Manus masking pattern: define both read and write tools upfr
 
 3. **Write tool descriptions as instructions.** Because that's what they are. Be specific. Include examples of when to use a tool and — just as important — when not to. If a tool has a common misuse pattern, document it in the description.
 
-4. **If you have 15+ tools**, implement dynamic tool loading or categorization. A flat list of 20 tools is harder for the model to navigate correctly than two categories of 10. Don't present all tools all the time.
+4. **Measure selection and discovery failures.** Compare a curated list with categorisation or dynamic discovery on the same tasks. Include schema size, search failures and latency; choose from those results rather than a fixed tool-count trigger.
 
 5. **Consider KV-cache impact before changing tool schemas between turns.** If you're dynamically controlling availability, evaluate whether Manus's masking approach would be more efficient than adding and removing tools. Stable schema, dynamic guidance — the cache stays valid, the behavior changes.
 
@@ -153,3 +153,9 @@ Implement using the Manus masking pattern: define both read and write tools upfr
 - **Hands-on:** [Design MCP tools](https://www.speakeasy.com/mcp/tool-design) and [Dynamic tool discovery in MCP](https://www.speakeasy.com/mcp/tool-design/dynamic-tool-discovery) — Speakeasy *(2026)*. Current, concrete guides to this page's core moves: tool descriptions as instructions, and dynamic loading once you pass ~15 tools.
 - **Read (short):** [Everything your team needs to know about MCP in 2026](https://workos.com/blog/everything-your-team-needs-to-know-about-mcp-in-2026) — WorkOS *(2026)*. The state of the protocol this page's tool patterns increasingly run on.
 - **Podcast:** [5 podcast episodes to help you build with confidence in 2026 — GitHub Blog](https://github.blog/open-source/maintainers/5-podcast-episodes-to-help-you-build-with-confidence-in-2026/) *(2026)*. Includes "Unlocking the power of MCP" — how an open standard tames tool-integration chaos.
+
+## November 2026: Discovery Is Not Authorisation
+
+LangChain's [Tool Gateway policy documentation](https://docs.langchain.com/langsmith/tool-gateway-policies) distinguishes tool-kit curation from invocation policy: kits control what an agent sees; policies control what a caller may invoke. The documented default allows calls that match no policy. Policies also apply to tools invoked through search mode. These are documented beta-product semantics, not independently tested controls or evidence of LangChain's internal coding practice. The [launch post](https://www.langchain.com/blog/langsmith-tool-gateway) is dated 19 November; the policy page is living documentation inspected 20 November, with no revision date established.
+
+**Suggested check:** In a disposable local fixture, omit a harmless tool from discovery, then attempt it directly as each relevant caller. Separately verify an enforced denial and record the effective identity. A hidden tool and a blocked invocation are different observations.

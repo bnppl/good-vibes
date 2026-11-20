@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-19",
+  "reviewed": "2026-11-20",
   "items": {
     "define-1": {
       "mode": "process",
@@ -19,7 +19,7 @@
     "define-3": {
       "mode": "process",
       "instructions": [
-        "Record observable acceptance examples, edge cases and non-goals in docs/acceptance.md before implementation. Keep the human-agreed expectations separate from the generated solution."
+        "Record observable acceptance examples, edge cases and non-goals in docs/acceptance.md before implementation. Keep the human-agreed expectations separate from the generated solution. For a living spec, record an owner and a behaviour-change review trigger; this is a local adaptation, not a universal SDD requirement."
       ]
     },
     "define-4": {
@@ -169,7 +169,7 @@
     "context-3": {
       "mode": "process",
       "instructions": [
-        "Create AGENTS.md as canonical shared project guidance. Record commands, architecture, test ownership and consequential-action boundaries; distinguish written guidance from enforced controls."
+        "Create AGENTS.md as canonical shared project guidance. Record commands, architecture, test ownership and consequential-action boundaries; distinguish written guidance from enforced controls. Verify effective caller identity and an enforced denial separately from the list of discoverable tools."
       ]
     },
     "context-4": {

@@ -50,3 +50,7 @@ Two appended catalogue IDs preserve previous selections: `platform-16` (external
 ## 19 November evidence additions
 
 `context-glossary-adrs` indexes a reported personal feature account; `verify-threat-pack-hunts` indexes a separate security-team case. Their setup steps are local adaptations, with no guessed installation of an internal platform. Existing pinned skill versions and IDs remain unchanged.
+
+## 20 November: proportionate specs and enforced access
+
+The existing acceptance and shared-instructions recipes (`define-3`, `context-3`) now ask for a spec owner/review trigger where relevant and distinguish tool discovery from enforced invocation policy. These are proposed local setup checks, not additional claims about the profiles attributed to those catalogue items. Catalogue IDs, evidence dates and pinned skill revisions are unchanged. See the [guide sources](../../context-engineering/sources.md#november-20-2026-specification-and-tool-policy-evidence).

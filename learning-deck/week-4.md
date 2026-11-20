@@ -2,7 +2,7 @@
 title: "04 · Choose your workflow"
 parent: Learning Deck
 nav_order: 4
-last_updated: 2026-10-26
+last_updated: 2026-11-20
 ---
 
 # 04 · Choose your workflow
@@ -25,7 +25,7 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 **In the wild:** One agent can investigate a retry bug, change scoring, run checks, and present the diff.
 
-**Takeaway:** Name the bottleneck before adding another agent.
+**Takeaway:** Name the bottleneck before adding another agent; keep planning proportionate.
 
 [Optional practice: session 13](../learning-plan.md#session-13-start-with-a-simple-workflow) · Go deeper: [Single-agent patterns](../agent-patterns/single-agent.md) · [Agentic development](../context-engineering/agentic-dev.md)
 
@@ -53,13 +53,13 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 > **Your approval is not the same thing as a working credential.**
 >
-> An action needs both authority and an integration that can execute it. User identity, service accounts, and scheduled jobs can have different permissions. More retries do not create missing access.
+> An action needs both authority and an integration that can execute it. User identity, service accounts, and scheduled jobs can have different permissions. A tool list controls discovery; access needs an enforced policy.
 
 **In the wild:** You approve a GitHub push. The connected integration still rejects the write.
 
-**Takeaway:** Know whose credentials each external action uses.
+**Takeaway:** Check the effective identity and policy, not just the visible tools.
 
-[Optional practice: session 15](../learning-plan.md#session-15-autonomy-recovery-and-review) · Go deeper: [Autonomy](../agent-patterns/autonomy.md) · [Production lessons](../agent-patterns/production.md)
+[Optional practice: session 15](../learning-plan.md#session-15-autonomy-recovery-and-review) · Go deeper: [Autonomy](../agent-patterns/autonomy.md) · [Production lessons](../agent-patterns/production.md) · [Tool-policy distinction](../context-engineering/tool-layer.md#november-2026-discovery-is-not-authorisation)
 
 ---
 

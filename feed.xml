@@ -11,7 +11,15 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 19 Nov 2026 08:23:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 08:54:26 +0000</lastBuildDate>
+    <item>
+      <title>Keep specs maintained and tool access enforced</title>
+      <link>https://bnppl.github.io/good-vibes/study-briefings/2026-11-20.html</link>
+      <guid isPermaLink="false">good-vibes:2026-11-20:spec-maintenance-tool-policy</guid>
+      <pubDate>Fri, 20 Nov 2026 08:54:26 +0000</pubDate>
+      <description>Qualified blanket spec and fixed tool-count recommendations using an SDD field study and primary tool-policy documentation. Added spec-maintenance ownership and checks that distinguish discovery from enforced access, with matching learning-card and bootstrap updates. Sources: https://arxiv.org/html/2608.25202v5 ; https://docs.langchain.com/langsmith/tool-gateway-policies ; https://www.langchain.com/blog/langsmith-tool-gateway .</description>
+      <category>Research corrections</category>
+    </item>
     <item>
       <title>Measure repeatability and task-specific outcomes</title>
       <link>https://bnppl.github.io/good-vibes/study-briefings/2026-11-19.html</link>

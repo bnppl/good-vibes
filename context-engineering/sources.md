@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: 2026-10-26
+last_updated: 2026-11-20
 last_read: null
 status: unread
 ---
@@ -655,3 +655,8 @@ Most useful for: tracking the open model landscape for agentic coding.
 - [Anthropic: Quantifying infrastructure noise in agentic coding evals](https://www.anthropic.com/research/infrastructure-noise) (2026-02-05). Older coverage gap; environment confounder in Terminal-Bench 2.0.
 
 See the [research run record](../study-briefings/2026-10-26.md) for scope, application, and remaining gaps.
+
+## November 20, 2026: Specification and Tool-Policy Evidence
+
+- [Spec-Driven Development as Prescribed and as Practiced, v5](https://arxiv.org/html/2608.25202v5) — Shyam Agarwal, Anmol Singhal, Andrew Macvean, Bogdan Vasilescu and Travis Breaux. First submitted 2026-08-25; revised 2026-11-16; inspected 2026-11-20. Observational preprint; findings and validity limitations inspected. Supports the qualified spec-maintenance section, not a universal productivity claim.
+- [LangSmith Tool Gateway launch](https://www.langchain.com/blog/langsmith-tool-gateway) — Karthic Subramanian, 2026-11-19; inspected 2026-11-20. Product announcement. [Tool kits](https://docs.langchain.com/langsmith/tool-gateway-tool-kits) and [policies](https://docs.langchain.com/langsmith/tool-gateway-policies) are living documentation, revision date not established. Supports discovery/invocation distinctions; no installation, independent enforcement test or internal company-use claim.
