@@ -54,3 +54,7 @@ Two appended catalogue IDs preserve previous selections: `platform-16` (external
 ## 20 November: proportionate specs and enforced access
 
 The existing acceptance and shared-instructions recipes (`define-3`, `context-3`) now ask for a spec owner/review trigger where relevant and distinguish tool discovery from enforced invocation policy. These are proposed local setup checks, not additional claims about the profiles attributed to those catalogue items. Catalogue IDs, evidence dates and pinned skill revisions are unchanged. See the [guide sources](../../context-engineering/sources.md#november-20-2026-specification-and-tool-policy-evidence).
+
+## 22 November: knowledge-change proposals
+
+The existing glossary/ADR and repository-instruction recipes (`context-glossary-adrs`, `context-6`) now include a source-linked queue for proposed shared-guidance changes. They are our coding adaptations of the [knowledge-curation discussion](../../context-engineering/knowledge-layer.md#november-2026-report-gaps-before-promoting-shared-knowledge), not new evidence about the existing attributed profiles. No skill revision, catalogue identity or install command changed.

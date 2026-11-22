@@ -11,7 +11,15 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 20 Nov 2026 08:54:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 08:49:24 +0000</lastBuildDate>
+    <item>
+      <title>Separate knowledge-gap reports from shared rules</title>
+      <link>https://bnppl.github.io/good-vibes/context-engineering/knowledge-layer.html#november-2026-report-gaps-before-promoting-shared-knowledge</link>
+      <guid isPermaLink="false">good-vibes:2026-11-22:knowledge-curation-proposals</guid>
+      <pubDate>Sun, 22 Nov 2026 08:49:24 +0000</pubDate>
+      <description>Added a knowledge-curation pattern: report missing or wrong guidance separately, then verify source and scope before promoting a correction into shared instructions. The guide, learning card and two bootstrap adaptations now make this distinction explicit. Source: https://www.langchain.com/blog/knowledge-factory . This is a coding adaptation of a practitioner account, not a demonstrated productivity gain.</description>
+      <category>Context engineering</category>
+    </item>
     <item>
       <title>Keep specs maintained and tool access enforced</title>
       <link>https://bnppl.github.io/good-vibes/study-briefings/2026-11-20.html</link>

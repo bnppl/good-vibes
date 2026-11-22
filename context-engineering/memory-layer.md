@@ -2,7 +2,7 @@
 title: "Memory Layer"
 parent: "Context Engineering"
 nav_order: 5
-last_updated: 2026-11-18
+last_updated: 2026-11-22
 last_read: null
 status: unread
 ---
@@ -142,3 +142,7 @@ The practical insight: most teams focus exclusively on the model layer (waiting 
 Anthropic's [6 November memory study](https://www.anthropic.com/research/components-of-agent-memory) separates transcripts, notes, richer representations and injected context. Its CL-Bench 1.0 database task starts fresh sessions with persistent memory files; stronger models recorded validated rules, while weaker ones retained untested guesses. The Pokémon comparison uses one run per model and is not a coding-productivity study.
 
 **Suggested adaptation:** Label each durable rule as tested or provisional, attach its evidence, and recheck it after relevant code changes. Evaluate consolidation against fresh-session task outcomes rather than note volume. Background rewriting can preserve a mistake as easily as a useful lesson.
+
+## Shared knowledge updates
+
+For a proposed separation between reporting a gap and changing reusable guidance, see [report gaps before promoting shared knowledge](knowledge-layer.md#november-2026-report-gaps-before-promoting-shared-knowledge). Keep the proposed change's source and scope visible; this coding exercise is an adaptation, not a demonstrated personal workflow.

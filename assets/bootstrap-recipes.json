@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-20",
+  "reviewed": "2026-11-22",
   "items": {
     "define-1": {
       "mode": "process",
@@ -188,7 +188,7 @@
     "context-6": {
       "mode": "process",
       "instructions": [
-        "Create repository-owned agent instructions describing architecture, actual setup/test commands, file boundaries, review authority and known limitations. Add host-specific instruction files only for the selected agent hosts, linked to a canonical source."
+        "Create repository-owned agent instructions describing architecture, actual setup/test commands, file boundaries, review authority and known limitations. Add host-specific instruction files only for the selected agent hosts, linked to a canonical source. Give agents a place to report missing or incorrect guidance separately from active instructions; review source, scope and the proposed correction before promotion."
       ]
     },
     "context-7": {
@@ -1450,7 +1450,7 @@
     "context-glossary-adrs": {
       "mode": "process",
       "instructions": [
-        "Inspect existing project vocabulary and decision records. Add only missing domain terms or consequential decisions; link each to current code and mark superseded choices. This is a local adaptation, not evidence of reproducing Pocock’s complete workflow."
+        "Inspect existing project vocabulary and decision records. Add only missing domain terms or consequential decisions; link each to current code and mark superseded choices. This is a local adaptation, not evidence of reproducing Pocock’s complete workflow. Queue disputed terms or decisions with their source revision and intended scope; verify them before changing active shared guidance."
       ]
     },
     "verify-threat-pack-hunts": {

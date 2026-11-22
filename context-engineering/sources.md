@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: 2026-11-20
+last_updated: 2026-11-22
 last_read: null
 status: unread
 ---
@@ -660,3 +660,7 @@ See the [research run record](../study-briefings/2026-10-26.md) for scope, appli
 
 - [Spec-Driven Development as Prescribed and as Practiced, v5](https://arxiv.org/html/2608.25202v5) — Shyam Agarwal, Anmol Singhal, Andrew Macvean, Bogdan Vasilescu and Travis Breaux. First submitted 2026-08-25; revised 2026-11-16; inspected 2026-11-20. Observational preprint; findings and validity limitations inspected. Supports the qualified spec-maintenance section, not a universal productivity claim.
 - [LangSmith Tool Gateway launch](https://www.langchain.com/blog/langsmith-tool-gateway) — Karthic Subramanian, 2026-11-19; inspected 2026-11-20. Product announcement. [Tool kits](https://docs.langchain.com/langsmith/tool-gateway-tool-kits) and [policies](https://docs.langchain.com/langsmith/tool-gateway-policies) are living documentation, revision date not established. Supports discovery/invocation distinctions; no installation, independent enforcement test or internal company-use claim.
+
+## November 22, 2026: Knowledge Curation
+
+- [How to build a knowledge factory](https://www.langchain.com/blog/knowledge-factory) — Harrison Chase, published 2026-11-21; inspected 2026-11-22. Practitioner design/account describing internal GTM, content-studio and trace-analysis agents. Supports separating gap reports from curation and avoiding duplicate live data. No controlled coding comparison or universal storage standard is established. The guide's review queue and promotion checks are suggested adaptations.

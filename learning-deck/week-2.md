@@ -2,7 +2,7 @@
 title: "02 · Give the agent what it needs"
 parent: Learning Deck
 nav_order: 2
-last_updated: 2026-11-18
+last_updated: 2026-11-22
 ---
 
 # 02 · Give the agent what it needs
@@ -23,9 +23,9 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 >
 > Dumping a whole repository into context gives useful facts more noise to compete with. Search for the missing fact, read the relevant slice, and keep the full evidence accessible by path.
 
-**In the wild:** The agent follows an obsolete scoring helper while the current XP service sits elsewhere in the repo.
+**In the wild:** The agent finds the current XP service and reports the obsolete helper in the docs. Its proposed correction waits for source and scope checks.
 
-**Takeaway:** Give it the right fact at the right moment.
+**Takeaway:** Retrieve the right fact; report stale guidance separately.
 
 [Optional practice: session 5](../learning-plan.md#session-5-retrieval-that-fits-the-task) · Go deeper: [Knowledge layer](../context-engineering/knowledge-layer.md) · [Tool layer](../context-engineering/tool-layer.md)
 

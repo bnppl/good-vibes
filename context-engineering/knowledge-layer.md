@@ -2,7 +2,7 @@
 title: "Knowledge Layer"
 parent: "Context Engineering"
 nav_order: 3
-last_updated: 2026-10-26
+last_updated: 2026-11-22
 last_read: 2026-04-06
 status: read
 ---
@@ -166,3 +166,9 @@ See [Agentic Development](agentic-dev.md) for the "filesystem as context" patter
 LangChain's [retrieval guidance](https://www.langchain.com/blog/context-engineering-starts-with-retrieval) (October 23) makes an existing principle operational: locate names or matching lines before reading files; page large results; return a path and preview when full output is saved elsewhere. This is implementation guidance from Deep Agents, not a universal benchmark result.
 
 **Try it:** For one spelling-app investigation, record the question each search answers. Compare a large result dump with targeted reads. Keep source locations available so summaries can be checked. Delegate reading only when isolation or parallelism justifies the extra handoff; offloading does not require another agent.
+
+## November 2026: Report Gaps Before Promoting Shared Knowledge
+
+Harrison Chase's [21 November knowledge-factory account](https://www.langchain.com/blog/knowledge-factory) separates agents flagging missing or incorrect knowledge from a curator maintaining reusable guidance. It reports LangChain GTM, content-studio and trace-analysis systems, not a measured coding-productivity improvement. The design keeps guidance about accessing changing data separate from duplicating that data.
+
+**Suggested coding adaptation:** Keep a small knowledge-change queue: disputed claim, source path/revision, observed failure, proposed correction, intended scope and reviewer. A task agent can report a mismatch without immediately rewriting shared instructions. Check the proposal against current sources before promoting it; a local workaround or one person's preference may not be an organisation-wide rule. Mark superseded guidance explicitly. Compare whether repeated tasks stop encountering the same gap; counting newly written notes is insufficient evidence of improvement.
