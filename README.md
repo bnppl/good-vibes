@@ -83,6 +83,12 @@ ln -s ../../claude-config/commands/study.md .claude/commands/study.md
 
 ---
 
+## YouTube videos
+
+Every guide topic and engineer/company profile has a **YouTube videos** subsection. The [video collection]({{ '/videos/' | relative_url }}) gathers selected talks, interviews and demos; the separate [video RSS feed]({{ '/videos.xml' | relative_url }}) announces new additions once per YouTube ID. Dates distinguish original publication from addition to Good Vibes. Topic notes and evidence qualifications make background material and product demonstrations explicit. Unfilled topics show their coverage gap.
+
+The daily refresh and `/study update --apply` search for useful additions and maintain `_data/videos.json`, following [the video-maintenance contract](docs/videos.md). The topic sections, archive and RSS derive from this shared catalogue at build time. The original important-update RSS remains separate. GitHub Pages validates the catalogue, built topic links and both feeds before deploying.
+
 ## Research an engineer's approach
 
 `/engineer` separates detailed research from the short reads built from it. Each person has a directory under `engineers/` containing their research, sources, comparison fields, and derived slideshow notes. There is no fixed research length: substantial topics can grow into their own chapters.

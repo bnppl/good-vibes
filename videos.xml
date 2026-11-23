@@ -1,0 +1,27 @@
+---
+layout: null
+permalink: /videos.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Good Vibes — YouTube videos</title>
+    <link>https://bnppl.github.io/good-vibes/videos/</link>
+    <description>Newly curated YouTube talks, interviews and demos on AI-assisted engineering, context engineering, specs, agents and verification. Dates indicate addition to Good Vibes.</description>
+    <language>en-GB</language>
+    <atom:link href="https://bnppl.github.io/good-vibes/videos.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>{{ site.data.videos.updated_at | date_to_rfc822 }}</lastBuildDate>
+    {% assign ordered_videos = site.data.videos.entries | sort: 'added_at' | reverse %}
+    {% for video in ordered_videos limit:100 %}
+    <item>
+      <title>{{ video.title | xml_escape }}</title>
+      <link>https://www.youtube.com/watch?v={{ video.id | xml_escape }}</link>
+      <guid isPermaLink="false">good-vibes:youtube:{{ video.id | xml_escape }}</guid>
+      <pubDate>{{ video.added_at | date_to_rfc822 }}</pubDate>
+      <description>{{ video.channel | xml_escape }} — {{ video.kind | xml_escape }}. {{ video.summary | xml_escape }} {{ video.qualification | xml_escape }}{% if video.published_on %} Original publication: {{ video.published_on | xml_escape }}.{% endif %} Related topics:{% for topic in video.topics %}{% assign topic_page = site.pages | where: 'path', topic.path | first %} {{ topic_page.title | xml_escape }}: https://bnppl.github.io{{ topic_page.url | relative_url | xml_escape }}#youtube-videos .{% endfor %}</description>
+      <category>{{ video.kind | xml_escape }}</category>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

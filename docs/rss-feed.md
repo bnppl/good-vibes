@@ -20,3 +20,7 @@ Insert new items newest first, in the same commit as the corresponding content c
 Keep existing GUIDs and publication dates stable, including when fixing an entry. Update channel `lastBuildDate` only when the feed changes. Retain the latest 100 entries. Never announce an unapplied proposal as a published update.
 
 After building, parse `_site/feed.xml` as XML and check required RSS fields, unique GUIDs, valid dates, newest-first order and absolute links. Check that important changed-page links resolve in the built site. The public feed changes only after a successful Pages deployment.
+
+## Separate video feed
+
+`/videos.xml` announces newly curated YouTube videos, generated from `_data/videos.json`. Follow `docs/videos.md` for selection, dates, deduplication and validation. Keep this important-update feed editorial: announce the video collection's launch here, but do not duplicate every subsequent video addition.

@@ -16,6 +16,8 @@ A personal learning wiki on **context engineering** and **spec-driven developmen
 
 [Subscribe to important updates (RSS)]({{ '/feed.xml' | relative_url }})
 
+[Browse YouTube videos]({{ '/videos/' | relative_url }}) · [Subscribe to videos (RSS)]({{ '/videos.xml' | relative_url }})
+
 ## Contents
 
 | Section | What It Covers |

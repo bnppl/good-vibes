@@ -1,0 +1,8 @@
+<article class="gv-video" id="video-{{ include.video.id | escape }}">
+  <h3><a href="https://www.youtube.com/watch?v={{ include.video.id | escape }}">{{ include.video.title | escape }}</a></h3>
+  <p class="gv-video-meta">{{ include.video.channel | escape }} · {{ include.video.kind | escape }}{% if include.video.published_on %} · Published {{ include.video.published_on | escape }}{% endif %}{% if include.video.duration %} · {{ include.video.duration | escape }}{% endif %}</p>
+  <p>{{ include.video.summary | escape }}</p>
+  {% if include.note %}<p><strong>For this topic:</strong> {{ include.note | escape }}</p>{% endif %}
+  <p class="gv-video-meta">{{ include.video.qualification | escape }}</p>
+  <p class="gv-video-meta"><a href="{{ include.video.source_url | escape }}">Source and metadata</a> · Checked {{ include.video.checked_on | escape }} · Added {{ include.video.added_at | date: '%Y-%m-%d' }}</p>
+</article>

@@ -1,0 +1,9 @@
+---
+layout: default
+---
+{{ content }}
+{% assign topic_root = page.path | split: '/' | first %}
+{% assign topic_roots = 'context-engineering,frameworks,agent-patterns,verification' | split: ',' %}
+{% if topic_roots contains topic_root or page.engineer_profile or page.company_profile %}
+  {% include topic-videos.html %}
+{% endif %}
