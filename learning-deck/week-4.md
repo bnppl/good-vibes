@@ -2,7 +2,7 @@
 title: "04 · Choose your workflow"
 parent: Learning Deck
 nav_order: 4
-last_updated: 2026-11-20
+last_updated: 2026-11-23
 ---
 
 # 04 · Choose your workflow
@@ -39,11 +39,11 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 >
 > Tightly coupled specialists may work better as skills and tools in one shared loop. Separate agents can still help with independent work, verification, or permission boundaries. Compare outcomes on your tasks.
 
-**In the wild:** The “scoring agent” keeps asking the “retry agent” for context it already had.
+**In the wild:** Replit’s November benchmark found the strongest solo model did not make the strongest teams. Task and harness scope matter; this is not a productivity ranking.
 
 **Takeaway:** Split work where the boundary helps. Measure the trade-off.
 
-[Optional practice: session 14](../learning-plan.md#session-14-delegate-only-with-a-testable-reason) · Go deeper: [Multi-agent coordination](../agent-patterns/multi-agent.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
+[Optional practice: session 14](../learning-plan.md#session-14-delegate-only-with-a-testable-reason) · Go deeper: [Multi-agent coordination](../agent-patterns/multi-agent.md#november-2026-a-solo-winner-may-be-a-poor-teammate) · [Orchestration layer](../context-engineering/orchestration-layer.md)
 
 ---
 

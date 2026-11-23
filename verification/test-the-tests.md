@@ -2,7 +2,7 @@
 title: "Test the Tests"
 parent: "Verification"
 nav_order: 8
-last_updated: 2026-11-18
+last_updated: 2026-11-23
 last_read: null
 status: unread
 ---
@@ -124,3 +124,10 @@ See [sources](sources.md) for full citations.
 Matteo Vaccari's [Tests as data](https://www.martinfowler.com/articles/tests-as-data.html) (11 November) proposes human-readable customer tests stored as data, interpreted by a smaller runner. This is a recommendation informed by practitioner interviews, not a controlled comparison showing universal superiority. The author is Vaccari; hosting on martinfowler.com does not establish Fowler's personal workflow.
 
 **Suggested adaptation:** For XP replay, keep the agreed input/expected-state table separately reviewable. Protect both those expectations and the runner, then inject a duplicate-award defect to confirm failure. Data files still need correctness checks; changing representation alone does not enforce ownership.
+
+
+## November 2026: Protect Performance Measurement
+
+Replit's [benchmark methodology](https://frontier.replit.com/throwing-headcount-at-the-problem/) freezes patches, verifies on an inaccessible VM, and times hidden inputs outside the candidate process with randomised baseline/candidate alternation. This is a reported evaluation design, not an independently reproduced guarantee.
+
+**Suggested practice:** Protect the clock and checker as well as expected outputs. Rebuild both revisions, reject out-of-scope edits and check semantics before timing. Record hardware, repetition and variance; a faster run is not useful if behaviour changed. Keep this separate from [agent-team selection](../agent-patterns/multi-agent.md#november-2026-a-solo-winner-may-be-a-poor-teammate).

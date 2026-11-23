@@ -2,7 +2,7 @@
 title: "Multi-Agent Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 2
-last_updated: 2026-10-26
+last_updated: 2026-11-23
 last_read: null
 status: unread
 ---
@@ -140,14 +140,14 @@ Agents operate autonomously with no central coordinator, communicating peer-to-p
 - Communication is direct between agents, not mediated by a coordinator
 - No single point of failure or bottleneck
 
-**Current state:** Swarm patterns are mostly experimental in 2026. They're theoretically elegant but practically difficult — without a coordinator, agents struggle with task boundaries, duplicate work, and conflicting decisions. OpenAI's Swarm framework explored this space but production adoption remains limited.
+**Terminology:** A product called a “swarm” may still include a coordinator. Check the actual communication and merge topology before classifying it as decentralised. This guide has not established a representative production-adoption estimate.
 
-**When swarm might make sense in the future:**
+**When to investigate decentralised coordination:**
 - Very large-scale tasks where a single coordinator becomes a bottleneck
 - Systems that need fault tolerance (no single point of failure)
 - Tasks where agents need to dynamically self-organize based on emerging requirements
 
-For now, orchestrator-worker with parallel execution handles most production needs better than swarm.
+Compare coordination choices on your workload rather than assuming one pattern wins across production systems.
 
 ---
 
@@ -159,15 +159,15 @@ For now, orchestrator-worker with parallel execution handles most production nee
 | Pipeline | Structured, repeatable workflows | Rigid — can't adapt order dynamically |
 | Parallel | Independent subtasks, research | Strict independence requirement; merge complexity |
 | Hierarchical | Very large, multi-domain tasks | Coordination overhead at each level |
-| Swarm | (Experimental) | Coordination without a coordinator is hard |
+| Swarm | Distributed ownership worth testing | Coordination without a coordinator is hard |
 
-**The production default is orchestrator-worker with parallel execution.** Start there. Move to pipeline when your workflow is fixed and repeatable. Add hierarchical levels only when flat orchestrator-worker can't decompose the task sufficiently.
+**Suggested starting point:** Establish a single-agent baseline. For independent work, compare a small orchestrator-worker setup; for a fixed sequence, try a pipeline. Add hierarchy only for a demonstrated decomposition need. These are heuristics, not measured deployment shares.
 
 ---
 
 ## Anti-Patterns
 
-**Starting with multi-agent when single-agent suffices.** Multi-agent systems consume ~15x more tokens than single-agent (Anthropic's data). Only split when the task genuinely requires it — independent subtasks, context window limits, or specialized expertise.
+**Starting with multi-agent when single-agent suffices.** Anthropic’s research-system token use is not a universal multiplier for coding teams. Only split when the task genuinely requires it — independent subtasks, context window limits, or specialized expertise.
 
 **Unmanaged dependencies between "parallel" agents.** If agents share state, they're not truly parallel. Missing file-locking mechanisms and merge conflicts kill velocity in multi-agent coding setups (Osmani).
 
@@ -184,3 +184,10 @@ For sources and further reading, see [sources.md](./sources.md).
 Anthropic's [October 22 guidance](https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop) describes enterprise deployments where one loop with progressively loaded skills and tools reduced handoff losses. This is practitioner evidence, not a controlled finding that one agent always wins. *(covered in TL;DR Dev, October 2026)*
 
 **Try it:** Replace one tightly coupled specialist with a skill and tools, keeping model, tasks, and budget fixed. Inspect which individual tasks regress, not only the average score. Preserve separate agents for independent parallel work, useful verification, enforced permission separation, or measured context pressure. Keep deterministic access controls when simplifying orchestration. See [agent evaluation](../verification/agent-evaluation.md).
+
+
+## November 2026: A Solo Winner May Be a Poor Teammate
+
+Replit's [19 November benchmark](https://frontier.replit.com/throwing-headcount-at-the-problem/) compares six models at 1/8/16/32 agents over two-hour optimisation runs. On NumPy, Opus 5.5 improved workload runtime 3.7× solo versus 18.9× with 32 agents; GPT-6.2 Astra's larger teams regressed below its solo score on three reported codebases. These are vendor-reported runtime gains, not developer-productivity or equal-compute gains. Four libraries are analysed; team size increases resources. Replication and uncertainty are not established here. *(covered in TL;DR AI, November 2026)*
+
+**Suggested experiment:** Keep model, task and acceptance checks fixed; compare a small team against one agent under explicit time and cost budgets. Record ownership collisions, coordinator backlog, merge failures and review effort. Repeat before choosing a topology. See [evaluation](../verification/agent-evaluation.md) and [protected performance checks](../verification/test-the-tests.md#november-2026-protect-performance-measurement).

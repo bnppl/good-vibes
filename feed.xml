@@ -11,7 +11,15 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 22 Nov 2026 08:49:24 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 08:47:26 +0000</lastBuildDate>
+    <item>
+      <title>Evaluate agent-team fit separately from solo capability</title>
+      <link>https://bnppl.github.io/good-vibes/agent-patterns/multi-agent.html#november-2026-a-solo-winner-may-be-a-poor-teammate</link>
+      <guid isPermaLink="false">good-vibes:2026-11-23:agent-team-fit</guid>
+      <pubDate>Mon, 23 Nov 2026 08:47:26 +0000</pubDate>
+      <description>Added qualified optimisation-benchmark evidence and corrected blanket coordination advice. Updated Week 4 card 14, protected performance checks and bootstrap guidance. Compare team fit, resource cost and integration effort before scaling agents. Source: https://frontier.replit.com/throwing-headcount-at-the-problem/ . Vendor results are not a general productivity guarantee.</description>
+      <category>Agent coordination</category>
+    </item>
     <item>
       <title>Separate knowledge-gap reports from shared rules</title>
       <link>https://bnppl.github.io/good-vibes/context-engineering/knowledge-layer.html#november-2026-report-gaps-before-promoting-shared-knowledge</link>

@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Agent Architecture Patterns"
 nav_order: 5
-last_updated: 2026-04-03
+last_updated: 2026-11-23
 last_read: null
 status: unread
 ---
@@ -111,3 +111,8 @@ Redis
 Practical guide connecting agent patterns to infrastructure. Covers how state management, caching, and persistence shape agent architecture decisions.
 
 Most useful for: infrastructure engineers supporting agent systems.
+
+
+## November 2026 refresh
+
+[Throwing Headcount at the Problem](https://frontier.replit.com/throwing-headcount-at-the-problem/) — Replit research team, published 19 November; inspected 23 November 2026. Vendor benchmark account; methods, results and limitations read, not independently reproduced. Supports the [coordination update](multi-agent.md#november-2026-a-solo-winner-may-be-a-poor-teammate). The reported experiment dates and repeated-run uncertainty are not established by this inspection.

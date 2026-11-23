@@ -58,3 +58,8 @@ The existing acceptance and shared-instructions recipes (`define-3`, `context-3`
 ## 22 November: knowledge-change proposals
 
 The existing glossary/ADR and repository-instruction recipes (`context-glossary-adrs`, `context-6`) now include a source-linked queue for proposed shared-guidance changes. They are our coding adaptations of the [knowledge-curation discussion](../../context-engineering/knowledge-layer.md#november-2026-report-gaps-before-promoting-shared-knowledge), not new evidence about the existing attributed profiles. No skill revision, catalogue identity or install command changed.
+
+
+## 23 November: evaluate team fit
+
+The existing `plan-1` recipe now requests a bounded team comparison and coordination-failure records when parallelism is justified. This is our adaptation of the [coordination evidence](../../agent-patterns/multi-agent.md#november-2026-a-solo-winner-may-be-a-poor-teammate); it adds no tool installation, skill revision or new attribution to an existing profile. Catalogue IDs and source dates remain unchanged.

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-22",
+  "reviewed": "2026-11-23",
   "items": {
     "define-1": {
       "mode": "process",
@@ -74,7 +74,7 @@
     "plan-1": {
       "mode": "process",
       "instructions": [
-        "Split the first useful feature into a small reviewable change. Record the plan, allowed files and stop condition; finish one verified slice before adding parallelism."
+        "Split the first useful feature into a small reviewable change. Record the plan, allowed files and stop condition; finish one verified slice before adding parallelism. If a team is justified, compare a small team with the same model and task under explicit time/cost budgets; record ownership conflicts and coordinator backlog. A solo model ranking does not establish team fit. This is our local evaluation adaptation."
       ]
     },
     "plan-2": {
