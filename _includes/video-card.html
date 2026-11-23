@@ -1,4 +1,5 @@
-<article class="gv-video" id="video-{{ include.video.id | escape }}">
+{% assign default_anchor = 'video-' | append: include.video.id %}
+<article class="gv-video" id="{{ include.anchor | default: default_anchor | escape }}">
   <h3><a href="https://www.youtube.com/watch?v={{ include.video.id | escape }}">{{ include.video.title | escape }}</a></h3>
   <p class="gv-video-meta">{{ include.video.channel | escape }} · {{ include.video.kind | escape }}{% if include.video.published_on %} · Published {{ include.video.published_on | escape }}{% endif %}{% if include.video.duration %} · {{ include.video.duration | escape }}{% endif %}</p>
   <p>{{ include.video.summary | escape }}</p>
