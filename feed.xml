@@ -21,6 +21,14 @@ sitemap: false
       <category>Agent coordination</category>
     </item>
     <item>
+      <title>YouTube topic sections and a dedicated video RSS feed</title>
+      <link>https://bnppl.github.io/good-vibes/videos/</link>
+      <guid isPermaLink="false">good-vibes:2026-11-23:youtube-collection</guid>
+      <pubDate>Mon, 23 Nov 2026 07:19:00 +0000</pubDate>
+      <description>Added a shared collection of 19 YouTube talks, interviews and demos covering context engineering, agents, spec workflows and verification. Every guide topic and engineer/company profile now has a video subsection, with explicit gaps where no suitable selection exists. The daily research refresh now searches for relevant additions. Subscribe to the separate video feed at https://bnppl.github.io/good-vibes/videos.xml .</description>
+      <category>Learning resources</category>
+    </item>
+    <item>
       <title>Separate knowledge-gap reports from shared rules</title>
       <link>https://bnppl.github.io/good-vibes/context-engineering/knowledge-layer.html#november-2026-report-gaps-before-promoting-shared-knowledge</link>
       <guid isPermaLink="false">good-vibes:2026-11-22:knowledge-curation-proposals</guid>

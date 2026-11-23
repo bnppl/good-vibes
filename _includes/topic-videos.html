@@ -1,0 +1,17 @@
+<section class="gv-topic-videos" aria-labelledby="youtube-videos">
+  <h2 id="youtube-videos">YouTube videos</h2>
+  <p><a href="{{ '/videos/' | relative_url }}">Browse all videos</a> · <a href="{{ '/videos.xml' | relative_url }}">Subscribe to the video RSS feed</a></p>
+  {% assign ordered_videos = site.data.videos.entries | sort: 'added_at' | reverse %}
+  {% assign video_count = 0 %}
+  {% for video in ordered_videos %}
+    {% assign matches = video.topics | where: 'path', page.path %}
+    {% if matches.size > 0 %}
+      {% assign video_count = video_count | plus: 1 %}
+      {% assign match = matches | first %}
+      {% include video-card.html video=video note=match.note %}
+    {% endif %}
+  {% endfor %}
+  {% if video_count == 0 %}
+    <p>No suitable YouTube video has been selected for this topic yet. The daily refresh checks for relevant additions.</p>
+  {% endif %}
+</section>

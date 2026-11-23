@@ -1,0 +1,530 @@
+{
+  "updated_at": "2026-11-23T07:16:33Z",
+  "entries": [
+    {
+      "id": "6_BcCthVvb8",
+      "title": "Context Engineering for AI Agents with LangChain and Manus",
+      "channel": "LangChain",
+      "published_on": "2025-10-14",
+      "kind": "Practitioner discussion",
+      "summary": "Lance Martin and Yichao Ji discuss reducing, offloading and isolating context, including filesystem state and tool selection.",
+      "qualification": "A practitioner account of Manus architecture; the patterns need evaluation in your own workload.",
+      "source_url": "https://www.youtube.com/watch?v=6_BcCthVvb8",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "context-engineering/index.md",
+          "note": "A starting point for the context layers in this guide."
+        },
+        {
+          "path": "context-engineering/foundations.md",
+          "note": "Introduces the context-window tradeoffs behind the guide."
+        },
+        {
+          "path": "context-engineering/knowledge-layer.md",
+          "note": "Compares just-in-time filesystem access with retrieval indexes."
+        },
+        {
+          "path": "context-engineering/memory-layer.md",
+          "note": "Background on external state and compaction; not a demonstration of every memory system in this chapter."
+        },
+        {
+          "path": "context-engineering/orchestration-layer.md",
+          "note": "Reduction, offloading and isolation are concrete context-management choices."
+        },
+        {
+          "path": "context-engineering/tool-layer.md",
+          "note": "Connects tool selection and layered action spaces with context cost."
+        },
+        {
+          "path": "context-engineering/sources.md",
+          "note": "A primary practitioner video to accompany the written sources."
+        },
+        {
+          "path": "agent-patterns/production.md",
+          "note": "Shows context tradeoffs reported by the Manus team."
+        }
+      ]
+    },
+    {
+      "id": "uhJJgc-0iTQ",
+      "title": "Building more effective AI agents",
+      "channel": "Anthropic",
+      "published_on": "2025-10-17",
+      "kind": "Practitioner discussion",
+      "summary": "Alex Albert and Erik discuss agent architectures, skills, tools and coordination patterns.",
+      "qualification": "Vendor guidance and reported design experience; not a controlled comparison of agent architectures.",
+      "source_url": "https://www.youtube.com/watch?v=uhJJgc-0iTQ",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "agent-patterns/index.md",
+          "note": "An overview of agent design and coordination choices."
+        },
+        {
+          "path": "agent-patterns/single-agent.md",
+          "note": "Background on keeping architectures simple and choosing tools."
+        },
+        {
+          "path": "agent-patterns/multi-agent.md",
+          "note": "Discusses orchestration, subagents and coordination failure modes."
+        },
+        {
+          "path": "agent-patterns/autonomy.md",
+          "note": "Connects agent capability with the workflow around it."
+        },
+        {
+          "path": "agent-patterns/sources.md",
+          "note": "Video companion to the effective-agents guidance."
+        },
+        {
+          "path": "context-engineering/instruction-layer.md",
+          "note": "Background on skills as reusable instructions; not a complete instruction-file tutorial."
+        },
+        {
+          "path": "context-engineering/tool-engineering.md",
+          "note": "Connects agent design with skills, MCP servers and tool interfaces."
+        },
+        {
+          "path": "frameworks/metagpt.md",
+          "note": "Background on multi-agent patterns for comparison with MetaGPT; not a MetaGPT product demo."
+        },
+        {
+          "path": "frameworks/smol-developer.md",
+          "note": "Background on simple agent architectures; not a smol developer installation guide."
+        }
+      ]
+    },
+    {
+      "id": "Rh6KWngr8T4",
+      "title": "Harbor x LangChain: A Unified Stack for Evaluating Agents",
+      "channel": "LangChain",
+      "published_on": "2026-07-01",
+      "kind": "Vendor demo",
+      "summary": "A walkthrough of reproducible agent environments, verifiable tasks and evaluation runs with Harbor and LangSmith.",
+      "qualification": "A vendor demonstration of an evaluation stack; it does not prove a general productivity gain.",
+      "source_url": "https://www.youtube.com/watch?v=Rh6KWngr8T4",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/agent-evaluation.md",
+          "note": "Shows environment, task and deterministic-check structure."
+        },
+        {
+          "path": "context-engineering/harness-engineering.md",
+          "note": "Shows how an execution environment and evaluator form part of a harness."
+        },
+        {
+          "path": "agent-patterns/production.md",
+          "note": "Demonstrates repeatable evaluation of stateful agents."
+        },
+        {
+          "path": "verification/index.md",
+          "note": "A concrete introduction to workflow evaluation."
+        }
+      ]
+    },
+    {
+      "id": "pjv-mp5J4hA",
+      "title": "Your Agent Answered. Did It Cite Real Docs and Call the Right Tools? Evals for Deep Agents",
+      "channel": "LangChain",
+      "published_on": "2026-09-10",
+      "kind": "Vendor demo",
+      "summary": "An evaluation walkthrough covering fresh containers, document grounding, tool use and regression checks.",
+      "qualification": "The example uses a synthetic research corpus and a particular vendor stack; adapt checks to your own tasks.",
+      "source_url": "https://www.youtube.com/watch?v=pjv-mp5J4hA",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/cross-session-regression.md",
+          "note": "Shows how evals can catch regressions after skills or tools change."
+        },
+        {
+          "path": "verification/characterization-and-handoff.md",
+          "note": "Background on turning expected behaviour into repeatable checks; not a handoff-protocol demonstration."
+        },
+        {
+          "path": "verification/agent-evaluation.md",
+          "note": "Provides an example of grounded answers and tool-use checks."
+        },
+        {
+          "path": "verification/sources.md",
+          "note": "A practical video source for regression and evaluation."
+        }
+      ]
+    },
+    {
+      "id": "FgxwCaL6UTA",
+      "title": "Prompt Injection, explained",
+      "channel": "Simon Willison",
+      "published_on": "2023-05-03",
+      "kind": "Background explanation",
+      "summary": "Simon Willison introduces prompt injection and the problem of mixing instructions with untrusted content.",
+      "qualification": "Foundational background from 2023; consult the chapter for current containment guidance.",
+      "source_url": "https://www.youtube.com/watch?v=FgxwCaL6UTA",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/agent-security.md",
+          "note": "Introduces the threat that containment must account for."
+        },
+        {
+          "path": "context-engineering/instruction-layer.md",
+          "note": "Explains why instruction text alone does not form a security boundary."
+        },
+        {
+          "path": "context-engineering/tool-layer.md",
+          "note": "Background on risks when untrusted content reaches a tool-using model."
+        },
+        {
+          "path": "engineers/simon-willison/index.md",
+          "note": "A first-person explanation by Willison of the threat model."
+        }
+      ]
+    },
+    {
+      "id": "8hHCpNVLhmI",
+      "title": "Open Source Friday: Spec Kit Part 2",
+      "channel": "GitHub",
+      "published_on": "2026-10-16",
+      "kind": "Vendor discussion",
+      "summary": "Manfred Riem and Nicole Haugen discuss Spec Kit 1.0 and its expanded toolkit.",
+      "qualification": "A product discussion linked by the official project; it does not establish GitHub-wide internal engineering practice.",
+      "source_url": "https://github.com/github/spec-kit",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "frameworks/github-spec-kit.md",
+          "note": "An update beyond the original Spec Kit introduction."
+        },
+        {
+          "path": "frameworks/index.md",
+          "note": "One concrete implementation of a spec-led workflow."
+        },
+        {
+          "path": "companies/github/index.md",
+          "note": "Product context only; not evidence of GitHub internal adoption."
+        }
+      ]
+    },
+    {
+      "id": "2IArMAhkJcE",
+      "title": "Open Source Friday with Spec-Kit",
+      "channel": "GitHub",
+      "published_on": "2026-05-08",
+      "kind": "Vendor demo",
+      "summary": "An introduction to Spec Kit and a spec-driven development demonstration with Manfred Riem.",
+      "qualification": "A dated product demonstration; check current documentation before copying commands.",
+      "source_url": "https://github.com/github/spec-kit",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "frameworks/github-spec-kit.md",
+          "note": "A starting point before the later Spec Kit discussion."
+        },
+        {
+          "path": "frameworks/openspec.md",
+          "note": "Comparison background: another spec workflow, not an OpenSpec tutorial."
+        },
+        {
+          "path": "frameworks/index.md",
+          "note": "Introduces an example workflow to compare with other frameworks."
+        }
+      ]
+    },
+    {
+      "id": "GqdDqR73jxs",
+      "title": "Creating a spec with Tessl",
+      "channel": "AI Native Dev",
+      "published_on": "2025-09-16",
+      "kind": "Vendor demo",
+      "summary": "A Hangman example shows the transition from an idea to an editable specification in Tessl.",
+      "qualification": "A short dated demo of the spec-authoring flow; not a comparison of reliability or a current command reference.",
+      "source_url": "https://www.youtube.com/watch?v=GqdDqR73jxs",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "frameworks/tessl.md",
+          "note": "Shows creating and refining a spec before building."
+        },
+        {
+          "path": "frameworks/index.md",
+          "note": "A second spec-authoring approach for comparison."
+        }
+      ]
+    },
+    {
+      "id": "JkIqEWKL3DY",
+      "title": "How a principal designer goes between canvas and code",
+      "channel": "Augment Code",
+      "published_on": "2026-03-13",
+      "kind": "Vendor demo",
+      "summary": "Amelia Wattenberger demonstrates Intent workspaces, living specs, coordinator and implementer agents, and Figma integration.",
+      "qualification": "A vendor-hosted workflow demonstration; claimed benefits are not independently measured.",
+      "source_url": "https://www.youtube.com/watch?v=JkIqEWKL3DY",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "frameworks/augment-intent.md",
+          "note": "Shows the workspace and specialist-agent model."
+        },
+        {
+          "path": "context-engineering/agentic-dev.md",
+          "note": "An example of planning, delegation and review in a workspace."
+        },
+        {
+          "path": "context-engineering/agent-comparison.md",
+          "note": "Background on choosing agents and models per thread; not an open-versus-proprietary benchmark."
+        },
+        {
+          "path": "agent-patterns/multi-agent.md",
+          "note": "A concrete coordinator and specialist-agent interface."
+        }
+      ]
+    },
+    {
+      "id": "SRiaUm6xt1M",
+      "title": "Setup & Full Review of Kiro Agentic IDE by Amazon AWS | Complete Walkthrough",
+      "channel": "theailanguage",
+      "published_on": "2025-07-16",
+      "kind": "Independent demo",
+      "summary": "A first-hand walkthrough of Kiro setup, specs, hooks, steering and implementation tasks.",
+      "qualification": "An independent walkthrough of an early Kiro release; setup and product details may have changed.",
+      "source_url": "https://www.youtube.com/watch?v=SRiaUm6xt1M",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "frameworks/kiro.md",
+          "note": "Shows requirements, design and task artifacts alongside hooks and steering."
+        }
+      ]
+    },
+    {
+      "id": "CMN3W18zfiE",
+      "title": "GPT Pilot Timer app demo",
+      "channel": "Pythagora",
+      "published_on": "2023-08-17",
+      "kind": "Historical vendor demo",
+      "summary": "An early GPT Pilot demonstration using a timer application.",
+      "qualification": "Historical reference for the original project; not evidence of current support or production readiness.",
+      "source_url": "https://www.youtube.com/watch?v=CMN3W18zfiE",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "frameworks/gpt-pilot.md",
+          "note": "Illustrates the early project rather than the current Pythagora product."
+        }
+      ]
+    },
+    {
+      "id": "XavrebMKH2A",
+      "title": "How to Make the Best of AI Programming Assistants",
+      "channel": "Modern Software Engineering",
+      "published_on": "2026-02-18",
+      "kind": "Practitioner advice",
+      "summary": "Dave Farley discusses small changes, fast automated feedback and checking AI-generated code.",
+      "qualification": "Practitioner advice. The sampling-theorem analogy is not empirical proof of a required testing frequency.",
+      "source_url": "https://www.youtube.com/watch?v=XavrebMKH2A",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/dave-farley-agentic-development.md",
+          "note": "Connects AI-generated changes with fast engineering feedback."
+        },
+        {
+          "path": "verification/agentic-tdd.md",
+          "note": "Background on short feedback loops and automated checks."
+        },
+        {
+          "path": "verification/cross-session-regression.md",
+          "note": "Explains why persistent, fast checks matter when changes accelerate."
+        },
+        {
+          "path": "engineers/dave-farley/index.md",
+          "note": "Advice directly from Farley on AI-assisted development."
+        }
+      ]
+    },
+    {
+      "id": "JSsnFjOuiVs",
+      "title": "S07 E01 Gojko Adzic on Specification by Example",
+      "channel": "Product Fields",
+      "published_on": "2024-04-03",
+      "kind": "Practitioner interview",
+      "summary": "Gojko Adzic discusses examples, shared understanding, Given-When-Then adoption and negative cases.",
+      "qualification": "A practitioner interview about specification practices; not a demonstration of this guide's agent handoff process.",
+      "source_url": "https://www.youtube.com/watch?v=JSsnFjOuiVs",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/bdd-for-agents.md",
+          "note": "Background on examples as shared, reviewable specifications."
+        },
+        {
+          "path": "verification/characterization-and-handoff.md",
+          "note": "Background on making expected behaviour explicit before passing work on."
+        },
+        {
+          "path": "frameworks/openspec.md",
+          "note": "General specification practice; not an OpenSpec tool walkthrough."
+        }
+      ]
+    },
+    {
+      "id": "IetyhDr48RI",
+      "title": "[Introduction to contract testing - Part 2] Contract testing and how Pact works",
+      "channel": "PactFlow",
+      "published_on": "2021-03-29",
+      "kind": "Vendor explanation",
+      "summary": "Explains consumer-driven contracts, how Pact works and how contract tests differ from API specifications.",
+      "qualification": "Foundational explanation; check current Pact documentation for setup and version-specific behaviour.",
+      "source_url": "https://www.youtube.com/watch?v=IetyhDr48RI",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/contract-testing.md",
+          "note": "Shows the consumer/provider contract relationship for HTTP and messages."
+        }
+      ]
+    },
+    {
+      "id": "PDnIjJk_9IM",
+      "title": ".NET @NOON: Testing Your Tests: Mutation Testing in C# with Stryker | Austin.NET",
+      "channel": ".NET Foundation",
+      "published_on": "2025-01-30",
+      "kind": "Conference demo",
+      "summary": "Daniel Ward demonstrates mutation testing with Stryker.NET to expose gaps in a test suite.",
+      "qualification": "A C# tool demonstration; the concept transfers, while commands and tooling differ across languages.",
+      "source_url": "https://www.youtube.com/watch?v=PDnIjJk_9IM",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/test-the-tests.md",
+          "note": "A concrete example of testing whether assertions detect changed behaviour."
+        }
+      ]
+    },
+    {
+      "id": "o3--D6ydS4o",
+      "title": "TDD & DDD from the Ground Up — Christopher Simon — GOTO 2025",
+      "channel": "GOTO Conferences",
+      "published_on": "2026-04-17",
+      "kind": "Conference demo",
+      "summary": "A live coding example develops domain constraints and refactors towards DDD patterns using TDD.",
+      "qualification": "Recorded at GOTO Copenhagen 2025 and uploaded in 2026; general engineering background rather than an AI-agent experiment.",
+      "source_url": "https://www.youtube.com/watch?v=o3--D6ydS4o",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/ddd-boundaries.md",
+          "note": "Shows aggregates and domain constraints emerging from concrete requirements."
+        },
+        {
+          "path": "verification/agentic-tdd.md",
+          "note": "Background on incremental TDD and refactoring before adapting the workflow to agents."
+        }
+      ]
+    },
+    {
+      "id": "xJj9vgDz33U",
+      "title": "Building Evolutionary Architectures — Neal Ford — Craft 2019",
+      "channel": "Craft Conference",
+      "published_on": null,
+      "kind": "Background talk",
+      "summary": "Neal Ford introduces evolutionary architecture and architectural fitness functions.",
+      "qualification": "A historical architecture talk; applying fitness functions to agent-generated changes is the guide's adaptation.",
+      "source_url": "https://craft-conf.com/2019/speaker/NealFord",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/fitness-functions.md",
+          "note": "Background on making architectural characteristics continuously checkable."
+        }
+      ]
+    },
+    {
+      "id": "wc8FBhQtdsA",
+      "title": "An AI state of the union: We’ve passed the inflection point & dark factories are coming",
+      "channel": "Lenny's Podcast",
+      "published_on": "2026-04-02",
+      "kind": "Practitioner interview",
+      "summary": "Simon Willison discusses agentic engineering, practical workflows and the human effort of supervising agents.",
+      "qualification": "A first-person account and predictions, not a controlled productivity study.",
+      "source_url": "https://simonwillison.net/2026/Apr/2/lennys-podcast/",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "verification/comprehension-debt.md",
+          "note": "Connects faster code generation with limited human review attention."
+        },
+        {
+          "path": "context-engineering/agentic-dev.md",
+          "note": "A field account of practical agentic engineering."
+        },
+        {
+          "path": "engineers/simon-willison/index.md",
+          "note": "An interview with Willison, with highlights on his own blog."
+        }
+      ]
+    },
+    {
+      "id": "74Du4Ej_-yM",
+      "title": "The AI Coding Factory",
+      "channel": "Latent Space",
+      "published_on": "2025-05-28",
+      "kind": "Practitioner interview",
+      "summary": "Factory co-founders discuss delegation, enterprise context, task evaluation and demonstrate a droid workflow.",
+      "qualification": "Founder-reported product experience and a demo; not independent evidence of company-wide productivity gains.",
+      "source_url": "https://www.latent.space/p/factory",
+      "checked_on": "2026-11-23",
+      "added_at": "2026-11-23T07:16:33Z",
+      "duration": "59 min",
+      "topics": [
+        {
+          "path": "frameworks/factory-droids.md",
+          "note": "Background on Factory's delegation model and integration with enterprise context."
+        },
+        {
+          "path": "context-engineering/harness-engineering.md",
+          "note": "Background on connecting a coding agent with its surrounding workflow."
+        }
+      ]
+    }
+  ]
+}

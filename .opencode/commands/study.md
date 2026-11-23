@@ -150,6 +150,15 @@ For each:
 
 6. **Check and report.** Follow the card-maintenance rules below. Report changed chapter paths, week files, and card/lab IDs, plus any deferred coverage or checks you could not run. If no cards changed, state why. Updated cards appear after the normal GitHub Pages rebuild and deployment; research mode does not itself commit, push, or deploy. Saved ideas are not reset by content updates: identify changed cards for the user to revisit.
 
+
+### YouTube video maintenance
+
+Research mode also reads `docs/videos.md` and `_data/videos.json`. Search for relevant YouTube talks, interviews and demos across the current guide topics, prioritising original authors, official channels and conference recordings. Check uploads since the last successful refresh with an overlapping lookback, and use older high-value videos to fill genuine gaps. Verify video IDs, titles, publishers, dates and relevance from primary descriptions or linked publisher sources; report blocked checks and never invent transcript findings.
+
+Propose video additions alongside chapter/card changes. With `--apply` (or confirmed scope), add selected videos and exact topic mappings to the shared catalogue, preserving existing IDs and `added_at` timestamps. Distinguish upload dates from addition dates, qualify advice and demos, and skip duplicates or weak matches. Follow `docs/videos.md` for metadata and feed rules. Every topic subsection, the `/videos/` archive and the separate `/videos.xml` RSS feed derive from this catalogue. New videos alone do not require rewriting lesson cards or changing chapter reading metadata. Do not change anything on no-change runs.
+
+Run `python3 docs/videos/validate.py` and, after the site build, `python3 docs/videos/validate.py --site _site --baseurl /good-vibes`. Report selected videos, remaining coverage gaps and the video-feed URL. Research mode does not itself commit, push or deploy.
+
 ### Slideshow card maintenance
 
 - **Follow the dependency.** Check cards linked to changed chapters and cards teaching the same concept. Refresh the hook, explanation, example, or takeaway where evidence changes. Leave unrelated cards untouched.

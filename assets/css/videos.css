@@ -1,0 +1,5 @@
+.gv-topic-videos { margin-top: 2.5rem; border-top: 1px solid var(--border-color, #d8dce3); padding-top: 1rem; }
+.gv-video { margin: 1.25rem 0; padding: 0.2rem 1rem; border-left: 3px solid var(--link-color, #5060ad); }
+.gv-video h3 { font-size: 1.1rem; line-height: 1.5; }
+.gv-video p { overflow-wrap: anywhere; }
+.gv-video-meta { font-size: 0.875rem; }
