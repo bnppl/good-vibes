@@ -6,6 +6,8 @@ The public collection is `/videos/`; subscribe at https://bnppl.github.io/good-v
 
 The `topic` layout wraps the theme's `default` layout. It adds a `YouTube videos` subsection to every Markdown page under the four guide directories and to every engineer/company profile index. Explicit specialist layouts, including slides and comparison tools, retain their existing behaviour. New chapters and profiles receive a subsection automatically. A topic with no suitable selection says so explicitly. Shared catalogue changes do not alter chapter reading progress or claim that the chapter prose changed.
 
+The collection presents one table row per video, with a short “Why included” reason from its first topic relevance note. Search covers titles, metadata, summaries and all topic notes. Category, topic, channel and type filters combine; sorting supports addition date, publication date, title, channel and type. Unknown publication dates sort last in either direction. Controls run locally in `assets/js/videos.js`; without JavaScript the full table and links remain available. New catalogue entries automatically appear in the table and filter options.
+
 ## During every daily refresh and `/study update`
 
 1. Read the existing catalogue and discover current topic paths dynamically. Search for YouTube videos relevant to the guide, tools, engineer profiles and company cases. Prioritise original authors, official channels and conference recordings. Check trusted channels and search results for uploads since the last successful refresh, with an overlapping lookback to catch indexing delays. Older high-value material can fill coverage gaps; do not describe it as newly published.
