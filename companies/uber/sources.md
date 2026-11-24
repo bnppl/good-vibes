@@ -2,7 +2,7 @@
 title: Uber — source findings
 parent: Uber
 nav_order: 2
-last_updated: '2026-10-26'
+last_updated: '2026-11-24'
 research_checked: '2026-10-26'
 research_cutoff: '2026-10-26'
 evidence_since: '2025-10-01'
@@ -65,3 +65,18 @@ Sources inspected on **26 October 2026**. No tools, services or experiments were
 ## Evidence not established
 
 No private configuration, exact current installed stack, undisclosed permissions, protected-test policy or missing release authority is manufactured from public examples. Vendor and practitioner reports retain their attribution. Exact practice dates remain unknown where sources do not supply them.
+
+<a id="s04"></a>
+
+## S04 · How Uber Evals 1 Million Agent Skill Invocations a Month
+
+- **Authors:** Andrew Mager, Jason Varbedain, Uday Kiran Medisetty
+- **Published:** 2026-11-23
+- **Practice period:** Marketplace and evaluation work before publication; exact ablation trial dates not established; usage figures describe March–October 2026, not a productivity trial.
+- **Checked:** 2026-11-24
+- **Kind / format:** Reported company use / Authored engineering article
+- **Original:** [Uber Engineering](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/)
+- **Inspected scope:** Full public article body fetched directly; search excerpts cross-checked. No private artifacts, runtime, transcripts or independent experiments inspected.
+- **Findings:** Skill ownership and review tiers, spec-based authoring, isolated with/without-skill comparisons, separate outcome/trajectory measures, failure reports and maintenance-PR feedback. Concurrent temporary-file interference is a reported failure.
+- **Supports:** C12; November research, workflow and card 05. Adds context to existing tool discussion without changing older claim dates.
+- **Limits:** Self-report; fixed public model/harness versions and exact ablation trial sample are not established. Proposed A/B testing and per-model compilation remain future work. No reproducible public installation of internal aifx or Skill Workshop established.

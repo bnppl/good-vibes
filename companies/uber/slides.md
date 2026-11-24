@@ -2,9 +2,9 @@
 title: Uber — bite-sized ideas
 parent: Uber Company Slides
 nav_order: 1
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: '2026-11-24'
+research_checked: '2026-11-24'
+research_cutoff: '2026-11-24'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -80,3 +80,17 @@ Recent AI-assisted software development, with dates and source scope attached. [
 [Optional practice: inspect an outcome](workflow.md#optional-practice) · [Detailed evidence](research.md) · [Source record](sources.md#s01)
 
 ---
+
+## Card 05
+
+### The skill that outlives its usefulness
+
+> **A useful skill can become extra baggage.**
+>
+> Reported company use · published 2026-11-23. Uber compares isolated runs with and without skills using blind judging, then improves or retires guidance as models change.
+
+**In the wild:** Its PR skill used a shared temporary file; concurrent sessions interfered with each other's PRs. This is a reported failure, not our reproduced experiment.
+
+**Takeaway:** Retest discovery and outcomes after upgrades. Keep a regression for each meaningful failure; planned A/B canaries are future work.
+
+[Optional practice: inspect an outcome](workflow.md#optional-practice) · [Detailed evidence](research.md#november-2026-skills-have-a-retirement-path) · [Source record](sources.md#s04)

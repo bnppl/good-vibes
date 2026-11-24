@@ -2,7 +2,7 @@
   "schema": 1,
   "title": "Agentic engineering pipeline atlas",
   "reviewed": "2026-11-19",
-  "cacheDate": "2026-11-19",
+  "cacheDate": "2026-11-24",
   "since": "2025-10-01",
   "stages": [
     {
@@ -367,7 +367,7 @@
       "name": "Uber",
       "kind": "company",
       "path": "companies/uber",
-      "summary": "Reported shared agent wrapper, model gateway, managed review/maintenance agents and PRD Evaluator; no complete private release setup inspected.",
+      "summary": "Reported shared agent wrapper, model gateway, managed review/maintenance agents and PRD Evaluator; no complete private release setup inspected. November account adds internal aifx skill distribution and Skill Workshop evaluation; public installation not established.",
       "id": "companies/uber",
       "observations": 5
     },
@@ -3099,15 +3099,15 @@
       "observations": [
         {
           "entity": "companies/uber",
-          "claim": "Track outcome cost, quality and model changes separately.",
+          "claim": "Compare skill-assisted and no-skill runs with blind judging; retain outcome, trajectory and cost measures separately.",
           "kind": "Reported company use",
-          "published": "2026-08-27",
-          "practice": "February–August 2026 measurements; exact task dates not established",
-          "checked": "2026-10-26",
-          "qualification": "Usage growth or a cheaper session alone does not demonstrate more customer value.",
-          "source": "https://www.uber.com/gb/en/blog/efficient-software-factory/",
+          "published": "2026-11-23",
+          "practice": "Marketplace and evaluation work before publication; exact ablation trial dates not established",
+          "checked": "2026-11-24",
+          "qualification": "November 2026 internal report; no independent reproduction or fixed public model/harness/task sample. A/B canaries and per-model compilation are future work, not deployed guarantees.",
+          "source": "https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/",
           "detail": "/companies/uber/research.html#c12",
-          "register": "/companies/uber/sources.html#s01",
+          "register": "/companies/uber/sources.html#s04",
           "format": "Authored engineering article"
         },
         {

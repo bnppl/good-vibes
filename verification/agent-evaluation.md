@@ -2,7 +2,7 @@
 title: Agent Evaluation
 parent: Verification
 nav_order: 11
-last_updated: 2026-11-19
+last_updated: '2026-11-24'
 last_read: null
 status: unread
 ---
@@ -78,3 +78,9 @@ OpenAI's [18 November research-acceleration report](https://openai.com/index/res
 Datadog's [18 November hunt account](https://www.datadoghq.com/blog/datadogs-agentic-vulnerability-hunting-system/) distinguishes finding a reference vulnerability at least once from finding it consistently across independent runs. The initial August benchmark contains 43 validated vulnerabilities across nine threat packs; a working stability threshold is seven detections in ten runs, not a universal standard. Packs, repository snapshots and configurations are frozen; reference findings are hidden from the hunting agent.
 
 **Suggested adaptation:** Repeat a small set of known-failure tasks before adopting a model or harness change. Report both any-run success and per-task consistency. Test the filter's false negatives as well as report volume. [Company evidence and limits](../companies/datadog/research.md#security-hunts-2026).
+
+## November 2026: A Skill Needs a No-Skill Baseline
+
+Uber's [skill evaluation account](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/) separates the path taken from the outcome and compares real prompts with and without a skill. Its concurrent-session temporary-file failure illustrates why a clean single-user run can miss operational defects. This is a reported internal case, not proof that every skill improves delivery.
+
+**Suggested adaptation:** Repeat matched runs from isolated states, record skill/model/host revisions, and blind outcome review where practical. Treat a prescribed tool sequence as a diagnostic unless it is itself a requirement; valid alternative paths must remain possible. Keep cost, outcome and trajectory scores separate. Turn a confirmed failure into a regression, then retest after upgrades. [Evidence limits](../companies/uber/sources.md#s04).

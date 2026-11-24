@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: 2026-11-22
+last_updated: '2026-11-24'
 last_read: null
 status: unread
 ---
@@ -664,3 +664,7 @@ See the [research run record](../study-briefings/2026-10-26.md) for scope, appli
 ## November 22, 2026: Knowledge Curation
 
 - [How to build a knowledge factory](https://www.langchain.com/blog/knowledge-factory) — Harrison Chase, published 2026-11-21; inspected 2026-11-22. Practitioner design/account describing internal GTM, content-studio and trace-analysis agents. Supports separating gap reports from curation and avoiding duplicate live data. No controlled coding comparison or universal storage standard is established. The guide's review queue and promotion checks are suggested adaptations.
+
+## November 24, 2026: Skill Lifecycle Evidence
+
+- [How Uber Evals 1 Million Agent Skill Invocations a Month](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/) — Andrew Mager, Jason Varbedain and Uday Kiran Medisetty; published 2026-11-23, inspected 2026-11-24. Full public body inspected. Reported internal skill evaluation and failure recovery; no independent reproduction. Supports no-skill comparisons and retirement checks. Future A/B canaries remain proposals. [Detailed source record](../companies/uber/sources.md#s04).

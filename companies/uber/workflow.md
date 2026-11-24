@@ -2,9 +2,9 @@
 title: Uber — workflow and optional practice
 parent: Uber
 nav_order: 3
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: '2026-11-24'
+research_checked: '2026-11-24'
+research_cutoff: '2026-11-24'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -53,3 +53,7 @@ A balance of ten only after replay cannot demonstrate persistence through restar
 Ask an agent for a bounded implementation or inspection, then capture the patch, commands, actual output and remaining uncertainty. Use an independent process to read stored state. If the implementation changes a test or expectation, review the semantic change separately. A screenshot, prose explanation or claimed successful command is not the state observation itself.
 
 Compare the initial and final change using completion, reviewer effort, defect discoveries and cost per accepted task. Do not reward token consumption or generated line count. Decide approval, merge and deployment authority before the run, and use only an environment whose access matches the task.
+
+## Skill maintenance extension — our adaptation
+
+The [November account](sources.md#s04) adds an evaluation loop to the observed map; it is not a mandatory step for every Uber change. Retain the existing reward contract above. As an optional separate exercise, replay a natural request with and without one skill from identical isolated states, blind the review where practical, and compare outcome quality and cost. Record host/model/skill revisions. Include a concurrent-session check if the skill writes temporary files. Keep a failure report separate from an approved skill change; do not install a guessed internal platform.

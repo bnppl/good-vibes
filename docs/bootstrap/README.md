@@ -63,3 +63,7 @@ The existing glossary/ADR and repository-instruction recipes (`context-glossary-
 ## 23 November: evaluate team fit
 
 The existing `plan-1` recipe now requests a bounded team comparison and coordination-failure records when parallelism is justified. This is our adaptation of the [coordination evidence](../../agent-patterns/multi-agent.md#november-2026-a-solo-winner-may-be-a-poor-teammate); it adds no tool installation, skill revision or new attribution to an existing profile. Catalogue IDs and source dates remain unchanged.
+
+## 24 November: skill evaluation and retirement
+
+The existing outcome-measurement recipe (`learn-3`) now requests a matched no-skill baseline, pinned run configuration and an explicit keep/shorten/retire decision after upgrades. This is our adaptation of [Uber’s November skill account](../../companies/uber/sources.md#s04), not a public installation of Skill Workshop. Existing skill IDs, installation revisions and saved selections are preserved. The pipeline and comparison views consume the refreshed C12 claim.

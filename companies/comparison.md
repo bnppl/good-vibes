@@ -2,7 +2,7 @@
 title: Comparing company approaches
 parent: Companies
 nav_order: 30
-last_updated: 2026-11-19
+last_updated: '2026-11-24'
 last_read: null
 status: unread
 ---
@@ -25,7 +25,7 @@ The patterns below are our synthesis of the named, dated cases. They are not mut
 | Enforce standards | [Cloudflare](cloudflare/index.md): standards-based review; [Zalando](zalando/index.md): incident-informed risk rules | A generic reviewer differs from a check grounded in the organisation’s actual failure modes. |
 | Structure a large change | [Coinbase](coinbase/index.md): approved plan, scaffold and focused worker PRs; [GitHub team](github/index.md): protected regression contracts | Parallel implementation still needs agreed boundaries and independent review. |
 | Reuse learning | [Duolingo](duolingo/index.md): shareable workflow definitions; [Grafana Labs](grafana-labs/index.md): migration guides corrected after execution failures | Reusable prompts need executable checks and a way to incorporate observed mistakes. |
-| Scale economically | [Uber](uber/index.md): task benchmarks and outcome-denominated costs; [Microsoft](microsoft/index.md): adoption/retention and PR-output study | Usage, output, useful outcomes and unit costs answer different management questions. |
+| Scale economically | [Uber](uber/index.md): task benchmarks, outcome-denominated costs and November skill/no-skill comparisons; [Microsoft](microsoft/index.md): adoption/retention and PR-output study | Usage, output, useful outcomes and unit costs answer different management questions. |
 | Protect the environment | [Block](block/index.md): attack the agent setup; [Monzo](monzo/index.md): restrict execution and access | Prompt instructions alone are not access controls. |
 | Keep the human loop useful | [37signals](37signals/index.md): named Lexxy/Hot Cell development cases; [Datadog](datadog/index.md): AI-built delivery/verification tools | Browser feedback and explicit constraints can matter more than generating a larger patch. A named project remains scoped. |
 

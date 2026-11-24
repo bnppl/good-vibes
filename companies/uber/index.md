@@ -6,11 +6,11 @@ company_profile: true
 company_id: uber
 industry: Transport / logistics
 organisation_context: Large public company
-research_checked: '2026-10-26'
+research_checked: '2026-11-24'
 evidence_since: '2025-10-01'
-published: '2026-08-27'
+published: '2026-11-23'
 evidence_kind: Company engineering account
-last_updated: '2026-10-26'
+last_updated: '2026-11-24'
 last_read: null
 status: unread
 canonical_name: Uber
@@ -19,18 +19,18 @@ cache_schema: 1
 aliases:
 - Uber Engineering
 practice_focus: coding-workflows
-research_cutoff: '2026-10-26'
-focus_note: PRD evaluation and managed engineering-agent platform accounts; not every Uber team’s private delivery
-  process.
+research_cutoff: '2026-11-24'
+focus_note: PRD evaluation and managed engineering-agent platform accounts; not every Uber team’s private delivery process.
 tagline: Measure the outcome and the work around the model.
-summary: May and August 2026 accounts connect upstream product review with measured managed-agent execution. Costs,
-  quality and authority stay separate.
+summary: May, August and November 2026 accounts connect product review, managed-agent execution and skill evaluation. Reported
+  internal practices retain their scope and limits.
 strengths:
 - Outcome economics
 - Task benchmarks
 - Contextual review
-tools_summary: Reported shared agent wrapper, model gateway, managed review/maintenance agents and PRD Evaluator;
-  no complete private release setup inspected.
+tools_summary: Reported shared agent wrapper, model gateway, managed review/maintenance agents and PRD Evaluator; no complete
+  private release setup inspected. November account adds internal aifx skill distribution and Skill Workshop evaluation; public
+  installation not established.
 slides_url: /companies/uber/learn/
 dimensions:
 - id: D01
@@ -101,8 +101,8 @@ dimensions:
   position: Recent AI-assisted development evidence for this dimension is not established in this reviewed cache.
   evidence: Not established
   source: ''
-  qualification: The bounded source review does not establish a complete current organisational policy. A gap does
-    not imply the practice is absent.
+  qualification: The bounded source review does not establish a complete current organisational policy. A gap does not imply
+    the practice is absent.
   evidence_kind: Not established
   published: Not established
   practice_date: Not established
@@ -203,15 +203,16 @@ dimensions:
   title: Evaluation and tradeoffs
   claim: C12
   detail: research.md#c12
-  checked: '2026-10-26'
-  position: Track outcome cost, quality and model changes separately.
+  checked: '2026-11-24'
+  position: Compare skill-assisted and no-skill runs with blind judging; retain outcome, trajectory and cost measures separately.
   evidence: Stated
-  source: https://www.uber.com/gb/en/blog/efficient-software-factory/
-  qualification: Usage growth or a cheaper session alone does not demonstrate more customer value.
+  source: https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/
+  qualification: November 2026 internal report; no independent reproduction or fixed public model/harness/task sample. A/B
+    canaries and per-model compilation are future work, not deployed guarantees.
   evidence_kind: Reported company use
-  published: '2026-08-27'
-  practice_date: February–August 2026 measurements; exact task dates not established
-  source_id: S01
+  published: '2026-11-23'
+  practice_date: Marketplace and evaluation work before publication; exact ablation trial dates not established
+  source_id: S04
   ai_specific: true
   source_format: Authored engineering article
 comparison_group: transport
@@ -221,11 +222,11 @@ comparison_group: transport
 
 [Detailed research](research.md) · [Source findings](sources.md) · [Workflow and optional practice](workflow.md) · [Slide notes](slides.md) · [Open slideshow]({{ '/companies/uber/learn/' | relative_url }}) · [Compare companies](../comparison.md)
 
-May and August 2026 accounts connect upstream product review with measured managed-agent execution. Costs, quality and authority stay separate.
+May, August and November 2026 accounts connect product review, managed-agent execution and skill evaluation. Reported internal practices retain their scope and limits.
 
 ## Scope
 
-PRD evaluation and managed engineering-agent platform accounts; not every Uber team’s private delivery process. Publication window: **1 October 2025–26 October 2026**. Practice and publication dates are different. Sources were inspected, not independently executed.
+PRD evaluation and managed engineering-agent platform accounts; not every Uber team’s private delivery process. Publication window: **1 October 2025–24 November 2026**. Practice and publication dates are different. Sources were inspected, not independently executed.
 
 Open-source background: [Cadence (Uber-origin; community project)](https://github.com/cadence-workflow/cadence). It is not proof that the reported internal harness is public or that this workflow produced the project.
 
@@ -365,10 +366,10 @@ Published / revision: **2026-08-27**. Practice: February–August 2026 measureme
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Stated · Reported company use.** Track outcome cost, quality and model changes separately.
+**Stated · Reported company use.** Compare skill-assisted and no-skill runs with blind judging; retain outcome, trajectory and cost measures separately.
 
-Usage growth or a cheaper session alone does not demonstrate more customer value.
+November 2026 internal report; no independent reproduction or fixed public model/harness/task sample. A/B canaries and per-model compilation are future work, not deployed guarantees.
 
-Published / revision: **2026-08-27**. Practice: February–August 2026 measurements; exact task dates not established. Checked: 2026-10-26. Format: Authored engineering article.
+Published / revision: **2026-11-23**. Practice: Marketplace and evaluation work before publication; exact ablation trial dates not established. Checked: 2026-11-24. Format: Authored engineering article.
 
-[Source record](sources.md#s01) · [Original source](https://www.uber.com/gb/en/blog/efficient-software-factory/)
+[Source record](sources.md#s04) · [Original source](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/)

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-23",
+  "reviewed": "2026-11-24",
   "items": {
     "define-1": {
       "mode": "process",
@@ -612,8 +612,7 @@
     "learn-3": {
       "mode": "process",
       "instructions": [
-        "Turn the selected practice into a small project-owned instruction, workflow or check appropriate to the project brief. The source is inspiration; the resulting project process is our adaptation.",
-        "Document its trigger, owner, inputs, expected evidence and stop condition. Exercise it on the first bounded change; do not attribute the adapted implementation to the source author."
+        "Compare outcome quality and cost on matched isolated runs with and without a selected skill. Record model, host and skill revisions; keep discovery separate from outcome scoring, and retest after upgrades before keeping, shortening or retiring guidance. This is a local adaptation, not installation of Uber’s internal Skill Workshop."
       ]
     },
     "learn-4": {

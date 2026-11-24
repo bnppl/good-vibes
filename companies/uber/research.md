@@ -2,9 +2,9 @@
 title: Uber — detailed research
 parent: Uber
 nav_order: 1
-last_updated: '2026-10-26'
-research_checked: '2026-10-26'
-research_cutoff: '2026-10-26'
+last_updated: '2026-11-24'
+research_checked: '2026-11-24'
+research_cutoff: '2026-11-24'
 evidence_since: '2025-10-01'
 last_read: null
 status: unread
@@ -15,7 +15,7 @@ cache_schema: 1
 
 [Profile](index.md) · [Source register](sources.md) · [Workflow](workflow.md) · [Slides](slides.md)
 
-Reviewed **26 October 2026**. PRD evaluation and managed engineering-agent platform accounts; not every Uber team’s private delivery process. Recent publication does not date every underlying practice.
+Baseline reviewed **26 October 2026**; November skill evidence inspected **24 November 2026**. PRD evaluation and managed engineering-agent platform accounts; not every Uber team’s private delivery process. Recent publication does not date every underlying practice.
 
 ## A real sequence: strengthen intent, then measure execution
 
@@ -167,14 +167,18 @@ Published / revision: **2026-08-27**. Practice: February–August 2026 measureme
 
 ### C12 · D12 · Evaluation and tradeoffs
 
-**Stated · Reported company use.** Track outcome cost, quality and model changes separately.
+**Stated · Reported company use.** Compare skill-assisted and no-skill runs with blind judging; retain outcome, trajectory and cost measures separately.
 
-Usage growth or a cheaper session alone does not demonstrate more customer value.
+November 2026 internal report; no independent reproduction or fixed public model/harness/task sample. A/B canaries and per-model compilation are future work, not deployed guarantees.
 
-Published / revision: **2026-08-27**. Practice: February–August 2026 measurements; exact task dates not established. Checked: 2026-10-26. Format: Authored engineering article.
+Published / revision: **2026-11-23**. Practice: Marketplace and evaluation work before publication; exact ablation trial dates not established. Checked: 2026-11-24. Format: Authored engineering article.
 
-[Source record](sources.md#s01) · [Original source](https://www.uber.com/gb/en/blog/efficient-software-factory/)
+[Source record](sources.md#s04) · [Original source](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/)
 
-## How to use this knowledge base
+## November 2026: skills have a retirement path
 
-Start with a concrete decision you need to improve, then inspect its claim and source scope. The optional exercise transfers an observation technique, not a company’s complete process. Before adopting a pattern, identify the artifact under test, who owns its meaning, what can falsify it, and who can authorize a production change. No numerical ranking of companies is implied.
+Uber reports replaying real prompts with and without skills in isolated environments, using blind answer comparisons alongside trajectory checks. Skill Workshop keeps intent in a spec and generates instructions and test prompts; failed maintenance PRs feed evaluation cases. A shared temporary commit-message file let concurrent sessions interfere with each other's PRs: a concrete isolation regression to retain. [S04](sources.md#s04)
+
+The article separates currently described evaluation from future A/B canaries and model-specific compilation. It does not publish a fixed reproducible model/harness/sample for a general productivity claim. The invocation headline measures activity, not accepted delivery. Our adaptation is to retest a skill after model changes and keep, shorten or retire it based on outcomes, without imposing Uber's suggested evaluation mix as a standard.
+
+**Claim history:** C12 previously used the August outcome-cost account ([S01](sources.md#s01)); that remains background support. November evidence extends the same evaluation dimension rather than reassigning the claim ID. Private Skill Workshop/aifx installation and company-wide compliance were not verified.

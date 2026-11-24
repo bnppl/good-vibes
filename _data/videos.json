@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T07:16:33Z",
+  "updated_at": "2026-11-24T08:58:09Z",
   "entries": [
     {
       "id": "6_BcCthVvb8",
@@ -523,6 +523,52 @@
         {
           "path": "context-engineering/harness-engineering.md",
           "note": "Background on connecting a coding agent with its surrounding workflow."
+        }
+      ]
+    },
+    {
+      "id": "YRbFUi7l3MA",
+      "title": "Spec driven development with Kiro | How to Build with AWS",
+      "channel": "AWS Events",
+      "published_on": "2026-03-09",
+      "kind": "Vendor discussion",
+      "summary": "The AWS PACE team discusses requirements-first and design-first specifications, steering, MCP and hooks in customer prototyping.",
+      "qualification": "Older official publisher description reviewed via search metadata; direct video fetch was throttled. No transcript review. Vendor-reported experience does not establish comparative productivity.",
+      "source_url": "https://www.youtube.com/watch?v=YRbFUi7l3MA",
+      "checked_on": "2026-11-24",
+      "added_at": "2026-11-24T08:57:23Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "frameworks/kiro.md",
+          "note": "Adds the official AWS PACE perspective on specifications and customer prototyping alongside the independent early-release walkthrough."
+        },
+        {
+          "path": "context-engineering/agentic-dev.md",
+          "note": "A reported prototype workflow for comparing requirements-first and design-first choices; not a controlled effectiveness study."
+        }
+      ]
+    },
+    {
+      "id": "WW-549L6L50",
+      "title": "Building autonomous coding agents at Stripe",
+      "channel": "Stripe Developers",
+      "published_on": "2026-05-26",
+      "kind": "Practitioner discussion",
+      "summary": "Mark Doyle describes Stripe’s minion workflow from a Slack task to a pull request, including remote environments, planning and validation.",
+      "qualification": "Older official publisher description and chapter list reviewed via search metadata; no transcript review or independent runtime validation. A completed PR does not establish autonomous production release.",
+      "source_url": "https://www.youtube.com/watch?v=WW-549L6L50",
+      "checked_on": "2026-11-24",
+      "added_at": "2026-11-24T08:58:09Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "companies/stripe/index.md",
+          "note": "A named Stripe practitioner explains the minion development workflow; the source does not establish blanket unattended release authority."
+        },
+        {
+          "path": "agent-patterns/production.md",
+          "note": "Companion to the Stripe case covering remote environments and the planning/implementation/validation loop."
         }
       ]
     }

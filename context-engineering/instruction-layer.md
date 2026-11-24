@@ -2,7 +2,7 @@
 title: "Instruction Layer"
 parent: "Context Engineering"
 nav_order: 2
-last_updated: 2026-11-18
+last_updated: '2026-11-24'
 last_read: 2026-04-06
 status: read
 ---
@@ -199,3 +199,9 @@ Expo's [skills evaluation](https://expo.dev/blog/your-skills-need-an-evaluation-
 GitHub's [12 November skills guide](https://github.blog/ai-and-ml/github-copilot/build-once-run-on-any-agent-a-practical-guide-to-agent-skills/) separates reusable instructions from project manifests and host-provided access. Its Proof Agent example performs static diff review, not test execution; the demonstration's findings are advisory. This is public guidance and an example, not evidence of GitHub-wide internal adoption.
 
 **Suggested check:** Verify discovery, companion references, required tools and permission boundaries on each target client. Keep business decisions reviewable when generating project configuration. A copied SKILL.md neither installs a dependency nor grants database access.
+
+## November 2026: Retest and Retire Skills
+
+Uber's [23 November skill account](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/) reports isolated comparisons with and without skills, blind judging, and separate trajectory/outcome checks. Its Skill Workshop preserves intent in a spec while instructions and test prompts evolve. These are reported internal practices, not independently reproduced results or a public installation guide.
+
+**Suggested adaptation:** Version a skill's goal, supported hosts and expected outcomes. Retest after model/harness changes; keep, shorten or retire it based on results. Preserve a no-skill baseline. A/B canaries and model-specific compilation are future work in the article. [Case and limits](../companies/uber/research.md#november-2026-skills-have-a-retirement-path).

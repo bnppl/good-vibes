@@ -1,14 +1,14 @@
 ---
 title: Pipeline evidence catalogue
 nav_exclude: true
-last_updated: 2026-11-19
+last_updated: 2026-11-24
 ---
 
 # Pipeline evidence catalogue
 
 [Open the interactive atlas](index.html)
 
-Reviewed all 20 engineer and 20 company caches. This is a stage index, not a claim that any person or team follows the combined pipeline. Source inspection dates vary by attribution, including targeted additions on 18–19 November 2026; this catalogue does not revalidate current installations. Prioritises publications from 1 October 2025. Undated public artifacts remain explicitly labelled. AI-product evaluation and our hypothetical practice exercises are excluded. A retrospective publication may describe older work.
+Reviewed all 20 engineer and 20 company caches. This is a stage index, not a claim that any person or team follows the combined pipeline. Source inspection dates vary by attribution, including targeted additions on 18–19 and 24 November 2026; this catalogue does not revalidate current installations. Prioritises publications from 1 October 2025. Undated public artifacts remain explicitly labelled. AI-product evaluation and our hypothetical practice exercises are excluded. A retrospective publication may describe older work.
 
 Tool names are attributed only within the named case. “Published artifact” means published by or associated with the subject, not proof of use. Declared policy and advice are not treated as observed practice. Internal harnesses are not necessarily available to install.
 
@@ -1066,7 +1066,7 @@ Process. Hot Cell rollout exposed real failures that changed the library.
 
 Process. Track cost and engineering outcomes while retaining causal and proxy limitations.
 
-- **Uber · Reported company use** — Track outcome cost, quality and model changes separately. [Primary evidence](https://www.uber.com/gb/en/blog/efficient-software-factory/) · [Cached claim](../companies/uber/research.md#c12). Publication/revision: 2026-08-27. Practice: February–August 2026 measurements; exact task dates not established. Limit: Usage growth or a cheaper session alone does not demonstrate more customer value.
+- **Uber · Reported company use** — Compare skill-assisted and no-skill runs with blind judging; retain outcome, trajectory and cost measures separately. [Primary evidence](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/) · [Cached claim](../companies/uber/research.md#c12). Publication/revision: 2026-11-23. Practice: Marketplace and evaluation work before publication; exact ablation trial dates not established. Limit: November 2026 internal report; no independent reproduction or fixed public model/harness/task sample. A/B canaries and per-model compilation are future work, not deployed guarantees.
 - **Monzo · Reported company use** — Attribute agent work and cost to workflows and teams. [Primary evidence](https://monzo.com/blog/building-agent-chip) · [Cached claim](../companies/monzo/research.md#c12). Publication/revision: 2026-08-13. Practice: Build decision in late 2025; capabilities reported August 2026. Limit: The article supplies adoption signals, not a controlled quality or productivity result.
 - **Microsoft · Reported company use** — Merged-PR throughput remains an imperfect outcome proxy. [Primary evidence](https://arxiv.org/html/2607.01418v1) · [Cached claim](../companies/microsoft/research.md#c12). Publication/revision: 2026-07-01. Practice: January 5–April 29 2026; not the October tool estate. Limit: Observational designs and selection limits remain; quality and value were unresolved.
 - **Coinbase · Reported company use** — Interpret adoption/output comparisons with explicit self-selection caveats. [Primary evidence](https://www.coinbase.com/blog/coding-had-a-concurrency-problem-how-mux-helped-solve-it) · [Cached claim](../companies/coinbase/research.md#c12). Publication/revision: 2026-05-11. Practice: Early-2026 rollout; reported adoption/output observations include April 2026. Limit: PR volume is not customer value and does not establish a causal tool effect.
@@ -1269,5 +1269,5 @@ All 40 profiles were reviewed. Missing observations indicate a gap in this curat
 - [Shopify](../companies/shopify/index.md): 10 indexed evidence associations. River in Slack; World monorepo and Nix substrate; Remote Dev mobile environments; Dispatch security scanning. Internal configuration and a complete daily stack remain private.
 - [Spotify](../companies/spotify/index.md): 6 indexed evidence associations. Honk / Claude Code, Fleetshift, Backstage, restricted verification/Git tools and Kubernetes-hosted background sessions. Tool access evolved; November restrictions are not silently applied to later versions.
 - [Stripe](../companies/stripe/index.md): 11 indexed evidence associations. February 2026 reports: custom goose-derived Minions harness, AWS devboxes, scoped Cursor-compatible rules, Toolshed MCP and existing CI. The private harness was not executed.
-- [Uber](../companies/uber/index.md): 5 indexed evidence associations. Reported shared agent wrapper, model gateway, managed review/maintenance agents and PRD Evaluator; no complete private release setup inspected.
+- [Uber](../companies/uber/index.md): 5 indexed evidence associations. Reported shared agent wrapper, model gateway, managed review/maintenance agents and PRD Evaluator; no complete private release setup inspected. November account adds internal aifx skill distribution and Skill Workshop evaluation; public installation not established.
 - [Zalando](../companies/zalando/index.md): 7 indexed evidence associations. Reported LiteLLM-based access, reference coding-agent configs, shared skills and risk-approval tooling; future sandbox/identity work stays future.

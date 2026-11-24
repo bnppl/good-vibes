@@ -2,7 +2,7 @@
 title: "01 · Build confidence"
 parent: Learning Deck
 nav_order: 1
-last_updated: 2026-11-19
+last_updated: '2026-11-24'
 ---
 
 # 01 · Build confidence
@@ -73,9 +73,9 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 **In the wild:** “Use the scoring skill” succeeds. “Fix the retry bug” never loads that same skill.
 
-**Takeaway:** Test a natural request. Check discovery and the final result separately.
+**Takeaway:** Test a natural request with and without the skill. Check discovery and outcomes separately; retest after upgrades and retire guidance that no longer helps.
 
-[Optional practice: session 4](../learning-plan.md#session-4-lean-instructions) · Go deeper: [Instruction layer](../context-engineering/instruction-layer.md)
+[Optional practice: session 4](../learning-plan.md#session-4-lean-instructions) · Go deeper: [Instruction layer](../context-engineering/instruction-layer.md) · [Uber’s reported skill comparisons](../companies/uber/research.md#november-2026-skills-have-a-retirement-path)
 
 ---
 

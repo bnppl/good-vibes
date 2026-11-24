@@ -11,7 +11,15 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 23 Nov 2026 08:47:26 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 08:59:11 +0000</lastBuildDate>
+    <item>
+      <title>Retest skills against a no-skill baseline as models change</title>
+      <link>https://bnppl.github.io/good-vibes/companies/uber/research.html#november-2026-skills-have-a-retirement-path</link>
+      <guid isPermaLink="false">good-vibes:2026-11-24:skill-lifecycle-evaluation</guid>
+      <pubDate>Tue, 24 Nov 2026 08:59:11 +0000</pubDate>
+      <description>Added Uber’s reported skill evaluation and retirement loop, with separate outcome and trajectory checks and a concurrent-session failure example. Updated the company comparison, learning cards, pipeline and bootstrap guidance. Retest whether a skill helps after upgrades; future A/B canaries remain proposals. Source: https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/ . Internal results were not independently reproduced.</description>
+      <category>Skill evaluation</category>
+    </item>
     <item>
       <title>Evaluate agent-team fit separately from solo capability</title>
       <link>https://bnppl.github.io/good-vibes/agent-patterns/multi-agent.html#november-2026-a-solo-winner-may-be-a-poor-teammate</link>
