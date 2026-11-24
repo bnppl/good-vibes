@@ -1,9 +1,9 @@
 (() => {
   'use strict';
-  const body = document.getElementById('video-rows');
+  const body = document.getElementById('gv-video-rows');
   if (!body) return;
   const rows = Array.from(body.rows);
-  const control = name => document.getElementById(`video-${name}`);
+  const control = name => document.getElementById(`gv-video-${name}`);
   const fields = ['search', 'category', 'topic', 'channel', 'kind', 'sort'];
   const collator = new Intl.Collator('en', { sensitivity: 'base', numeric: true });
   const topics = new Map();

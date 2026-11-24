@@ -19,27 +19,27 @@ Selected talks, interviews and demos for the Good Vibes topics. Each entry expla
 
 The daily research refresh looks for relevant new videos. This feed announces **new additions to this collection**, including older material found recently. Publication dates refer to the original video; added dates refer to Good Vibes. Entries are selected from publisher descriptions or linked primary sources unless explicitly stated otherwise; they are not full transcript reviews.
 
-<div class="gv-video-controls" id="video-controls" hidden>
-  <label>Search videos<input id="video-search" type="search" placeholder="Title, speaker, topic or reason…"></label>
-  <label>Category<select id="video-category"><option value="">All categories</option>{% for category in page.video_categories %}<option value="{{ category[0] }}">{{ category[1] | escape }}</option>{% endfor %}</select></label>
-  <label>Topic<select id="video-topic"><option value="">All topics</option></select></label>
-  <label>Channel<select id="video-channel"><option value="">All channels</option></select></label>
-  <label>Video type<select id="video-kind"><option value="">All types</option></select></label>
-  <label>Sort by<select id="video-sort">
+<div class="gv-video-controls" id="gv-video-controls" hidden>
+  <label>Search videos<input id="gv-video-search" type="search" placeholder="Title, speaker, topic or reason…"></label>
+  <label>Category<select id="gv-video-category"><option value="">All categories</option>{% for category in page.video_categories %}<option value="{{ category[0] }}">{{ category[1] | escape }}</option>{% endfor %}</select></label>
+  <label>Topic<select id="gv-video-topic"><option value="">All topics</option></select></label>
+  <label>Channel<select id="gv-video-channel"><option value="">All channels</option></select></label>
+  <label>Video type<select id="gv-video-kind"><option value="">All types</option></select></label>
+  <label>Sort by<select id="gv-video-sort">
     <option value="added-desc">Recently added</option><option value="added-asc">Oldest additions</option>
     <option value="published-desc">Newest published</option><option value="published-asc">Oldest published</option>
     <option value="title-asc">Title A–Z</option><option value="title-desc">Title Z–A</option>
     <option value="channel-asc">Channel A–Z</option><option value="kind-asc">Video type A–Z</option>
   </select></label>
-  <button type="button" id="video-reset">Reset</button>
+  <button type="button" id="gv-video-reset">Reset</button>
 </div>
-<p id="video-count" role="status" aria-live="polite">{{ site.data.videos.entries | size }} videos</p>
+<p id="gv-video-count" role="status" aria-live="polite">{{ site.data.videos.entries | size }} videos</p>
 <noscript>All videos are listed below. Enable JavaScript to search, filter and sort.</noscript>
 <div class="gv-video-table-wrap" role="region" aria-label="Video collection" tabindex="0">
 <table class="gv-video-table">
   <caption>Selected videos and why they are included. Publication dates are the original upload dates.</caption>
   <thead><tr><th scope="col">Video</th><th scope="col">Channel / type</th><th scope="col">Why included</th><th scope="col">Topics</th><th scope="col">Published</th><th scope="col">Added</th></tr></thead>
-  <tbody id="video-rows">
+  <tbody id="gv-video-rows">
   {% assign ordered_videos = site.data.videos.entries | sort: 'added_at' | reverse %}
   {% for video in ordered_videos %}
     <tr id="video-{{ video.id | escape }}" data-title="{{ video.title | escape }}" data-channel="{{ video.channel | escape }}" data-kind="{{ video.kind | escape }}" data-published="{{ video.published_on | escape }}" data-added="{{ video.added_at | escape }}">
@@ -54,5 +54,5 @@ The daily research refresh looks for relevant new videos. This feed announces **
   </tbody>
 </table>
 </div>
-<p id="video-empty" hidden>No videos match. Try another search or reset the filters.</p>
+<p id="gv-video-empty" hidden>No videos match. Try another search or reset the filters.</p>
 <script src="{{ '/assets/js/videos.js' | relative_url }}" defer></script>
