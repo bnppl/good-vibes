@@ -67,3 +67,9 @@ The existing `plan-1` recipe now requests a bounded team comparison and coordina
 ## 24 November: skill evaluation and retirement
 
 The existing outcome-measurement recipe (`learn-3`) now requests a matched no-skill baseline, pinned run configuration and an explicit keep/shorten/retire decision after upgrades. This is our adaptation of [Uber’s November skill account](../../companies/uber/sources.md#s04), not a public installation of Skill Workshop. Existing skill IDs, installation revisions and saved selections are preserved. The pipeline and comparison views consume the refreshed C12 claim.
+
+## 25 November: check effects, not only alerts
+
+The existing `platform-16` recipe now asks for unchanged disposable markers and continued benign operation when testing a boundary. This is our adaptation of the [AgentBouncer preprint](../../verification/sources.md#agentbouncer-2026), not a change to the attributed sandbox project's evidence or pinned revision. A denial log or killed process alone does not establish that a prohibited effect was prevented. No research implementation or new skill is installed.
+
+The existing `ship-1` CI-repair recipe also distinguishes push, approval and merge authority and asks for effective required-check/policy-mode inspection. This follows the [Claude Ship capability note](../../agent-patterns/production.md#november-2026-pr-repair-approval-and-merge-are-different-powers); it does not add that service to the selected tools or configure remote branch rules.

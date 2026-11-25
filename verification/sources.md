@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Verification"
 nav_order: 10
-last_updated: 2026-10-26
+last_updated: 2026-11-25
 last_read: null
 status: unread
 ---
@@ -408,3 +408,11 @@ High-signal community discussions. Where the HN item URL wasn't captured during 
 - [Anthropic: Quantifying infrastructure noise in agentic coding evals](https://www.anthropic.com/research/infrastructure-noise) (2026-02-05). Older coverage gap; environment confounder in Terminal-Bench 2.0.
 
 See the [research run record](../study-briefings/2026-10-26.md) for scope, application, and remaining gaps.
+
+<a id="agentbouncer-2026"></a>
+
+## November 25, 2026: Runtime Effect Mediation
+
+**[AgentBouncer: Defending Software Engineering Agents via Dynamic System-Call Mediation](https://arxiv.org/html/2611.30621v1)** — Pascal Joos and Michael Pradel, CISPA; arXiv v1, submitted 23 November 2026, inspected 25 November. Read threat model, implementation, evaluation configuration/results and limitations. Research findings reported by authors; no independent execution or company-adoption claim.
+
+The study contrasts pre-effect mediation with tool-trajectory checks and post-event termination. Its 340 attacks combine 85 adapted RedCode goals with four vectors; the benign control has 85 SWE-bench Verified instances. Default agent/arbiter: GPT-5.6 Luna, medium effort, mini-swe-agent, $2/40-cycle limits. Baselines include translated/adapted policies, so results are configuration-specific. Kernel/tools/provider are trusted; code/data publication is future work in v1. Residual attacks, semantic visibility, arbiter injection, stale/promoted cache decisions, benchmark contamination and single-agent generalisability limit conclusions. Supports the [security chapter's effect check](agent-security.md#november-2026-deny-the-effect-before-it-happens) and Week 3 card 11, not a production-security ranking.

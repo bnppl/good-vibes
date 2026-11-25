@@ -11,7 +11,23 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 24 Nov 2026 08:59:11 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 08:57:11 +0000</lastBuildDate>
+    <item>
+      <title>Separate PR repair, approval and merge authority</title>
+      <link>https://bnppl.github.io/good-vibes/agent-patterns/production.html#november-2026-pr-repair-approval-and-merge-are-different-powers</link>
+      <guid isPermaLink="false">good-vibes:2026-11-25:pr-automation-authority</guid>
+      <pubDate>Wed, 25 Nov 2026 08:57:11 +0000</pubDate>
+      <description>Added the documented Claude Ship role boundaries, qualified blanket enterprise human-review advice and updated bootstrap CI-repair guidance. Repair commits do not grant merge authority; an approval policy in observe mode normally does not block a merge. Check required GitHub checks and branch rules before increasing autonomy. Vendor documentation was inspected, no service enabled or deployment independently tested. Source: https://code.claude.com/docs/en/claude-ship .</description>
+      <category>Integration and release</category>
+    </item>
+    <item>
+      <title>Check that a denied operation had no effect</title>
+      <link>https://bnppl.github.io/good-vibes/verification/agent-security.html#november-2026-deny-the-effect-before-it-happens</link>
+      <guid isPermaLink="false">good-vibes:2026-11-25:pre-effect-mediation</guid>
+      <pubDate>Wed, 25 Nov 2026 08:56:08 +0000</pubDate>
+      <description>Added qualified AgentBouncer preprint evidence distinguishing tool-call inspection, pre-effect mediation and post-event termination. Updated Week 3 card 11 and bootstrap boundary checks: verify unchanged disposable markers and continued legitimate operation, not just an alert. Single-agent research with residual failures, not a safety guarantee or deployment recommendation. Source: https://arxiv.org/html/2611.30621v1 .</description>
+      <category>Agent containment</category>
+    </item>
     <item>
       <title>Retest skills against a no-skill baseline as models change</title>
       <link>https://bnppl.github.io/good-vibes/companies/uber/research.html#november-2026-skills-have-a-retirement-path</link>

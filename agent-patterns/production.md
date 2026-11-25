@@ -2,7 +2,7 @@
 title: "Production Patterns"
 parent: "Agent Architecture Patterns"
 nav_order: 4
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 last_read: null
 status: unread
 ---
@@ -134,7 +134,7 @@ Birgitta Boeckeler's Thoughtworks report (Martin Fowler's site, June 16, 2026) d
 
 **What the analysis found:**
 
-The core patterns described above (orchestrator-worker, verification gates, context management) all apply in enterprise settings, but with one structural difference: the human-in-the-loop cadence is higher and non-negotiable. Regulatory, compliance, and IP constraints mean enterprise teams cannot simply "let it run." This turns out not to be a constraint but a discipline — the kind the rest of the field is discovering independently through the Supervision Paradox.
+The core patterns described above (orchestrator-worker, verification gates, context management) also apply in enterprise settings. Approval cadence depends on the actual regulatory obligations, data sensitivity and configured authority. Enterprise status alone does not establish a universal human gate: the [Claude Ship example below](#november-2026-pr-repair-approval-and-merge-are-different-powers) permits different approval policies. Inspect the organisation’s controls rather than inferring them from its size.
 
 Teams that front-loaded context engineering — AGENTS.md files, architectural fitness functions, domain-specific instruction schemas — saw larger gains than those relying on ad-hoc prompting. The gap was steeper than in cloud-native environments, likely because enterprise codebases carry more implicit domain knowledge that has never been written down. Agents amplified that gap: well-documented codebases got significantly better results; underdocumented ones saw agents confident and wrong.
 
@@ -161,3 +161,9 @@ Anthropic's [source-control case study](https://www.anthropic.com/research/redes
 PostHog's [28 October DevEx account](https://posthog.com/blog/self-driving-ci) reports deterministic detectors for flaky checks, broken default-branch workflows and duration regressions, followed by agent investigation and proposed PRs. This is reported team use, not evidence of unattended merge authority or a controlled productivity gain.
 
 **Suggested adaptation:** Start with one reproducible CI signal, preserve its evidence, cap repair attempts and retain merge checks. [Cached company findings](../companies/posthog/sources.md#s06).
+
+## November 2026: PR Repair, Approval and Merge Are Different Powers
+
+Anthropic's [Claude Ship announcement](https://claude.com/resources/articles/introducing-claude-ship) (23 November) separates review findings, PR Steward's corrective commits and Claude Approvals' policy decisions. The [documentation](https://code.claude.com/docs/en/claude-ship), inspected 25 November, says Steward is designed not to approve or merge. An approval policy blocks merging only when GitHub requires its check; observe mode normally reports without enforcing. Auto-merge or a merge queue can merge without a person if the configured policy permits that.
+
+**Suggested rollout check:** Trace who may push, approve and merge separately. Before changing automation, inspect actual branch rules, required checks, policy mode and spend limits. Keep a disposable failing-check example that must remain unmergeable. This is documented product behaviour, not an independently tested deployment or evidence about every Anthropic/customer team. No service was enabled here.

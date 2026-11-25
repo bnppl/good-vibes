@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T08:58:09Z",
+  "updated_at": "2026-11-25T08:56:08Z",
   "entries": [
     {
       "id": "6_BcCthVvb8",
@@ -569,6 +569,83 @@
         {
           "path": "agent-patterns/production.md",
           "note": "Companion to the Stripe case covering remote environments and the planning/implementation/validation loop."
+        }
+      ]
+    },
+    {
+      "id": "9RKrSF9d2SE",
+      "title": "2026 in LLMs — Simon Willison",
+      "channel": "AI Engineer",
+      "published_on": "2026-11-17",
+      "kind": "Practitioner talk",
+      "summary": "Willison reflects on coding-agent reliability, persistent problem solving, experiments and the remaining difficulty of software engineering.",
+      "qualification": "Official video description, chapters, upload metadata and the speaker’s 24 November article inspected; no transcript review. Personal capability categories and anecdotes are not a controlled productivity benchmark.",
+      "source_url": "https://www.youtube.com/watch?v=9RKrSF9d2SE",
+      "checked_on": "2026-11-25",
+      "added_at": "2026-11-25T08:56:08Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "engineers/simon-willison/index.md",
+          "note": "A conference recording by Willison, with a later authored retrospective; complements his existing practice notes without changing their original evidence dates."
+        },
+        {
+          "path": "context-engineering/agentic-dev.md",
+          "note": "Practitioner perspective on goal/tool-driven work and software-engineering limits; model anecdotes do not establish general reliability."
+        },
+        {
+          "path": "verification/comprehension-debt.md",
+          "note": "Background on why stronger generation capabilities do not remove the difficulty of engineering judgment."
+        }
+      ]
+    },
+    {
+      "id": "mU8WKII1gpk",
+      "title": "How to Actually Code with AI (ft. Matt Pocock)",
+      "channel": "NetworkChuck",
+      "published_on": "2026-11-20",
+      "kind": "Practitioner interview",
+      "summary": "The publisher describes Pocock’s video-editor workflow: questioning intent, specs, tickets, worktree subagents, review and retrospectives.",
+      "qualification": "YouTube oEmbed, publisher description/chapter list and upload metadata inspected directly; no transcript review. Interview framing and promoted practices are not independent evidence of effectiveness or a complete personal setup.",
+      "source_url": "https://www.youtube.com/watch?v=mU8WKII1gpk",
+      "checked_on": "2026-11-25",
+      "added_at": "2026-11-25T08:56:08Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "engineers/matt-pocock/index.md",
+          "note": "Names Pocock and his own video-editor example; description-level verification complements the detailed cache, not a transcript-based claim refresh."
+        },
+        {
+          "path": "context-engineering/instruction-layer.md",
+          "note": "Description identifies a Grill with Docs skill example and a workflow built around reusable guidance."
+        },
+        {
+          "path": "context-engineering/agentic-dev.md",
+          "note": "An interview covering alignment, specs, task breakdown and review; not a comparison of SDD frameworks."
+        }
+      ]
+    },
+    {
+      "id": "adfw3xJBx1o",
+      "title": "A Bank Built Its Own Coding Agent. It Took Off — Felipe Felisola Caso & Francesco Galletta, Monzo",
+      "channel": "AI Engineer",
+      "published_on": "2026-10-20",
+      "kind": "Practitioner talk",
+      "summary": "Named Monzo engineers describe a Slack-triggered coding agent, an MCP gateway and sandboxed orchestration as reusable platform components.",
+      "qualification": "Official conference publisher description, chapters and upload date checked through indexed YouTube results; no transcript review or independent execution. Merged-PR share and task counts measure activity, not causal productivity or blanket release authority.",
+      "source_url": "https://www.youtube.com/watch?v=adfw3xJBx1o",
+      "checked_on": "2026-11-25",
+      "added_at": "2026-11-25T08:56:08Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "companies/monzo/index.md",
+          "note": "An original conference account of Monzo’s coding-agent platform, filling a company-video gap."
+        },
+        {
+          "path": "agent-patterns/production.md",
+          "note": "A regulated-company case linking Slack initiation, context/tool access and sandboxed orchestration."
         }
       ]
     }

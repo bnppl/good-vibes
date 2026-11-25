@@ -2,7 +2,7 @@
 title: "03 · Make good work survive"
 parent: Learning Deck
 nav_order: 3
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 ---
 
 # 03 · Make good work survive
@@ -55,9 +55,9 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 >
 > Instructions influence behaviour. Permissions limit what actions can happen. Retrieved text cannot grant authority, even when it survives in a summary or a later session.
 
-**In the wild:** A README asks the agent to write outside the checkout. Check shell and native file tools separately: a sandboxed Bash does not necessarily contain Read/Edit.
+**In the wild:** AgentBouncer’s research example shows an innocent-looking validation tool hiding a file deletion. An alert afterward can be too late. Shell and native file paths still need separate checks.
 
-**Takeaway:** Check the boundary itself, not just the agent’s promise.
+**Takeaway:** Verify the prohibited effect never happened and legitimate work still succeeds. A denial log alone is insufficient.
 
 [Optional practice: session 11](../learning-plan.md#session-11-permissions-and-prompt-injection) · Go deeper: [Agent security and containment](../verification/agent-security.md)
 

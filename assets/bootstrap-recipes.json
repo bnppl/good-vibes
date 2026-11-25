@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-24",
+  "reviewed": "2026-11-25",
   "items": {
     "define-1": {
       "mode": "process",
@@ -522,7 +522,7 @@
     "ship-1": {
       "mode": "process",
       "instructions": [
-        "Run cheap local checks first. Bound expensive CI-repair attempts using the configured retry budget. If checks remain red, preserve failure evidence and hand back without merging."
+        "Run cheap local checks first. Bound expensive CI-repair attempts using the configured retry budget. If checks remain red, preserve failure evidence and hand back without merging. For any selected PR automation, distinguish push, approval and merge authority; inspect required branch checks and observe versus enforced policy mode. Do not enable an unselected review/approval service."
       ]
     },
     "ship-2": {
@@ -813,7 +813,7 @@
     "platform-16": {
       "mode": "research",
       "instructions": [
-        "Inspect the pinned external-sandbox project and current backend prerequisites. Enumerate shell and native filesystem tool paths; Claude Code Read/Edit may remain on the host. Test each allowed/denied path with disposable fixtures before claiming containment. Do not run an attack or use real credentials as a smoke check.",
+        "Inspect the pinned external-sandbox project and current backend prerequisites. Enumerate shell and native filesystem tool paths; Claude Code Read/Edit may remain on the host. Test each allowed/denied path with disposable fixtures before claiming containment. Confirm the prohibited marker effect did not occur before an alert or process termination, and that legitimate work still succeeds. This is our local defensive check, not installation or reproduction of AgentBouncer. Do not run an attack or use real credentials as a smoke check.",
         "Do not install a guessed package or invent a private API. If a supported public implementation cannot be verified, record the item as blocked/deferred, explain why, and continue with independent selected work."
       ]
     },

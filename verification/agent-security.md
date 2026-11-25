@@ -2,7 +2,7 @@
 title: Agent Security and Containment
 parent: Verification
 nav_order: 12
-last_updated: 2026-11-18
+last_updated: 2026-11-25
 last_read: null
 status: unread
 ---
@@ -66,3 +66,11 @@ The [context privilege escalation preprint](https://arxiv.org/abs/2609.01222v2) 
 Willison and Prime Radiant's [external sandbox prototypes](https://blog.primeradiant.com/external-sandboxes-for-coding-agents/) separate the agent process from command execution. Important integration limit: Claude Code's Bash is routed into the guest, while native Read/Edit remain on the host. This is not whole-agent filesystem isolation.
 
 **Proposed check:** Enumerate shell, native filesystem and network paths separately. In disposable fixtures, test a denied write through each enabled path; retain host permissions for paths outside the guest. See the [pinned protocol/conformance project](https://github.com/prime-radiant-inc/external-sandbox/blob/0681c98a08b2bbdbd9f59fa5bef21c38caccbccf/README.md). Inspection is not an independently executed security audit.
+
+## November 2026: Deny the Effect Before It Happens
+
+The [AgentBouncer v1 preprint](https://arxiv.org/html/2611.30621v1) (Pascal Joos and Michael Pradel, 23 November; inspected 25 November) mediates system calls before execution. Its example shows why approving a patch-validation tool's advertised purpose can miss a hidden file deletion, and why terminating a process after detection can arrive too late.
+
+The authors evaluate 340 attacks across four vectors with 85 SWE-bench Verified tasks, using mini-swe-agent and GPT-5.6 Luna at medium effort, a $2 budget and 40-cycle limit. Their reported results retain successful attacks; this is neither a formal safety guarantee nor an independently reproduced production deployment. Linux mediation and network-proxy coverage matter. The arbiter can miss write contents or later CI effects, be influenced by injected context, and reuse overly broad cached permissions. Code/data release is promised for later in v1.
+
+**Suggested check:** With disposable marker files, compare an allowed tool invocation with its attempted prohibited effect. Check that the marker remains unchanged, not merely that an alert or process termination occurred. Separately test legitimate work still succeeds. Keep least privilege, independent policy and audit controls; do not install an unverified research implementation. [Source scope](sources.md#agentbouncer-2026).
