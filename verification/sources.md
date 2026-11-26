@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Verification"
 nav_order: 10
-last_updated: 2026-11-25
+last_updated: 2026-11-26
 last_read: null
 status: unread
 ---
@@ -416,3 +416,11 @@ See the [research run record](../study-briefings/2026-10-26.md) for scope, appli
 **[AgentBouncer: Defending Software Engineering Agents via Dynamic System-Call Mediation](https://arxiv.org/html/2611.30621v1)** — Pascal Joos and Michael Pradel, CISPA; arXiv v1, submitted 23 November 2026, inspected 25 November. Read threat model, implementation, evaluation configuration/results and limitations. Research findings reported by authors; no independent execution or company-adoption claim.
 
 The study contrasts pre-effect mediation with tool-trajectory checks and post-event termination. Its 340 attacks combine 85 adapted RedCode goals with four vectors; the benign control has 85 SWE-bench Verified instances. Default agent/arbiter: GPT-5.6 Luna, medium effort, mini-swe-agent, $2/40-cycle limits. Baselines include translated/adapted policies, so results are configuration-specific. Kernel/tools/provider are trusted; code/data publication is future work in v1. Residual attacks, semantic visibility, arbiter injection, stale/promoted cache decisions, benchmark contamination and single-agent generalisability limit conclusions. Supports the [security chapter's effect check](agent-security.md#november-2026-deny-the-effect-before-it-happens) and Week 3 card 11, not a production-security ranking.
+
+<a id="modernization-evidence-2026"></a>
+
+## November 26, 2026: Modernization and Oracle Provenance
+
+[How to choose the next safe step in application modernization](https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/) — Sam Quakenbush, published 25 November 2026, inspected 26 November. Read the evidence inventory, feasibility fork, PiggyMetrics/DOOM qualifications and skill/policy boundary. First-person public application experiments and advice; not internal GitHub-wide practice, controlled comparative productivity evidence or independently reproduced runs.
+
+The [doc-and-modernize skill at 1899b18](https://github.com/github/awesome-copilot/blob/1899b18da3fa5183652f86165917d553cba1850a/skills/doc-and-modernize/SKILL.md) was inspected for mode selection, feasibility, testability and CI milestones. Artifact publication date was not independently established; inspection date is not its release date. The article's safety levels are a heuristic, not a standard. Its DOOM checks use modernized-engine outputs, while the ADempiere example reports a selected business write checked against a legacy result; neither proves all workflows or production deployment. The skill's human-only administration assumption is not adopted as a universal claim about platform APIs. No installation, migration or public-demo execution was performed.

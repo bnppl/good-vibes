@@ -2,7 +2,7 @@
 title: "02 · Give the agent what it needs"
 parent: Learning Deck
 nav_order: 2
-last_updated: 2026-11-22
+last_updated: 2026-11-26
 ---
 
 # 02 · Give the agent what it needs
@@ -69,13 +69,13 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 > **A fresh chat forgets more than your code.**
 >
-> The files survive. The reasons, unchecked assumptions, and failed approaches may not. A short handoff should record the goal, revision, verified state, open questions, and next action.
+> The files survive. The reasons, unchecked assumptions, and failed approaches may not. A short handoff should record the goal, revision, verified state, open questions, and next action. Include remote task IDs and pending operations.
 
-**In the wild:** “Retry fix at abc123; scoring passes; offline sync untested” gives the next session a place to restart.
+**In the wild:** A remote sync task is still running when chat restarts. Its saved ID lets the next session inspect it before starting a duplicate. A cancellation acknowledgement does not prove it stopped.
 
 **Takeaway:** Attach a source or check to important conclusions; label untested guesses.
 
-[Optional practice: session 8](../learning-plan.md#session-8-state-across-context-windows) · Go deeper: [Memory layer](../context-engineering/memory-layer.md) · [Orchestration layer](../context-engineering/orchestration-layer.md)
+[Optional practice: session 8](../learning-plan.md#session-8-state-across-context-windows) · Go deeper: [Memory layer](../context-engineering/memory-layer.md) · [Orchestration layer](../context-engineering/orchestration-layer.md) · [Remote task state](../context-engineering/tool-layer.md#november-2026-a-remote-task-handle-is-not-a-result)
 
 ---
 

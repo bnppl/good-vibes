@@ -73,3 +73,9 @@ The existing outcome-measurement recipe (`learn-3`) now requests a matched no-sk
 The existing `platform-16` recipe now asks for unchanged disposable markers and continued benign operation when testing a boundary. This is our adaptation of the [AgentBouncer preprint](../../verification/sources.md#agentbouncer-2026), not a change to the attributed sandbox project's evidence or pinned revision. A denial log or killed process alone does not establish that a prohibited effect was prevented. No research implementation or new skill is installed.
 
 The existing `ship-1` CI-repair recipe also distinguishes push, approval and merge authority and asks for effective required-check/policy-mode inspection. This follows the [Claude Ship capability note](../../agent-patterns/production.md#november-2026-pr-repair-approval-and-merge-are-different-powers); it does not add that service to the selected tools or configure remote branch rules.
+
+## 26 November: feasible baselines and pending tasks
+
+The existing `verify-9` migration recipe now distinguishes runnable legacy baselines from a blocked component needing a small testability slice. It requires oracle provenance and separates new-only snapshots from legacy parity. This is our adaptation of [Quakenbush's reported experiments](../../verification/sources.md#modernization-evidence-2026), not a claim about every source profile associated with the recipe or a new skill installation.
+
+The existing `context-8` handoff recipe records pending remote task IDs/server identity and requires state inspection before replaying work. It follows [documented MCP task semantics](../../context-engineering/sources.md#mcp-extensions-2026); cancellation acknowledgement is not rollback. Catalogue IDs, pinned skill revisions and unselected integrations remain unchanged.

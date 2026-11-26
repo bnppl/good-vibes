@@ -2,7 +2,7 @@
 title: "Characterization & Handoff"
 parent: "Verification"
 nav_order: 9
-last_updated: 2026-07-04
+last_updated: 2026-11-26
 last_read: null
 status: unread
 ---
@@ -16,12 +16,12 @@ status: unread
 
 **In short:**
 - **The problem:** Without an answer to the handoff question, every other technique in Module 4 is decorative — the next session starts cold and reinvents reality from whatever files it happens to read first.
-- **The idea:** Characterization tests lock down legacy behavior before an agent touches it; the handoff problem is solved by co-location + instruction-layer pointers + CI as backstop.
+- **The idea:** Where the legacy component can run, characterization tests capture its behavior before migration; otherwise name the testability gap; the handoff problem is solved by co-location + instruction-layer pointers + CI as backstop.
 - **How it works:** Characterize → pin behavior in tests → human reviews tests against intent → agent modifies code with the net in place; AGENTS.md names commands, directories, thresholds, and high-risk areas; HANDOVER.md protocol for mid-task transitions.
 - **The result:** An 8KB AGENTS.md verification surface produced 100% pass rate vs. 79% for equivalent information packaged as skills (Vercel eval, Jan 2026).
 
 {: .aha }
-> **Discovery is probabilistic. CI is deterministic.** Design for both — make it likely the agent runs checks locally, certain they run in CI before merge.
+> **Discovery is uncertain. Enforced checks are a backstop.** Make checks easy to find locally, configure the required branch checks, and verify that failures block merging.
 
 {: .try-it }
 > Add a "Verification surface" section to your AGENTS.md: name the exact commands to run, the directories holding artifacts, the numeric thresholds (mutation floor, coverage floor), and the high-risk areas where snapshot updates require explanation. One paragraph, four bullets, zero ambiguity.
@@ -57,9 +57,17 @@ Concretely, the workflow with an agent looks like this:
 3. **Human**: review the *tests* for correctness against intent. Not the code — the tests. Does this set of tests actually describe the contract this code is fulfilling for the rest of the system?
 4. **Agent**: now modify the code, re-running tests after each change. Any failing test triggers a stop-and-explain: was this an intentional behavior change, or a regression?
 
-The split mirrors the **outside-in BDD pattern from [bdd-for-agents](bdd-for-agents.md)**: human reviews the spec (here: the characterization test), agent writes the implementation. The cognitive load on the human is concentrated where it matters — on the *intent* expressed in tests — and the mechanical work of hitting the intent is the agent's. The CodeGeeks "Legacy Code Modernization Using AI" guide makes the same recommendation explicit: **golden-master tests first, then agent-led modernization**. Skipping step one and letting an agent "modernize" untested legacy is how production incidents get committed at three in the morning by something that does not know what three in the morning means.
+The split mirrors the **outside-in BDD pattern from [bdd-for-agents](bdd-for-agents.md)**: human reviews the spec (here: the characterization test), agent writes the implementation. The cognitive load on the human is concentrated where it matters — on the *intent* expressed in tests — and the mechanical work of hitting the intent is the agent's. Capture a legacy oracle before migration where feasible. If the old component cannot run until it is changed, use the bounded testability path below rather than claiming nonexistent baseline evidence.
 
 This is also where the Module 3 habits from [agentic-tdd](agentic-tdd.md) and [comprehension-debt](comprehension-debt.md) meet legacy code. TDD on a greenfield is a discipline; TDD on legacy is a survival mechanism. The characterization tests *are* the missing comprehension layer — they translate "what this code does" from the implicit folklore of whoever wrote it into executable specification.
+
+## November 2026: When the Legacy Baseline Cannot Run
+
+Sam Quakenbush's [25 November modernization account](https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/) distinguishes a broken application from a broken test dependency. His PiggyMetrics probe found some tests working while embedded-database setup blocked others; the next step was repairing that test dependency, not redesigning the system. These are reported public experiments, not GitHub-wide internal practice or our reproduced runs.
+
+**Suggested decision fork:** Time-box a feasibility check. If the old component can run at an acceptable cost, capture agreed external behaviour before migration. If it cannot run without changes, document the blocker, restore testability through one small reversible slice, and state which comparisons remain unavailable. Record when a usable baseline and an enforced CI gate first become possible; a workflow file alone does not make its check required.
+
+An oracle's origin matters. The article's DOOM snapshots came from the modernized engine: they protect later behaviour but do not independently establish parity with a period-correct legacy binary. Label new-only snapshots accordingly; seek approved legacy outputs or domain-reviewed expectations where available. The [pinned skill](https://github.com/github/awesome-copilot/blob/1899b18da3fa5183652f86165917d553cba1850a/skills/doc-and-modernize/SKILL.md) packages a procedure, not your production policy or a universal safety standard. [Source scope](sources.md#modernization-evidence-2026).
 
 ## The Handoff Problem
 
@@ -71,7 +79,7 @@ The verification artifacts are useless if the next session doesn't discover them
 
 1. **Co-location.** Tests next to the code they cover. Scenarios next to the features they describe. Contracts in a known top-level directory. The agent's file-discovery heuristics weight proximity heavily: if it opens `legacy/billing/charge.ts`, it is overwhelmingly likely to also notice `legacy/billing/__tests__/`. It is overwhelmingly *unlikely* to notice `tests/integration/legacy/billing/charge.spec.ts` six directories away. Put the verification near the thing being verified.
 2. **Instruction-layer pointers.** `AGENTS.md` / `CLAUDE.md` names the verification surface explicitly: which commands to run, which directories hold which artifacts, what thresholds matter. This is the [instruction-layer](../context-engineering/instruction-layer.md) doing exactly the job it was designed for: telling a fresh session what the project considers true. The orchestration layer ([orchestration-layer](../context-engineering/orchestration-layer.md)) is what makes sure the instruction file actually loads in the first prompt; co-location is what makes the artifacts findable once the agent goes looking. They are complementary, not redundant — see [agentic-dev](../context-engineering/agentic-dev.md) for the broader pattern.
-3. **CI as backstop.** Even if the agent ignores the pointers and skips the local commands, CI fails the merge. The verification gate is **deterministic**; the discoverability is **probabilistic**. You design for both — make it likely the agent runs the checks locally so the loop is fast, and certain that the checks run in CI so the loop is safe.
+3. **CI as backstop.** CI can block a merge when the relevant check is required by the effective branch policy. Verify both that the workflow runs and that a failed check prevents merging; a workflow file alone is not enforcement. Instruction pointers help local discovery, while the required gate supplies an independent backstop.
 
 The empirical evidence on instruction files matters here. The **Vercel "AGENTS.md outperforms skills in our agent evals"** post (Jan 2026, 524 HN points) ran a controlled eval on Next.js 16 API tasks: an 8KB AGENTS.md file produced a **100% pass rate**, versus **79%** for the equivalent information packaged as skills. The handoff file is not optional, and its format matters. AGENTS.md is currently the format that wins.
 

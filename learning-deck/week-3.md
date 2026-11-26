@@ -2,7 +2,7 @@
 title: "03 · Make good work survive"
 parent: Learning Deck
 nav_order: 3
-last_updated: 2026-11-25
+last_updated: 2026-11-26
 ---
 
 # 03 · Make good work survive
@@ -71,9 +71,9 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 >
 > Implementation and tests can share the same misunderstanding. A deliberate regression checks whether your safety net rejects a known defect. It does not prove the suite catches every defect.
 
-**In the wild:** Keep a reviewable expected-state table. In an isolated copy, award XP twice. Does the runner reject it?
+**In the wild:** A snapshot captured from the rewritten scoring code can freeze its duplicate-XP bug. It protects that version from later changes; it does not prove the legacy behaviour survived.
 
-**Takeaway:** Test whether your checks can disagree with broken code.
+**Takeaway:** Record where expected results came from, then check they can reject a known defect.
 
 [Optional practice: session 12](../learning-plan.md#session-12-test-the-safety-net-and-the-handoff) · Go deeper: [Test the tests](../verification/test-the-tests.md) · [Characterization and handoff](../verification/characterization-and-handoff.md)
 

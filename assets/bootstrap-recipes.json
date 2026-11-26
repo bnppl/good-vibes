@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-25",
+  "reviewed": "2026-11-26",
   "items": {
     "define-1": {
       "mode": "process",
@@ -201,7 +201,7 @@
     "context-8": {
       "mode": "process",
       "instructions": [
-        "Version a concise plan, decisions and handoff record containing changed files, exact checks and unresolved issues. Never claim that chat/task persistence proves application data durability."
+        "Version a concise plan, decisions and handoff record containing changed files, exact checks and unresolved issues. Never claim that chat/task persistence proves application data durability. Include pending remote task IDs, owning server/identity and observed status. Reconnect and inspect before reissuing work; confirm terminal state and external effects, since cancellation acknowledgement is not rollback."
       ]
     },
     "context-9": {
@@ -418,7 +418,7 @@
     "verify-9": {
       "mode": "process",
       "instructions": [
-        "Run and record an existing behavioural baseline before migration. Protect that oracle from silent weakening; port one component, compare outcomes, and record coverage gaps. A new project without a baseline must establish one first."
+        "Time-box a feasibility check before migration. If the legacy component runs, capture and protect its behavioural baseline before changing it. If it cannot run without changes, document the blocker and restore testability with a small reversible slice; name the missing comparison and obtain approved expectations. Record whether each oracle comes from legacy execution, domain-reviewed requirements or the new implementation: new-only snapshots do not prove legacy parity. Name the testability and enforced-CI milestones; do not claim a workflow file alone blocks merges."
       ]
     },
     "verify-10": {

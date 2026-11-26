@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: '2026-11-24'
+last_updated: 2026-11-26
 last_read: null
 status: unread
 ---
@@ -668,3 +668,10 @@ See the [research run record](../study-briefings/2026-10-26.md) for scope, appli
 ## November 24, 2026: Skill Lifecycle Evidence
 
 - [How Uber Evals 1 Million Agent Skill Invocations a Month](https://www.uber.com/us/en/blog/optimizing-ubers-agent-skills/) — Andrew Mager, Jason Varbedain and Uday Kiran Medisetty; published 2026-11-23, inspected 2026-11-24. Full public body inspected. Reported internal skill evaluation and failure recovery; no independent reproduction. Supports no-skill comparisons and retirement checks. Future A/B canaries remain proposals. [Detailed source record](../companies/uber/sources.md#s04).
+
+<a id="mcp-extensions-2026"></a>
+
+## November 26, 2026: Server Skills and Durable Tasks
+
+- [MCP servers can now ship skills, run tasks, and more with Claude](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more), Anthropic, published 24 November 2026; inspected 26 November. Product announcement: Skills over MCP is beta, Tasks/Elicitation availability is client-specific, and File Uploads is described as forthcoming. Customer product examples do not establish their internal software-development practice. *(covered in TL;DR Dev, November 2026)*
+- [Skills extension](https://modelcontextprotocol.io/extensions/skills/overview) and [Tasks extension](https://modelcontextprotocol.io/extensions/tasks/overview), living MCP documentation inspected 26 November; exact revision/publication dates not established. Read discovery/loading distinctions, task lifecycle, reconnect, cancellation and capability support. Supports the tool-layer/handoff note. No server installation or independent runtime/conformance test was performed. Task-handle durability is bounded by server lifecycle/retention; no permanent availability or exactly-once external effect is inferred.

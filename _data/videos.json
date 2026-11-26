@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-25T08:56:08Z",
+  "updated_at": "2026-11-26T08:20:01Z",
   "entries": [
     {
       "id": "6_BcCthVvb8",
@@ -646,6 +646,33 @@
         {
           "path": "agent-patterns/production.md",
           "note": "A regulated-company case linking Slack initiation, context/tool access and sandboxed orchestration."
+        }
+      ]
+    },
+    {
+      "id": "1yAQxMACq0k",
+      "title": "How to Evaluate Coding Agents",
+      "channel": "Hamel Husain",
+      "published_on": "2026-10-19",
+      "kind": "Practitioner interview",
+      "summary": "Guest Khawaja Shams of Momento discusses codebase-specific tasks, realistic prompts, sandbox leakage, repeated runs and trace inspection for coding-agent evaluation.",
+      "qualification": "Publisher description, chapter list, oEmbed and watch-page upload date inspected directly; no transcript review. The team experience is attributed to guest Shams, not assumed to be Husain’s personal coding workflow. No controlled effectiveness result is inferred.",
+      "source_url": "https://www.youtube.com/watch?v=1yAQxMACq0k",
+      "checked_on": "2026-11-26",
+      "added_at": "2026-11-26T08:20:01Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "engineers/hamel-husain/index.md",
+          "note": "A Husain-hosted interview; the described coding-agent evaluation experience belongs to guest Khawaja Shams and his team."
+        },
+        {
+          "path": "verification/agent-evaluation.md",
+          "note": "Concrete discussion of task realism, repeated trials, traces and benchmark fit; complements the guide’s evaluation protocol."
+        },
+        {
+          "path": "verification/agent-security.md",
+          "note": "Description-level example of agents finding answers outside intended sandbox boundaries; not evidence of a generally secure configuration."
         }
       ]
     }

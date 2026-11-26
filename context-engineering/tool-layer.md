@@ -2,7 +2,7 @@
 title: "Tool Layer"
 parent: "Context Engineering"
 nav_order: 4
-last_updated: 2026-11-20
+last_updated: 2026-11-26
 last_read: null
 status: unread
 ---
@@ -159,3 +159,11 @@ Implement using the Manus masking pattern: define both read and write tools upfr
 LangChain's [Tool Gateway policy documentation](https://docs.langchain.com/langsmith/tool-gateway-policies) distinguishes tool-kit curation from invocation policy: kits control what an agent sees; policies control what a caller may invoke. The documented default allows calls that match no policy. Policies also apply to tools invoked through search mode. These are documented beta-product semantics, not independently tested controls or evidence of LangChain's internal coding practice. The [launch post](https://www.langchain.com/blog/langsmith-tool-gateway) is dated 19 November; the policy page is living documentation inspected 20 November, with no revision date established.
 
 **Suggested check:** In a disposable local fixture, omit a harmless tool from discovery, then attempt it directly as each relevant caller. Separately verify an enforced denial and record the effective identity. A hidden tool and a blocked invocation are different observations.
+
+## November 2026: A Remote Task Handle Is Not a Result
+
+Anthropic's [24 November MCP update](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more) adds server-delivered skills and background tasks to supported Claude clients. The [Skills extension](https://modelcontextprotocol.io/extensions/skills/overview) separates discovery/retrieval from host activation: reading SKILL.md as a resource does not itself load it as a skill. Host support and approval paths still matter.
+
+The [Tasks documentation](https://modelcontextprotocol.io/extensions/tasks/overview), inspected 26 November, describes durable task IDs, progress, input requests and results after reconnection. Cancellation is cooperative: acknowledgement does not establish that the work stopped. These are documented extension semantics, not an independently tested integration or universal client support.
+
+**Suggested handoff check:** Preserve the task ID, owning server/identity, current goal and observed state. On resume, inspect that task before reissuing a consequential operation. Verify the terminal state and external effect separately; a request to cancel is not rollback. Treat server-delivered instructions as scoped guidance, not new authority. [Source scope](sources.md#mcp-extensions-2026).

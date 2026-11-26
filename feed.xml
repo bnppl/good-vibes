@@ -11,7 +11,23 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Wed, 25 Nov 2026 08:57:11 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 08:20:01 +0000</lastBuildDate>
+    <item>
+      <title>Choose a feasible legacy baseline and name its limits</title>
+      <link>https://bnppl.github.io/good-vibes/verification/characterization-and-handoff.html#november-2026-when-the-legacy-baseline-cannot-run</link>
+      <guid isPermaLink="false">good-vibes:2026-11-26:modernization-oracle-provenance</guid>
+      <pubDate>Thu, 26 Nov 2026 08:20:01 +0000</pubDate>
+      <description>Qualified blanket baseline-first advice using a reported modernization case. When legacy code cannot run, use a bounded testability slice and name the missing evidence. New-only snapshots do not independently prove legacy parity. Updated Week 3 card 12 and the migration bootstrap recipe. Source: https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/ . Public experiments and advice, not GitHub-wide practice or independently reproduced results.</description>
+      <category>Verification</category>
+    </item>
+    <item>
+      <title>Resume remote tasks without assuming completion or rollback</title>
+      <link>https://bnppl.github.io/good-vibes/context-engineering/tool-layer.html#november-2026-a-remote-task-handle-is-not-a-result</link>
+      <guid isPermaLink="false">good-vibes:2026-11-26:remote-task-state</guid>
+      <pubDate>Thu, 26 Nov 2026 08:20:01 +0000</pubDate>
+      <description>Added documented MCP server-skill loading and asynchronous task distinctions. Preserve task IDs and inspect existing work after reconnecting; cancellation acknowledgement does not prove termination or rollback. Updated Week 2 card 08 and the handoff bootstrap recipe. Source: https://modelcontextprotocol.io/extensions/tasks/overview . Host support varies; no integration was installed or independently tested.</description>
+      <category>Tools and state</category>
+    </item>
     <item>
       <title>Separate PR repair, approval and merge authority</title>
       <link>https://bnppl.github.io/good-vibes/agent-patterns/production.html#november-2026-pr-repair-approval-and-merge-are-different-powers</link>
