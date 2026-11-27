@@ -2,7 +2,7 @@
 title: "Orchestration Layer"
 parent: "Context Engineering"
 nav_order: 6
-last_updated: 2026-10-26
+last_updated: 2026-11-27
 last_read: null
 status: unread
 ---
@@ -48,7 +48,7 @@ Two primary strategies for keeping context lean:
 
 **Tiered compression** is the production-grade approach. LangChain's Deep Agents SDK (January 2026) implements three progressive tiers: (1) offload tool results exceeding 20,000 tokens to the filesystem, substituting a file path and 10-line preview; (2) at 85% of context window capacity, truncate older file write/edit operations to filesystem pointers; (3) as a final fallback, generate structured summaries capturing session intent, artifacts created, and next steps. Testing on terminal-bench showed dramatic token drops when compression triggers — the key insight is that each tier activates only when the cheaper option is exhausted.
 
-**Autonomous compression** takes this further. LangChain's March 2026 addition lets agents decide when to compress their own context — at task transitions, after extracting results from large inputs, or before complex multi-step processes. The agent retains recent messages (10% of available context) while summarizing older exchanges. Testing showed agents are naturally conservative about triggering compression, but when they do, the timing meaningfully improves workflow efficiency. The principle: "giving models more control over their own working memory and fewer rigid, hand-tuned rules."
+**Autonomous compression** takes this further. LangChain's March 2026 addition lets agents decide when to compress their own context — at task transitions, after extracting results from large inputs, or before complex multi-step processes. The agent retains recent messages (10% of available context) while summarizing older exchanges. This describes a particular implementation, not a universal tendency to compact conservatively. Evaluate whether the selected model actually uses the interface, when it does so, and what evidence survives. The model-specific study below illustrates why timing rules need validation.
 
 ### Context Caching
 Reducing costs by up to 90%, context caching allows frequently used but static context (like a large codebase's structural map, legal frameworks, or complex tool schemas) to be processed once and reused across millions of tokens of conversation. This is the primary mechanism for making 1M+ token windows affordable for iterative development.
@@ -274,3 +274,11 @@ For sources and further reading, see [sources.md](./sources.md).
 
 - **Podcast/Video:** [The AI Native Dev — harness engineering at AI Native DevCon London 2026](https://ainativedev.io/podcast) *(June 2026)*. Ryan Lopopolo (OpenAI) on orchestrating agents at a billion tokens a day — subagent spawning, feedback loops, and the constraints that keep parallel work coherent.
 - **Course:** [Learn Harness Engineering — WalkingLabs](https://walkinglabs.github.io/learn-harness-engineering/en/) *(2026, free)*. Hands-on curriculum for this page's harness section: constraining agent behavior, maintaining context across long sessions, stopping premature completion, and observability.
+
+## November 2026: Compaction Policy Depends on the Model and Task
+
+The [NOOA context-management preprint](https://arxiv.org/html/2611.34147v1) (Devoto et al., submitted 25 November; inspected 27 November) compares harness-triggered summaries with a model API that collapses chosen history ranges while retaining originals for retrieval by tag. On the 90-question OfficeQA Pro v2 set at a 32K budget, the authors report GPT-6.1 Sol scores of 21% with harness-driven compaction and 56% with model-driven management. This is document research, not a coding-productivity result.
+
+The comparison uses a specific baseline: summarize at 80%, retaining initial instructions and ten recent events. The model-driven setup includes live usage, pressure warnings and an instruction to consider compaction at 85%. Across four models, budgets of 8K–512K and 22 MLE-bench Lite competitions, benefits vary; the ML-engineering effect is much smaller. Removing the timing cue makes some models compact too early. Neither threshold is a universal recommendation.
+
+**Suggested experiment:** Compare the current harness with one candidate policy at fixed task/model/budget. Record API use, trigger timing, recoverable original evidence, final correctness and cumulative token use. Test retrieving a fact omitted from a summary. Small simulated-pressure benchmarks do not establish long-horizon reliability; model-training explanations remain conjecture. Keep the working default until local evidence supports changing it. [Source scope](sources.md#model-managed-context-2026).

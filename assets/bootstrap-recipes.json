@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "reviewed": "2026-11-26",
+  "reviewed": "2026-11-27",
   "items": {
     "define-1": {
       "mode": "process",
@@ -201,7 +201,7 @@
     "context-8": {
       "mode": "process",
       "instructions": [
-        "Version a concise plan, decisions and handoff record containing changed files, exact checks and unresolved issues. Never claim that chat/task persistence proves application data durability. Include pending remote task IDs, owning server/identity and observed status. Reconnect and inspect before reissuing work; confirm terminal state and external effects, since cancellation acknowledgement is not rollback."
+        "Version a concise plan, decisions and handoff record containing changed files, exact checks and unresolved issues. Never claim that chat/task persistence proves application data durability. If compacting session history, preserve retrievable pointers to originals and test recovery of an omitted fact. Compare candidate timing against the current harness with the same task, model and budget before changing the default; token reduction alone is not a success criterion. Include pending remote task IDs, owning server/identity and observed status. Reconnect and inspect before reissuing work; confirm terminal state and external effects, since cancellation acknowledgement is not rollback."
       ]
     },
     "context-9": {
@@ -418,7 +418,7 @@
     "verify-9": {
       "mode": "process",
       "instructions": [
-        "Time-box a feasibility check before migration. If the legacy component runs, capture and protect its behavioural baseline before changing it. If it cannot run without changes, document the blocker and restore testability with a small reversible slice; name the missing comparison and obtain approved expectations. Record whether each oracle comes from legacy execution, domain-reviewed requirements or the new implementation: new-only snapshots do not prove legacy parity. Name the testability and enforced-CI milestones; do not claim a workflow file alone blocks merges."
+        "Time-box a feasibility check before migration. If the legacy component runs, capture and protect its behavioural baseline before changing it. If it cannot run without changes, document the blocker and restore testability with a small reversible slice; name the missing comparison and obtain approved expectations. Record whether each oracle comes from legacy execution, domain-reviewed requirements or the new implementation: new-only snapshots do not prove legacy parity. Audit ported assertions and review dependency semantics even when outputs match. Name the testability and enforced-CI milestones; do not claim a workflow file alone blocks merges."
       ]
     },
     "verify-10": {

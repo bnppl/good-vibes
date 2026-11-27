@@ -11,7 +11,23 @@ sitemap: false
     <description>Significant research findings, corrections and practical additions to the Good Vibes AI engineering knowledge base.</description>
     <language>en-GB</language>
     <atom:link href="https://bnppl.github.io/good-vibes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Thu, 26 Nov 2026 08:20:01 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 08:31:12 +0000</lastBuildDate>
+    <item>
+      <title>A parity verifier still needs implementation review</title>
+      <link>https://bnppl.github.io/good-vibes/verification/characterization-and-handoff.html#november-2026-matching-outputs-still-needs-review</link>
+      <guid isPermaLink="false">good-vibes:2026-11-27:parity-and-review</guid>
+      <pubDate>Fri, 27 Nov 2026 08:31:12 +0000</pubDate>
+      <description>Added a qualified production-migration case showing why matched outputs still need dependency review. Updated card 12 and the migration recipe. Source: https://www.anthropic.com/research/migrating-api-to-rust .</description>
+      <category>Verification</category>
+    </item>
+    <item>
+      <title>Evaluate compaction timing rather than assuming smaller is better</title>
+      <link>https://bnppl.github.io/good-vibes/context-engineering/orchestration-layer.html#november-2026-compaction-policy-depends-on-the-model-and-task</link>
+      <guid isPermaLink="false">good-vibes:2026-11-27:model-managed-compaction</guid>
+      <pubDate>Fri, 27 Nov 2026 08:26:35 +0000</pubDate>
+      <description>Added qualified NOOA benchmark evidence that model-managed compaction depends on model, task, budget and timing prompts. Updated Week 2 card 05 and handoff bootstrap guidance: preserve retrievable originals and verify outcomes before changing defaults. Document-research scores are not a coding-productivity result; no model or universal threshold is recommended. Source: https://arxiv.org/html/2611.34147v1 .</description>
+      <category>Context engineering</category>
+    </item>
     <item>
       <title>Choose a feasible legacy baseline and name its limits</title>
       <link>https://bnppl.github.io/good-vibes/verification/characterization-and-handoff.html#november-2026-when-the-legacy-baseline-cannot-run</link>

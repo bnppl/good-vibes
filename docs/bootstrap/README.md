@@ -79,3 +79,9 @@ The existing `ship-1` CI-repair recipe also distinguishes push, approval and mer
 The existing `verify-9` migration recipe now distinguishes runnable legacy baselines from a blocked component needing a small testability slice. It requires oracle provenance and separates new-only snapshots from legacy parity. This is our adaptation of [Quakenbush's reported experiments](../../verification/sources.md#modernization-evidence-2026), not a claim about every source profile associated with the recipe or a new skill installation.
 
 The existing `context-8` handoff recipe records pending remote task IDs/server identity and requires state inspection before replaying work. It follows [documented MCP task semantics](../../context-engineering/sources.md#mcp-extensions-2026); cancellation acknowledgement is not rollback. Catalogue IDs, pinned skill revisions and unselected integrations remain unchanged.
+
+## 27 November: verify compaction before changing defaults
+
+The existing `context-8` handoff recipe now retains pointers to original evidence and requests a fixed-task/model/budget comparison before changing compaction timing. This is our adaptation of the [NOOA study](../../context-engineering/sources.md#model-managed-context-2026), not a new assertion about the profiles attributed to that recipe. No NOOA installation, model selection, pinned skill revision or catalogue ID changes.
+
+The `verify-9` recipe adds assertion/dependency review, following the [migration case](../../verification/characterization-and-handoff.md#november-2026-matching-outputs-still-needs-review); source-profile attributions are unchanged.

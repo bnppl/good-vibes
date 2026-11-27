@@ -2,7 +2,7 @@
 title: "02 · Give the agent what it needs"
 parent: Learning Deck
 nav_order: 2
-last_updated: 2026-11-26
+last_updated: 2026-11-27
 ---
 
 # 02 · Give the agent what it needs
@@ -21,13 +21,13 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 
 > **More context can make an agent less useful.**
 >
-> Dumping a whole repository into context gives useful facts more noise to compete with. Search for the missing fact, read the relevant slice, and keep the full evidence accessible by path.
+> Dumping a whole repository into context gives useful facts more noise to compete with. Search for the missing fact, read the relevant slice, and keep the full evidence accessible by path. Compression can also discard facts you still need.
 
 **In the wild:** The agent finds the current XP service and reports the obsolete helper in the docs. Its proposed correction waits for source and scope checks.
 
-**Takeaway:** Retrieve the right fact; report stale guidance separately.
+**Takeaway:** Retrieve precisely and check what survives compaction. Less context is not automatically better.
 
-[Optional practice: session 5](../learning-plan.md#session-5-retrieval-that-fits-the-task) · Go deeper: [Knowledge layer](../context-engineering/knowledge-layer.md) · [Tool layer](../context-engineering/tool-layer.md)
+[Optional practice: session 5](../learning-plan.md#session-5-retrieval-that-fits-the-task) · Go deeper: [Knowledge layer](../context-engineering/knowledge-layer.md) · [Tool layer](../context-engineering/tool-layer.md) · [Compaction evidence](../context-engineering/orchestration-layer.md#november-2026-compaction-policy-depends-on-the-model-and-task)
 
 ---
 

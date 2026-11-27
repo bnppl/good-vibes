@@ -2,7 +2,7 @@
 title: "Characterization & Handoff"
 parent: "Verification"
 nav_order: 9
-last_updated: 2026-11-26
+last_updated: 2026-11-27
 last_read: null
 status: unread
 ---
@@ -68,6 +68,12 @@ Sam Quakenbush's [25 November modernization account](https://github.blog/ai-and-
 **Suggested decision fork:** Time-box a feasibility check. If the old component can run at an acceptable cost, capture agreed external behaviour before migration. If it cannot run without changes, document the blocker, restore testability through one small reversible slice, and state which comparisons remain unavailable. Record when a usable baseline and an enforced CI gate first become possible; a workflow file alone does not make its check required.
 
 An oracle's origin matters. The article's DOOM snapshots came from the modernized engine: they protect later behaviour but do not independently establish parity with a period-correct legacy binary. Label new-only snapshots accordingly; seek approved legacy outputs or domain-reviewed expectations where available. The [pinned skill](https://github.com/github/awesome-copilot/blob/1899b18da3fa5183652f86165917d553cba1850a/skills/doc-and-modernize/SKILL.md) packages a procedure, not your production policy or a universal safety standard. [Source scope](sources.md#modernization-evidence-2026).
+
+## November 2026: Matching Outputs Still Needs Review
+
+Anthropic's [25 November Rust migration report](https://www.anthropic.com/research/migrating-api-to-rust) describes replaying one model response through both API implementations, avoiding stochastic reply differences and duplicate billing. Agents reproduced mismatch fingerprints locally; reviewed fixes then faced production shadow checks.
+
+A local match was insufficient: an engineer rejected a hard-coded service response that passed the verifier. **Suggested check:** audit ported assertions and review whether the fix preserves the intended dependency, then validate beyond synthetic fixtures. This is a self-reported production migration, not a controlled productivity study or a claim that parity proves correctness. [Evidence scope](sources.md#rust-parity-2026).
 
 ## The Handoff Problem
 

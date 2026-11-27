@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T08:20:01Z",
+  "updated_at": "2026-11-27T08:26:35Z",
   "entries": [
     {
       "id": "6_BcCthVvb8",
@@ -673,6 +673,29 @@
         {
           "path": "verification/agent-security.md",
           "note": "Description-level example of agents finding answers outside intended sandbox boundaries; not evidence of a generally secure configuration."
+        }
+      ]
+    },
+    {
+      "id": "9DHZLw5653E",
+      "title": "How Spotify runs agents across 20M+ lines of code, with Niklas Gustavsson",
+      "channel": "Claude",
+      "published_on": "2026-06-29",
+      "kind": "Vendor-hosted practitioner interview",
+      "summary": "Spotify’s Niklas Gustavsson discusses Honk, remote agent execution, CI verification, developer platforms and standardisation for agents.",
+      "qualification": "Official publisher description, chapters and metadata inspected; no transcript review or independent execution. This is an older vendor-hosted company account. Usage and deployment activity do not establish a causal productivity gain or current universal release policy.",
+      "source_url": "https://www.youtube.com/watch?v=9DHZLw5653E",
+      "checked_on": "2026-11-27",
+      "added_at": "2026-11-27T08:26:35Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "companies/spotify/index.md",
+          "note": "A named Spotify engineering leader discusses the Honk platform; dated June 2026 context complements the existing cache without replacing its later or earlier evidence."
+        },
+        {
+          "path": "agent-patterns/production.md",
+          "note": "A practical company discussion of remote coding agents, CI feedback and platform prerequisites; not a controlled comparison of architectures."
         }
       ]
     }

@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Context Engineering"
 nav_order: 11
-last_updated: 2026-11-26
+last_updated: 2026-11-27
 last_read: null
 status: unread
 ---
@@ -675,3 +675,13 @@ See the [research run record](../study-briefings/2026-10-26.md) for scope, appli
 
 - [MCP servers can now ship skills, run tasks, and more with Claude](https://claude.com/resources/articles/skills-over-mcp-tasks-and-more), Anthropic, published 24 November 2026; inspected 26 November. Product announcement: Skills over MCP is beta, Tasks/Elicitation availability is client-specific, and File Uploads is described as forthcoming. Customer product examples do not establish their internal software-development practice. *(covered in TL;DR Dev, November 2026)*
 - [Skills extension](https://modelcontextprotocol.io/extensions/skills/overview) and [Tasks extension](https://modelcontextprotocol.io/extensions/tasks/overview), living MCP documentation inspected 26 November; exact revision/publication dates not established. Read discovery/loading distinctions, task lifecycle, reconnect, cancellation and capability support. Supports the tool-layer/handoff note. No server installation or independent runtime/conformance test was performed. Task-handle durability is bounded by server lifecycle/retention; no permanent availability or exactly-once external effect is inferred.
+
+<a id="model-managed-context-2026"></a>
+
+## November 27, 2026: Evaluate Model-Managed Compaction
+
+[Letting Models Manage Their Own Context: Where We Stand](https://arxiv.org/html/2611.34147v1) — Alessio Devoto, Avinash Vem, Tara Safavi, Sanjay Kariyappa, Yu-Hsuan Tseng, Paul Furgale and Ricardo Silveira Cabral; arXiv v1, submitted 25 November 2026, inspected 27 November. Read architecture, configuration, results, timing ablation and limitations. Authors' benchmark report in NVIDIA's NOOA harness, not independently reproduced results or internal company-wide adoption.
+
+OfficeQA Pro v2 contains 90 questions; MLE-bench Lite contains 22 competitions. Four evaluated models: GPT-6.1 Sol, Kimi K3, DeepSeek V4 Pro and Claude Opus 5.5; context budgets 8K–512K. The baseline compacts at 80%, retaining initial instructions and ten recent events; the model-driven condition adds the context API, usage indicator, warning and an 85% timing instruction. Figure 3 includes errors and reports replicate means/ranges; it does not supply a general software-delivery effect size.
+
+Limitations: small task sets, simulated context pressure and oldest-event fallback, uncertain training histories, unequal API uptake and prompt-sensitive timing. The separate suffix-cache prototype uses Qwen3.6-27B in one serving engine and measures prefill compute, not end-to-end latency or bill savings. Exact harness commit and model snapshot identifiers were not established from this reading. No training cause, default compaction threshold, model ranking or deployment benefit is inferred. No model, harness or serving engine was installed or run here.

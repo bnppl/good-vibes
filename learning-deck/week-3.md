@@ -2,7 +2,7 @@
 title: "03 · Make good work survive"
 parent: Learning Deck
 nav_order: 3
-last_updated: 2026-11-26
+last_updated: 2026-11-27
 ---
 
 # 03 · Make good work survive
@@ -71,7 +71,7 @@ Four quick ideas · around 30 seconds each · optional deeper reading.
 >
 > Implementation and tests can share the same misunderstanding. A deliberate regression checks whether your safety net rejects a known defect. It does not prove the suite catches every defect.
 
-**In the wild:** A snapshot captured from the rewritten scoring code can freeze its duplicate-XP bug. It protects that version from later changes; it does not prove the legacy behaviour survived.
+**In the wild:** Anthropic reports a migration fix that matched outputs by hard-coding a service response. Human review rejected it. A passing verifier did not establish a suitable implementation.
 
 **Takeaway:** Record where expected results came from, then check they can reject a known defect.
 

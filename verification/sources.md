@@ -2,7 +2,7 @@
 title: "Sources"
 parent: "Verification"
 nav_order: 10
-last_updated: 2026-11-26
+last_updated: 2026-11-27
 last_read: null
 status: unread
 ---
@@ -424,3 +424,9 @@ The study contrasts pre-effect mediation with tool-trajectory checks and post-ev
 [How to choose the next safe step in application modernization](https://github.blog/ai-and-ml/github-copilot/how-to-choose-the-next-safe-step-in-application-modernization/) — Sam Quakenbush, published 25 November 2026, inspected 26 November. Read the evidence inventory, feasibility fork, PiggyMetrics/DOOM qualifications and skill/policy boundary. First-person public application experiments and advice; not internal GitHub-wide practice, controlled comparative productivity evidence or independently reproduced runs.
 
 The [doc-and-modernize skill at 1899b18](https://github.com/github/awesome-copilot/blob/1899b18da3fa5183652f86165917d553cba1850a/skills/doc-and-modernize/SKILL.md) was inspected for mode selection, feasibility, testability and CI milestones. Artifact publication date was not independently established; inspection date is not its release date. The article's safety levels are a heuristic, not a standard. Its DOOM checks use modernized-engine outputs, while the ADempiere example reports a selected business write checked against a legacy result; neither proves all workflows or production deployment. The skill's human-only administration assumption is not adopted as a universal claim about platform APIs. No installation, migration or public-demo execution was performed.
+
+<a id="rust-parity-2026"></a>
+
+## November 27, 2026: A Moving Production Oracle
+
+[Migrating our Messages API to Rust](https://www.anthropic.com/research/migrating-api-to-rust), Anthropic Engineering, published 25 November; inspected 27 November. Read verification, privacy, inner/outer and memory loops. First-party retrospective; no implementation revision, independent reproduction or causal productivity estimate established. Supports the [scoped migration case](characterization-and-handoff.md#november-2026-matching-outputs-still-needs-review).
