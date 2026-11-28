@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T08:26:35Z",
+  "updated_at": "2026-11-28T08:15:01Z",
   "entries": [
     {
       "id": "6_BcCthVvb8",
@@ -696,6 +696,29 @@
         {
           "path": "agent-patterns/production.md",
           "note": "A practical company discussion of remote coding agents, CI feedback and platform prerequisites; not a controlled comparison of architectures."
+        }
+      ]
+    },
+    {
+      "id": "F8fBgDCf2Y4",
+      "title": "Kent Beck: Software Engineering in the Age of AI | Prodacity 2026",
+      "channel": "Rise8",
+      "published_on": "2026-09-29",
+      "kind": "Conference talk",
+      "summary": "Kent Beck discusses iterative work with AI, plausible versus working code, future flexibility, and measures of engineering outcomes.",
+      "qualification": "Conference publisher description and YouTube metadata inspected; no transcript review. The description advertises Beck’s critique of one-shot/spec-driven work and exploration of Lean; it does not establish that all SDD is waterfall or that he has a complete formal-verification workflow.",
+      "source_url": "https://www.youtube.com/watch?v=F8fBgDCf2Y4",
+      "checked_on": "2026-11-28",
+      "added_at": "2026-11-28T08:15:01Z",
+      "duration": null,
+      "topics": [
+        {
+          "path": "engineers/kent-beck/index.md",
+          "note": "An original conference recording of Beck’s views on AI-era craft and future flexibility; description-level evidence complements the authored sources in his profile."
+        },
+        {
+          "path": "context-engineering/agentic-dev.md",
+          "note": "A critical perspective on one-shot versus iterative AI-assisted development; advice and commentary, not a controlled comparison of SDD frameworks."
         }
       ]
     }
